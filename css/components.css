@@ -387,19 +387,25 @@
   position: relative;
   overflow: hidden;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
+  width: 100%;
 }
 
 .site-footer__main {
-  padding: clamp(4.5rem, 8vh, 6.5rem) 0 clamp(3.5rem, 6vh, 4.5rem);
+  display: block !important;
+  padding: clamp(4.5rem, 8vh, 6.5rem) 0 clamp(3.5rem, 6vh, 4.5rem) !important;
+  width: 100% !important;
+  box-sizing: border-box;
 }
 
 .site-footer__inner {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 4vw;
-  display: grid;
-  grid-template-columns: minmax(0, 36fr) minmax(0, 18fr) minmax(0, 22fr) minmax(0, 24fr);
+  display: grid !important;
+  grid-template-columns: minmax(0, 36fr) minmax(0, 18fr) minmax(0, 22fr) minmax(0, 24fr) !important;
   gap: clamp(2.5rem, 4vw, 4.5rem);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .footer-col {
