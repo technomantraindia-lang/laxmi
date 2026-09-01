@@ -31,6 +31,65 @@
     '<button type="button" class="site-header__burger" id="nav-burger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>' +
     '</div></header>';
 
+  var FOOTER_HTML = '<footer class="site-footer" id="site-footer">' +
+    '<div class="site-footer__main">' +
+    '<div class="site-footer__inner">' +
+    '<div class="footer-col footer-col--brand">' +
+    '<a href="index.html" class="footer-brand"><img src="assets/images/laxmi-logo.png" alt="Laxmi En-Fab Logo" class="footer-logo"></a>' +
+    '<p class="footer-tagline">Build your AAC plant with confidence.</p>' +
+    '<p class="footer-desc">Manufacturer &amp; turn-key engineering supplier for high-capacity AAC block plants, panel production lines, and dry mix mortar plants.</p>' +
+    '<div class="footer-guarantee-badge"><span class="badge-dot"></span> 24-HOUR B2B ENGINEERING RESPONSE GUARANTEE</div>' +
+    '</div>' +
+    '<div class="footer-col">' +
+    '<h4 class="footer-col__title">NAVIGATION</h4>' +
+    '<ul class="footer-links">' +
+    '<li><a href="index.html">Home</a></li>' +
+    '<li><a href="solutions.html">Solutions</a></li>' +
+    '<li><a href="machinery-equipment.html">Machinery &amp; Equipment</a></li>' +
+    '<li><a href="academy.html">AAC Investor Academy</a></li>' +
+    '<li><a href="engineering-center.html">Engineering Center</a></li>' +
+    '<li><a href="projects.html">Projects</a></li>' +
+    '<li><a href="why-laxmi.html">About Us</a></li>' +
+    '<li><a href="contact.html">Contact</a></li>' +
+    '</ul>' +
+    '</div>' +
+    '<div class="footer-col">' +
+    '<h4 class="footer-col__title">SOLUTIONS &amp; LINES</h4>' +
+    '<ul class="footer-links">' +
+    '<li><a href="solutions.html">AAC Block Plant</a></li>' +
+    '<li><a href="solutions.html">AAC Panel Plant</a></li>' +
+    '<li><a href="solutions.html#dry-mix">Dry Mix Mortar Plant</a></li>' +
+    '<li><a href="machinery-equipment.html#material">Wet Grinding Ball Mill</a></li>' +
+    '<li><a href="machinery-equipment.html#batching">Automated Dosing Unit</a></li>' +
+    '<li><a href="machinery-equipment.html#cutting">3-Stage Oscillating Cutter</a></li>' +
+    '<li><a href="machinery-equipment.html#autoclave">Steam Curing Autoclaves</a></li>' +
+    '</ul>' +
+    '</div>' +
+    '<div class="footer-col footer-col--contact">' +
+    '<h4 class="footer-col__title">HEAD OFFICE &amp; WORKS</h4>' +
+    '<address class="footer-address">Laxmi En-Fab Pvt. Ltd.<br>48 Block A, 2nd Floor, Pelican Complex,<br>Opp Odhav BRTS, GIDC, Odhav,<br>Ahmedabad, Gujarat 382415, India</address>' +
+    '<div class="footer-contact-details">' +
+    '<p><strong>Primary:</strong> <a href="tel:+918980800607">+91-8980800607</a></p>' +
+    '<p><strong>Secondary:</strong> <a href="tel:+918980800839">+91-8980800839</a></p>' +
+    '<p><strong>Email:</strong> <a href="mailto:aac@laxmienfab.com">aac@laxmienfab.com</a></p>' +
+    '<p><strong>Email:</strong> <a href="mailto:aaclaxmi@gmail.com">aaclaxmi@gmail.com</a></p>' +
+    '</div>' +
+    '</div>' +
+    '</div>' +
+    '</div>' +
+    '<div class="site-footer__bottom">' +
+    '<div class="site-footer__bottom-inner">' +
+    '<p class="copyright-text">&copy; 2026 Laxmi En-Fab Pvt. Ltd. All rights reserved. Built with precision engineering.</p>' +
+    '<div class="footer-social-links">' +
+    '<a href="https://in.linkedin.com/company/aacblockplant" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>' +
+    '<a href="https://www.instagram.com/aac_plant/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>' +
+    '<a href="https://www.facebook.com/aacblockplant" target="_blank" rel="noopener noreferrer">Facebook ↗</a>' +
+    '<a href="https://www.youtube.com/@LaxmiGroupaacsystem" target="_blank" rel="noopener noreferrer">YouTube ↗</a>' +
+    '</div>' +
+    '</div>' +
+    '</div>' +
+    '</footer>';
+
   function mountHeader(html) {
     var mount = document.getElementById('site-header');
     if (!mount) return;
@@ -38,6 +97,12 @@
     initDropdowns();
     initMobileMenu();
     highlightActivePage();
+  }
+
+  function mountFooter(html) {
+    var mount = document.getElementById('site-footer');
+    if (!mount) return;
+    mount.outerHTML = html;
   }
 
   function injectHeader() {
@@ -57,6 +122,25 @@
         mountHeader(headerHtml);
       })
       .catch(function () { mountHeader(HEADER_HTML); });
+  }
+
+  function injectFooter() {
+    if (window.location.protocol === 'file:') {
+      mountFooter(FOOTER_HTML);
+      return;
+    }
+
+    fetch('components/footer.html')
+      .then(function (r) { return r.text(); })
+      .then(function (html) {
+        var tmp = document.createElement('div');
+        tmp.innerHTML = html;
+        var footerEl = tmp.querySelector('footer.site-footer');
+        var footerHtml = footerEl ? footerEl.outerHTML : html;
+        footerHtml = footerHtml.replace(/(href|src)="\.\.\//g, '$1="');
+        mountFooter(footerHtml);
+      })
+      .catch(function () { mountFooter(FOOTER_HTML); });
   }
 
   function initDropdowns() {
@@ -138,8 +222,12 @@
   }
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', injectHeader);
+    document.addEventListener('DOMContentLoaded', function () {
+      injectHeader();
+      injectFooter();
+    });
   } else {
     injectHeader();
+    injectFooter();
   }
 })();
