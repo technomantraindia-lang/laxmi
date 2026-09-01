@@ -1,0 +1,3036 @@
+{
+  "version": 2,
+  "workspace": "laxmi",
+  "builtAt": "2026-08-31T12:14:53.061Z",
+  "reason": "file saved",
+  "policy": {
+    "localOnly": true,
+    "sendFullIndexToAi": false,
+    "candidateLimit": 5,
+    "incremental": true
+  },
+  "stats": {
+    "reused": 47,
+    "rescanned": 2,
+    "skipped": 0
+  },
+  "files": [
+    {
+      "path": ".clinerules/05-technomantra-execution-mode.md",
+      "size": 504,
+      "mtimeMs": 1787644399139.9482,
+      "hash": "cfe4e31c978cc57329739733daf9c669ef1d3de77ce9958f9f60aa70e4eb48d5",
+      "locators": []
+    },
+    {
+      "path": ".clinerules/06-technomantra-developer-mode.md",
+      "size": 453,
+      "mtimeMs": 1787644399155.5745,
+      "hash": "24302e90e32c445afc09689cda13e6682d9ae1dd88c49361c761eee04ad35e7b",
+      "locators": []
+    },
+    {
+      "path": ".clinerules/08-technomantra-task-watchdog.md",
+      "size": 1827,
+      "mtimeMs": 1788175935156.0415,
+      "hash": "363c5bc4d61ed575b0dc3e2350c689b6093517c161241f6efca4c473feafc24c",
+      "locators": []
+    },
+    {
+      "path": ".clinerules/09-technomantra-multitask-isolation.md",
+      "size": 2813,
+      "mtimeMs": 1788175935157.0413,
+      "hash": "0375609553f971ceddcebac652d62356ec69b8e0461de77b684f9057181459c3",
+      "locators": []
+    },
+    {
+      "path": ".clinerules/10-technomantra-project-memory.md",
+      "size": 2701,
+      "mtimeMs": 1788175936695.6921,
+      "hash": "620cd696513279c6d4c576993992aaeb06090c8fe627c1e1a66550481a56bc05",
+      "locators": []
+    },
+    {
+      "path": ".clinerules/11-technomantra-code-knowledge.md",
+      "size": 5208,
+      "mtimeMs": 1788175936686.0327,
+      "hash": "92702dd87bcf1df3053596b774c5cea435744bf313c6d2e7bd1eadf367665c7f",
+      "locators": []
+    },
+    {
+      "path": ".clinerules/11-technomantra-patch-index.md",
+      "size": 699,
+      "mtimeMs": 1788178098364.39,
+      "hash": "c1390d479d39ecdeeccb4561d687117182d6e9ed14dfdc051c4dcb1692b48608",
+      "locators": []
+    },
+    {
+      "path": ".clinerules/12-technomantra-task-capsules.md",
+      "size": 3313,
+      "mtimeMs": 1788178491774.5125,
+      "hash": "49d4cf228f055dba05233cd8c38c4db5fd48053b9e2c1ec87bd31b6057515140",
+      "locators": []
+    },
+    {
+      "path": ".clinerules/13-technomantra-runtime-price-optimizer.md",
+      "size": 541,
+      "mtimeMs": 1788175935344.2686,
+      "hash": "63f350d85a96d1cffc9bcc7e2823febd39ae7e1d0d1b7f2a49678d660e653e33",
+      "locators": []
+    },
+    {
+      "path": ".clinerules/14-technomantra-adaptive-cost-optimizer.md",
+      "size": 441,
+      "mtimeMs": 1788175935347.2693,
+      "hash": "15fd9320cb9f3b012d404cb363073f3139567b65f8c4a3fed86000773296623b",
+      "locators": []
+    },
+    {
+      "path": ".clinerules/15-technomantra-fast-coding-engine.md",
+      "size": 558,
+      "mtimeMs": 1788175935356.364,
+      "hash": "1fbbaf6e9ebf232f95ed9d9bca4bcfdf2f82ef3c306f8eda9a647187fe2be5a2",
+      "locators": []
+    },
+    {
+      "path": ".clinerules/90-technomantra-selected-agent.md",
+      "size": 507,
+      "mtimeMs": 1787649769087.1729,
+      "hash": "dd445c816198c70e54761d7cee4a4fa18f944706446ec2d65a7315921eaa80dd",
+      "locators": []
+    },
+    {
+      "path": ".clinerules/technomantra-developer-learning.md",
+      "size": 746,
+      "mtimeMs": 1788175952148.247,
+      "hash": "b755f3bc36e8c547deec93474da69c29c41e0c093cc622f5b5956003ebc5ae76",
+      "locators": []
+    },
+    {
+      "path": ".clinerules/technomantra-team-learning.md",
+      "size": 14023,
+      "mtimeMs": 1788175946410.4019,
+      "hash": "b3158a3b12bd83de597e6a95ba9b2b724342c1528c5b9658fad1cb92ff805219",
+      "locators": []
+    },
+    {
+      "path": ".vscode/settings.json",
+      "size": 42,
+      "mtimeMs": 1787650246740.2715,
+      "hash": "d7c4c5969a13be89c26b96373e811c72455b9bcc938c3e2ee1de236c55773289",
+      "locators": []
+    },
+    {
+      "path": "academy.html",
+      "size": 1537,
+      "mtimeMs": 1787638267906.756,
+      "hash": "e37c801c81f8555afb69339ac7deb92ad4556138758c348519d37ab7ad776340",
+      "locators": [
+        {
+          "kind": "heading",
+          "name": "AAC Investor Academy",
+          "line": 17
+        }
+      ]
+    },
+    {
+      "path": "client-content/Laxmi en fab website/.vscode/settings.json",
+      "size": 42,
+      "mtimeMs": 1787630566533.8308,
+      "hash": "d7c4c5969a13be89c26b96373e811c72455b9bcc938c3e2ee1de236c55773289",
+      "locators": []
+    },
+    {
+      "path": "client-content/Laxmi en fab website/3. AAC INVESTOR ACADEMY/1.Understand the market/1. Why AAC/why-aac-three-scroll-page.html",
+      "size": 2305187,
+      "mtimeMs": 1787630488556.3967,
+      "hash": "2e21aa239d84ceeb36a0edacc4bd4bc22f45c5b4f06960c2117e8e226bce3596",
+      "locators": [
+        {
+          "kind": "id",
+          "name": "#why-aac-layout",
+          "line": 823
+        },
+        {
+          "kind": "class",
+          "name": ".page",
+          "line": 879
+        },
+        {
+          "kind": "class",
+          "name": ".scroll-label",
+          "line": 880
+        },
+        {
+          "kind": "class",
+          "name": ".browser",
+          "line": 881
+        },
+        {
+          "kind": "class",
+          "name": ".nav",
+          "line": 882
+        },
+        {
+          "kind": "class",
+          "name": ".brand",
+          "line": 883
+        },
+        {
+          "kind": "class",
+          "name": ".links",
+          "line": 884
+        },
+        {
+          "kind": "class",
+          "name": ".hero",
+          "line": 886
+        },
+        {
+          "kind": "class",
+          "name": ".hero-copy",
+          "line": 887
+        },
+        {
+          "kind": "class",
+          "name": ".eyebrow",
+          "line": 888
+        },
+        {
+          "kind": "heading",
+          "name": "Why AAC Blocks?",
+          "line": 889
+        },
+        {
+          "kind": "class",
+          "name": ".btn",
+          "line": 891
+        },
+        {
+          "kind": "class",
+          "name": ".btn-primary",
+          "line": 891
+        },
+        {
+          "kind": "class",
+          "name": ".hero-image",
+          "line": 893
+        },
+        {
+          "kind": "id",
+          "name": "#why-aac-benefits",
+          "line": 895
+        },
+        {
+          "kind": "class",
+          "name": ".section",
+          "line": 895
+        },
+        {
+          "kind": "class",
+          "name": ".section-head",
+          "line": 896
+        },
+        {
+          "kind": "heading",
+          "name": "Five reasons AAC matters",
+          "line": 897
+        },
+        {
+          "kind": "class",
+          "name": ".benefits",
+          "line": 900
+        },
+        {
+          "kind": "class",
+          "name": ".benefit",
+          "line": 901
+        },
+        {
+          "kind": "class",
+          "name": ".split",
+          "line": 912
+        },
+        {
+          "kind": "heading",
+          "name": "Important limitations",
+          "line": 914
+        },
+        {
+          "kind": "class",
+          "name": ".quiet-list",
+          "line": 915
+        },
+        {
+          "kind": "class",
+          "name": ".quiet-row",
+          "line": 916
+        },
+        {
+          "kind": "heading",
+          "name": "AAC vs red brick",
+          "line": 923
+        },
+        {
+          "kind": "class",
+          "name": ".table-responsive",
+          "line": 924
+        },
+        {
+          "kind": "class",
+          "name": ".compare",
+          "line": 924
+        },
+        {
+          "kind": "class",
+          "name": ".table",
+          "line": 925
+        },
+        {
+          "kind": "class",
+          "name": ".table-sm",
+          "line": 925
+        },
+        {
+          "kind": "heading",
+          "name": "Why manufacturing quality matters",
+          "line": 939
+        },
+        {
+          "kind": "class",
+          "name": ".process",
+          "line": 940
+        },
+        {
+          "kind": "class",
+          "name": ".process-row",
+          "line": 941
+        },
+        {
+          "kind": "class",
+          "name": ".quote",
+          "line": 948
+        },
+        {
+          "kind": "heading",
+          "name": "Automation is not the objective.",
+          "line": 949
+        },
+        {
+          "kind": "id",
+          "name": "#why-aac-investor",
+          "line": 958
+        },
+        {
+          "kind": "class",
+          "name": ".investor",
+          "line": 958
+        },
+        {
+          "kind": "heading",
+          "name": "What an AAC plant investor should understand",
+          "line": 960
+        },
+        {
+          "kind": "heading",
+          "name": "Continue into focused topics",
+          "line": 969
+        },
+        {
+          "kind": "class",
+          "name": ".text-muted",
+          "line": 970
+        },
+        {
+          "kind": "class",
+          "name": ".viz-row",
+          "line": 971
+        },
+        {
+          "kind": "class",
+          "name": ".viz-badge",
+          "line": 972
+        },
+        {
+          "kind": "heading",
+          "name": "Frequently asked questions",
+          "line": 977
+        },
+        {
+          "kind": "class",
+          "name": ".faq",
+          "line": 978
+        },
+        {
+          "kind": "class",
+          "name": ".final-cta",
+          "line": 986
+        },
+        {
+          "kind": "heading",
+          "name": "Start with the product, market and raw materials.",
+          "line": 987
+        },
+        {
+          "kind": "class",
+          "name": ".btn-row",
+          "line": 989
+        },
+        {
+          "kind": "id",
+          "name": "#codex-visualization-floating-ui-core",
+          "line": 995
+        },
+        {
+          "kind": "id",
+          "name": "#codex-visualization-floating-ui-dom",
+          "line": 996
+        },
+        {
+          "kind": "id",
+          "name": "#codex-visualization-lucide",
+          "line": 997
+        },
+        {
+          "kind": "id",
+          "name": "#codex-visualization-tooltip",
+          "line": 998
+        },
+        {
+          "kind": "class",
+          "name": ".tooltip",
+          "line": 1037
+        },
+        {
+          "kind": "id",
+          "name": "#codex-visualization-lucide-initialization",
+          "line": 1220
+        }
+      ]
+    },
+    {
+      "path": "compare-your-aac-plant.html",
+      "size": 973,
+      "mtimeMs": 1787637678605.1113,
+      "hash": "f1d9b62708d8f3d0143b021f92916d2b78bcbd79f7fea32731e46b059916bb4a",
+      "locators": []
+    },
+    {
+      "path": "components/footer.html",
+      "size": 0,
+      "mtimeMs": 1787635886838.7837,
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "locators": []
+    },
+    {
+      "path": "components/header.html",
+      "size": 6617,
+      "mtimeMs": 1788175748059.593,
+      "hash": "9983fdc6877260e6bab0200733a1bbb84b89224b96bebb0a7810d7faa08dd8b8",
+      "locators": [
+        {
+          "kind": "id",
+          "name": "#site-header",
+          "line": 45
+        },
+        {
+          "kind": "class",
+          "name": ".site-header",
+          "line": 45
+        },
+        {
+          "kind": "class",
+          "name": ".site-header__inner",
+          "line": 46
+        },
+        {
+          "kind": "class",
+          "name": ".site-header__brand",
+          "line": 47
+        },
+        {
+          "kind": "class",
+          "name": ".site-header__logo",
+          "line": 48
+        },
+        {
+          "kind": "id",
+          "name": "#site-nav",
+          "line": 50
+        },
+        {
+          "kind": "class",
+          "name": ".site-header__nav",
+          "line": 50
+        },
+        {
+          "kind": "class",
+          "name": ".nav-list",
+          "line": 51
+        },
+        {
+          "kind": "class",
+          "name": ".nav-item",
+          "line": 52
+        },
+        {
+          "kind": "class",
+          "name": ".nav-item--dropdown",
+          "line": 52
+        },
+        {
+          "kind": "class",
+          "name": ".nav-link",
+          "line": 53
+        },
+        {
+          "kind": "class",
+          "name": ".nav-link--toggle",
+          "line": 53
+        },
+        {
+          "kind": "class",
+          "name": ".nav-dropdown",
+          "line": 54
+        },
+        {
+          "kind": "class",
+          "name": ".site-header__cta",
+          "line": 101
+        },
+        {
+          "kind": "class",
+          "name": ".nav-cta",
+          "line": 101
+        },
+        {
+          "kind": "id",
+          "name": "#nav-burger",
+          "line": 102
+        },
+        {
+          "kind": "class",
+          "name": ".site-header__burger",
+          "line": 102
+        },
+        {
+          "kind": "class",
+          "name": ".preview-note",
+          "line": 108
+        }
+      ]
+    },
+    {
+      "path": "components/mobile-menu.html",
+      "size": 0,
+      "mtimeMs": 1787635886841.7842,
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "locators": []
+    },
+    {
+      "path": "contact.html",
+      "size": 943,
+      "mtimeMs": 1787637678750.0256,
+      "hash": "6e1fcbb9a68bb23dea7e007e1316b742fedeade7d68daa8df66ddfcdbcf3ceb9",
+      "locators": []
+    },
+    {
+      "path": "css/components.css",
+      "size": 4595,
+      "mtimeMs": 1787654830905.018,
+      "hash": "97cc4fa2e490b8bca4abd3bc80b1b9f4637ad2ae2c46b8c51fb9fd61fffa4039",
+      "locators": [
+        {
+          "kind": "selector",
+          "name": ".site-header",
+          "line": 4
+        },
+        {
+          "kind": "selector",
+          "name": ".site-header__inner",
+          "line": 15
+        },
+        {
+          "kind": "selector",
+          "name": ".site-header__brand",
+          "line": 27
+        },
+        {
+          "kind": "selector",
+          "name": ".site-header__logo",
+          "line": 34
+        },
+        {
+          "kind": "selector",
+          "name": ".site-header__nav",
+          "line": 41
+        },
+        {
+          "kind": "selector",
+          "name": ".nav-list",
+          "line": 49
+        },
+        {
+          "kind": "selector",
+          "name": ".nav-item",
+          "line": 58
+        },
+        {
+          "kind": "selector",
+          "name": ".nav-link--toggle",
+          "line": 63
+        },
+        {
+          "kind": "selector",
+          "name": ".nav-item.is-open > .nav-link--toggle",
+          "line": 82
+        },
+        {
+          "kind": "selector",
+          "name": ".nav-caret",
+          "line": 87
+        },
+        {
+          "kind": "selector",
+          "name": ".nav-item.is-open .nav-caret",
+          "line": 92
+        },
+        {
+          "kind": "selector",
+          "name": ".nav-dropdown",
+          "line": 97
+        },
+        {
+          "kind": "selector",
+          "name": ".nav-item.is-open .nav-dropdown",
+          "line": 113
+        },
+        {
+          "kind": "selector",
+          "name": ".nav-dropdown a",
+          "line": 119
+        },
+        {
+          "kind": "selector",
+          "name": ".nav-dropdown a:hover",
+          "line": 128
+        },
+        {
+          "kind": "selector",
+          "name": ".nav-cta",
+          "line": 135
+        },
+        {
+          "kind": "selector",
+          "name": ".nav-cta:hover",
+          "line": 156
+        },
+        {
+          "kind": "selector",
+          "name": "#nav-burger",
+          "line": 162
+        },
+        {
+          "kind": "selector",
+          "name": "#nav-burger span",
+          "line": 175
+        },
+        {
+          "kind": "selector",
+          "name": "#nav-burger.is-active span:nth-child(1)",
+          "line": 184
+        },
+        {
+          "kind": "selector",
+          "name": "#nav-burger.is-active span:nth-child(2)",
+          "line": 185
+        },
+        {
+          "kind": "selector",
+          "name": "#nav-burger.is-active span:nth-child(3)",
+          "line": 186
+        },
+        {
+          "kind": "selector",
+          "name": ".site-header__nav.is-mobile-open",
+          "line": 207
+        }
+      ]
+    },
+    {
+      "path": "css/homepage.css",
+      "size": 89397,
+      "mtimeMs": 1787821093829.0515,
+      "hash": "57fd27abaaf9db6752d6855780c0b716ace5113bdf67aef482106d7e35c36e3b",
+      "locators": [
+        {
+          "kind": "selector",
+          "name": ".editorial-heading-row .section__heading",
+          "line": 21
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-heading-row",
+          "line": 28
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-heading-row > div",
+          "line": 36
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-lead",
+          "line": 40
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-split",
+          "line": 48
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-split--media-left .editorial-split__media",
+          "line": 55
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-media-frame",
+          "line": 59
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-media-frame img",
+          "line": 68
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-media-caption",
+          "line": 75
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-split__content .eyebrow",
+          "line": 89
+        },
+        {
+          "kind": "selector",
+          "name": ".proof-list",
+          "line": 93
+        },
+        {
+          "kind": "selector",
+          "name": ".proof-list li",
+          "line": 102
+        },
+        {
+          "kind": "selector",
+          "name": ".proof-list li::before",
+          "line": 110
+        },
+        {
+          "kind": "selector",
+          "name": ".proof-list--two-col",
+          "line": 122
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero",
+          "line": 129
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__media",
+          "line": 141
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__video-wrap",
+          "line": 147
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__video",
+          "line": 153
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero.is-loaded .editorial-hero__video",
+          "line": 165
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__overlay",
+          "line": 174
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__blueprint",
+          "line": 203
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero.is-loaded .editorial-hero__blueprint",
+          "line": 212
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__grid-svg",
+          "line": 216
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__coord",
+          "line": 224
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__coord--top",
+          "line": 234
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__coord--bottom",
+          "line": 239
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__inner",
+          "line": 246
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__content",
+          "line": 259
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__eyebrow",
+          "line": 267
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__eyebrow::before",
+          "line": 289
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__title",
+          "line": 300
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__title-line",
+          "line": 310
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__accent",
+          "line": 318
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__accent::after",
+          "line": 324
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero.is-loaded .editorial-hero__accent::after",
+          "line": 339
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__sub",
+          "line": 344
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__actions",
+          "line": 356
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__btn",
+          "line": 366
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__btn-arrow",
+          "line": 385
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__btn--primary",
+          "line": 392
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__btn--primary:hover",
+          "line": 399
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__btn--primary:hover .editorial-hero__btn-arrow",
+          "line": 405
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__btn--secondary",
+          "line": 410
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__btn--secondary:hover",
+          "line": 416
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__btn--secondary:hover .editorial-hero__btn-arrow",
+          "line": 422
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__company-label",
+          "line": 427
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__hud",
+          "line": 440
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__hud-title",
+          "line": 457
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__hud-list",
+          "line": 469
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__hud-list li",
+          "line": 478
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__hud-list li::before",
+          "line": 487
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__scroll",
+          "line": 500
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__scroll:hover",
+          "line": 517
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__scroll-mouse",
+          "line": 523
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__scroll:hover .editorial-hero__scroll-mouse",
+          "line": 531
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__scroll-dot",
+          "line": 536
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__scroll-text",
+          "line": 548
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__scroll:hover .editorial-hero__scroll-text",
+          "line": 557
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__scroll-line",
+          "line": 562
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__scroll-line::after",
+          "line": 571
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero.is-loaded .editorial-hero__eyebrow",
+          "line": 606
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero.is-loaded .editorial-hero__title-line[data-hero-anim=\"title-1\"]",
+          "line": 610
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero.is-loaded .editorial-hero__title-line[data-hero-anim=\"title-2\"]",
+          "line": 614
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero.is-loaded .editorial-hero__sub",
+          "line": 618
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero.is-loaded .editorial-hero__actions",
+          "line": 622
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero.is-loaded .editorial-hero__company-label",
+          "line": 626
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero.is-loaded .editorial-hero__hud",
+          "line": 630
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero.is-loaded .editorial-hero__scroll",
+          "line": 634
+        },
+        {
+          "kind": "selector",
+          "name": ".credibility",
+          "line": 785
+        },
+        {
+          "kind": "selector",
+          "name": ".credibility__inner",
+          "line": 791
+        },
+        {
+          "kind": "selector",
+          "name": ".credibility__header",
+          "line": 801
+        },
+        {
+          "kind": "selector",
+          "name": ".credibility__content-split",
+          "line": 808
+        },
+        {
+          "kind": "selector",
+          "name": ".credibility__text",
+          "line": 817
+        },
+        {
+          "kind": "selector",
+          "name": ".credibility__eyebrow",
+          "line": 824
+        },
+        {
+          "kind": "selector",
+          "name": ".credibility__heading",
+          "line": 834
+        },
+        {
+          "kind": "selector",
+          "name": ".credibility__heading-light",
+          "line": 845
+        },
+        {
+          "kind": "selector",
+          "name": ".credibility__body",
+          "line": 849
+        },
+        {
+          "kind": "selector",
+          "name": ".credibility__proofs",
+          "line": 858
+        },
+        {
+          "kind": "selector",
+          "name": ".credibility__proof",
+          "line": 864
+        },
+        {
+          "kind": "selector",
+          "name": ".credibility__proof:last-child",
+          "line": 874
+        }
+      ]
+    },
+    {
+      "path": "css/main.css",
+      "size": 31511,
+      "mtimeMs": 1787816897970.454,
+      "hash": "6b01847719f67d2a5515201348514204dfb3f1b0b919d995f17950ce1f78e3d2",
+      "locators": [
+        {
+          "kind": "selector",
+          "name": ".eyebrow",
+          "line": 34
+        },
+        {
+          "kind": "selector",
+          "name": ".eyebrow::before",
+          "line": 53
+        },
+        {
+          "kind": "selector",
+          "name": ".section__heading .eyebrow",
+          "line": 63
+        },
+        {
+          "kind": "selector",
+          "name": ".final-cta h2",
+          "line": 68
+        },
+        {
+          "kind": "selector",
+          "name": ".action-row",
+          "line": 76
+        },
+        {
+          "kind": "selector",
+          "name": ".btn-light",
+          "line": 85
+        },
+        {
+          "kind": "selector",
+          "name": ".btn-brand",
+          "line": 98
+        },
+        {
+          "kind": "selector",
+          "name": ".btn-outline",
+          "line": 103
+        },
+        {
+          "kind": "selector",
+          "name": ".section",
+          "line": 114
+        },
+        {
+          "kind": "selector",
+          "name": ".section--light",
+          "line": 119
+        },
+        {
+          "kind": "selector",
+          "name": ".section--blue",
+          "line": 123
+        },
+        {
+          "kind": "selector",
+          "name": ".section--blue .eyebrow",
+          "line": 129
+        },
+        {
+          "kind": "selector",
+          "name": ".section--blue p",
+          "line": 133
+        },
+        {
+          "kind": "selector",
+          "name": ".section__heading--stacked",
+          "line": 138
+        },
+        {
+          "kind": "selector",
+          "name": ".section__heading--stacked .eyebrow",
+          "line": 149
+        },
+        {
+          "kind": "selector",
+          "name": ".section__heading--stacked p:not(.eyebrow)",
+          "line": 168
+        },
+        {
+          "kind": "selector",
+          "name": ".section__heading > a",
+          "line": 177
+        },
+        {
+          "kind": "selector",
+          "name": ".section__heading > a:hover",
+          "line": 192
+        },
+        {
+          "kind": "selector",
+          "name": ".article-grid",
+          "line": 198
+        },
+        {
+          "kind": "selector",
+          "name": ".solutions-section",
+          "line": 204
+        },
+        {
+          "kind": "selector",
+          "name": ".eyebrow-dot",
+          "line": 210
+        },
+        {
+          "kind": "selector",
+          "name": ".solution-grid",
+          "line": 220
+        },
+        {
+          "kind": "selector",
+          "name": ".solution-card",
+          "line": 228
+        },
+        {
+          "kind": "selector",
+          "name": ".solution-card:hover",
+          "line": 241
+        },
+        {
+          "kind": "selector",
+          "name": ".solution-card__image-wrap",
+          "line": 247
+        },
+        {
+          "kind": "selector",
+          "name": ".solution-card__image-wrap img",
+          "line": 255
+        },
+        {
+          "kind": "selector",
+          "name": ".solution-card:hover .solution-card__image-wrap img",
+          "line": 263
+        },
+        {
+          "kind": "selector",
+          "name": ".solution-card__badge",
+          "line": 267
+        },
+        {
+          "kind": "selector",
+          "name": ".solution-card__badge--alt",
+          "line": 284
+        },
+        {
+          "kind": "selector",
+          "name": ".solution-card__badge--highlight",
+          "line": 288
+        },
+        {
+          "kind": "selector",
+          "name": ".solution-card__content",
+          "line": 293
+        },
+        {
+          "kind": "selector",
+          "name": ".solution-card__content h3",
+          "line": 300
+        },
+        {
+          "kind": "selector",
+          "name": ".solution-card__content p",
+          "line": 308
+        },
+        {
+          "kind": "selector",
+          "name": ".solution-card__specs",
+          "line": 315
+        },
+        {
+          "kind": "selector",
+          "name": ".spec-pill",
+          "line": 323
+        },
+        {
+          "kind": "selector",
+          "name": ".solution-card__footer",
+          "line": 334
+        },
+        {
+          "kind": "selector",
+          "name": ".solution-card__link",
+          "line": 339
+        },
+        {
+          "kind": "selector",
+          "name": ".solution-card__link .arrow-icon",
+          "line": 350
+        },
+        {
+          "kind": "selector",
+          "name": ".solution-card:hover .solution-card__link",
+          "line": 356
+        },
+        {
+          "kind": "selector",
+          "name": ".solution-card:hover .solution-card__link .arrow-icon",
+          "line": 360
+        },
+        {
+          "kind": "selector",
+          "name": ".solution-summary-strip",
+          "line": 365
+        },
+        {
+          "kind": "selector",
+          "name": ".summary-item",
+          "line": 377
+        },
+        {
+          "kind": "selector",
+          "name": ".summary-item__icon",
+          "line": 383
+        },
+        {
+          "kind": "selector",
+          "name": ".summary-item__icon svg",
+          "line": 395
+        },
+        {
+          "kind": "selector",
+          "name": ".summary-item__text",
+          "line": 400
+        },
+        {
+          "kind": "selector",
+          "name": ".summary-item__text strong",
+          "line": 405
+        },
+        {
+          "kind": "selector",
+          "name": ".summary-item__text span",
+          "line": 412
+        },
+        {
+          "kind": "selector",
+          "name": ".summary-divider",
+          "line": 417
+        },
+        {
+          "kind": "selector",
+          "name": ".article-grid a",
+          "line": 426
+        },
+        {
+          "kind": "selector",
+          "name": ".feature-card",
+          "line": 434
+        },
+        {
+          "kind": "selector",
+          "name": ".feature-card:hover",
+          "line": 443
+        },
+        {
+          "kind": "selector",
+          "name": ".feature-card--wide",
+          "line": 449
+        },
+        {
+          "kind": "selector",
+          "name": ".feature-card img",
+          "line": 453
+        },
+        {
+          "kind": "selector",
+          "name": ".feature-card > a",
+          "line": 466
+        },
+        {
+          "kind": "selector",
+          "name": ".feature-card h3",
+          "line": 471
+        },
+        {
+          "kind": "selector",
+          "name": ".feature-card p",
+          "line": 479
+        },
+        {
+          "kind": "selector",
+          "name": ".feature-card a",
+          "line": 485
+        },
+        {
+          "kind": "selector",
+          "name": ".feature-card a span",
+          "line": 497
+        },
+        {
+          "kind": "selector",
+          "name": ".feature-card:hover a span",
+          "line": 501
+        },
+        {
+          "kind": "selector",
+          "name": ".machinery-section",
+          "line": 506
+        },
+        {
+          "kind": "selector",
+          "name": ".equipment-grid",
+          "line": 512
+        },
+        {
+          "kind": "selector",
+          "name": ".equipment-card",
+          "line": 519
+        },
+        {
+          "kind": "selector",
+          "name": ".equipment-card:hover",
+          "line": 533
+        },
+        {
+          "kind": "selector",
+          "name": ".equipment-card__header",
+          "line": 539
+        },
+        {
+          "kind": "selector",
+          "name": ".stage-badge",
+          "line": 546
+        },
+        {
+          "kind": "selector",
+          "name": ".equipment-card__icon",
+          "line": 559
+        },
+        {
+          "kind": "selector",
+          "name": ".equipment-card__icon svg",
+          "line": 571
+        },
+        {
+          "kind": "selector",
+          "name": ".equipment-card:hover .equipment-card__icon",
+          "line": 576
+        },
+        {
+          "kind": "selector",
+          "name": ".equipment-card__body h3",
+          "line": 581
+        },
+        {
+          "kind": "selector",
+          "name": ".equipment-card__body p",
+          "line": 589
+        },
+        {
+          "kind": "selector",
+          "name": ".equipment-card__footer",
+          "line": 596
+        },
+        {
+          "kind": "selector",
+          "name": ".equipment-card__footer .arrow-icon",
+          "line": 608
+        },
+        {
+          "kind": "selector",
+          "name": ".equipment-card:hover .equipment-card__footer .arrow-icon",
+          "line": 614
+        },
+        {
+          "kind": "selector",
+          "name": ".section--blue h2#why-title",
+          "line": 627
+        },
+        {
+          "kind": "selector",
+          "name": ".section--blue .eyebrow::before",
+          "line": 644
+        },
+        {
+          "kind": "selector",
+          "name": ".why-action .btn-light",
+          "line": 657
+        },
+        {
+          "kind": "selector",
+          "name": ".why-action .btn-light:hover",
+          "line": 671
+        },
+        {
+          "kind": "selector",
+          "name": ".why-action .arrow-icon",
+          "line": 676
+        },
+        {
+          "kind": "selector",
+          "name": ".why-action .btn-light:hover .arrow-icon",
+          "line": 682
+        },
+        {
+          "kind": "selector",
+          "name": ".section--split",
+          "line": 686
+        }
+      ]
+    },
+    {
+      "path": "css/responsive.css",
+      "size": 0,
+      "mtimeMs": 1787635886800.7107,
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "locators": []
+    },
+    {
+      "path": "css/variables.css",
+      "size": 2555,
+      "mtimeMs": 1787808045134.9915,
+      "hash": "00e218128fc2110d03e1b9b401ae66f7740f8da1407a972c3e9130626409892d",
+      "locators": []
+    },
+    {
+      "path": "data/site-data.js",
+      "size": 0,
+      "mtimeMs": 1787635886826.6238,
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "locators": []
+    },
+    {
+      "path": "design-your-plant.html",
+      "size": 963,
+      "mtimeMs": 1787637678585.1123,
+      "hash": "224b18a07e50ef033216970073edf33fab5e9b15ae61384cf9ed685bb7ae7953",
+      "locators": []
+    },
+    {
+      "path": "efficient-your-plant.html",
+      "size": 969,
+      "mtimeMs": 1787637678620.1123,
+      "hash": "c07bff47d50a303d39f763fb070528ab016f732fde4e786c04a08be6f093d330",
+      "locators": []
+    },
+    {
+      "path": "engineering-center.html",
+      "size": 1302,
+      "mtimeMs": 1787638376219.3135,
+      "hash": "bc4e35d71adca10df25f816fcd3510bc26e1a0727cc785a69c1ef7d2d6ec3fd9",
+      "locators": [
+        {
+          "kind": "heading",
+          "name": "AAC Engineering Center",
+          "line": 17
+        }
+      ]
+    },
+    {
+      "path": "expand-your-plant.html",
+      "size": 963,
+      "mtimeMs": 1787637678630.1113,
+      "hash": "ba22750d648d4bc89f99c7e26e27f24c09c41a8353fed8f177bb8b49d83b0929",
+      "locators": []
+    },
+    {
+      "path": "index.html",
+      "size": 773669,
+      "mtimeMs": 1787820963369.8767,
+      "hash": "feed03fb10a0c49d4d6b80b876a6ae21ead483161c2993390fdf8f5f24225703",
+      "locators": [
+        {
+          "kind": "id",
+          "name": "#site-header",
+          "line": 29
+        },
+        {
+          "kind": "id",
+          "name": "#hero",
+          "line": 33
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-hero",
+          "line": 33
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-hero__media",
+          "line": 36
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-hero__video-wrap",
+          "line": 37
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-hero__poster",
+          "line": 40
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-hero__overlay",
+          "line": 47
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-hero__blueprint",
+          "line": 51
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-hero__grid-svg",
+          "line": 52
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-hero__coord",
+          "line": 74
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-hero__coord--top",
+          "line": 74
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-hero__coord--bottom",
+          "line": 75
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-hero__inner",
+          "line": 79
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-hero__content",
+          "line": 80
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-hero__eyebrow",
+          "line": 81
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-hero__title",
+          "line": 82
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-hero__title-line",
+          "line": 83
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-hero__sub",
+          "line": 86
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-hero__actions",
+          "line": 89
+        },
+        {
+          "kind": "id",
+          "name": "#hero-cta-primary",
+          "line": 90
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-hero__btn",
+          "line": 90
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-hero__btn--primary",
+          "line": 90
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-hero__btn-arrow",
+          "line": 91
+        },
+        {
+          "kind": "id",
+          "name": "#hero-cta-secondary",
+          "line": 93
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-hero__btn--secondary",
+          "line": 93
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-hero__company-label",
+          "line": 97
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-hero__hud",
+          "line": 102
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-hero__hud-title",
+          "line": 103
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-hero__hud-list",
+          "line": 104
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-hero__scroll",
+          "line": 113
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-hero__scroll-mouse",
+          "line": 114
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-hero__scroll-dot",
+          "line": 117
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-hero__scroll-text",
+          "line": 120
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-hero__scroll-line",
+          "line": 121
+        },
+        {
+          "kind": "id",
+          "name": "#credibility",
+          "line": 128
+        },
+        {
+          "kind": "class",
+          "name": ".credibility",
+          "line": 128
+        },
+        {
+          "kind": "class",
+          "name": ".credibility__inner",
+          "line": 129
+        },
+        {
+          "kind": "class",
+          "name": ".credibility__header",
+          "line": 132
+        },
+        {
+          "kind": "class",
+          "name": ".credibility__eyebrow",
+          "line": 133
+        },
+        {
+          "kind": "class",
+          "name": ".credibility__heading",
+          "line": 134
+        },
+        {
+          "kind": "class",
+          "name": ".credibility__heading-light",
+          "line": 135
+        },
+        {
+          "kind": "class",
+          "name": ".credibility__content-split",
+          "line": 140
+        },
+        {
+          "kind": "class",
+          "name": ".credibility__text",
+          "line": 143
+        },
+        {
+          "kind": "class",
+          "name": ".credibility__body",
+          "line": 144
+        },
+        {
+          "kind": "class",
+          "name": ".credibility__proofs",
+          "line": 149
+        },
+        {
+          "kind": "class",
+          "name": ".credibility__proof",
+          "line": 150
+        },
+        {
+          "kind": "class",
+          "name": ".credibility__proof-num",
+          "line": 151
+        },
+        {
+          "kind": "class",
+          "name": ".credibility__proof-label",
+          "line": 152
+        },
+        {
+          "kind": "class",
+          "name": ".credibility__proof-arrow",
+          "line": 153
+        },
+        {
+          "kind": "class",
+          "name": ".credibility__cta",
+          "line": 168
+        },
+        {
+          "kind": "class",
+          "name": ".credibility__cta-arrow",
+          "line": 169
+        },
+        {
+          "kind": "class",
+          "name": ".credibility__media",
+          "line": 174
+        },
+        {
+          "kind": "class",
+          "name": ".credibility__img-wrap",
+          "line": 175
+        },
+        {
+          "kind": "class",
+          "name": ".credibility__img",
+          "line": 180
+        },
+        {
+          "kind": "class",
+          "name": ".credibility__img--active",
+          "line": 180
+        },
+        {
+          "kind": "id",
+          "name": "#credibility-img-1",
+          "line": 181
+        },
+        {
+          "kind": "id",
+          "name": "#credibility-img-2",
+          "line": 188
+        },
+        {
+          "kind": "id",
+          "name": "#credibility-img-3",
+          "line": 195
+        },
+        {
+          "kind": "id",
+          "name": "#credibility-img-label",
+          "line": 198
+        },
+        {
+          "kind": "class",
+          "name": ".credibility__img-label",
+          "line": 198
+        },
+        {
+          "kind": "id",
+          "name": "#journey",
+          "line": 207
+        },
+        {
+          "kind": "class",
+          "name": ".journey-section",
+          "line": 207
+        },
+        {
+          "kind": "class",
+          "name": ".journey-section__inner",
+          "line": 208
+        },
+        {
+          "kind": "class",
+          "name": ".journey-section__eyebrow",
+          "line": 210
+        },
+        {
+          "kind": "class",
+          "name": ".journey-section__heading",
+          "line": 211
+        },
+        {
+          "kind": "class",
+          "name": ".journey-section__heading-light",
+          "line": 212
+        },
+        {
+          "kind": "class",
+          "name": ".journey-section__list",
+          "line": 215
+        },
+        {
+          "kind": "class",
+          "name": ".journey-section__row",
+          "line": 216
+        },
+        {
+          "kind": "class",
+          "name": ".journey-section__row-num",
+          "line": 217
+        },
+        {
+          "kind": "class",
+          "name": ".journey-section__row-title",
+          "line": 218
+        },
+        {
+          "kind": "class",
+          "name": ".journey-section__row-desc",
+          "line": 219
+        },
+        {
+          "kind": "class",
+          "name": ".journey-section__row-arrow",
+          "line": 220
+        },
+        {
+          "kind": "id",
+          "name": "#investment",
+          "line": 251
+        },
+        {
+          "kind": "class",
+          "name": ".investment-section",
+          "line": 251
+        },
+        {
+          "kind": "class",
+          "name": ".investment-section__inner",
+          "line": 252
+        },
+        {
+          "kind": "class",
+          "name": ".investment-section__header",
+          "line": 255
+        },
+        {
+          "kind": "class",
+          "name": ".investment-section__eyebrow",
+          "line": 256
+        },
+        {
+          "kind": "class",
+          "name": ".investment-section__heading",
+          "line": 257
+        },
+        {
+          "kind": "class",
+          "name": ".investment-section__heading-light",
+          "line": 258
+        },
+        {
+          "kind": "class",
+          "name": ".investment-section__content-split",
+          "line": 263
+        }
+      ]
+    },
+    {
+      "path": "js/animations.js",
+      "size": 10352,
+      "mtimeMs": 1787820615772.453,
+      "hash": "0cc81debf4258ab4a2111126c50d04517e609b5eb2deb0991eba37b5ecd1b711",
+      "locators": [
+        {
+          "kind": "class",
+          "name": "from",
+          "line": 155
+        },
+        {
+          "kind": "class",
+          "name": "to",
+          "line": 160
+        },
+        {
+          "kind": "function",
+          "name": "openVideoModal",
+          "line": 218
+        },
+        {
+          "kind": "function",
+          "name": "closeVideoModal",
+          "line": 227
+        }
+      ]
+    },
+    {
+      "path": "js/components.js",
+      "size": 6512,
+      "mtimeMs": 1787663397172.8938,
+      "hash": "2a2f2ca8b3d8b565f5bfce7db77a17d0d8ce82c62d94f57a4d81c8cb2ded42b2",
+      "locators": [
+        {
+          "kind": "function",
+          "name": "mountHeader",
+          "line": 38
+        },
+        {
+          "kind": "function",
+          "name": "injectHeader",
+          "line": 46
+        },
+        {
+          "kind": "function",
+          "name": "initDropdowns",
+          "line": 67
+        },
+        {
+          "kind": "function",
+          "name": "initMobileMenu",
+          "line": 102
+        }
+      ]
+    },
+    {
+      "path": "js/main.js",
+      "size": 0,
+      "mtimeMs": 1787635886807.0864,
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "locators": []
+    },
+    {
+      "path": "js/navigation.js",
+      "size": 0,
+      "mtimeMs": 1787635886811.088,
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "locators": []
+    },
+    {
+      "path": "knowledge-hub.html",
+      "size": 955,
+      "mtimeMs": 1787637678741.0251,
+      "hash": "6868cc9826448ff81b5deddf806351e67b1a66546d014fa339c5f500285e13cf",
+      "locators": []
+    },
+    {
+      "path": "laxmi-en-fab/client-content/Laxmi en fab website/.vscode/settings.json",
+      "size": 42,
+      "mtimeMs": 1787630566533.8308,
+      "hash": "d7c4c5969a13be89c26b96373e811c72455b9bcc938c3e2ee1de236c55773289",
+      "locators": []
+    },
+    {
+      "path": "laxmi-en-fab/client-content/Laxmi en fab website/3. AAC INVESTOR ACADEMY/1.Understand the market/1. Why AAC/why-aac-three-scroll-page.html",
+      "size": 2305187,
+      "mtimeMs": 1787630488556.3967,
+      "hash": "2e21aa239d84ceeb36a0edacc4bd4bc22f45c5b4f06960c2117e8e226bce3596",
+      "locators": [
+        {
+          "kind": "id",
+          "name": "#why-aac-layout",
+          "line": 823
+        },
+        {
+          "kind": "class",
+          "name": ".page",
+          "line": 879
+        },
+        {
+          "kind": "class",
+          "name": ".scroll-label",
+          "line": 880
+        },
+        {
+          "kind": "class",
+          "name": ".browser",
+          "line": 881
+        },
+        {
+          "kind": "class",
+          "name": ".nav",
+          "line": 882
+        },
+        {
+          "kind": "class",
+          "name": ".brand",
+          "line": 883
+        },
+        {
+          "kind": "class",
+          "name": ".links",
+          "line": 884
+        },
+        {
+          "kind": "class",
+          "name": ".hero",
+          "line": 886
+        },
+        {
+          "kind": "class",
+          "name": ".hero-copy",
+          "line": 887
+        },
+        {
+          "kind": "class",
+          "name": ".eyebrow",
+          "line": 888
+        },
+        {
+          "kind": "heading",
+          "name": "Why AAC Blocks?",
+          "line": 889
+        },
+        {
+          "kind": "class",
+          "name": ".btn",
+          "line": 891
+        },
+        {
+          "kind": "class",
+          "name": ".btn-primary",
+          "line": 891
+        },
+        {
+          "kind": "class",
+          "name": ".hero-image",
+          "line": 893
+        },
+        {
+          "kind": "id",
+          "name": "#why-aac-benefits",
+          "line": 895
+        },
+        {
+          "kind": "class",
+          "name": ".section",
+          "line": 895
+        },
+        {
+          "kind": "class",
+          "name": ".section-head",
+          "line": 896
+        },
+        {
+          "kind": "heading",
+          "name": "Five reasons AAC matters",
+          "line": 897
+        },
+        {
+          "kind": "class",
+          "name": ".benefits",
+          "line": 900
+        },
+        {
+          "kind": "class",
+          "name": ".benefit",
+          "line": 901
+        },
+        {
+          "kind": "class",
+          "name": ".split",
+          "line": 912
+        },
+        {
+          "kind": "heading",
+          "name": "Important limitations",
+          "line": 914
+        },
+        {
+          "kind": "class",
+          "name": ".quiet-list",
+          "line": 915
+        },
+        {
+          "kind": "class",
+          "name": ".quiet-row",
+          "line": 916
+        },
+        {
+          "kind": "heading",
+          "name": "AAC vs red brick",
+          "line": 923
+        },
+        {
+          "kind": "class",
+          "name": ".table-responsive",
+          "line": 924
+        },
+        {
+          "kind": "class",
+          "name": ".compare",
+          "line": 924
+        },
+        {
+          "kind": "class",
+          "name": ".table",
+          "line": 925
+        },
+        {
+          "kind": "class",
+          "name": ".table-sm",
+          "line": 925
+        },
+        {
+          "kind": "heading",
+          "name": "Why manufacturing quality matters",
+          "line": 939
+        },
+        {
+          "kind": "class",
+          "name": ".process",
+          "line": 940
+        },
+        {
+          "kind": "class",
+          "name": ".process-row",
+          "line": 941
+        },
+        {
+          "kind": "class",
+          "name": ".quote",
+          "line": 948
+        },
+        {
+          "kind": "heading",
+          "name": "Automation is not the objective.",
+          "line": 949
+        },
+        {
+          "kind": "id",
+          "name": "#why-aac-investor",
+          "line": 958
+        },
+        {
+          "kind": "class",
+          "name": ".investor",
+          "line": 958
+        },
+        {
+          "kind": "heading",
+          "name": "What an AAC plant investor should understand",
+          "line": 960
+        },
+        {
+          "kind": "heading",
+          "name": "Continue into focused topics",
+          "line": 969
+        },
+        {
+          "kind": "class",
+          "name": ".text-muted",
+          "line": 970
+        },
+        {
+          "kind": "class",
+          "name": ".viz-row",
+          "line": 971
+        },
+        {
+          "kind": "class",
+          "name": ".viz-badge",
+          "line": 972
+        },
+        {
+          "kind": "heading",
+          "name": "Frequently asked questions",
+          "line": 977
+        },
+        {
+          "kind": "class",
+          "name": ".faq",
+          "line": 978
+        },
+        {
+          "kind": "class",
+          "name": ".final-cta",
+          "line": 986
+        },
+        {
+          "kind": "heading",
+          "name": "Start with the product, market and raw materials.",
+          "line": 987
+        },
+        {
+          "kind": "class",
+          "name": ".btn-row",
+          "line": 989
+        },
+        {
+          "kind": "id",
+          "name": "#codex-visualization-floating-ui-core",
+          "line": 995
+        },
+        {
+          "kind": "id",
+          "name": "#codex-visualization-floating-ui-dom",
+          "line": 996
+        },
+        {
+          "kind": "id",
+          "name": "#codex-visualization-lucide",
+          "line": 997
+        },
+        {
+          "kind": "id",
+          "name": "#codex-visualization-tooltip",
+          "line": 998
+        },
+        {
+          "kind": "class",
+          "name": ".tooltip",
+          "line": 1037
+        },
+        {
+          "kind": "id",
+          "name": "#codex-visualization-lucide-initialization",
+          "line": 1220
+        }
+      ]
+    },
+    {
+      "path": "machinery-equipment-editorial.html",
+      "size": 16989,
+      "mtimeMs": 1788175681263.6726,
+      "hash": "538f55bdb5c14e01cfa950814fd76906f3663f3baff6ef6b9f4c6b6755196ef7",
+      "locators": [
+        {
+          "kind": "class",
+          "name": ".mee-hero",
+          "line": 317
+        },
+        {
+          "kind": "class",
+          "name": ".me-ed-hero",
+          "line": 317
+        },
+        {
+          "kind": "class",
+          "name": ".container",
+          "line": 318
+        },
+        {
+          "kind": "class",
+          "name": ".hero-grid",
+          "line": 319
+        },
+        {
+          "kind": "class",
+          "name": ".eyebrow",
+          "line": 321
+        },
+        {
+          "kind": "heading",
+          "name": "Engineered for",
+          "line": 322
+        },
+        {
+          "kind": "class",
+          "name": ".lead",
+          "line": 323
+        },
+        {
+          "kind": "class",
+          "name": ".action-row",
+          "line": 324
+        },
+        {
+          "kind": "class",
+          "name": ".btn",
+          "line": 325
+        },
+        {
+          "kind": "class",
+          "name": ".btn-brand",
+          "line": 325
+        },
+        {
+          "kind": "class",
+          "name": ".me-ed-hero-media",
+          "line": 328
+        },
+        {
+          "kind": "class",
+          "name": ".mee-rail",
+          "line": 336
+        },
+        {
+          "kind": "class",
+          "name": ".mee-rail__inner",
+          "line": 337
+        },
+        {
+          "kind": "id",
+          "name": "#material-preparation",
+          "line": 350
+        },
+        {
+          "kind": "class",
+          "name": ".mee-section",
+          "line": 350
+        },
+        {
+          "kind": "class",
+          "name": ".mee-kicker",
+          "line": 352
+        },
+        {
+          "kind": "class",
+          "name": ".mee-title",
+          "line": 353
+        },
+        {
+          "kind": "heading",
+          "name": "Material preparation",
+          "line": 353
+        },
+        {
+          "kind": "class",
+          "name": ".mee-lede",
+          "line": 354
+        },
+        {
+          "kind": "class",
+          "name": ".mee-split",
+          "line": 356
+        },
+        {
+          "kind": "class",
+          "name": ".mee-split__num",
+          "line": 358
+        },
+        {
+          "kind": "heading",
+          "name": "Ball Mill",
+          "line": 359
+        },
+        {
+          "kind": "class",
+          "name": ".mee-media",
+          "line": 362
+        },
+        {
+          "kind": "class",
+          "name": ".mee-media__tag",
+          "line": 363
+        },
+        {
+          "kind": "class",
+          "name": ".mee-media__caption",
+          "line": 364
+        },
+        {
+          "kind": "id",
+          "name": "#slurry",
+          "line": 368
+        },
+        {
+          "kind": "class",
+          "name": ".mee-split--flip",
+          "line": 368
+        },
+        {
+          "kind": "heading",
+          "name": "Slurry Making",
+          "line": 371
+        },
+        {
+          "kind": "heading",
+          "name": "Slurry Storage",
+          "line": 383
+        },
+        {
+          "kind": "heading",
+          "name": "Visual Treatment",
+          "line": 395
+        },
+        {
+          "kind": "id",
+          "name": "#batch",
+          "line": 407
+        },
+        {
+          "kind": "class",
+          "name": ".mee-section--tint",
+          "line": 407
+        },
+        {
+          "kind": "heading",
+          "name": "Batching, moulding & precuring",
+          "line": 410
+        },
+        {
+          "kind": "heading",
+          "name": "Batching Unit & Control",
+          "line": 416
+        }
+      ]
+    },
+    {
+      "path": "machinery-equipment.html",
+      "size": 23187,
+      "mtimeMs": 1788175008773.865,
+      "hash": "8b5ec327a2d5fe705fe5ab47217018a95c950ccf713c2fa831982f2d2099ede4",
+      "locators": [
+        {
+          "kind": "class",
+          "name": ".me-hero",
+          "line": 347
+        },
+        {
+          "kind": "class",
+          "name": ".container",
+          "line": 348
+        },
+        {
+          "kind": "class",
+          "name": ".eyebrow",
+          "line": 349
+        },
+        {
+          "kind": "heading",
+          "name": "Engineered for the production line.",
+          "line": 350
+        },
+        {
+          "kind": "class",
+          "name": ".action-row",
+          "line": 352
+        },
+        {
+          "kind": "class",
+          "name": ".btn-brand",
+          "line": 353
+        },
+        {
+          "kind": "id",
+          "name": "#process",
+          "line": 359
+        },
+        {
+          "kind": "class",
+          "name": ".process-rail",
+          "line": 359
+        },
+        {
+          "kind": "class",
+          "name": ".process-rail__inner",
+          "line": 360
+        },
+        {
+          "kind": "id",
+          "name": "#material-prep",
+          "line": 371
+        },
+        {
+          "kind": "class",
+          "name": ".equip-section",
+          "line": 371
+        },
+        {
+          "kind": "class",
+          "name": ".equip-section__head",
+          "line": 373
+        },
+        {
+          "kind": "class",
+          "name": ".kicker",
+          "line": 374
+        },
+        {
+          "kind": "heading",
+          "name": "Material preparation",
+          "line": 375
+        },
+        {
+          "kind": "class",
+          "name": ".equip-stage",
+          "line": 378
+        },
+        {
+          "kind": "class",
+          "name": ".equip-stage--split",
+          "line": 378
+        },
+        {
+          "kind": "class",
+          "name": ".equip-media",
+          "line": 379
+        },
+        {
+          "kind": "class",
+          "name": ".media-frame",
+          "line": 380
+        },
+        {
+          "kind": "class",
+          "name": ".tag",
+          "line": 381
+        },
+        {
+          "kind": "heading",
+          "name": "Ball Mill",
+          "line": 382
+        },
+        {
+          "kind": "class",
+          "name": ".equip-item",
+          "line": 385
+        },
+        {
+          "kind": "class",
+          "name": ".num",
+          "line": 386
+        },
+        {
+          "kind": "heading",
+          "name": "Slurry Making",
+          "line": 387
+        },
+        {
+          "kind": "heading",
+          "name": "Slurry Storage",
+          "line": 394
+        },
+        {
+          "kind": "heading",
+          "name": "Visual Treatment",
+          "line": 399
+        },
+        {
+          "kind": "id",
+          "name": "#batch",
+          "line": 407
+        },
+        {
+          "kind": "class",
+          "name": ".equip-section--alt",
+          "line": 407
+        },
+        {
+          "kind": "heading",
+          "name": "Batching, moulding & precuring",
+          "line": 411
+        },
+        {
+          "kind": "heading",
+          "name": "Batching Unit / Control",
+          "line": 417
+        },
+        {
+          "kind": "class",
+          "name": ".equip-tags",
+          "line": 419
+        },
+        {
+          "kind": "heading",
+          "name": "Mould Box / Side Plate",
+          "line": 425
+        },
+        {
+          "kind": "heading",
+          "name": "Precuring",
+          "line": 430
+        },
+        {
+          "kind": "id",
+          "name": "#cutting",
+          "line": 438
+        },
+        {
+          "kind": "heading",
+          "name": "Cutting & handling",
+          "line": 442
+        },
+        {
+          "kind": "heading",
+          "name": "Advanced Three-Stage Cutting Machine",
+          "line": 448
+        },
+        {
+          "kind": "heading",
+          "name": "Cutting Machines",
+          "line": 454
+        },
+        {
+          "kind": "heading",
+          "name": "Vertical Cutting Machine",
+          "line": 459
+        },
+        {
+          "kind": "heading",
+          "name": "Tilting Crane",
+          "line": 466
+        },
+        {
+          "kind": "id",
+          "name": "#handling",
+          "line": 470
+        },
+        {
+          "kind": "heading",
+          "name": "Grouping Crane",
+          "line": 471
+        },
+        {
+          "kind": "id",
+          "name": "#autoclave",
+          "line": 479
+        },
+        {
+          "kind": "heading",
+          "name": "Autoclaving & packing",
+          "line": 483
+        },
+        {
+          "kind": "heading",
+          "name": "Autoclave",
+          "line": 490
+        },
+        {
+          "kind": "id",
+          "name": "#packing",
+          "line": 493
+        },
+        {
+          "kind": "heading",
+          "name": "Auto Packing Line",
+          "line": 496
+        },
+        {
+          "kind": "class",
+          "name": ".section-link-row",
+          "line": 500
+        },
+        {
+          "kind": "class",
+          "name": ".btn-outline",
+          "line": 501
+        },
+        {
+          "kind": "id",
+          "name": "#proof",
+          "line": 507
+        },
+        {
+          "kind": "heading",
+          "name": "Built, assembled and dispatched",
+          "line": 511
+        },
+        {
+          "kind": "class",
+          "name": ".proof-grid",
+          "line": 514
+        },
+        {
+          "kind": "class",
+          "name": ".proof-card",
+          "line": 515
+        },
+        {
+          "kind": "class",
+          "name": ".p-num",
+          "line": 516
+        },
+        {
+          "kind": "heading",
+          "name": "Workshop",
+          "line": 517
+        },
+        {
+          "kind": "heading",
+          "name": "Manufacturing",
+          "line": 522
+        },
+        {
+          "kind": "heading",
+          "name": "Dispatch",
+          "line": 527
+        },
+        {
+          "kind": "class",
+          "name": ".text-link",
+          "line": 532
+        },
+        {
+          "kind": "class",
+          "name": ".catalog-strip",
+          "line": 538
+        },
+        {
+          "kind": "heading",
+          "name": "Equipment covered by the Laxmi catalogue",
+          "line": 540
+        },
+        {
+          "kind": "class",
+          "name": ".sub",
+          "line": 541
+        },
+        {
+          "kind": "class",
+          "name": ".catalog-chips",
+          "line": 542
+        },
+        {
+          "kind": "class",
+          "name": ".equip-cta",
+          "line": 562
+        },
+        {
+          "kind": "heading",
+          "name": "Planning an AAC plant?",
+          "line": 564
+        },
+        {
+          "kind": "class",
+          "name": ".note",
+          "line": 569
+        }
+      ]
+    },
+    {
+      "path": "plant-layout.html",
+      "size": 961,
+      "mtimeMs": 1787637678717.0266,
+      "hash": "fe2fff7f0cd0f287e12e7376fec8bbd9188d0b4b6405573ca46e952db67653dc",
+      "locators": []
+    },
+    {
+      "path": "production-process.html",
+      "size": 973,
+      "mtimeMs": 1787637678646.1125,
+      "hash": "258b27449b2638f712585a18bc99c429831efedcafd84826adcc6e13b8563745",
+      "locators": []
+    },
+    {
+      "path": "projects.html",
+      "size": 945,
+      "mtimeMs": 1787637678722.0247,
+      "hash": "6b7ba7eca6dc8346f7cff3e524c14332ff4306743e4ab5ac68973f281a476263",
+      "locators": []
+    },
+    {
+      "path": "solutions.html",
+      "size": 7699,
+      "mtimeMs": 1787663394640.025,
+      "hash": "3d4566f3fe3971af46a9a9204d879864c966c7a22a651008e53276ab76dac95b",
+      "locators": [
+        {
+          "kind": "id",
+          "name": "#site-header",
+          "line": 14
+        },
+        {
+          "kind": "class",
+          "name": ".site-header",
+          "line": 14
+        },
+        {
+          "kind": "class",
+          "name": ".solutions-hero",
+          "line": 17
+        },
+        {
+          "kind": "class",
+          "name": ".eyebrow",
+          "line": 19
+        },
+        {
+          "kind": "id",
+          "name": "#solutions-hero-title",
+          "line": 20
+        },
+        {
+          "kind": "heading",
+          "name": "Complete AAC plant and building-material solutions.",
+          "line": 20
+        },
+        {
+          "kind": "class",
+          "name": ".action-row",
+          "line": 22
+        },
+        {
+          "kind": "class",
+          "name": ".btn-brand",
+          "line": 23
+        },
+        {
+          "kind": "class",
+          "name": ".btn-outline",
+          "line": 24
+        },
+        {
+          "kind": "class",
+          "name": ".btn-outline--dark",
+          "line": 24
+        },
+        {
+          "kind": "class",
+          "name": ".solutions-hero__panel",
+          "line": 27
+        },
+        {
+          "kind": "class",
+          "name": ".solution-switcher",
+          "line": 32
+        },
+        {
+          "kind": "id",
+          "name": "#aac-plants",
+          "line": 39
+        },
+        {
+          "kind": "class",
+          "name": ".section",
+          "line": 39
+        },
+        {
+          "kind": "class",
+          "name": ".section--light",
+          "line": 39
+        },
+        {
+          "kind": "class",
+          "name": ".section__heading",
+          "line": 40
+        },
+        {
+          "kind": "class",
+          "name": ".section__heading--stacked",
+          "line": 40
+        },
+        {
+          "kind": "id",
+          "name": "#aac-plants-title",
+          "line": 42
+        },
+        {
+          "kind": "heading",
+          "name": "AAC block, panel and combined plant configurations.",
+          "line": 42
+        },
+        {
+          "kind": "class",
+          "name": ".solution-lane",
+          "line": 45
+        },
+        {
+          "kind": "heading",
+          "name": "AAC Block Plant",
+          "line": 48
+        },
+        {
+          "kind": "heading",
+          "name": "AAC Panel Plant",
+          "line": 54
+        },
+        {
+          "kind": "heading",
+          "name": "AAC Block & Panel Plant",
+          "line": 60
+        },
+        {
+          "kind": "id",
+          "name": "#dry-mix",
+          "line": 67
+        },
+        {
+          "kind": "class",
+          "name": ".drymix-layout",
+          "line": 68
+        },
+        {
+          "kind": "id",
+          "name": "#dry-mix-title",
+          "line": 71
+        },
+        {
+          "kind": "heading",
+          "name": "Dry mix mortar plant and related building-material products.",
+          "line": 71
+        },
+        {
+          "kind": "class",
+          "name": ".related-products",
+          "line": 75
+        },
+        {
+          "kind": "id",
+          "name": "#engineering-proof",
+          "line": 84
+        },
+        {
+          "kind": "class",
+          "name": ".section--blue",
+          "line": 84
+        },
+        {
+          "kind": "id",
+          "name": "#proof-title",
+          "line": 87
+        },
+        {
+          "kind": "heading",
+          "name": "Manufactured systems supported by engineering process clarity.",
+          "line": 87
+        },
+        {
+          "kind": "class",
+          "name": ".proof-cards",
+          "line": 90
+        },
+        {
+          "kind": "class",
+          "name": ".process-band",
+          "line": 95
+        },
+        {
+          "kind": "id",
+          "name": "#solutions-enquiry",
+          "line": 106
+        },
+        {
+          "kind": "class",
+          "name": ".solutions-enquiry",
+          "line": 106
+        },
+        {
+          "kind": "id",
+          "name": "#solutions-enquiry-title",
+          "line": 109
+        },
+        {
+          "kind": "heading",
+          "name": "Built around the production you need.",
+          "line": 109
+        },
+        {
+          "kind": "class",
+          "name": ".enquiry-card",
+          "line": 112
+        },
+        {
+          "kind": "class",
+          "name": ".site-footer",
+          "line": 121
+        }
+      ]
+    },
+    {
+      "path": "understand-market.html",
+      "size": 971,
+      "mtimeMs": 1787637678574.1125,
+      "hash": "ba20a5057a36b886271d42e558142bbcf50682630283964c7135f065ab18d267",
+      "locators": []
+    },
+    {
+      "path": "why-laxmi.html",
+      "size": 947,
+      "mtimeMs": 1787637678734.0256,
+      "hash": "038b1a69cf652e72a9ee967e97e7ec0af9dac3cdd5bf1adcc8cd3fd9f3621b44",
+      "locators": []
+    }
+  ]
+}
