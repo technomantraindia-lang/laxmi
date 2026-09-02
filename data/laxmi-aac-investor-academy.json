@@ -1,0 +1,688 @@
+{
+  "version": "1.0",
+  "project": "Laxmi En-Fab Pvt. Ltd. - AAC Investor Academy",
+  "architecture": "One reusable HTML/CSS/Vanilla JS template driven by JSON content.",
+  "shared": {
+    "eyebrow": "AAC INVESTOR ACADEMY",
+    "main_page": "/academy.html",
+    "navigation": [
+      {
+        "label": "HOME",
+        "url": "/index.html"
+      },
+      {
+        "label": "SOLUTIONS",
+        "url": "/solutions.html"
+      },
+      {
+        "label": "MACHINERY & EQUIPMENT",
+        "url": "/machinery-equipment.html"
+      },
+      {
+        "label": "AAC INVESTOR ACADEMY",
+        "url": "/academy.html"
+      },
+      {
+        "label": "ENGINEERING CENTER",
+        "url": "/engineering.html"
+      },
+      {
+        "label": "PROJECTS",
+        "url": "/projects.html"
+      },
+      {
+        "label": "ABOUT US",
+        "url": "/about-us.html"
+      },
+      {
+        "label": "CONTACT",
+        "url": "/contact.html"
+      }
+    ],
+    "page_order": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05"
+    ],
+    "visual_direction": {
+      "style": "Premium editorial industrial",
+      "colors": [
+        "deep navy",
+        "Laxmi blue",
+        "white",
+        "soft technical blue",
+        "neutral grey"
+      ],
+      "imagery": [
+        "approved Laxmi plant imagery",
+        "AAC product imagery",
+        "machinery imagery",
+        "engineering drawings",
+        "plant layouts",
+        "approved project imagery"
+      ],
+      "avoid": [
+        "generic stock photography",
+        "dashboard UI",
+        "large card walls",
+        "excessive icons",
+        "unsupported statistics",
+        "heavy animation"
+      ]
+    },
+    "footer_cta": {
+      "primary": {
+        "label": "TALK TO LAXMI",
+        "url": "/contact.html"
+      },
+      "secondary": {
+        "label": "EXPLORE SOLUTIONS",
+        "url": "/solutions.html"
+      }
+    },
+    "footer_contact": {
+      "company": "Laxmi En-Fab Pvt. Ltd.",
+      "address": "48 Block A, 2nd Floor, Pelican Complex, Opp Odhav BRTS, GIDC, Odhav, Ahmedabad, Gujarat 382415",
+      "phone": [
+        "+91-8980800607",
+        "+91-8980800839"
+      ],
+      "email": [
+        "aac@laxmienfab.com",
+        "aaclaxmi@gmail.com"
+      ]
+    },
+    "implementation": {
+      "template": "academy-inner-template.html",
+      "data_file": "academy-data.json",
+      "js": "academy.js",
+      "css": "academy.css",
+      "requirements": [
+        "responsive",
+        "semantic HTML",
+        "keyboard accessible",
+        "touch friendly",
+        "prefers-reduced-motion",
+        "lazy-load below-fold imagery"
+      ]
+    }
+  },
+  "pages": [
+    {
+      "stage": "01",
+      "slug": "understand-market",
+      "url": "/understand-market.html",
+      "title": "Understand the Market",
+      "purpose": "Help a prospective AAC investor understand the market and business factors to consider before plant design and machinery selection.",
+      "hero": {
+        "eyebrow": "STAGE 01 / UNDERSTAND THE MARKET",
+        "headline": "Understand the market before you build the plant.",
+        "subheadline": "Start with the opportunity, demand, materials, profitability and policy environment before making plant decisions.",
+        "cta": "START EXPLORING"
+      },
+      "intro": {
+        "heading": "The first plant decision is not a machine.",
+        "body": "An AAC project begins with understanding the market it will serve. Before deciding on plant configuration, capacity or equipment, investors need a clear view of demand, raw materials, business potential and the policy environment."
+      },
+      "topics": [
+        {
+          "number": "01",
+          "id": "why-aac",
+          "title": "Why AAC",
+          "summary": "Understand why AAC is considered as a building-material opportunity.",
+          "points": [
+            "AAC as a building-material opportunity",
+            "Product applications",
+            "Reasons investors may evaluate an AAC project"
+          ]
+        },
+        {
+          "number": "02",
+          "id": "future-of-aac",
+          "title": "Future of AAC",
+          "summary": "Explore the broader direction of AAC and factors that can influence its continued use.",
+          "points": [
+            "Construction-market relevance",
+            "Product applications and adoption",
+            "Long-term project considerations"
+          ]
+        },
+        {
+          "number": "03",
+          "id": "market-demand",
+          "title": "Market Demand",
+          "summary": "Consider the demand conditions that should be understood before defining a plant project.",
+          "points": [
+            "Target market",
+            "Local demand",
+            "Customer and application mix",
+            "Market positioning"
+          ]
+        },
+        {
+          "number": "04",
+          "id": "raw-materials",
+          "title": "Raw Materials",
+          "summary": "Understand raw-material considerations that influence AAC plant planning.",
+          "points": [
+            "Raw-material availability",
+            "Material suitability",
+            "Supply and logistics considerations",
+            "Relationship between materials and production planning"
+          ]
+        },
+        {
+          "number": "05",
+          "id": "profitability",
+          "title": "Profitability",
+          "summary": "Identify the project factors that should be evaluated when considering commercial potential.",
+          "points": [
+            "Project investment considerations",
+            "Operating-cost considerations",
+            "Production and sales assumptions",
+            "Capacity and business planning"
+          ]
+        },
+        {
+          "number": "06",
+          "id": "government-policies",
+          "title": "Government Policies",
+          "summary": "Review policies, schemes and regulatory considerations relevant to the proposed project.",
+          "points": [
+            "Relevant government policies",
+            "Applicable schemes or incentives",
+            "Current eligibility and requirements must be verified"
+          ]
+        }
+      ],
+      "framework": {
+        "heading": "OPPORTUNITY → DEMAND → MATERIALS → ECONOMICS → POLICY",
+        "body": "Use the market stage to turn a general AAC opportunity into a clearer project direction."
+      },
+      "next": {
+        "heading": "Ready to design the project?",
+        "label": "DESIGN YOUR PLANT →",
+        "url": "/design-your-plant.html"
+      },
+      "related": [
+        {
+          "label": "AAC SOLUTIONS",
+          "url": "/solutions.html"
+        },
+        {
+          "label": "ENGINEERING CENTER",
+          "url": "/engineering.html"
+        }
+      ],
+      "seo": {
+        "title": "Understand the AAC Market | AAC Investor Academy | Laxmi En-Fab",
+        "description": "Understand AAC market considerations including why AAC, future demand, raw materials, profitability and government policies before planning an AAC plant.",
+        "h1": "Understand the market before you build the plant.",
+        "keywords": [
+          "AAC market",
+          "AAC plant investment",
+          "AAC block market",
+          "AAC raw materials",
+          "AAC profitability"
+        ]
+      }
+    },
+    {
+      "stage": "02",
+      "slug": "design-your-plant",
+      "url": "/design-your-plant.html",
+      "title": "Design Your Plant",
+      "purpose": "Help an investor translate market understanding into a practical AAC plant plan covering capacity, land, project cost, working capital, ROI, finance and subsidy considerations.",
+      "hero": {
+        "eyebrow": "STAGE 02 / DESIGN YOUR PLANT",
+        "headline": "Design the plant around the project.",
+        "subheadline": "Capacity, land, investment and financing decisions need to work together before the plant is finalized.",
+        "cta": "EXPLORE PLANT PLANNING"
+      },
+      "intro": {
+        "heading": "A plant should fit the business it is meant to serve.",
+        "body": "Plant design starts with connected decisions. Capacity, land, project cost, working capital, returns and financing should be considered together rather than treated as isolated choices."
+      },
+      "topics": [
+        {
+          "number": "01",
+          "id": "capacity-selection",
+          "title": "Capacity Selection",
+          "summary": "Consider the production capacity that fits the intended market and project plan.",
+          "points": [
+            "Expected market demand",
+            "Production requirement",
+            "Capacity and future growth",
+            "Capacity and plant configuration"
+          ]
+        },
+        {
+          "number": "02",
+          "id": "land-requirement",
+          "title": "Land Requirement",
+          "summary": "Understand why land availability and plant arrangement need to be considered together.",
+          "points": [
+            "Production-area planning",
+            "Material movement",
+            "Equipment and building relationships",
+            "Access and operational space"
+          ]
+        },
+        {
+          "number": "03",
+          "id": "project-cost-working-capital",
+          "title": "Project Cost & Working Capital",
+          "summary": "Separate establishment investment from the working capital needed to operate the business.",
+          "points": [
+            "Plant and equipment investment",
+            "Site and infrastructure considerations",
+            "Working-capital requirements",
+            "Project-cost assumptions requiring verification"
+          ]
+        },
+        {
+          "number": "04",
+          "id": "roi-payback",
+          "title": "ROI & Payback",
+          "summary": "Build return and payback thinking around realistic project assumptions.",
+          "points": [
+            "Production assumptions",
+            "Sales assumptions",
+            "Operating-cost assumptions",
+            "Investment recovery considerations"
+          ]
+        },
+        {
+          "number": "05",
+          "id": "finance-bank-loan",
+          "title": "Finance & Bank Loan",
+          "summary": "Understand financial information and project-planning considerations involved in project finance.",
+          "points": [
+            "Project documentation",
+            "Investment structure",
+            "Financing requirements",
+            "Bank-specific requirements must be verified"
+          ]
+        },
+        {
+          "number": "06",
+          "id": "subsidy",
+          "title": "Subsidy",
+          "summary": "Treat subsidy and incentive opportunities as items to verify against current rules and eligibility.",
+          "points": [
+            "Applicable schemes",
+            "Eligibility",
+            "Documentation",
+            "Current rules and timelines"
+          ]
+        }
+      ],
+      "framework": {
+        "heading": "CAPACITY → LAND → INVESTMENT → RETURNS → FINANCE",
+        "body": "These decisions are connected. Changing one can affect the others, so the plant should be planned as one project."
+      },
+      "next": {
+        "heading": "Now the project has a shape.",
+        "label": "COMPARE YOUR AAC PLANT →",
+        "url": "/compare-your-aac-plant.html"
+      },
+      "related": [
+        {
+          "label": "PLANT LAYOUT",
+          "url": "/plant-layout.html"
+        },
+        {
+          "label": "AAC SOLUTIONS",
+          "url": "/solutions.html"
+        }
+      ],
+      "seo": {
+        "title": "Design Your AAC Plant | Plant Planning & Investment | Laxmi En-Fab",
+        "description": "Plan an AAC plant around capacity, land, project cost, working capital, ROI, finance, bank loan and subsidy considerations.",
+        "h1": "Design the plant around the project.",
+        "keywords": [
+          "AAC plant design",
+          "AAC plant capacity",
+          "AAC plant land requirement",
+          "AAC plant project cost",
+          "AAC plant ROI",
+          "AAC plant finance"
+        ]
+      }
+    },
+    {
+      "stage": "03",
+      "slug": "compare-your-aac-plant",
+      "url": "/compare-your-aac-plant.html",
+      "title": "Compare Your AAC Plant",
+      "purpose": "Give investors a structured way to compare AAC plant options, configurations and suppliers against actual project requirements.",
+      "hero": {
+        "eyebrow": "STAGE 03 / COMPARE YOUR AAC PLANT",
+        "headline": "Compare the complete plant, not just the machine.",
+        "subheadline": "A useful comparison looks at process, configuration, engineering, equipment, execution and long-term project responsibility.",
+        "cta": "START COMPARING"
+      },
+      "intro": {
+        "heading": "Compare the system, not the headline.",
+        "body": "Compare plant options using the same questions and project requirements. Look beyond individual equipment names and examine how the complete production system is planned and supported."
+      },
+      "criteria": [
+        {
+          "number": "01",
+          "title": "Plant Configuration",
+          "question": "Does the proposed configuration match the intended production requirement?"
+        },
+        {
+          "number": "02",
+          "title": "Process Flow",
+          "question": "Is the production sequence clear and logically connected?"
+        },
+        {
+          "number": "03",
+          "title": "Equipment Scope",
+          "question": "What equipment is included, and what is excluded?"
+        },
+        {
+          "number": "04",
+          "title": "Automation",
+          "question": "What level of automation is proposed and where does it add value?"
+        },
+        {
+          "number": "05",
+          "title": "Engineering",
+          "question": "Who is responsible for layout, integration and engineering coordination?"
+        },
+        {
+          "number": "06",
+          "title": "Manufacturing",
+          "question": "Where and how is the equipment manufactured and prepared?"
+        },
+        {
+          "number": "07",
+          "title": "Installation & Commissioning",
+          "question": "What project support is included through installation and commissioning?"
+        },
+        {
+          "number": "08",
+          "title": "Long-Term Support",
+          "question": "What support relationship remains after the plant starts operating?"
+        }
+      ],
+      "checklist": {
+        "enabled": true,
+        "columns": [
+          "CRITERION",
+          "WHAT TO CHECK",
+          "VERIFIED"
+        ],
+        "note": "The checklist is for the investor's own comparison. Do not publish fabricated supplier scores or rankings."
+      },
+      "framework": {
+        "heading": "PROCESS → EQUIPMENT → ENGINEERING → EXECUTION → SUPPORT",
+        "body": "A complete plant comparison should evaluate responsibility across the project, not only the visible equipment list."
+      },
+      "next": {
+        "heading": "Once the plant is chosen, improve how it operates.",
+        "label": "EFFICIENT YOUR PLANT →",
+        "url": "/efficient-your-plant.html"
+      },
+      "related": [
+        {
+          "label": "MACHINERY & EQUIPMENT",
+          "url": "/machinery-equipment.html"
+        },
+        {
+          "label": "ENGINEERING CENTER",
+          "url": "/engineering.html"
+        },
+        {
+          "label": "PROJECTS",
+          "url": "/projects.html"
+        }
+      ],
+      "seo": {
+        "title": "Compare AAC Plants & Suppliers | AAC Investor Academy | Laxmi En-Fab",
+        "description": "Learn how to compare AAC plant configurations, process flow, equipment scope, automation, engineering, manufacturing, commissioning and support.",
+        "h1": "Compare the complete plant, not just the machine.",
+        "keywords": [
+          "compare AAC plants",
+          "AAC plant supplier comparison",
+          "AAC machinery comparison",
+          "AAC plant automation",
+          "AAC plant engineering"
+        ]
+      }
+    },
+    {
+      "stage": "04",
+      "slug": "efficient-your-plant",
+      "url": "/efficient-your-plant.html",
+      "title": "Efficient Your Plant",
+      "purpose": "Help plant owners think about operational efficiency through automation, block quality, maintenance SOP, steam cost and skilled manpower.",
+      "hero": {
+        "eyebrow": "STAGE 04 / EFFICIENT YOUR PLANT",
+        "headline": "A plant performs through the details.",
+        "subheadline": "Efficiency depends on automation, quality, maintenance, steam use and people working together.",
+        "cta": "EXPLORE EFFICIENCY"
+      },
+      "intro": {
+        "heading": "Efficiency is an operating discipline, not one machine.",
+        "body": "Once production starts, daily operating decisions affect quality, consistency, resource use and plant performance. The focus should be the complete production system."
+      },
+      "topics": [
+        {
+          "number": "01",
+          "id": "automation",
+          "title": "Automation",
+          "summary": "Understand where automation can support consistency, control and repeatable plant operation.",
+          "points": [
+            "Process control",
+            "Repeatability",
+            "Material handling",
+            "Automation matched to plant requirements"
+          ]
+        },
+        {
+          "number": "02",
+          "id": "block-quality",
+          "title": "Block Quality",
+          "summary": "Connect production conditions and process control with consistent AAC product quality.",
+          "points": [
+            "Process consistency",
+            "Dimensional quality",
+            "Handling through production",
+            "Quality-control discipline"
+          ]
+        },
+        {
+          "number": "03",
+          "id": "maintenance-sop",
+          "title": "Maintenance SOP",
+          "summary": "Use planned maintenance practices to keep equipment and production systems reliable.",
+          "points": [
+            "Routine inspection",
+            "Preventive maintenance",
+            "Equipment condition",
+            "Documented operating procedures"
+          ]
+        },
+        {
+          "number": "04",
+          "id": "steam-cost",
+          "title": "Steam Cost",
+          "summary": "Consider steam use as an operating factor within autoclaving and overall plant efficiency.",
+          "points": [
+            "Autoclaving requirements",
+            "Steam-use monitoring",
+            "Operating consistency",
+            "Efficiency review"
+          ]
+        },
+        {
+          "number": "05",
+          "id": "skilled-manpower",
+          "title": "Skilled Manpower",
+          "summary": "Recognize the role of trained people in maintaining process discipline, quality and equipment operation.",
+          "points": [
+            "Operator understanding",
+            "Process discipline",
+            "Maintenance capability",
+            "Training and responsibility"
+          ]
+        }
+      ],
+      "framework": {
+        "heading": "CONTROL → OBSERVE → MAINTAIN → IMPROVE",
+        "body": "Efficient operation comes from connecting process control, equipment condition, product quality and operating discipline."
+      },
+      "next": {
+        "heading": "Efficiency creates the foundation for growth.",
+        "label": "EXPAND YOUR PLANT →",
+        "url": "/expand-your-plant.html"
+      },
+      "related": [
+        {
+          "label": "MACHINERY & EQUIPMENT",
+          "url": "/machinery-equipment.html"
+        },
+        {
+          "label": "ENGINEERING CENTER",
+          "url": "/engineering.html"
+        },
+        {
+          "label": "PROJECTS",
+          "url": "/projects.html"
+        }
+      ],
+      "seo": {
+        "title": "AAC Plant Efficiency | Automation, Quality & Maintenance | Laxmi En-Fab",
+        "description": "Explore AAC plant efficiency through automation, block quality, maintenance SOPs, steam cost and skilled manpower.",
+        "h1": "A plant performs through the details.",
+        "keywords": [
+          "AAC plant efficiency",
+          "AAC plant automation",
+          "AAC block quality",
+          "AAC plant maintenance",
+          "AAC autoclave steam cost",
+          "AAC plant manpower"
+        ]
+      }
+    },
+    {
+      "stage": "05",
+      "slug": "expand-your-plant",
+      "url": "/expand-your-plant.html",
+      "title": "Expand Your Plant",
+      "purpose": "Help AAC plant owners think about future growth, capacity expansion, plant upgrades, product capability and related production opportunities.",
+      "hero": {
+        "eyebrow": "STAGE 05 / EXPAND YOUR PLANT",
+        "headline": "Build for today. Plan for what comes next.",
+        "subheadline": "Expansion should follow real demand, operating experience and a clear understanding of the existing plant.",
+        "cta": "EXPLORE EXPANSION"
+      },
+      "intro": {
+        "heading": "Expansion starts with understanding the plant you already have.",
+        "body": "Growth can mean more capacity, stronger production capability, additional product opportunities or a more complete manufacturing setup. The next step should be planned around actual business and operating requirements."
+      },
+      "topics": [
+        {
+          "number": "01",
+          "id": "capacity-expansion",
+          "title": "Capacity Expansion",
+          "summary": "Consider when additional production capacity is justified by demand and operating experience.",
+          "points": [
+            "Demand growth",
+            "Existing plant utilization",
+            "Additional production requirements",
+            "Future capacity planning"
+          ]
+        },
+        {
+          "number": "02",
+          "id": "plant-upgrade",
+          "title": "Plant Upgrade",
+          "summary": "Identify opportunities to improve the existing system through equipment, process or automation upgrades.",
+          "points": [
+            "Existing equipment condition",
+            "Process improvements",
+            "Automation opportunities",
+            "Integration with the current plant"
+          ]
+        },
+        {
+          "number": "03",
+          "id": "product-capability",
+          "title": "Product Capability",
+          "summary": "Consider whether future product requirements call for changes in plant capability or process arrangement.",
+          "points": [
+            "AAC block production",
+            "AAC panel opportunities where applicable",
+            "Product requirements",
+            "Process and equipment implications"
+          ]
+        },
+        {
+          "number": "04",
+          "id": "reinforced-panel-production",
+          "title": "Reinforced Panel Production",
+          "summary": "Where panel production is part of the expansion plan, consider its additional process and handling requirements.",
+          "points": [
+            "Panel production planning",
+            "Reinforcement-related process requirements",
+            "Handling and processing considerations",
+            "Plant-space implications"
+          ]
+        },
+        {
+          "number": "05",
+          "id": "dry-mix-mortar",
+          "title": "Dry Mix Mortar",
+          "summary": "Consider related dry-mix mortar manufacturing as an additional production line where appropriate to the business plan.",
+          "points": [
+            "Dry Mix Mortar Plant",
+            "Related product opportunities",
+            "Additional plant and process requirements",
+            "Business-plan fit"
+          ]
+        }
+      ],
+      "framework": {
+        "heading": "DEMAND → CAPACITY → PLANT → CAPABILITY → GROWTH",
+        "body": "Expansion should be a planned continuation of the existing business and production system, not simply an addition of equipment."
+      },
+      "next": {
+        "heading": "The Academy journey is complete.",
+        "label": "RETURN TO AAC INVESTOR ACADEMY →",
+        "url": "/academy.html"
+      },
+      "related": [
+        {
+          "label": "AAC SOLUTIONS",
+          "url": "/solutions.html"
+        },
+        {
+          "label": "MACHINERY & EQUIPMENT",
+          "url": "/machinery-equipment.html"
+        },
+        {
+          "label": "PROJECTS",
+          "url": "/projects.html"
+        }
+      ],
+      "seo": {
+        "title": "Expand Your AAC Plant | Growth & Expansion Planning | Laxmi En-Fab",
+        "description": "Plan AAC plant expansion around demand, capacity, upgrades, product capability, reinforced panels and related dry mix mortar opportunities.",
+        "h1": "Build for today. Plan for what comes next.",
+        "keywords": [
+          "AAC plant expansion",
+          "AAC plant capacity expansion",
+          "AAC plant upgrade",
+          "AAC panel plant expansion",
+          "Dry Mix Mortar Plant"
+        ]
+      }
+    }
+  ]
+}

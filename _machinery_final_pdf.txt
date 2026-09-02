@@ -1,0 +1,221 @@
+=== PAGE 1 ===
+MACHINERY & EQUIPMENT
+Same design language as the approved Laxmi homepage
+Premium editorial machinery storytelling built from the homepage system: cinematic hero, quiet editorial sections, large
+real equipment imagery, process context, workshop proof and a decisive final CTA.
+Equipment is part of the plant - not the whole story.
+Real Laxmi machinery | Real workshop | Real dispatch | Process-led structure
+Laxmi En-Fab - Machinery & Equipment | Final Page Blueprint
+01
+
+=== PAGE 2 ===
+01 / DESIGN LANGUAGE
+Build it like the homepage
+Reuse the visual grammar, not the homepage's exact section content.
+HOMEPAGE DNA
+Dark cinematic hero
+White editorial split
+Minimal decision list
+Light planning story
+Dark proof/video
+White company proof
+Technical system section
+Dark project proof
+MACHINERY TRANSLATION
+Visual machinery hero
+White equipment statement
+Production-stage index
+Large equipment stories
+Dark workshop proof
+Technical equipment details
+Dispatch evidence
+Final system CTA
+Rule: keep the same type scale, spacing, navy/blue palette, thin rules, editorial lists, image treatment and alternating visual
+weight. Change the content rhythm so this feels purpose-built for machinery.
+Do not turn the page into a digital brochure with 14 small product cards. The catalogue is the factual source; the current homepage is the visual benchmark.
+Laxmi En-Fab - Machinery & Equipment | Final Page Blueprint
+02
+
+=== PAGE 3 ===
+02 / HERO
+Engineered for the production line.
+The hero introduces machinery through the production system.
+BALL MILL / REAL LAXMI EQUIPMENT
+MACHINERY & EQUIPMENT
+Engineered for the
+production line.
+Explore Laxmi's AAC machinery by process stage - from material
+preparation through batching, cutting, handling, autoclaving and packing.
+EXPLORE MACHINERY
+Hero media: 8-12 second machinery montage or wide workshop shot. Keep action mainly on the right and leave the left text-safe.
+Laxmi En-Fab - Machinery & Equipment | Final Page Blueprint
+03
+
+=== PAGE 4 ===
+03 / ORIENTATION
+Start with the production line
+Show the user where each equipment group belongs before diving into machines.
+Use one continuous process index instead of seven
+cards.
+MATERIAL
+01
+BATCHING
+02
+PRECURING
+03
+CUTTING
+04
+HANDLING
+05
+AUTOCLAVE
+06
+PACKING
+07
+Clicking a stage should scroll to or reveal the relevant equipment story. On mobile, use a vertical or horizontally scrollable rail.
+Catalogue equipment mapping: Ball Mill, Slurry Making, Slurry Storage, Batching Unit, Precuring, Mould Box, Side Plate, Steam Trolley, Tilting Crane, Grouping
+Crane, Cutting Machines, Autoclave and Auto Packing Line.
+Laxmi En-Fab - Machinery & Equipment | Final Page Blueprint
+04
+
+=== PAGE 5 ===
+04 / STORY
+Material preparation
+One strong visual story, not three tiny cards.
+BALL MILL + SLURRY MAKING + SLURRY STORAGE
+The line starts
+before the mould.
+Introduce the Ball Mill, Slurry Making and
+Slurry Storage as one connected front-end
+system. Keep descriptions short and
+process-led.
+01 BALL MILL
+02 SLURRY MAKING
+03 SLURRY STORAGE
+Explore the material-preparation stage →
+Laxmi En-Fab - Machinery & Equipment | Final Page Blueprint
+05
+
+=== PAGE 6 ===
+05 / STORY
+From batching to precuring
+Use large visuals with sparse supporting content.
+BATCHING UNIT
+MOULD BOX / SIDE PLATE / STEAM TROLLEY
+Precise preparation.
+Connect Batching Unit, Mould Box, Side Plate, Steam Trolley and Precuring into one stage story. Use real photography and
+concise labels.
+Do not publish unverified machine specifications. The catalogue supplies the machine names and visual evidence; current technical specifications should come
+from approved product data.
+Laxmi En-Fab - Machinery & Equipment | Final Page Blueprint
+06
+
+=== PAGE 7 ===
+06 / VISUAL FEATURE
+Cutting & handling
+Make this one of the visual peaks of the page.
+ADVANCED THREE STAGE CUTTING MACHINE
+TILTING CRANE
+ADVANCED CUTTING
+Cutting defines the required product geometry; handling carries the material through the line. Use the large real machinery
+photographs as proof.
+Recommended visual: one dominant cutting-machine image + one smaller crane image + a thin process connector. Avoid a 3-card treatment.
+Laxmi En-Fab - Machinery & Equipment | Final Page Blueprint
+07
+
+=== PAGE 8 ===
+07 / PROOF
+Autoclaving & packing
+Use a dark cinematic section to recreate the homepage's visual contrast.
+AUTOCLAVE / REAL LAXMI IMAGE
+Cure. Handle. Prepare.
+Autoclaving is the steam-curing stage shown in the catalogue.
+Finish the equipment story with the Auto Packing Line.
+AUTOCLAVE
+AUTO PACKING LINE
+SEE THE FULL SYSTEM
+Use the dedicated Auto Packing Line imagery from the catalogue for the final downstream visual.
+Laxmi En-Fab - Machinery & Equipment | Final Page Blueprint
+08
+
+=== PAGE 9 ===
+08 / PROOF
+Built, assembled and dispatched
+Prove that the equipment is physically manufactured and delivered.
+WORKSHOP
+DISPATCHED
+WORKSHOP - fabrication, machining and assembly context.
+DISPATCHED - equipment being loaded and sent to project locations.
+The catalogue has dedicated Workshop and Dispatched pages. Use these real photographs as direct evidence rather than generic trust statements.
+See where the equipment is working → / projects.html
+Laxmi En-Fab - Machinery & Equipment | Final Page Blueprint
+09
+
+=== PAGE 10 ===
+09 / EQUIPMENT MAP
+Complete equipment inventory
+The inventory should be complete in content, but not necessarily shown as 14 public cards.
+01  Ball Mill
+02  Slurry Making
+03  Slurry Storage
+04  Batching Unit
+05  Precuring
+06  Mould Box
+07  Side Plate
+08  Steam Trolley
+09  Tilting Crane
+10  Grouping Crane
+11  Advanced Three Stage Cutting Machine
+12  Vertical Cutting Machine
+13  Autoclave
+14  Auto Packing Line
+This inventory is grounded in the catalogue equipment pages. Keep machine names accurate and expand detailed content only when current client-approved
+data is available.
+Laxmi En-Fab - Machinery & Equipment | Final Page Blueprint
+10
+
+=== PAGE 11 ===
+10 / SEO
+Machinery page SEO
+Target commercial intent without turning the copy into keyword wallpaper.
+Title
+AAC Plant Machinery & Equipment | Laxmi En-Fab Pvt. Ltd.
+Meta
+Explore AAC plant machinery from Laxmi En-Fab, including material preparation, batching,
+precuring, cutting, handling, autoclaving and packing equipment.
+H1
+Engineered for the production line.
+Primary
+AAC plant machinery; AAC plant equipment; AAC block plant machinery; AAC panel plant
+machinery.
+Supporting
+AAC ball mill; AAC slurry making; AAC batching unit; AAC cutting machine; AAC autoclave; AAC
+packing line.
+Internal links
+Solutions; Engineering Center; Projects; About Us; Contact.
+Write for users first. Explain the machine's role in the production line and link to the relevant system/process content.
+Laxmi En-Fab - Machinery & Equipment | Final Page Blueprint
+11
+
+=== PAGE 12 ===
+11 / FINAL BUILD
+Responsive + conversion
+Finish the page with the same calm, decisive close as the homepage.
+DESKTOP
+Large image stories, process rail,
+editorial splits.
+TABLET
+Two-column stories, simplified rail,
+stacked proof.
+MOBILE
+One-column story, touch-friendly
+navigation, sticky contact.
+Planning an AAC plant?
+Choose the machinery path with the complete production system in view.
+CONTACT LAXMI
+VIEW SOLUTIONS
+Implementation: real Laxmi imagery, subtle IntersectionObserver reveals, reduced-motion support, optimized WebP/AVIF, accessible controls, no heavy
+animation framework.
+Final visual formula: Big statement → real machinery → process context → workshop proof → dispatch proof →
+strong CTA.
+Laxmi En-Fab - Machinery & Equipment | Final Page Blueprint
+12

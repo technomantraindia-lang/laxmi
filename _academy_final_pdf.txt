@@ -1,0 +1,227 @@
+=== PAGE 1 ===
+LAXMI EN-FAB PVT. LTD.
+AAC
+INVESTOR
+ACADEMY
+Final editorial page layout + UX + SEO blueprint
+Main page: academy.html
+5 inner academy pages
+
+=== PAGE 2 ===
+LAXMI EN-FAB PVT. LTD.
+02
+AAC Investor Academy | Web design blueprint
+HTML / CSS / Vanilla JS
+01 / PAGE STRATEGY
+Better plants begin with better decisions.
+AAC Investor Academy is an investor decision-support hub, not another machinery catalogue.
+ROLE OF THIS PAGE
+Help a prospective AAC investor move from uncertainty to a structured project decision
+before choosing machinery.
+What the Academy should answer
+Where should I start when considering an AAC plant?
+What market, site and investment questions should I answer first?
+How should I think about capacity, plant design and project economics?
+What should I compare before selecting a plant solution?
+How can I plan for efficient operation and future expansion?
+Positioning within the website
+SOLUTIONS
+What can I build?
+MACHINERY
+What equipment
+makes it work?
+ENGINEERING CENTER
+How does the system
+work?
+ACADEMY
+How do I make the
+right investment
+decision?
+
+=== PAGE 3 ===
+LAXMI EN-FAB PVT. LTD.
+03
+AAC Investor Academy | Web design blueprint
+HTML / CSS / Vanilla JS
+02 / HERO SECTION
+Start with the decision, not the machine.
+A calm, high-trust opening that immediately explains what the Academy is for.
+Better plants begin
+with better decisions.
+AAC INVESTOR ACADEMY  /  A DECISION PATH FOR PROJECT INVESTORS
+SCROLL TO EXPLORE  ↓
+Hero content
+Eyebrow: "AAC INVESTOR ACADEMY"
+Primary statement: "Better plants begin with better decisions."
+Support line: explain that the Academy helps investors understand the market, plan the plant, compare options, improve
+operations and think about expansion.
+Primary CTA: "Start the Academy"
+Secondary CTA: "Talk to Laxmi"
+
+=== PAGE 4 ===
+LAXMI EN-FAB PVT. LTD.
+04
+AAC Investor Academy | Web design blueprint
+HTML / CSS / Vanilla JS
+03 / CORE JOURNEY
+Five decisions. One investor journey.
+Use a vertical editorial journey instead of a card grid. Each stage leads naturally into an inner page.
+01
+UNDERSTAND THE MARKET
+Why AAC, future of AAC, demand, raw materials, profitability, government
+policies.
+understand-market.html
+→
+02
+DESIGN YOUR PLANT
+Capacity selection, land requirement, project cost & working capital,
+ROI/payback, finance, subsidy.
+design-your-plant.html
+→
+03
+COMPARE YOUR AAC PLANT
+A structured way to compare plant and supplier choices before committing.
+compare-your-aac-plant.html
+→
+04
+EFFICIENT YOUR PLANT
+Automation, block quality, maintenance SOP, steam cost, skilled manpower.
+efficient-your-plant.html
+→
+05
+EXPAND YOUR PLANT
+Planning the next stage of capacity, capability and business growth.
+expand-your-plant.html
+→
+Interaction
+On desktop, reveal one stage at a time as the user scrolls. Keep the navigation simple: number, title, one-line explanation, and
+arrow. On mobile, stack the same editorial rows.
+
+=== PAGE 5 ===
+LAXMI EN-FAB PVT. LTD.
+05
+AAC Investor Academy | Web design blueprint
+HTML / CSS / Vanilla JS
+04 / CONTENT ARCHITECTURE
+The Academy should feel like guidance,
+not a blog archive.
+Keep the page focused on decisions. The homepage previews the journey; inner pages carry the depth.
+What the main page shows
+The investor problem in one sentence.
+The five-stage decision journey.
+A brief explanation of what each stage helps the
+investor decide.
+A visual transition into practical planning.
+A trust section linking the educational path to
+Laxmi's engineering responsibility.
+A final CTA to continue the Academy or start a
+project conversation.
+What belongs on inner pages
+Clear explanations and decision frameworks.
+Useful visual examples, diagrams, plant layouts
+and process relationships.
+Tables/checklists only where they improve an
+investor's decision.
+Strong internal links to Solutions, Engineering
+Center and Machinery.
+A practical CTA at the end of every stage.
+DESIGN RULE
+No card wall.
+No generic blog feed.
+No stock-photo collage.
+No forced statistics.
+The visual language should match the wider Laxmi site:
+premium editorial spacing, strong typography, technical
+lines, industrial imagery and restrained motion.
+
+=== PAGE 6 ===
+LAXMI EN-FAB PVT. LTD.
+06
+AAC Investor Academy | Web design blueprint
+HTML / CSS / Vanilla JS
+05 / VISUAL DIRECTION
+Industrial precision with editorial calm.
+The Academy should feel like a serious project-planning room translated into a modern website.
+MIDNIGHT NAVY
+LAXMI BLUE
+SOFT BLUE
+WHITE
+Image direction
+Prefer real Laxmi workshop, machinery, plant, project and drawing imagery from approved company assets.
+Use wide industrial photography with large areas of visual breathing room.
+Use plant layouts, engineering drawings and process visuals as graphic texture where appropriate.
+Avoid smiling-stock-team photography and generic construction imagery.
+Motion direction
+Scroll-triggered stage reveal on the five-step journey.
+Very small image scale/clip reveals, around 1.02-1.04.
+Thin line-draw animations for technical separators.
+Respect prefers-reduced-motion and keep interactions fast.
+
+=== PAGE 7 ===
+LAXMI EN-FAB PVT. LTD.
+07
+AAC Investor Academy | Web design blueprint
+HTML / CSS / Vanilla JS
+06 / SEO + IMPLEMENTATION
+Searchable, semantic, fast.
+Build the Academy page as a real HTML page, not a JavaScript-heavy presentation.
+URL
+/academy.html
+TITLE TAG
+AAC Investor Academy | Laxmi En-Fab Pvt. Ltd.
+META DESCRIPTION
+Practical AAC plant investor guidance from market understanding and plant planning to comparison, efficiency and
+expansion.
+H1
+Better plants begin with better decisions.
+PRIMARY INTERNAL LINKS
+Solutions / Machinery & Equipment / Engineering Center / Projects / Contact
+TECH STACK
+HTML5 + CSS3 + Vanilla JavaScript only
+Recommended semantic structure
+<header> navigation + page intro
+<main>
+  <section class="academy-hero">
+  <section class="academy-intro">
+  <section class="academy-journey">  01 -> 05
+  <section class="academy-visual-proof">
+  <section class="academy-cta">
+</main>
+<footer>
+
+=== PAGE 8 ===
+LAXMI EN-FAB PVT. LTD.
+08
+AAC Investor Academy | Web design blueprint
+HTML / CSS / Vanilla JS
+07 / FINAL BUILD CHECKLIST
+Build it as a page people can actually
+use.
+This is the implementation checklist for the designer/developer.
+01
+Hero
+Large statement + short explanation + start CTA. Strong industrial visual or architectural/plant
+drawing.
+02
+Why the Academy
+Explain the problem: investors need better decisions before machinery selection.
+03
+Five-stage journey
+Large editorial rows, each linking to its inner page. No repeated cards.
+04
+Decision transition
+A visual pause with a plant layout / engineering diagram and one strong statement.
+05
+Laxmi trust bridge
+Connect education to the company's engineering responsibility. Keep claims factual and restrained.
+06
+Continue the journey
+Show links to Solutions, Engineering Center, Machinery & Equipment, Projects.
+07
+Final CTA
+Invite the visitor to discuss their AAC plant requirement with Laxmi.
+INNER PAGES
+understand-market.html   |   design-your-plant.html
+compare-your-aac-plant.html   |   efficient-your-plant.html
+expand-your-plant.html
+Content note: use the approved Laxmi information and catalog language as the factual source. Do not add unsupported company statistics.

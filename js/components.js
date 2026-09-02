@@ -6,24 +6,27 @@
     '<div class="site-header__inner">' +
     '<a href="index.html" class="site-header__brand" aria-label="Laxmi En-Fab Pvt. Ltd. Home"><img src="assets/images/laxmi-logo.png" alt="Laxmi En-Fab Logo" class="site-header__logo"></a>' +
     '<nav class="site-header__nav" id="site-nav" aria-label="Primary navigation"><ul class="nav-list" role="menubar">' +
+    '<li class="nav-item" role="none"><a href="why-laxmi.html" class="nav-link" role="menuitem">About Us</a></li>' +
     '<li class="nav-item nav-item--dropdown" role="none"><a href="solutions.html" class="nav-link nav-link--toggle" aria-haspopup="true" aria-expanded="false" aria-controls="nav-dropdown-solutions">Solutions <span class="nav-caret">▾</span></a>' +
     '<ul class="nav-dropdown" id="nav-dropdown-solutions" role="menu" aria-label="Solutions Submenu">' +
-    '<li role="none"><a href="solutions.html" role="menuitem"><span class="dropdown-item__title">AAC PLANTS</span><span class="dropdown-item__sub">Complete AAC plant solutions</span></a></li>' +
-    '<li role="none"><a href="solutions.html#dry-mix" role="menuitem"><span class="dropdown-item__title">DRY MIX MORTAR</span><span class="dropdown-item__sub">Dry mix mortar plant solutions</span></a></li>' +
+    '<li role="none"><a href="aac-block-panel-plant.html" role="menuitem"><span class="dropdown-item__title">AAC PLANTS</span><span class="dropdown-item__sub">Complete AAC plant solutions</span></a></li>' +
+    '<li role="none"><a href="dry-mix-mortar-plant.html" role="menuitem"><span class="dropdown-item__title">DRY MIX MORTAR</span><span class="dropdown-item__sub">Dry mix mortar plant solutions</span></a></li>' +
     '</ul></li>' +
-    '<li class="nav-item nav-item--dropdown" role="none"><a href="machinery-equipment.html" class="nav-link nav-link--toggle" aria-haspopup="true" aria-expanded="false" aria-controls="nav-dropdown-machinery">Machinery &amp; Equipment <span class="nav-caret">▾</span></a>' +
-    '<ul class="nav-dropdown nav-dropdown--machinery" id="nav-dropdown-machinery" role="menu" aria-label="Machinery Submenu">' +
-    '<li role="none"><a href="machinery-equipment.html#material" role="menuitem"><span class="dropdown-num">01</span> MATERIAL PREPARATION</a></li>' +
-    '<li role="none"><a href="machinery-equipment.html#batching" role="menuitem"><span class="dropdown-num">02</span> BATCHING &amp; POURING</a></li>' +
-    '<li role="none"><a href="machinery-equipment.html#batching" role="menuitem"><span class="dropdown-num">03</span> PRECURING &amp; MOULDING</a></li>' +
-    '<li role="none"><a href="machinery-equipment.html#cutting" role="menuitem"><span class="dropdown-num">04</span> CUTTING &amp; HANDLING</a></li>' +
-    '<li role="none"><a href="machinery-equipment.html#autoclave" role="menuitem"><span class="dropdown-num">05</span> AUTOCLAVING</a></li>' +
-    '<li role="none"><a href="machinery-equipment.html#autoclave" role="menuitem"><span class="dropdown-num">06</span> PACKING</a></li>' +
+    '<li class="nav-item" role="none"><a href="machinery-equipment.html" class="nav-link" role="menuitem">Machinery &amp; Equipment</a></li>' +
+    '<li class="nav-item nav-item--dropdown" role="none"><a href="academy.html" class="nav-link nav-link--toggle" aria-haspopup="true" aria-expanded="false" aria-controls="nav-dropdown-academy">AAC Investor Academy <span class="nav-caret">▾</span></a>' +
+    '<ul class="nav-dropdown nav-dropdown--academy" id="nav-dropdown-academy" role="menu" aria-label="AAC Investor Academy Submenu">' +
+    '<li role="none"><a href="understand-market.html" role="menuitem"><span class="dropdown-num">01</span> UNDERSTAND THE MARKET</a></li>' +
+    '<li role="none"><a href="design-your-plant.html" role="menuitem"><span class="dropdown-num">02</span> DESIGN YOUR PLANT</a></li>' +
+    '<li role="none"><a href="compare-your-aac-plant.html" role="menuitem"><span class="dropdown-num">03</span> COMPARE YOUR AAC PLANT</a></li>' +
+    '<li role="none"><a href="efficient-your-plant.html" role="menuitem"><span class="dropdown-num">04</span> EFFICIENT YOUR PLANT</a></li>' +
+    '<li role="none"><a href="expand-your-plant.html" role="menuitem"><span class="dropdown-num">05</span> EXPAND YOUR PLANT</a></li>' +
     '</ul></li>' +
-    '<li class="nav-item" role="none"><a href="academy.html" class="nav-link" role="menuitem">AAC Investor Academy</a></li>' +
-    '<li class="nav-item" role="none"><a href="engineering-center.html" class="nav-link" role="menuitem">Engineering Center</a></li>' +
+    '<li class="nav-item nav-item--dropdown" role="none"><a href="engineering-center.html" class="nav-link nav-link--toggle" aria-haspopup="true" aria-expanded="false" aria-controls="nav-dropdown-engineering">Engineering Center <span class="nav-caret">▾</span></a>' +
+    '<ul class="nav-dropdown" id="nav-dropdown-engineering" role="menu" aria-label="Engineering Submenu">' +
+    '<li role="none"><a href="engineering-center.html" role="menuitem"><span class="dropdown-item__title">PRODUCTION PROCESS</span><span class="dropdown-item__sub">8-stage AAC process flow</span></a></li>' +
+    '<li role="none"><a href="plant-layout.html" role="menuitem"><span class="dropdown-item__title">PLANT GA LAYOUT</span><span class="dropdown-item__sub">Interactive general arrangement drawing</span></a></li>' +
+    '</ul></li>' +
     '<li class="nav-item" role="none"><a href="projects.html" class="nav-link" role="menuitem">Projects</a></li>' +
-    '<li class="nav-item" role="none"><a href="why-laxmi.html" class="nav-link" role="menuitem">About Us</a></li>' +
     '</ul>' +
     '<div class="mobile-nav-cta-wrap"><a href="contact.html" class="site-header__cta site-header__cta--mobile nav-cta">CONTACT US <span class="cta-arrow">→</span></a></div>' +
     '</nav>' +
@@ -213,10 +216,18 @@
 
   function highlightActivePage() {
     var currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    var academyPages = ['academy.html', 'understand-market.html', 'design-your-plant.html', 'compare-your-aac-plant.html', 'efficient-your-plant.html', 'expand-your-plant.html'];
+    var solutionsPages = ['solutions.html', 'aac-block-panel-plant.html', 'dry-mix-mortar-plant.html'];
     document.querySelectorAll('.nav-link').forEach(function (link) {
       var href = link.getAttribute('href');
-      if (href && (href === currentPath || (currentPath === '' && href === 'index.html'))) {
-        link.classList.add('is-active');
+      if (href) {
+        if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+          link.classList.add('is-active');
+        } else if (href === 'academy.html' && academyPages.includes(currentPath)) {
+          link.classList.add('is-active');
+        } else if (href === 'solutions.html' && solutionsPages.includes(currentPath)) {
+          link.classList.add('is-active');
+        }
       }
     });
   }

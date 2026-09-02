@@ -1,0 +1,214 @@
+=== PAGE 1 ===
+ENGINEERING CENTER
+Final Editorial Layout + Content + SEO Blueprint
+A technical storytelling hub that explains how an AAC plant works, how the production process flows and how the plant
+layout connects machinery into one complete system.
+Understand the system. Then understand the machine.
+AAC production process | Plant layout | Equipment context | Engineering visualization
+Laxmi En-Fab - Engineering Center Blueprint
+01
+
+=== PAGE 2 ===
+01 / DIRECTION
+Design intent
+The Engineering Center should feel like an engineering publication, not a technical documentation portal.
+01
+ONE BIG IDEA
+Lead each section with one strong
+statement and one clear visual.
+02
+PLANT AS STORY
+Use the complete plant and
+process to explain why each stage
+exists.
+03
+MINIMAL UI
+Thin lines, precise labels, large
+type. No dense card grids.
+The two approved content pillars are AAC Production Process and AAC Plant Layout. Keep the center page concise,
+then let the layout page carry the deeper interactive exploration.
+Source: the original Laxmi catalogue includes AAC process material and general-arrangement plant layouts for AAC and block/panel systems.
+■filecite■turn2file0■L10-L17■
+Laxmi En-Fab - Engineering Center Blueprint
+02
+
+=== PAGE 3 ===
+02 / HERO
+Engineering begins with understanding the system.
+The hero should introduce the center as the place to understand process + plant, not as another sales page.
+AAC ENGINEERING CENTER
+Understand the system
+behind the plant.
+Follow the AAC production process, explore the plant layout and see how
+equipment fits together across the line.
+ PROCESS
+LAYOUT
+EQUIPMENT
+SYSTEM
+Hero visual: clean plant diagram or real plant image with faint engineering annotations. Avoid a busy machinery collage.
+Primary CTA: Explore Production Process → Secondary: View Plant Layout →
+Laxmi En-Fab - Engineering Center Blueprint
+03
+
+=== PAGE 4 ===
+03 / CORE CONTENT
+AAC Production Process
+Make this the main editorial story on the Engineering Center landing page.
+RAW MATERIAL
+SLURRY
+BATCHING
+POURING
+PRECURING
+CUTTING
+AUTOCLAVE
+PACKING
+Short intro: See how raw materials move through preparation, batching, pouring, precuring, cutting, autoclaving and
+packing to become finished AAC products.
+Recommended interaction: click/scroll through each stage. Show one real/approved visual and one concise explanation at a
+time.
+01
+PROCESS STEP
+01 - 08 stage navigation.
+02
+MACHINE LINK
+Match each stage to relevant
+equipment.
+03
+LAYOUT LINK
+Show where the stage sits in the
+plant.
+Laxmi En-Fab - Engineering Center Blueprint
+04
+
+=== PAGE 5 ===
+04 / CORE CONTENT
+AAC Plant Layout
+This is the technical centerpiece and should feel like an interactive engineering drawing.
+RAW
+BATCH
+POUR
+CUT
+AUTOCLAVE
+PACK
+Use the original Laxmi GA layout as the engineering source. Present it with a clean web layer: zoom, pan, stage highlights and concise labels.
+CTA: Open Full Plant Layout →
+Laxmi En-Fab - Engineering Center Blueprint
+05
+
+=== PAGE 6 ===
+05 / LAYOUT INTERACTION
+Explore the plant
+Do not make users hunt through a technical drawing. Reveal information progressively.
+01
+ZOOM
+Smooth mouse wheel / pinch
+zoom with an obvious reset
+control.
+02
+HOTSPOTS
+Click a plant zone to reveal stage,
+equipment and role.
+03
+MINI MAP
+Show current viewport so users
+never lose orientation.
+When a hotspot is selected, display a small editorial panel with: Stage → What happens → Related equipment → Link to
+machinery.
+Keep the panel outside the drawing where possible. Avoid popover clutter over the plant.
+ACTIVE ZONE: CUTTING
+Green cake is cut to required dimensions before autoclaving. Related
+equipment: cutting systems.
+VIEW EQUIPMENT →
+Laxmi En-Fab - Engineering Center Blueprint
+06
+
+=== PAGE 7 ===
+06 / INTEGRATION
+Process + equipment + layout
+This section connects the Engineering Center to the Machinery & Equipment page and keeps the site internally coherent.
+Use a simple formula:
+PROCESS  +  MACHINE  +  LOCATION  =  SYSTEM
+1
+PROCESS
+What happens at this stage?
+2
+MACHINE
+What equipment performs it?
+3
+LOCATION
+Where is it in the plant?
+Every process stage should offer a clear next link to the relevant machinery group. Every machinery group can point back to
+the process and plant layout.
+This avoids isolated pages and creates a clear content graph for both users and search engines.
+Laxmi En-Fab - Engineering Center Blueprint
+07
+
+=== PAGE 8 ===
+07 / CREDIBILITY
+Engineering proof without marketing noise
+Use diagrams, plant layouts, workshop visuals and real project images as evidence.
+01
+PLANT VISUALS
+GA layouts and approved 3D/plant views.
+02
+PROCESS VISUALS
+Production stages and equipment relationships.
+03
+FACILITY VISUALS
+Workshop/manufacturing context.
+04
+PROJECT VISUALS
+Installed plants and expansion work.
+The original Laxmi catalog contains facility, workshop, dispatched equipment, installation and expansion sections; cross-link these proof assets instead of
+creating repetitive testimonial blocks.
+Laxmi En-Fab - Engineering Center Blueprint
+08
+
+=== PAGE 9 ===
+08 / SEO
+Engineering Center SEO specification
+Target technical information searches while keeping the page readable for investors and plant buyers.
+Title
+AAC Engineering Center | Production Process & Plant Layout | Laxmi En-Fab
+Meta
+Explore the AAC production process and plant layout, and understand how machinery fits
+together in an AAC production system.
+H1
+AAC Engineering Center
+Core terms
+AAC production process; AAC plant layout; AAC plant engineering; AAC manufacturing
+process.
+Support terms
+AAC production line; AAC plant machinery; AAC cutting process; AAC autoclave process.
+Internal links
+Solutions; Machinery & Equipment; Projects; Why Laxmi; Plant Layout; Contact.
+SEO note: keep the landing page broad; put detailed process/location content on the Plant Layout page and the five Academy pages.
+Laxmi En-Fab - Engineering Center Blueprint
+09
+
+=== PAGE 10 ===
+09 / BUILD
+Responsive + implementation
+The Engineering Center must stay readable even when the plant diagram becomes complex.
+01
+DESKTOP
+Large diagram, horizontal process
+rail, editorial headings.
+02
+TABLET
+Scaled diagram + scrollable stage
+rail + compact info panel.
+03
+MOBILE
+Vertical process flow, simplified
+plant view, tap hotspots.
+Implementation: use semantic HTML, CSS variables, SVG where appropriate, IntersectionObserver for reveal, lightweight
+JS, optimized images and a reduced-motion fallback.
+Avoid loading multiple giant plant images at once. Prefer one optimized master layout plus lightweight overlays or SVG labels.
+Final
+CTA:
+Understand your plant before you build it.
+Explore the production process, plant layout and machinery context.
+TALK TO LAXMI
+Laxmi En-Fab - Engineering Center Blueprint
+10

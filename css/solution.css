@@ -1,0 +1,395 @@
+/* ==========================================================================
+   Laxmi En-Fab Pvt. Ltd. — Reusable Solutions Inner Pages CSS
+   Visual Direction: Premium, Editorial, Industrial, Engineering-Led, Minimal
+   ========================================================================== */
+
+/* Root & Global Overrides */
+.solution-inner-body {
+  background-color: #ffffff;
+  color: #07172c;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}
+
+/* Solution Sub-Navigation Rail */
+.solution-nav-rail {
+  background: #040d1a;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.1rem 1.5rem;
+  position: sticky;
+  top: 84px;
+  z-index: 99;
+}
+
+.solution-nav-rail__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.solution-nav-rail__items {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.solution-nav-rail__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 1.15rem;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid transparent;
+}
+
+.solution-nav-rail__item:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.solution-nav-rail__item.is-active {
+  color: #ffffff;
+  background: var(--laxmi-blue, #0b3f78);
+  border-color: #1e60a8;
+}
+
+/* Section Container Layout */
+.solution-section {
+  padding: 6rem 1.5rem;
+  position: relative;
+  scroll-margin-top: 140px;
+}
+
+.solution-section--alt {
+  background-color: #f5f7fa;
+}
+
+.solution-section--dark {
+  background-color: #040d1a;
+  color: #ffffff;
+}
+
+.solution-section__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.solution-micro-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--laxmi-blue, #0b3f78);
+  margin-bottom: 1rem;
+}
+
+.solution-section--dark .solution-micro-label {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Complete System Intro Layout */
+.solution-sys-intro {
+  padding: 6rem 1.5rem;
+  background: #ffffff;
+}
+
+.solution-sys-intro__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.solution-sys-intro__eyebrow {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: var(--laxmi-blue, #0b3f78);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.solution-sys-intro__headline {
+  font-size: clamp(2.4rem, 4vw, 3.8rem);
+  font-weight: 900;
+  color: #07172c;
+  line-height: 1.1;
+  margin: 0 0 1.25rem 0;
+  max-width: 960px;
+  letter-spacing: -0.02em;
+}
+
+.solution-sys-intro__body {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #52677d;
+  max-width: 860px;
+  margin: 0 0 3rem 0;
+}
+
+.solution-sys-intro__media-card {
+  background: #f8fafc;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(7, 23, 44, 0.08);
+  box-shadow: 0 20px 50px rgba(7, 23, 44, 0.06);
+  margin-bottom: 2.5rem;
+}
+
+.solution-sys-intro__img {
+  width: 100%;
+  height: auto;
+  max-height: 560px;
+  object-fit: cover;
+  display: block;
+}
+
+.solution-sys-intro__process-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid rgba(7, 23, 44, 0.1);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #07172c;
+  text-transform: uppercase;
+}
+
+.solution-sys-intro__arrow {
+  color: var(--hp-gold, #b98a2f);
+}
+
+/* 8-Stage Production Journey Timeline */
+.journey-timeline-wrap {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.journey-stage-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  border-right: 1px solid rgba(7, 23, 44, 0.12);
+  padding-right: 1.5rem;
+}
+
+.journey-stage-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid rgba(7, 23, 44, 0.1);
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  width: 100%;
+}
+
+.journey-stage-btn:hover {
+  border-color: var(--laxmi-blue, #0b3f78);
+  transform: translateX(4px);
+}
+
+.journey-stage-btn.is-active {
+  background: #07172c;
+  color: #ffffff;
+  border-color: #07172c;
+  box-shadow: 0 12px 30px rgba(7, 23, 44, 0.15);
+}
+
+.journey-stage-num {
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: var(--laxmi-blue, #0b3f78);
+}
+
+.journey-stage-btn.is-active .journey-stage-num {
+  color: #ffffff;
+}
+
+.journey-stage-title {
+  font-size: 0.92rem;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.journey-stage-panel {
+  background: #ffffff;
+  border: 1px solid rgba(7, 23, 44, 0.12);
+  border-radius: 16px;
+  padding: 3rem;
+  box-shadow: 0 15px 45px rgba(7, 23, 44, 0.05);
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.journey-equipment-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+
+.journey-equipment-pill {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  background: rgba(11, 63, 120, 0.08);
+  color: var(--laxmi-blue, #0b3f78);
+  border: 1px solid rgba(11, 63, 120, 0.15);
+}
+
+/* Products Dual Story (Blocks + Panels) */
+.product-story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.product-story-card {
+  background: #ffffff;
+  border: 1px solid rgba(7, 23, 44, 0.12);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(7, 23, 44, 0.06);
+  display: flex;
+  flex-direction: column;
+}
+
+.product-story-img-wrap {
+  width: 100%;
+  height: 280px;
+  position: relative;
+  overflow: hidden;
+  background: #040d1a;
+}
+
+.product-story-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.product-story-content {
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.product-story-title {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #07172c;
+  margin: 0 0 0.75rem 0;
+}
+
+.product-story-desc {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #52677d;
+  margin: 0 0 1.5rem 0;
+}
+
+/* Decision Sequence List */
+.decision-seq-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.decision-seq-card {
+  background: #ffffff;
+  border: 1px solid rgba(7, 23, 44, 0.12);
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.decision-seq-num {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--laxmi-blue, #0b3f78);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.decision-seq-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #07172c;
+  margin: 0;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 992px) {
+  .solution-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .journey-timeline-wrap {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .journey-stage-nav {
+    border-right: none;
+    border-bottom: 1px solid rgba(7, 23, 44, 0.12);
+    padding-right: 0;
+    padding-bottom: 1.5rem;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+  .journey-stage-btn {
+    min-width: 220px;
+  }
+  .product-story-grid {
+    grid-template-columns: 1fr;
+  }
+  .decision-seq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .solution-section {
+    padding: 4rem 1.25rem;
+  }
+  .journey-stage-panel {
+    padding: 1.75rem;
+  }
+}

@@ -199,7 +199,8 @@
   text-transform: none;
 }
 
-.nav-dropdown--machinery a {
+.nav-dropdown--machinery a,
+.nav-dropdown--academy a {
   flex-direction: row;
   align-items: center;
   gap: 10px;

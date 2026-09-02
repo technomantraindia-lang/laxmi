@@ -1,0 +1,418 @@
+{
+  "project": {
+    "company": "Laxmi En-Fab Pvt. Ltd.",
+    "website_section": "Solutions",
+    "purpose": "Two reusable solution inner pages for the Laxmi En-Fab website",
+    "source": "LAXMI AAC PLANT CATALOG (1).pdf",
+    "design_direction": "Premium editorial industrial storytelling, image-led, technical, spacious, minimal cards"
+  },
+  "shared": {
+    "urls": {
+      "aac_block_panel_plant": "aac-block-panel-plant.html",
+      "dry_mix_mortar_plant": "dry-mix-mortar-plant.html"
+    },
+    "navigation": {
+      "parent": "solutions.html",
+      "items": [
+        {
+          "label": "AAC Plants",
+          "url": "aac-block-panel-plant.html"
+        },
+        {
+          "label": "Dry Mix Mortar",
+          "url": "dry-mix-mortar-plant.html"
+        }
+      ]
+    },
+    "visual_direction": {
+      "palette": [
+        "dark navy",
+        "Laxmi blue",
+        "white",
+        "soft neutral"
+      ],
+      "principles": [
+        "large typography",
+        "real Laxmi plant and machinery imagery",
+        "asymmetric editorial layouts",
+        "alternating dark and light sections",
+        "thin technical lines",
+        "minimal card usage",
+        "subtle scroll reveals",
+        "strong whitespace",
+        "process-led storytelling"
+      ]
+    },
+    "rules": [
+      "Do not invent machinery specifications, capacities, dimensions, certifications, performance figures or project claims.",
+      "Use the brochure as the factual source for AAC plant, AAC panel, machinery and Dry Mix Mortar content.",
+      "Use current company contact details rather than old brochure contact details.",
+      "Keep both pages visually related but do not make them identical.",
+      "The solution page should explain the complete plant/system, not read like a machinery catalog.",
+      "Use real brochure imagery wherever suitable."
+    ],
+    "contact": {
+      "phone_primary": "+91-8980800607",
+      "phone_secondary": "+91-8980800839",
+      "email_primary": "aac@laxmienfab.com",
+      "email_secondary": "aaclaxmi@gmail.com",
+      "address": "48 Block A, 2nd Floor, Pelican Complex Opp Odhav BRTS, GIDC, Odhav, Ahmedabad, Gujarat 382415"
+    },
+    "footer_cta": {
+      "headline": "Planning an AAC or Dry Mix Mortar plant?",
+      "subtext": "Start with the right engineering conversation before selecting equipment.",
+      "button": "Talk to Laxmi En-Fab",
+      "url": "contact.html"
+    }
+  },
+  "pages": [
+    {
+      "stage": "Solution 01",
+      "slug": "aac-block-panel-plant",
+      "url": "aac-block-panel-plant.html",
+      "title": "AAC Block & Panel Plant",
+      "purpose": "Present Laxmi's AAC block and panel plant as a complete production system, from raw material preparation through curing and finished-product handling.",
+      "seo": {
+        "title": "AAC Block & Panel Plant | Laxmi En-Fab Pvt. Ltd.",
+        "description": "Explore Laxmi En-Fab's AAC block and panel plant solutions, including plant process, machinery, engineering flow and end-to-end production.",
+        "h1": "AAC Block & Panel Plant",
+        "keywords": [
+          "AAC block plant",
+          "AAC panel plant",
+          "AAC plant machinery",
+          "AAC block manufacturing plant",
+          "AAC panel manufacturing",
+          "AAC plant solution",
+          "Laxmi En-Fab"
+        ]
+      },
+      "hero": {
+        "eyebrow": "AAC PLANT SOLUTION",
+        "headline": "Build your AAC plant as one complete production system.",
+        "subtext": "From raw material preparation to finished blocks and panels, the plant is planned around the relationship between process, machinery, handling and curing.",
+        "primary_cta": {
+          "label": "Plan Your AAC Plant",
+          "url": "contact.html"
+        },
+        "secondary_cta": {
+          "label": "Explore Plant Layout",
+          "url": "plant-layout.html"
+        },
+        "visual_direction": "Full-bleed cinematic AAC plant or machinery image from the brochure, with restrained technical overlay."
+      },
+      "intro": {
+        "eyebrow": "THE COMPLETE SYSTEM",
+        "headline": "An AAC plant is more than a collection of machines.",
+        "body": "The brochure presents an integrated AAC production journey covering raw material preparation, slurry and batching operations, pouring, precuring, demoulding and wire cutting, steam curing in autoclaves, and finished-product handling.",
+        "layout": "Large statement on one side, supporting plant image and short technical line on the other."
+      },
+      "production_journey": {
+        "headline": "One production journey. Engineered stage by stage.",
+        "stages": [
+          {
+            "number": "01",
+            "title": "Raw Material Preparation",
+            "description": "Prepare and process the required raw materials before they enter the production sequence.",
+            "related_equipment": [
+              "Ball Mill"
+            ]
+          },
+          {
+            "number": "02",
+            "title": "Slurry Making & Storage",
+            "description": "Prepare slurry and maintain the material flow required for batching and pouring.",
+            "related_equipment": [
+              "Slurry Making",
+              "Slurry Storage"
+            ]
+          },
+          {
+            "number": "03",
+            "title": "Batching & Pouring",
+            "description": "Bring the prepared materials together and move the mix into the casting process.",
+            "related_equipment": [
+              "Batching Unit"
+            ]
+          },
+          {
+            "number": "04",
+            "title": "Precuring & Moulding",
+            "description": "Allow the cast material to move through precuring and mould-related operations.",
+            "related_equipment": [
+              "Precuring",
+              "Mould Box",
+              "Side Plate"
+            ]
+          },
+          {
+            "number": "05",
+            "title": "Demoulding & Wire Cutting",
+            "description": "Release the cast cake and process it through the cutting sequence to form the required product geometry.",
+            "related_equipment": [
+              "Advanced Three Stage Cutting Machine",
+              "Vertical Cutting Machine"
+            ]
+          },
+          {
+            "number": "06",
+            "title": "Handling & Grouping",
+            "description": "Move and organize cakes or products between major production stages.",
+            "related_equipment": [
+              "Steam Trolley",
+              "Tilting Crane",
+              "Grouping Crane"
+            ]
+          },
+          {
+            "number": "07",
+            "title": "Steam Curing",
+            "description": "Cure the cut products inside autoclaves as part of the AAC production process.",
+            "related_equipment": [
+              "Autoclave"
+            ]
+          },
+          {
+            "number": "08",
+            "title": "Finished Product & Packing",
+            "description": "Handle finished AAC products and prepare them for dispatch.",
+            "related_equipment": [
+              "Auto Packing Line"
+            ]
+          }
+        ]
+      },
+      "products": {
+        "headline": "Designed for AAC blocks and panels.",
+        "intro": "The brochure covers AAC blocks, including standard and interlocking forms, along with reinforced AAC panels for wall, floor and roof applications.",
+        "items": [
+          {
+            "title": "AAC Blocks",
+            "description": "Standard and interlocking AAC block formats presented in the product section of the brochure.",
+            "visual": "AAC block product image"
+          },
+          {
+            "title": "AAC Panels",
+            "description": "Reinforced AAC panel applications covering wall, floor and roof use cases.",
+            "visual": "AAC panel/product application image"
+          }
+        ]
+      },
+      "machinery_story": {
+        "headline": "Every machine has a place in the production story.",
+        "body": "Instead of presenting equipment as isolated products, connect each major machine to the production stage where it contributes.",
+        "featured_groups": [
+          "Material preparation",
+          "Slurry and batching",
+          "Moulding and precuring",
+          "Cutting and handling",
+          "Autoclaving",
+          "Packing"
+        ],
+        "interaction": "Scrollable machine-to-process relationship. Selecting a production stage reveals the relevant machinery without turning the page into a card grid."
+      },
+      "engineering_proof": {
+        "headline": "See how the plant comes together.",
+        "body": "Use the plant layout experience to show the physical relationship between production stages, machinery and movement through the facility.",
+        "cta": {
+          "label": "Explore Plant Layout",
+          "url": "plant-layout.html"
+        },
+        "visual": "Large GA/3D plant layout visual from Laxmi source material."
+      },
+      "plant_support": {
+        "headline": "From plant concept to production.",
+        "sequence": [
+          "Plant design",
+          "Machinery manufacturing",
+          "Installation",
+          "Commissioning",
+          "Production"
+        ],
+        "body": "Keep this section focused on the complete project journey described by Laxmi's positioning, without adding unsupported service promises."
+      },
+      "project_proof": {
+        "headline": "Engineering is best understood through working plants.",
+        "body": "Use selected installation, expansion and workshop/dispatched-equipment imagery from the brochure as visual evidence.",
+        "cta": {
+          "label": "View Projects",
+          "url": "projects.html"
+        }
+      },
+      "decision_section": {
+        "headline": "Before choosing machinery, understand the plant.",
+        "points": [
+          "Production process",
+          "Plant layout",
+          "Equipment relationship",
+          "Material movement",
+          "Curing sequence",
+          "Finished-product handling"
+        ],
+        "cta": {
+          "label": "Visit AAC Investor Academy",
+          "url": "academy.html"
+        }
+      },
+      "final_cta": {
+        "headline": "Planning an AAC block or panel plant?",
+        "subtext": "Start with the production system, then work backward to the machinery.",
+        "button": {
+          "label": "Talk to Laxmi En-Fab",
+          "url": "contact.html"
+        }
+      },
+      "related_links": [
+        {
+          "label": "AAC Investor Academy",
+          "url": "academy.html"
+        },
+        {
+          "label": "Machinery & Equipment",
+          "url": "machinery-equipment.html"
+        },
+        {
+          "label": "Engineering Center",
+          "url": "engineering.html"
+        },
+        {
+          "label": "Plant Layout",
+          "url": "plant-layout.html"
+        },
+        {
+          "label": "Projects",
+          "url": "projects.html"
+        }
+      ]
+    },
+    {
+      "stage": "Solution 02",
+      "slug": "dry-mix-mortar-plant",
+      "url": "dry-mix-mortar-plant.html",
+      "title": "Dry Mix Mortar Plant",
+      "purpose": "Present the Dry Mix Mortar Plant as a focused solution page using only the Dry Mix Mortar information and associated product imagery supported by the Laxmi brochure.",
+      "seo": {
+        "title": "Dry Mix Mortar Plant | Laxmi En-Fab Pvt. Ltd.",
+        "description": "Explore Laxmi En-Fab's Dry Mix Mortar Plant solution and understand the production system, plant context and related products.",
+        "h1": "Dry Mix Mortar Plant",
+        "keywords": [
+          "Dry Mix Mortar Plant",
+          "dry mortar plant",
+          "dry mix mortar machinery",
+          "dry mix mortar production plant",
+          "Laxmi En-Fab"
+        ]
+      },
+      "hero": {
+        "eyebrow": "DRY MIX MORTAR SOLUTION",
+        "headline": "A production system built around consistent dry-mix processing.",
+        "subtext": "Laxmi En-Fab's brochure presents Dry Mix Mortar Plant as a separate solution within its plant and machinery portfolio.",
+        "primary_cta": {
+          "label": "Discuss Your Plant",
+          "url": "contact.html"
+        },
+        "secondary_cta": {
+          "label": "Explore Machinery",
+          "url": "machinery-equipment.html"
+        },
+        "visual_direction": "Use the strongest Dry Mix Mortar Plant/product visual available in the brochure. Avoid generic stock imagery when source imagery exists."
+      },
+      "intro": {
+        "eyebrow": "SOLUTION OVERVIEW",
+        "headline": "The plant should be understood as a production flow, not a machine list.",
+        "body": "Keep the page focused on the Dry Mix Mortar Plant solution shown in the brochure. Explain the plant at a high level without inventing a process sequence or equipment specification that is not supported by the source.",
+        "layout": "Editorial two-column composition with a large statement and a full-height plant/product image."
+      },
+      "system_view": {
+        "headline": "From material input to finished dry mix.",
+        "body": "Use a simple visual system diagram based strictly on the process and equipment information available in the source material. Where the brochure does not specify a stage, show the stage as a conceptual placeholder only in the design data and do not publish unsupported technical details.",
+        "interaction": "Horizontal process line with restrained hover/focus states.",
+        "fallback": "If the source imagery or process information is insufficient for a detailed interactive flow, keep this section visual and high-level rather than fabricating steps."
+      },
+      "solution_focus": {
+        "headline": "A focused plant solution.",
+        "points": [
+          {
+            "title": "Plant Context",
+            "description": "Show where the Dry Mix Mortar Plant sits within Laxmi En-Fab's broader plant and machinery offering."
+          },
+          {
+            "title": "Production Thinking",
+            "description": "Frame the solution around coordinated plant operation rather than isolated equipment."
+          },
+          {
+            "title": "Project Understanding",
+            "description": "Connect the solution to engineering, plant planning and project discussion without adding unsupported technical claims."
+          }
+        ]
+      },
+      "visual_story": {
+        "headline": "See the plant, not just the brochure description.",
+        "media_sequence": [
+          "Dry Mix Mortar Plant visual",
+          "Relevant machinery/facility image",
+          "Workshop or manufacturing image",
+          "Finished product/application image if supported by the source"
+        ],
+        "layout": "Large editorial image sequence with captions and thin technical annotations."
+      },
+      "engineering_connection": {
+        "headline": "Plant engineering starts before equipment selection.",
+        "body": "Use the Engineering Center and Plant Layout pages to move the visitor from solution understanding into plant planning and physical arrangement.",
+        "links": [
+          {
+            "label": "Engineering Center",
+            "url": "engineering.html"
+          },
+          {
+            "label": "Plant Layout",
+            "url": "plant-layout.html"
+          }
+        ]
+      },
+      "decision_section": {
+        "headline": "Understand the solution before discussing the equipment.",
+        "points": [
+          "Plant requirement",
+          "Production flow",
+          "Equipment relationship",
+          "Plant arrangement",
+          "Project execution"
+        ],
+        "cta": {
+          "label": "Explore Engineering Center",
+          "url": "engineering.html"
+        }
+      },
+      "final_cta": {
+        "headline": "Planning a Dry Mix Mortar Plant?",
+        "subtext": "Bring the project requirement first. The right equipment conversation follows from it.",
+        "button": {
+          "label": "Talk to Laxmi En-Fab",
+          "url": "contact.html"
+        }
+      },
+      "related_links": [
+        {
+          "label": "Solutions",
+          "url": "solutions.html"
+        },
+        {
+          "label": "Machinery & Equipment",
+          "url": "machinery-equipment.html"
+        },
+        {
+          "label": "Engineering Center",
+          "url": "engineering.html"
+        },
+        {
+          "label": "Projects",
+          "url": "projects.html"
+        },
+        {
+          "label": "Contact",
+          "url": "contact.html"
+        }
+      ]
+    }
+  ]
+}
