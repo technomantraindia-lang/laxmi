@@ -3,885 +3,447 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Explore the AAC plant layout, production process and relationship between plant zones, machinery and engineering with Laxmi En-Fab." />
-  <meta name="keywords" content="AAC plant layout, AAC plant engineering, AAC production process, AAC plant design, AAC production line, AAC plant machinery, Laxmi En-Fab layout" />
-  <title>AAC Plant Layout | Production Process &amp; Engineering | Laxmi En-Fab</title>
+  <meta name="description" content="AAC Plant Layout Design Guide by Laxmi En-Fab Pvt. Ltd. Compare Straight-Line and L-Shape layouts, Single vs Double Door autoclaves, land optimization, and phase-2 expansion planning." />
+  <meta name="keywords" content="AAC plant layout, straight line AAC plant, L-shape AAC plant, double door autoclave, AAC factory design, Laxmi En-Fab" />
+  <title>AAC Plant Layout Design | Straight vs L-Shape Factory Planning | Laxmi En-Fab</title>
+  
+  <!-- Google Fonts: Geist & Geist Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet" />
+  
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/components.css" />
   <link rel="stylesheet" href="css/homepage.css" />
+  <link rel="stylesheet" href="css/engineering.css" />
   <link rel="stylesheet" href="css/responsive.css" />
-  <style>
-    /* Specific styles for interactive plant layout viewer */
-    .layout-viewer {
-      position: relative;
-      width: 100%;
-      background: #040d1a;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
-    }
-    
-    .layout-viewer__controls {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem 1.5rem;
-      background: rgba(7, 23, 44, 0.95);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      flex-wrap: wrap;
-      gap: 1rem;
-      z-index: 10;
-      position: relative;
-    }
 
-    .layout-viewer__filters {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      flex-wrap: wrap;
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AAC Plant Layout Design: Choosing the Right Factory Configuration",
+    "description": "Comprehensive engineering guide on factory master planning, straight-line vs L-shape flow, autoclave rail logistics, and land optimization.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Laxmi En-Fab Pvt. Ltd."
     }
-
-    .layout-filter-btn {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      color: rgba(255, 255, 255, 0.75);
-      padding: 0.45rem 0.9rem;
-      border-radius: 6px;
-      font-family: 'Inter', system-ui, sans-serif;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      cursor: pointer;
-      transition: all 0.25s ease;
-    }
-
-    .layout-filter-btn:hover,
-    .layout-filter-btn.is-active {
-      background: var(--laxmi-blue, #0b3f78);
-      border-color: #1e60a8;
-      color: #ffffff;
-    }
-
-    .layout-viewer__zoom-tools {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .layout-zoom-btn {
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      color: #ffffff;
-      width: 34px;
-      height: 34px;
-      border-radius: 6px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1rem;
-      font-weight: 800;
-      cursor: pointer;
-      transition: background 0.2s ease;
-    }
-
-    .layout-zoom-btn:hover {
-      background: rgba(255, 255, 255, 0.25);
-    }
-
-    .layout-viewer__viewport {
-      position: relative;
-      width: 100%;
-      height: 580px;
-      overflow: hidden;
-      cursor: grab;
-      user-select: none;
-    }
-
-    .layout-viewer__viewport:active {
-      cursor: grabbing;
-    }
-
-    .layout-viewer__canvas {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      transform-origin: 50% 50%;
-      transition: transform 0.1s ease-out;
-    }
-
-    .layout-viewer__img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      pointer-events: none;
-    }
-
-    /* Hotspot Pins */
-    .layout-hotspot {
-      position: absolute;
-      transform: translate(-50%, -50%);
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: var(--laxmi-blue, #0b3f78);
-      border: 2px solid #ffffff;
-      color: #ffffff;
-      font-family: 'Inter', system-ui, sans-serif;
-      font-size: 0.75rem;
-      font-weight: 900;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      box-shadow: 0 0 15px rgba(11, 63, 120, 0.8);
-      transition: transform 0.25s ease, background 0.25s ease;
-      z-index: 5;
-    }
-
-    .layout-hotspot::after {
-      content: "";
-      position: absolute;
-      inset: -6px;
-      border-radius: 50%;
-      border: 1px solid rgba(255, 255, 255, 0.4);
-      animation: hotspotPulse 2s infinite;
-    }
-
-    @keyframes hotspotPulse {
-      0% { transform: scale(0.9); opacity: 0.8; }
-      100% { transform: scale(1.6); opacity: 0; }
-    }
-
-    .layout-hotspot:hover,
-    .layout-hotspot.is-active {
-      background: #d4af37;
-      color: #031029;
-      transform: translate(-50%, -50%) scale(1.2);
-    }
-
-    /* Zone Detail Sidebar Panel */
-    .zone-detail-panel {
-      background: #ffffff;
-      border: 1px solid rgba(7, 23, 44, 0.12);
-      border-radius: 16px;
-      padding: 2.25rem;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.05);
-    }
-
-    .zone-btn-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-    }
-
-    .zone-select-btn {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem 1.25rem;
-      background: #f4f7fa;
-      border: 1px solid rgba(7, 23, 44, 0.08);
-      border-radius: 8px;
-      font-family: 'Inter', system-ui, sans-serif;
-      font-size: 0.95rem;
-      font-weight: 800;
-      color: #07172c;
-      cursor: pointer;
-      transition: all 0.25s ease;
-      text-align: left;
-    }
-
-    .zone-select-btn:hover,
-    .zone-select-btn.is-active {
-      background: #07172c;
-      color: #ffffff;
-      border-color: #07172c;
-    }
-
-    .zone-select-btn.is-active .zone-btn-arrow {
-      transform: translateX(4px);
-      color: #d4af37;
-    }
-  </style>
+  }
+  </script>
 </head>
-<body class="engineering-page" data-page="engineering">
+<body class="engineering-inner-page">
 
-  <!-- Dynamic Header Injection Placeholder -->
+  <!-- Shared Header -->
   <div id="site-header"></div>
 
+  <!-- Breadcrumb Navigation -->
+  <nav class="site-breadcrumb" aria-label="Breadcrumb">
+    <div class="site-breadcrumb__inner">
+      <a href="index.html">Home</a>
+      <span class="bc-sep">/</span>
+      <a href="engineering-center.html">AAC Engineering Center</a>
+      <span class="bc-sep">/</span>
+      <span class="bc-current">AAC Plant Layout Design</span>
+    </div>
+  </nav>
+
+  <!-- Sticky In-Page Sub-Navigation Strip -->
+  <nav class="eng-nav-strip" aria-label="Layout Navigation">
+    <div class="eng-nav-strip__inner">
+      <a href="#overview" class="eng-nav-btn active"><span class="eng-nav-num">01</span> Overview</a>
+      <a href="#configurations" class="eng-nav-btn"><span class="eng-nav-num">02</span> In-Line vs L-Shape</a>
+      <a href="#autoclave-flow" class="eng-nav-btn"><span class="eng-nav-num">03</span> Autoclave Logistics</a>
+      <a href="#zoning" class="eng-nav-btn"><span class="eng-nav-num">04</span> 6 Zoning Rules</a>
+      <a href="#consultation" class="eng-nav-btn"><span class="eng-nav-num">05</span> CAD Consultation</a>
+    </div>
+  </nav>
+
   <main id="main-content">
-    
-    <!-- ============ SECTION 01 — HERO (DARK INDUSTRIAL) ============ -->
-    <section class="editorial-about-hero" id="hero">
-      <div class="editorial-about-hero__inner">
-        
-        <!-- Left: Text Area -->
-        <div class="editorial-about-hero__content">
-          <span class="editorial-eyebrow editorial-eyebrow--gold">INTERACTIVE GA DRAWING</span>
-          <h1 class="editorial-about-hero__title">
-            <span>See how the plant</span>
-            <span class="editorial-about-hero__title-light">comes together.</span>
+
+    <!-- ============ 01. HERO SECTION (EDITORIAL FULL SCREEN IMAGE BACKGROUND) ============ -->
+    <section class="editorial-hero editorial-hero--light is-loaded" id="overview" aria-label="AAC Plant Layout Overview">
+      <div class="editorial-hero__media" aria-hidden="true">
+        <div class="editorial-hero__video-wrap">
+          <img
+            class="editorial-hero__poster"
+            src="assets/images/engineering/plant-layout-3d.png"
+            alt="AAC Plant Layout 3D Engineering Model"
+            fetchpriority="high"
+          />
+        </div>
+        <div class="editorial-hero__overlay"></div>
+      </div>
+
+      <div class="editorial-hero__inner">
+        <div class="editorial-hero__content">
+          <span class="editorial-hero__eyebrow">PILLAR 02 · FACTORY MASTER PLANNING</span>
+          <h1 class="editorial-hero__title">
+            <span>AAC Plant</span>
+            <span class="editorial-hero__title-light">Layout Design.</span>
           </h1>
-          <p class="editorial-about-hero__lead">
-            Explore spatial arrangement, equipment locations, and material flow vectors across raw material storage, batching tower, precuring tunnel, cutting line, autoclave bay, and packing yard.
+          <p class="editorial-hero__sub">
+            Choosing the optimal factory configuration for your surveyed land, raw material handling, single vs. double-door autoclave rail circuits, and non-disruptive capacity expansion.
           </p>
-          <div class="editorial-about-hero__actions">
-            <a href="#interactive-layout" class="editorial-btn-primary">
-              Explore Layout <span class="btn-arrow">↓</span>
-            </a>
-            <a href="engineering-center.html" class="editorial-btn-outline">
-              Engineering Center <span class="btn-arrow">→</span>
-            </a>
-          </div>
-        </div>
 
-        <!-- Right: Real Laxmi Visual -->
-        <div class="editorial-about-hero__visual">
-          <div class="editorial-about-hero__frame">
-            <img src="assets/images/capacity-selection.png" alt="Laxmi En-Fab AAC Plant General Arrangement Layout" class="editorial-about-hero__img" />
-            <div class="editorial-about-hero__overlay"></div>
-            <div class="editorial-about-hero__tech-tag">
-              <span class="tech-tag__dot"></span>
-              CAD GA LAYOUT · 1:1 SCALE SPATIAL MAP
+          <div class="eng-hero__stats">
+            <div class="eng-stat-item">
+              <div class="eng-stat-item__val">2.5–10 <span>Acres</span></div>
+              <div class="eng-stat-item__lbl">Plot Sizing Range</div>
+            </div>
+            <div class="eng-stat-item">
+              <div class="eng-stat-item__val">0 <span>Cross-Traffic</span></div>
+              <div class="eng-stat-item__lbl">Optimized Logistics</div>
+            </div>
+            <div class="eng-stat-item">
+              <div class="eng-stat-item__val">2x <span>Ready</span></div>
+              <div class="eng-stat-item__lbl">Phase-2 Scaling</div>
+            </div>
+            <div class="eng-stat-item">
+              <div class="eng-stat-item__val">30 <span>%</span></div>
+              <div class="eng-stat-item__lbl">Civil Cost Savings</div>
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
-    <!-- ============ SECTION 02 — PLANT AT A GLANCE ============ -->
-    <section class="machinery-stage" id="glance" style="padding: 7rem 0;">
-      <div class="machinery-stage__inner" style="max-width: 1280px; padding: 0 2rem;">
-        <div class="machinery-stage__header">
-          <div class="academy-micro-label">PLANT AT A GLANCE · 8-STAGE PRODUCTION SEQUENCE</div>
-          <h2 class="machinery-stage__title">
-            One plant. <br><span class="machinery-stage__title-light">One connected production flow.</span>
-          </h2>
-          <p class="machinery-stage__desc">
-            An AAC plant works as a connected sequence. Each production stage has a defined role, position and relationship with the stages around it.
-          </p>
-        </div>
-
-        <!-- 8-Stage Production Flow Grid -->
-        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; margin-top: 3rem; background: rgba(7,23,44,0.08); border-radius: 12px; overflow: hidden;">
-          <div style="background: #ffffff; padding: 1.75rem;">
-            <span style="font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.14em; color: var(--laxmi-blue, #0b3f78);">STAGE 01</span>
-            <h4 style="font-family: 'Inter', system-ui, sans-serif; font-size: 1.1rem; font-weight: 800; color: #07172c; margin: 0.5rem 0 0.4rem 0;">Raw Material</h4>
-            <p style="font-family: 'Inter', system-ui, sans-serif; font-size: 0.88rem; line-height: 1.6; color: #52677d; margin: 0;">Fly ash, cement, lime &amp; gypsum storage, conveying and weighing</p>
-          </div>
-          <div style="background: #ffffff; padding: 1.75rem;">
-            <span style="font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.14em; color: var(--laxmi-blue, #0b3f78);">STAGE 02</span>
-            <h4 style="font-family: 'Inter', system-ui, sans-serif; font-size: 1.1rem; font-weight: 800; color: #07172c; margin: 0.5rem 0 0.4rem 0;">Slurry Prep</h4>
-            <p style="font-family: 'Inter', system-ui, sans-serif; font-size: 0.88rem; line-height: 1.6; color: #52677d; margin: 0;">Wet grinding of fly ash into fine slurry in ball mill</p>
-          </div>
-          <div style="background: #ffffff; padding: 1.75rem;">
-            <span style="font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.14em; color: var(--laxmi-blue, #0b3f78);">STAGE 03</span>
-            <h4 style="font-family: 'Inter', system-ui, sans-serif; font-size: 1.1rem; font-weight: 800; color: #07172c; margin: 0.5rem 0 0.4rem 0;">Batching</h4>
-            <p style="font-family: 'Inter', system-ui, sans-serif; font-size: 0.88rem; line-height: 1.6; color: #52677d; margin: 0;">PLC-controlled dosing, mixing &amp; aluminium addition</p>
-          </div>
-          <div style="background: #ffffff; padding: 1.75rem;">
-            <span style="font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.14em; color: var(--laxmi-blue, #0b3f78);">STAGE 04</span>
-            <h4 style="font-family: 'Inter', system-ui, sans-serif; font-size: 1.1rem; font-weight: 800; color: #07172c; margin: 0.5rem 0 0.4rem 0;">Pouring</h4>
-            <p style="font-family: 'Inter', system-ui, sans-serif; font-size: 0.88rem; line-height: 1.6; color: #52677d; margin: 0;">Slurry pouring into oiled precision steel moulds</p>
-          </div>
-          <div style="background: #ffffff; padding: 1.75rem;">
-            <span style="font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.14em; color: var(--laxmi-blue, #0b3f78);">STAGE 05</span>
-            <h4 style="font-family: 'Inter', system-ui, sans-serif; font-size: 1.1rem; font-weight: 800; color: #07172c; margin: 0.5rem 0 0.4rem 0;">Precuring</h4>
-            <p style="font-family: 'Inter', system-ui, sans-serif; font-size: 0.88rem; line-height: 1.6; color: #52677d; margin: 0;">Temperature-controlled rising tunnel at 40–50°C</p>
-          </div>
-          <div style="background: #ffffff; padding: 1.75rem;">
-            <span style="font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.14em; color: var(--laxmi-blue, #0b3f78);">STAGE 06</span>
-            <h4 style="font-family: 'Inter', system-ui, sans-serif; font-size: 1.1rem; font-weight: 800; color: #07172c; margin: 0.5rem 0 0.4rem 0;">Cutting</h4>
-            <p style="font-family: 'Inter', system-ui, sans-serif; font-size: 0.88rem; line-height: 1.6; color: #52677d; margin: 0;">3-stage oscillating wire cutting with ±1mm accuracy</p>
-          </div>
-          <div style="background: #ffffff; padding: 1.75rem;">
-            <span style="font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.14em; color: var(--laxmi-blue, #0b3f78);">STAGE 07</span>
-            <h4 style="font-family: 'Inter', system-ui, sans-serif; font-size: 1.1rem; font-weight: 800; color: #07172c; margin: 0.5rem 0 0.4rem 0;">Autoclave</h4>
-            <p style="font-family: 'Inter', system-ui, sans-serif; font-size: 0.88rem; line-height: 1.6; color: #52677d; margin: 0;">12-bar saturated steam curing at 190°C for 10–12 hrs</p>
-          </div>
-          <div style="background: #ffffff; padding: 1.75rem;">
-            <span style="font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.14em; color: var(--laxmi-blue, #0b3f78);">STAGE 08</span>
-            <h4 style="font-family: 'Inter', system-ui, sans-serif; font-size: 1.1rem; font-weight: 800; color: #07172c; margin: 0.5rem 0 0.4rem 0;">Packing</h4>
-            <p style="font-family: 'Inter', system-ui, sans-serif; font-size: 0.88rem; line-height: 1.6; color: #52677d; margin: 0;">Auto separation, stacking &amp; shrink-wrap dispatch</p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ============ SECTION 03 — INTERACTIVE PLANT LAYOUT ============ -->
-    <section class="machinery-stage machinery-stage--alt" id="interactive-layout" style="padding: 6rem 1.5rem;">
-      <div class="machinery-stage__inner" style="max-width: 1280px;">
+    <!-- ============ 02. SECTION 01: CONFIGURATION COMPARISON ============ -->
+    <section class="eng-section eng-section--white" id="configurations">
+      <div class="eng-container">
         
-        <div class="machinery-stage__header">
-          <div class="academy-micro-label">INTERACTIVE GA DRAWING · GENERAL ARRANGEMENT</div>
-          <h2 class="machinery-stage__title">
-            The AAC plant, <br><span class="machinery-stage__title-light">in one view.</span>
+        <div>
+          <span class="eng-eyebrow">01 · CONFIGURATION COMPARISON</span>
+          <h2 class="eng-title">
+            <span>Straight In-Line vs. L-Shape.</span>
+            <span class="eng-title-light">Matching production flow to land geometry.</span>
           </h2>
-          <p class="machinery-stage__desc">
-            Explore the plant layout to understand how production zones, equipment and material flow are arranged within the complete system.
+          <p class="eng-lead">
+            The layout determines the flow of raw materials, moulds, green cakes, autoclave trolleys, and finished block dispatch across your surveyed plot.
           </p>
         </div>
 
-        <!-- Layout Interactive Viewer Shell (CAD / Engineering Drawing Style) -->
-        <div class="layout-viewer" id="layout-viewer-container" style="border-radius: 16px; border: 1px solid rgba(255,255,255,0.15); box-shadow: 0 30px 80px rgba(0,0,0,0.45);">
-          
-          <!-- Top Control Toolbar -->
-          <div class="layout-viewer__controls" style="background: #040d1a; padding: 1.2rem 1.75rem;">
-            <div class="layout-viewer__filters">
-              <button class="layout-filter-btn is-active" data-filter="all">ALL ZONES</button>
-              <button class="layout-filter-btn" data-filter="raw">01 RAW MAT</button>
-              <button class="layout-filter-btn" data-filter="slurry">02 SLURRY</button>
-              <button class="layout-filter-btn" data-filter="batch">03 BATCHING</button>
-              <button class="layout-filter-btn" data-filter="pour">04 POURING</button>
-              <button class="layout-filter-btn" data-filter="precuring">05 PRECURING</button>
-              <button class="layout-filter-btn" data-filter="cut">06 CUTTING</button>
-              <button class="layout-filter-btn" data-filter="auto">07 AUTOCLAVE</button>
-              <button class="layout-filter-btn" data-filter="pack">08 PACKING</button>
-            </div>
-
-            <div class="layout-viewer__zoom-tools">
-              <span id="zoom-level-text" style="color: rgba(255,255,255,0.7); font-size: 0.75rem; font-weight: 800; letter-spacing: 0.08em; margin-right: 0.5rem;">ZOOM: 100%</span>
-              <button class="layout-zoom-btn" id="zoom-in-btn" aria-label="Zoom in">+</button>
-              <button class="layout-zoom-btn" id="zoom-out-btn" aria-label="Zoom out">−</button>
-              <button class="layout-zoom-btn" id="zoom-reset-btn" style="width: auto; padding: 0 0.85rem; font-size: 0.75rem; font-weight: 800; background: var(--laxmi-blue, #0b3f78); border-color: #1e60a8;" aria-label="Reset view">RESET</button>
-            </div>
-          </div>
-
-          <!-- Interactive Viewport Canvas with Aspect-Ratio Lock -->
-          <div class="layout-viewer__viewport" id="layout-viewport" style="height: 620px; background: #07172c; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative;">
-            <div class="layout-viewer__canvas" id="layout-canvas" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
-              
-              <!-- 3:2 Aspect Ratio Locked Frame matching explored view.png (1536x1024) -->
-              <div style="position: relative; width: 100%; max-width: 930px; aspect-ratio: 1536 / 1024; display: flex; align-items: center; justify-content: center;">
-                <img src="assets/images/explored view.png" alt="Laxmi AAC Plant General Arrangement Layout showing production zones" class="layout-viewer__img" style="width: 100%; height: 100%; object-fit: contain; pointer-events: none;" />
-                
-                <!-- 1:1 Precise Pin Coordinates mapped to explored view.png -->
-                <div class="layout-hotspot" style="top: 50.8%; left: 31.6%;" data-zone="raw" title="01 · Raw Material Prep">01</div>
-                <div class="layout-hotspot" style="top: 41.2%; left: 39.5%;" data-zone="slurry" title="02 · Slurry Preparation">02</div>
-                <div class="layout-hotspot" style="top: 36.5%; left: 49.2%;" data-zone="batch" title="03 · Batching & Dosing Tower">03</div>
-                <div class="layout-hotspot" style="top: 36.1%; left: 63.8%;" data-zone="pour" title="04 · Pouring & Moulding">04</div>
-                <div class="layout-hotspot" style="top: 37.2%; left: 81.5%;" data-zone="precuring" title="05 · Precuring Rising Tunnel">05</div>
-                <div class="layout-hotspot" style="top: 51.8%; left: 82.2%;" data-zone="cut" title="06 · 3-Stage Wire Cutting Line">06</div>
-                <div class="layout-hotspot" style="top: 72.8%; left: 82.0%;" data-zone="auto" title="07 · Autoclave Steam Curing Bay">07</div>
-                <div class="layout-hotspot" style="top: 77.5%; left: 48.2%;" data-zone="pack" title="08 · Packing & Dispatch Yard">08</div>
-              </div>
-
-            </div>
-          </div>
-
-          <!-- Bottom HUD Status Bar -->
-          <div style="display: flex; align-items: center; justify-content: space-between; padding: 0.85rem 1.75rem; background: #040d1a; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.8); font-size: 0.78rem; font-weight: 700; flex-wrap: wrap; gap: 0.75rem;">
-            <div style="display: flex; align-items: center; gap: 0.6rem;">
-              <span style="width: 8px; height: 8px; border-radius: 50%; background: #4caf50; display: inline-block;"></span>
-              <span id="layout-status-label" style="letter-spacing: 0.05em; color: #ffffff;">ACTIVE ZONE: 01 · RAW MATERIAL PREPARATION</span>
-            </div>
-            <div style="color: rgba(255,255,255,0.5); font-size: 0.75rem; letter-spacing: 0.08em;">
-              CLICK HOTSPOTS TO INSPECT · MOUSE WHEEL TO ZOOM · DRAG TO PAN
-            </div>
-          </div>
-
+        <!-- Master Configuration Table -->
+        <div class="eng-matrix-table-wrap">
+          <table class="eng-matrix-table">
+            <thead>
+              <tr>
+                <th>Layout Type</th>
+                <th>Ideal Plot Dimensions</th>
+                <th>Material Flow Dynamic</th>
+                <th>Expansion Suitability</th>
+                <th>Key Engineering Advantage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="eng-material-cell">
+                    <span class="eng-material-name">Straight In-Line (Linear)</span>
+                    <span class="eng-material-formula">Unidirectional Flow</span>
+                  </div>
+                </td>
+                <td>Long &amp; narrow plots (e.g., 60m width × 250m+ length)</td>
+                <td>Unidirectional flow: Raw materials enter at North, finished blocks exit South</td>
+                <td><span class="eng-prop-badge">Zero Disruption</span> Add parallel lines seamlessly</td>
+                <td><span class="eng-qc-tag">Shortest ferry cart cycle &amp; simplest rail shunting</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="eng-material-cell">
+                    <span class="eng-material-name">L-Shape Layout</span>
+                    <span class="eng-material-formula">90° Corner Transition</span>
+                  </div>
+                </td>
+                <td>Square or wide plots (e.g., 120m width × 150m length)</td>
+                <td>Preparation is perpendicular; cutting and autoclaving turn 90° into yard</td>
+                <td><span class="eng-prop-badge">Axial Scaling</span> Expands along yard axis</td>
+                <td><span class="eng-qc-tag">Compact boiler placement &amp; shorter steam headers</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="eng-material-cell">
+                    <span class="eng-material-name">U-Shape (Loop) Layout</span>
+                    <span class="eng-material-formula">Single Frontage Access</span>
+                  </div>
+                </td>
+                <td>Plots with single-road frontage access</td>
+                <td>Raw materials and dispatch share the same frontage with segregated gates</td>
+                <td><span class="eng-prop-badge">Modular Mirror</span> Expands in mirrored loop units</td>
+                <td><span class="eng-qc-tag">Consolidates weighbridges &amp; gate security</span></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+
       </div>
     </section>
 
-    <!-- ============ SECTION 04 — EXPLORE THE PLANT ZONES ============ -->
-    <section class="machinery-stage" id="zones">
-      <div class="machinery-stage__inner">
-        <div class="machinery-stage__header">
-          <h2 class="machinery-stage__title">
-            Explore each zone.
+    <!-- ============ 03. SECTION 02: CURING LOGISTICS ============ -->
+    <section class="eng-section eng-section--light" id="autoclave-flow">
+      <div class="eng-container">
+        
+        <div>
+          <span class="eng-eyebrow">02 · CURING LOGISTICS</span>
+          <h2 class="eng-title">
+            <span>Single-door vs. double-door.</span>
+            <span class="eng-title-light">Autoclave transfer rail circuits.</span>
           </h2>
-          <p class="machinery-stage__desc">
-            Select a production area to understand what happens there, which equipment supports it and where it sits in the plant.
+          <p class="eng-lead">
+            How cake trolleys enter and exit curing vessels dictates internal rail tracks, transfer cranes, cycle turnover, and operator safety.
           </p>
         </div>
 
-        <!-- Editorial Split Layout -->
-        <div style="display: grid; grid-template-columns: minmax(280px, 1fr) 2fr; gap: 2.5rem; margin-top: 2.5rem; align-items: start;">
+        <!-- 2 Contiguous Comparison Boxes -->
+        <div class="eng-circuit-grid eng-circuit-grid--2col">
           
-          <!-- Left: Zone Selection Buttons -->
-          <div class="zone-btn-list" id="zone-btn-container">
-            <button class="zone-select-btn is-active" data-zone-id="raw">
-              <span>01 · RAW MATERIAL PREP</span>
-              <span class="zone-btn-arrow">→</span>
-            </button>
-            <button class="zone-select-btn" data-zone-id="slurry">
-              <span>02 · SLURRY PREPARATION</span>
-              <span class="zone-btn-arrow">→</span>
-            </button>
-            <button class="zone-select-btn" data-zone-id="batch">
-              <span>03 · BATCHING &amp; DOSING</span>
-              <span class="zone-btn-arrow">→</span>
-            </button>
-            <button class="zone-select-btn" data-zone-id="pour">
-              <span>04 · POURING &amp; MOULDING</span>
-              <span class="zone-btn-arrow">→</span>
-            </button>
-            <button class="zone-select-btn" data-zone-id="precuring">
-              <span>05 · PRECURING TUNNEL</span>
-              <span class="zone-btn-arrow">→</span>
-            </button>
-            <button class="zone-select-btn" data-zone-id="cut">
-              <span>06 · CUTTING ZONE</span>
-              <span class="zone-btn-arrow">→</span>
-            </button>
-            <button class="zone-select-btn" data-zone-id="auto">
-              <span>07 · AUTOCLAVING BAY</span>
-              <span class="zone-btn-arrow">→</span>
-            </button>
-            <button class="zone-select-btn" data-zone-id="pack">
-              <span>08 · PACKING &amp; DISPATCH</span>
-              <span class="zone-btn-arrow">→</span>
-            </button>
+          <!-- Config A -->
+          <div class="eng-circuit-box">
+            <div class="eng-circuit-box__top">
+              <span class="eng-circuit-box__num">CONFIG A · SINGLE-DOOR AUTOCLAVE</span>
+              <h3 class="eng-circuit-box__title">Single-Door End-Loading Circuit</h3>
+              <p class="eng-circuit-box__desc">
+                Trolleys enter and exit from the same front door. Unloading occurs by pulling cured cake trains back out onto the front transfer rail before shunting to the de-panning bay.
+              </p>
+            </div>
+            <div class="eng-circuit-box__spec">
+              <span>Capex: Lower Mechanism Cost</span>
+              <span>Suited: 150–300 m³/day</span>
+            </div>
           </div>
 
-          <!-- Right: Active Zone Information Panel -->
-          <div class="zone-detail-panel" id="zone-display-panel">
-            <span style="font-size: 0.75rem; font-weight: 900; color: var(--laxmi-blue, #0b3f78); letter-spacing: 0.16em;" id="zd-stage-num">STAGE 01</span>
-            <h3 style="font-size: 2rem; font-weight: 900; color: #07172c; margin: 0.4rem 0 1.25rem 0;" id="zd-title">RAW MATERIAL PREPARATION</h3>
-            
-            <div style="margin-bottom: 1.5rem;">
-              <span style="font-size: 0.75rem; font-weight: 800; color: #52677d; letter-spacing: 0.08em; text-transform: uppercase;">WHAT HAPPENS</span>
-              <p style="font-size: 1.05rem; line-height: 1.65; color: #07172c; margin-top: 0.25rem;" id="zd-happens">
-                Incoming fly ash or silica sand is milled with water in heavy ball mills to produce a fine, homogeneous slurry of uniform density.
+          <!-- Config B -->
+          <div class="eng-circuit-box">
+            <div class="eng-circuit-box__top">
+              <span class="eng-circuit-box__num">CONFIG B · DOUBLE-DOOR THROUGH-FEED</span>
+              <h3 class="eng-circuit-box__title">Double-Door Through-Feed Circuit</h3>
+              <p class="eng-circuit-box__desc">
+                Uncured green cakes enter through the rear door; fully cured blocks exit through the front door directly into the de-panning bay, creating 100% unidirectional traffic.
               </p>
             </div>
-
-            <div style="margin-bottom: 1.5rem;">
-              <span style="font-size: 0.75rem; font-weight: 800; color: #52677d; letter-spacing: 0.08em; text-transform: uppercase;">RELATED EQUIPMENT</span>
-              <p style="font-size: 1.05rem; font-weight: 700; color: var(--laxmi-blue, #0b3f78); margin-top: 0.25rem;" id="zd-equipment">
-                Wet Ball Mill &amp; Slurry Storage Tanks
-              </p>
-            </div>
-
-            <div style="margin-bottom: 2rem;">
-              <span style="font-size: 0.75rem; font-weight: 800; color: #52677d; letter-spacing: 0.08em; text-transform: uppercase;">PLANT POSITION</span>
-              <p style="font-size: 1.05rem; color: #07172c; margin-top: 0.25rem;" id="zd-position">
-                Front-end material yard adjacent to raw material hoppers and slurry storage tanks.
-              </p>
-            </div>
-
-            <div>
-              <a href="machinery-equipment.html" class="editorial-hero__btn-white" style="background: #07172c; color: #ffffff;" id="zd-link">
-                VIEW MACHINERY <span class="editorial-hero__btn-arrow">→</span>
-              </a>
+            <div class="eng-circuit-box__spec">
+              <span>Zero Cross-Traffic Flow</span>
+              <span>Suited: 450–1,500+ m³/day</span>
             </div>
           </div>
 
         </div>
+
       </div>
     </section>
 
-    <!-- ============ SECTION 05 — PROCESS + MACHINE + LOCATION ============ -->
-    <section class="machinery-stage machinery-stage--alt" id="formula" style="padding: 6rem 1.5rem;">
-      <div class="machinery-stage__inner" style="max-width: 1140px;">
-        <div class="machinery-stage__header" style="text-align: center; margin-bottom: 3.5rem;">
-          <div class="academy-micro-label" style="justify-content: center; margin-bottom: 1rem;">THE SYSTEM FORMULA</div>
-          <h2 class="machinery-stage__title" style="text-align: center; max-width: 960px; margin: 0 auto 1.25rem auto; font-size: clamp(2.2rem, 3.8vw, 3.4rem); line-height: 1.25;">
-            PROCESS + MACHINE + LOCATION <br><span class="machinery-stage__title-light" style="color: var(--laxmi-blue, #0b3f78); opacity: 0.85;">= SYSTEM</span>
+    <!-- ============ 04. SECTION 03: 6 MASTER ZONING RULES ============ -->
+    <section class="eng-section eng-section--white" id="zoning">
+      <div class="eng-container">
+        
+        <div>
+          <span class="eng-eyebrow">03 · SITE PLANNING CRITERIA</span>
+          <h2 class="eng-title">
+            <span>6 master zoning rules.</span>
+            <span class="eng-title-light">Eliminating bottlenecks before civil construction.</span>
           </h2>
-          <p class="machinery-stage__desc" style="text-align: center; max-width: 780px; margin: 0 auto; font-size: 1.05rem;">
-            A production stage makes sense only when its process requirement, equipment and physical position work together as one synchronized unit.
+          <p class="eng-lead">
+            Precision factory master planning eliminates cross-traffic between raw material bulkers and block transport trucks while minimizing boiler heat loss and pipe routing.
           </p>
         </div>
 
-        <!-- 3 Architectural Editorial Columns -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; position: relative;">
+        <!-- 6 Contiguous Zoning Boxes (3 columns x 2 rows) -->
+        <div class="eng-circuit-grid eng-circuit-grid--3col">
           
-          <!-- Column 01 -->
-          <div style="background: #ffffff; border: 1px solid rgba(7,23,44,0.12); border-radius: 12px; padding: 2.25rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: space-between;">
-            <div>
-              <div style="margin-bottom: 1.25rem;">
-                <span style="display: inline-block; font-size: 0.75rem; font-weight: 900; color: #ffffff; background: #07172c; padding: 0.35rem 0.75rem; border-radius: 4px; letter-spacing: 0.1em;">01 · PROCESS</span>
-                <div style="font-size: 0.75rem; font-weight: 800; color: var(--laxmi-blue, #0b3f78); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 0.6rem;">WHAT HAPPENS?</div>
-              </div>
-              <h3 style="font-size: 1.45rem; font-weight: 900; color: #07172c; margin-bottom: 0.75rem;">Process Requirement</h3>
-              <p style="font-size: 0.98rem; line-height: 1.65; color: #2c4a7c; margin: 0;">
-                The specific chemical reaction, wet milling, slurry foaming, green cake rising, or wire cutting transformation occurring at that production phase.
+          <!-- Zone 01 -->
+          <div class="eng-circuit-box">
+            <div class="eng-circuit-box__top">
+              <span class="eng-circuit-box__num">ZONE 01 · RAW MATERIALS</span>
+              <h3 class="eng-circuit-box__title">Raw Material Silo Yard</h3>
+              <p class="eng-circuit-box__desc">
+                Locate fly ash, cement, and lime silos near the entrance gate for straightforward bulk-tanker turning radius (min 15m radius) and rapid pneumatic unloading.
               </p>
             </div>
-            <div style="margin-top: 1.75rem; padding-top: 1rem; border-top: 1px solid rgba(7,23,44,0.08); font-size: 0.82rem; font-weight: 700; color: #07172c;">
-              FOCUS: Material Transformation
+            <div class="eng-circuit-box__spec">
+              <span>Turning Radius: 15m Min</span>
+              <span>Direct Bulker Ingress</span>
             </div>
           </div>
 
-          <!-- Column 02 -->
-          <div style="background: #ffffff; border: 1px solid rgba(7,23,44,0.12); border-radius: 12px; padding: 2.25rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: space-between;">
-            <div>
-              <div style="margin-bottom: 1.25rem;">
-                <span style="display: inline-block; font-size: 0.75rem; font-weight: 900; color: #ffffff; background: #07172c; padding: 0.35rem 0.75rem; border-radius: 4px; letter-spacing: 0.1em;">02 · MACHINE</span>
-                <div style="font-size: 0.75rem; font-weight: 800; color: var(--laxmi-blue, #0b3f78); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 0.6rem;">WHAT PERFORMS IT?</div>
-              </div>
-              <h3 style="font-size: 1.45rem; font-weight: 900; color: #07172c; margin-bottom: 0.75rem;">Performing Equipment</h3>
-              <p style="font-size: 0.98rem; line-height: 1.65; color: #2c4a7c; margin: 0;">
-                The heavy ball mill, high-shear agitator, SCADA dosing tower, 3-stage wire cutter, or 12-bar steam pressure vessel executing the work.
+          <!-- Zone 02 -->
+          <div class="eng-circuit-box">
+            <div class="eng-circuit-box__top">
+              <span class="eng-circuit-box__num">ZONE 02 · BATCHING</span>
+              <h3 class="eng-circuit-box__title">Gravity Batching Tower</h3>
+              <p class="eng-circuit-box__desc">
+                Gravity-assisted vertical batching tower (18m–22m height) allows slurry, water, and dry materials to discharge directly into the mixer with minimal conveyor wear.
               </p>
             </div>
-            <div style="margin-top: 1.75rem; padding-top: 1rem; border-top: 1px solid rgba(7,23,44,0.08); font-size: 0.82rem; font-weight: 700; color: #07172c;">
-              FOCUS: Machinery Engineering
+            <div class="eng-circuit-box__spec">
+              <span>Elevation: 18m–22m</span>
+              <span>Gravity Slurry Feed</span>
             </div>
           </div>
 
-          <!-- Column 03 -->
-          <div style="background: #ffffff; border: 1px solid rgba(7,23,44,0.12); border-radius: 12px; padding: 2.25rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: space-between;">
-            <div>
-              <div style="margin-bottom: 1.25rem;">
-                <span style="display: inline-block; font-size: 0.75rem; font-weight: 900; color: #ffffff; background: #07172c; padding: 0.35rem 0.75rem; border-radius: 4px; letter-spacing: 0.1em;">03 · LOCATION</span>
-                <div style="font-size: 0.75rem; font-weight: 800; color: var(--laxmi-blue, #0b3f78); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 0.6rem;">WHERE IS IT?</div>
-              </div>
-              <h3 style="font-size: 1.45rem; font-weight: 900; color: #07172c; margin-bottom: 0.75rem;">Plant Spatial Position</h3>
-              <p style="font-size: 0.98rem; line-height: 1.65; color: #2c4a7c; margin: 0;">
-                The physical position of that equipment within the general arrangement drawing for minimal transport distance and continuous material flow.
+          <!-- Zone 03 -->
+          <div class="eng-circuit-box">
+            <div class="eng-circuit-box__top">
+              <span class="eng-circuit-box__num">ZONE 03 · THERMAL BAY</span>
+              <h3 class="eng-circuit-box__title">Pre-Curing Bay Insulation</h3>
+              <p class="eng-circuit-box__desc">
+                Pre-curing lines require insulated cladding to prevent seasonal temperature drops, maintaining 40–50°C for predictable rising kinetics and firm green cakes.
               </p>
             </div>
-            <div style="margin-top: 1.75rem; padding-top: 1rem; border-top: 1px solid rgba(7,23,44,0.08); font-size: 0.82rem; font-weight: 700; color: #07172c;">
-              FOCUS: Layout &amp; Logistics
+            <div class="eng-circuit-box__spec">
+              <span>Temp: 40–50°C Regulated</span>
+              <span>Insulated Enclosure</span>
+            </div>
+          </div>
+
+          <!-- Zone 04 -->
+          <div class="eng-circuit-box">
+            <div class="eng-circuit-box__top">
+              <span class="eng-circuit-box__num">ZONE 04 · STEAM UTILITY</span>
+              <h3 class="eng-circuit-box__title">Boiler House &amp; Fuel Yard</h3>
+              <p class="eng-circuit-box__desc">
+                Place the steam boiler centrally relative to autoclaves to minimize steam pipe runs (&lt;30m) and reduce thermal condensation loss, keeping fuel storage downwind.
+              </p>
+            </div>
+            <div class="eng-circuit-box__spec">
+              <span>Header Run: &lt;30m</span>
+              <span>Downwind Fuel Yard</span>
+            </div>
+          </div>
+
+          <!-- Zone 05 -->
+          <div class="eng-circuit-box">
+            <div class="eng-circuit-box__top">
+              <span class="eng-circuit-box__num">ZONE 05 · LOGISTICS</span>
+              <h3 class="eng-circuit-box__title">Finished Goods Stockyard</h3>
+              <p class="eng-circuit-box__desc">
+                Paved block curing yard sized for 10–15 days of production storage with wide driveways (min 8m) for forklift loading and simultaneous 10-wheel truck loading.
+              </p>
+            </div>
+            <div class="eng-circuit-box__spec">
+              <span>Storage: 10–15 Days Yield</span>
+              <span>8m Forklift Lanes</span>
+            </div>
+          </div>
+
+          <!-- Zone 06 -->
+          <div class="eng-circuit-box">
+            <div class="eng-circuit-box__top">
+              <span class="eng-circuit-box__num">ZONE 06 · EXPANSION</span>
+              <h3 class="eng-circuit-box__title">Phase-2 Expansion Reserve</h3>
+              <p class="eng-circuit-box__desc">
+                Earmark dedicated parallel foundation space for future autoclaves, ball mills, and curing tracks so plant capacity can double without halting existing operations.
+              </p>
+            </div>
+            <div class="eng-circuit-box__spec">
+              <span>2x Scale Capacity</span>
+              <span>Zero-Downtime Tie-in</span>
             </div>
           </div>
 
         </div>
 
-        <p class="academy-seq-caption" style="margin-top: 2.5rem; text-align: center; font-weight: 700; font-size: 1rem; color: #07172c;">
-          Every production stage connects process understanding with equipment and plant position.
-        </p>
+      </div>
+    </section>
 
-        <div style="margin-top: 2rem; display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
-          <a href="machinery-equipment.html" class="editorial-hero__btn-white" style="background: #07172c; color: #ffffff;">
-            EXPLORE MACHINERY <span class="editorial-hero__btn-arrow">→</span>
+    <!-- ============ 05. SECTION 04: CAD CONSULTATION BANNER ============ -->
+    <section class="eng-section eng-section--light" id="consultation">
+      <div class="eng-container">
+        
+        <div class="eng-alc-banner">
+          <div class="eng-alc-banner__left">
+            <span class="eng-eyebrow" style="color:#56b4f5;">04 · CIVIL &amp; CAD SERVICES</span>
+            <h2 class="eng-alc-banner__title">
+              <span>Have a surveyed land</span>
+              <span style="color:#93c5fd;">plot drawing or coordinates?</span>
+            </h2>
+            <p class="eng-alc-banner__lead">
+              Send us your land survey, boundary dimensions, and road frontage details. Laxmi En-Fab layout engineers will produce a complete 2D/3D plant layout simulation.
+            </p>
+            <div class="eng-alc-features">
+              <div class="eng-alc-feature">
+                <strong>01. Truck Traffic &amp; Turning Simulation</strong>
+                <p>Ensures bulk raw material tankers, biomass fuel trailers, and dispatch trucks move without gridlock.</p>
+              </div>
+              <div class="eng-alc-feature">
+                <strong>02. Rail Track &amp; Ferry Car Cycle Balancing</strong>
+                <p>Calculates exact shunting crane speeds and ferry car transfer cycles for zero cake queueing.</p>
+              </div>
+              <div class="eng-alc-feature">
+                <strong>03. Foundation &amp; Civil Load Schedule</strong>
+                <p>Pre-engineered foundation dynamic loads for ball mills, batching towers, and autoclave anchor points.</p>
+              </div>
+            </div>
+          </div>
+          <div class="eng-alc-banner__right">
+            <div class="eng-alc-stat-card">
+              <div class="eng-alc-stat-num">48 Hours</div>
+              <div class="eng-alc-stat-label">Preliminary CAD Layout Turnaround</div>
+            </div>
+            <div class="eng-alc-stat-card">
+              <div class="eng-alc-stat-num">30% Less</div>
+              <div class="eng-alc-stat-label">Internal Rail Shunting Capex</div>
+            </div>
+            <div class="eng-alc-stat-card">
+              <div class="eng-alc-stat-num">100%</div>
+              <div class="eng-alc-stat-label">Phase-2 Expansion Future-Proofing</div>
+            </div>
+            <div class="eng-alc-stat-card">
+              <div class="eng-alc-stat-num">0 Cost</div>
+              <div class="eng-alc-stat-label">Initial Site Review for Qualified Projects</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ 06. CHAPTER NAVIGATION & EDITORIAL CTA ============ -->
+    <section class="eng-chapter-nav-section">
+      <div class="eng-container">
+        <div class="eng-chapter-nav">
+          <a href="production-process.html" class="eng-chapter-nav__btn eng-chapter-nav__btn--prev">
+            <span class="eng-chapter-nav__sub">← PREVIOUS CHAPTER</span>
+            <span class="eng-chapter-nav__title">AAC Block &amp; Panel Production Process</span>
           </a>
-          <a href="engineering-center.html" class="editorial-hero__btn-white" style="background: transparent; color: #07172c; border: 1px solid #07172c;">
-            EXPLORE ENGINEERING CENTER <span class="editorial-hero__btn-arrow">→</span>
+          <a href="capacity-selection.html" class="eng-chapter-nav__btn eng-chapter-nav__btn--next">
+            <span class="eng-chapter-nav__sub">NEXT CHAPTER →</span>
+            <span class="eng-chapter-nav__title">Batch Sizing &amp; Capacity Selection</span>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- ============ SECTION 06 — FROM ENGINEERING TO EXECUTION ============ -->
-    <section class="machinery-stage" id="execution">
-      <div class="machinery-stage__inner">
-        <div class="machinery-stage__header">
-          <h2 class="machinery-stage__title">
-            A plant is more than <br><span class="machinery-stage__title-light">a collection of machines.</span>
-          </h2>
-          <p class="machinery-stage__desc">
-            It is a coordinated system where process requirements, plant layout, equipment and execution have to work together.
-          </p>
-
-          <!-- Thin engineering sequence -->
-          <div class="academy-seq-bar" style="margin-top: 2.5rem; max-width: 960px;">
-            <div class="academy-seq-item"><span class="academy-seq-num">01</span> PLANNING</div>
-            <div class="academy-seq-line"></div>
-            <div class="academy-seq-item"><span class="academy-seq-num">02</span> LAYOUT</div>
-            <div class="academy-seq-line"></div>
-            <div class="academy-seq-item"><span class="academy-seq-num">03</span> EQUIPMENT</div>
-            <div class="academy-seq-line"></div>
-            <div class="academy-seq-item"><span class="academy-seq-num">04</span> INSTALLATION</div>
-            <div class="academy-seq-line"></div>
-            <div class="academy-seq-item"><span class="academy-seq-num">05</span> COMMISSIONING</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ SECTION 07 — RELATED ENGINEERING PATHS ============ -->
-    <section class="machinery-stage machinery-stage--alt" id="paths">
-      <div class="machinery-stage__inner">
-        <div class="machinery-stage__header">
-          <h2 class="machinery-stage__title">
-            Go deeper <br><span class="machinery-stage__title-light">into the system.</span>
-          </h2>
-        </div>
-
-        <div class="academy-research-list">
-          
-          <a href="engineering-center.html" class="academy-research-row">
-            <span class="academy-research-num">01</span>
-            <span class="academy-research-title">AAC PRODUCTION PROCESS</span>
-            <span class="academy-research-desc">Understand the stages behind the plant.</span>
-            <span class="academy-research-arrow">→</span>
-          </a>
-
-          <a href="machinery-equipment.html" class="academy-research-row">
-            <span class="academy-research-num">02</span>
-            <span class="academy-research-title">MACHINERY &amp; EQUIPMENT</span>
-            <span class="academy-research-desc">See the equipment connected to each stage.</span>
-            <span class="academy-research-arrow">→</span>
-          </a>
-
-          <a href="solutions.html" class="academy-research-row">
-            <span class="academy-research-num">03</span>
-            <span class="academy-research-title">AAC SOLUTIONS</span>
-            <span class="academy-research-desc">See complete plant solutions and applications.</span>
-            <span class="academy-research-arrow">→</span>
-          </a>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ SECTION 08 — FINAL CTA ============ -->
-    <section class="machinery-cta" id="cta">
-      <div class="machinery-hero__blueprint" aria-hidden="true">
-        <svg class="editorial-hero__grid-svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-          <line x1="200" y1="0" x2="200" y2="900" stroke="rgba(255,255,255,0.06)" stroke-width="0.5"/>
-          <line x1="720" y1="0" x2="720" y2="900" stroke="rgba(255,255,255,0.06)" stroke-width="0.5"/>
-          <line x1="1240" y1="0" x2="1240" y2="900" stroke="rgba(255,255,255,0.06)" stroke-width="0.5"/>
-        </svg>
-      </div>
-      <div class="machinery-cta__inner">
-        <h2 class="machinery-cta__title">
-          Ready to explore <br><span class="machinery-cta__title-light">the complete system?</span>
+    <!-- Final Conversion Banner -->
+    <section class="eng-cta-banner" id="cta">
+      <div class="eng-cta-banner__inner">
+        <span class="eng-cta-banner__eyebrow">FACTORY MASTER PLANNING</span>
+        <h2 class="eng-cta-banner__title">
+          <span>Start your factory master planning</span>
+          <span class="eng-cta-banner__title-light">with certified AAC plant engineers.</span>
         </h2>
-        <p class="machinery-cta__sub">
-          Move from plant layout to process, machinery and engineering with Laxmi En-Fab.
+        <p class="eng-cta-banner__lead">
+          Avoid costly civil design mistakes. Let Laxmi En-Fab engineers review your soil survey, topography, and road access before finalizing your plant boundaries and machinery foundations.
         </p>
-        <div class="machinery-cta__action">
-          <a href="engineering-center.html" class="editorial-hero__btn-white">
-            EXPLORE ENGINEERING CENTER <span class="editorial-hero__btn-arrow">→</span>
+        <div class="eng-cta-banner__actions">
+          <a href="contact.html" class="eng-cta-banner__btn-white">
+            <span>Request CAD Layout Review</span>
+            <span class="eng-cta-banner__btn-arrow">↗</span>
           </a>
-          <a href="contact.html" class="editorial-hero__link-text">
-            CONTACT LAXMI <span class="editorial-hero__btn-arrow">↗</span>
+          <a href="#overview" class="eng-cta-banner__link-top">
+            <span>Return to top ↑</span>
           </a>
-        </div>
-        <div style="display: flex; gap: 0.75rem; justify-content: center; margin-top: 2.5rem; flex-wrap: wrap;">
-          <span style="background: rgba(255,255,255,0.08); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; color: rgba(255,255,255,0.75);">PLANT</span>
-          <span style="background: rgba(255,255,255,0.08); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; color: rgba(255,255,255,0.75);">PROCESS</span>
-          <span style="background: rgba(255,255,255,0.08); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; color: rgba(255,255,255,0.75);">MACHINERY</span>
-          <span style="background: rgba(255,255,255,0.08); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; color: rgba(255,255,255,0.75);">ENGINEERING</span>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- Dynamic Footer Injection Placeholder -->
+  <!-- Shared Global Footer Injection -->
   <div id="site-footer"></div>
 
   <script src="js/main.js"></script>
   <script src="js/navigation.js"></script>
   <script src="js/animations.js"></script>
   <script src="js/components.js"></script>
-
-  <!-- Interactive Layout & Zone Controller Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Zone Content Data Source
-      const zoneData = {
-        raw: {
-          num: 'STAGE 01',
-          title: 'RAW MATERIAL PREPARATION',
-          happens: 'Incoming fly ash or silica sand is milled with water in heavy ball mills to produce a fine, homogeneous slurry of uniform density.',
-          equipment: 'Wet Ball Mill & Slurry Storage Tanks',
-          position: 'Front-end material yard adjacent to raw material hoppers and slurry storage tanks.',
-          link: 'machinery-equipment.html#material'
-        },
-        slurry: {
-          num: 'STAGE 02',
-          title: 'SLURRY PREPARATION',
-          happens: 'Fly ash slurry is continuously agitated in vertical storage tanks to prevent particle sedimentation before pumping to the batching tower.',
-          equipment: 'Slurry Storage Tanks & High-Shear Agitators',
-          position: 'Slurry tank farm positioned between milling unit and batching tower.',
-          link: 'machinery-equipment.html#material'
-        },
-        batch: {
-          num: 'STAGE 03',
-          title: 'BATCHING & DOSING TOWER',
-          happens: 'PLC-controlled SCADA dosing scales meter precise weights of slurry, cement, lime, gypsum, and aluminum powder slurry.',
-          equipment: 'Automated Batching Unit & SCADA Weighing Scales',
-          position: 'Multi-level vertical batching tower positioned above the pouring mixer.',
-          link: 'machinery-equipment.html#batching'
-        },
-        pour: {
-          num: 'STAGE 04',
-          title: 'POURING & MOULDING',
-          happens: 'The measured slurry mix is poured into precision oil-sealed steel mould boxes. Aluminum powder reacts with lime to produce hydrogen micro-bubbles.',
-          equipment: 'High-Speed Pouring Mixer & Mould Boxes',
-          position: 'Pouring bay at the base of the batching tower.',
-          link: 'machinery-equipment.html#batching'
-        },
-        precuring: {
-          num: 'STAGE 05',
-          title: 'PRECURING RISING TUNNEL',
-          happens: 'Mould boxes enter temperature-controlled precuring tunnels (40–50°C) for 2 to 3 hours as the green cake expands and reaches cutting strength.',
-          equipment: 'Precuring Fermentation Tunnels & Heating System',
-          position: 'Enclosed rising chamber section connecting moulding bay to cutting line.',
-          link: 'machinery-equipment.html#batching'
-        },
-        cut: {
-          num: 'STAGE 06',
-          title: '3-STAGE WIRE CUTTING LINE',
-          happens: 'Demoulded green cake is tilted 90° and passes through high-speed oscillating wire cutters for horizontal, vertical, and cross cuts with ±1mm accuracy.',
-          equipment: 'Advanced Three-Stage & Vertical Wire Cutter',
-          position: 'Central cutting shop between precuring tunnel and autoclave bed.',
-          link: 'machinery-equipment.html#cutting'
-        },
-        auto: {
-          num: 'STAGE 07',
-          title: 'AUTOCLAVING STEAM BAY',
-          happens: 'Cut blocks are loaded into ASME-certified pressure vessels for 10-12 hours of hydrothermal curing under 12 bar saturated steam (190°C).',
-          equipment: 'Heavy Industrial Autoclave Vessels & Boiler System',
-          position: 'Autoclave bay with parallel rail tracks and steam manifold distribution.',
-          link: 'machinery-equipment.html#autoclave'
-        },
-        pack: {
-          num: 'STAGE 08',
-          title: 'PACKING & DISPATCH YARD',
-          happens: 'Cured AAC blocks are separated, automatically stacked onto wooden pallets, and wrapped in heavy plastic film for dispatch.',
-          equipment: 'Automatic Separator, Palletizer & Strapping Line',
-          position: 'End of line discharge area leading into open finished goods yard.',
-          link: 'machinery-equipment.html#autoclave'
-        }
-      };
-
-      // Zoom & Pan Variables
-      let scale = 1;
-      let panX = 0;
-      let panY = 0;
-      let isDragging = false;
-      let startX = 0;
-      let startY = 0;
-
-      const viewport = document.getElementById('layout-viewport');
-      const canvas = document.getElementById('layout-canvas');
-      const zoomInBtn = document.getElementById('zoom-in-btn');
-      const zoomOutBtn = document.getElementById('zoom-out-btn');
-      const zoomResetBtn = document.getElementById('zoom-reset-btn');
-
-      function updateTransform() {
-        canvas.style.transform = `translate(${panX}px, ${panY}px) scale(${scale})`;
-        const zoomText = document.getElementById('zoom-level-text');
-        if (zoomText) {
-          zoomText.textContent = `ZOOM: ${Math.round(scale * 100)}%`;
-        }
-      }
-
-      if (zoomInBtn && zoomOutBtn && zoomResetBtn && viewport) {
-        zoomInBtn.addEventListener('click', function() {
-          scale = Math.min(scale + 0.2, 2.5);
-          updateTransform();
-        });
-
-        zoomOutBtn.addEventListener('click', function() {
-          scale = Math.max(scale - 0.2, 0.8);
-          updateTransform();
-        });
-
-        zoomResetBtn.addEventListener('click', function() {
-          scale = 1;
-          panX = 0;
-          panY = 0;
-          updateTransform();
-        });
-
-        viewport.addEventListener('mousedown', function(e) {
-          isDragging = true;
-          startX = e.clientX - panX;
-          startY = e.clientY - panY;
-        });
-
-        window.addEventListener('mousemove', function(e) {
-          if (!isDragging) return;
-          panX = e.clientX - startX;
-          panY = e.clientY - startY;
-          updateTransform();
-        });
-
-        window.addEventListener('mouseup', function() {
-          isDragging = false;
-        });
-      }
-
-      // Zone Selection Controller
-      const zoneSelectBtns = document.querySelectorAll('.zone-select-btn');
-      const filterBtns = document.querySelectorAll('.layout-filter-btn');
-      const hotspots = document.querySelectorAll('.layout-hotspot');
-
-      function activateZone(zoneId) {
-        const data = zoneData[zoneId];
-        if (!data) return;
-
-        // Update Zone Detail Panel
-        document.getElementById('zd-stage-num').textContent = data.num;
-        document.getElementById('zd-title').textContent = data.title;
-        document.getElementById('zd-happens').textContent = data.happens;
-        document.getElementById('zd-equipment').textContent = data.equipment;
-        document.getElementById('zd-position').textContent = data.position;
-        document.getElementById('zd-link').setAttribute('href', data.link);
-
-        const statusLabel = document.getElementById('layout-status-label');
-        if (statusLabel) {
-          statusLabel.textContent = `ACTIVE ZONE: ${data.num} · ${data.title}`;
-        }
-
-        // Active State on Zone Selection Buttons
-        zoneSelectBtns.forEach(btn => {
-          if (btn.getAttribute('data-zone-id') === zoneId) {
-            btn.classList.add('is-active');
-          } else {
-            btn.classList.remove('is-active');
-          }
-        });
-
-        // Active State on Hotspots
-        hotspots.forEach(spot => {
-          if (spot.getAttribute('data-zone') === zoneId) {
-            spot.classList.add('is-active');
-          } else {
-            spot.classList.remove('is-active');
-          }
-        });
-      }
-
-      // Button Click Listeners
-      zoneSelectBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-          const zoneId = this.getAttribute('data-zone-id');
-          activateZone(zoneId);
-        });
-      });
-
-      // Hotspot Click Listeners
-      hotspots.forEach(spot => {
-        spot.addEventListener('click', function() {
-          const zoneId = this.getAttribute('data-zone');
-          activateZone(zoneId);
-          // Scroll smoothly to detail panel if needed
-          document.getElementById('zones').scrollIntoView({ behavior: 'smooth' });
-        });
-      });
-
-      // Filter Buttons Click Listeners
-      filterBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-          filterBtns.forEach(b => b.classList.remove('is-active'));
-          this.classList.add('is-active');
-          const filter = this.getAttribute('data-filter');
-
-          if (filter === 'all') {
-            hotspots.forEach(h => h.style.display = 'flex');
-          } else {
-            hotspots.forEach(h => {
-              if (h.getAttribute('data-zone') === filter) {
-                h.style.display = 'flex';
-                activateZone(filter);
-              } else {
-                h.style.display = 'none';
-              }
-            });
-          }
-        });
-      });
-
-    });
-  </script>
 </body>
 </html>

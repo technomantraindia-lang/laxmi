@@ -1,27 +1,517 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AAC Production Process - Laxmi En-Fab Pvt. Ltd. Build your AAC plant with confidence.">
-    <title>AAC Production Process | Laxmi En-Fab Pvt. Ltd.</title>
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/responsive.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AAC Block & Panel Production Process Guide by Laxmi En-Fab Pvt. Ltd. Complete 8-stage manufacturing workflow, chemical stoichiometry, autoclave curing cycles, and QC protocols." />
+  <meta name="keywords" content="AAC production process, AAC block manufacturing, AAC panel production, autoclave curing, tobermorite synthesis, slurry density, wire cutting system, Laxmi En-Fab" />
+  <title>AAC Block &amp; Panel Production Process | Technical Guide | Laxmi En-Fab</title>
+  
+  <!-- Google Fonts: Geist & Geist Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/homepage.css" />
+  <link rel="stylesheet" href="css/engineering.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AAC Block & Panel Production Process Guide",
+    "description": "Step-by-step manufacturing process, chemical reaction mechanisms, and quality parameters for AAC block and reinforced panel production.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Laxmi En-Fab Pvt. Ltd."
+    }
+  }
+  </script>
 </head>
-<body>
-    <!-- Header component will be included here -->
+<body class="engineering-inner-page">
 
-    <main>
-        <!-- Page content goes here -->
-    </main>
+  <!-- Shared Header -->
+  <div id="site-header"></div>
 
-    <!-- Footer component will be included here -->
+  <!-- Breadcrumb Navigation -->
+  <nav class="site-breadcrumb" aria-label="Breadcrumb">
+    <div class="site-breadcrumb__inner">
+      <a href="index.html">Home</a>
+      <span class="bc-sep">/</span>
+      <a href="engineering-center.html">AAC Engineering Center</a>
+      <span class="bc-sep">/</span>
+      <span class="bc-current">AAC Block &amp; Panel Production Process</span>
+    </div>
+  </nav>
 
-    <script src="js/main.js" defer></script>
-    <script src="js/navigation.js" defer></script>
-    <script src="js/animations.js" defer></script>
-    <script src="js/components.js" defer></script>
+  <!-- Sticky In-Page Sub-Navigation Strip -->
+  <nav class="eng-nav-strip" aria-label="Process Navigation">
+    <div class="eng-nav-strip__inner">
+      <a href="#overview" class="eng-nav-btn active"><span class="eng-nav-num">01</span> Overview</a>
+      <a href="#formulation" class="eng-nav-btn"><span class="eng-nav-num">02</span> Formulation &amp; Chemistry</a>
+      <a href="#circuit" class="eng-nav-btn"><span class="eng-nav-num">03</span> 8-Stage Manufacturing</a>
+      <a href="#panels" class="eng-nav-btn"><span class="eng-nav-num">04</span> Reinforced ALC Panels</a>
+      <a href="#quality" class="eng-nav-btn"><span class="eng-nav-num">05</span> In-Line QC Matrix</a>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- ============ 01. HERO SECTION (EDITORIAL FULL SCREEN IMAGE BACKGROUND) ============ -->
+    <section class="editorial-hero editorial-hero--light is-loaded" id="overview" aria-label="AAC Production Process Overview">
+      <div class="editorial-hero__media" aria-hidden="true">
+        <div class="editorial-hero__video-wrap">
+          <img
+            class="editorial-hero__poster"
+            src="assets/images/production-process.png"
+            alt="AAC Block Production Flow and 3D Plant Model"
+            fetchpriority="high"
+          />
+        </div>
+        <div class="editorial-hero__overlay"></div>
+      </div>
+
+      <div class="editorial-hero__inner">
+        <div class="editorial-hero__content">
+          <span class="editorial-hero__eyebrow">PILLAR 01 · TECHNICAL MANUFACTURING GUIDE</span>
+          <h1 class="editorial-hero__title">
+            <span>AAC Block &amp; Panel</span>
+            <span class="editorial-hero__title-light">Production Process.</span>
+          </h1>
+          <p class="editorial-hero__sub">
+            A step-by-step technical blueprint detailing automated raw material milling, stoichiometric chemical aeration, 2-axis oscillation wire cutting, and high-pressure hydrothermal Tobermorite synthesis.
+          </p>
+
+          <div class="eng-hero__stats">
+            <div class="eng-stat-item">
+              <div class="eng-stat-item__val">12–14 <span>bar</span></div>
+              <div class="eng-stat-item__lbl">Autoclave Pressure</div>
+            </div>
+            <div class="eng-stat-item">
+              <div class="eng-stat-item__val">190 <span>°C</span></div>
+              <div class="eng-stat-item__lbl">Saturated Steam Temp</div>
+            </div>
+            <div class="eng-stat-item">
+              <div class="eng-stat-item__val">±1.0 <span>mm</span></div>
+              <div class="eng-stat-item__lbl">Wire Tolerance</div>
+            </div>
+            <div class="eng-stat-item">
+              <div class="eng-stat-item__val">100 <span>%</span></div>
+              <div class="eng-stat-item__lbl">Slurry Cake Recovery</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 02. SECTION 01: RAW MATERIAL FORMULATION & MATRIX ============ -->
+    <section class="eng-section eng-section--white" id="formulation">
+      <div class="eng-container">
+        
+        <div>
+          <span class="eng-eyebrow">01 · FORMULATION &amp; STOICHIOMETRY</span>
+          <h2 class="eng-title">
+            <span>Raw material chemistry.</span>
+            <span class="eng-title-light">Calculated for permanent crystalline strength.</span>
+          </h2>
+          <p class="eng-lead">
+            Autoclaved Aerated Concrete transforms reactive silica and calcium hydroxide in an alkaline aerated matrix. Precision mass batching determines volume expansion, pore distribution, and 28-day compressive strength.
+          </p>
+        </div>
+
+        <!-- Technical Raw Materials Matrix Table -->
+        <div class="eng-matrix-table-wrap">
+          <table class="eng-matrix-table">
+            <thead>
+              <tr>
+                <th>Raw Material</th>
+                <th>Principal Function</th>
+                <th>Standard Proportion (% dry wt)</th>
+                <th>Key Quality Control Metric</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="eng-material-cell">
+                    <span class="eng-material-name">Fly Ash / Sand Slurry</span>
+                    <span class="eng-material-formula">Source of Reactive SiO₂</span>
+                  </div>
+                </td>
+                <td>Source of reactive silica (SiO₂) for hydrothermal Tobermorite synthesis</td>
+                <td><span class="eng-prop-badge">65% – 70%</span></td>
+                <td><span class="eng-qc-tag">Fineness &lt;15% on 45µm · Sp. Gr 1.62–1.68</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="eng-material-cell">
+                    <span class="eng-material-name">Quicklime (CaO)</span>
+                    <span class="eng-material-formula">High-Calcium Reactive Lime</span>
+                  </div>
+                </td>
+                <td>Supplies active calcium and generates exothermic hydration heat (65–75°C)</td>
+                <td><span class="eng-prop-badge">15% – 20%</span></td>
+                <td><span class="eng-qc-tag">Active CaO &gt; 75% · Slaking time 8–15 min</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="eng-material-cell">
+                    <span class="eng-material-name">Ordinary Portland Cement</span>
+                    <span class="eng-material-formula">OPC 53 / 43 Grade</span>
+                  </div>
+                </td>
+                <td>Provides initial setting green-strength and structural matrix binding</td>
+                <td><span class="eng-prop-badge">10% – 12%</span></td>
+                <td><span class="eng-qc-tag">IS 12269 / IS 8112 Conformance</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="eng-material-cell">
+                    <span class="eng-material-name">Gypsum / Anhydrite</span>
+                    <span class="eng-material-formula">CaSO₄ · 2H₂O</span>
+                  </div>
+                </td>
+                <td>Regulates lime slaking kinetics and prevents premature bubble collapse</td>
+                <td><span class="eng-prop-badge">2% – 4%</span></td>
+                <td><span class="eng-qc-tag">CaSO₄·2H₂O &gt; 85% purity</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="eng-material-cell">
+                    <span class="eng-material-name">Aluminium Powder / Paste</span>
+                    <span class="eng-material-formula">Water-Dispersible Pore Agent</span>
+                  </div>
+                </td>
+                <td>Generates microscopic hydrogen bubbles (d = 0.5–1.5 mm), doubling cake volume</td>
+                <td><span class="eng-prop-badge">0.05% – 0.08%</span></td>
+                <td><span class="eng-qc-tag">Active Al &gt; 88% · Controlled gas rate</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Chemical Synthesis Banner Cards -->
+        <div class="eng-chem-grid">
+          <div class="eng-chem-card">
+            <div class="eng-chem-card__badge">REACTION 01 · AERATION FOAMING</div>
+            <h3 class="eng-chem-card__title">Hydrogen Micro-Pore Expansion</h3>
+            <div class="eng-chem-card__formula">
+              <code>2Al + 3Ca(OH)₂ + 6H₂O → 3CaO·Al₂O₃·6H₂O + 3H₂ ↑</code>
+            </div>
+            <p class="eng-chem-card__desc">
+              Aluminium reacts with calcium hydroxide in the alkaline slurry, generating billions of evenly dispersed spherical hydrogen bubbles that double the green cake's volume within 25–35 minutes.
+            </p>
+          </div>
+
+          <div class="eng-chem-card eng-chem-card--highlight">
+            <div class="eng-chem-card__badge">REACTION 02 · HYDROTHERMAL SYNTHESIS</div>
+            <h3 class="eng-chem-card__title">Crystalline Tobermorite Formation</h3>
+            <div class="eng-chem-card__formula">
+              <code>5Ca(OH)₂ + 6SiO₂ ──(190°C, 13 bar)──&gt; 5CaO·6SiO₂·5H₂O</code>
+            </div>
+            <p class="eng-chem-card__desc">
+              Under 12–14 bar saturated steam pressure at 190°C, reactive silica and calcium hydroxide synthesize into permanent, needle-like Tobermorite (11Å) crystals, giving AAC zero residual shrinkage and high load capacity.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ 03. SECTION 02: 8-STAGE MANUFACTURING CIRCUIT ============ -->
+    <section class="eng-section eng-section--light" id="circuit">
+      <div class="eng-container">
+        
+        <div>
+          <span class="eng-eyebrow">02 · MANUFACTURING SEQUENCE</span>
+          <h2 class="eng-title">
+            <span>The 8 synchronized stages.</span>
+            <span class="eng-title-light">Continuous high-volume production.</span>
+          </h2>
+          <p class="eng-lead">
+            Every station in the Laxmi En-Fab production line is engineered for precise cycle synchronization, zero line bottlenecking, and 100% material recycling.
+          </p>
+        </div>
+
+        <!-- 8 Contiguous Process Station Boxes -->
+        <div class="eng-circuit-grid">
+          
+          <!-- Station 01 -->
+          <div class="eng-circuit-box">
+            <div class="eng-circuit-box__top">
+              <span class="eng-circuit-box__num">STAGE 01 · MILLING</span>
+              <h3 class="eng-circuit-box__title">Raw Material Milling &amp; Slurry Storage</h3>
+              <p class="eng-circuit-box__desc">
+                Fly ash or quartz sand is wet-milled in a continuous ball mill to &lt;15% residue on a 45µm sieve. Slurry is stored in mechanical agitation tanks at 1.62–1.68 kg/L specific gravity.
+              </p>
+            </div>
+            <div class="eng-circuit-box__spec">
+              <span>Fineness: &lt;15% / 45µm</span>
+              <span>Density: 1.65 kg/L</span>
+            </div>
+          </div>
+
+          <!-- Station 02 -->
+          <div class="eng-circuit-box">
+            <div class="eng-circuit-box__top">
+              <span class="eng-circuit-box__num">STAGE 02 · BATCHING</span>
+              <h3 class="eng-circuit-box__title">Precision Electronic Load-Cell Weighing</h3>
+              <p class="eng-circuit-box__desc">
+                Pneumatic feeding gates transfer cement, quicklime, and gypsum into digital load-cell weighing hoppers with ±0.5% precision. Slurry is dosed via automated electromagnetic mass meters.
+              </p>
+            </div>
+            <div class="eng-circuit-box__spec">
+              <span>Accuracy: ±0.5%</span>
+              <span>SCADA Auto Dosing</span>
+            </div>
+          </div>
+
+          <!-- Station 03 -->
+          <div class="eng-circuit-box">
+            <div class="eng-circuit-box__top">
+              <span class="eng-circuit-box__num">STAGE 03 · MIXING</span>
+              <h3 class="eng-circuit-box__title">High-Shear Mixing &amp; Mould Pouring</h3>
+              <p class="eng-circuit-box__desc">
+                Constituents undergo intense hydrodynamic high-shear blending. Aluminium suspension is dosed in the final 30 seconds before automated pneumatic pouring into oiled mould boxes.
+              </p>
+            </div>
+            <div class="eng-circuit-box__spec">
+              <span>Cycle Time: 3.5–4.0 min</span>
+              <span>High-Shear Impeller</span>
+            </div>
+          </div>
+
+          <!-- Station 04 -->
+          <div class="eng-circuit-box">
+            <div class="eng-circuit-box__top">
+              <span class="eng-circuit-box__num">STAGE 04 · PRE-CURING</span>
+              <h3 class="eng-circuit-box__title">Hydrogen Rising &amp; Static Pre-Curing</h3>
+              <p class="eng-circuit-box__desc">
+                Moulds circulate through climate-controlled pre-curing tunnels (40–50°C). The cake rises 2x and reaches 0.15–0.25 MPa green cutting strength in 120–180 minutes.
+              </p>
+            </div>
+            <div class="eng-circuit-box__spec">
+              <span>Tunnel Temp: 40–50°C</span>
+              <span>Firmness: 0.20 MPa</span>
+            </div>
+          </div>
+
+          <!-- Station 05 -->
+          <div class="eng-circuit-box">
+            <div class="eng-circuit-box__top">
+              <span class="eng-circuit-box__num">STAGE 05 · TILTING</span>
+              <h3 class="eng-circuit-box__title">90° Hydraulic Tilting &amp; Demoulding</h3>
+              <p class="eng-circuit-box__desc">
+                A hydraulic tilting crane fixture clamps the side plate, smoothly rotates the green cake 90° upright, and strips the mould body away with zero vibration or edge crack stress.
+              </p>
+            </div>
+            <div class="eng-circuit-box__spec">
+              <span>Rotation: 90° Vertical</span>
+              <span>Zero Edge Impact</span>
+            </div>
+          </div>
+
+          <!-- Station 06 -->
+          <div class="eng-circuit-box">
+            <div class="eng-circuit-box__top">
+              <span class="eng-circuit-box__num">STAGE 06 · CUTTING</span>
+              <h3 class="eng-circuit-box__title">2-Axis High-Precision Wire Cutting</h3>
+              <p class="eng-circuit-box__desc">
+                Oscillating horizontal steel wires slice accurate block heights, followed by vertical cross-cutting with ±1.0mm tolerance. Top crusts are trimmed and 100% recycled into slurry.
+              </p>
+            </div>
+            <div class="eng-circuit-box__spec">
+              <span>Tolerance: ±1.0 mm</span>
+              <span>100% Waste Recycled</span>
+            </div>
+          </div>
+
+          <!-- Station 07 -->
+          <div class="eng-circuit-box">
+            <div class="eng-circuit-box__top">
+              <span class="eng-circuit-box__num">STAGE 07 · AUTOCLAVING</span>
+              <h3 class="eng-circuit-box__title">High-Pressure Hydrothermal Curing</h3>
+              <p class="eng-circuit-box__desc">
+                Cakes cure in cylindrical autoclaves under 12–14 bar saturated steam pressure at 190°C for 10–12 hours. Computerized curves regulate vacuum, ramping, soaking, and blowdown.
+              </p>
+            </div>
+            <div class="eng-circuit-box__spec">
+              <span>Pressure: 12–14 bar</span>
+              <span>Temp: 190°C (Saturated)</span>
+            </div>
+          </div>
+
+          <!-- Station 08 -->
+          <div class="eng-circuit-box">
+            <div class="eng-circuit-box__top">
+              <span class="eng-circuit-box__num">STAGE 08 · PACKAGING</span>
+              <h3 class="eng-circuit-box__title">Auto Palletizing &amp; Film Strapping</h3>
+              <p class="eng-circuit-box__desc">
+                Hydraulic separating clamps de-stick cake layers, robotically stack cubes on wooden pallets, and transfer them onto automated protective stretch-wrapping and strapping lines.
+              </p>
+            </div>
+            <div class="eng-circuit-box__spec">
+              <span>Cube De-Sticking Clamp</span>
+              <span>Auto Film Wrapping</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ 04. SECTION 03: REINFORCED AAC PANELS (ALC) ============ -->
+    <section class="eng-section eng-section--white" id="panels">
+      <div class="eng-container">
+        
+        <div class="eng-alc-banner">
+          <div class="eng-alc-banner__left">
+            <span class="eng-eyebrow" style="color:#56b4f5;">03 · VALUE-ADDED ENGINEERING</span>
+            <h2 class="eng-alc-banner__title">
+              <span>Specialized Operations for</span>
+              <span style="color:#93c5fd;">Reinforced ALC Panels.</span>
+            </h2>
+            <p class="eng-alc-banner__lead">
+              Manufacturing load-bearing reinforced AAC wall, floor, and roof panels requires integrated steel reinforcement processing integrated directly into the mould line.
+            </p>
+            <div class="eng-alc-features">
+              <div class="eng-alc-feature">
+                <strong>01. Anti-Corrosion Polymer Coating</strong>
+                <p>Spot-welded steel rebar mesh cages (B500A grade) are dual-dipped in anti-corrosion latex dip and oven-cured before insertion.</p>
+              </div>
+              <div class="eng-alc-feature">
+                <strong>02. Hydraulic Pin Suspension Fixture</strong>
+                <p>Mesh cages are precision-suspended inside mould boxes using robotic cross-beams and alignment pins prior to slurry pouring.</p>
+              </div>
+              <div class="eng-alc-feature">
+                <strong>03. Automated Pin Extraction</strong>
+                <p>After hydrogen rising is complete and initial green strength is reached, suspension pins are hydraulically withdrawn before 90° demoulding.</p>
+              </div>
+            </div>
+          </div>
+          <div class="eng-alc-banner__right">
+            <div class="eng-alc-stat-card">
+              <div class="eng-alc-stat-num">up to 6.0m</div>
+              <div class="eng-alc-stat-label">Panel Length Fabrication</div>
+            </div>
+            <div class="eng-alc-stat-card">
+              <div class="eng-alc-stat-num">50–200mm</div>
+              <div class="eng-alc-stat-label">Panel Thickness Range</div>
+            </div>
+            <div class="eng-alc-stat-card">
+              <div class="eng-alc-stat-num">4 Hours</div>
+              <div class="eng-alc-stat-label">Fire Resistance Rating (UL / EN)</div>
+            </div>
+            <div class="eng-alc-stat-card">
+              <div class="eng-alc-stat-num">2x–3x</div>
+              <div class="eng-alc-stat-label">Higher Margin vs. Standard Blocks</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ 05. SECTION 04: QUALITY ASSURANCE & TESTING MATRIX ============ -->
+    <section class="eng-section eng-section--light" id="quality">
+      <div class="eng-container">
+        
+        <div>
+          <span class="eng-eyebrow">04 · QUALITY ASSURANCE</span>
+          <h2 class="eng-title">
+            <span>In-line quality control.</span>
+            <span class="eng-title-light">Conforming to IS 2185-3<br />and EN 771-4.</span>
+          </h2>
+          <p class="eng-lead">
+            Every cubic meter produced is validated against rigid physical, mechanical, and crystalline standards to ensure compliance with Tier-1 infrastructure contracts.
+          </p>
+        </div>
+
+        <div class="eng-qa-grid">
+          <div class="eng-qa-card">
+            <div class="eng-qa-card__idx">TEST 01</div>
+            <h3 class="eng-qa-card__title">Slurry Specific Gravity &amp; Temperature</h3>
+            <p class="eng-qa-card__desc">Hydrometer and thermocouple testing at pouring station ensuring 1.62–1.68 kg/L density and 38–42°C pour temperature.</p>
+            <div class="eng-qa-card__target">Target: 1.65 kg/L (±0.02)</div>
+          </div>
+
+          <div class="eng-qa-card">
+            <div class="eng-qa-card__idx">TEST 02</div>
+            <h3 class="eng-qa-card__title">Green-Cake Penetrometer Hardness</h3>
+            <p class="eng-qa-card__desc">Digital spring penetrometer verification before demoulding to ensure optimal cutting hardness without wire drift or collapse.</p>
+            <div class="eng-qa-card__target">Target: 0.18–0.24 MPa</div>
+          </div>
+
+          <div class="eng-qa-card">
+            <div class="eng-qa-card__idx">TEST 03</div>
+            <h3 class="eng-qa-card__title">2-Axis Wire Dimensional Accuracy</h3>
+            <p class="eng-qa-card__desc">Laser micrometer profiling of sliced green cake verifying ±1.0mm length, height, and thickness accuracy before autoclaving.</p>
+            <div class="eng-qa-card__target">Tolerance: ±1.0 mm Max</div>
+          </div>
+
+          <div class="eng-qa-card">
+            <div class="eng-qa-card__idx">TEST 04</div>
+            <h3 class="eng-qa-card__title">28-Day Compressive &amp; Density Testing</h3>
+            <p class="eng-qa-card__desc">Oven dry density (450–650 kg/m³) and crushing strength testing on 150mm cubes per IS 2185 Part 3 specifications.</p>
+            <div class="eng-qa-card__target">Strength: 3.5–5.0 N/mm²</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ 06. CHAPTER NAVIGATION & EDITORIAL CTA ============ -->
+    <section class="eng-chapter-nav-section">
+      <div class="eng-container">
+        <div class="eng-chapter-nav">
+          <a href="engineering-center.html" class="eng-chapter-nav__btn eng-chapter-nav__btn--prev">
+            <span class="eng-chapter-nav__sub">← ENGINEERING HUB</span>
+            <span class="eng-chapter-nav__title">AAC Engineering Center</span>
+          </a>
+          <a href="plant-layout.html" class="eng-chapter-nav__btn eng-chapter-nav__btn--next">
+            <span class="eng-chapter-nav__sub">NEXT CHAPTER →</span>
+            <span class="eng-chapter-nav__title">AAC Plant Layout Design</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final Conversion Banner -->
+    <section class="eng-cta-banner" id="cta">
+      <div class="eng-cta-banner__inner">
+        <span class="eng-cta-banner__eyebrow">PROCESS CONSULTING</span>
+        <h2 class="eng-cta-banner__title">
+          <span>Need custom raw material</span>
+          <span class="eng-cta-banner__title-light">formulation &amp; batch sizing?</span>
+        </h2>
+        <p class="eng-cta-banner__lead">
+          Share your fly ash, sand, and lime laboratory test reports with our chemical and mechanical engineering teams to establish custom mix recipes, aeration curves, and autoclave schedules.
+        </p>
+        <div class="eng-cta-banner__actions">
+          <a href="contact.html" class="eng-cta-banner__btn-white">
+            <span>Consult our process engineers</span>
+            <span class="eng-cta-banner__btn-arrow">↗</span>
+          </a>
+          <a href="#overview" class="eng-cta-banner__link-top">
+            <span>Return to top ↑</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Shared Global Footer Injection -->
+  <div id="site-footer"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/components.js"></script>
 </body>
 </html>

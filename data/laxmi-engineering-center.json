@@ -1,0 +1,219 @@
+{
+  "project": {
+    "company": "Laxmi En-Fab Pvt. Ltd.",
+    "website_section": "AAC Engineering Center",
+    "purpose": "Authoritative engineering knowledge hub, plant layout design, production process, batch sizing calculations, and complete machinery systems.",
+    "design_direction": "Premium industrial editorial, dark technical hero, interactive process flow, plant layout explorer, machinery showcase, capacity matrix calculator, high-clarity diagrams, and technical rigor."
+  },
+  "hub": {
+    "title": "AAC Engineering Center",
+    "subtitle": "Complete Engineering, Machinery & Plant Design Intelligence for Autoclaved Aerated Concrete Manufacturing",
+    "badge": "ENGINEERING & TECHNOLOGY CENTER",
+    "hero_statement": "Engineering high-efficiency AAC manufacturing facilities through precise raw material preparation, optimal plant layout, synchronized cycle automation, and robust autoclave curing systems.",
+    "pillars": [
+      {
+        "id": "process",
+        "num": "01",
+        "title": "AAC Block Production Process",
+        "slug": "production-process.html",
+        "tagline": "Step-by-Step Chemical & Mechanical Flow",
+        "summary": "From raw material slurry preparation and high-speed hydrodynamic mixing to hydrogen aerating, green-cake wire cutting, and 12-hour hydrothermal synthesis inside autoclaves.",
+        "image": "assets/images/engineering/production-process-diagram.png",
+        "steps_count": 9,
+        "key_metric": "Tobermorite C-S-H Crystalline Matrix"
+      },
+      {
+        "id": "layout",
+        "num": "02",
+        "title": "AAC Plant Layout Design",
+        "slug": "plant-layout.html",
+        "tagline": "Straight vs L-Shape & Land Optimization",
+        "summary": "Master planning factory layouts for optimal material logistics, single vs double-door autoclave through-feed lines, crane vs ferry cart circulation, and phase-2 expansion without line shutdown.",
+        "image": "assets/images/engineering/plant-layout-diagram.png",
+        "steps_count": 4,
+        "key_metric": "Zero-Crossflow Factory Logistics"
+      },
+      {
+        "id": "complete-plant",
+        "num": "03",
+        "title": "Complete AAC Plant & Capacity Selection",
+        "slug": "capacity-selection.html",
+        "tagline": "Batch Sizing, Autoclave Balancing & TPH Matching",
+        "summary": "Why real plant output depends on total system synchronization—matching mixer batch volume (4.0–6.0 m³), cutting cycle time (3.5–4.5 min), autoclave schedule (10–12h), and boiler TPH.",
+        "image": "assets/images/engineering/complete-plant-3d.png",
+        "steps_count": 5,
+        "key_metric": "150 to 1,500+ m³/Day Capacity Range"
+      },
+      {
+        "id": "machinery",
+        "num": "04",
+        "title": "Plant Machinery & Equipment",
+        "slug": "machinery-equipment.html",
+        "tagline": "8 Core Specialized Machinery Systems",
+        "summary": "Engineered and manufactured in-house by Laxmi En-Fab: Silo systems, Ball mills, Batching towers, Pre-curing lines, 90° Tilting cranes, High-precision wire cutters, Autoclaves, Steam Boilers & Auto Palletizers.",
+        "image": "assets/images/engineering/machinery-cutting-system.png",
+        "steps_count": 8,
+        "key_metric": "Heavy-Duty In-House Fabrication"
+      }
+    ],
+    "machinery_modules": [
+      {
+        "id": "raw-material-storage",
+        "index": "01",
+        "title": "Raw Material Storage & Pneumatic Conveying",
+        "slug": "machinery-raw-material-storage.html",
+        "short_desc": "Engineered silos (60T to 200T) for fly ash, cement, and lime with fluidization pads, dust collectors, pneumatic conveying, and sand/pond ash covered stockyards.",
+        "image": "assets/images/engineering/machinery-raw-material-storage.png",
+        "key_spec": "60T–200T Silos / Pneumatic Bulker Unloading"
+      },
+      {
+        "id": "batching-preparation",
+        "index": "02",
+        "title": "Batching System & Raw Material Preparation",
+        "slug": "machinery-batching-preparation.html",
+        "short_desc": "Continuous wet-grinding ball mills, high-shear slurry agitators, ultrasonic density control, high-precision load-cell dosing, and automated aluminum powder dispensing.",
+        "image": "assets/images/engineering/machinery-batching-preparation.png",
+        "key_spec": "±0.5% Dosing Accuracy / Auto Slurry Density"
+      },
+      {
+        "id": "mould-precuring",
+        "index": "03",
+        "title": "Mould Handling & Pre-Curing System",
+        "slug": "machinery-mould-precuring.html",
+        "short_desc": "CNC-machined rigid moulds, detachable bottom side plates, heavy-duty hydraulic ferry carts, and insulated pre-curing tunnels maintaining 40–50°C for cake rising.",
+        "image": "assets/images/engineering/machinery-mould-precuring.png",
+        "key_spec": "4.0m³–6.0m³ Moulds / Controlled Rising Chamber"
+      },
+      {
+        "id": "tilting-machine",
+        "index": "04",
+        "title": "AAC 90° Tilting Machine & Demoulding",
+        "slug": "machinery-tilting-machine.html",
+        "short_desc": "Hydraulic zero-shock 90° tilting crane fixture that secures the side plate, smoothly turns the cake upright, and unlocks the mould box without cake cracking or edge damage.",
+        "image": "assets/images/engineering/machinery-tilting-machine.png",
+        "key_spec": "90° Hydraulic Tilting / Zero Stress Separation"
+      },
+      {
+        "id": "cutting-system",
+        "index": "05",
+        "title": "High-Precision AAC Cutting System",
+        "slug": "machinery-cutting-system.html",
+        "short_desc": "High-frequency oscillating horizontal cutting wires, rigid vertical cross-cut frame, top/bottom crust skimming, tongue-and-groove profiling, and automatic wet-slurry recycling.",
+        "image": "assets/images/engineering/machinery-cutting-system.png",
+        "key_spec": "±1.0mm Dimensional Precision / 100% Waste Recycling"
+      },
+      {
+        "id": "autoclave",
+        "index": "06",
+        "title": "High-Pressure Autoclave Curing Vessels",
+        "slug": "machinery-autoclave.html",
+        "short_desc": "ASME / Indian Boiler Regulations (IBR) certified curing cylinders (Ø2.0m–Ø2.5m, 21m–35m length) operating at 12–14 bar (190°C) with quick-opening safety interlock doors.",
+        "image": "assets/images/engineering/machinery-autoclave.png",
+        "key_spec": "17.5 kg/cm² Design Pressure / Interlocked Safety"
+      },
+      {
+        "id": "steam-boiler",
+        "index": "07",
+        "title": "Industrial Steam Boiler & Energy Recovery",
+        "slug": "machinery-steam-boiler.html",
+        "short_desc": "Biomass / Coal / Gas / Dual-fuel steam boilers (4 TPH to 12 TPH) engineered to deliver high-pressure saturated steam with economizers and automated condensate recovery systems.",
+        "image": "assets/images/engineering/machinery-steam-boiler.png",
+        "key_spec": "4 TPH – 12 TPH / High Thermal Efficiency"
+      },
+      {
+        "id": "auto-palletizing",
+        "index": "08",
+        "title": "Automatic Palletizing & Packaging Line",
+        "slug": "machinery-auto-palletizing.html",
+        "short_desc": "Hydraulic cake clamps, de-sticking separating tables, high-speed block stackers, wooden pallet dispensers, and automated stretch-wrapping/PET strapping lines.",
+        "image": "assets/images/engineering/machinery-auto-palletizing.png",
+        "key_spec": "Zero Breakage / 60+ m³/hr Stacking Rate"
+      }
+    ],
+    "process_stages": [
+      {
+        "step": "01",
+        "title": "Raw Material Preparation & Grinding",
+        "desc": "Fly ash or silica sand is wet-milled in a continuous ball mill to a fineness of 45-micron residue <15%, producing slurry at 1.60–1.70 kg/L specific gravity."
+      },
+      {
+        "step": "02",
+        "title": "Dosing & High-Speed Hydrodynamic Mixing",
+        "desc": "Automated batching scales measure cement, quicklime, gypsum, and slurry with ±0.5% precision. Aluminum paste suspension is dosed into the high-shear mixer."
+      },
+      {
+        "step": "03",
+        "title": "Pouring & Hydrogen Aeration Expansion",
+        "desc": "Slurry is poured into pre-oiled mould boxes. Chemical reaction generates millions of microscopic hydrogen bubbles, causing the cake to expand to 2x volume."
+      },
+      {
+        "step": "04",
+        "title": "Static Pre-Curing & Cake Hardening",
+        "desc": "Moulds circulate through temperature-controlled pre-curing tunnels (40–50°C) for 120–180 minutes until green cake achieves wire-cutting penetration resistance."
+      },
+      {
+        "step": "05",
+        "title": "90° Mould Tilting & Demoulding",
+        "desc": "The hydraulic tilting crane turns the mould 90° upright onto a side plate. The mould outer body lifts off, leaving the green cake standing vertically."
+      },
+      {
+        "step": "06",
+        "title": "High-Precision 2-Axis Wire Cutting",
+        "desc": "High-speed oscillating steel wires execute horizontal slicing followed by vertical cross-cutting to exact block/panel dimensions (±1mm tolerance)."
+      },
+      {
+        "step": "07",
+        "title": "Autoclave Hydrothermal Synthesis",
+        "desc": "Curing at 12–14 bar saturated steam pressure and 190°C for 10–12 hours. SiO2 and Ca(OH)2 synthesize into Tobermorite crystals for permanent strength."
+      },
+      {
+        "step": "08",
+        "title": "De-Panning, Separation & Auto Palletizing",
+        "desc": "Autoclaved cakes are transported to the de-stacking line. Hydraulic clamps separate sintered contact layers and pack blocks onto strapped wooden pallets."
+      },
+      {
+        "step": "09",
+        "title": "Quality Assurance & Yard Dispatch",
+        "desc": "Tested for compressive strength (3.5–5.0 N/mm²), dry density (550–650 kg/m³), thermal conductivity (0.12–0.16 W/mK), and dimensional accuracy per IS 2185-3."
+      }
+    ],
+    "capacity_matrix": [
+      {
+        "capacity": "150 m³/day",
+        "batch_size": "4.0 m³",
+        "mixer_cycles_per_hr": "3–4 batches",
+        "autoclaves_required": "2 units (Ø2.0m × 21m)",
+        "boiler_tph": "3.0 – 4.0 TPH",
+        "land_required": "2.5 – 3.0 Acres",
+        "suitability": "Entry-level regional plant with single shift scaling"
+      },
+      {
+        "capacity": "300 m³/day",
+        "batch_size": "4.0 – 4.8 m³",
+        "mixer_cycles_per_hr": "4–6 batches",
+        "autoclaves_required": "3–4 units (Ø2.0m × 31m)",
+        "boiler_tph": "6.0 TPH",
+        "land_required": "3.5 – 4.5 Acres",
+        "suitability": "Most popular commercial tier for Tier 2/3 city clusters"
+      },
+      {
+        "capacity": "600 m³/day",
+        "batch_size": "4.8 – 6.0 m³",
+        "mixer_cycles_per_hr": "7–9 batches",
+        "autoclaves_required": "5–6 units (Ø2.5m × 31m)",
+        "boiler_tph": "8.0 – 10.0 TPH",
+        "land_required": "5.0 – 7.0 Acres",
+        "suitability": "High-volume metro market supplier with automated handling"
+      },
+      {
+        "capacity": "1,000+ m³/day",
+        "batch_size": "6.0 m³ Dual Lines",
+        "mixer_cycles_per_hr": "12–14 batches",
+        "autoclaves_required": "8–10 units (Ø2.5m × 35m)",
+        "boiler_tph": "12.0 – 15.0 TPH",
+        "land_required": "8.0 – 12.0 Acres",
+        "suitability": "Mega industrial project with automated auto-palletizing & panels"
+      }
+    ]
+  }
+}

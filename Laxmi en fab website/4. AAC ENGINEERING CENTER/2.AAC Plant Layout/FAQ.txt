@@ -1,0 +1,27 @@
+Which AAC plant layout is best?
+−
+There is no universally best layout. The correct choice depends on the surveyed plot, production target, product mix, automation, transfer system, utilities, dispatch planning and future expansion.
+
+What is the difference between a straight and an L-shape layout?
+−
+A straight layout keeps the main production flow predominantly linear. An L-shape layout changes direction once to use available length and width. The selected handling system must support the chosen geometry.
+
+Does an L-shape layout reduce AAC block quality?
+−
+No. Layout shape does not by itself determine block quality. Quality depends on raw materials, batching, process control, pre-curing, cutting, autoclaving and consistent operation.
+
+Can both layouts achieve the same production capacity?
+−
+Equivalent output can be designed in either geometry when the complete machinery and handling system is correctly sized. Capacity must be confirmed by project-specific cycle and bottleneck calculations.
+
+Is a single-door autoclave arrangement technically inferior?
+−
+Not automatically. Same-side loading can suit projects with width constraints, but handling and turnaround must be calculated. Through-flow arrangements also require sufficient access and infrastructure at both ends.
+
+How many autoclaves does an AAC plant require?
+−
+The number depends on target output, load per charge, curing and handling time, operating hours, availability, mould and trolley circulation, steam supply and other line bottlenecks.
+
+What should I send for a preliminary layout review?
+−
+Share the surveyed plot drawing, gate and road details, project location, target capacity, block or panel plan, raw-material basis, preferred automation and future expansion target.

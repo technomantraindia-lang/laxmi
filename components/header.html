@@ -29,92 +29,48 @@
             <!-- Navigation Links -->
             <nav id="site-nav" class="site-header__nav" aria-label="Primary navigation">
                 <ul class="nav-list" role="menubar">
-                    
-                    <!-- 1. About Us (Single Link) -->
-                    <li class="nav-item" role="none">
-                        <a href="../why-laxmi.html" class="nav-link" role="menuitem">About Us</a>
-                    </li>
 
-                    <!-- 2. Solutions ▾ (Dropdown) -->
-                    <li class="nav-item nav-item--dropdown" role="none">
-                        <a href="../solutions.html" class="nav-link nav-link--toggle" aria-haspopup="true" aria-expanded="false" aria-controls="nav-dropdown-solutions">
-                            Solutions <span class="nav-caret">▾</span>
+                    <!-- 1. Start Your AAC Journey -->
+                    <li class="nav-item" role="none">
+                        <a href="../solutions.html" class="nav-link" data-drawer-trigger="solutions">
+                            Start Your AAC Journey
                         </a>
-                        <ul class="nav-dropdown" id="nav-dropdown-solutions" role="menu" aria-label="Solutions Submenu">
-                            <li role="none">
-                                <a href="../aac-block-panel-plant.html" role="menuitem">
-                                    <span class="dropdown-item__title">AAC PLANTS</span>
-                                    <span class="dropdown-item__sub">Complete AAC plant solutions</span>
-                                </a>
-                            </li>
-                            <li role="none">
-                                <a href="../dry-mix-mortar-plant.html" role="menuitem">
-                                    <span class="dropdown-item__title">DRY MIX MORTAR</span>
-                                    <span class="dropdown-item__sub">Dry mix mortar plant solutions</span>
-                                </a>
-                            </li>
-                        </ul>
                     </li>
 
-                    <!-- 3. Machinery & Equipment (Single Link) -->
+                    <!-- 2. AAC Investor Academy -->
                     <li class="nav-item" role="none">
-                        <a href="../machinery-equipment.html" class="nav-link" role="menuitem">Machinery &amp; Equipment</a>
-                    </li>
-
-                    <!-- 4. AAC Investor Academy ▾ (Dropdown) -->
-                    <li class="nav-item nav-item--dropdown" role="none">
-                        <a href="../academy.html" class="nav-link nav-link--toggle" aria-haspopup="true" aria-expanded="false" aria-controls="nav-dropdown-academy">
-                            AAC Investor Academy <span class="nav-caret">▾</span>
+                        <a href="../academy/academy.html" class="nav-link" data-drawer-trigger="academy">
+                            AAC Investor Academy
                         </a>
-                        <ul class="nav-dropdown nav-dropdown--academy" id="nav-dropdown-academy" role="menu" aria-label="AAC Investor Academy Submenu">
-                            <li role="none">
-                                <a href="../understand-market.html" role="menuitem">
-                                    <span class="dropdown-num">01</span> UNDERSTAND THE MARKET
-                                </a>
-                            </li>
-                            <li role="none">
-                                <a href="../design-your-plant.html" role="menuitem">
-                                    <span class="dropdown-num">02</span> DESIGN YOUR PLANT
-                                </a>
-                            </li>
-                            <li role="none">
-                                <a href="../compare-your-aac-plant.html" role="menuitem">
-                                    <span class="dropdown-num">03</span> COMPARE YOUR AAC PLANT
-                                </a>
-                            </li>
-                            <li role="none">
-                                <a href="../efficient-your-plant.html" role="menuitem">
-                                    <span class="dropdown-num">04</span> EFFICIENT YOUR PLANT
-                                </a>
-                            </li>
-                            <li role="none">
-                                <a href="../expand-your-plant.html" role="menuitem">
-                                    <span class="dropdown-num">05</span> EXPAND YOUR PLANT
-                                </a>
-                            </li>
-                        </ul>
                     </li>
 
-                    <!-- 5. Engineering Center (Single Link) -->
+                    <!-- 3. AAC Engineering Center -->
                     <li class="nav-item" role="none">
-                        <a href="../engineering-center.html" class="nav-link" role="menuitem">Engineering Center</a>
+                        <a href="../engineering-center.html" class="nav-link" data-drawer-trigger="engineering">
+                            AAC Engineering Center
+                        </a>
                     </li>
 
-                    <!-- 6. Projects (Single Link) -->
+                    <!-- 4. Why Laxmi -->
                     <li class="nav-item" role="none">
-                        <a href="../projects.html" class="nav-link" role="menuitem">Projects</a>
+                        <a href="../why-laxmi.html" class="nav-link" data-drawer-trigger="whylaxmi">Why Laxmi</a>
+                    </li>
+
+                    <!-- 5. Knowledge Hub -->
+                    <li class="nav-item" role="none">
+                        <a href="../knowledge-hub.html" class="nav-link" role="menuitem">Knowledge Hub</a>
                     </li>
 
                 </ul>
 
                 <!-- Full-width mobile CTA -->
                 <div class="mobile-nav-cta-wrap">
-                    <a href="../contact.html" class="site-header__cta site-header__cta--mobile nav-cta">CONTACT US <span class="cta-arrow">→</span></a>
+                    <a href="../contact.html" class="site-header__cta site-header__cta--mobile nav-cta">TALK TO AN EXPERT <span class="cta-arrow">→</span></a>
                 </div>
             </nav>
 
             <!-- Desktop Contact Us CTA -->
-            <a href="../contact.html" class="site-header__cta nav-cta">CONTACT US <span class="cta-arrow">→</span></a>
+            <a href="../contact.html" class="site-header__cta nav-cta">TALK TO AN EXPERT <span class="cta-arrow">→</span></a>
 
             <!-- Mobile Hamburger Toggle -->
             <button type="button" id="nav-burger" class="site-header__burger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav">
@@ -123,6 +79,236 @@
 
         </div>
     </header>
+
+    <!-- Left Slide-Out Navigation Drawer -->
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+    <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
+        <div class="nav-drawer__header">
+            <a href="../index.html" class="drawer-header-brand">
+                <img src="../assets/images/laxmi-logo.png" alt="Laxmi En-Fab Logo" class="drawer-logo" />
+            </a>
+            <button type="button" class="drawer-close-icon-btn" id="drawer-close-btn" aria-label="Close navigation menu">
+                <span>Close</span> <span class="close-x">✕</span>
+            </button>
+        </div>
+        <div class="nav-drawer__inner">
+            <!-- COLUMN 1: PRIMARY CATEGORIES -->
+            <div class="drawer-primary-col">
+                <nav class="drawer-nav">
+                    <ul class="drawer-menu-list">
+                        <li class="drawer-menu-item has-sub is-active" data-sub="solutions">
+                            <a href="../solutions.html" class="drawer-menu-link">
+                                <span>Start Your AAC Journey</span>
+                                <span class="drawer-arrow">›</span>
+                            </a>
+                        </li>
+                        <li class="drawer-menu-item has-sub" data-sub="academy">
+                            <a href="../academy/academy.html" class="drawer-menu-link">
+                                <span>AAC Investor Academy</span>
+                                <span class="drawer-arrow">›</span>
+                            </a>
+                        </li>
+                        <li class="drawer-menu-item has-sub" data-sub="engineering">
+                            <a href="../engineering-center.html" class="drawer-menu-link">
+                                <span>AAC Engineering Center</span>
+                                <span class="drawer-arrow">›</span>
+                            </a>
+                        </li>
+                        <li class="drawer-menu-item has-sub" data-sub="whylaxmi">
+                            <a href="../why-laxmi.html" class="drawer-menu-link">
+                                <span>Why Laxmi</span>
+                                <span class="drawer-arrow">›</span>
+                            </a>
+                        </li>
+                        <li class="drawer-menu-item" data-sub="none">
+                            <a href="../knowledge-hub.html" class="drawer-menu-link">Knowledge Hub</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="drawer-footer-contact">
+                    <p class="drawer-contact-title">TALK TO OUR EXPERT</p>
+                    <a href="tel:+918980800839" class="drawer-phone">+91 89808 00839</a>
+                    <a href="mailto:aac@laxmienfab.com" class="drawer-email">aac@laxmienfab.com</a>
+                    <a href="../contact.html" class="drawer-cta-btn">TALK TO AN EXPERT →</a>
+                </div>
+            </div>
+
+            <!-- COLUMN 2: SECONDARY SUB-PANES -->
+            <div class="drawer-secondary-col" id="drawer-secondary-col">
+                <!-- Subpane 1: Start Your AAC Journey -->
+                <div class="drawer-sub-pane is-active" id="sub-pane-solutions">
+                    <h3 class="sub-pane-title"><a href="../solutions.html">Start Your AAC Journey</a></h3>
+                    <ul class="col2-menu-list">
+                        <li class="col2-item" data-tertiary="sol-plants">
+                            <a href="../aac-block-panel-plant.html" class="col2-link">
+                                <strong>AAC Block &amp; Panel Plant</strong>
+                            </a>
+                        </li>
+                        <li class="col2-item" data-tertiary="sol-mortar">
+                            <a href="../dry-mix-mortar-plant.html" class="col2-link">
+                                <strong>Dry Mix Mortar Plant</strong>
+                            </a>
+                        </li>
+                        <li class="col2-item" data-tertiary="sol-complete">
+                            <a href="../solutions.html" class="col2-link">
+                                <strong>Complete AAC Plant</strong>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Subpane 2: AAC Investor Academy -->
+                <div class="drawer-sub-pane" id="sub-pane-academy">
+                    <h3 class="sub-pane-title"><a href="../academy/academy.html">AAC Investor Academy</a></h3>
+                    <ul class="col2-menu-list">
+                        <li class="col2-item has-tertiary is-active" data-tertiary="academy-market">
+                            <a href="../academy/understand-market.html" class="col2-link">
+                                <span><strong class="sub-num">01</strong> Understand the Market</span>
+                                <span class="col2-arrow">›</span>
+                            </a>
+                        </li>
+                        <li class="col2-item has-tertiary" data-tertiary="academy-design">
+                            <a href="../academy/design-your-plant.html" class="col2-link">
+                                <span><strong class="sub-num">02</strong> Design Your Plant</span>
+                                <span class="col2-arrow">›</span>
+                            </a>
+                        </li>
+                        <li class="col2-item" data-tertiary="academy-compare">
+                            <a href="../academy/compare-your-aac-plant.html" class="col2-link">
+                                <span><strong class="sub-num">03</strong> Compare Your AAC Plant</span>
+                            </a>
+                        </li>
+                        <li class="col2-item has-tertiary" data-tertiary="academy-efficient">
+                            <a href="../academy/efficient-your-plant.html" class="col2-link">
+                                <span><strong class="sub-num">04</strong> Efficient Your Plant</span>
+                                <span class="col2-arrow">›</span>
+                            </a>
+                        </li>
+                        <li class="col2-item" data-tertiary="academy-expand">
+                            <a href="../academy/expand-your-plant.html" class="col2-link">
+                                <span><strong class="sub-num">05</strong> Expand Your Plant</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Subpane 3: AAC Engineering Center -->
+                <div class="drawer-sub-pane" id="sub-pane-engineering">
+                    <h3 class="sub-pane-title"><a href="../engineering-center.html">AAC Engineering Center</a></h3>
+                    <ul class="col2-menu-list">
+                        <li class="col2-item" data-tertiary="eng-process">
+                            <a href="../production-process.html" class="col2-link">
+                                <strong>AAC Block Production Process</strong>
+                            </a>
+                        </li>
+                        <li class="col2-item" data-tertiary="eng-layout">
+                            <a href="../plant-layout.html" class="col2-link">
+                                <strong>AAC Plant Layout</strong>
+                            </a>
+                        </li>
+                        <li class="col2-item" data-tertiary="eng-complete">
+                            <a href="../capacity-selection.html" class="col2-link">
+                                <strong>Complete AAC Plant</strong>
+                            </a>
+                        </li>
+                        <li class="col2-item has-tertiary is-active" data-tertiary="eng-machinery">
+                            <a href="../machinery-equipment.html" class="col2-link">
+                                <strong>Plant Machinery</strong>
+                                <span class="col2-arrow">›</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Subpane 4: Why Laxmi -->
+                <div class="drawer-sub-pane" id="sub-pane-whylaxmi">
+                    <h3 class="sub-pane-title"><a href="../why-laxmi.html">Why Laxmi</a></h3>
+                    <ul class="col2-menu-list">
+                        <li class="col2-item has-tertiary is-active" data-tertiary="whylaxmi-testimonial">
+                            <a href="../why-laxmi.html#testimonial" class="col2-link">
+                                <strong>Testimonial content</strong>
+                                <span class="col2-arrow">›</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- COLUMN 3: TERTIARY INNER PAGES -->
+            <div class="drawer-tertiary-col" id="drawer-tertiary-col">
+                <!-- Tertiary Pane 1: Understand the Market -->
+                <div class="tertiary-pane is-active" id="tertiary-pane-academy-market">
+                    <h4 class="tertiary-pane-title">Understand the Market Inner Pages</h4>
+                    <ul class="tertiary-menu-list">
+                        <li><a href="../academy/understand-market.html?topic=why-aac" class="tertiary-link"><span class="tertiary-icon">📄</span> Why AAC</a></li>
+                        <li><a href="../academy/understand-market.html?topic=future-of-aac" class="tertiary-link"><span class="tertiary-icon">🚀</span> Future of AAC</a></li>
+                        <li><a href="../academy/understand-market.html?topic=market-demand" class="tertiary-link"><span class="tertiary-icon">📈</span> Market Demand</a></li>
+                        <li><a href="../academy/understand-market.html?topic=raw-materials" class="tertiary-link"><span class="tertiary-icon">🏗️</span> Raw Materials</a></li>
+                        <li><a href="../academy/understand-market.html?topic=profitability" class="tertiary-link"><span class="tertiary-icon">💰</span> Profitability</a></li>
+                        <li><a href="../academy/understand-market.html?topic=government-policies" class="tertiary-link"><span class="tertiary-icon">🏛️</span> Government Policies</a></li>
+                    </ul>
+                </div>
+
+                <!-- Tertiary Pane 2: Design Your Plant -->
+                <div class="tertiary-pane" id="tertiary-pane-academy-design">
+                    <h4 class="tertiary-pane-title">Design Your Plant Inner Pages</h4>
+                    <ul class="tertiary-menu-list">
+                        <li><a href="../academy/design-your-plant.html?topic=capacity-selection" class="tertiary-link"><span class="tertiary-icon">⚡</span> Capacity Selection</a></li>
+                        <li><a href="../academy/design-your-plant.html?topic=land-requirement" class="tertiary-link"><span class="tertiary-icon">📐</span> Land Requirement</a></li>
+                        <li><a href="../academy/design-your-plant.html?topic=project-cost" class="tertiary-link"><span class="tertiary-icon">💵</span> Project Cost &amp; Working Capital</a></li>
+                        <li><a href="../academy/design-your-plant.html?topic=roi-payback" class="tertiary-link"><span class="tertiary-icon">📊</span> ROI &amp; Payback</a></li>
+                        <li><a href="../academy/design-your-plant.html?topic=finance-bank-loan" class="tertiary-link"><span class="tertiary-icon">🏦</span> Finance &amp; Bank Loan</a></li>
+                        <li><a href="../academy/design-your-plant.html?topic=subsidy" class="tertiary-link"><span class="tertiary-icon">🎁</span> Subsidy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Tertiary Pane 3: Efficient Your Plant -->
+                <div class="tertiary-pane" id="tertiary-pane-academy-efficient">
+                    <h4 class="tertiary-pane-title">Efficient Your Plant Inner Pages</h4>
+                    <ul class="tertiary-menu-list">
+                        <li><a href="../academy/efficient-your-plant.html?topic=make-plant-automatic" class="tertiary-link"><span class="tertiary-icon">🤖</span> Make Plant Automatic</a></li>
+                        <li><a href="../academy/efficient-your-plant.html?topic=improve-block-quality" class="tertiary-link"><span class="tertiary-icon">⭐</span> Improve AAC Block Quality</a></li>
+                        <li><a href="../academy/efficient-your-plant.html?topic=plant-maintenance-sop" class="tertiary-link"><span class="tertiary-icon">🛠️</span> AAC Plant Maintenance SOP</a></li>
+                        <li><a href="../academy/efficient-your-plant.html?topic=reduce-steam-cost" class="tertiary-link"><span class="tertiary-icon">🔥</span> Reduce Your Steam Cost</a></li>
+                        <li><a href="../academy/efficient-your-plant.html?topic=skilled-manpower" class="tertiary-link"><span class="tertiary-icon">👥</span> Skilled Manpower Requirement</a></li>
+                    </ul>
+                </div>
+
+                <!-- Tertiary Pane 4: Plant Machinery -->
+                <div class="tertiary-pane" id="tertiary-pane-eng-machinery">
+                    <h4 class="tertiary-pane-title">Plant Machinery Inner Components</h4>
+                    <ul class="tertiary-menu-list">
+                        <li><a href="../machinery-equipment.html#material" class="tertiary-link"><span class="tertiary-icon">🏬</span> AAC Plant Raw Material Storage</a></li>
+                        <li><a href="../machinery-equipment.html#batching" class="tertiary-link"><span class="tertiary-icon">⚙️</span> AAC Batching System &amp; Raw Material Prep</a></li>
+                        <li><a href="../machinery-equipment.html#batching" class="tertiary-link"><span class="tertiary-icon">📦</span> AAC Mould Handling &amp; Precuring Process</a></li>
+                        <li><a href="../machinery-equipment.html#cutting" class="tertiary-link"><span class="tertiary-icon">🔄</span> AAC Tilting Machine</a></li>
+                        <li><a href="../machinery-equipment.html#cutting" class="tertiary-link"><span class="tertiary-icon">✂️</span> AAC Cutting System</a></li>
+                        <li><a href="../machinery-equipment.html#autoclave" class="tertiary-link"><span class="tertiary-icon">🎛️</span> AAC Autoclave</a></li>
+                        <li><a href="../machinery-equipment.html#autoclave" class="tertiary-link"><span class="tertiary-icon">💨</span> AAC Steam Boiler</a></li>
+                        <li><a href="../machinery-equipment.html#proof" class="tertiary-link"><span class="tertiary-icon">🏗️</span> AAC Auto Palletizing System</a></li>
+                    </ul>
+                </div>
+
+                <!-- Tertiary Pane 5: Why Laxmi Testimonials -->
+                <div class="tertiary-pane" id="tertiary-pane-whylaxmi-testimonial">
+                    <h4 class="tertiary-pane-title">Testimonial Stories &amp; Case Studies</h4>
+                    <ul class="tertiary-menu-list">
+                        <li><a href="../testimonial.html?id=1" class="tertiary-link"><span class="tertiary-icon">💬</span> 1. Why We Chose Laxmi for Our AAC Plant</a></li>
+                        <li><a href="../testimonial.html?id=2" class="tertiary-link"><span class="tertiary-icon">💬</span> 2. From Concept to Commercial Production</a></li>
+                        <li><a href="../testimonial.html?id=3" class="tertiary-link"><span class="tertiary-icon">💬</span> 3. Performance Proven in Daily Production</a></li>
+                        <li><a href="../testimonial.html?id=4" class="tertiary-link"><span class="tertiary-icon">💬</span> 4. Support Beyond Machinery Supply</a></li>
+                        <li><a href="../testimonial.html?id=5" class="tertiary-link"><span class="tertiary-icon">💬</span> 5. Expanding Through a Repeat Order</a></li>
+                        <li><a href="../testimonial.html?id=6" class="tertiary-link"><span class="tertiary-icon">💬</span> 6. Automation for Real Plant Conditions</a></li>
+                        <li><a href="../testimonial.html?id=7" class="tertiary-link"><span class="tertiary-icon">💬</span> 7. Relationship After Commissioning</a></li>
+                        <li><a href="../testimonial.html?id=8" class="tertiary-link"><span class="tertiary-icon">💬</span> 8. Engineering Reflecting in AAC Block</a></li>
+                        <li><a href="../testimonial.html?id=9" class="tertiary-link"><span class="tertiary-icon">💬</span> 9. Improving Steam Efficiency</a></li>
+                        <li><a href="../testimonial.html?id=10" class="tertiary-link"><span class="tertiary-icon">💬</span> 10. Confidence for First-Time Investor</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <p class="preview-note">Header component preview &mdash; open <strong>index.html</strong> to see it on the real site.</p>
 

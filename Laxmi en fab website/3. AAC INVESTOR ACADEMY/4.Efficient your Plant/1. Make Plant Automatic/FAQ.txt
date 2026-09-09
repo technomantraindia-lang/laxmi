@@ -1,0 +1,23 @@
+Can every semi-automatic AAC plant be converted to fully automatic?
+−
+No. Feasibility depends on machinery condition, layout, cycle compatibility, utilities, controls, safety requirements, available shutdown and commercial payback.
+
+Should the complete plant be automated at one time?
+−
+Not necessarily. A phased or hybrid upgrade may create better value when only selected operations are labour-intensive or production-constraining.
+
+Will automation increase plant capacity?
+−
+It may improve actual output if avoidable waiting, handling or sequence losses are the constraint. It cannot increase output beyond the limits of the remaining production system.
+
+Will automation reduce steam and electricity consumption?
+−
+Not automatically. Any saving must be linked to a measured source of loss and verified in kg steam per saleable m³ or kWh per saleable m³ under comparable conditions.
+
+Does a fully automatic plant require less skill?
+−
+It may require fewer repetitive manual roles, but it normally needs stronger electrical, instrumentation and troubleshooting capability.
+
+How should upgrade performance be accepted?
+−
+Agree the baseline, measurement method, operating conditions, exclusions, stabilisation period and acceptance criteria before implementation.

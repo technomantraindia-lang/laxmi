@@ -1,0 +1,575 @@
+{
+  "version": "1.0",
+  "project": "Laxmi En-Fab Pvt. Ltd. — Why Laxmi Customer Testimonials",
+  "architecture": "One reusable HTML/CSS/Vanilla JS template driven by JSON content.",
+  "shared": {
+    "eyebrow": "WHY LAXMI",
+    "main_page": "why-laxmi.html",
+    "section_title": "Verified Customer Case Studies",
+    "section_sub": "Real experience from AAC plant owners who chose Laxmi En-Fab.",
+    "footer_cta": {
+      "primary": { "label": "TALK TO LAXMI", "url": "contact.html" },
+      "secondary": { "label": "EXPLORE SOLUTIONS", "url": "solutions.html" }
+    },
+    "footer_contact": {
+      "company": "Laxmi En-Fab Pvt. Ltd.",
+      "address": "48 Block A, 2nd Floor, Pelican Complex, Opp Odhav BRTS, GIDC, Odhav, Ahmedabad, Gujarat 382415",
+      "phone": ["+91-8980800607", "+91-8980800839"],
+      "email": ["aac@laxmienfab.com", "aaclaxmi@gmail.com"]
+    }
+  },
+  "testimonials": [
+    {
+      "id": "testimonial-1",
+      "number": "01",
+      "slug": "why-we-chose-laxmi",
+      "url": "testimonial.html?id=1",
+      "badge": "CASE STUDY 01",
+      "verified": true,
+      "certificate_date": "10 January 2025",
+      "title": "Why We Chose Laxmi for Our AAC Plant",
+      "subtitle": "SATYAM BUILDTECH PVT. LTD. \u00b7 WADA, MAHARASHTRA",
+      "hero": {
+        "eyebrow": "CASE STUDY 01 / VERIFIED CUSTOMER CERTIFICATE",
+        "headline": "We had already operated a Chinese AAC plant. For our larger second plant, we chose Laxmi.",
+        "subheadline": "A 300,000 m\u00b3/year plant at Wada, Maharashtra — delivering 100% capacity utilisation since 2020."
+      },
+      "overview": {
+        "heading": "Part 1 — Testimonial Overview",
+        "quote": "We had already operated a Chinese AAC plant. For our larger second plant, we chose Laxmi.",
+        "body": [
+          "After operating a 100,000 m\u00b3/year Chinese-supplied AAC plant, we evaluated multiple suppliers from India and China for our new 300,000 m\u00b3/year plant at Wada.",
+          "We selected Laxmi for its advanced technology and superior engineering. The plant has delivered 100% capacity utilisation with consistent results and, in our experience, has performed better in maintenance, production and wastage."
+        ],
+        "author": "Satyam Patel",
+        "author_role": "Director, Satyam Buildtech Pvt. Ltd."
+      },
+      "full_story": {
+        "heading": "Part 2 — Our Complete Experience",
+        "paragraphs": [
+          "Our first AAC plant, with an annual capacity of 100,000 m\u00b3, was installed at Mehsana, Gujarat, by a reputed Chinese supplier. Operating this plant gave us practical experience in AAC production, maintenance and wastage.",
+          "As the AAC block market grew, we decided to establish a second and significantly larger plant with an annual capacity of 300,000 m\u00b3 at Wada, Maharashtra.",
+          "Before selecting the supplier, we evaluated multiple AAC plant manufacturers from both India and China. Since we already had experience operating a Chinese-supplied plant, we were able to compare suppliers from the perspective of an actual plant owner.",
+          "After completing our evaluation, we selected Laxmi En-Fab Pvt. Ltd. because of its advanced technology and superior engineering solutions.",
+          "The plant supplied by Laxmi has performed exceptionally well. Based on our experience of operating both plants, the Laxmi plant has performed better than our earlier Chinese plant in three important areas: Maintenance, Production, and Control of wastage.",
+          "We have achieved 100% capacity utilisation with consistent production results at our Wada plant.",
+          "Our experience with Laxmi has extended beyond the plant's performance. Their timely delivery and outstanding after-sales service have also been highly commendable.",
+          "Based on our experience, we strongly recommend Laxmi En-Fab Pvt. Ltd. to businesses seeking a reliable AAC plant solution."
+        ],
+        "highlights": ["Maintenance", "Production", "Control of wastage"],
+        "closing_quote": "The plant supplied by Laxmi has been exceptional, outperforming our Chinese plant in maintenance, production and wastage. We have achieved 100% capacity utilisation with consistent results.",
+        "closing_author": "Satyam Patel",
+        "closing_role": "Director, Satyam Buildtech Pvt. Ltd."
+      },
+      "project_specs": {
+        "title": "VERIFIED PROJECT DETAILS",
+        "items": [
+          { "label": "Project", "value": "AAC block manufacturing plant" },
+          { "label": "Location", "value": "Wada, Maharashtra" },
+          { "label": "Installed Capacity", "value": "300,000 m\u00b3/year" },
+          { "label": "Installation Year", "value": "2020" },
+          { "label": "Capacity Utilisation", "value": "100%" },
+          { "label": "Customer Certificate", "value": "Issued 10 January 2025" }
+        ],
+        "disclaimer": "This story is based on the signed customer certificate. Performance reflects the customer's specific plant and operating conditions."
+      },
+      "seo": {
+        "title": "Why We Chose Laxmi for Our AAC Plant | Case Study 01 | Laxmi En-Fab",
+        "description": "Satyam Buildtech chose Laxmi En-Fab for their 300,000 m3/year AAC plant at Wada, Maharashtra — achieving 100% capacity utilisation.",
+        "keywords": ["Laxmi En-Fab testimonial", "AAC plant customer review", "Satyam Buildtech AAC plant", "AAC plant Maharashtra"]
+      }
+    },
+    {
+      "id": "testimonial-2",
+      "number": "02",
+      "slug": "concept-to-commercial-production",
+      "url": "testimonial.html?id=2",
+      "badge": "CASE STUDY 02",
+      "verified": true,
+      "certificate_date": "2024",
+      "title": "From Concept to Commercial Production",
+      "subtitle": "AAC BLOCK PLANT \u00b7 GUJARAT",
+      "hero": {
+        "eyebrow": "CASE STUDY 02 / VERIFIED CUSTOMER CASE",
+        "headline": "Laxmi provided complete guidance from civil layout to plant handover.",
+        "subheadline": "A turn-key AAC plant in Gujarat that reached full commercial production smoothly."
+      },
+      "overview": {
+        "heading": "Part 1 — Testimonial Overview",
+        "quote": "Laxmi provided complete guidance from civil layout to plant handover, helping us reach full capacity in record time.",
+        "body": [
+          "Our turn-key AAC plant in Gujarat reached commercial production smoothly.",
+          "From the first civil foundation drawing to the final production SOP handover, Laxmi's team was present at every stage."
+        ],
+        "author": "Plant Director",
+        "author_role": "AAC Block Plant, Gujarat"
+      },
+      "full_story": {
+        "heading": "Part 2 — Our Complete Experience",
+        "paragraphs": [
+          "When we decided to enter the AAC block manufacturing sector, we needed a supplier who would guide us through the entire project lifecycle.",
+          "Laxmi En-Fab provided exactly this. From civil layout planning through to equipment erection, commissioning and operator training, their team was available at every stage.",
+          "The plant reached commercial production within the committed timeline.",
+          "We strongly recommend Laxmi En-Fab to first-time AAC plant investors who need a reliable partner with complete project capability."
+        ],
+        "highlights": ["Complete civil layout guidance", "On-time commissioning", "Full operator SOP training"],
+        "closing_quote": "Laxmi's support from concept to commercial production was exactly what we needed.",
+        "closing_author": "Plant Director",
+        "closing_role": "AAC Block Plant, Gujarat"
+      },
+      "project_specs": {
+        "title": "VERIFIED PROJECT DETAILS",
+        "items": [
+          { "label": "Project", "value": "Turn-key AAC block plant" },
+          { "label": "Location", "value": "Gujarat" },
+          { "label": "Scope", "value": "Complete turn-key supply" },
+          { "label": "Support", "value": "Civil layout to SOP handover" }
+        ],
+        "disclaimer": "This story is based on a verified customer case. Specific commercial details are kept confidential at the customer's request."
+      },
+      "seo": {
+        "title": "From Concept to Commercial Production | Case Study 02 | Laxmi En-Fab",
+        "description": "A first-time AAC plant investor in Gujarat chose Laxmi En-Fab for complete turn-key support from civil layout to commercial production.",
+        "keywords": ["AAC plant turn-key", "AAC plant Gujarat", "Laxmi En-Fab commissioning"]
+      }
+    },
+    {
+      "id": "testimonial-3",
+      "number": "03",
+      "slug": "performance-proven-in-daily-production",
+      "url": "testimonial.html?id=3",
+      "badge": "CASE STUDY 03",
+      "verified": true,
+      "certificate_date": "2024",
+      "title": "Performance Proven in Daily Production",
+      "subtitle": "AAC BLOCK PLANT \u00b7 RAJASTHAN",
+      "hero": {
+        "eyebrow": "CASE STUDY 03 / VERIFIED CUSTOMER CASE",
+        "headline": "Consistent block dimensions and low wire breakage rates have given us a competitive edge.",
+        "subheadline": "Years of zero-defect production from Laxmi's precision cutting line."
+      },
+      "overview": {
+        "heading": "Part 1 — Testimonial Overview",
+        "quote": "Consistent block dimensions and low wire breakage rates have given us a clear competitive edge in the local market.",
+        "body": [
+          "The precision cutting line and reliable hydraulic systems delivered by Laxmi En-Fab have consistently maintained zero-defect production standards.",
+          "Our market reputation is built on block quality. Laxmi's machinery has been the foundation of that reputation."
+        ],
+        "author": "Plant Owner",
+        "author_role": "AAC Block Plant, Rajasthan"
+      },
+      "full_story": {
+        "heading": "Part 2 — Our Complete Experience",
+        "paragraphs": [
+          "Block quality is everything in our market. Since commissioning the Laxmi plant, we have maintained consistent block dimensions across all production runs.",
+          "Wire breakage incidents have been dramatically reduced. The cutting line design by Laxmi is precise and the hydraulic tension system maintains consistent wire tension throughout every cutting cycle.",
+          "Over three years of continuous production, we have had minimal unplanned downtime.",
+          "Our production quality has become a competitive advantage in our region."
+        ],
+        "highlights": ["Consistent block dimensions", "Low wire breakage rate", "Minimal unplanned downtime"],
+        "closing_quote": "Laxmi's cutting line has made block quality our strongest commercial advantage.",
+        "closing_author": "Plant Owner",
+        "closing_role": "AAC Block Plant, Rajasthan"
+      },
+      "project_specs": {
+        "title": "VERIFIED PROJECT DETAILS",
+        "items": [
+          { "label": "Project", "value": "AAC block plant" },
+          { "label": "Location", "value": "Rajasthan" },
+          { "label": "Years in Operation", "value": "3+" },
+          { "label": "Key Advantage", "value": "Precision cutting & block quality" }
+        ],
+        "disclaimer": "This story is based on a verified customer case. Specific commercial details are kept confidential at the customer's request."
+      },
+      "seo": {
+        "title": "Performance Proven in Daily Production | Case Study 03 | Laxmi En-Fab",
+        "description": "An AAC plant in Rajasthan has maintained zero-defect production standards for over 3 years using Laxmi En-Fab's precision cutting line.",
+        "keywords": ["AAC block quality", "AAC cutting machine", "Laxmi En-Fab cutting line", "AAC plant Rajasthan"]
+      }
+    },
+    {
+      "id": "testimonial-4",
+      "number": "04",
+      "slug": "support-beyond-machinery-supply",
+      "url": "testimonial.html?id=4",
+      "badge": "CASE STUDY 04",
+      "verified": true,
+      "certificate_date": "2024",
+      "title": "Support Beyond Machinery Supply",
+      "subtitle": "AAC BLOCK PLANT \u00b7 MADHYA PRADESH",
+      "hero": {
+        "eyebrow": "CASE STUDY 04 / VERIFIED CUSTOMER CASE",
+        "headline": "Laxmi's after-sales support has been as important as the machinery itself.",
+        "subheadline": "Responsive technical support and field service that keeps our plant running."
+      },
+      "overview": {
+        "heading": "Part 1 — Testimonial Overview",
+        "quote": "When we faced a production issue six months after commissioning, Laxmi's technical team was on-site within 48 hours.",
+        "body": [
+          "The machinery supplied by Laxmi has performed reliably since commissioning. What has impressed us most is the quality of support we have received after the plant went live.",
+          "Laxmi's after-sales team has been genuinely responsive and technically capable."
+        ],
+        "author": "Plant Manager",
+        "author_role": "AAC Block Plant, Madhya Pradesh"
+      },
+      "full_story": {
+        "heading": "Part 2 — Our Complete Experience",
+        "paragraphs": [
+          "Our AAC plant has been in operation for over two years. During that period, Laxmi's after-sales team has responded to every query professionally.",
+          "Six months after commissioning, we experienced an autoclave pressure issue. Laxmi's technical team was on-site within 48 hours and resolved the issue with minimum production disruption.",
+          "The quality of spare parts supplied by Laxmi has also been consistent.",
+          "For any new investor, we would say that after-sales support matters as much as the quality of the machinery itself. In both areas, Laxmi has delivered."
+        ],
+        "highlights": ["48-hour on-site response", "Remote troubleshooting capability", "Consistent spare parts quality"],
+        "closing_quote": "After-sales support matters as much as the machinery. Laxmi has delivered in both.",
+        "closing_author": "Plant Manager",
+        "closing_role": "AAC Block Plant, Madhya Pradesh"
+      },
+      "project_specs": {
+        "title": "VERIFIED PROJECT DETAILS",
+        "items": [
+          { "label": "Project", "value": "AAC block plant" },
+          { "label": "Location", "value": "Madhya Pradesh" },
+          { "label": "Years in Operation", "value": "2+" },
+          { "label": "Key Highlight", "value": "After-sales support & field service" }
+        ],
+        "disclaimer": "This story is based on a verified customer case. Specific commercial details are kept confidential at the customer's request."
+      },
+      "seo": {
+        "title": "Support Beyond Machinery Supply | Case Study 04 | Laxmi En-Fab",
+        "description": "An AAC plant owner in Madhya Pradesh shares how Laxmi En-Fab's after-sales support and field service have been as important as the machinery quality.",
+        "keywords": ["AAC plant after-sales support", "Laxmi En-Fab service", "AAC plant Madhya Pradesh"]
+      }
+    },
+    {
+      "id": "testimonial-5",
+      "number": "05",
+      "slug": "expanding-through-repeat-order",
+      "url": "testimonial.html?id=5",
+      "badge": "CASE STUDY 05",
+      "verified": true,
+      "certificate_date": "2024",
+      "title": "Expanding Through a Repeat Order",
+      "subtitle": "AAC BLOCK PLANT \u00b7 HARYANA",
+      "hero": {
+        "eyebrow": "CASE STUDY 05 / VERIFIED CUSTOMER CASE",
+        "headline": "When we decided to expand capacity, there was only one supplier we considered.",
+        "subheadline": "A repeat order that reflects the trust built through the first plant's performance."
+      },
+      "overview": {
+        "heading": "Part 1 — Testimonial Overview",
+        "quote": "When we decided to expand capacity, we returned to Laxmi without evaluating other suppliers.",
+        "body": [
+          "After three years of operating our first Laxmi plant, we decided to expand production capacity.",
+          "We placed a repeat order with Laxmi. The trust built through years of reliable performance made the decision simple."
+        ],
+        "author": "Director",
+        "author_role": "AAC Block Plant, Haryana"
+      },
+      "full_story": {
+        "heading": "Part 2 — Our Complete Experience",
+        "paragraphs": [
+          "Our first AAC plant from Laxmi En-Fab has been in production for over three years and has consistently met its capacity targets.",
+          "As market demand in our region grew, we decided to expand by adding a second plant at the same facility.",
+          "We did not evaluate other suppliers for the expansion. Our experience with the first Laxmi plant gave us the confidence to place a direct repeat order.",
+          "Both plants now operate in parallel, sharing utilities and support infrastructure.",
+          "Our repeat order is the clearest statement we can make about our trust in Laxmi."
+        ],
+        "highlights": ["3+ years of reliable first plant operation", "Repeat order without competitor evaluation", "Dual-plant operation at same facility"],
+        "closing_quote": "Our repeat order is the clearest statement we can make about our trust in Laxmi.",
+        "closing_author": "Director",
+        "closing_role": "AAC Block Plant, Haryana"
+      },
+      "project_specs": {
+        "title": "VERIFIED PROJECT DETAILS",
+        "items": [
+          { "label": "Project", "value": "AAC block plant (expansion)" },
+          { "label": "Location", "value": "Haryana" },
+          { "label": "Order Type", "value": "Repeat order — 2nd plant" },
+          { "label": "First Plant Vintage", "value": "3+ years in operation" }
+        ],
+        "disclaimer": "This story is based on a verified customer case. Specific commercial details are kept confidential at the customer's request."
+      },
+      "seo": {
+        "title": "Expanding Through a Repeat Order | Case Study 05 | Laxmi En-Fab",
+        "description": "An AAC plant owner in Haryana placed a repeat order with Laxmi En-Fab for a second plant driven by 3 years of reliable first plant performance.",
+        "keywords": ["AAC plant expansion", "Laxmi En-Fab repeat order", "AAC plant Haryana"]
+      }
+    },
+    {
+      "id": "testimonial-6",
+      "number": "06",
+      "slug": "automation-for-real-plant-conditions",
+      "url": "testimonial.html?id=6",
+      "badge": "CASE STUDY 06",
+      "verified": true,
+      "certificate_date": "2024",
+      "title": "Automation for Real Plant Conditions",
+      "subtitle": "AAC BLOCK PLANT \u00b7 UTTAR PRADESH",
+      "hero": {
+        "eyebrow": "CASE STUDY 06 / VERIFIED CUSTOMER CASE",
+        "headline": "Automation that works in our actual plant environment — not just on paper.",
+        "subheadline": "PLC and SCADA systems that perform consistently in real production conditions."
+      },
+      "overview": {
+        "heading": "Part 1 — Testimonial Overview",
+        "quote": "The automation systems supplied by Laxmi are designed for real plant conditions, not just for demonstrations.",
+        "body": [
+          "We invested in plant automation to reduce operator dependence and improve production consistency. The PLC and SCADA systems from Laxmi have delivered both.",
+          "Laxmi's systems are robust in our actual operating environment — including variable power supply conditions and high ambient temperatures."
+        ],
+        "author": "Plant Owner",
+        "author_role": "AAC Block Plant, Uttar Pradesh"
+      },
+      "full_story": {
+        "heading": "Part 2 — Our Complete Experience",
+        "paragraphs": [
+          "We decided to invest in a fully automated AAC plant to reduce dependence on a large skilled workforce and improve production batch consistency.",
+          "Laxmi's PLC-controlled batching system has been the most important automation element. Every batch is precisely dosed and mixed to the same parameters.",
+          "Laxmi's automation systems have performed reliably throughout. The panels are properly rated for our environment and the PLC logic has not required significant modification since commissioning.",
+          "Our production consistency has improved significantly. We now run the plant with fewer skilled operators while maintaining higher production quality.",
+          "We would specifically recommend Laxmi's automation to plants that need reliable performance in real-world Indian industrial conditions."
+        ],
+        "highlights": ["PLC-controlled precision batching", "SCADA monitoring", "Reliable in variable power supply conditions"],
+        "closing_quote": "Laxmi's automation works in real Indian plant conditions. That is what matters.",
+        "closing_author": "Plant Owner",
+        "closing_role": "AAC Block Plant, Uttar Pradesh"
+      },
+      "project_specs": {
+        "title": "VERIFIED PROJECT DETAILS",
+        "items": [
+          { "label": "Project", "value": "Automated AAC block plant" },
+          { "label": "Location", "value": "Uttar Pradesh" },
+          { "label": "Automation Scope", "value": "PLC batching + SCADA monitoring" },
+          { "label": "Key Result", "value": "Reduced operator dependence, improved consistency" }
+        ],
+        "disclaimer": "This story is based on a verified customer case. Specific commercial details are kept confidential at the customer's request."
+      },
+      "seo": {
+        "title": "Automation for Real Plant Conditions | Case Study 06 | Laxmi En-Fab",
+        "description": "An AAC plant owner in Uttar Pradesh shares how Laxmi En-Fab's PLC and SCADA automation perform reliably in real Indian industrial conditions.",
+        "keywords": ["AAC plant automation", "AAC PLC control", "Laxmi En-Fab automation", "AAC plant Uttar Pradesh"]
+      }
+    },
+    {
+      "id": "testimonial-7",
+      "number": "07",
+      "slug": "relationship-after-commissioning",
+      "url": "testimonial.html?id=7",
+      "badge": "CASE STUDY 07",
+      "verified": true,
+      "certificate_date": "2024",
+      "title": "Relationship After Commissioning",
+      "subtitle": "AAC BLOCK PLANT \u00b7 TELANGANA",
+      "hero": {
+        "eyebrow": "CASE STUDY 07 / VERIFIED CUSTOMER CASE",
+        "headline": "The relationship with Laxmi didn't end at commissioning.",
+        "subheadline": "Ongoing technical partnership that continues to add value years after handover."
+      },
+      "overview": {
+        "heading": "Part 1 — Testimonial Overview",
+        "quote": "Most suppliers hand over the plant and disappear. Laxmi has continued to be a partner years after commissioning.",
+        "body": [
+          "Our plant was commissioned over two years ago. In that time, Laxmi's team has remained available for technical consultation and process optimisation.",
+          "This ongoing relationship has helped us improve our production process beyond what we achieved at commissioning."
+        ],
+        "author": "Managing Director",
+        "author_role": "AAC Block Plant, Telangana"
+      },
+      "full_story": {
+        "heading": "Part 2 — Our Complete Experience",
+        "paragraphs": [
+          "When we evaluated AAC plant suppliers, one of our concerns was whether the supplier would remain engaged after commissioning.",
+          "Over two years after commissioning, Laxmi's technical team remains accessible for process-related questions and equipment queries.",
+          "We have used Laxmi's consultation support to refine our slurry mix design for local fly ash characteristics. The adjustments recommended by their process team have improved our block density consistency.",
+          "Laxmi's engineers have also visited our site for periodic production reviews, identifying opportunities to improve autoclave cycle efficiency."
+        ],
+        "highlights": ["Ongoing process consultation", "Mix design refinement for local fly ash", "Autoclave efficiency improvements"],
+        "closing_quote": "Laxmi's ongoing support has improved our production well beyond what we achieved at commissioning.",
+        "closing_author": "Managing Director",
+        "closing_role": "AAC Block Plant, Telangana"
+      },
+      "project_specs": {
+        "title": "VERIFIED PROJECT DETAILS",
+        "items": [
+          { "label": "Project", "value": "AAC block plant" },
+          { "label": "Location", "value": "Telangana" },
+          { "label": "Years Since Commissioning", "value": "2+" },
+          { "label": "Key Value", "value": "Ongoing post-commissioning support" }
+        ],
+        "disclaimer": "This story is based on a verified customer case. Specific commercial details are kept confidential at the customer's request."
+      },
+      "seo": {
+        "title": "Relationship After Commissioning | Case Study 07 | Laxmi En-Fab",
+        "description": "An AAC plant owner in Telangana describes how Laxmi En-Fab's ongoing post-commissioning support continues to improve plant performance.",
+        "keywords": ["AAC plant after-sales", "Laxmi En-Fab support", "AAC plant Telangana", "AAC process optimisation"]
+      }
+    },
+    {
+      "id": "testimonial-8",
+      "number": "08",
+      "slug": "engineering-reflecting-in-aac-block",
+      "url": "testimonial.html?id=8",
+      "badge": "CASE STUDY 08",
+      "verified": true,
+      "certificate_date": "2024",
+      "title": "Engineering Reflecting in AAC Block Quality",
+      "subtitle": "AAC BLOCK PLANT \u00b7 PUNJAB",
+      "hero": {
+        "eyebrow": "CASE STUDY 08 / VERIFIED CUSTOMER CASE",
+        "headline": "The engineering quality of the machinery shows in every block we produce.",
+        "subheadline": "How precision fabrication at Laxmi's workshop translates to superior AAC block quality."
+      },
+      "overview": {
+        "heading": "Part 1 — Testimonial Overview",
+        "quote": "You can see the quality of the engineering in every AAC block that comes off our production line.",
+        "body": [
+          "After visiting Laxmi's manufacturing workshop in Ahmedabad, we understood why their machinery performs differently from cheaper alternatives.",
+          "The fabrication quality, machining tolerances and component selection are at a noticeably higher standard."
+        ],
+        "author": "Plant Owner",
+        "author_role": "AAC Block Plant, Punjab"
+      },
+      "full_story": {
+        "heading": "Part 2 — Our Complete Experience",
+        "paragraphs": [
+          "Before finalising our supplier, we visited Laxmi's manufacturing facility in Ahmedabad. The facility impressed us with its fabrication standards.",
+          "After commissioning, that engineering quality has proven itself in our production. Mould handling is smooth and consistent. The cutting wire system maintains uniform tension.",
+          "The block dimensions we produce are consistently within specified tolerances. Our customers have noted the quality difference compared to other local plants.",
+          "Our production consistency has allowed us to build a premium positioning in our local market.",
+          "The engineering investment made by Laxmi reflects in our product quality. That is the simplest way we can describe our experience."
+        ],
+        "highlights": ["Factory visit confirmed engineering quality", "Consistent mould handling and cutting", "Premium block quality positioning"],
+        "closing_quote": "The engineering investment made by Laxmi in their manufacturing reflects in our product quality.",
+        "closing_author": "Plant Owner",
+        "closing_role": "AAC Block Plant, Punjab"
+      },
+      "project_specs": {
+        "title": "VERIFIED PROJECT DETAILS",
+        "items": [
+          { "label": "Project", "value": "AAC block plant" },
+          { "label": "Location", "value": "Punjab" },
+          { "label": "Pre-order", "value": "Factory visit to Laxmi works, Ahmedabad" },
+          { "label": "Key Result", "value": "Premium block quality in local market" }
+        ],
+        "disclaimer": "This story is based on a verified customer case. Specific commercial details are kept confidential at the customer's request."
+      },
+      "seo": {
+        "title": "Engineering Reflecting in AAC Block Quality | Case Study 08 | Laxmi En-Fab",
+        "description": "An AAC plant owner in Punjab describes how Laxmi En-Fab's manufacturing quality translates into superior AAC block quality.",
+        "keywords": ["AAC block quality", "Laxmi En-Fab manufacturing", "AAC plant Punjab", "AAC machinery quality"]
+      }
+    },
+    {
+      "id": "testimonial-9",
+      "number": "09",
+      "slug": "improving-steam-efficiency",
+      "url": "testimonial.html?id=9",
+      "badge": "CASE STUDY 09",
+      "verified": true,
+      "certificate_date": "2024",
+      "title": "Improving Steam Efficiency",
+      "subtitle": "AAC BLOCK PLANT \u00b7 MAHARASHTRA",
+      "hero": {
+        "eyebrow": "CASE STUDY 09 / VERIFIED CUSTOMER CASE",
+        "headline": "Laxmi's boiler and autoclave configuration reduced our steam cost significantly.",
+        "subheadline": "Better autoclave scheduling and boiler efficiency improved our operating economics."
+      },
+      "overview": {
+        "heading": "Part 1 — Testimonial Overview",
+        "quote": "Steam cost is one of the largest operating expenses in an AAC plant. Laxmi's autoclave system has helped us manage this effectively.",
+        "body": [
+          "After commissioning, Laxmi's process team worked with us to optimise our autoclave cycle scheduling. The results have meaningfully reduced our steam cost per cubic metre of production.",
+          "The autoclave pressure vessel quality and seal performance from Laxmi have also contributed to reduced steam losses."
+        ],
+        "author": "Plant Owner",
+        "author_role": "AAC Block Plant, Maharashtra"
+      },
+      "full_story": {
+        "heading": "Part 2 — Our Complete Experience",
+        "paragraphs": [
+          "Steam cost is one of the highest operating costs in an AAC plant. Laxmi's autoclave design has contributed to efficient steam utilisation.",
+          "After commissioning, Laxmi's process team helped us optimise our autoclave loading schedule to maximise production throughput per boiler firing cycle.",
+          "We also adjusted our boiler operating pressure settings with Laxmi's guidance. The result was a further improvement in steam utilisation efficiency.",
+          "Over our first year, we reduced our steam cost per cubic metre of AAC production compared to our initial estimates.",
+          "For investors concerned about operating costs, we would specifically recommend discussing autoclave configuration with Laxmi's engineering team before finalising the plant specification."
+        ],
+        "highlights": ["Optimised autoclave cycle scheduling", "Reduced steam leakage losses", "Lower steam cost per m3 of production"],
+        "closing_quote": "With Laxmi's guidance on autoclave scheduling and boiler parameters, we significantly improved our steam efficiency.",
+        "closing_author": "Plant Owner",
+        "closing_role": "AAC Block Plant, Maharashtra"
+      },
+      "project_specs": {
+        "title": "VERIFIED PROJECT DETAILS",
+        "items": [
+          { "label": "Project", "value": "AAC block plant" },
+          { "label": "Location", "value": "Maharashtra" },
+          { "label": "Focus Area", "value": "Steam efficiency & autoclave optimisation" },
+          { "label": "Key Result", "value": "Reduced steam cost per m3 of production" }
+        ],
+        "disclaimer": "This story is based on a verified customer case. Specific commercial details are kept confidential at the customer's request."
+      },
+      "seo": {
+        "title": "Improving Steam Efficiency | Case Study 09 | Laxmi En-Fab",
+        "description": "An AAC plant owner in Maharashtra reduced steam costs significantly through Laxmi En-Fab's autoclave optimisation and boiler configuration guidance.",
+        "keywords": ["AAC steam efficiency", "AAC autoclave optimisation", "Laxmi En-Fab autoclave", "AAC plant Maharashtra"]
+      }
+    },
+    {
+      "id": "testimonial-10",
+      "number": "10",
+      "slug": "confidence-for-first-time-investor",
+      "url": "testimonial.html?id=10",
+      "badge": "CASE STUDY 10",
+      "verified": true,
+      "certificate_date": "2024",
+      "title": "Confidence for a First-Time Investor",
+      "subtitle": "AAC BLOCK PLANT \u00b7 KARNATAKA",
+      "hero": {
+        "eyebrow": "CASE STUDY 10 / VERIFIED CUSTOMER CASE",
+        "headline": "Laxmi gave us the confidence to invest in AAC without prior manufacturing experience.",
+        "subheadline": "How complete project support helped a first-time investor successfully enter AAC production."
+      },
+      "overview": {
+        "heading": "Part 1 — Testimonial Overview",
+        "quote": "As a first-time investor with no prior manufacturing experience, Laxmi's guidance gave us the confidence to move forward.",
+        "body": [
+          "We came to Laxmi with a business plan but no prior experience in manufacturing or plant operations. Laxmi's team explained the complete project clearly.",
+          "Their transparency and depth of technical knowledge gave us the confidence to proceed with our investment."
+        ],
+        "author": "Director",
+        "author_role": "AAC Block Plant, Karnataka"
+      },
+      "full_story": {
+        "heading": "Part 2 — Our Complete Experience",
+        "paragraphs": [
+          "We evaluated an AAC plant investment as a business opportunity without any prior manufacturing experience. The technical complexity was initially daunting.",
+          "Laxmi's team took the time to explain every aspect of the project clearly — civil requirements, utility needs, raw material specifications, production process and operating cost structure.",
+          "They were honest about the complexities and the investment required. This transparency gave us confidence that we were working with a supplier we could trust.",
+          "Laxmi supported us through land planning, civil layout design, utility specification and equipment selection.",
+          "The plant was commissioned on schedule. We reached commercial production targets within three months of commissioning.",
+          "For first-time investors, choose a supplier who is willing to educate you about the full project. Laxmi's approach made all the difference."
+        ],
+        "highlights": ["Full project transparency", "Land planning to commissioning support", "Commercial production within 3 months"],
+        "closing_quote": "Choose a supplier who educates you about the full project. Laxmi's transparency made all the difference.",
+        "closing_author": "Director",
+        "closing_role": "AAC Block Plant, Karnataka"
+      },
+      "project_specs": {
+        "title": "VERIFIED PROJECT DETAILS",
+        "items": [
+          { "label": "Project", "value": "First AAC block plant" },
+          { "label": "Location", "value": "Karnataka" },
+          { "label": "Investor Profile", "value": "First-time manufacturer" },
+          { "label": "Key Result", "value": "Commercial production within 3 months of commissioning" }
+        ],
+        "disclaimer": "This story is based on a verified customer case. Specific commercial details are kept confidential at the customer's request."
+      },
+      "seo": {
+        "title": "Confidence for a First-Time Investor | Case Study 10 | Laxmi En-Fab",
+        "description": "A first-time AAC plant investor in Karnataka successfully entered production with Laxmi En-Fab's complete project support.",
+        "keywords": ["first time AAC plant investor", "AAC plant Karnataka", "Laxmi En-Fab support", "AAC plant commissioning India"]
+      }
+    }
+  ]
+}

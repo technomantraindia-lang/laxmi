@@ -1,7 +1,7 @@
 {
   "version": 2,
   "workspace": "laxmi",
-  "builtAt": "2026-09-02T12:30:03.512Z",
+  "builtAt": "2026-09-03T06:37:59.835Z",
   "reason": "startup",
   "policy": {
     "localOnly": true,
@@ -10,8 +10,8 @@
     "incremental": true
   },
   "stats": {
-    "reused": 8,
-    "rescanned": 47,
+    "reused": 40,
+    "rescanned": 15,
     "skipped": 0
   },
   "files": [
@@ -46,28 +46,28 @@
     {
       "path": ".clinerules/10-technomantra-project-memory.md",
       "size": 3057,
-      "mtimeMs": 1788352099195.7993,
-      "hash": "495adfaf006a4c8e9ecfb9195952a800d78ddc98fc8ec76c178345b92b04f3ab",
+      "mtimeMs": 1788417427069.6755,
+      "hash": "d2a9e36c16769397ae10389ba67e42f0c76b8b806b3622c2b58973e5f80a941c",
       "locators": []
     },
     {
       "path": ".clinerules/11-technomantra-code-knowledge.md",
       "size": 8941,
-      "mtimeMs": 1788352099195.7993,
-      "hash": "0ef037574d5f2041a744e3101fd232f3c275ea5b8494158d90af2d862e3c7aa1",
+      "mtimeMs": 1788417427054.0464,
+      "hash": "47e53568db38b7623b4cc145c5f5dde07a35abe2982be06abf8493ef245ddc54",
       "locators": []
     },
     {
       "path": ".clinerules/11-technomantra-patch-index.md",
       "size": 699,
-      "mtimeMs": 1788178493064.8132,
-      "hash": "6d649d7a82767aeb9eedba162b8036bbca465802324103d14a4f9991ba3dde36",
+      "mtimeMs": 1788352204749.5405,
+      "hash": "eb1d31280c1d01356b37c8a9fedc7ce54d73675fa438a253256167ab6fdc9f05",
       "locators": []
     },
     {
       "path": ".clinerules/12-technomantra-task-capsules.md",
       "size": 3292,
-      "mtimeMs": 1788352197327.53,
+      "mtimeMs": 1788417478580.292,
       "hash": "7d1cb7a8b04e1db83389a5cbfd67f1fcbc9bf17515fd9bc8ddef46b7237d5d60",
       "locators": []
     },
@@ -558,9 +558,9 @@
     },
     {
       "path": "academy.html",
-      "size": 21010,
-      "mtimeMs": 1788351956863.7666,
-      "hash": "a937fdd4418e7167c12f8ff76455511a886907a4a23a5af7dbcd3ab799773bf2",
+      "size": 21035,
+      "mtimeMs": 1788353699783.0386,
+      "hash": "e7ccd9cd987625e6a5ec766aa9cdf2b51be5e0b75bb8afb7a9e89524397f5783",
       "locators": [
         {
           "kind": "class",
@@ -615,352 +615,352 @@
         {
           "kind": "class",
           "name": ".editorial-about-hero__title-light",
-          "line": 33
+          "line": 34
         },
         {
           "kind": "class",
           "name": ".editorial-about-hero__lead",
-          "line": 35
+          "line": 36
         },
         {
           "kind": "class",
           "name": ".editorial-about-hero__actions",
-          "line": 38
-        },
-        {
-          "kind": "class",
-          "name": ".editorial-btn-primary",
           "line": 39
         },
         {
           "kind": "class",
-          "name": ".btn-arrow",
+          "name": ".editorial-btn-primary",
           "line": 40
         },
         {
           "kind": "class",
+          "name": ".btn-arrow",
+          "line": 41
+        },
+        {
+          "kind": "class",
           "name": ".editorial-btn-outline",
-          "line": 42
+          "line": 43
         },
         {
           "kind": "class",
           "name": ".editorial-about-hero__visual",
-          "line": 49
-        },
-        {
-          "kind": "class",
-          "name": ".editorial-about-hero__frame",
           "line": 50
         },
         {
           "kind": "class",
-          "name": ".editorial-about-hero__img",
+          "name": ".editorial-about-hero__frame",
           "line": 51
         },
         {
           "kind": "class",
-          "name": ".editorial-about-hero__overlay",
+          "name": ".editorial-about-hero__img",
           "line": 52
         },
         {
           "kind": "class",
-          "name": ".editorial-about-hero__tech-tag",
+          "name": ".editorial-about-hero__overlay",
           "line": 53
         },
         {
           "kind": "class",
-          "name": ".tech-tag__dot",
+          "name": ".editorial-about-hero__tech-tag",
           "line": 54
+        },
+        {
+          "kind": "class",
+          "name": ".tech-tag__dot",
+          "line": 55
         },
         {
           "kind": "id",
           "name": "#intro",
-          "line": 64
-        },
-        {
-          "kind": "class",
-          "name": ".machinery-stage",
-          "line": 64
-        },
-        {
-          "kind": "class",
-          "name": ".machinery-stage__inner",
           "line": 65
         },
         {
           "kind": "class",
-          "name": ".machinery-stage__header",
+          "name": ".machinery-stage",
+          "line": 65
+        },
+        {
+          "kind": "class",
+          "name": ".machinery-stage__inner",
           "line": 66
         },
         {
           "kind": "class",
-          "name": ".machinery-stage__title",
+          "name": ".machinery-stage__header",
           "line": 67
         },
         {
           "kind": "class",
-          "name": ".machinery-stage__title-light",
+          "name": ".machinery-stage__title",
           "line": 68
         },
         {
           "kind": "class",
+          "name": ".machinery-stage__title-light",
+          "line": 69
+        },
+        {
+          "kind": "class",
           "name": ".machinery-stage__desc",
-          "line": 70
+          "line": 71
         },
         {
           "kind": "class",
           "name": ".academy-seq-bar",
-          "line": 75
-        },
-        {
-          "kind": "class",
-          "name": ".academy-seq-item",
           "line": 76
         },
         {
           "kind": "class",
-          "name": ".academy-seq-line",
+          "name": ".academy-seq-item",
           "line": 77
         },
         {
           "kind": "class",
+          "name": ".academy-seq-line",
+          "line": 78
+        },
+        {
+          "kind": "class",
           "name": ".academy-seq-caption",
-          "line": 87
+          "line": 88
         },
         {
           "kind": "id",
           "name": "#journey",
-          "line": 95
+          "line": 96
         },
         {
           "kind": "class",
           "name": ".machinery-stage--alt",
-          "line": 95
+          "line": 96
         },
         {
           "kind": "class",
           "name": ".academy-micro-label",
-          "line": 98
+          "line": 99
         },
         {
           "kind": "class",
           "name": ".machinery-catalog__grid",
-          "line": 108
+          "line": 109
         },
         {
           "kind": "class",
           "name": ".machinery-card",
-          "line": 111
+          "line": 112
         },
         {
           "kind": "heading",
           "name": "Understand the Market",
-          "line": 115
+          "line": 116
         },
         {
           "kind": "class",
           "name": ".editorial-hero__btn-white",
-          "line": 121
+          "line": 122
         },
         {
           "kind": "class",
           "name": ".editorial-hero__btn-arrow",
-          "line": 122
+          "line": 123
         },
         {
           "kind": "heading",
           "name": "Design Your Plant",
-          "line": 133
+          "line": 134
         },
         {
           "kind": "heading",
           "name": "Compare Your AAC Plant",
-          "line": 151
+          "line": 152
         },
         {
           "kind": "heading",
           "name": "Efficient Your Plant",
-          "line": 169
+          "line": 170
         },
         {
           "kind": "heading",
           "name": "Expand Your Plant",
-          "line": 187
+          "line": 188
         },
         {
           "kind": "id",
           "name": "#transition",
-          "line": 205
+          "line": 206
         },
         {
           "kind": "class",
           "name": ".machinery-card-grid",
-          "line": 216
+          "line": 217
         },
         {
           "kind": "class",
           "name": ".machinery-card-grid--two",
-          "line": 216
+          "line": 217
         },
         {
           "kind": "class",
           "name": ".machinery-card__image-wrap",
-          "line": 218
-        },
-        {
-          "kind": "class",
-          "name": ".machinery-card__img",
           "line": 219
         },
         {
           "kind": "class",
-          "name": ".machinery-card__overlay-tag",
+          "name": ".machinery-card__img",
           "line": 220
         },
         {
           "kind": "class",
+          "name": ".machinery-card__overlay-tag",
+          "line": 221
+        },
+        {
+          "kind": "class",
           "name": ".machinery-card__content",
-          "line": 222
+          "line": 223
         },
         {
           "kind": "class",
           "name": ".machinery-card__title",
-          "line": 223
+          "line": 224
         },
         {
           "kind": "heading",
           "name": "Civil &amp; GA Layout Engineering",
-          "line": 223
-        },
-        {
-          "kind": "class",
-          "name": ".machinery-card__body",
           "line": 224
         },
         {
           "kind": "class",
-          "name": ".machinery-card__spec",
+          "name": ".machinery-card__body",
           "line": 225
         },
         {
           "kind": "class",
-          "name": ".machinery-text-link",
+          "name": ".machinery-card__spec",
           "line": 226
+        },
+        {
+          "kind": "class",
+          "name": ".machinery-text-link",
+          "line": 227
         },
         {
           "kind": "heading",
           "name": "In-House Manufacturing Responsibility",
-          "line": 237
+          "line": 238
         },
         {
           "kind": "id",
           "name": "#knowledge-to-plant",
-          "line": 253
+          "line": 254
         },
         {
           "kind": "class",
           "name": ".academy-lpe-grid",
-          "line": 265
-        },
-        {
-          "kind": "class",
-          "name": ".academy-lpe-item",
           "line": 266
         },
         {
           "kind": "class",
-          "name": ".academy-lpe-step",
+          "name": ".academy-lpe-item",
           "line": 267
         },
         {
           "kind": "class",
-          "name": ".academy-lpe-title",
-          "line": 268
-        },
-        {
-          "kind": "heading",
-          "name": "Understand",
+          "name": ".academy-lpe-step",
           "line": 268
         },
         {
           "kind": "class",
-          "name": ".academy-lpe-desc",
+          "name": ".academy-lpe-title",
           "line": 269
         },
         {
           "kind": "heading",
+          "name": "Understand",
+          "line": 269
+        },
+        {
+          "kind": "class",
+          "name": ".academy-lpe-desc",
+          "line": 270
+        },
+        {
+          "kind": "heading",
           "name": "Design",
-          "line": 273
+          "line": 274
         },
         {
           "kind": "heading",
           "name": "Commission",
-          "line": 278
+          "line": 279
         },
         {
           "kind": "id",
           "name": "#continuation",
-          "line": 290
+          "line": 291
         },
         {
           "kind": "class",
           "name": ".academy-research-list",
-          "line": 299
+          "line": 300
         },
         {
           "kind": "class",
           "name": ".academy-research-row",
-          "line": 301
-        },
-        {
-          "kind": "class",
-          "name": ".academy-research-num",
           "line": 302
         },
         {
           "kind": "class",
-          "name": ".academy-research-title",
+          "name": ".academy-research-num",
           "line": 303
         },
         {
           "kind": "class",
-          "name": ".academy-research-desc",
+          "name": ".academy-research-title",
           "line": 304
         },
         {
           "kind": "class",
-          "name": ".academy-research-arrow",
+          "name": ".academy-research-desc",
           "line": 305
+        },
+        {
+          "kind": "class",
+          "name": ".academy-research-arrow",
+          "line": 306
         },
         {
           "kind": "id",
           "name": "#cta",
-          "line": 334
+          "line": 335
         },
         {
           "kind": "class",
           "name": ".machinery-cta",
-          "line": 334
+          "line": 335
         },
         {
           "kind": "class",
           "name": ".machinery-hero__blueprint",
-          "line": 339
-        },
-        {
-          "kind": "class",
-          "name": ".editorial-hero__grid-svg",
           "line": 340
         },
         {
           "kind": "class",
+          "name": ".editorial-hero__grid-svg",
+          "line": 341
+        },
+        {
+          "kind": "class",
           "name": ".machinery-cta__inner",
-          "line": 346
+          "line": 347
         },
         {
           "kind": "class",
           "name": ".machinery-cta__title",
-          "line": 347
+          "line": 348
         }
       ]
     },
@@ -1547,9 +1547,9 @@
     },
     {
       "path": "contact.html",
-      "size": 21608,
-      "mtimeMs": 1788352011249.7854,
-      "hash": "18ce0fed15eb48aead94a189dd9963e388b2e1fdee76b674248941097855af32",
+      "size": 21633,
+      "mtimeMs": 1788353733885.9993,
+      "hash": "6fcaec39fbef28d33b082b3f043d0ef1d2d9a34df83715a1fe2bcea464e651d6",
       "locators": [
         {
           "kind": "class",
@@ -1604,352 +1604,352 @@
         {
           "kind": "class",
           "name": ".editorial-about-hero__title-light",
-          "line": 58
+          "line": 59
         },
         {
           "kind": "class",
           "name": ".editorial-about-hero__lead",
-          "line": 60
+          "line": 61
         },
         {
           "kind": "class",
           "name": ".editorial-about-hero__actions",
-          "line": 63
-        },
-        {
-          "kind": "class",
-          "name": ".editorial-btn-primary",
           "line": 64
         },
         {
           "kind": "class",
-          "name": ".btn-arrow",
+          "name": ".editorial-btn-primary",
           "line": 65
         },
         {
           "kind": "class",
+          "name": ".btn-arrow",
+          "line": 66
+        },
+        {
+          "kind": "class",
           "name": ".editorial-btn-outline",
-          "line": 67
+          "line": 68
         },
         {
           "kind": "class",
           "name": ".editorial-about-hero__visual",
-          "line": 74
-        },
-        {
-          "kind": "class",
-          "name": ".editorial-about-hero__frame",
           "line": 75
         },
         {
           "kind": "class",
-          "name": ".editorial-about-hero__img",
+          "name": ".editorial-about-hero__frame",
           "line": 76
         },
         {
           "kind": "class",
-          "name": ".editorial-about-hero__overlay",
+          "name": ".editorial-about-hero__img",
           "line": 77
         },
         {
           "kind": "class",
-          "name": ".editorial-about-hero__tech-tag",
+          "name": ".editorial-about-hero__overlay",
           "line": 78
         },
         {
           "kind": "class",
-          "name": ".tech-tag__dot",
+          "name": ".editorial-about-hero__tech-tag",
           "line": 79
+        },
+        {
+          "kind": "class",
+          "name": ".tech-tag__dot",
+          "line": 80
         },
         {
           "kind": "id",
           "name": "#direct-contact",
-          "line": 89
-        },
-        {
-          "kind": "class",
-          "name": ".editorial-direct-info",
-          "line": 89
-        },
-        {
-          "kind": "class",
-          "name": ".editorial-direct-info__inner",
           "line": 90
         },
         {
           "kind": "class",
+          "name": ".editorial-direct-info",
+          "line": 90
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-direct-info__inner",
+          "line": 91
+        },
+        {
+          "kind": "class",
           "name": ".editorial-direct-info__header",
-          "line": 92
+          "line": 93
         },
         {
           "kind": "class",
           "name": ".editorial-direct-info__title",
-          "line": 94
+          "line": 95
         },
         {
           "kind": "heading",
           "name": "Talk directly to the team.",
-          "line": 94
-        },
-        {
-          "kind": "class",
-          "name": ".editorial-direct-info__sub",
           "line": 95
         },
         {
           "kind": "class",
+          "name": ".editorial-direct-info__sub",
+          "line": 96
+        },
+        {
+          "kind": "class",
           "name": ".editorial-direct-info__rows",
-          "line": 98
+          "line": 99
         },
         {
           "kind": "class",
           "name": ".editorial-info-row",
-          "line": 101
-        },
-        {
-          "kind": "class",
-          "name": ".editorial-info-row__num",
           "line": 102
         },
         {
           "kind": "class",
-          "name": ".editorial-info-row__label",
+          "name": ".editorial-info-row__num",
           "line": 103
         },
         {
           "kind": "class",
-          "name": ".editorial-info-row__content",
+          "name": ".editorial-info-row__label",
           "line": 104
         },
         {
           "kind": "class",
-          "name": ".editorial-info-row__value",
+          "name": ".editorial-info-row__content",
           "line": 105
         },
         {
           "kind": "class",
-          "name": ".editorial-info-row__sep",
+          "name": ".editorial-info-row__value",
           "line": 106
         },
         {
           "kind": "class",
-          "name": ".editorial-info-row__action",
-          "line": 109
+          "name": ".editorial-info-row__sep",
+          "line": 107
         },
         {
           "kind": "class",
-          "name": ".action-arrow",
+          "name": ".editorial-info-row__action",
           "line": 110
         },
         {
           "kind": "class",
+          "name": ".action-arrow",
+          "line": 111
+        },
+        {
+          "kind": "class",
           "name": ".editorial-info-row__address",
-          "line": 133
+          "line": 134
         },
         {
           "kind": "id",
           "name": "#enquiry-section",
-          "line": 148
-        },
-        {
-          "kind": "class",
-          "name": ".editorial-enquiry-section",
-          "line": 148
-        },
-        {
-          "kind": "class",
-          "name": ".editorial-enquiry-section__inner",
           "line": 149
         },
         {
           "kind": "class",
+          "name": ".editorial-enquiry-section",
+          "line": 149
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-enquiry-section__inner",
+          "line": 150
+        },
+        {
+          "kind": "class",
           "name": ".editorial-enquiry-left",
-          "line": 152
+          "line": 153
         },
         {
           "kind": "class",
           "name": ".editorial-enquiry-left__title",
-          "line": 154
+          "line": 155
         },
         {
           "kind": "heading",
           "name": "Tell us what you're building.",
-          "line": 154
-        },
-        {
-          "kind": "class",
-          "name": ".editorial-enquiry-left__desc",
           "line": 155
         },
         {
           "kind": "class",
-          "name": ".editorial-reassurance",
-          "line": 159
+          "name": ".editorial-enquiry-left__desc",
+          "line": 156
         },
         {
           "kind": "class",
-          "name": ".reassurance-icon",
+          "name": ".editorial-reassurance",
           "line": 160
         },
         {
           "kind": "class",
-          "name": ".project-context-helper",
-          "line": 165
+          "name": ".reassurance-icon",
+          "line": 161
         },
         {
           "kind": "class",
-          "name": ".context-helper__title",
+          "name": ".project-context-helper",
           "line": 166
         },
         {
           "kind": "class",
-          "name": ".context-helper__list",
+          "name": ".context-helper__title",
           "line": 167
         },
         {
           "kind": "class",
-          "name": ".context-helper__num",
-          "line": 169
+          "name": ".context-helper__list",
+          "line": 168
         },
         {
           "kind": "class",
-          "name": ".helper-arrow",
+          "name": ".context-helper__num",
           "line": 170
         },
         {
           "kind": "class",
-          "name": ".editorial-enquiry-right",
-          "line": 189
+          "name": ".helper-arrow",
+          "line": 171
         },
         {
           "kind": "class",
-          "name": ".editorial-form-header",
+          "name": ".editorial-enquiry-right",
           "line": 190
         },
         {
           "kind": "class",
-          "name": ".editorial-form-header__title",
+          "name": ".editorial-form-header",
           "line": 191
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-form-header__title",
+          "line": 192
         },
         {
           "kind": "heading",
           "name": "Tell us about your project.",
-          "line": 191
+          "line": 192
         },
         {
           "kind": "class",
           "name": ".editorial-form-header__sub",
-          "line": 192
+          "line": 193
         },
         {
           "kind": "id",
           "name": "#b2b-contact-form",
-          "line": 195
+          "line": 196
         },
         {
           "kind": "class",
           "name": ".editorial-form",
-          "line": 195
+          "line": 196
         },
         {
           "kind": "class",
           "name": ".form-grid-two",
-          "line": 197
+          "line": 198
         },
         {
           "kind": "class",
           "name": ".form-field-group",
-          "line": 200
+          "line": 201
         },
         {
           "kind": "class",
           "name": ".form-label",
-          "line": 201
+          "line": 202
         },
         {
           "kind": "id",
           "name": "#form-name",
-          "line": 202
+          "line": 203
         },
         {
           "kind": "class",
           "name": ".form-input",
-          "line": 202
+          "line": 203
         },
         {
           "kind": "id",
           "name": "#error-name",
-          "line": 203
+          "line": 204
         },
         {
           "kind": "class",
           "name": ".form-error-msg",
-          "line": 203
+          "line": 204
         },
         {
           "kind": "id",
           "name": "#form-company",
-          "line": 209
-        },
-        {
-          "kind": "id",
-          "name": "#error-company",
           "line": 210
         },
         {
           "kind": "id",
-          "name": "#form-email",
-          "line": 220
+          "name": "#error-company",
+          "line": 211
         },
         {
           "kind": "id",
-          "name": "#error-email",
+          "name": "#form-email",
           "line": 221
         },
         {
           "kind": "id",
-          "name": "#form-phone",
-          "line": 227
+          "name": "#error-email",
+          "line": 222
         },
         {
           "kind": "id",
-          "name": "#error-phone",
+          "name": "#form-phone",
           "line": 228
         },
         {
           "kind": "id",
+          "name": "#error-phone",
+          "line": 229
+        },
+        {
+          "kind": "id",
           "name": "#form-requirement",
-          "line": 238
+          "line": 239
         },
         {
           "kind": "class",
           "name": ".form-select",
-          "line": 238
+          "line": 239
         },
         {
           "kind": "id",
           "name": "#error-requirement",
-          "line": 247
+          "line": 248
         },
         {
           "kind": "id",
           "name": "#form-location",
-          "line": 253
+          "line": 254
         },
         {
           "kind": "id",
           "name": "#form-capacity",
-          "line": 261
+          "line": 262
         },
         {
           "kind": "id",
           "name": "#form-message",
-          "line": 267
+          "line": 268
         },
         {
           "kind": "class",
           "name": ".form-textarea",
-          "line": 267
+          "line": 268
         }
       ]
     },
@@ -2576,9 +2576,9 @@
     },
     {
       "path": "css/homepage.css",
-      "size": 167112,
-      "mtimeMs": 1788349602011.2627,
-      "hash": "54b1bc73d5a519a617101c07be8b822e234045bef65c53b89237ac0f4b3fbf55",
+      "size": 168342,
+      "mtimeMs": 1788354992697.1313,
+      "hash": "fad2a2de3f6521dc9d7d6d4599692a786669c07bda00117b1ff8205adc40b344",
       "locators": [
         {
           "kind": "custom-property",
@@ -2647,338 +2647,338 @@
         },
         {
           "kind": "selector",
-          "name": ".editorial-heading-row .section__heading",
-          "line": 78
-        },
-        {
-          "kind": "selector",
-          "name": ".editorial-heading-row",
+          "name": ".about-page .machinery-stage__title",
           "line": 85
         },
         {
           "kind": "selector",
+          "name": ".about-page .editorial-chain-section .machinery-stage__title",
+          "line": 95
+        },
+        {
+          "kind": "selector",
+          "name": ".about-page .machinery-stage__title-light",
+          "line": 104
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-heading-row .section__heading",
+          "line": 111
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-heading-row",
+          "line": 118
+        },
+        {
+          "kind": "selector",
           "name": ".editorial-heading-row > div",
-          "line": 93
+          "line": 126
         },
         {
           "kind": "selector",
           "name": ".editorial-lead",
-          "line": 97
+          "line": 130
         },
         {
           "kind": "property-use",
           "name": "--hp-ink-soft",
-          "line": 99
-        },
-        {
-          "kind": "selector",
-          "name": ".editorial-split",
-          "line": 105
-        },
-        {
-          "kind": "selector",
-          "name": ".editorial-split--media-left .editorial-split__media",
-          "line": 112
-        },
-        {
-          "kind": "selector",
-          "name": ".editorial-media-frame",
-          "line": 116
-        },
-        {
-          "kind": "property-use",
-          "name": "--hp-radius",
-          "line": 118
-        },
-        {
-          "kind": "property-use",
-          "name": "--hp-sky",
-          "line": 122
-        },
-        {
-          "kind": "selector",
-          "name": ".editorial-media-frame img",
-          "line": 125
-        },
-        {
-          "kind": "selector",
-          "name": ".editorial-media-caption",
           "line": 132
         },
         {
           "kind": "selector",
+          "name": ".editorial-split",
+          "line": 138
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-split--media-left .editorial-split__media",
+          "line": 145
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-media-frame",
+          "line": 149
+        },
+        {
+          "kind": "property-use",
+          "name": "--hp-radius",
+          "line": 151
+        },
+        {
+          "kind": "property-use",
+          "name": "--hp-sky",
+          "line": 155
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-media-frame img",
+          "line": 158
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-media-caption",
+          "line": 165
+        },
+        {
+          "kind": "selector",
           "name": ".editorial-split__content .eyebrow",
-          "line": 146
-        },
-        {
-          "kind": "selector",
-          "name": ".proof-list",
-          "line": 150
-        },
-        {
-          "kind": "selector",
-          "name": ".proof-list li",
-          "line": 159
-        },
-        {
-          "kind": "property-use",
-          "name": "--hp-ink",
-          "line": 163
-        },
-        {
-          "kind": "selector",
-          "name": ".proof-list li::before",
-          "line": 167
-        },
-        {
-          "kind": "property-use",
-          "name": "--hp-navy",
-          "line": 175
-        },
-        {
-          "kind": "property-use",
-          "name": "--hp-sky-2",
-          "line": 176
-        },
-        {
-          "kind": "selector",
-          "name": ".proof-list--two-col",
           "line": 179
         },
         {
           "kind": "selector",
+          "name": ".proof-list",
+          "line": 183
+        },
+        {
+          "kind": "selector",
+          "name": ".proof-list li",
+          "line": 192
+        },
+        {
+          "kind": "property-use",
+          "name": "--hp-ink",
+          "line": 196
+        },
+        {
+          "kind": "selector",
+          "name": ".proof-list li::before",
+          "line": 200
+        },
+        {
+          "kind": "property-use",
+          "name": "--hp-navy",
+          "line": 208
+        },
+        {
+          "kind": "property-use",
+          "name": "--hp-sky-2",
+          "line": 209
+        },
+        {
+          "kind": "selector",
+          "name": ".proof-list--two-col",
+          "line": 212
+        },
+        {
+          "kind": "selector",
           "name": ".editorial-hero",
-          "line": 186
+          "line": 219
         },
         {
           "kind": "property-use",
           "name": "--laxmi-navy-deep",
-          "line": 193
+          "line": 226
         },
         {
           "kind": "property-use",
           "name": "--laxmi-white",
-          "line": 194
+          "line": 227
         },
         {
           "kind": "selector",
           "name": ".editorial-hero__media",
-          "line": 198
-        },
-        {
-          "kind": "selector",
-          "name": ".editorial-hero__video-wrap",
-          "line": 204
-        },
-        {
-          "kind": "selector",
-          "name": ".editorial-hero__video",
-          "line": 210
-        },
-        {
-          "kind": "property-use",
-          "name": "--ease-out-expo",
-          "line": 217
-        },
-        {
-          "kind": "selector",
-          "name": ".editorial-hero.is-loaded .editorial-hero__video",
-          "line": 222
-        },
-        {
-          "kind": "selector",
-          "name": ".editorial-hero__overlay",
           "line": 231
         },
         {
           "kind": "selector",
+          "name": ".editorial-hero__video-wrap",
+          "line": 237
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__video",
+          "line": 243
+        },
+        {
+          "kind": "property-use",
+          "name": "--ease-out-expo",
+          "line": 250
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero.is-loaded .editorial-hero__video",
+          "line": 255
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__overlay",
+          "line": 264
+        },
+        {
+          "kind": "selector",
           "name": ".editorial-hero__blueprint",
-          "line": 260
+          "line": 293
         },
         {
           "kind": "property-use",
           "name": "--ease-out-quad",
-          "line": 266
+          "line": 299
         },
         {
           "kind": "selector",
           "name": ".editorial-hero.is-loaded .editorial-hero__blueprint",
-          "line": 269
+          "line": 302
         },
         {
           "kind": "selector",
           "name": ".editorial-hero__grid-svg",
-          "line": 273
+          "line": 306
         },
         {
           "kind": "selector",
           "name": ".editorial-hero__coord",
-          "line": 281
+          "line": 314
         },
         {
           "kind": "property-use",
           "name": "--font-mono",
-          "line": 283
-        },
-        {
-          "kind": "selector",
-          "name": ".editorial-hero__coord--top",
-          "line": 291
-        },
-        {
-          "kind": "selector",
-          "name": ".editorial-hero__coord--bottom",
-          "line": 296
-        },
-        {
-          "kind": "selector",
-          "name": ".editorial-hero__inner",
-          "line": 303
-        },
-        {
-          "kind": "selector",
-          "name": ".editorial-hero__content",
           "line": 316
         },
         {
           "kind": "selector",
-          "name": ".editorial-hero__eyebrow",
+          "name": ".editorial-hero__coord--top",
           "line": 324
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__coord--bottom",
+          "line": 329
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__inner",
+          "line": 336
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__content",
+          "line": 349
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__eyebrow",
+          "line": 357
         },
         {
           "kind": "property-use",
           "name": "--font-primary",
-          "line": 327
+          "line": 360
         },
         {
           "kind": "selector",
           "name": ".editorial-hero__title",
-          "line": 339
+          "line": 372
         },
         {
           "kind": "selector",
           "name": ".editorial-hero__title-light",
-          "line": 351
+          "line": 384
         },
         {
           "kind": "selector",
           "name": ".editorial-hero__sub",
-          "line": 357
-        },
-        {
-          "kind": "selector",
-          "name": ".editorial-hero__actions",
-          "line": 368
-        },
-        {
-          "kind": "selector",
-          "name": ".editorial-hero__btn",
-          "line": 378
-        },
-        {
-          "kind": "property-use",
-          "name": "--radius-md",
-          "line": 387
-        },
-        {
-          "kind": "property-use",
-          "name": "--duration-fast",
           "line": 390
         },
         {
           "kind": "selector",
-          "name": ".editorial-hero__btn-arrow",
-          "line": 397
+          "name": ".editorial-hero__actions",
+          "line": 401
         },
         {
           "kind": "selector",
-          "name": ".editorial-hero__btn--primary",
-          "line": 404
-        },
-        {
-          "kind": "property-use",
-          "name": "--laxmi-blue",
-          "line": 406
-        },
-        {
-          "kind": "selector",
-          "name": ".editorial-hero__btn--primary:hover",
+          "name": ".editorial-hero__btn",
           "line": 411
         },
         {
           "kind": "property-use",
+          "name": "--radius-md",
+          "line": 420
+        },
+        {
+          "kind": "property-use",
+          "name": "--duration-fast",
+          "line": 423
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__btn-arrow",
+          "line": 430
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__btn--primary",
+          "line": 437
+        },
+        {
+          "kind": "property-use",
+          "name": "--laxmi-blue",
+          "line": 439
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__btn--primary:hover",
+          "line": 444
+        },
+        {
+          "kind": "property-use",
           "name": "--laxmi-blue-light",
-          "line": 413
+          "line": 446
         },
         {
           "kind": "selector",
           "name": ".editorial-hero__btn--primary:hover .editorial-hero__btn-arrow",
-          "line": 417
+          "line": 450
         },
         {
           "kind": "selector",
           "name": ".editorial-hero__btn--secondary",
-          "line": 422
+          "line": 455
         },
         {
           "kind": "property-use",
           "name": "--laxmi-white-55",
-          "line": 425
-        },
-        {
-          "kind": "selector",
-          "name": ".editorial-hero__btn--secondary:hover",
-          "line": 428
-        },
-        {
-          "kind": "selector",
-          "name": ".editorial-hero__btn--secondary:hover .editorial-hero__btn-arrow",
-          "line": 434
-        },
-        {
-          "kind": "selector",
-          "name": ".editorial-hero__btn-white",
-          "line": 438
-        },
-        {
-          "kind": "selector",
-          "name": ".editorial-hero__btn-white:hover",
-          "line": 453
-        },
-        {
-          "kind": "selector",
-          "name": ".editorial-hero__link-text",
           "line": 458
         },
         {
           "kind": "selector",
+          "name": ".editorial-hero__btn--secondary:hover",
+          "line": 461
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__btn--secondary:hover .editorial-hero__btn-arrow",
+          "line": 467
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__btn-white",
+          "line": 471
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__btn-white:hover",
+          "line": 486
+        },
+        {
+          "kind": "selector",
+          "name": ".editorial-hero__link-text",
+          "line": 491
+        },
+        {
+          "kind": "selector",
           "name": ".editorial-hero__link-text:hover",
-          "line": 470
+          "line": 503
         },
         {
           "kind": "selector",
           "name": ".editorial-hero__link-text:hover .editorial-hero__btn-arrow",
-          "line": 474
+          "line": 507
         },
         {
           "kind": "selector",
           "name": ".editorial-hero__company-label",
-          "line": 479
-        },
-        {
-          "kind": "property-use",
-          "name": "--tech-size",
-          "line": 481
-        },
-        {
-          "kind": "property-use",
-          "name": "--tech-weight",
-          "line": 482
-        },
-        {
-          "kind": "property-use",
-          "name": "--tech-tracking",
-          "line": 483
+          "line": 512
         }
       ]
     },
@@ -3435,9 +3435,9 @@
     },
     {
       "path": "css/solution.css",
-      "size": 7094,
-      "mtimeMs": 1788351001121.5593,
-      "hash": "4e1af21014b7cd0a5b82c0523dda2143fff7167f5fe4bb9c7430a79f37a8cbd4",
+      "size": 7836,
+      "mtimeMs": 1788352529460.146,
+      "hash": "12bfdd234bc30d361dfed3fe7a616801d8a4e1decec726c0032fd68237f4f40e",
       "locators": [
         {
           "kind": "selector",
@@ -3511,138 +3511,168 @@
         },
         {
           "kind": "selector",
-          "name": ".solution-intro-grid",
+          "name": ".solution-sys-intro",
           "line": 109
         },
         {
           "kind": "selector",
-          "name": ".solution-intro-statement",
-          "line": 116
+          "name": ".solution-sys-intro__inner",
+          "line": 114
         },
         {
           "kind": "selector",
-          "name": ".solution-intro-body",
-          "line": 125
+          "name": ".solution-sys-intro__eyebrow",
+          "line": 119
         },
         {
           "kind": "selector",
-          "name": ".solution-intro-media",
-          "line": 132
+          "name": ".solution-sys-intro__headline",
+          "line": 128
         },
         {
           "kind": "selector",
-          "name": ".solution-intro-img",
-          "line": 139
+          "name": ".solution-sys-intro__body",
+          "line": 138
+        },
+        {
+          "kind": "selector",
+          "name": ".solution-sys-intro__media-card",
+          "line": 146
+        },
+        {
+          "kind": "selector",
+          "name": ".solution-sys-intro__img",
+          "line": 155
+        },
+        {
+          "kind": "selector",
+          "name": ".solution-sys-intro__process-bar",
+          "line": 163
+        },
+        {
+          "kind": "selector",
+          "name": ".solution-sys-intro__arrow",
+          "line": 178
+        },
+        {
+          "kind": "property-use",
+          "name": "--hp-gold",
+          "line": 179
         },
         {
           "kind": "selector",
           "name": ".journey-timeline-wrap",
-          "line": 148
-        },
-        {
-          "kind": "selector",
-          "name": ".journey-stage-nav",
-          "line": 156
-        },
-        {
-          "kind": "selector",
-          "name": ".journey-stage-btn",
-          "line": 164
-        },
-        {
-          "kind": "selector",
-          "name": ".journey-stage-btn:hover",
-          "line": 178
-        },
-        {
-          "kind": "selector",
-          "name": ".journey-stage-btn.is-active",
           "line": 183
         },
         {
           "kind": "selector",
-          "name": ".journey-stage-num",
-          "line": 190
+          "name": ".journey-stage-nav",
+          "line": 191
         },
         {
           "kind": "selector",
-          "name": ".journey-stage-btn.is-active .journey-stage-num",
-          "line": 196
+          "name": ".journey-stage-btn",
+          "line": 199
         },
         {
           "kind": "selector",
-          "name": ".journey-stage-title",
-          "line": 200
+          "name": ".journey-stage-btn:hover",
+          "line": 213
         },
         {
           "kind": "selector",
-          "name": ".journey-stage-panel",
-          "line": 206
-        },
-        {
-          "kind": "selector",
-          "name": ".journey-equipment-pills",
+          "name": ".journey-stage-btn.is-active",
           "line": 218
         },
         {
           "kind": "selector",
-          "name": ".journey-equipment-pill",
+          "name": ".journey-stage-num",
           "line": 225
         },
         {
           "kind": "selector",
+          "name": ".journey-stage-btn.is-active .journey-stage-num",
+          "line": 231
+        },
+        {
+          "kind": "selector",
+          "name": ".journey-stage-title",
+          "line": 235
+        },
+        {
+          "kind": "selector",
+          "name": ".journey-stage-panel",
+          "line": 241
+        },
+        {
+          "kind": "selector",
+          "name": ".journey-equipment-pills",
+          "line": 253
+        },
+        {
+          "kind": "selector",
+          "name": ".journey-equipment-pill",
+          "line": 260
+        },
+        {
+          "kind": "selector",
           "name": ".product-story-grid",
-          "line": 237
+          "line": 272
         },
         {
           "kind": "selector",
           "name": ".product-story-card",
-          "line": 244
+          "line": 279
         },
         {
           "kind": "selector",
           "name": ".product-story-img-wrap",
-          "line": 254
+          "line": 289
         },
         {
           "kind": "selector",
           "name": ".product-story-img",
-          "line": 262
+          "line": 297
         },
         {
           "kind": "selector",
           "name": ".product-story-content",
-          "line": 269
+          "line": 304
         },
         {
           "kind": "selector",
           "name": ".product-story-title",
-          "line": 277
+          "line": 312
         },
         {
           "kind": "selector",
           "name": ".product-story-desc",
-          "line": 284
+          "line": 319
         },
         {
           "kind": "selector",
           "name": ".decision-seq-grid",
-          "line": 292
+          "line": 327
         },
         {
           "kind": "selector",
           "name": ".decision-seq-card",
-          "line": 299
+          "line": 334
         },
         {
           "kind": "selector",
           "name": ".decision-seq-num",
-          "line": 309
+          "line": 344
         },
         {
           "kind": "selector",
           "name": ".decision-seq-title",
-          "line": 317
+          "line": 352
+        },
+        {
+          "kind": "selector",
+          "name": ".solution-intro-grid",
+          "line": 361
         }
       ]
     },
@@ -3753,9 +3783,9 @@
     },
     {
       "path": "engineering-center.html",
-      "size": 18166,
-      "mtimeMs": 1788351969369.8018,
-      "hash": "99104ea4bf181fe57105d586a14a3e991a07a31b4119cf45813637f461861a29",
+      "size": 18194,
+      "mtimeMs": 1788354548291.3408,
+      "hash": "bd840c2f32acc4cbc91773d96202e2ec71aff8488a145af4b10dc9022cbbaa8a",
       "locators": [
         {
           "kind": "class",
@@ -3810,342 +3840,342 @@
         {
           "kind": "class",
           "name": ".editorial-about-hero__title-light",
-          "line": 33
+          "line": 34
         },
         {
           "kind": "class",
           "name": ".editorial-about-hero__lead",
-          "line": 35
+          "line": 36
         },
         {
           "kind": "class",
           "name": ".editorial-about-hero__actions",
-          "line": 38
-        },
-        {
-          "kind": "class",
-          "name": ".editorial-btn-primary",
           "line": 39
         },
         {
           "kind": "class",
-          "name": ".btn-arrow",
+          "name": ".editorial-btn-primary",
           "line": 40
         },
         {
           "kind": "class",
+          "name": ".btn-arrow",
+          "line": 41
+        },
+        {
+          "kind": "class",
           "name": ".editorial-btn-outline",
-          "line": 42
+          "line": 43
         },
         {
           "kind": "class",
           "name": ".editorial-about-hero__visual",
-          "line": 49
-        },
-        {
-          "kind": "class",
-          "name": ".editorial-about-hero__frame",
           "line": 50
         },
         {
           "kind": "class",
-          "name": ".editorial-about-hero__img",
+          "name": ".editorial-about-hero__frame",
           "line": 51
         },
         {
           "kind": "class",
-          "name": ".editorial-about-hero__overlay",
+          "name": ".editorial-about-hero__img",
           "line": 52
         },
         {
           "kind": "class",
-          "name": ".editorial-about-hero__tech-tag",
+          "name": ".editorial-about-hero__overlay",
           "line": 53
         },
         {
           "kind": "class",
-          "name": ".tech-tag__dot",
+          "name": ".editorial-about-hero__tech-tag",
           "line": 54
+        },
+        {
+          "kind": "class",
+          "name": ".tech-tag__dot",
+          "line": 55
         },
         {
           "kind": "id",
           "name": "#process",
-          "line": 64
-        },
-        {
-          "kind": "class",
-          "name": ".machinery-stage",
-          "line": 64
-        },
-        {
-          "kind": "class",
-          "name": ".machinery-stage__inner",
           "line": 65
         },
         {
           "kind": "class",
-          "name": ".machinery-stage__header",
+          "name": ".machinery-stage",
+          "line": 65
+        },
+        {
+          "kind": "class",
+          "name": ".machinery-stage__inner",
           "line": 66
         },
         {
           "kind": "class",
-          "name": ".academy-micro-label",
+          "name": ".machinery-stage__header",
           "line": 67
         },
         {
           "kind": "class",
-          "name": ".machinery-stage__title",
+          "name": ".academy-micro-label",
           "line": 68
         },
         {
           "kind": "class",
-          "name": ".machinery-stage__title-light",
+          "name": ".machinery-stage__title",
           "line": 69
         },
         {
           "kind": "class",
+          "name": ".machinery-stage__title-light",
+          "line": 70
+        },
+        {
+          "kind": "class",
           "name": ".machinery-stage__desc",
-          "line": 71
+          "line": 72
         },
         {
           "kind": "class",
           "name": ".machinery-catalog__grid",
-          "line": 77
+          "line": 78
         },
         {
           "kind": "class",
           "name": ".machinery-card",
-          "line": 80
+          "line": 81
         },
         {
           "kind": "heading",
           "name": "Raw Material Prep",
-          "line": 82
+          "line": 83
         },
         {
           "kind": "heading",
           "name": "Slurry &amp; Binder Mixing",
-          "line": 92
+          "line": 93
         },
         {
           "kind": "heading",
           "name": "Batching &amp; Dosing",
-          "line": 102
+          "line": 103
         },
         {
           "kind": "heading",
           "name": "Pouring &amp; Moulding",
-          "line": 112
+          "line": 113
         },
         {
           "kind": "heading",
           "name": "Precuring &amp; Rising",
-          "line": 122
+          "line": 123
         },
         {
           "kind": "heading",
           "name": "High-Precision Cutting",
-          "line": 132
+          "line": 133
         },
         {
           "kind": "heading",
           "name": "Autoclave Hydrothermal Curing",
-          "line": 142
+          "line": 143
         },
         {
           "kind": "heading",
           "name": "Cubing, Separating &amp; Packing",
-          "line": 152
+          "line": 153
         },
         {
           "kind": "id",
           "name": "#layout",
-          "line": 164
+          "line": 165
         },
         {
           "kind": "class",
           "name": ".machinery-stage--alt",
-          "line": 164
+          "line": 165
         },
         {
           "kind": "class",
           "name": ".editorial-hero__btn-white",
-          "line": 182
+          "line": 183
         },
         {
           "kind": "class",
           "name": ".editorial-hero__btn-arrow",
-          "line": 183
+          "line": 184
         },
         {
           "kind": "id",
           "name": "#integration",
-          "line": 191
+          "line": 192
         },
         {
           "kind": "class",
           "name": ".academy-lpe-grid",
-          "line": 202
-        },
-        {
-          "kind": "class",
-          "name": ".academy-lpe-item",
           "line": 203
         },
         {
           "kind": "class",
-          "name": ".academy-lpe-step",
+          "name": ".academy-lpe-item",
           "line": 204
         },
         {
           "kind": "class",
-          "name": ".academy-lpe-title",
-          "line": 205
-        },
-        {
-          "kind": "heading",
-          "name": "What happens?",
+          "name": ".academy-lpe-step",
           "line": 205
         },
         {
           "kind": "class",
-          "name": ".academy-lpe-desc",
+          "name": ".academy-lpe-title",
           "line": 206
         },
         {
           "kind": "heading",
+          "name": "What happens?",
+          "line": 206
+        },
+        {
+          "kind": "class",
+          "name": ".academy-lpe-desc",
+          "line": 207
+        },
+        {
+          "kind": "heading",
           "name": "What performs it?",
-          "line": 210
+          "line": 211
         },
         {
           "kind": "heading",
           "name": "Where is it?",
-          "line": 215
+          "line": 216
         },
         {
           "kind": "id",
           "name": "#proof",
-          "line": 223
+          "line": 224
         },
         {
           "kind": "class",
           "name": ".machinery-card-grid",
-          "line": 234
+          "line": 235
         },
         {
           "kind": "class",
           "name": ".machinery-card-grid--two",
-          "line": 234
+          "line": 235
         },
         {
           "kind": "class",
           "name": ".machinery-card__image-wrap",
-          "line": 236
-        },
-        {
-          "kind": "class",
-          "name": ".machinery-card__img",
           "line": 237
         },
         {
           "kind": "class",
-          "name": ".machinery-card__overlay-tag",
+          "name": ".machinery-card__img",
           "line": 238
         },
         {
           "kind": "class",
+          "name": ".machinery-card__overlay-tag",
+          "line": 239
+        },
+        {
+          "kind": "class",
           "name": ".machinery-card__content",
-          "line": 240
+          "line": 241
         },
         {
           "kind": "class",
           "name": ".machinery-card__title",
-          "line": 241
+          "line": 242
         },
         {
           "kind": "heading",
           "name": "In-House Manufacturing Workshop",
-          "line": 241
-        },
-        {
-          "kind": "class",
-          "name": ".machinery-card__body",
           "line": 242
         },
         {
           "kind": "class",
-          "name": ".machinery-card__spec",
+          "name": ".machinery-card__body",
           "line": 243
         },
         {
           "kind": "class",
-          "name": ".machinery-text-link",
+          "name": ".machinery-card__spec",
           "line": 244
+        },
+        {
+          "kind": "class",
+          "name": ".machinery-text-link",
+          "line": 245
         },
         {
           "kind": "heading",
           "name": "Active Plant Installations &amp; Proof",
-          "line": 255
+          "line": 256
         },
         {
           "kind": "id",
           "name": "#cta",
-          "line": 267
-        },
-        {
-          "kind": "class",
-          "name": ".machinery-cta",
-          "line": 267
-        },
-        {
-          "kind": "class",
-          "name": ".machinery-hero__blueprint",
           "line": 268
         },
         {
           "kind": "class",
-          "name": ".editorial-hero__grid-svg",
+          "name": ".machinery-cta",
+          "line": 268
+        },
+        {
+          "kind": "class",
+          "name": ".machinery-hero__blueprint",
           "line": 269
         },
         {
           "kind": "class",
-          "name": ".machinery-cta__inner",
-          "line": 275
+          "name": ".editorial-hero__grid-svg",
+          "line": 270
         },
         {
           "kind": "class",
-          "name": ".machinery-cta__title",
+          "name": ".machinery-cta__inner",
           "line": 276
         },
         {
           "kind": "class",
-          "name": ".machinery-cta__title-light",
+          "name": ".machinery-cta__title",
           "line": 277
         },
         {
           "kind": "class",
+          "name": ".machinery-cta__title-light",
+          "line": 278
+        },
+        {
+          "kind": "class",
           "name": ".machinery-cta__sub",
-          "line": 279
+          "line": 280
         },
         {
           "kind": "class",
           "name": ".machinery-cta__action",
-          "line": 282
+          "line": 283
         },
         {
           "kind": "class",
           "name": ".editorial-hero__link-text",
-          "line": 286
+          "line": 287
         },
         {
           "kind": "class",
           "name": ".machinery-cta__contact-info",
-          "line": 290
+          "line": 291
         },
         {
           "kind": "id",
           "name": "#site-footer",
-          "line": 300
+          "line": 301
         }
       ]
     },
@@ -4784,9 +4814,9 @@
     },
     {
       "path": "js/solution.js",
-      "size": 28644,
-      "mtimeMs": 1788352020552.329,
-      "hash": "39588790413b5526c264ff42c7da60df92623010a4538a4d31d8fae357add04f",
+      "size": 29423,
+      "mtimeMs": 1788352538838.7014,
+      "hash": "db3d655b6327b9e3159342cdb11fc1c8103e5f4f1a2d9743667670f8e07d1885",
       "locators": [
         {
           "kind": "function",
@@ -4811,67 +4841,67 @@
         {
           "kind": "function",
           "name": "renderProductionJourney",
-          "line": 168
+          "line": 183
         },
         {
           "kind": "function",
           "name": "initJourneyListeners",
-          "line": 226
+          "line": 241
         },
         {
           "kind": "function",
           "name": "renderSystemView",
-          "line": 263
+          "line": 278
         },
         {
           "kind": "function",
           "name": "renderProducts",
-          "line": 316
+          "line": 331
         },
         {
           "kind": "function",
           "name": "renderSolutionFocus",
-          "line": 360
+          "line": 375
         },
         {
           "kind": "function",
           "name": "renderMachineryStory",
-          "line": 388
+          "line": 403
         },
         {
           "kind": "function",
           "name": "renderVisualStory",
-          "line": 419
+          "line": 434
         },
         {
           "kind": "function",
           "name": "renderEngineeringProof",
-          "line": 444
+          "line": 459
         },
         {
           "kind": "function",
           "name": "renderProjectProof",
-          "line": 478
+          "line": 493
         },
         {
           "kind": "function",
           "name": "renderDecisionSupport",
-          "line": 513
+          "line": 528
         },
         {
           "kind": "function",
           "name": "renderFinalCTA",
-          "line": 551
+          "line": 566
         },
         {
           "kind": "function",
           "name": "renderErrorFallback",
-          "line": 590
+          "line": 605
         },
         {
           "kind": "function",
           "name": "initScrollAnimations",
-          "line": 610
+          "line": 625
         }
       ]
     },
@@ -5165,9 +5195,9 @@
     },
     {
       "path": "machinery-equipment.html",
-      "size": 23836,
-      "mtimeMs": 1788351944678.7485,
-      "hash": "a2583da0680fd0baa2ee5eaa452e0693fc6f1b9fc6713933da2b95299f3b3dc5",
+      "size": 23861,
+      "mtimeMs": 1788353692356.937,
+      "hash": "736ba7e93f55a33bbd3869d9e7647a15976bda9788bc195da45a610f22112e30",
       "locators": [
         {
           "kind": "class",
@@ -5222,360 +5252,360 @@
         {
           "kind": "class",
           "name": ".editorial-about-hero__title-light",
-          "line": 33
+          "line": 34
         },
         {
           "kind": "class",
           "name": ".editorial-about-hero__lead",
-          "line": 35
+          "line": 36
         },
         {
           "kind": "class",
           "name": ".editorial-about-hero__actions",
-          "line": 38
-        },
-        {
-          "kind": "class",
-          "name": ".editorial-btn-primary",
           "line": 39
         },
         {
           "kind": "class",
-          "name": ".btn-arrow",
+          "name": ".editorial-btn-primary",
           "line": 40
         },
         {
           "kind": "class",
+          "name": ".btn-arrow",
+          "line": 41
+        },
+        {
+          "kind": "class",
           "name": ".editorial-btn-outline",
-          "line": 42
+          "line": 43
         },
         {
           "kind": "class",
           "name": ".editorial-about-hero__visual",
-          "line": 49
-        },
-        {
-          "kind": "class",
-          "name": ".editorial-about-hero__frame",
           "line": 50
         },
         {
           "kind": "class",
-          "name": ".editorial-about-hero__img",
+          "name": ".editorial-about-hero__frame",
           "line": 51
         },
         {
           "kind": "class",
-          "name": ".editorial-about-hero__overlay",
+          "name": ".editorial-about-hero__img",
           "line": 52
         },
         {
           "kind": "class",
-          "name": ".editorial-about-hero__tech-tag",
+          "name": ".editorial-about-hero__overlay",
           "line": 53
         },
         {
           "kind": "class",
-          "name": ".tech-tag__dot",
+          "name": ".editorial-about-hero__tech-tag",
           "line": 54
+        },
+        {
+          "kind": "class",
+          "name": ".tech-tag__dot",
+          "line": 55
         },
         {
           "kind": "id",
           "name": "#journey",
-          "line": 64
+          "line": 65
         },
         {
           "kind": "class",
           "name": ".machinery-rail",
-          "line": 64
+          "line": 65
         },
         {
           "kind": "class",
           "name": ".machinery-rail__inner",
-          "line": 65
+          "line": 66
         },
         {
           "kind": "id",
           "name": "#machinery-rail-nav",
-          "line": 66
+          "line": 67
         },
         {
           "kind": "class",
           "name": ".machinery-rail__nav",
-          "line": 66
+          "line": 67
         },
         {
           "kind": "class",
           "name": ".machinery-rail__link",
-          "line": 67
+          "line": 68
         },
         {
           "kind": "class",
           "name": ".is-active",
-          "line": 67
+          "line": 68
         },
         {
           "kind": "id",
           "name": "#material",
-          "line": 78
-        },
-        {
-          "kind": "class",
-          "name": ".machinery-stage",
-          "line": 78
-        },
-        {
-          "kind": "class",
-          "name": ".machinery-stage__inner",
           "line": 79
         },
         {
           "kind": "class",
-          "name": ".machinery-stage__header",
+          "name": ".machinery-stage",
+          "line": 79
+        },
+        {
+          "kind": "class",
+          "name": ".machinery-stage__inner",
           "line": 80
         },
         {
           "kind": "class",
-          "name": ".machinery-stage__title",
+          "name": ".machinery-stage__header",
           "line": 81
         },
         {
           "kind": "class",
-          "name": ".machinery-stage__title-light",
+          "name": ".machinery-stage__title",
           "line": 82
         },
         {
           "kind": "class",
+          "name": ".machinery-stage__title-light",
+          "line": 83
+        },
+        {
+          "kind": "class",
           "name": ".machinery-stage__desc",
-          "line": 84
+          "line": 85
         },
         {
           "kind": "class",
           "name": ".machinery-card-grid",
-          "line": 89
+          "line": 90
         },
         {
           "kind": "class",
           "name": ".machinery-card",
-          "line": 92
-        },
-        {
-          "kind": "class",
-          "name": ".machinery-card__image-wrap",
           "line": 93
         },
         {
           "kind": "class",
-          "name": ".machinery-card__img",
+          "name": ".machinery-card__image-wrap",
           "line": 94
         },
         {
           "kind": "class",
-          "name": ".machinery-card__overlay-tag",
+          "name": ".machinery-card__img",
           "line": 95
         },
         {
           "kind": "class",
+          "name": ".machinery-card__overlay-tag",
+          "line": 96
+        },
+        {
+          "kind": "class",
           "name": ".machinery-card__content",
-          "line": 97
+          "line": 98
         },
         {
           "kind": "class",
           "name": ".machinery-card__title",
-          "line": 98
+          "line": 99
         },
         {
           "kind": "heading",
           "name": "Ball Mill",
-          "line": 98
-        },
-        {
-          "kind": "class",
-          "name": ".machinery-card__body",
           "line": 99
         },
         {
           "kind": "class",
+          "name": ".machinery-card__body",
+          "line": 100
+        },
+        {
+          "kind": "class",
           "name": ".machinery-card__spec",
-          "line": 102
+          "line": 103
         },
         {
           "kind": "heading",
           "name": "Slurry Making System",
-          "line": 113
+          "line": 114
         },
         {
           "kind": "heading",
           "name": "Slurry Storage Tanks",
-          "line": 128
+          "line": 129
         },
         {
           "kind": "id",
           "name": "#batching",
-          "line": 141
+          "line": 142
         },
         {
           "kind": "class",
           "name": ".machinery-stage--alt",
-          "line": 141
+          "line": 142
         },
         {
           "kind": "heading",
           "name": "Automated Batching Unit",
-          "line": 161
+          "line": 162
         },
         {
           "kind": "heading",
           "name": "Mould Box &amp; Side Plates",
-          "line": 176
+          "line": 177
         },
         {
           "kind": "heading",
           "name": "Precuring Tunnels &amp; Steam Trolleys",
-          "line": 191
+          "line": 192
         },
         {
           "kind": "id",
           "name": "#cutting",
-          "line": 204
+          "line": 205
         },
         {
           "kind": "heading",
           "name": "Advanced 3-Stage &amp; Vertical Cutter",
-          "line": 224
+          "line": 225
         },
         {
           "kind": "heading",
           "name": "Tilting Crane &amp; Table",
-          "line": 239
+          "line": 240
         },
         {
           "kind": "heading",
           "name": "Automatic Grouping Crane",
-          "line": 254
+          "line": 255
         },
         {
           "kind": "id",
           "name": "#autoclave",
-          "line": 267
+          "line": 268
         },
         {
           "kind": "class",
           "name": ".machinery-card-grid--two",
-          "line": 278
+          "line": 279
         },
         {
           "kind": "heading",
           "name": "Heavy Industrial Autoclaves",
-          "line": 287
+          "line": 288
         },
         {
           "kind": "heading",
           "name": "Automatic Packing Line",
-          "line": 302
+          "line": 303
         },
         {
           "kind": "class",
           "name": ".machinery-stage__footer-link",
-          "line": 312
-        },
-        {
-          "kind": "class",
-          "name": ".machinery-text-link",
           "line": 313
         },
         {
           "kind": "class",
-          "name": ".machinery-link-arrow",
+          "name": ".machinery-text-link",
           "line": 314
+        },
+        {
+          "kind": "class",
+          "name": ".machinery-link-arrow",
+          "line": 315
         },
         {
           "kind": "id",
           "name": "#proof",
-          "line": 321
-        },
-        {
-          "kind": "class",
-          "name": ".machinery-proof",
-          "line": 321
-        },
-        {
-          "kind": "class",
-          "name": ".machinery-hero__blueprint",
           "line": 322
         },
         {
           "kind": "class",
-          "name": ".machinery-hero__grid-svg",
+          "name": ".machinery-proof",
+          "line": 322
+        },
+        {
+          "kind": "class",
+          "name": ".machinery-hero__blueprint",
           "line": 323
         },
         {
           "kind": "class",
-          "name": ".machinery-proof__inner",
-          "line": 331
+          "name": ".machinery-hero__grid-svg",
+          "line": 324
         },
         {
           "kind": "class",
-          "name": ".machinery-proof__header",
+          "name": ".machinery-proof__inner",
           "line": 332
         },
         {
           "kind": "class",
-          "name": ".machinery-proof__title",
+          "name": ".machinery-proof__header",
           "line": 333
         },
         {
           "kind": "class",
-          "name": ".machinery-proof__title-light",
+          "name": ".machinery-proof__title",
           "line": 334
         },
         {
           "kind": "class",
+          "name": ".machinery-proof__title-light",
+          "line": 335
+        },
+        {
+          "kind": "class",
           "name": ".machinery-proof__lead",
-          "line": 336
+          "line": 337
         },
         {
           "kind": "class",
           "name": ".machinery-proof__grid",
-          "line": 341
+          "line": 342
         },
         {
           "kind": "class",
           "name": ".machinery-proof__card",
-          "line": 343
-        },
-        {
-          "kind": "class",
-          "name": ".machinery-proof__card-img-wrap",
           "line": 344
         },
         {
           "kind": "class",
-          "name": ".machinery-proof__card-img",
+          "name": ".machinery-proof__card-img-wrap",
           "line": 345
         },
         {
           "kind": "class",
+          "name": ".machinery-proof__card-img",
+          "line": 346
+        },
+        {
+          "kind": "class",
           "name": ".machinery-proof__num",
-          "line": 347
+          "line": 348
         },
         {
           "kind": "class",
           "name": ".machinery-proof__card-title",
-          "line": 348
+          "line": 349
         },
         {
           "kind": "heading",
           "name": "WORKSHOP",
-          "line": 348
+          "line": 349
         }
       ]
     },
     {
       "path": "plant-layout.html",
-      "size": 45359,
-      "mtimeMs": 1788351988823.7957,
-      "hash": "5f3d3708903423198f09318936709967f08ae5538063c166b58cd38a08949d18",
+      "size": 45389,
+      "mtimeMs": 1788354542036.5808,
+      "hash": "1a2e1d7c64d21496816179643d7cd8fe6cca316fe1eafff6055c8df8b4fbe43b",
       "locators": [
         {
           "kind": "class",
@@ -5630,352 +5660,352 @@
         {
           "kind": "class",
           "name": ".editorial-about-hero__title-light",
-          "line": 229
+          "line": 230
         },
         {
           "kind": "class",
           "name": ".editorial-about-hero__lead",
-          "line": 231
+          "line": 232
         },
         {
           "kind": "class",
           "name": ".editorial-about-hero__actions",
-          "line": 234
-        },
-        {
-          "kind": "class",
-          "name": ".editorial-btn-primary",
           "line": 235
         },
         {
           "kind": "class",
-          "name": ".btn-arrow",
+          "name": ".editorial-btn-primary",
           "line": 236
         },
         {
           "kind": "class",
+          "name": ".btn-arrow",
+          "line": 237
+        },
+        {
+          "kind": "class",
           "name": ".editorial-btn-outline",
-          "line": 238
+          "line": 239
         },
         {
           "kind": "class",
           "name": ".editorial-about-hero__visual",
-          "line": 245
-        },
-        {
-          "kind": "class",
-          "name": ".editorial-about-hero__frame",
           "line": 246
         },
         {
           "kind": "class",
-          "name": ".editorial-about-hero__img",
+          "name": ".editorial-about-hero__frame",
           "line": 247
         },
         {
           "kind": "class",
-          "name": ".editorial-about-hero__overlay",
+          "name": ".editorial-about-hero__img",
           "line": 248
         },
         {
           "kind": "class",
-          "name": ".editorial-about-hero__tech-tag",
+          "name": ".editorial-about-hero__overlay",
           "line": 249
         },
         {
           "kind": "class",
-          "name": ".tech-tag__dot",
+          "name": ".editorial-about-hero__tech-tag",
           "line": 250
+        },
+        {
+          "kind": "class",
+          "name": ".tech-tag__dot",
+          "line": 251
         },
         {
           "kind": "id",
           "name": "#glance",
-          "line": 260
-        },
-        {
-          "kind": "class",
-          "name": ".machinery-stage",
-          "line": 260
-        },
-        {
-          "kind": "class",
-          "name": ".machinery-stage__inner",
           "line": 261
         },
         {
           "kind": "class",
-          "name": ".machinery-stage__header",
+          "name": ".machinery-stage",
+          "line": 261
+        },
+        {
+          "kind": "class",
+          "name": ".machinery-stage__inner",
           "line": 262
         },
         {
           "kind": "class",
-          "name": ".academy-micro-label",
+          "name": ".machinery-stage__header",
           "line": 263
         },
         {
           "kind": "class",
-          "name": ".machinery-stage__title",
+          "name": ".academy-micro-label",
           "line": 264
         },
         {
           "kind": "class",
-          "name": ".machinery-stage__title-light",
+          "name": ".machinery-stage__title",
           "line": 265
         },
         {
           "kind": "class",
+          "name": ".machinery-stage__title-light",
+          "line": 266
+        },
+        {
+          "kind": "class",
           "name": ".machinery-stage__desc",
-          "line": 267
+          "line": 268
         },
         {
           "kind": "heading",
           "name": "Raw Material",
-          "line": 276
+          "line": 277
         },
         {
           "kind": "heading",
           "name": "Slurry Prep",
-          "line": 281
+          "line": 282
         },
         {
           "kind": "heading",
           "name": "Batching",
-          "line": 286
+          "line": 287
         },
         {
           "kind": "heading",
           "name": "Pouring",
-          "line": 291
+          "line": 292
         },
         {
           "kind": "heading",
           "name": "Precuring",
-          "line": 296
+          "line": 297
         },
         {
           "kind": "heading",
           "name": "Cutting",
-          "line": 301
+          "line": 302
         },
         {
           "kind": "heading",
           "name": "Autoclave",
-          "line": 306
+          "line": 307
         },
         {
           "kind": "heading",
           "name": "Packing",
-          "line": 311
+          "line": 312
         },
         {
           "kind": "id",
           "name": "#interactive-layout",
-          "line": 320
+          "line": 321
         },
         {
           "kind": "class",
           "name": ".machinery-stage--alt",
-          "line": 320
+          "line": 321
         },
         {
           "kind": "id",
           "name": "#layout-viewer-container",
-          "line": 334
+          "line": 335
         },
         {
           "kind": "class",
           "name": ".layout-viewer",
-          "line": 334
+          "line": 335
         },
         {
           "kind": "class",
           "name": ".layout-viewer__controls",
-          "line": 337
-        },
-        {
-          "kind": "class",
-          "name": ".layout-viewer__filters",
           "line": 338
         },
         {
           "kind": "class",
-          "name": ".layout-filter-btn",
+          "name": ".layout-viewer__filters",
           "line": 339
+        },
+        {
+          "kind": "class",
+          "name": ".layout-filter-btn",
+          "line": 340
         },
         {
           "kind": "class",
           "name": ".is-active",
-          "line": 339
+          "line": 340
         },
         {
           "kind": "class",
           "name": ".layout-viewer__zoom-tools",
-          "line": 350
-        },
-        {
-          "kind": "id",
-          "name": "#zoom-level-text",
           "line": 351
         },
         {
           "kind": "id",
-          "name": "#zoom-in-btn",
+          "name": "#zoom-level-text",
           "line": 352
+        },
+        {
+          "kind": "id",
+          "name": "#zoom-in-btn",
+          "line": 353
         },
         {
           "kind": "class",
           "name": ".layout-zoom-btn",
-          "line": 352
-        },
-        {
-          "kind": "id",
-          "name": "#zoom-out-btn",
           "line": 353
         },
         {
           "kind": "id",
-          "name": "#zoom-reset-btn",
+          "name": "#zoom-out-btn",
           "line": 354
         },
         {
           "kind": "id",
+          "name": "#zoom-reset-btn",
+          "line": 355
+        },
+        {
+          "kind": "id",
           "name": "#layout-viewport",
-          "line": 359
+          "line": 360
         },
         {
           "kind": "class",
           "name": ".layout-viewer__viewport",
-          "line": 359
+          "line": 360
         },
         {
           "kind": "id",
           "name": "#layout-canvas",
-          "line": 360
+          "line": 361
         },
         {
           "kind": "class",
           "name": ".layout-viewer__canvas",
-          "line": 360
+          "line": 361
         },
         {
           "kind": "class",
           "name": ".layout-viewer__img",
-          "line": 364
+          "line": 365
         },
         {
           "kind": "class",
           "name": ".layout-hotspot",
-          "line": 367
+          "line": 368
         },
         {
           "kind": "id",
           "name": "#layout-status-label",
-          "line": 384
+          "line": 385
         },
         {
           "kind": "id",
           "name": "#zones",
-          "line": 396
+          "line": 397
         },
         {
           "kind": "id",
           "name": "#zone-btn-container",
-          "line": 411
+          "line": 412
         },
         {
           "kind": "class",
           "name": ".zone-btn-list",
-          "line": 411
+          "line": 412
         },
         {
           "kind": "id",
           "name": "#raw",
-          "line": 412
+          "line": 413
         },
         {
           "kind": "class",
           "name": ".zone-select-btn",
-          "line": 412
+          "line": 413
         },
         {
           "kind": "class",
           "name": ".zone-btn-arrow",
-          "line": 414
+          "line": 415
         },
         {
           "kind": "id",
           "name": "#slurry",
-          "line": 416
+          "line": 417
         },
         {
           "kind": "id",
           "name": "#batch",
-          "line": 420
+          "line": 421
         },
         {
           "kind": "id",
           "name": "#pour",
-          "line": 424
+          "line": 425
         },
         {
           "kind": "id",
           "name": "#precuring",
-          "line": 428
+          "line": 429
         },
         {
           "kind": "id",
           "name": "#cut",
-          "line": 432
+          "line": 433
         },
         {
           "kind": "id",
           "name": "#auto",
-          "line": 436
+          "line": 437
         },
         {
           "kind": "id",
           "name": "#pack",
-          "line": 440
+          "line": 441
         },
         {
           "kind": "id",
           "name": "#zone-display-panel",
-          "line": 447
+          "line": 448
         },
         {
           "kind": "class",
           "name": ".zone-detail-panel",
-          "line": 447
-        },
-        {
-          "kind": "id",
-          "name": "#zd-stage-num",
           "line": 448
         },
         {
           "kind": "id",
-          "name": "#zd-title",
+          "name": "#zd-stage-num",
           "line": 449
+        },
+        {
+          "kind": "id",
+          "name": "#zd-title",
+          "line": 450
         },
         {
           "kind": "heading",
           "name": "RAW MATERIAL PREPARATION",
-          "line": 449
+          "line": 450
         },
         {
           "kind": "id",
           "name": "#zd-happens",
-          "line": 453
+          "line": 454
         },
         {
           "kind": "id",
           "name": "#zd-equipment",
-          "line": 460
+          "line": 461
         },
         {
           "kind": "id",
           "name": "#zd-position",
-          "line": 467
+          "line": 468
         }
       ]
     },
@@ -5988,9 +6018,9 @@
     },
     {
       "path": "projects.html",
-      "size": 9234,
-      "mtimeMs": 1788351998418.6936,
-      "hash": "4003eee4b280560b741abcbf4bbb343e51373df1633dfda1270b14d8852094da",
+      "size": 9259,
+      "mtimeMs": 1788353721559.0671,
+      "hash": "47a6be4285a08dee81c61b763082b5b2a98e0bc240c94db3c60dfafd24a26fb1",
       "locators": [
         {
           "kind": "class",
@@ -6045,310 +6075,310 @@
         {
           "kind": "class",
           "name": ".editorial-about-hero__title-light",
-          "line": 33
+          "line": 34
         },
         {
           "kind": "class",
           "name": ".editorial-about-hero__lead",
-          "line": 35
+          "line": 36
         },
         {
           "kind": "class",
           "name": ".editorial-about-hero__actions",
-          "line": 38
-        },
-        {
-          "kind": "class",
-          "name": ".editorial-btn-primary",
           "line": 39
         },
         {
           "kind": "class",
-          "name": ".btn-arrow",
+          "name": ".editorial-btn-primary",
           "line": 40
         },
         {
           "kind": "class",
+          "name": ".btn-arrow",
+          "line": 41
+        },
+        {
+          "kind": "class",
           "name": ".editorial-btn-outline",
-          "line": 42
+          "line": 43
         },
         {
           "kind": "class",
           "name": ".editorial-about-hero__visual",
-          "line": 49
-        },
-        {
-          "kind": "class",
-          "name": ".editorial-about-hero__frame",
           "line": 50
         },
         {
           "kind": "class",
-          "name": ".editorial-about-hero__img",
+          "name": ".editorial-about-hero__frame",
           "line": 51
         },
         {
           "kind": "class",
-          "name": ".editorial-about-hero__overlay",
+          "name": ".editorial-about-hero__img",
           "line": 52
         },
         {
           "kind": "class",
-          "name": ".editorial-about-hero__tech-tag",
+          "name": ".editorial-about-hero__overlay",
           "line": 53
         },
         {
           "kind": "class",
-          "name": ".tech-tag__dot",
+          "name": ".editorial-about-hero__tech-tag",
           "line": 54
+        },
+        {
+          "kind": "class",
+          "name": ".tech-tag__dot",
+          "line": 55
         },
         {
           "kind": "id",
           "name": "#projects-grid",
-          "line": 64
-        },
-        {
-          "kind": "class",
-          "name": ".machinery-stage",
-          "line": 64
-        },
-        {
-          "kind": "class",
-          "name": ".machinery-stage__inner",
           "line": 65
         },
         {
           "kind": "class",
-          "name": ".machinery-stage__header",
+          "name": ".machinery-stage",
+          "line": 65
+        },
+        {
+          "kind": "class",
+          "name": ".machinery-stage__inner",
           "line": 66
         },
         {
           "kind": "class",
-          "name": ".machinery-stage__title",
+          "name": ".machinery-stage__header",
           "line": 67
         },
         {
           "kind": "class",
-          "name": ".machinery-stage__title-light",
+          "name": ".machinery-stage__title",
           "line": 68
         },
         {
           "kind": "class",
+          "name": ".machinery-stage__title-light",
+          "line": 69
+        },
+        {
+          "kind": "class",
           "name": ".machinery-stage__desc",
-          "line": 70
+          "line": 71
         },
         {
           "kind": "class",
           "name": ".machinery-card-grid",
-          "line": 75
+          "line": 76
         },
         {
           "kind": "class",
           "name": ".machinery-card",
-          "line": 78
-        },
-        {
-          "kind": "class",
-          "name": ".machinery-card__image-wrap",
           "line": 79
         },
         {
           "kind": "class",
-          "name": ".machinery-card__img",
+          "name": ".machinery-card__image-wrap",
           "line": 80
         },
         {
           "kind": "class",
-          "name": ".machinery-card__overlay-tag",
+          "name": ".machinery-card__img",
           "line": 81
         },
         {
           "kind": "class",
+          "name": ".machinery-card__overlay-tag",
+          "line": 82
+        },
+        {
+          "kind": "class",
           "name": ".machinery-card__content",
-          "line": 83
+          "line": 84
         },
         {
           "kind": "class",
           "name": ".machinery-card__title",
-          "line": 84
+          "line": 85
         },
         {
           "kind": "heading",
           "name": "500,000 m³/yr AAC Block &amp; Panel Plant",
-          "line": 84
-        },
-        {
-          "kind": "class",
-          "name": ".machinery-card__body",
           "line": 85
         },
         {
           "kind": "class",
-          "name": ".machinery-card__spec",
+          "name": ".machinery-card__body",
           "line": 86
+        },
+        {
+          "kind": "class",
+          "name": ".machinery-card__spec",
+          "line": 87
         },
         {
           "kind": "heading",
           "name": "300,000 m³/yr AAC Block Plant",
-          "line": 97
+          "line": 98
         },
         {
           "kind": "heading",
           "name": "200,000 m³/yr AAC Block Line",
-          "line": 110
+          "line": 111
         },
         {
           "kind": "id",
           "name": "#workshop-proof",
-          "line": 121
-        },
-        {
-          "kind": "class",
-          "name": ".machinery-proof",
-          "line": 121
-        },
-        {
-          "kind": "class",
-          "name": ".machinery-proof__inner",
           "line": 122
         },
         {
           "kind": "class",
-          "name": ".machinery-proof__header",
+          "name": ".machinery-proof",
+          "line": 122
+        },
+        {
+          "kind": "class",
+          "name": ".machinery-proof__inner",
           "line": 123
         },
         {
           "kind": "class",
-          "name": ".machinery-proof__title",
+          "name": ".machinery-proof__header",
           "line": 124
         },
         {
           "kind": "class",
-          "name": ".machinery-proof__title-light",
+          "name": ".machinery-proof__title",
           "line": 125
         },
         {
           "kind": "class",
+          "name": ".machinery-proof__title-light",
+          "line": 126
+        },
+        {
+          "kind": "class",
           "name": ".machinery-proof__lead",
-          "line": 127
+          "line": 128
         },
         {
           "kind": "class",
           "name": ".machinery-proof__grid",
-          "line": 132
-        },
-        {
-          "kind": "class",
-          "name": ".machinery-proof__card",
           "line": 133
         },
         {
           "kind": "class",
-          "name": ".machinery-proof__card-img-wrap",
+          "name": ".machinery-proof__card",
           "line": 134
         },
         {
           "kind": "class",
-          "name": ".machinery-proof__card-img",
+          "name": ".machinery-proof__card-img-wrap",
           "line": 135
         },
         {
           "kind": "class",
+          "name": ".machinery-proof__card-img",
+          "line": 136
+        },
+        {
+          "kind": "class",
           "name": ".machinery-proof__num",
-          "line": 137
+          "line": 138
         },
         {
           "kind": "class",
           "name": ".machinery-proof__card-title",
-          "line": 138
-        },
-        {
-          "kind": "heading",
-          "name": "FABRICATION",
-          "line": 138
-        },
-        {
-          "kind": "class",
-          "name": ".machinery-proof__card-desc",
           "line": 139
         },
         {
           "kind": "heading",
+          "name": "FABRICATION",
+          "line": 139
+        },
+        {
+          "kind": "class",
+          "name": ".machinery-proof__card-desc",
+          "line": 140
+        },
+        {
+          "kind": "heading",
           "name": "MANUFACTURING",
-          "line": 147
+          "line": 148
         },
         {
           "kind": "heading",
           "name": "DISPATCH",
-          "line": 156
+          "line": 157
         },
         {
           "kind": "id",
           "name": "#cta",
-          "line": 164
-        },
-        {
-          "kind": "class",
-          "name": ".machinery-cta",
-          "line": 164
-        },
-        {
-          "kind": "class",
-          "name": ".machinery-cta__inner",
           "line": 165
         },
         {
           "kind": "class",
-          "name": ".machinery-cta__title",
+          "name": ".machinery-cta",
+          "line": 165
+        },
+        {
+          "kind": "class",
+          "name": ".machinery-cta__inner",
           "line": 166
         },
         {
           "kind": "class",
-          "name": ".machinery-cta__title-light",
+          "name": ".machinery-cta__title",
           "line": 167
         },
         {
           "kind": "class",
+          "name": ".machinery-cta__title-light",
+          "line": 168
+        },
+        {
+          "kind": "class",
           "name": ".machinery-cta__action",
-          "line": 169
+          "line": 170
         },
         {
           "kind": "class",
           "name": ".btn-brand",
-          "line": 170
-        },
-        {
-          "kind": "class",
-          "name": ".btn-brand--gold",
-          "line": 170
-        },
-        {
-          "kind": "class",
-          "name": ".machinery-cta__btn-arrow",
           "line": 171
         },
         {
           "kind": "class",
+          "name": ".btn-brand--gold",
+          "line": 171
+        },
+        {
+          "kind": "class",
+          "name": ".machinery-cta__btn-arrow",
+          "line": 172
+        },
+        {
+          "kind": "class",
           "name": ".btn-outline",
-          "line": 173
+          "line": 174
         },
         {
           "kind": "class",
           "name": ".btn-outline--light",
-          "line": 173
+          "line": 174
         },
         {
           "kind": "id",
           "name": "#site-footer",
-          "line": 182
+          "line": 183
         }
       ]
     },
     {
       "path": "solutions.html",
-      "size": 38099,
-      "mtimeMs": 1788351933056.0134,
-      "hash": "2d67c674d4405a55f5c221c3e4aec011a07168b3efa3714f426eb3aae6b3aea4",
+      "size": 38129,
+      "mtimeMs": 1788354535183.6216,
+      "hash": "6d1f9e584ccc217113416a7d97336e4f86752ac77824f3f5ee8512e11bc2bccb",
       "locators": [
         {
           "kind": "class",
@@ -6403,352 +6433,352 @@
         {
           "kind": "class",
           "name": ".editorial-about-hero__title-light",
-          "line": 33
+          "line": 34
         },
         {
           "kind": "class",
           "name": ".editorial-about-hero__lead",
-          "line": 35
+          "line": 36
         },
         {
           "kind": "class",
           "name": ".editorial-about-hero__actions",
-          "line": 38
-        },
-        {
-          "kind": "class",
-          "name": ".editorial-btn-primary",
           "line": 39
         },
         {
           "kind": "class",
-          "name": ".btn-arrow",
+          "name": ".editorial-btn-primary",
           "line": 40
         },
         {
           "kind": "class",
+          "name": ".btn-arrow",
+          "line": 41
+        },
+        {
+          "kind": "class",
           "name": ".editorial-btn-outline",
-          "line": 42
+          "line": 43
         },
         {
           "kind": "class",
           "name": ".editorial-about-hero__visual",
-          "line": 49
-        },
-        {
-          "kind": "class",
-          "name": ".editorial-about-hero__frame",
           "line": 50
         },
         {
           "kind": "class",
-          "name": ".editorial-about-hero__img",
+          "name": ".editorial-about-hero__frame",
           "line": 51
         },
         {
           "kind": "class",
-          "name": ".editorial-about-hero__overlay",
+          "name": ".editorial-about-hero__img",
           "line": 52
         },
         {
           "kind": "class",
-          "name": ".editorial-about-hero__tech-tag",
+          "name": ".editorial-about-hero__overlay",
           "line": 53
         },
         {
           "kind": "class",
-          "name": ".tech-tag__dot",
+          "name": ".editorial-about-hero__tech-tag",
           "line": 54
+        },
+        {
+          "kind": "class",
+          "name": ".tech-tag__dot",
+          "line": 55
         },
         {
           "kind": "id",
           "name": "#journey",
-          "line": 64
+          "line": 65
         },
         {
           "kind": "class",
           "name": ".machinery-rail",
-          "line": 64
+          "line": 65
         },
         {
           "kind": "class",
           "name": ".machinery-rail__inner",
-          "line": 65
+          "line": 66
         },
         {
           "kind": "id",
           "name": "#solutions-rail-nav",
-          "line": 66
+          "line": 67
         },
         {
           "kind": "class",
           "name": ".machinery-rail__nav",
-          "line": 66
+          "line": 67
         },
         {
           "kind": "class",
           "name": ".machinery-rail__link",
-          "line": 67
+          "line": 68
         },
         {
           "kind": "class",
           "name": ".is-active",
-          "line": 67
+          "line": 68
         },
         {
           "kind": "id",
           "name": "#selector",
-          "line": 77
-        },
-        {
-          "kind": "class",
-          "name": ".machinery-stage",
-          "line": 77
-        },
-        {
-          "kind": "class",
-          "name": ".machinery-stage__inner",
           "line": 78
         },
         {
           "kind": "class",
-          "name": ".machinery-stage__header",
+          "name": ".machinery-stage",
+          "line": 78
+        },
+        {
+          "kind": "class",
+          "name": ".machinery-stage__inner",
           "line": 79
         },
         {
           "kind": "class",
-          "name": ".machinery-stage__title",
+          "name": ".machinery-stage__header",
           "line": 80
         },
         {
           "kind": "class",
-          "name": ".machinery-stage__title-light",
+          "name": ".machinery-stage__title",
           "line": 81
         },
         {
           "kind": "class",
+          "name": ".machinery-stage__title-light",
+          "line": 82
+        },
+        {
+          "kind": "class",
           "name": ".machinery-stage__desc",
-          "line": 83
+          "line": 84
         },
         {
           "kind": "class",
           "name": ".machinery-card-grid",
-          "line": 88
+          "line": 89
         },
         {
           "kind": "class",
           "name": ".machinery-card-grid--two",
-          "line": 88
+          "line": 89
         },
         {
           "kind": "class",
           "name": ".machinery-card",
-          "line": 91
-        },
-        {
-          "kind": "class",
-          "name": ".machinery-card__image-wrap",
           "line": 92
         },
         {
           "kind": "class",
-          "name": ".machinery-card__img",
+          "name": ".machinery-card__image-wrap",
           "line": 93
         },
         {
           "kind": "class",
-          "name": ".machinery-card__overlay-tag",
+          "name": ".machinery-card__img",
           "line": 94
         },
         {
           "kind": "class",
+          "name": ".machinery-card__overlay-tag",
+          "line": 95
+        },
+        {
+          "kind": "class",
           "name": ".machinery-card__content",
-          "line": 96
+          "line": 97
         },
         {
           "kind": "class",
           "name": ".machinery-card__title",
-          "line": 97
+          "line": 98
         },
         {
           "kind": "heading",
           "name": "AAC Block &amp; Panel Plant",
-          "line": 97
-        },
-        {
-          "kind": "class",
-          "name": ".machinery-card__body",
           "line": 98
         },
         {
           "kind": "class",
-          "name": ".machinery-card__spec",
-          "line": 101
+          "name": ".machinery-card__body",
+          "line": 99
         },
         {
           "kind": "class",
-          "name": ".machinery-text-link",
+          "name": ".machinery-card__spec",
           "line": 102
         },
         {
           "kind": "class",
-          "name": ".machinery-link-arrow",
+          "name": ".machinery-text-link",
           "line": 103
+        },
+        {
+          "kind": "class",
+          "name": ".machinery-link-arrow",
+          "line": 104
         },
         {
           "kind": "heading",
           "name": "Dry Mix Mortar Plant",
-          "line": 116
+          "line": 117
         },
         {
           "kind": "id",
           "name": "#aac-plant",
-          "line": 133
+          "line": 134
         },
         {
           "kind": "class",
           "name": ".machinery-stage--alt",
-          "line": 133
+          "line": 134
         },
         {
           "kind": "heading",
           "name": "AAC Block Production",
-          "line": 153
+          "line": 154
         },
         {
           "kind": "heading",
           "name": "AAC Reinforced Panel Line",
-          "line": 168
+          "line": 169
         },
         {
           "kind": "class",
           "name": ".machinery-stage__footer-link",
-          "line": 178
+          "line": 179
         },
         {
           "kind": "id",
           "name": "#process-layout",
-          "line": 187
+          "line": 188
         },
         {
           "kind": "class",
           "name": ".academy-micro-label",
-          "line": 191
+          "line": 192
         },
         {
           "kind": "class",
           "name": ".editorial-hero__btn-white",
-          "line": 217
+          "line": 218
         },
         {
           "kind": "class",
           "name": ".editorial-hero__btn-arrow",
-          "line": 218
+          "line": 219
         },
         {
           "kind": "heading",
           "name": "General Arrangement Layout",
-          "line": 232
+          "line": 233
         },
         {
           "kind": "heading",
           "name": "7-Stage Synchronized Flow",
-          "line": 246
+          "line": 247
         },
         {
           "kind": "id",
           "name": "#dry-mix",
-          "line": 265
+          "line": 266
         },
         {
           "kind": "heading",
           "name": "Associated Mortar Products",
-          "line": 298
+          "line": 299
         },
         {
           "kind": "heading",
           "name": "Automated Dosing &amp; Bagging",
-          "line": 312
+          "line": 313
         },
         {
           "kind": "id",
           "name": "#proof",
-          "line": 331
-        },
-        {
-          "kind": "class",
-          "name": ".machinery-proof",
-          "line": 331
-        },
-        {
-          "kind": "class",
-          "name": ".machinery-hero__blueprint",
           "line": 332
         },
         {
           "kind": "class",
-          "name": ".machinery-hero__grid-svg",
+          "name": ".machinery-proof",
+          "line": 332
+        },
+        {
+          "kind": "class",
+          "name": ".machinery-hero__blueprint",
           "line": 333
         },
         {
           "kind": "class",
-          "name": ".machinery-proof__inner",
-          "line": 341
+          "name": ".machinery-hero__grid-svg",
+          "line": 334
         },
         {
           "kind": "class",
-          "name": ".machinery-proof__header",
+          "name": ".machinery-proof__inner",
           "line": 342
         },
         {
           "kind": "class",
-          "name": ".machinery-proof__title",
+          "name": ".machinery-proof__header",
           "line": 343
         },
         {
           "kind": "class",
-          "name": ".machinery-proof__title-light",
+          "name": ".machinery-proof__title",
           "line": 344
         },
         {
           "kind": "class",
+          "name": ".machinery-proof__title-light",
+          "line": 345
+        },
+        {
+          "kind": "class",
           "name": ".machinery-proof__lead",
-          "line": 346
+          "line": 347
         },
         {
           "kind": "class",
           "name": ".machinery-proof__grid",
-          "line": 351
+          "line": 352
         },
         {
           "kind": "class",
           "name": ".machinery-proof__card",
-          "line": 353
-        },
-        {
-          "kind": "class",
-          "name": ".machinery-proof__card-img-wrap",
           "line": 354
         },
         {
           "kind": "class",
-          "name": ".machinery-proof__card-img",
+          "name": ".machinery-proof__card-img-wrap",
           "line": 355
         },
         {
           "kind": "class",
+          "name": ".machinery-proof__card-img",
+          "line": 356
+        },
+        {
+          "kind": "class",
           "name": ".machinery-proof__num",
-          "line": 357
+          "line": 358
         },
         {
           "kind": "class",
           "name": ".machinery-proof__card-title",
-          "line": 358
+          "line": 359
         },
         {
           "kind": "heading",
           "name": "INSTALLATIONS",
-          "line": 358
+          "line": 359
         }
       ]
     },
@@ -6782,9 +6812,9 @@
     },
     {
       "path": "why-laxmi.html",
-      "size": 22372,
-      "mtimeMs": 1788250871576.0674,
-      "hash": "0a05348f1442976adcaf5440f247d5f53e387576e114b3d27154a3129861b859",
+      "size": 23361,
+      "mtimeMs": 1788353977701.3296,
+      "hash": "fff215a289e696b772259814297d86f8ae26960cabfa078d899b5c8f9eb6f19d",
       "locators": [
         {
           "kind": "class",
@@ -6839,352 +6869,352 @@
         {
           "kind": "class",
           "name": ".editorial-about-hero__title-light",
-          "line": 59
+          "line": 60
         },
         {
           "kind": "class",
           "name": ".editorial-about-hero__lead",
-          "line": 61
+          "line": 62
         },
         {
           "kind": "class",
           "name": ".editorial-about-hero__actions",
-          "line": 64
-        },
-        {
-          "kind": "class",
-          "name": ".editorial-btn-primary",
           "line": 65
         },
         {
           "kind": "class",
-          "name": ".btn-arrow",
+          "name": ".editorial-btn-primary",
           "line": 66
         },
         {
           "kind": "class",
+          "name": ".btn-arrow",
+          "line": 67
+        },
+        {
+          "kind": "class",
           "name": ".editorial-btn-outline",
-          "line": 68
+          "line": 69
         },
         {
           "kind": "class",
           "name": ".editorial-about-hero__visual",
-          "line": 75
-        },
-        {
-          "kind": "class",
-          "name": ".editorial-about-hero__frame",
           "line": 76
         },
         {
           "kind": "class",
-          "name": ".editorial-about-hero__img",
+          "name": ".editorial-about-hero__frame",
           "line": 77
         },
         {
           "kind": "class",
-          "name": ".editorial-about-hero__overlay",
+          "name": ".editorial-about-hero__img",
           "line": 78
         },
         {
           "kind": "class",
-          "name": ".editorial-about-hero__tech-tag",
+          "name": ".editorial-about-hero__overlay",
           "line": 79
         },
         {
           "kind": "class",
-          "name": ".tech-tag__dot",
+          "name": ".editorial-about-hero__tech-tag",
           "line": 80
+        },
+        {
+          "kind": "class",
+          "name": ".tech-tag__dot",
+          "line": 81
         },
         {
           "kind": "id",
           "name": "#the-company",
-          "line": 90
-        },
-        {
-          "kind": "class",
-          "name": ".editorial-company-section",
-          "line": 90
-        },
-        {
-          "kind": "class",
-          "name": ".editorial-company-section__inner",
           "line": 91
         },
         {
           "kind": "class",
+          "name": ".editorial-company-section",
+          "line": 91
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-company-section__inner",
+          "line": 92
+        },
+        {
+          "kind": "class",
           "name": ".editorial-company-header",
-          "line": 93
+          "line": 94
         },
         {
           "kind": "class",
-          "name": ".editorial-company-header__title",
-          "line": 95
-        },
-        {
-          "kind": "heading",
-          "name": "More than machinery. A complete plant responsibility.",
-          "line": 95
-        },
-        {
-          "kind": "class",
-          "name": ".editorial-company-header__sub",
+          "name": ".machinery-stage__title",
           "line": 96
         },
         {
           "kind": "class",
+          "name": ".machinery-stage__title-light",
+          "line": 98
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-company-header__sub",
+          "line": 100
+        },
+        {
+          "kind": "class",
           "name": ".editorial-company-rows",
-          "line": 101
-        },
-        {
-          "kind": "class",
-          "name": ".company-proof-row",
-          "line": 103
-        },
-        {
-          "kind": "class",
-          "name": ".company-proof-row__num",
-          "line": 104
-        },
-        {
-          "kind": "class",
-          "name": ".company-proof-row__content",
           "line": 105
         },
         {
           "kind": "class",
+          "name": ".company-proof-row",
+          "line": 107
+        },
+        {
+          "kind": "class",
+          "name": ".company-proof-row__num",
+          "line": 108
+        },
+        {
+          "kind": "class",
+          "name": ".company-proof-row__content",
+          "line": 109
+        },
+        {
+          "kind": "class",
           "name": ".company-proof-row__title",
-          "line": 106
+          "line": 110
         },
         {
           "kind": "heading",
           "name": "Plant &amp; Machinery Manufacturing",
-          "line": 106
+          "line": 110
         },
         {
           "kind": "class",
           "name": ".company-proof-row__desc",
-          "line": 107
+          "line": 111
         },
         {
           "kind": "heading",
           "name": "Plant Engineering",
-          "line": 114
+          "line": 118
         },
         {
           "kind": "heading",
           "name": "Project Execution",
-          "line": 122
+          "line": 126
         },
         {
           "kind": "heading",
           "name": "Installation",
-          "line": 130
+          "line": 134
         },
         {
           "kind": "heading",
           "name": "Commissioning",
-          "line": 138
+          "line": 142
         },
         {
           "kind": "class",
           "name": ".editorial-company-cta",
-          "line": 145
+          "line": 149
         },
         {
           "kind": "class",
           "name": ".editorial-link-action",
-          "line": 146
+          "line": 150
         },
         {
           "kind": "class",
           "name": ".link-arrow",
-          "line": 147
+          "line": 151
         },
         {
           "kind": "id",
           "name": "#facility",
-          "line": 155
-        },
-        {
-          "kind": "class",
-          "name": ".editorial-facility-section",
-          "line": 155
-        },
-        {
-          "kind": "class",
-          "name": ".editorial-facility-section__inner",
-          "line": 156
-        },
-        {
-          "kind": "class",
-          "name": ".editorial-facility-visual",
           "line": 159
         },
         {
           "kind": "class",
-          "name": ".editorial-facility-frame",
+          "name": ".editorial-facility-section",
+          "line": 159
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-facility-section__inner",
           "line": 160
         },
         {
           "kind": "class",
+          "name": ".editorial-facility-visual",
+          "line": 163
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-facility-frame",
+          "line": 164
+        },
+        {
+          "kind": "class",
           "name": ".editorial-facility-img",
-          "line": 161
+          "line": 165
         },
         {
           "kind": "class",
           "name": ".facility-micro-label",
-          "line": 162
+          "line": 166
         },
         {
           "kind": "class",
           "name": ".editorial-facility-content",
-          "line": 167
-        },
-        {
-          "kind": "class",
-          "name": ".editorial-facility-title",
-          "line": 169
-        },
-        {
-          "kind": "heading",
-          "name": "The facility behind the work.",
-          "line": 169
+          "line": 171
         },
         {
           "kind": "class",
           "name": ".editorial-facility-statement",
-          "line": 170
-        },
-        {
-          "kind": "class",
-          "name": ".editorial-facility-desc",
-          "line": 173
-        },
-        {
-          "kind": "class",
-          "name": ".facility-specs-grid",
           "line": 177
         },
         {
           "kind": "class",
+          "name": ".editorial-facility-desc",
+          "line": 180
+        },
+        {
+          "kind": "class",
+          "name": ".facility-specs-grid",
+          "line": 184
+        },
+        {
+          "kind": "class",
           "name": ".facility-spec-item",
-          "line": 178
+          "line": 185
         },
         {
           "kind": "class",
           "name": ".spec-label",
-          "line": 179
+          "line": 186
         },
         {
           "kind": "class",
           "name": ".spec-value",
-          "line": 180
+          "line": 187
         },
         {
           "kind": "id",
           "name": "#manufacturing",
-          "line": 197
+          "line": 204
         },
         {
           "kind": "class",
           "name": ".editorial-mfg-section",
-          "line": 197
+          "line": 204
         },
         {
           "kind": "class",
           "name": ".editorial-mfg-section__inner",
-          "line": 198
-        },
-        {
-          "kind": "class",
-          "name": ".editorial-mfg-header",
-          "line": 200
-        },
-        {
-          "kind": "class",
-          "name": ".editorial-mfg-header__title",
-          "line": 202
-        },
-        {
-          "kind": "heading",
-          "name": "From fabrication to dispatch.",
-          "line": 202
-        },
-        {
-          "kind": "class",
-          "name": ".editorial-mfg-sequence",
           "line": 205
         },
         {
           "kind": "class",
-          "name": ".mfg-step-item",
+          "name": ".editorial-mfg-header",
           "line": 207
         },
         {
           "kind": "class",
+          "name": ".editorial-mfg-sequence",
+          "line": 215
+        },
+        {
+          "kind": "class",
+          "name": ".mfg-step-item",
+          "line": 217
+        },
+        {
+          "kind": "class",
           "name": ".mfg-step-num",
-          "line": 208
+          "line": 218
         },
         {
           "kind": "class",
           "name": ".mfg-step-body",
-          "line": 209
+          "line": 219
         },
         {
           "kind": "class",
           "name": ".mfg-step-title",
-          "line": 210
+          "line": 220
         },
         {
           "kind": "heading",
           "name": "FABRICATE",
-          "line": 210
+          "line": 220
         },
         {
           "kind": "class",
           "name": ".mfg-step-desc",
-          "line": 211
+          "line": 221
         },
         {
           "kind": "heading",
           "name": "ASSEMBLE",
-          "line": 218
+          "line": 228
         },
         {
           "kind": "heading",
           "name": "CHECK",
-          "line": 226
+          "line": 236
         },
         {
           "kind": "heading",
           "name": "DISPATCH",
-          "line": 234
+          "line": 244
         },
         {
           "kind": "id",
           "name": "#engineering",
-          "line": 245
+          "line": 255
         },
         {
           "kind": "class",
           "name": ".editorial-chain-section",
-          "line": 245
+          "line": 255
         },
         {
           "kind": "class",
           "name": ".editorial-chain-section__inner",
-          "line": 246
+          "line": 256
         },
         {
           "kind": "class",
-          "name": ".editorial-chain-title",
-          "line": 249
+          "name": ".editorial-chain-sub",
+          "line": 263
         },
         {
-          "kind": "heading",
-          "name": "Engineering is a chain of decisions.",
-          "line": 249
+          "kind": "class",
+          "name": ".editorial-chain-flow",
+          "line": 268
+        },
+        {
+          "kind": "class",
+          "name": ".chain-node",
+          "line": 269
+        },
+        {
+          "kind": "class",
+          "name": ".chain-arrow",
+          "line": 270
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-chain-actions",
+          "line": 280
+        },
+        {
+          "kind": "class",
+          "name": ".editorial-btn-gold",
+          "line": 281
         }
       ]
     }

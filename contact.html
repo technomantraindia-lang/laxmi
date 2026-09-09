@@ -3,463 +3,741 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Contact Laxmi En-Fab Pvt. Ltd. for AAC plant solutions, machinery, engineering, installation and commissioning support. Ahmedabad, Gujarat." />
-  <meta name="keywords" content="AAC plant manufacturer, AAC plant solutions, AAC plant machinery, AAC plant engineering, AAC plant installation, AAC plant manufacturer Ahmedabad" />
-  <title>Contact Laxmi En-Fab | AAC Plant &amp; Machinery Solutions</title>
-  
+  <meta name="description" content="Talk to an AAC Plant Expert at Laxmi En-Fab Pvt. Ltd. Direct technical consultation for turnkey AAC Block & Panel Plants, project cost estimation, plant layouts, and equipment manufacturing." />
+  <meta name="keywords" content="Talk to AAC Expert, Laxmi En-Fab contact, AAC plant consultation, AAC project cost inquiry, AAC plant manufacturer Ahmedabad" />
+  <title>Talk to an Expert | Direct Engineering Consultation | Laxmi En-Fab</title>
+
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/components.css" />
   <link rel="stylesheet" href="css/homepage.css" />
   <link rel="stylesheet" href="css/responsive.css" />
 
-  <!-- Structured Data / JSON-LD for LocalBusiness & Organization -->
+  <!-- Structured Data / JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Laxmi En-Fab Pvt. Ltd.",
-    "description": "Build your AAC plant with confidence. Complete AAC plant solutions, machinery, engineering, installation and commissioning support.",
-    "url": "https://www.laxmienfab.com",
-    "telephone": "+91-8980800607",
-    "email": "aac@laxmienfab.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "48 Block A, 2nd Floor, Pelican Complex, Opp Odhav BRTS, GIDC, Odhav",
-      "addressLocality": "Ahmedabad",
-      "addressRegion": "Gujarat",
-      "postalCode": "382415",
-      "addressCountry": "IN"
-    },
-    "sameAs": [
-      "https://in.linkedin.com/company/aacblockplant",
-      "https://www.instagram.com/aac_plant/",
-      "https://www.facebook.com/aacblockplant",
-      "https://www.youtube.com/@LaxmiGroupaacsystem"
-    ]
+    "@type": "ContactPage",
+    "name": "Talk to an Expert — Laxmi En-Fab Pvt. Ltd.",
+    "description": "Direct contact and technical advisory for AAC manufacturing plants and industrial dry mortar systems.",
+    "url": "https://www.laxmienfab.com/contact.html",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Laxmi En-Fab Pvt. Ltd.",
+      "telephone": "+918980800839",
+      "email": "aac@laxmienfab.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2nd Floor, Pelican Business Hub, Odhav",
+        "addressLocality": "Ahmedabad",
+        "addressRegion": "Gujarat",
+        "postalCode": "382415",
+        "addressCountry": "IN"
+      }
+    }
   }
   </script>
+
+  <style>
+    /* Contact Page Specific Styles */
+    .contact-hero {
+      background: #040d1a;
+      color: #ffffff;
+      padding: 5rem 1.5rem 4rem 1.5rem;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .contact-hero__inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .contact-hero__eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      color: #e6a822;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .contact-hero__title {
+      font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+      font-weight: 900;
+      line-height: 1.1;
+      margin: 0 0 1.25rem 0;
+      letter-spacing: -0.02em;
+    }
+
+    .contact-hero__title .highlight {
+      color: #3b82f6;
+    }
+
+    .contact-hero__lead {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      color: #cbd5e1;
+      margin: 0 0 2rem 0;
+      max-width: 680px;
+    }
+
+    .contact-hero__badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .contact-hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #e2e8f0;
+    }
+
+    .contact-hero__badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10b981;
+    }
+
+    /* Main Content Layout */
+    .contact-main-section {
+      padding: 5rem 1.5rem;
+      background: #f8fafc;
+    }
+
+    .contact-main-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 3.5rem;
+      align-items: start;
+    }
+
+    /* Form Container */
+    .contact-form-card {
+      background: #ffffff;
+      border-radius: 16px;
+      border: 1px solid rgba(7, 23, 44, 0.1);
+      box-shadow: 0 15px 45px rgba(7, 23, 44, 0.06);
+      padding: 3rem;
+    }
+
+    .contact-form-header {
+      margin-bottom: 2rem;
+      border-bottom: 1px solid rgba(7, 23, 44, 0.08);
+      padding-bottom: 1.5rem;
+    }
+
+    .contact-form-title {
+      font-size: 1.65rem;
+      font-weight: 800;
+      color: #07172c;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .contact-form-subtitle {
+      font-size: 0.95rem;
+      color: #64748b;
+      margin: 0;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .form-group--full {
+      grid-column: 1 / -1;
+    }
+
+    .form-label {
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      color: #1e293b;
+      text-transform: uppercase;
+    }
+
+    .form-label span.req {
+      color: #ef4444;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border-radius: 8px;
+      border: 1.5px solid #cbd5e1;
+      background: #ffffff;
+      font-size: 0.95rem;
+      color: #07172c;
+      font-family: inherit;
+      transition: all 0.2s ease;
+      box-sizing: border-box;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: #0b3f78;
+      box-shadow: 0 0 0 4px rgba(11, 63, 120, 0.12);
+    }
+
+    select.form-control {
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      background-size: 1em;
+    }
+
+    textarea.form-control {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-submit-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      width: 100%;
+      padding: 1.1rem 2rem;
+      background: #0b3f78;
+      color: #ffffff;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      margin-top: 1rem;
+      box-shadow: 0 4px 14px rgba(11, 63, 120, 0.25);
+    }
+
+    .form-submit-btn:hover {
+      background: #072a52;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(11, 63, 120, 0.35);
+    }
+
+    /* Right Side Cards */
+    .contact-info-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+    }
+
+    .contact-card {
+      background: #ffffff;
+      border-radius: 14px;
+      border: 1px solid rgba(7, 23, 44, 0.1);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-card--dark {
+      background: #040d1a;
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.12);
+    }
+
+    .contact-card__tag {
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #0b3f78;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .contact-card--dark .contact-card__tag {
+      color: #e6a822;
+    }
+
+    .contact-card__title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      margin: 0 0 1rem 0;
+      color: #07172c;
+    }
+
+    .contact-card--dark .contact-card__title {
+      color: #ffffff;
+    }
+
+    .contact-item-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .contact-item-icon {
+      font-size: 1.25rem;
+      line-height: 1;
+      padding-top: 2px;
+    }
+
+    .contact-item-label {
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #64748b;
+      margin-bottom: 0.2rem;
+    }
+
+    .contact-card--dark .contact-item-label {
+      color: #94a3b8;
+    }
+
+    .contact-item-val {
+      font-size: 0.95rem;
+      color: #1e293b;
+      line-height: 1.5;
+    }
+
+    .contact-card--dark .contact-item-val {
+      color: #f1f5f9;
+    }
+
+    .contact-item-val a {
+      color: inherit;
+      text-decoration: none;
+      font-weight: 700;
+      transition: color 0.2s;
+    }
+
+    .contact-item-val a:hover {
+      color: #3b82f6;
+    }
+
+    .contact-card--dark .contact-item-val a:hover {
+      color: #e6a822;
+    }
+
+    .direct-call-box {
+      background: rgba(11, 63, 120, 0.08);
+      border: 1px solid rgba(11, 63, 120, 0.15);
+      border-radius: 10px;
+      padding: 1.25rem;
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .contact-card--dark .direct-call-box {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 255, 255, 0.12);
+    }
+
+    .direct-call-number {
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: #0b3f78;
+      text-decoration: none;
+    }
+
+    .contact-card--dark .direct-call-number {
+      color: #e6a822;
+    }
+
+    /* Workshop & Tour Section */
+    .workshop-strip {
+      background: #ffffff;
+      border-top: 1px solid rgba(7, 23, 44, 0.1);
+      border-bottom: 1px solid rgba(7, 23, 44, 0.1);
+      padding: 4rem 1.5rem;
+    }
+
+    .workshop-strip__inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .workshop-feature-box {
+      border: 1px solid rgba(7, 23, 44, 0.1);
+      border-radius: 12px;
+      padding: 2rem;
+      background: #f8fafc;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .workshop-feature-num {
+      font-size: 1.75rem;
+      font-weight: 900;
+      color: #0b3f78;
+      font-family: monospace;
+      margin-bottom: 0.75rem;
+    }
+
+    .workshop-feature-title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #07172c;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .workshop-feature-desc {
+      font-size: 0.92rem;
+      color: #52677d;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    @media (max-width: 992px) {
+      .contact-hero__inner {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .contact-main-inner {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .workshop-strip__inner {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+      .contact-form-card {
+        padding: 2rem 1.25rem;
+      }
+      .contact-hero {
+        padding: 4rem 1.25rem 3rem 1.25rem;
+      }
+    }
+  </style>
 </head>
 <body class="contact-page">
 
-  <!-- Shared Header Injection Placeholder -->
+  <!-- Shared Global Header Injection -->
   <div id="site-header"></div>
 
+  <!-- Breadcrumb Navigation -->
+  <nav class="site-breadcrumb" aria-label="Breadcrumb">
+    <div class="site-breadcrumb__inner">
+      <a href="index.html">Home</a>
+      <span class="bc-sep">/</span>
+      <span class="bc-current">Talk to an Expert</span>
+    </div>
+  </nav>
+
   <main id="main-content">
-    
-    <!-- ============ 1. HERO SECTION (DARK INDUSTRIAL 75-90VH) ========== -->
-    <section class="editorial-about-hero" id="hero">
-      <div class="editorial-about-hero__inner">
-        
-        <!-- Left: Text Area -->
-        <div class="editorial-about-hero__content">
-          <span class="editorial-eyebrow editorial-eyebrow--gold">TALK TO LAXMI</span>
-          <h1 class="editorial-about-hero__title">
-            <span>Let's build the right AAC plant</span>
-            <span class="editorial-about-hero__title-light">for your project.</span>
+
+    <!-- ============ 01. HERO SECTION ============ -->
+    <section class="contact-hero" id="hero">
+      <div class="contact-hero__inner">
+        <div>
+          <span class="contact-hero__eyebrow">DIRECT ENGINEERING CONSULTATION</span>
+          <h1 class="contact-hero__title">
+            Talk to an AAC <span class="highlight">Plant Expert</span>
           </h1>
-          <p class="editorial-about-hero__lead">
-            Tell us where you are in your AAC journey, what you want to produce and what you are planning.
+          <p class="contact-hero__lead">
+            Whether evaluating plant capacity, calculating total project CAPEX &amp; ROI, upgrading autoclave steam automation, or exploring state industrial subsidies, discuss your project directly with Laxmi En-Fab's senior engineering team.
           </p>
-          <div class="editorial-about-hero__actions">
-            <a href="#enquiry-section" class="editorial-btn-primary">
-              Start Your Enquiry <span class="btn-arrow">→</span>
-            </a>
-            <a href="tel:+918980800607" class="editorial-btn-outline">
-              Call +91-8980800607 <span class="btn-arrow">→</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Right: Real Laxmi Facility Visual -->
-        <div class="editorial-about-hero__visual">
-          <div class="editorial-about-hero__frame">
-            <img src="assets/images/production-process.png" alt="Laxmi En-Fab AAC plant machinery manufacturing facility and workshop" class="editorial-about-hero__img" />
-            <div class="editorial-about-hero__overlay"></div>
-            <div class="editorial-about-hero__tech-tag">
-              <span class="tech-tag__dot"></span>
-              LAXMI MANUFACTURING WORKS · AHMEDABAD, INDIA
+          <div class="contact-hero__badges">
+            <div class="contact-hero__badge">
+              <span class="contact-hero__badge-dot"></span>
+              Average Technical Response: Under 4 Hours
+            </div>
+            <div class="contact-hero__badge">
+              <span class="contact-hero__badge-dot"></span>
+              On-Site Workshop Tours at Kheda
+            </div>
+            <div class="contact-hero__badge">
+              <span class="contact-hero__badge-dot"></span>
+              Certified IBR &amp; IS 2185 Advisory
             </div>
           </div>
         </div>
 
+        <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 2.5rem;">
+          <div style="font-size: 0.75rem; font-weight: 800; color: #e6a822; letter-spacing: 0.1em; margin-bottom: 0.75rem;">DIRECT DIAL HOTLINES</div>
+          <div style="font-size: 1.8rem; font-weight: 900; margin-bottom: 0.5rem;">
+            <a href="tel:+918980800839" style="color: #ffffff; text-decoration: none;">+91 89808 00839</a>
+          </div>
+          <div style="font-size: 1.35rem; font-weight: 800; color: #94a3b8; margin-bottom: 1.5rem;">
+            <a href="tel:+918980800607" style="color: #cbd5e1; text-decoration: none;">+91 89808 00607</a>
+          </div>
+          <div style="font-size: 0.95rem; color: #cbd5e1; margin-bottom: 1.5rem;">
+            Direct Email: <a href="mailto:aac@laxmienfab.com" style="color: #60a5fa; text-decoration: none; font-weight: 700;">aac@laxmienfab.com</a>
+          </div>
+          <a href="https://wa.me/918980800839?text=Hello%20Laxmi%20En-Fab%20Team,%20I%20would%20like%20to%20consult%20an%20AAC%20plant%20expert." target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem; width: 100%; background: #25d366; color: #ffffff; font-weight: 800; font-size: 0.9rem; padding: 0.9rem 1.5rem; border-radius: 8px; text-decoration: none; letter-spacing: 0.05em;">
+            <span>💬</span> CHAT ON WHATSAPP NOW
+          </a>
+        </div>
       </div>
     </section>
 
-    <!-- ============ 2. CONTACT INFORMATION SECTION (QUIET WHITE) ========== -->
-    <section class="editorial-direct-info" id="direct-contact">
-      <div class="editorial-direct-info__inner" data-reveal>
+    <!-- ============ 02. CONSULTATION FORM & OFFICE CARDS ============ -->
+    <section class="contact-main-section" id="consultation-form">
+      <div class="contact-main-inner">
         
-        <div class="editorial-direct-info__header">
-          <span class="editorial-eyebrow">DIRECT COMMUNICATION</span>
-          <h2 class="editorial-direct-info__title">Talk directly to the team.</h2>
-          <p class="editorial-direct-info__sub">Choose the contact method that works best for you.</p>
-        </div>
-
-        <div class="editorial-direct-info__rows">
-          
-          <!-- Row 01: CALL -->
-          <div class="editorial-info-row" data-reveal>
-            <span class="editorial-info-row__num">01</span>
-            <div class="editorial-info-row__label">CALL</div>
-            <div class="editorial-info-row__content">
-              <a href="tel:+918980800607" class="editorial-info-row__value">+91-8980800607</a>
-              <span class="editorial-info-row__sep">|</span>
-              <a href="tel:+918980800839" class="editorial-info-row__value">+91-8980800839</a>
-            </div>
-            <a href="tel:+918980800607" class="editorial-info-row__action" aria-label="Call Laxmi Engineering Desk">
-              <span class="action-arrow">→</span>
-            </a>
+        <!-- Left: Interactive Technical Inquiry Form -->
+        <div class="contact-form-card">
+          <div class="contact-form-header">
+            <h2 class="contact-form-title">Request a Project Consultation</h2>
+            <p class="contact-form-subtitle">Fill out your project parameters for a structured engineering proposal.</p>
           </div>
 
-          <!-- Row 02: EMAIL -->
-          <div class="editorial-info-row" data-reveal>
-            <span class="editorial-info-row__num">02</span>
-            <div class="editorial-info-row__label">EMAIL</div>
-            <div class="editorial-info-row__content">
-              <a href="mailto:aac@laxmienfab.com" class="editorial-info-row__value">aac@laxmienfab.com</a>
-              <span class="editorial-info-row__sep">|</span>
-              <a href="mailto:aaclaxmi@gmail.com" class="editorial-info-row__value">aaclaxmi@gmail.com</a>
-            </div>
-            <a href="mailto:aac@laxmienfab.com" class="editorial-info-row__action" aria-label="Email Laxmi Team">
-              <span class="action-arrow">→</span>
-            </a>
-          </div>
-
-          <!-- Row 03: VISIT -->
-          <div class="editorial-info-row" data-reveal>
-            <span class="editorial-info-row__num">03</span>
-            <div class="editorial-info-row__label">VISIT</div>
-            <div class="editorial-info-row__content">
-              <address class="editorial-info-row__address">
-                48 Block A, 2nd Floor, Pelican Complex, Opp Odhav BRTS, GIDC, Odhav, Ahmedabad, Gujarat 382415
-              </address>
-            </div>
-            <a href="#location" class="editorial-info-row__action" aria-label="View Location Map">
-              <span class="action-arrow">→</span>
-            </a>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ============ 3. B2B ENQUIRY FORM & EDITORIAL SECTION (WHITE) ========== -->
-    <section class="editorial-enquiry-section" id="enquiry-section">
-      <div class="editorial-enquiry-section__inner">
-        
-        <!-- Left: Editorial Statement (40%) -->
-        <div class="editorial-enquiry-left" data-reveal>
-          <span class="editorial-eyebrow">PROJECT CONTEXT</span>
-          <h2 class="editorial-enquiry-left__title">Tell us what you're building.</h2>
-          <p class="editorial-enquiry-left__desc">
-            A little context helps us connect you with the right plant engineer, assess site requirements, and provide exact machinery specifications.
-          </p>
-
-          <div class="editorial-reassurance">
-            <span class="reassurance-icon">⚡</span>
-            <p>Our engineering team reviews all B2B inquiries promptly and prepares tailored technical feedback.</p>
-          </div>
-
-          <!-- Section 11: Project Context Helper List -->
-          <div class="project-context-helper">
-            <span class="context-helper__title">PLANNING AN AAC PLANT?</span>
-            <ul class="context-helper__list">
-              <li>
-                <span class="context-helper__num">01</span>
-                <a href="solutions.html">Starting a new plant <span class="helper-arrow">→</span></a>
-              </li>
-              <li>
-                <span class="context-helper__num">02</span>
-                <a href="expand-your-plant.html">Expanding an existing plant <span class="helper-arrow">→</span></a>
-              </li>
-              <li>
-                <span class="context-helper__num">03</span>
-                <a href="efficient-your-plant.html">Improving plant efficiency <span class="helper-arrow">→</span></a>
-              </li>
-              <li>
-                <span class="context-helper__num">04</span>
-                <a href="machinery-equipment.html">Understanding machinery <span class="helper-arrow">→</span></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Right: Premium Editorial Form (60%) -->
-        <div class="editorial-enquiry-right" data-reveal>
-          <div class="editorial-form-header">
-            <h3 class="editorial-form-header__title">Tell us about your project.</h3>
-            <p class="editorial-form-header__sub">A little context helps us understand what you need.</p>
-          </div>
-
-          <form id="b2b-contact-form" class="editorial-form" novalidate onsubmit="return handleFormSubmit(event)">
-            
-            <div class="form-grid-two">
+          <form id="expert-inquiry-form" onsubmit="handleFormSubmit(event)">
+            <div class="form-grid">
               
-              <!-- Required: Full Name -->
-              <div class="form-field-group">
-                <label for="form-name" class="form-label">Full Name <span class="required-star">*</span></label>
-                <input type="text" id="form-name" name="name" class="form-input" placeholder="e.g. Rajesh Patel" required />
-                <span class="form-error-msg" id="error-name"></span>
+              <div class="form-group">
+                <label class="form-label" for="contact-name">Full Name <span class="req">*</span></label>
+                <input type="text" id="contact-name" name="name" class="form-control" placeholder="e.g. Rajesh Sharma" required />
               </div>
 
-              <!-- Required: Company Name -->
-              <div class="form-field-group">
-                <label for="form-company" class="form-label">Company Name <span class="required-star">*</span></label>
-                <input type="text" id="form-company" name="company" class="form-input" placeholder="e.g. Apex Infrastructure Pvt Ltd" required />
-                <span class="form-error-msg" id="error-company"></span>
+              <div class="form-group">
+                <label class="form-label" for="contact-company">Company / Enterprise</label>
+                <input type="text" id="contact-company" name="company" class="form-control" placeholder="e.g. Apex Infra Projects" />
               </div>
 
-            </div>
-
-            <div class="form-grid-two">
-              
-              <!-- Required: Email Address -->
-              <div class="form-field-group">
-                <label for="form-email" class="form-label">Email Address <span class="required-star">*</span></label>
-                <input type="email" id="form-email" name="email" class="form-input" placeholder="name@company.com" required />
-                <span class="form-error-msg" id="error-email"></span>
+              <div class="form-group">
+                <label class="form-label" for="contact-phone">Phone / WhatsApp Number <span class="req">*</span></label>
+                <input type="tel" id="contact-phone" name="phone" class="form-control" placeholder="+91 98765 43210" required />
               </div>
 
-              <!-- Required: Phone Number -->
-              <div class="form-field-group">
-                <label for="form-phone" class="form-label">Phone Number <span class="required-star">*</span></label>
-                <input type="tel" id="form-phone" name="phone" class="form-input" placeholder="+91 98765 43210" required />
-                <span class="form-error-msg" id="error-phone"></span>
+              <div class="form-group">
+                <label class="form-label" for="contact-email">Email Address <span class="req">*</span></label>
+                <input type="email" id="contact-email" name="email" class="form-control" placeholder="name@company.com" required />
               </div>
 
-            </div>
-
-            <div class="form-grid-two">
-              
-              <!-- Required: Project Requirement Dropdown -->
-              <div class="form-field-group">
-                <label for="form-requirement" class="form-label">Project Requirement <span class="required-star">*</span></label>
-                <select id="form-requirement" name="requirement" class="form-select" required>
-                  <option value="" disabled selected>Select Requirement</option>
-                  <option value="New AAC Plant">New AAC Plant</option>
-                  <option value="AAC Plant Expansion">AAC Plant Expansion</option>
-                  <option value="Plant Improvement">Plant Improvement</option>
-                  <option value="Machinery Requirement">Machinery Requirement</option>
-                  <option value="Engineering Requirement">Engineering Requirement</option>
-                  <option value="General Enquiry">General Enquiry</option>
+              <div class="form-group form-group--full">
+                <label class="form-label" for="inquiry-type">Project / Inquiry Focus <span class="req">*</span></label>
+                <select id="inquiry-type" name="inquiry_type" class="form-control" required>
+                  <option value="" disabled selected>Select Primary Discussion Subject...</option>
+                  <option value="New AAC Block Plant (150 - 600 m3/day)">New AAC Block Plant (150 – 600 m³/day)</option>
+                  <option value="High-Capacity AAC Plant (600 - 1500 m3/day)">High-Capacity AAC Plant (600 – 1500 m³/day)</option>
+                  <option value="Reinforced ALC Wall & Floor Panel Plant">Reinforced ALC Wall &amp; Floor Panel Plant</option>
+                  <option value="Dry Mix Mortar & Block Adhesive Unit">Dry Mix Mortar &amp; Block Adhesive Unit</option>
+                  <option value="Plant Automation & SCADA Modernization">Plant Automation &amp; SCADA Modernization</option>
+                  <option value="Autoclaves, Steam Boilers & Heat Recovery">Autoclaves, Steam Boilers &amp; Heat Recovery</option>
+                  <option value="State Industrial Subsidy & Bank DPR Support">State Industrial Subsidy &amp; Bank DPR Support</option>
+                  <option value="Workshop Tour & Live Plant Visit">Workshop Tour &amp; Live Plant Visit</option>
                 </select>
-                <span class="form-error-msg" id="error-requirement"></span>
               </div>
 
-              <!-- Optional: City / State / Country -->
-              <div class="form-field-group">
-                <label for="form-location" class="form-label">City / State / Country</label>
-                <input type="text" id="form-location" name="location" class="form-input" placeholder="e.g. Ahmedabad, Gujarat, India" />
+              <div class="form-group">
+                <label class="form-label" for="plant-location">Proposed Plant Location (State/City)</label>
+                <input type="text" id="plant-location" name="location" class="form-control" placeholder="e.g. Pune, Maharashtra" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="project-timeline">Target Commissioning Timeline</label>
+                <select id="project-timeline" name="timeline" class="form-control">
+                  <option value="Immediate (1-3 Months)">Immediate (1–3 Months)</option>
+                  <option value="3-6 Months">3–6 Months</option>
+                  <option value="6-12 Months">6–12 Months</option>
+                  <option value="Concept / Feasibility Stage">Concept / Feasibility Stage</option>
+                </select>
+              </div>
+
+              <div class="form-group form-group--full">
+                <label class="form-label" for="contact-message">Technical Requirements / Message</label>
+                <textarea id="contact-message" name="message" class="form-control" placeholder="Describe your available land area, desired daily capacity, fly ash supply distance, or specific machinery questions..."></textarea>
+              </div>
+
+              <div class="form-group form-group--full">
+                <button type="submit" id="submit-btn" class="form-submit-btn">
+                  SUBMIT INQUIRY TO ENGINEERING TEAM <span style="font-size: 1.1rem;">→</span>
+                </button>
               </div>
 
             </div>
-
-            <!-- Optional: Expected Production Capacity (Free-text field) -->
-            <div class="form-field-group">
-              <label for="form-capacity" class="form-label">Expected Production Capacity (Optional)</label>
-              <input type="text" id="form-capacity" name="capacity" class="form-input" placeholder="e.g. 150,000 m³/year or planned daily block output..." />
-            </div>
-
-            <!-- Optional: Additional Message -->
-            <div class="form-field-group">
-              <label for="form-message" class="form-label">Additional Message (Optional)</label>
-              <textarea id="form-message" name="message" class="form-textarea" rows="4" placeholder="Tell us about your proposed plant location, land availability, raw materials, or specific engineering questions..."></textarea>
-            </div>
-
-            <button type="submit" id="form-submit-btn" class="form-submit-btn">
-              SEND ENQUIRY <span class="btn-arrow">→</span>
-            </button>
-
-            <!-- Aria live region for success feedback -->
-            <div id="form-status-msg" class="form-status-msg" aria-live="polite" style="display: none;"></div>
-
           </form>
-        </div>
 
-      </div>
-    </section>
-
-    <!-- ============ 4. LOCATION SECTION (LIGHT BG) ========== -->
-    <section class="editorial-location-section" id="location">
-      <div class="editorial-location-section__inner" data-reveal>
-        
-        <div class="editorial-location-header">
-          <span class="editorial-eyebrow">HEAD OFFICE &amp; WORKS</span>
-          <h2 class="editorial-location-header__title">Find Laxmi in Ahmedabad.</h2>
-        </div>
-
-        <div class="editorial-location-composition">
-          
-          <!-- Left: Clean Location Map Frame / Illustration -->
-          <div class="editorial-location-map">
-            <iframe 
-              title="Laxmi En-Fab Head Office Location Map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.970894291884!2d72.65824997593683!3d23.00645931627914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e8615c4d56789%3A0x9876543210fedcba!2sPelican%20Complex%2C%20Odhav%2C%20Ahmedabad%2C%20Gujarat%20382415!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
-              width="100%" 
-              height="380" 
-              style="border:0;" 
-              allowfullscreen="" 
-              loading="lazy">
-            </iframe>
+          <div id="form-success-msg" style="display: none; background: #ecfdf5; border: 1px solid #10b981; border-radius: 8px; padding: 1.5rem; margin-top: 1.5rem; text-align: center;">
+            <span style="font-size: 2rem;">✅</span>
+            <h3 style="font-size: 1.25rem; font-weight: 800; color: #065f46; margin: 0.5rem 0;">Thank You! Your Inquiry Has Been Received.</h3>
+            <p style="font-size: 0.95rem; color: #047857; margin: 0;">Our senior plant engineer will review your requirements and contact you within 4 business hours.</p>
           </div>
+        </div>
 
-          <!-- Right: Confirmed Address & Directions Link -->
-          <div class="editorial-location-details">
-            <span class="location-details__tag">OFFICIAL REGISTERED ADDRESS</span>
-            <h3 class="location-details__company">LAXMI EN-FAB PVT. LTD.</h3>
+        <!-- Right: Location & Corporate Coordinates -->
+        <div class="contact-info-wrap">
+          
+          <!-- Card 1: Corporate Office -->
+          <div class="contact-card">
+            <span class="contact-card__tag">HEADQUARTERS</span>
+            <h3 class="contact-card__title">Corporate Office</h3>
             
-            <address class="location-details__address">
-              48 Block A, 2nd Floor,<br>
-              Pelican Complex,<br>
-              Opp Odhav BRTS, GIDC, Odhav,<br>
-              Ahmedabad, Gujarat 382415
-            </address>
-
-            <div class="location-details__contact-lines">
-              <p><strong>Phone:</strong> +91-8980800607 | +91-8980800839</p>
-              <p><strong>Email:</strong> aac@laxmienfab.com | aaclaxmi@gmail.com</p>
+            <div class="contact-item-row">
+              <span class="contact-item-icon">📍</span>
+              <div>
+                <div class="contact-item-label">Address</div>
+                <div class="contact-item-val">
+                  <strong>Laxmi En-Fab Pvt. Ltd.</strong><br>
+                  2nd Floor, Pelican Business Hub,<br>
+                  Opp. Odhav BRTS, GIDC, Odhav,<br>
+                  Ahmedabad, Gujarat 382415, India
+                </div>
+              </div>
             </div>
 
-            <a href="https://maps.google.com/?q=Pelican+Complex,+Opp+Odhav+BRTS,+GIDC,+Odhav,+Ahmedabad,+Gujarat+382415" target="_blank" rel="noopener noreferrer" class="editorial-link-action">
-              Get Directions <span class="link-arrow">→</span>
-            </a>
+            <div class="contact-item-row">
+              <span class="contact-item-icon">📞</span>
+              <div>
+                <div class="contact-item-label">Direct Lines</div>
+                <div class="contact-item-val">
+                  <a href="tel:+918980800839">+91 89808 00839</a> / <a href="tel:+918980800607">+91 89808 00607</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-item-row">
+              <span class="contact-item-icon">✉️</span>
+              <div>
+                <div class="contact-item-label">Email</div>
+                <div class="contact-item-val">
+                  <a href="mailto:aac@laxmienfab.com">aac@laxmienfab.com</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="direct-call-box">
+              <span style="font-size: 0.82rem; font-weight: 800; color: #0b3f78;">CALL CORPORATE DESK</span>
+              <a href="tel:+918980800839" class="direct-call-number">+91 89808 00839</a>
+            </div>
           </div>
 
-        </div>
+          <!-- Card 2: Manufacturing Workshop -->
+          <div class="contact-card contact-card--dark">
+            <span class="contact-card__tag">HEAVY FABRICATION WORKSHOP</span>
+            <h3 class="contact-card__title">Manufacturing Facility</h3>
+            
+            <div class="contact-item-row">
+              <span class="contact-item-icon">🏭</span>
+              <div>
+                <div class="contact-item-label">Workshop Location</div>
+                <div class="contact-item-val">
+                  <strong>Laxmi En-Fab Heavy Engineering Works</strong><br>
+                  NH 48, Kheda Bypass, Kheda,<br>
+                  Gujarat 387411, India
+                </div>
+              </div>
+            </div>
 
-        <!-- Section 14: Minimal Social Links Bar -->
-        <div class="editorial-social-bar">
-          <span class="social-bar__label">Follow the work.</span>
-          <div class="social-bar__links">
-            <a href="https://in.linkedin.com/company/aacblockplant" target="_blank" rel="noopener noreferrer" class="social-text-link">LinkedIn ↗</a>
-            <a href="https://www.instagram.com/aac_plant/" target="_blank" rel="noopener noreferrer" class="social-text-link">Instagram ↗</a>
-            <a href="https://www.facebook.com/aacblockplant" target="_blank" rel="noopener noreferrer" class="social-text-link">Facebook ↗</a>
-            <a href="https://www.youtube.com/@LaxmiGroupaacsystem" target="_blank" rel="noopener noreferrer" class="social-text-link">YouTube ↗</a>
+            <div class="contact-item-row">
+              <span class="contact-item-icon">🛠️</span>
+              <div>
+                <div class="contact-item-label">Workshop Highlights</div>
+                <div class="contact-item-val">
+                  Heavy plate rolling up to 32mm, submerged arc welding, autoclave hydrostatic testing facility, and CNC cutting machine assembly bays.
+                </div>
+              </div>
+            </div>
+
+            <div class="direct-call-box">
+              <span style="font-size: 0.82rem; font-weight: 800; color: #e6a822;">SCHEDULE WORKSHOP VISIT</span>
+              <a href="tel:+918980800607" class="direct-call-number">+91 89808 00607</a>
+            </div>
           </div>
+
         </div>
 
       </div>
     </section>
 
-    <!-- ============ 5. FINAL CTA SECTION (DARK) ========== -->
-    <section class="editorial-final-cta" id="final-cta">
-      <div class="editorial-final-cta__inner" data-reveal>
-        <span class="editorial-eyebrow editorial-eyebrow--gold">START YOUR AAC JOURNEY</span>
-        <h2 class="editorial-final-cta__title">Your AAC project starts with the right conversation.</h2>
-        <p class="editorial-final-cta__sub">
-          Bring your requirement, questions or project plans. We'll take it from there.
-        </p>
-        <div class="editorial-final-cta__actions">
-          <a href="tel:+918980800607" class="editorial-btn-gold">
-            Call Laxmi <span class="btn-arrow">→</span>
-          </a>
-          <a href="#enquiry-section" class="editorial-btn-outline">
-            Send an Enquiry <span class="btn-arrow">→</span>
-          </a>
+    <!-- ============ 03. WHAT TO EXPECT WHEN YOU TALK TO US ============ -->
+    <section class="workshop-strip">
+      <div class="workshop-strip__inner">
+        
+        <div class="workshop-feature-box">
+          <div>
+            <div class="workshop-feature-num">01</div>
+            <h3 class="workshop-feature-title">Ground-Level Feasibility</h3>
+            <p class="workshop-feature-desc">
+              We review your local fly ash sourcing logistics, raw material proximity, and power/water availability before proposing equipment.
+            </p>
+          </div>
         </div>
+
+        <div class="workshop-feature-box">
+          <div>
+            <div class="workshop-feature-num">02</div>
+            <h3 class="workshop-feature-title">Tailored CAPEX &amp; Layout</h3>
+            <p class="workshop-feature-desc">
+              Receive realistic project cost sheets, working capital breakdowns, and preliminary civil layout CAD drawings customized to your plot.
+            </p>
+          </div>
+        </div>
+
+        <div class="workshop-feature-box">
+          <div>
+            <div class="workshop-feature-num">03</div>
+            <h3 class="workshop-feature-title">Workshop Verification</h3>
+            <p class="workshop-feature-desc">
+              Visit our Kheda heavy engineering facility to inspect live machine fabrication, ultrasonic weld testing, and running customer plants.
+            </p>
+          </div>
+        </div>
+
       </div>
     </section>
 
   </main>
 
-  <!-- Section 22: Sticky Mobile Contact Bar -->
-  <div class="mobile-sticky-cta" id="mobile-sticky-cta">
-    <a href="tel:+918980800607" class="mobile-sticky-cta__btn mobile-sticky-cta__btn--call">📞 Call Laxmi</a>
-    <a href="#enquiry-section" class="mobile-sticky-cta__btn mobile-sticky-cta__btn--enquire">✉ Enquire Now</a>
-  </div>
-
-  <!-- Shared Global Footer Injection Placeholder -->
+  <!-- Shared Global Footer Injection -->
   <div id="site-footer"></div>
 
-  <script src="js/main.js"></script>
-  <script src="js/navigation.js"></script>
-  <script src="js/animations.js"></script>
+  <!-- Scripts -->
   <script src="js/components.js"></script>
-
-  <!-- Client-side Validation & Frontend Success Handler -->
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
   <script>
     function handleFormSubmit(e) {
       e.preventDefault();
+      var form = document.getElementById('expert-inquiry-form');
+      var btn = document.getElementById('submit-btn');
+      var successBox = document.getElementById('form-success-msg');
 
-      var nameInput = document.getElementById('form-name');
-      var companyInput = document.getElementById('form-company');
-      var emailInput = document.getElementById('form-email');
-      var phoneInput = document.getElementById('form-phone');
-      var reqInput = document.getElementById('form-requirement');
-      
-      var errName = document.getElementById('error-name');
-      var errCompany = document.getElementById('error-company');
-      var errEmail = document.getElementById('error-email');
-      var errPhone = document.getElementById('error-phone');
-      var errReq = document.getElementById('error-requirement');
-      var statusMsg = document.getElementById('form-status-msg');
-      var submitBtn = document.getElementById('form-submit-btn');
+      btn.disabled = true;
+      btn.innerHTML = 'SENDING INQUIRY... ⏳';
 
-      // Clear previous errors
-      errName.textContent = '';
-      errCompany.textContent = '';
-      errEmail.textContent = '';
-      errPhone.textContent = '';
-      errReq.textContent = '';
-      nameInput.classList.remove('input-error');
-      companyInput.classList.remove('input-error');
-      emailInput.classList.remove('input-error');
-      phoneInput.classList.remove('input-error');
-      reqInput.classList.remove('input-error');
-
-      var isValid = true;
-
-      if (!nameInput.value.trim()) {
-        errName.textContent = 'Please enter your full name.';
-        nameInput.classList.add('input-error');
-        isValid = false;
-      }
-
-      if (!companyInput.value.trim()) {
-        errCompany.textContent = 'Please enter your company or firm name.';
-        companyInput.classList.add('input-error');
-        isValid = false;
-      }
-
-      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailInput.value.trim() || !emailRegex.test(emailInput.value.trim())) {
-        errEmail.textContent = 'Please enter a valid email address.';
-        emailInput.classList.add('input-error');
-        isValid = false;
-      }
-
-      var phoneRegex = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/;
-      if (!phoneInput.value.trim() || phoneInput.value.trim().length < 7) {
-        errPhone.textContent = 'Please enter a valid contact phone number.';
-        phoneInput.classList.add('input-error');
-        isValid = false;
-      }
-
-      if (!reqInput.value) {
-        errReq.textContent = 'Please select a project requirement topic.';
-        reqInput.classList.add('input-error');
-        isValid = false;
-      }
-
-      if (!isValid) return false;
-
-      // Submit State Simulation
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = 'RECORDING ENQUIRY...';
-
-      setTimeout(function () {
-        statusMsg.style.display = 'block';
-        statusMsg.className = 'form-status-msg form-status-msg--success';
-        statusMsg.innerHTML = '✓ <strong>Thank you. Your enquiry has been recorded.</strong><br>Our engineering team will review your project requirements.';
-        
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = 'SEND ENQUIRY <span class="btn-arrow">→</span>';
-        document.getElementById('b2b-contact-form').reset();
-      }, 1000);
-
-      return false;
+      setTimeout(function() {
+        form.style.display = 'none';
+        successBox.style.display = 'block';
+        window.scrollTo({ top: successBox.offsetTop - 120, behavior: 'smooth' });
+      }, 800);
     }
   </script>
 </body>

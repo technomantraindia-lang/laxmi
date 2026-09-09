@@ -12,22 +12,37 @@
     'dry-mix-mortar-plant': 'assets/images/improve-block-quality.png'
   };
 
+  // Helper: Robust JSON fetch
+  async function fetchJSONData(paths) {
+    for (const p of paths) {
+      try {
+        const res = await fetch(p);
+        if (res.ok) return await res.json();
+      } catch (e) {}
+    }
+    return null;
+  }
+
   document.addEventListener('DOMContentLoaded', initSolutionInnerPage);
 
   async function initSolutionInnerPage() {
     const root = document.getElementById('solution-root');
     if (!root) return;
 
-    // Detect Page Slug
+    // Detect Page Slug & Subfolder Depth
     const bodyPage = document.body.getAttribute('data-solution-page');
     const pathSlug = window.location.pathname.split('/').pop().replace('.html', '');
     const currentSlug = bodyPage || pathSlug || 'aac-block-panel-plant';
+    const isSubfolder = window.location.pathname.includes('/solutions/') || window.location.pathname.includes('\\solutions\\');
+    const prefix = isSubfolder ? '../' : '';
 
     try {
       // Fetch JSON Data
-      let res = await fetch('data/laxmi-solutions-inner-pages.json');
-      if (!res.ok) throw new Error('Solutions JSON file could not be loaded.');
-      let data = await res.json();
+      const data = await fetchJSONData([
+        'data/laxmi-solutions-inner-pages.json',
+        '../data/laxmi-solutions-inner-pages.json',
+        '../../data/laxmi-solutions-inner-pages.json'
+      ]);
 
       if (!data || !data.pages) {
         throw new Error('Invalid Solutions JSON data structure.');
@@ -47,16 +62,16 @@
 
       // Render Complete Solution Inner Page
       root.innerHTML = `
-        ${renderSolutionNavRail(data.shared.navigation.items, page.slug)}
-        ${renderHero(page)}
-        ${renderIntro(page)}
-        ${page.slug === 'aac-block-panel-plant' ? renderProductionJourney(page) : renderSystemView(page)}
-        ${page.slug === 'aac-block-panel-plant' ? renderProducts(page) : renderSolutionFocus(page)}
-        ${page.slug === 'aac-block-panel-plant' ? renderMachineryStory(page) : renderVisualStory(page)}
-        ${renderEngineeringProof(page)}
-        ${renderProjectProof(page)}
-        ${renderDecisionSupport(page)}
-        ${renderFinalCTA(page, data.shared)}
+        ${renderSolutionNavRail(data.shared.navigation.items, page.slug, prefix)}
+        ${renderHero(page, prefix)}
+        ${renderIntro(page, prefix)}
+        ${page.slug === 'aac-block-panel-plant' ? renderProductionJourney(page, prefix) : renderSystemView(page, prefix)}
+        ${page.slug === 'aac-block-panel-plant' ? renderProducts(page, prefix) : renderSolutionFocus(page, prefix)}
+        ${page.slug === 'aac-block-panel-plant' ? renderMachineryStory(page, prefix) : renderVisualStory(page, prefix)}
+        ${renderEngineeringProof(page, prefix)}
+        ${renderProjectProof(page, prefix)}
+        ${renderDecisionSupport(page, prefix)}
+        ${renderFinalCTA(page, data.shared, prefix)}
       `;
 
       // Attach Event Listeners
@@ -68,16 +83,17 @@
 
     } catch (err) {
       console.error('Laxmi Solutions Render Error:', err);
-      root.innerHTML = renderErrorFallback();
+      root.innerHTML = renderErrorFallback(prefix);
     }
   }
 
   // 00. Solutions Nav Rail
-  function renderSolutionNavRail(items, currentSlug) {
+  function renderSolutionNavRail(items, currentSlug, prefix = '') {
     if (!items) return '';
     const railHTML = items.map(i => {
       const activeClass = i.url.includes(currentSlug) ? 'is-active' : '';
-      return `<a href="${i.url}" class="solution-nav-rail__item ${activeClass}">${i.label.toUpperCase()}</a>`;
+      const linkUrl = i.url.startsWith('http') ? i.url : (prefix + i.url);
+      return `<a href="${linkUrl}" class="solution-nav-rail__item ${activeClass}">${i.label.toUpperCase()}</a>`;
     }).join('');
 
     return `
@@ -93,9 +109,13 @@
   }
 
   // 01. Hero Section
-  function renderHero(page) {
-    const heroImg = SOLUTION_HERO_IMAGES[page.slug] || 'assets/images/future-of-aac.png';
+  function renderHero(page, prefix = '') {
+    const rawImg = SOLUTION_HERO_IMAGES[page.slug] || 'assets/images/future-of-aac.png';
+    const heroImg = prefix + rawImg;
     const hero = page.hero || {};
+
+    const primaryUrl = hero.primary_cta ? (hero.primary_cta.url.startsWith('http') ? hero.primary_cta.url : (prefix + hero.primary_cta.url)) : '';
+    const secondaryUrl = hero.secondary_cta ? (hero.secondary_cta.url.startsWith('http') ? hero.secondary_cta.url : (prefix + hero.secondary_cta.url)) : '';
 
     return `
       <section class="editorial-about-hero" id="hero">
@@ -112,12 +132,12 @@
             </p>
             <div class="editorial-about-hero__actions">
               ${hero.primary_cta ? `
-                <a href="${hero.primary_cta.url}" class="editorial-btn-primary">
+                <a href="${primaryUrl}" class="editorial-btn-primary">
                   ${hero.primary_cta.label} <span class="btn-arrow">→</span>
                 </a>
               ` : ''}
               ${hero.secondary_cta ? `
-                <a href="${hero.secondary_cta.url}" class="editorial-btn-outline">
+                <a href="${secondaryUrl}" class="editorial-btn-outline">
                   ${hero.secondary_cta.label} <span class="btn-arrow">→</span>
                 </a>
               ` : ''}
@@ -142,9 +162,10 @@
   }
 
   // 02. System Intro Section
-  function renderIntro(page) {
+  function renderIntro(page, prefix = '') {
     if (!page.intro) return '';
-    const introImg = page.slug === 'aac-block-panel-plant' ? 'assets/images/explored view.png' : 'assets/images/capacity-selection.png';
+    const rawIntro = page.slug === 'aac-block-panel-plant' ? 'assets/images/explored view.png' : 'assets/images/capacity-selection.png';
+    const introImg = prefix + rawIntro;
 
     return `
       <section class="solution-sys-intro" id="intro">

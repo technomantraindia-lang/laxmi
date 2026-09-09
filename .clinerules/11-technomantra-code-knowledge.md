@@ -5,7 +5,7 @@
 - Indexed source files: 33
 - Structural edges: 27
 - Matched end-to-end flows: 0
-- Updated: 2026-09-02T12:28:19.203Z
+- Updated: 2026-09-03T06:37:07.046Z
 
 ## Frontend API calls
 - API GET /components/header.html <- js/components.js
@@ -63,7 +63,7 @@
 - UI css/academy.css: .academy-inner-body, #ffffff, .academy-nav-rail, .academy-nav-rail__inner, .academy-nav-rail__items, .academy-nav-rail__item, .academy-nav-rail__num, .academy-section, .academy-section--alt, #f5f7fa, .academy-section--dark, .academy-section__inner, .academy-micro-label, .academy-intro-grid
 - UI css/main.css: #ffffff, .home-hero, .home-hero__content, .home-hero__video, .home-hero__overlay, .eyebrow, #f0f7ff, #dbeafe, .section__heading, .section, .final-cta, .action-row, .btn-brand, .btn-outline
 - UI css/responsive.css: .machinery-hero__inner, .machinery-hero__hud, .machinery-card-grid, .machinery-card-grid--two, .machinery-proof__grid, .machinery-catalog__grid, .machinery-stage__inner, .machinery-proof__inner, .machinery-catalog__inner, .machinery-hero__actions
-- UI css/solution.css: .solution-inner-body, #ffffff, .solution-nav-rail, .solution-nav-rail__inner, .solution-nav-rail__items, .solution-nav-rail__item, .solution-section, .solution-section--alt, #f5f7fa, .solution-section--dark, .solution-section__inner, .solution-micro-label, .solution-intro-grid, .solution-intro-statement
+- UI css/solution.css: .solution-inner-body, #ffffff, .solution-nav-rail, .solution-nav-rail__inner, .solution-nav-rail__items, .solution-nav-rail__item, .solution-section, .solution-section--alt, #f5f7fa, .solution-section--dark, .solution-section__inner, .solution-micro-label, .solution-sys-intro, .solution-sys-intro__inner
 - UI design-your-plant.html: #site-header, #academy-root, #site-footer, .academy-inner-body
 - UI dry-mix-mortar-plant.html: #site-header, #solution-root, #site-footer, .solution-inner-body
 - UI efficient-your-plant.html: #site-header, #academy-root, #site-footer, .academy-inner-body

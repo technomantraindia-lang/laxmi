@@ -1,0 +1,1132 @@
+{
+  "version": "2.0",
+  "project": "Laxmi En-Fab Pvt. Ltd. - AAC Investor Academy 3rd Level Inner Topics",
+  "stages": {
+    "understand-market": {
+      "stageNum": "01",
+      "stageTitle": "Understand the Market",
+      "sidebarHeading": "UNDERSTAND THE MARKET INNER PAGES",
+      "defaultTopic": "why-aac",
+      "topics": [
+        {
+          "id": "why-aac",
+          "icon": "📄",
+          "number": "01",
+          "sidebarTitle": "Why AAC",
+          "eyebrow": "STAGE 01 · TOPIC 01",
+          "title": "Why AAC Blocks? Advantages, Limitations and Engineering",
+          "lead": "Autoclaved Aerated Concrete (AAC) blocks are lightweight, precision-engineered masonry units valued for structural dead-load reduction, thermal insulation, dimensional accuracy, and rapid construction. Discover the engineering principles, comparative economics, and manufacturing disciplines that determine real-world success.",
+          "image": "assets/images/why-aac.png",
+          "imageAlt": "Why AAC Blocks Advantages and Technical Overview",
+          "checkpoint": {
+            "title": "CORE ENGINEERING BENCHMARK",
+            "text": "AAC blocks have a dry density of 550–650 kg/m³—approximately 65% lighter than traditional red clay bricks (1,800–2,000 kg/m³). When structural engineers design high-rise RCC frames for reduced dead load, this translates into 15–20% savings in structural steel and foundation concrete."
+          },
+          "sections": [
+            {
+              "heading": "1. What Is AAC and How Is It Formed?",
+              "text": "Autoclaved Aerated Concrete is manufactured by blending finely ground silica source (fly ash or quartz sand), OPC 53 cement, quicklime (CaO), gypsum, water, and a microscopic trace of aluminium powder. In an alkaline environment, aluminium reacts with calcium hydroxide to release hydrogen gas micro-bubbles, expanding the slurry into a cellular 'green cake'. After wire cutting, the cake is cured in autoclaves under 12 bar saturated steam at 190°C for 10–12 hours, forming crystalline Tobermorite (calcium silicate hydrate) for permanent dimensional stability and structural strength."
+            },
+            {
+              "heading": "2. Comprehensive Technical Comparison: AAC vs. Red Clay Bricks",
+              "table": {
+                "headers": ["Technical Property", "AAC Blocks (IS 2185-3)", "Traditional Red Clay Bricks", "Project & Investor Impact"],
+                "rows": [
+                  ["Dry Density", "550 – 650 kg/m³", "1,800 – 2,000 kg/m³", "Reduces wall dead load by ~65%; lowers RCC frame weight"],
+                  ["Compressive Strength", "3.5 – 5.0 N/mm² (Grade 1)", "3.0 – 3.5 N/mm² (Variable)", "Certified structural compliance conforming to IS 2185-3"],
+                  ["Thermal Conductivity (k)", "0.16 – 0.24 W/m·K", "0.81 – 1.05 W/m·K", "Cuts HVAC cooling/heating energy consumption by 25–30%"],
+                  ["Fire Resistance Rating", "4 Hours (up to 1,200°C)", "1.5 – 2.0 Hours", "Highest non-combustible Class A1 / NBC fire safety rating"],
+                  ["Sound Transmission (STC)", "40 – 44 dB", "35 – 38 dB", "Acoustic comfort for hotels, hospitals, and residential towers"],
+                  ["Dimensional Accuracy", "± 1.5 mm (Precision Wire Cut)", "± 5 – 10 mm (Handmade/Kiln)", "Enables 2–3mm thin-bed mortar instead of 12–15mm plaster"],
+                  ["Water Absorption", "Under 10% (Capillary pores)", "15% – 25% (Connected pores)", "Reduced efflorescence and lower plaster moisture damage"]
+                ]
+              }
+            },
+            {
+              "heading": "3. Construction Speed, Mortar Savings & Labour Productivity",
+              "cards": [
+                {
+                  "tag": "3× FASTER INSTALLATION",
+                  "title": "Masonry Speed & Productivity",
+                  "text": "1 standard AAC block (600 × 200 × 150 mm) replaces 8 conventional red bricks. Masons lay up to 3× more wall area per day with 75% fewer joint lines."
+                },
+                {
+                  "tag": "80% MORTAR REDUCTION",
+                  "title": "Thin-Bed Polymer Adhesive",
+                  "text": "Applied with 2–3mm polymer-modified thin-bed mortar rather than 12–15mm thick cement-sand mortar, eliminating on-site curing water."
+                },
+                {
+                  "tag": "CARPET AREA GAIN",
+                  "title": "1.5% – 2.5% Usable Space",
+                  "text": "Thinner wall sections (100mm/150mm vs 230mm brickwork) increase saleable carpet area in residential and commercial developments."
+                }
+              ]
+            },
+            {
+              "heading": "4. Critical Manufacturing Controls That Determine Quality",
+              "list": [
+                "<strong>Slurry Temperature & Dosing:</strong> Precise automated weighing of fly ash slurry, lime, cement, and aluminium suspension at 40–45°C batch temperature.",
+                "<strong>Mould Pre-Curing:</strong> Stable rising in temperature-controlled pre-curing tunnels (60–65°C) to achieve uniform cake penetration hardness before cutting.",
+                "<strong>Oscillating Wire Cutting:</strong> High-frequency horizontal and vertical steel wire cutting to guarantee ±1.5mm dimensional tolerance with clean edges.",
+                "<strong>Hydrothermal Autoclaving:</strong> Regulated steam ramp-up, holding at 12 bar (190°C) for 10–12 hours, and controlled exhaust to prevent internal cake thermal shock."
+              ]
+            },
+            {
+              "heading": "5. Practical Limitations & Site Installation Rules",
+              "text": "To achieve optimal performance on site, investors and contractors should follow verified engineering protocols: (1) Use dedicated nylon/chemical expansion anchors for heavy cantilevered fixtures; (2) Apply polymer-based bonding plaster or direct skim coat with fibre mesh at RCC-block junctions to prevent joint hairline cracks; (3) Prevent rough transit handling through automated wooden palletizing and stretch wrapping."
+            }
+          ],
+          "prevTopic": null,
+          "nextTopic": { "id": "future-of-aac", "title": "Future of AAC", "stage": "understand-market" },
+          "cta": {
+            "eyebrow": "ENGINEERING ADVISORY",
+            "title": "Discuss Your AAC Plant Requirement with Laxmi En-Fab",
+            "text": "From raw material testing to automated plant layout design, Laxmi En-Fab provides complete turnkey manufacturing solutions.",
+            "btnLabel": "TALK TO LAXMI EXPERTS →",
+            "btnUrl": "contact.html"
+          }
+        },
+        {
+          "id": "future-of-aac",
+          "icon": "🚀",
+          "number": "02",
+          "sidebarTitle": "Future of AAC",
+          "eyebrow": "STAGE 01 · TOPIC 02",
+          "title": "Future of AAC: 10-Year Outlook, High-Rise Demand & ALC Panels",
+          "lead": "India's rapid urban transition, government sustainability mandates, and the shift toward precast modular construction are driving long-term demand for autoclaved aerated concrete. Discover how market dynamics, panel evolution, and intelligent automation define the next decade of AAC manufacturing.",
+          "image": "assets/images/future-of-aac.png",
+          "imageAlt": "Future of AAC Blocks and Precast Reinforced Wall Panels in India",
+          "checkpoint": {
+            "title": "INVESTOR OUTLOOK SUMMARY",
+            "text": "AAC demand is expanding at a robust 12–15% CAGR across India. However, regional market success depends on economical delivery radius, local competing capacity, raw material suitability, and designing plants with modular expansion capability."
+          },
+          "sections": [
+            {
+              "heading": "1. Key Mega-Drivers Fueling Long-Term AAC Adoption",
+              "cards": [
+                {
+                  "tag": "ENVIRONMENTAL MANDATES",
+                  "title": "MoEFCC & Clay Brick Restrictions",
+                  "text": "Stricter topsoil excavation bans and emission crackdowns on carbon-intensive red brick kilns are pushing developers toward fly-ash based AAC blocks."
+                },
+                {
+                  "tag": "HIGH-RISE SPEED",
+                  "title": "Precast & High-Rise Framing",
+                  "text": "Modern 20+ storey high-rise projects require lightweight walling to reduce seismic mass and accelerate floor cycle turnarounds."
+                },
+                {
+                  "tag": "GREEN RATING CREDITS",
+                  "title": "LEED, GRIHA & IGBC Incentives",
+                  "text": "AAC's 70% recycled industrial content (fly ash) and superior thermal insulation earn high points for commercial green certifications."
+                }
+              ]
+            },
+            {
+              "heading": "2. The Next Frontier: Reinforced ALC Wall & Roof Panels",
+              "text": "Over the next 5 to 10 years, mature urban centers will see substantial migration from standard masonry blocks to Autoclaved Lightweight Concrete (ALC) Reinforced Panels. Featuring anti-corrosion coated internal steel mesh, ALC panels span up to 6 meters in height, enabling single-piece floor-to-ceiling drywall assembly without wet masonry joints.",
+              "table": {
+                "headers": ["Parameter", "Standard AAC Blocks", "Reinforced ALC Panels", "Investor Advantage"],
+                "rows": [
+                  ["Installation Method", "Manual block masonry with thin adhesive", "Crane-lifted dry interlocking panels", "60% faster erection with minimal manual labour"],
+                  ["Internal Reinforcement", "None (Plain aerated concrete)", "Double-layer welded steel mesh with anti-rust coating", "High flexural strength for external & internal walls"],
+                  ["Joints & Plastering", "Horizontal & vertical thin joints", "Tongue-and-groove dry joints; zero plaster", "Eliminates plastering cost and construction wet trades"],
+                  ["Selling Price Realization", "₹2,400 – ₹2,850 per m³", "₹4,200 – ₹5,500 per m³", "35% – 50% higher EBITDA margins per cubic metre"]
+                ]
+              }
+            },
+            {
+              "heading": "3. Seven Practical Factors Every Investor Must Evaluate",
+              "list": [
+                "<strong>Regional Demand Density:</strong> Quantify actual real estate and infra pipelines within your economical delivery radius (100–150 km).",
+                "<strong>Existing & Announced Capacity:</strong> Map local competitor plants, operating utilization rates, dealer margins, and price stability.",
+                "<strong>Economical Delivery Radius:</strong> Freight is a key cost driver; optimize transport routes and bulk dispatch logistics.",
+                "<strong>Raw-Material Chemistry:</strong> Validate fly ash silica content and lime slaking speed with laboratory testing before equipment procurement.",
+                "<strong>Modular Expansion Engineering:</strong> Choose a plant layout engineered for phased capacity upgrades (e.g. 300 to 600 m³/day) without stopping production.",
+                "<strong>Product Quality Consistency:</strong> Institutional developers award contracts based on zero edge-breakage and strict dimensional accuracy.",
+                "<strong>Sales & Distribution Readiness:</strong> Establish direct developer relationships alongside a robust retail dealer credit-management network."
+              ]
+            },
+            {
+              "heading": "4. Technology Trends: Intelligent Hybrid Automation",
+              "text": "Modern plant engineering favors intelligent hybrid automation—automating high-tonnage, repetitive, or hazardous operations (slurry dosing, mould demoulding, dual-direction wire cutting, autoclave cake transfer, and automated pallet wrapping) while maintaining practical, easily maintainable controls across secondary utilities."
+            }
+          ],
+          "prevTopic": { "id": "why-aac", "title": "Why AAC", "stage": "understand-market" },
+          "nextTopic": { "id": "market-demand", "title": "Market Demand", "stage": "understand-market" },
+          "cta": {
+            "eyebrow": "FEASIBILITY ADVISORY",
+            "title": "Plan Your Future-Ready AAC Manufacturing Plant",
+            "text": "Laxmi En-Fab engineers modular, expansion-ready AAC plants tailored to regional raw material availability and market demand.",
+            "btnLabel": "REQUEST PROJECT FEASIBILITY →",
+            "btnUrl": "contact.html"
+          }
+        },
+        {
+          "id": "market-demand",
+          "icon": "📈",
+          "number": "03",
+          "sidebarTitle": "Market Demand",
+          "eyebrow": "STAGE 01 · TOPIC 03",
+          "title": "Market Demand: Sizing Your Regional Market & Freight Radius",
+          "lead": "AAC blocks are a freight-sensitive industrial building product. National demand figures are meaningless without a rigorous assessment of local consumption, customer segments, competitor capacity, and transport economics within an economical 100–150 km delivery zone.",
+          "image": "assets/images/market-demand.png",
+          "imageAlt": "AAC Market Demand Sizing and Freight Radius Analysis",
+          "checkpoint": {
+            "title": "THE REAL INVESTMENT QUESTION",
+            "text": "Can demand within an economical sales radius support the proposed plant capacity, product mix, and operating cost at profitable pricing? A bankable investment decision requires granular regional market analysis—not only national growth headlines."
+          },
+          "sections": [
+            {
+              "heading": "1. Customer Segments & Demand Breakdown",
+              "table": {
+                "headers": ["Customer Segment", "Share of Demand", "Key Purchasing Criteria", "Payment & Commercial Terms"],
+                "rows": [
+                  ["High-Rise & Tier-1 Developers", "45% – 55%", "IS 2185-3 test certs, delivery timeliness, zero breakage", "30–45 Days structured credit"],
+                  ["Commercial, Industrial & IT Parks", "20% – 25%", "Thermal ratings, large block sizes, green building points", "45–60 Days credit against milestones"],
+                  ["Retail Dealer & Distributor Network", "20% – 25%", "Brand recognition, competitive retail margins, prompt supply", "Advance payment or 7–15 days credit"],
+                  ["Government & PMAY Mass Housing", "10% – 15%", "CPWD/PWD rate compliance, bulk volume capability", "Government billing cycle (60–90 days)"]
+                ]
+              }
+            },
+            {
+              "heading": "2. The Economical Freight Radius Rule",
+              "text": "AAC blocks are high-volume, low-density materials. Transport costs add approximately ₹150 to ₹250 per cubic metre for every 50 km of transit distance. A plant's primary high-margin sales zone is within 0–100 km, while secondary sales extend to 150 km. Beyond 200 km, delivered pricing loses competitiveness against local manufacturers unless subsidized by backhaul logistics.",
+              "cards": [
+                {
+                  "tag": "ZONE 1: 0 – 75 KM",
+                  "title": "Primary Core Market",
+                  "text": "Maximum profitability, rapid turnaround of transport vehicles, lowest freight cost, and highest market pricing power."
+                },
+                {
+                  "tag": "ZONE 2: 75 – 150 KM",
+                  "title": "Secondary Competitive Market",
+                  "text": "Balanced margins; serves major urban clusters and tier-2 developer projects with optimized truckloads."
+                },
+                {
+                  "tag": "ZONE 3: > 150 KM",
+                  "title": "Opportunistic Supply Zone",
+                  "text": "Selective supply for mega-projects or panel dispatches where higher product margins absorb long-haul freight."
+                }
+              ]
+            },
+            {
+              "heading": "3. Eight-Step Regional Market Assessment Framework",
+              "list": [
+                "<strong>Define Target Sales Territory:</strong> Map geographic districts, road infrastructure, and transit toll costs within 150 km.",
+                "<strong>Estimate Current AAC Consumption:</strong> Survey leading regional developers, structural consultants, and top 20 building material dealers.",
+                "<strong>Map Competing Supply:</strong> Audit operating capacities, plant technology, product quality consistency, and pricing of existing regional plants.",
+                "<strong>Evaluate Substitute Materials:</strong> Assess availability and landed price of red clay bricks, fly-ash bricks, and solid concrete blocks.",
+                "<strong>Determine Product Size Mix:</strong> Identify regional demand for 600×200×100mm, 150mm, 200mm, and 230mm thickness variants.",
+                "<strong>Stress-Test Price & Credit Elasticity:</strong> Model cash flows against dealer discount pressures and extended customer credit cycles.",
+                "<strong>Build 3-Tier Demand Scenarios:</strong> Formulate Conservative (60% capacity), Base (80% capacity), and Growth (95% capacity) financial models.",
+                "<strong>Size Capacity to Realistic Saleable Demand:</strong> Never size plant machinery based on peak optimistic forecasts; choose scalable base layouts."
+              ]
+            }
+          ],
+          "prevTopic": { "id": "future-of-aac", "title": "Future of AAC", "stage": "understand-market" },
+          "nextTopic": { "id": "raw-materials", "title": "Raw Materials", "stage": "understand-market" },
+          "cta": {
+            "eyebrow": "MARKET SIZING",
+            "title": "Evaluate Your Regional AAC Market Potential",
+            "text": "Laxmi En-Fab assists investors with competitor mapping, freight optimization models, and regional demand sizing.",
+            "btnLabel": "REQUEST REGIONAL MARKET STUDY →",
+            "btnUrl": "contact.html"
+          }
+        },
+        {
+          "id": "raw-materials",
+          "icon": "🏗️",
+          "number": "04",
+          "sidebarTitle": "Raw Materials",
+          "eyebrow": "STAGE 01 · TOPIC 04",
+          "title": "Raw Materials: Fly Ash, Quicklime, Cement & Chemical Dosing",
+          "lead": "Raw materials represent 55% to 62% of an AAC block's total production cost. Understanding chemical reactivity, fineness, storage systems, and precise recipe dosing is essential for consistent block strength and plant profitability.",
+          "image": "assets/images/raw-materials.png",
+          "imageAlt": "AAC Plant Raw Material Silos, Storage and Dosing Systems",
+          "checkpoint": {
+            "title": "CRITICAL RAW MATERIAL SPECIFICATIONS",
+            "text": "• <strong>Fly Ash:</strong> Class F, SiO₂ &gt; 70%, unburnt carbon &lt; 5%, fineness &lt; 45 micron sieve residue.<br>• <strong>Quicklime:</strong> Active CaO &gt; 75%, slaking temperature 60–65°C achieved in under 5 minutes.<br>• <strong>OPC 53 Cement:</strong> Fresh 53 grade cement for rapid green-cake setting."
+          },
+          "sections": [
+            {
+              "heading": "1. Standard Material Mass Balance per 1 m³ of AAC",
+              "table": {
+                "headers": ["Raw Material", "Quantity per m³", "Chemical Specification / Grade", "Plant Storage & Handling Setup"],
+                "rows": [
+                  ["Fly Ash / Pond Ash", "420 – 500 kg", "SiO₂ &gt; 70%, loss on ignition &lt; 5%", "Slurry Silo (100–150 m³) with slow-speed turbine agitator"],
+                  ["Quicklime (CaO)", "90 – 120 kg", "Active CaO &gt; 75%, rapid slaking speed", "Vertical Steel Silo (100–150T) with bin vibrator & pulse-jet filter"],
+                  ["OPC 53 Cement", "80 – 110 kg", "Fresh Ordinary Portland Cement (53 Grade)", "Vertical Steel Silo (100–150T) with pneumatic conveying"],
+                  ["Gypsum", "15 – 25 kg", "CaSO₄·2H₂O purity &gt; 80%", "Covered dry storage pit or dedicated ground hopper"],
+                  ["Aluminium Powder / Paste", "0.5 – 0.8 kg", "Active Al &gt; 90%, specific leafing grade", "Flame-proof, temperature-controlled chemical storage room"],
+                  ["Process Water", "300 – 380 Litres", "pH 6.5–8.0, total dissolved solids &lt; 1,000 ppm", "Overhead insulated hot-water tank with steam coil heater"]
+                ]
+              }
+            },
+            {
+              "heading": "2. Chemical Reactions and Green Cake Formation",
+              "text": "The production chemistry follows two fundamental reaction stages: (1) <strong>Aeration & Rising:</strong> In the mixer, aluminium powder reacts with calcium hydroxide generated by lime slaking: <code>2Al + 3Ca(OH)₂ + 6H₂O → 3CaO·Al₂O₃·6H₂O + 3H₂↑</code>. The released hydrogen gas generates millions of microscopic, uniform spherical closed cells (0.5–1.5mm diameter), expanding the slurry volume by 2.5× to 3.0×. (2) <strong>Hydrothermal Synthesis:</strong> In the autoclave at 12 bar (190°C), silica and calcium oxide react to form crystalline Tobermorite: <code>5CaO + 6SiO₂ + 5H₂O → Ca₅Si₆O₁₆(OH)₂·4H₂O</code>, giving AAC its final high strength and minimal drying shrinkage."
+            },
+            {
+              "heading": "3. Storage, Handling & Silo Engineering Best Practices",
+              "cards": [
+                {
+                  "tag": "FLY ASH SLURRY SYSTEM",
+                  "title": "Continuous Slurry Agitation",
+                  "text": "Fly ash is wet-ground in a ball mill or mixed in slurry tanks at 1.60–1.68 specific gravity with continuous turbine agitation to prevent settling."
+                },
+                {
+                  "tag": "LIME BALL MILL & SILO",
+                  "title": "Moisture-Sealed Storage",
+                  "text": "Quicklime must be stored in airtight silos with fluidizing aeration pads and pulse-jet dust collectors to prevent atmospheric pre-slaking."
+                },
+                {
+                  "tag": "AUTOMATED BATCHING",
+                  "title": "PLC-Controlled Loss-in-Weight",
+                  "text": "High-precision load-cell weigh hoppers guarantee ±0.5% dosing accuracy for cement, lime, and fly ash in every batch."
+                }
+              ]
+            }
+          ],
+          "prevTopic": { "id": "market-demand", "title": "Market Demand", "stage": "understand-market" },
+          "nextTopic": { "id": "profitability", "title": "Profitability", "stage": "understand-market" },
+          "cta": {
+            "eyebrow": "LABORATORY TESTING",
+            "title": "Get Your Regional Raw Materials Tested by Laxmi",
+            "text": "Send us fly ash, lime, and water samples from your project location. Laxmi En-Fab provides complete XRF chemical analysis, slaking curves, and autoclaved test block formulation.",
+            "btnLabel": "REQUEST RAW MATERIAL LAB TEST →",
+            "btnUrl": "contact.html"
+          }
+        },
+        {
+          "id": "profitability",
+          "icon": "💰",
+          "number": "05",
+          "sidebarTitle": "Profitability",
+          "eyebrow": "STAGE 01 · TOPIC 05",
+          "title": "Profitability: Unit Cost per m³, EBITDA Margins & Payback",
+          "lead": "A commercially viable AAC plant operates on healthy EBITDA margins of 22% to 32%. Evaluate the complete cost structure, saleable production economics, cash flow cycles, and capital payback timelines across 300 to 900 m³/day plant capacities.",
+          "image": "assets/images/profitability.png",
+          "imageAlt": "AAC Block Business Profitability Analysis and Financial Breakdown",
+          "checkpoint": {
+            "title": "THE SHORT ANSWER ON PROFITABILITY",
+            "text": "AAC manufacturing can be highly profitable—but not automatically. Commercially successful projects require: (1) Adequate regional demand density; (2) Competitive delivered landed price; (3) Reliable raw material contracts; (4) Realistic capacity utilization (>75%); and (5) Strict operating cost and working capital management."
+          },
+          "sections": [
+            {
+              "heading": "1. How AAC Plant Profitability Must Be Calculated",
+              "text": "Financial models must calculate returns on <strong>Saleable Production</strong> (net dispatchable volume after 2–3% handling and trimming losses) rather than rated nameplate capacity.",
+              "table": {
+                "headers": ["Financial Metric", "Cost per m³ (INR)", "% of Net Realization", "Key Financial Driver"],
+                "rows": [
+                  ["Raw Materials (Fly Ash, Lime, Cement, Gypsum, Al)", "₹1,050 – ₹1,280", "42% – 48%", "Bulk procurement, proximity to thermal plant & lime kilns"],
+                  ["Thermal Energy (Boiler Fuel: Coal / Petcoke / Biomass)", "₹220 – ₹310", "9% – 12%", "Boiler efficiency, steam condensate recovery, insulation"],
+                  ["Electrical Power (HT Industrial Tariff)", "₹90 – ₹130", "4% – 5%", "Grinding mill power, compressed air, automated controls"],
+                  ["Direct Labour & Plant Staff", "₹80 – ₹120", "3% – 5%", "Hybrid automation, multi-skilled operator deployment"],
+                  ["Repairs, Maintenance & Consumables", "₹50 – ₹80", "2% – 3%", "Cutting wire replacement, mould gaskets, boiler maintenance"],
+                  ["Administrative, Overheads & SG&A", "₹60 – ₹90", "2% – 4%", "Sales commission, QC laboratory, security, plant insurance"],
+                  ["Total Operating Cost (OPEX) per m³", "₹1,550 – ₹2,010", "62% – 75%", "Factory gate production cost"],
+                  ["Average Net Realized Ex-Factory Price", "₹2,450 – ₹2,850", "100%", "Regional market demand & competitor pricing"],
+                  ["Net EBITDA Spread per m³", "₹700 – ₹950", "25% – 35%", "Operating profit generated per cubic metre sold"]
+                ]
+              }
+            },
+            {
+              "heading": "2. Multi-Capacity Financial Projections & Payback Periods",
+              "table": {
+                "headers": ["Plant Capacity Tier", "Annual Saleable Vol (300 Days)", "Gross Annual Revenue", "Annual EBITDA Generated", "Project Capital Payback"],
+                "rows": [
+                  ["300 m³/day (1-Autoclave Scalable)", "72,000 – 81,000 m³/yr", "₹18.0 – ₹22.0 Crores", "₹4.8 – ₹6.2 Crores", "2.6 – 3.2 Years"],
+                  ["600 m³/day (2-Autoclaves Standard)", "144,000 – 162,000 m³/yr", "₹36.0 – ₹44.0 Crores", "₹10.5 – ₹13.2 Crores", "2.1 – 2.6 Years"],
+                  ["900 m³/day (3-Autoclaves High-Cap)", "216,000 – 243,000 m³/yr", "₹54.0 – ₹66.0 Crores", "₹16.5 – ₹21.0 Crores", "1.9 – 2.4 Years"]
+                ]
+              }
+            },
+            {
+              "heading": "3. Two Major Investment Traps to Avoid",
+              "cards": [
+                {
+                  "tag": "INVESTMENT TRAP 01",
+                  "title": "The Undersized Plant Trap (< 150 m³/day)",
+                  "text": "A cheaper small machine does not mean lower cost per m³. Fixed overheads (IBR boiler operators, laboratory chemists, plant managers, transformer charges) are divided across tiny volumes, severely compressing margins."
+                },
+                {
+                  "tag": "INVESTMENT TRAP 02",
+                  "title": "The Over-Investment Trap",
+                  "text": "Installing excess initial capacity before building customer dealer networks creates crushing interest, depreciation, and cash-flow strain. Solution: Build a 300 m³/day plant engineered for modular expansion to 600 m³/day."
+                }
+              ]
+            }
+          ],
+          "prevTopic": { "id": "raw-materials", "title": "Raw Materials", "stage": "understand-market" },
+          "nextTopic": { "id": "government-policies", "title": "Government Policies", "stage": "understand-market" },
+          "cta": {
+            "eyebrow": "FINANCIAL ADVISORY",
+            "title": "Build a Bankable Project Financial Model for Your Plant",
+            "text": "Laxmi En-Fab assists investors with detailed project reports (DPR), bankable cash flow projections, and location-specific unit economics.",
+            "btnLabel": "REQUEST FINANCIAL MODEL →",
+            "btnUrl": "contact.html"
+          }
+        },
+        {
+          "id": "government-policies",
+          "icon": "🏛️",
+          "number": "06",
+          "sidebarTitle": "Government Policies",
+          "eyebrow": "STAGE 01 · TOPIC 06",
+          "title": "Government Policies, Fly Ash Notifications & Green Building Mandates",
+          "lead": "From the MoEFCC mandatory fly ash utilization notifications and state pollution control board green categories to state industrial capital subsidies and green building energy codes, government policy creates powerful tailwinds for AAC plant investors.",
+          "image": "assets/images/government-policies.png",
+          "imageAlt": "Government Policies, Fly Ash Regulations and Industrial Subsidies in India",
+          "checkpoint": {
+            "title": "DIRECT STATUTORY REALITY",
+            "text": "Government policy supports fly ash utilization and sustainable manufacturing—but no nationwide policy automatically guarantees every plant a free cash subsidy, free fly ash, or captive government purchase orders. Investors must verify state-specific industrial policies, district classifications, and statutory compliance timelines."
+          },
+          "sections": [
+            {
+              "heading": "1. Key Central & Environmental Policy Frameworks",
+              "cards": [
+                {
+                  "tag": "MOEFCC ASH NOTIFICATION",
+                  "title": "Fly Ash Sourcing & 300 km Mandate",
+                  "text": "The MoEFCC Ash Utilisation Notification (2021) requires coal-based thermal power plants to achieve 100% ash utilization. Building material units within a 300 km radius have priority access to dry electrostatic precipitator (ESP) fly ash."
+                },
+                {
+                  "tag": "CLAY BRICK BANS",
+                  "title": "Topsoil Preservation Directives",
+                  "text": "Multiple state pollution control boards restrict traditional red clay brick kilns within urban development zones and thermal power plant perimeters to protect fertile topsoil and combat air pollution."
+                },
+                {
+                  "tag": "GREEN CODES & RATINGS",
+                  "title": "ECBC, GRIHA, IGBC & LEED",
+                  "text": "National Building Code (NBC) 2016 and Energy Conservation Building Code (ECBC) incentivize lightweight, thermally insulating envelope walling in commercial and government structures."
+                }
+              ]
+            },
+            {
+              "heading": "2. State Industrial Policies vs. Central Mandates",
+              "table": {
+                "headers": ["Policy Area", "What It May Provide / Influence", "What It Does NOT Guarantee", "Investor Verification Action"],
+                "rows": [
+                  ["MoEFCC Ash Notification", "Priority fly ash sourcing discussions with power utilities", "Guaranteed free supply or long-term price caps", "Execute formal bilateral MoU with nearest power plant"],
+                  ["State Industrial Policy", "15% – 30% capital subsidy, SGST reimbursement, power tariff concessions", "Automatic sanction without strict milestone compliance", "Verify district category (A/B/C/D) and DPR approval criteria"],
+                  ["MSME / Bank Schemes", "CGTMSE collateral-free limits, interest subvention under CLCSS/TUFS", "Zero-equity loan approvals", "Prepare bankable DPR audited by certified engineers"],
+                  ["BIS Standard (IS 2185-3)", "Nationally accepted test specifications and quality certification", "Guaranteed market demand or pricing premium", "Design plant laboratory with calibrated testing apparatus"]
+                ]
+              }
+            },
+            {
+              "heading": "3. Mandatory Statutory Approvals & Licensing Checklist",
+              "list": [
+                "<strong>SPCB Consent to Establish (CTE / NOC):</strong> State Pollution Control Board approval. AAC is classified under Green / Orange industrial category (non-polluting closed-loop process).",
+                "<strong>SPCB Consent to Operate (CTO):</strong> Environmental operating license obtained after plant installation and trial runs.",
+                "<strong>Indian Boiler Regulations (IBR 1950):</strong> Registration and hydraulic pressure testing certification of steam boiler and autoclave pressure vessels by the Chief Inspector of Boilers.",
+                "<strong>HT Electricity Load Sanction:</strong> Sanction of High Tension industrial power connection (typically 250 kVA to 500 kVA depending on plant capacity).",
+                "<strong>Factory Inspector License:</strong> Factory layout plan approval and operating license under the Factories Act, 1948.",
+                "<strong>Bureau of Indian Standards (BIS / ISI Mark):</strong> Product certification conforming to IS 2185 (Part 3):1984 for institutional developer tenders."
+              ]
+            }
+          ],
+          "prevTopic": { "id": "profitability", "title": "Profitability", "stage": "understand-market" },
+          "nextTopic": { "id": "capacity-selection", "title": "Capacity Selection", "stage": "design-your-plant" },
+          "cta": {
+            "eyebrow": "POLICY & APPROVAL ADVISORY",
+            "title": "Navigate Subsidies and Project Approvals with Laxmi En-Fab",
+            "text": "Laxmi En-Fab assists investors with comprehensive DPR documentation, IBR boiler engineering compliance, and technical support for state industrial incentives.",
+            "btnLabel": "SCHEDULE A REGULATORY CONSULTATION →",
+            "btnUrl": "contact.html"
+          }
+        }
+      ]
+    },
+    "design-your-plant": {
+      "stageNum": "02",
+      "stageTitle": "Design Your Plant",
+      "sidebarHeading": "DESIGN YOUR PLANT INNER PAGES",
+      "defaultTopic": "capacity-selection",
+      "topics": [
+        {
+          "id": "capacity-selection",
+          "icon": "⚡",
+          "number": "01",
+          "sidebarTitle": "Capacity Selection",
+          "eyebrow": "STAGE 02 · TOPIC 01",
+          "title": "How to Select the Right AAC Plant Capacity",
+          "lead": "The right AAC plant capacity is not automatically the largest plant you can finance—or the smallest plant that reduces initial CAPEX. It is the capacity that serves your achievable market at a competitive delivered cost, sustains high utilization, and allows modular expansion.",
+          "image": "assets/images/capacity-selection-guide.png",
+          "imageAlt": "AAC Plant Capacity Sizing & Selection Guide",
+          "checkpoint": {
+            "title": "CORE PRINCIPLE: NAMEPLATE VS. SALEABLE PRODUCTION",
+            "text": "<strong>Rated Capacity:</strong> The theoretical maximum volume engineered under ideal 24-hr conditions.<br><strong>Achievable Production:</strong> Realistic output after factoring maintenance days (300–330 days/yr), shift handovers, and steam cycle turnaround.<br><strong>Saleable Production:</strong> Net dispatchable volume after 2–3% cutting, handling, and laboratory holding losses. <em>Bankable financial models must be calculated exclusively on Saleable Production.</em>"
+          },
+          "sections": [
+            {
+              "heading": "1. Common Capacity Selection Pitfalls",
+              "cards": [
+                {
+                  "tag": "ERROR 1: SIZING TOO SMALL (< 150 m³/day)",
+                  "title": "Fixed Overhead Trap",
+                  "text": "Key operational costs—such as certified boiler operators, plant managers, QC laboratory chemists, security, and transformer charges—are fixed. Across small volumes, overhead cost per m³ escalates, eroding margins."
+                },
+                {
+                  "tag": "ERROR 2: OVERSIZING (> 1000 m³/day prematurely)",
+                  "title": "Under-Utilization Cash Burn",
+                  "text": "Operating an oversized plant at 35% utilization during Year 1 incurs massive debt service, depreciation, and inefficient partial boiler loads. Sizing must match real regional dealer ramp-up capacity."
+                }
+              ]
+            },
+            {
+              "heading": "2. Indian AAC Plant Capacity Tier Comparison",
+              "table": {
+                "headers": ["Capacity Tier", "Daily Output", "Autoclave Setup", "Ideal Market Type", "Modular Expansion Route"],
+                "rows": [
+                  ["Tier 1: Starter", "150 – 300 m³/day", "1 × (2.0m × 31m)", "Tier-2/3 cities, local builders", "Space reserved for 2nd autoclave"],
+                  ["Tier 2: Standard Commercial", "300 – 600 m³/day", "2 × (2.5m × 31m)", "Regional distribution, 100km radius", "Expand to 900 m³ with 3rd autoclave"],
+                  ["Tier 3: High-Volume Regional Hub", "600 – 1,000 m³/day", "3–4 × (2.6m × 38m)", "Metro & smart city infrastructure", "Panel reinforcement addition ready"],
+                  ["Tier 4: Mega Industrial Plant", "1,000 – 1,500+ m³/day", "5–6 × (2.8m × 38m)", "Multi-state supply & ALC panels", "Dedicated Dry Mix Mortar integration"]
+                ]
+              }
+            },
+            {
+              "heading": "3. Seven Inputs for Engineering Capacity Sizing",
+              "list": [
+                "<strong>Achievable Demand Radius:</strong> Freight cost adds ₹150–₹250/m³ every 50km. Calculate demand within 0–50 km, 50–100 km, and 100–150 km radii.",
+                "<strong>Operating Shift Schedule:</strong> Plan for 24 hours (3 shifts × 8 hours), with 300 effective operating days per year to accommodate routine boiler descaling and statutory maintenance.",
+                "<strong>Ramp-Up Curve:</strong> Model realistic utilization milestones: Year 1 at 50–60%, Year 2 at 75–80%, Year 3 at 90%+.",
+                "<strong>Batch Sizing Cycle:</strong> Match ball mill wet fly ash slurry output (1.6–1.7 kg/L) and mixer capacity (4.0–6.0 m³ per pour) to target mould rising cycle (2.5–3.5 hours).",
+                "<strong>Autoclave Hydrothermal Balance:</strong> Saturated steam cycle requires 10–12 hours. Autoclave volume must perfectly match cutting line cycle time.",
+                "<strong>Finished Goods Stockyard Sizing:</strong> Stockyard must hold at least 15–20 days of finished block inventory to prevent plant throttling during seasonal monsoon construction lulls.",
+                "<strong>Expansion Reserve Strategy:</strong> Ensure ball mill foundations, steam manifold sizing, electrical transformer kVA, and cutting crane rail tracks are pre-engineered for Phase 2 expansion without plant shutdown."
+              ]
+            }
+          ],
+          "prevTopic": { "id": "government-policies", "title": "Government Policies", "stage": "understand-market" },
+          "nextTopic": { "id": "land-requirement", "title": "Land Requirement", "stage": "design-your-plant" },
+          "cta": {
+            "eyebrow": "CAPACITY ENGINEERING",
+            "title": "Need Help Calculating Your Plant's Optimum Capacity?",
+            "text": "Laxmi En-Fab provides custom batch sizing, shift models, and steam cycle balance calculations for your target market.",
+            "btnLabel": "REQUEST CAPACITY SIZING STUDY →",
+            "btnUrl": "contact.html"
+          }
+        },
+        {
+          "id": "land-requirement",
+          "icon": "📐",
+          "number": "02",
+          "sidebarTitle": "Land Requirement",
+          "eyebrow": "STAGE 02 · TOPIC 02",
+          "title": "AAC Plant Land Requirement & Layout Engineering",
+          "lead": "Capacity tells you how much the plant must produce; layout engineering determines how much land the complete operation actually requires. Before purchasing land, prepare a preliminary process flow layout to avoid costly logistics bottlenecks.",
+          "image": "assets/images/land-requirement-guide.png",
+          "imageAlt": "AAC Plant Land Requirement & Area Breakdown",
+          "checkpoint": {
+            "title": "CRITICAL RULE: THE SHED IS ONLY 25–35% OF TOTAL LAND",
+            "text": "A common mistake is budgeting land solely based on the manufacturing shed dimensions. In a high-throughput AAC plant, finished goods storage, trailer truck turning radius (15–18m), boiler fuel handling, and statutory setbacks require <strong>65% to 75% of the total plot acreage</strong>."
+          },
+          "sections": [
+            {
+              "heading": "1. Land Requirement by Plant Capacity (Acreage Guide)",
+              "table": {
+                "headers": ["Plant Capacity", "Recommended Land", "Built-Up Shed Area", "Stockyard Area", "Min Plot Length"],
+                "rows": [
+                  ["150 – 300 m³/day", "2.5 – 3.5 Acres", "1,500 – 2,200 m²", "3,500 – 5,000 m²", "120 Metres"],
+                  ["300 – 600 m³/day", "4.0 – 6.0 Acres", "2,800 – 4,000 m²", "7,000 – 10,000 m²", "150 Metres"],
+                  ["600 – 1,000 m³/day", "6.5 – 9.0 Acres", "4,500 – 6,500 m²", "12,000 – 16,000 m²", "180 Metres"],
+                  ["1,000 – 1,500+ m³/day", "10.0 – 15.0+ Acres", "7,500 – 11,000 m²", "20,000 – 30,000 m²", "220 Metres"]
+                ]
+              }
+            },
+            {
+              "heading": "2. The 7 Essential Functional Zones of an AAC Facility",
+              "cards": [
+                {
+                  "tag": "ZONE 1 & 2",
+                  "title": "Raw Materials & Processing Line",
+                  "text": "Cement & lime silos (100–150T each), ball mill wet slurry tanks (4 × 100 m³), batching tower, mould loop, pre-curing tunnel, and wire cutting line."
+                },
+                {
+                  "tag": "ZONE 3 & 4",
+                  "title": "Autoclave Yard & Boiler House",
+                  "text": "High-pressure autoclaves (2.5m × 31m), ferry cart rail transfers, IBR steam boiler house, RO softening plant, and fuel storage reserve."
+                },
+                {
+                  "tag": "ZONE 5 & 6",
+                  "title": "Paved Stockyard & Truck Logistics",
+                  "text": "RCC paved block storage with automatic clamp palletizers, dual 60–100T weighbridges, and 12–15m wide roads for 30-ton trailer movement."
+                }
+              ]
+            }
+          ],
+          "prevTopic": { "id": "capacity-selection", "title": "Capacity Selection", "stage": "design-your-plant" },
+          "nextTopic": { "id": "project-cost", "title": "Project Cost & Working Capital", "stage": "design-your-plant" },
+          "cta": {
+            "eyebrow": "LAYOUT CONSULTATION",
+            "title": "Evaluating a Land Parcel for Your AAC Plant?",
+            "text": "Send us your plot survey map. Laxmi En-Fab's engineering team will draft a customized 2D process layout showing optimum orientation, truck circulation, and setback utilization.",
+            "btnLabel": "REQUEST PLOT FEASIBILITY LAYOUT →",
+            "btnUrl": "contact.html"
+          }
+        },
+        {
+          "id": "project-cost",
+          "icon": "💵",
+          "number": "03",
+          "sidebarTitle": "Project Cost & Working Capital",
+          "eyebrow": "STAGE 02 · TOPIC 03",
+          "title": "AAC Plant Cost in India: CAPEX Breakdown & Working Capital",
+          "lead": "A realistic project estimate goes beyond machinery quotations. Investors must calculate the total capital employed—including civil engineering, heavy foundations, electrical transformer infrastructure, pre-operative deposits, and 45–60 days of working capital.",
+          "image": "assets/images/project-cost-guide.png",
+          "imageAlt": "AAC Plant Project Cost & Working Capital Breakdown",
+          "checkpoint": {
+            "title": "TRANSPARENT SCOPE PRINCIPLE",
+            "text": "Machinery represents typically <strong>50% to 60%</strong> of the total project cost. Civil structure, electrical HT connection, boiler house, weighbridge, and working capital form the remaining <strong>40% to 50%</strong>. Never plan financing solely on machinery price."
+          },
+          "sections": [
+            {
+              "heading": "1. Indicative Total Project Investment by Capacity Tier (India)",
+              "table": {
+                "headers": ["Plant Capacity", "Machinery Scope", "Civil & PEB Shed", "Utilities & Elect.", "Working Capital", "Total Project Outlay"],
+                "rows": [
+                  ["150 – 300 m³/day", "₹4.2 – ₹6.5 Cr", "₹1.8 – ₹2.8 Cr", "₹0.8 – ₹1.2 Cr", "₹1.0 – ₹1.8 Cr", "₹7.8 – ₹12.3 Cr"],
+                  ["300 – 600 m³/day", "₹7.5 – ₹11.5 Cr", "₹3.2 – ₹4.8 Cr", "₹1.4 – ₹2.2 Cr", "₹2.0 – ₹3.5 Cr", "₹14.1 – ₹22.0 Cr"],
+                  ["600 – 1,000 m³/day", "₹13.5 – ₹19.5 Cr", "₹5.5 – ₹8.0 Cr", "₹2.5 – ₹3.8 Cr", "₹4.0 – ₹6.5 Cr", "₹25.5 – ₹37.8 Cr"],
+                  ["1,000 – 1,500+ m³/day", "₹22.0 – ₹34.0 Cr", "₹9.0 – ₹14.0 Cr", "₹4.0 – ₹6.5 Cr", "₹7.0 – ₹11.0 Cr", "₹42.0 – ₹65.5 Cr"]
+                ]
+              }
+            }
+          ],
+          "prevTopic": { "id": "land-requirement", "title": "Land Requirement", "stage": "design-your-plant" },
+          "nextTopic": { "id": "roi-payback", "title": "ROI & Payback", "stage": "design-your-plant" },
+          "cta": {
+            "eyebrow": "PROJECT BUDGETING",
+            "title": "Get an Itemized CAPEX & Working Capital Estimate",
+            "text": "Laxmi En-Fab provides detailed BOQs, civil drawings, utility load ratings, and working capital cash flow projections for your target capacity.",
+            "btnLabel": "REQUEST DETAILED CAPEX ESTIMATE →",
+            "btnUrl": "contact.html"
+          }
+        },
+        {
+          "id": "roi-payback",
+          "icon": "📊",
+          "number": "04",
+          "sidebarTitle": "ROI & Payback",
+          "eyebrow": "STAGE 02 · TOPIC 04",
+          "title": "AAC Plant ROI, Break-Even & Financial Payback",
+          "lead": "AAC plant return on investment cannot be calculated from machinery price and installed capacity alone. A credible financial model connects total project outlay with achievable saleable volume, net ex-factory realization, unit operating cost, and working capital interest.",
+          "image": "assets/images/roi-payback-guide.png",
+          "imageAlt": "AAC Plant ROI Break-Even and Payback Guide",
+          "checkpoint": {
+            "title": "FINANCIAL METRIC BENCHMARKS (INDIAN AAC INDUSTRY)",
+            "text": "• <strong>Break-Even Utilization:</strong> 38% to 45% of rated capacity.<br>• <strong>Payback Period:</strong> 2.5 to 3.8 years (at 75–85% average utilization).<br>• <strong>EBITDA Margin:</strong> 22% to 32% (₹600 to ₹950 net EBITDA per m³).<br>• <strong>Project IRR (10-Yr):</strong> 24% to 32%."
+          },
+          "sections": [
+            {
+              "heading": "1. Unit Economics: Cost & Profitability per m³",
+              "table": {
+                "headers": ["Cost Element", "Cost Range per m³", "% of Total Cost", "Key Optimization Levers"],
+                "rows": [
+                  ["Raw Materials (Fly Ash, Lime, Cement, Al)", "₹950 – ₹1,180 / m³", "55% – 62%", "Active CaO > 75% quicklime, optimal fly ash fineness"],
+                  ["Fuel & Steam Generation (Boiler)", "₹220 – ₹320 / m³", "13% – 17%", "Condensate heat recovery, high-efficiency briquette boiler"],
+                  ["Electrical Power (Ball Mill, Mixers, Cutting)", "₹90 – ₹140 / m³", "5% – 8%", "Variable Frequency Drives (VFDs), power factor > 0.98"],
+                  ["Plant Manpower & Operations", "₹100 – ₹160 / m³", "6% – 9%", "Automated palletizing and automated mould de-moulding"],
+                  ["Maintenance, Consumables & Overhead", "₹110 – ₹180 / m³", "6% – 9%", "Preventive autoclave door gasket & cutting wire SOPs"],
+                  ["Total Operating Cost (OPEX)", "₹1,470 – ₹1,980 / m³", "100%", "Delivered ex-factory cost"],
+                  ["Net Sales Realization (Ex-Factory)", "₹2,400 – ₹2,850 / m³", "—", "After dealer discount & freight support"],
+                  ["Net EBITDA Spread per m³", "₹650 – ₹980 / m³", "26% – 34% EBITDA", "Net operating cash generation"]
+                ]
+              }
+            },
+            {
+              "heading": "2. 3-Tier Multi-Year Financial Payback Model",
+              "table": {
+                "headers": ["Plant Capacity Tier", "Annual Saleable Vol (80% Util)", "Annual Net EBITDA", "Total Capital Employed", "Estimated Payback Period"],
+                "rows": [
+                  ["300 m³/day (Tier 1)", "72,000 m³ / year", "₹4.68 – ₹5.40 Crores", "₹12.0 – ₹14.0 Crores", "2.6 – 3.0 Years"],
+                  ["600 m³/day (Tier 2)", "144,000 m³ / year", "₹10.08 – ₹11.80 Crores", "₹22.0 – ₹26.0 Crores", "2.2 – 2.6 Years"],
+                  ["900 m³/day (Tier 3)", "216,000 m³ / year", "₹15.76 – ₹18.50 Crores", "₹32.0 – ₹38.0 Crores", "2.0 – 2.4 Years"]
+                ]
+              }
+            }
+          ],
+          "prevTopic": { "id": "project-cost", "title": "Project Cost & Working Capital", "stage": "design-your-plant" },
+          "nextTopic": { "id": "finance-bank-loan", "title": "Finance & Bank Loan", "stage": "design-your-plant" },
+          "cta": {
+            "eyebrow": "FINANCIAL MODELING",
+            "title": "Test Your Regional Financial Feasibility Model",
+            "text": "Laxmi En-Fab builds custom financial models integrating local raw material quotes, power tariffs, boiler fuel, and dealer pricing.",
+            "btnLabel": "REQUEST CUSTOM FINANCIAL MODEL →",
+            "btnUrl": "contact.html"
+          }
+        },
+        {
+          "id": "finance-bank-loan",
+          "icon": "🏦",
+          "number": "05",
+          "sidebarTitle": "Finance & Bank Loan",
+          "eyebrow": "STAGE 02 · TOPIC 05",
+          "title": "AAC Plant Project Finance & Bank Loan Guide",
+          "lead": "Bank financing begins with an engineered, bankable project—not a machinery quotation. Commercial lenders evaluate technical feasibility, raw material security, promoter equity contribution, cash-flow coverage ratios (DSCR), and collateral security before sanctioning credit.",
+          "image": "assets/images/finance-bank-loan-guide.png",
+          "imageAlt": "AAC Plant Project Finance & Bank Loan Guide",
+          "checkpoint": {
+            "title": "FINANCING STRUCTURE BENCHMARKS",
+            "text": "• <strong>Debt : Equity Ratio:</strong> Typically <strong>65:35 to 70:30</strong> for private greenfield manufacturing.<br>• <strong>Moratorium Period:</strong> 12 to 18 months (construction + trial production ramp-up).<br>• <strong>Repayment Tenor:</strong> 5 to 7 years post-moratorium.<br>• <strong>Target DSCR:</strong> Average &gt; 1.50 to 1.75 across the loan tenure."
+          },
+          "sections": [
+            {
+              "heading": "1. What Makes a Bankable Detailed Project Report (DPR)?",
+              "cards": [
+                {
+                  "tag": "TECHNICAL BOM",
+                  "title": "Certified Equipment Specs",
+                  "text": "Certified equipment specifications from Laxmi En-Fab, factory layout drawings, power single-line diagrams, mass balance diagrams, and boiler steam generation calculations."
+                },
+                {
+                  "tag": "RAW MATERIAL MOUS",
+                  "title": "Supply Security Documentation",
+                  "text": "MoUs with thermal power stations for fly ash lifting, quicklime chemical assay reports (> 70% active CaO), cement supplier agreements, and water source sanction letters."
+                },
+                {
+                  "tag": "FINANCIAL CMA",
+                  "title": "CMA Data & Sensitivity",
+                  "text": "Credit Monitoring Arrangement (CMA) data sheet covering 7-year balance sheets, cash flows, Debt Service Coverage Ratio (DSCR), and break-even point sensitivity."
+                }
+              ]
+            }
+          ],
+          "prevTopic": { "id": "roi-payback", "title": "ROI & Payback", "stage": "design-your-plant" },
+          "nextTopic": { "id": "subsidy", "title": "Subsidy", "stage": "design-your-plant" },
+          "cta": {
+            "eyebrow": "BANKABLE DPR SUPPORT",
+            "title": "Need a Verified DPR for Bank Loan Approval?",
+            "text": "Laxmi En-Fab provides certified technical quotes, mass balance diagrams, plant layouts, and CMA financial models accepted by leading national banks and SIDBI.",
+            "btnLabel": "GET BANKABLE DPR PACKAGE →",
+            "btnUrl": "contact.html"
+          }
+        },
+        {
+          "id": "subsidy",
+          "icon": "🎁",
+          "number": "06",
+          "sidebarTitle": "Subsidy",
+          "eyebrow": "STAGE 02 · TOPIC 06",
+          "title": "AAC Block Plant Subsidies & Government Incentives in India",
+          "lead": "India does not have a single universal central subsidy exclusively named 'AAC Subsidy'. Instead, eligible AAC plants qualify for substantial financial incentives under State Industrial Policies, Green Manufacturing provisions, fly ash utilization mandates, and MSME schemes.",
+          "image": "assets/images/subsidy-guide.png",
+          "imageAlt": "AAC Block Plant Subsidies and Incentives in India",
+          "checkpoint": {
+            "title": "POLICY REVIEW DATE: CURRENT / 2026",
+            "text": "Subsidies are location-, taluka category-, investment-, and timing-specific. They significantly enhance equity returns, but project viability must remain healthy on stand-alone operational margins before accounting for subsidies."
+          },
+          "sections": [
+            {
+              "heading": "1. Five Primary Incentive Heads for AAC Plants",
+              "table": {
+                "headers": ["Incentive Type", "Typical Quantum in India", "Duration / Cap", "Benefit to Investor"],
+                "rows": [
+                  ["1. Net SGST Reimbursement", "50% to 100% of net SGST paid on block sales", "5 to 10 Years (up to 100% of eligible FCI)", "Substantial post-tax operational cash inflow"],
+                  ["2. Capital Investment Subsidy", "10% to 35% of eligible Plant & Machinery cost", "One-time capital grant (₹50 Lakh to ₹10 Cr cap)", "Direct reduction of long-term term loan burden"],
+                  ["3. Interest Subvention", "3% to 7% p.a. interest subsidy on term loans", "5 to 7 Years (subject to regular bank servicing)", "Reduces effective borrowing cost to 3%–5%"],
+                  ["4. Power Tariff & Duty Exemption", "₹1.00 – ₹2.00 / unit power subsidy + duty waiver", "5 Years from commercial production date", "Saves ₹25–₹45 per m³ in electricity expense"],
+                  ["5. Stamp Duty & Land Exemption", "50% to 100% refund of stamp duty on land deed", "One-time on industrial land acquisition", "Reduces initial pre-operative cash outlay"]
+                ]
+              }
+            }
+          ],
+          "prevTopic": { "id": "finance-bank-loan", "title": "Finance & Bank Loan", "stage": "design-your-plant" },
+          "nextTopic": { "id": "make-plant-automatic", "title": "Make Plant Automatic", "stage": "efficient-your-plant" },
+          "cta": {
+            "eyebrow": "SUBSIDY & INCENTIVE ADVISORY",
+            "title": "Explore State Industrial Subsidies for Your Location",
+            "text": "Laxmi En-Fab assists clients with technical machine certifications, eligible FCI documentation, and state DIC compliance dossiers.",
+            "btnLabel": "CONSULT AN INDUSTRIAL SUBSIDY EXPERT →",
+            "btnUrl": "contact.html"
+          }
+        }
+      ]
+    },
+    "efficient-your-plant": {
+      "stageNum": "04",
+      "stageTitle": "Efficient Your Plant",
+      "sidebarHeading": "EFFICIENT YOUR PLANT INNER PAGES",
+      "defaultTopic": "make-plant-automatic",
+      "topics": [
+        {
+          "id": "make-plant-automatic",
+          "icon": "🤖",
+          "number": "01",
+          "sidebarTitle": "Make Plant Automatic",
+          "eyebrow": "STAGE 04 · TOPIC 01",
+          "title": "How to Make an AAC Plant Fully Automatic: PLC & SCADA Controls",
+          "lead": "Transitioning from manual intervention to closed-loop PLC-SCADA automation stabilizes cycle times, guarantees batching recipe accuracy to ±0.5%, and reduces manpower costs by over 40%.",
+          "image": "assets/images/automation-control.png",
+          "imageAlt": "AAC Plant Automation and PLC Control Architecture",
+          "checkpoint": {
+            "title": "AUTOMATION BENCHMARK",
+            "text": "Fully automated plants reduce operational cycle variance from ±12 minutes per cake down to under ±30 seconds, maintaining continuous 24-hour peak capacity."
+          },
+          "sections": [
+            {
+              "heading": "1. Key Plant Automation Modules",
+              "table": {
+                "headers": ["Sub-System", "Manual / Semi-Auto Vulnerability", "Laxmi Full-Auto SCADA Advantage", "ROI Impact"],
+                "rows": [
+                  ["Raw Material Batching", "Operator weighing error, water ratio drift", "PLC multi-channel load cell auto-batching (±0.5%)", "Eliminates collapsed cakes"],
+                  ["Mould Pre-curing", "Manual needle testing, uneven cake rising", "Infrared temperature & rising sensor integration", "Zero soft-cutting damage"],
+                  ["Cutting Wire Control", "Manual wire replacement, wire snapping", "Pneumatic auto-tensioning oscillating wire system", "±1.5mm dimensional tolerance"],
+                  ["Autoclave Curing", "Manual valve cracking, steam pressure drops", "Automated PID pressure ramp-up & vacuum cycle", "15–20% fuel savings"],
+                  ["Finished Stacking", "High manual block handling breakage (3–5%)", "Hydraulic clamp auto-palletizing & strapping", "Breakage dropped under 0.5%"]
+                ]
+              }
+            }
+          ],
+          "prevTopic": null,
+          "nextTopic": { "id": "improve-block-quality", "title": "Improve Block Quality", "stage": "efficient-your-plant" },
+          "cta": {
+            "eyebrow": "PLANT AUTOMATION AUDIT",
+            "title": "Upgrade Your Existing Plant with Laxmi PLC Automation",
+            "text": "Discover how retrofitting Laxmi's centralized SCADA architecture can boost output by 20% on your existing machinery line.",
+            "btnLabel": "REQUEST AUTOMATION RETROFIT AUDIT →",
+            "btnUrl": "contact.html"
+          }
+        },
+        {
+          "id": "improve-block-quality",
+          "icon": "⭐",
+          "number": "02",
+          "sidebarTitle": "Improve Block Quality",
+          "eyebrow": "STAGE 04 · TOPIC 02",
+          "title": "Improving AAC Block Quality: Compressive Strength, Density & Shrinkage",
+          "lead": "Consistently achieving IS 2185 Part 3 Grade 1 compressive strength (3.5–5.0 N/mm²) while maintaining dry density under 600 kg/m³ requires fine-tuned raw material chemistry and precise autoclave hydrothermal control.",
+          "image": "assets/images/quality-control.png",
+          "imageAlt": "AAC Block Quality Testing and Standards",
+          "checkpoint": {
+            "title": "QUALITY CERTIFICATION CHECKPOINT",
+            "text": "Hydrothermal autoclave curing at 12 bar pressure (190°C) for 10–12 hours converts raw calcium silicate hydrate into crystalline Tobermorite [Ca5Si6O16(OH)2·4H2O], eliminating post-curing drying shrinkage."
+          },
+          "sections": [
+            {
+              "heading": "1. Critical Quality Control Parameters",
+              "list": [
+                "<strong>Slurry Specific Gravity:</strong> Maintain precise 1.62–1.68 kg/L fly ash slurry density using automated density meters.",
+                "<strong>Lime Reactivity (t60):</strong> Target 40–55°C temperature rise within 60 seconds to ensure synchronous aluminum powder gas generation.",
+                "<strong>Aluminium Dispersion:</strong> Controlled dosage of 0.05%–0.08% fine aluminum paste for uniform 1.0–1.5mm spherical aeration pores.",
+                "<strong>Autoclaving Phase Integrity:</strong> Strict adherence to 3-phase cycle: 2 hr vacuum & pressure rise, 7 hr holding at 12 bar, 2 hr slow pressure drop."
+              ]
+            }
+          ],
+          "prevTopic": { "id": "make-plant-automatic", "title": "Make Plant Automatic", "stage": "efficient-your-plant" },
+          "nextTopic": { "id": "plant-maintenance-sop", "title": "Maintenance SOP", "stage": "efficient-your-plant" },
+          "cta": {
+            "eyebrow": "QUALITY CONSULTING",
+            "title": "Troubleshoot Block Defects & Boost Strength",
+            "text": "Our technical chemical engineers provide on-site slurry optimization, recipe tuning, and IS certification support.",
+            "btnLabel": "GET QUALITY OPTIMIZATION SUPPORT →",
+            "btnUrl": "contact.html"
+          }
+        },
+        {
+          "id": "plant-maintenance-sop",
+          "icon": "🛠️",
+          "number": "03",
+          "sidebarTitle": "Maintenance SOP",
+          "eyebrow": "STAGE 04 · TOPIC 03",
+          "title": "AAC Plant Preventive Maintenance Standard Operating Procedures (SOP)",
+          "lead": "A disciplined preventive maintenance schedule prevents costly production downtime, maintains mould dimensional tolerances, and extends the operational life of autoclaves and steam boilers.",
+          "image": "assets/images/maintenance-sop.png",
+          "imageAlt": "AAC Plant Maintenance SOP Schedule",
+          "checkpoint": {
+            "title": "PREVENTIVE MAINTENANCE SAVINGS",
+            "text": "Every ₹1 invested in scheduled lubrication, hydraulic seal replacements, and cutting wire tension calibration prevents up to ₹8 in emergency breakdown losses."
+          },
+          "sections": [
+            {
+              "heading": "1. Standard Maintenance Interval Schedule",
+              "table": {
+                "headers": ["Frequency", "Equipment / Subsystem", "Key Maintenance Tasks", "Responsible Team"],
+                "rows": [
+                  ["Daily / Each Shift", "Cutting System Wires & Rollers", "Check wire tension, clean slurry buildup, calibrate limit switches", "Shift Line Operator"],
+                  ["Daily / Each Shift", "Moulds & Side Plates", "Inspect release oil coating, check clamp locks, clean sealing gaskets", "Mould Handler"],
+                  ["Weekly", "High-Pressure Autoclave Doors", "Clean & lubricate safety interlocking gears, inspect silicone door seals", "Mechanical Tech"],
+                  ["Bi-Weekly", "Slurry & Water Pumps / Valves", "Inspect mechanical seals, clean pneumatic solenoid filters", "Maintenance Fitter"],
+                  ["Monthly", "Hydraulic Power Units & Tilter", "Check oil viscosity, replace return filters, test hydraulic cylinder valves", "Hydraulic Engineer"],
+                  ["Quarterly / Annual", "Boiler & Steam Pipeline", "Ultrasonic thickness testing, safety valve pop testing, IBR statutory inspection", "Certified Boiler Tech"]
+                ]
+              }
+            }
+          ],
+          "prevTopic": { "id": "improve-block-quality", "title": "Improve Block Quality", "stage": "efficient-your-plant" },
+          "nextTopic": { "id": "reduce-steam-cost", "title": "Reduce Steam Cost", "stage": "efficient-your-plant" },
+          "cta": {
+            "eyebrow": "MAINTENANCE AUDIT",
+            "title": "Get Customized SOP Manuals & AMC Support from Laxmi",
+            "text": "Ensure 98%+ plant uptime with our Annual Maintenance Contracts and OEM spare parts packages.",
+            "btnLabel": "INQUIRE ABOUT AMC PACKAGES →",
+            "btnUrl": "contact.html"
+          }
+        },
+        {
+          "id": "reduce-steam-cost",
+          "icon": "🔥",
+          "number": "04",
+          "sidebarTitle": "Reduce Steam Cost",
+          "eyebrow": "STAGE 04 · TOPIC 04",
+          "title": "Reducing Steam & Boiler Fuel Costs in AAC Plant Operations",
+          "lead": "Steam generation consumes 15%–22% of total operational expenditure. Incorporating condensate recovery systems, autoclave steam cascade recycling, and boiler economizers saves ₹40–₹75 per m³.",
+          "image": "assets/images/steam-cost-reduction.png",
+          "imageAlt": "AAC Steam Energy Efficiency and Cascade Recycling",
+          "checkpoint": {
+            "title": "STEAM ECONOMY CALCULATION",
+            "text": "A 500 m³/day plant consumes approximately 25–30 tons of steam daily. Re-routing discharge steam from a completed autoclave to preheat a fresh autoclave reduces net boiler fuel consumption by up to 28%."
+          },
+          "sections": [
+            {
+              "heading": "1. 4 High-Impact Steam Optimization Strategies",
+              "cards": [
+                {
+                  "tag": "CASCADE STEAM REUSE",
+                  "title": "Autoclave-to-Autoclave Steam Transfer",
+                  "text": "Discharge 12-bar exhaust steam from a finishing autoclave directly into a newly loaded autoclave to build initial temperature without consuming fresh boiler output."
+                },
+                {
+                  "tag": "CONDENSATE RECOVERY",
+                  "title": "High-Temperature Condensate Return",
+                  "text": "Capture 90°C+ condensate water and pump back into boiler feed tank, cutting water treatment chemical costs and preheating boiler feed water."
+                },
+                {
+                  "tag": "THERMAL INSULATION",
+                  "title": "Pipeline & Autoclave Rockwool Cladding",
+                  "text": "100mm high-density mineral wool insulation with aluminum cladding prevents radiation heat losses across extensive factory steam networks."
+                },
+                {
+                  "tag": "BOILER ECONOMIZER",
+                  "title": "Flue Gas Waste Heat Recovery",
+                  "text": "Preheat incoming boiler feed water using hot exhaust flue gas, boosting boiler thermal efficiency from 78% to over 88%."
+                }
+              ]
+            }
+          ],
+          "prevTopic": { "id": "plant-maintenance-sop", "title": "Maintenance SOP", "stage": "efficient-your-plant" },
+          "nextTopic": { "id": "skilled-manpower", "title": "Skilled Manpower", "stage": "efficient-your-plant" },
+          "cta": {
+            "eyebrow": "ENERGY AUDIT",
+            "title": "Calculate Your Plant's Steam & Fuel Savings",
+            "text": "Laxmi thermal engineers perform steam balance studies to identify immediate cost reduction opportunities.",
+            "btnLabel": "REQUEST A THERMAL ENERGY AUDIT →",
+            "btnUrl": "contact.html"
+          }
+        },
+        {
+          "id": "skilled-manpower",
+          "icon": "👥",
+          "number": "05",
+          "sidebarTitle": "Skilled Manpower",
+          "eyebrow": "STAGE 04 · TOPIC 05",
+          "title": "Skilled Manpower Requirement, Shift Organization & Training",
+          "lead": "Modern automated AAC manufacturing plants minimize manual labor while requiring specialized technical competency in PLC operation, chemical slurry testing, and mechanical rigging.",
+          "image": "assets/images/manpower-structure.png",
+          "imageAlt": "AAC Plant Manpower and Shift Hierarchy",
+          "checkpoint": {
+            "title": "MANPOWER METRIC",
+            "text": "A modern 600 m³/day Laxmi automated plant requires only 14–16 personnel per shift across batching, cutting, autoclaving, boiler, and quality control."
+          },
+          "sections": [
+            {
+              "heading": "1. Recommended Shift Organization & Skill Roles",
+              "table": {
+                "headers": ["Department / Role", "Headcount (per Shift)", "Skill Level Required", "Key Responsibility"],
+                "rows": [
+                  ["Plant Head / Shift Manager", "1", "High (B.E. Mechanical / Chemical)", "Overall production planning, line synchronization & safety"],
+                  ["SCADA / PLC Operator", "1", "High (Diploma Electrical / Instrumentation)", "Monitoring automated raw material batching & cake rising"],
+                  ["Quality / Lab Chemist", "1", "High (B.Sc / M.Sc Chemistry)", "Slurry density, lime reactivity, cake hardness, cube testing"],
+                  ["Tilter & Cutting Operators", "2", "Medium (ITI Mechanical)", "Wire tension calibration, side plate locking, scrap recycling"],
+                  ["Autoclave & Boiler In-Charge", "2", "Certified (IBR 1st/2nd Class)", "Hydrothermal cycle monitoring, boiler firing & steam safety"],
+                  ["Overhead Crane & Forklift Drivers", "3", "Certified Machine Operators", "Green cake transport, autoclave car loading, yard stacking"],
+                  ["Maintenance Fitters & Electrician", "2", "Medium (ITI / Diploma)", "Preventive greasing, seal inspection, quick breakdown response"],
+                  ["General Utility Helpers", "4", "Entry-level / Semi-skilled", "Mould cleaning, yard strapping, housekeeping"]
+                ]
+              }
+            }
+          ],
+          "prevTopic": { "id": "reduce-steam-cost", "title": "Reduce Steam Cost", "stage": "efficient-your-plant" },
+          "nextTopic": null,
+          "cta": {
+            "eyebrow": "OPERATOR TRAINING PROGRAM",
+            "title": "Train Your Workforce at Laxmi's Kheda Workshop",
+            "text": "We provide comprehensive 3-week hands-on training for your plant engineers, lab chemists, and SCADA operators prior to commissioning.",
+            "btnLabel": "LEARN ABOUT TRAINING PROGRAMS →",
+            "btnUrl": "contact.html"
+          }
+        }
+      ]
+    },
+    "expand-your-plant": {
+      "stageNum": "05",
+      "stageTitle": "Expand Your Plant",
+      "sidebarHeading": "EXPAND YOUR PLANT INNER PAGES",
+      "defaultTopic": "upgrade-capacity",
+      "topics": [
+        {
+          "id": "upgrade-capacity",
+          "icon": "📈",
+          "number": "01",
+          "sidebarTitle": "Upgrade Capacity",
+          "eyebrow": "STAGE 05 · TOPIC 01",
+          "title": "Upgrading AAC Plant Capacity: From 300 to 600 or 1000 m³/day",
+          "lead": "Expand plant throughput by utilizing modular civil layouts and pre-engineered machinery footprints without halting ongoing commercial production.",
+          "image": "assets/images/capacity-expansion.png",
+          "imageAlt": "AAC Plant Capacity Expansion Roadmap",
+          "checkpoint": {
+            "title": "EXPANSION CAPEX EFFICIENCY",
+            "text": "Doubling plant capacity from 300 to 600 m³/day typically requires only 40%–55% of the original project cost because major civil foundations, land, administrative offices, and high-voltage grid substations are already established."
+          },
+          "sections": [
+            {
+              "heading": "1. Incremental Equipment Checklist for Plant Expansion",
+              "list": [
+                "<strong>Autoclave Addition:</strong> Installing 2 to 3 additional Ø2.5m × 31m autoclaves on pre-planned foundation piers.",
+                "<strong>Cutting Line Speed Upgrade:</strong> High-speed hydraulic drive conversion to reduce cake cycle time from 5 min to 3.5 min.",
+                "<strong>Secondary Ball Mill:</strong> Adding a continuous overflow wet ball mill to double fly ash slurry storage capacity.",
+                "<strong>Mould Pool Expansion:</strong> Injecting 25–40 new precision side-plates and moulds into the automated closed-loop return track."
+              ]
+            }
+          ],
+          "prevTopic": null,
+          "nextTopic": { "id": "reinforced-aac-panels", "title": "Reinforced AAC Panels", "stage": "expand-your-plant" },
+          "cta": {
+            "eyebrow": "EXPANSION PLANNING",
+            "title": "Plan Your Plant Expansion with Zero Production Downtime",
+            "text": "Our engineering team designs phased expansion schemes that keep your existing lines running at 100% capacity during installation.",
+            "btnLabel": "REQUEST AN EXPANSION STUDY →",
+            "btnUrl": "contact.html"
+          }
+        },
+        {
+          "id": "reinforced-aac-panels",
+          "icon": "🧱",
+          "number": "02",
+          "sidebarTitle": "Reinforced AAC Panels",
+          "eyebrow": "STAGE 05 · TOPIC 02",
+          "title": "Adding Reinforced AAC Wall & Floor Panel Production Lines (ALC Panels)",
+          "lead": "Autoclaved Lightweight Concrete (ALC) panels command 30%–45% higher gross margins than standard blocks. Learn how to integrate automated rebar mesh welding, anti-corrosion dipping, and insertion cages.",
+          "image": "assets/images/alc-panels.png",
+          "imageAlt": "Reinforced AAC Panel Manufacturing",
+          "checkpoint": {
+            "title": "PANEL MARKET ADVANTAGE",
+            "text": "AAC panels enable ultra-fast prefabricated construction with zero wet mortar work, making them the preferred choice for commercial high-rise facade walls, IT parks, and PEB industrial sheds."
+          },
+          "sections": [
+            {
+              "heading": "1. AAC Panel Integration Hardware Upgrades",
+              "cards": [
+                {
+                  "tag": "STEEL REINFORCEMENT",
+                  "title": "Automated Rebar Mesh Welder",
+                  "text": "Precision CNC spot-welding machines assemble custom steel reinforcement meshes tailored to exact panel thickness and length (up to 6 meters)."
+                },
+                {
+                  "tag": "ANTI-CORROSION",
+                  "title": "Anti-Corrosion Polymer Coating Tank",
+                  "text": "Multi-stage dipping tanks coat steel cages with specialized anti-rust polymer enamel to protect reinforcement from autoclave moisture."
+                },
+                {
+                  "tag": "PIN INSERTION",
+                  "title": "Robotic Needle Insertion & Suspension",
+                  "text": "Suspends reinforced steel cages accurately at neutral axis inside the mould prior to pouring slurry."
+                },
+                {
+                  "tag": "MILLING & GROOVING",
+                  "title": "Tongue-and-Groove Milling Station",
+                  "text": "Specialized profiling cutters mill interlocking tongue-and-groove joints into finished panel edges for rapid on-site assembly."
+                }
+              ]
+            }
+          ],
+          "prevTopic": { "id": "upgrade-capacity", "title": "Upgrade Capacity", "stage": "expand-your-plant" },
+          "nextTopic": { "id": "dry-mix-mortar-integration", "title": "Dry Mix Mortar Plant", "stage": "expand-your-plant" },
+          "cta": {
+            "eyebrow": "PANEL UPGRADE",
+            "title": "Expand into High-Margin Reinforced AAC Panels",
+            "text": "Consult Laxmi engineers to evaluate rebar welding automation and mould retrofits for ALC panel production.",
+            "btnLabel": "EXPLORE AAC PANEL SYSTEMS →",
+            "btnUrl": "contact.html"
+          }
+        },
+        {
+          "id": "dry-mix-mortar-integration",
+          "icon": "🧪",
+          "number": "03",
+          "sidebarTitle": "Dry Mix Mortar Plant",
+          "eyebrow": "STAGE 05 · TOPIC 03",
+          "title": "Integrating an Automated Dry Mix Mortar & Block Jointing Adhesive Plant",
+          "lead": "Supplying thin-bed jointing mortar and ready-mix plaster alongside AAC blocks captures bundled sales, enhances brand loyalty, and generates an additional 18%–25% revenue stream.",
+          "image": "assets/images/dry-mix-mortar.png",
+          "imageAlt": "Dry Mix Mortar and Block Adhesive Plant",
+          "checkpoint": {
+            "title": "PROJECT SYNERGY",
+            "text": "Every 1 m³ of AAC blocks requires approximately 1 to 1.2 bags (40 kg) of thin-bed jointing adhesive. Integrating a 15 TPH mortar plant fulfills 100% of your customer adhesive demand with shared sales logistics."
+          },
+          "sections": [
+            {
+              "heading": "1. Dry Mix Mortar Plant Specifications",
+              "table": {
+                "headers": ["Specification Parameter", "10 TPH Line", "20 TPH Line", "30 TPH High-Capacity Line"],
+                "rows": [
+                  ["Primary Products", "AAC Block Adhesive, Tile Adhesive", "Block Adhesive, Ready Plaster, Wall Putty", "Complete Dry Mix Portfolio"],
+                  ["Mixer Type", "Twin-Shaft Paddle Mixer", "Non-Gravity Ploughshare Mixer", "Heavy-Duty Dual Ribbon Mixer"],
+                  ["Batching Accuracy", "± 0.2% Loadcell SCADA", "± 0.1% Multi-Channel SCADA", "± 0.1% Fully Integrated PLC"],
+                  ["Packaging Line", "Single-Spout Valve Bag Packer", "Dual-Spout Rotary Valve Packer", "4-Spout High-Speed Auto Packer (800 bags/hr)"],
+                  ["Land Footprint", "600 – 800 sq. meters", "1,000 – 1,200 sq. meters", "1,500 – 2,000 sq. meters"]
+                ]
+              }
+            }
+          ],
+          "prevTopic": { "id": "reinforced-aac-panels", "title": "Reinforced AAC Panels", "stage": "expand-your-plant" },
+          "nextTopic": { "id": "auto-palletizing-robotics", "title": "Palletizing & Robotics", "stage": "expand-your-plant" },
+          "cta": {
+            "eyebrow": "MORTAR INTEGRATION",
+            "title": "Set Up a Dry Mix Mortar Unit Alongside Your AAC Plant",
+            "text": "Laxmi En-Fab manufactures fully automated modular dry mix mortar plants tailored for block adhesive production.",
+            "btnLabel": "EXPLORE DRY MIX MORTAR PLANTS →",
+            "btnUrl": "dry-mix-mortar-plant.html"
+          }
+        },
+        {
+          "id": "auto-palletizing-robotics",
+          "icon": "🏗️",
+          "number": "04",
+          "sidebarTitle": "Palletizing & Robotics",
+          "eyebrow": "STAGE 05 · TOPIC 04",
+          "title": "Automated Palletizing, Strapping & Robotic Stacking Upgrades",
+          "lead": "Eliminate manual block handling breakages, optimize dispatch loading time, and produce export-quality shrink-wrapped pallets directly off the autoclave unloading tracks.",
+          "image": "assets/images/palletizing-robotics.png",
+          "imageAlt": "Automated AAC Palletizing and Strapping Line",
+          "checkpoint": {
+            "title": "DISPATCH EFFICIENCY METRIC",
+            "text": "Automated palletizing reduces truck loading time from 90 minutes down to under 12 minutes per 40-ton trailer while reducing yard chipping losses to below 0.2%."
+          },
+          "sections": [
+            {
+              "heading": "1. Robotic Palletizing Advantages",
+              "list": [
+                "<strong>Zero Manual Touch:</strong> Heavy-duty hydraulic multi-block clamps pick full cake layers directly from sorting conveyors.",
+                "<strong>Automated Pallet Dispenser:</strong> Magazines automatically feed standard wooden or plastic pallets onto the loading station.",
+                "<strong>Vertical & Horizontal PET Strapping:</strong> High-tension polyester strapping secures block bundles for rough transit protection.",
+                "<strong>Automatic Stretch Hood Wrapping:</strong> Complete waterproof stretch-film enclosure protects inventory in open yard storage."
+              ]
+            }
+          ],
+          "prevTopic": { "id": "dry-mix-mortar-integration", "title": "Dry Mix Mortar Plant", "stage": "expand-your-plant" },
+          "nextTopic": null,
+          "cta": {
+            "eyebrow": "AUTOMATED PACKAGING",
+            "title": "Upgrade to Laxmi Automated Palletizing & Strapping",
+            "text": "Discover how automated block packaging enhances brand prestige and drastically cuts dispatch turnaround time.",
+            "btnLabel": "INQUIRE ABOUT PALLETIZING SYSTEMS →",
+            "btnUrl": "contact.html"
+          }
+        }
+      ]
+    }
+  }
+}

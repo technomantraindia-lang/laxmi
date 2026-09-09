@@ -1,0 +1,33 @@
+
+Is there one central subsidy for every AAC block plant?
++
+No universal AAC-specific central subsidy was identified in the policies reviewed for this guide. An eligible project may receive benefits through current central or state schemes applicable to its category, activity and location.
+
+Does Udyam registration guarantee an MSME subsidy?
++
+No. Udyam registration may establish the enterprise category, but each incentive scheme has separate investment, location, timing and compliance conditions.
+
+Is an AAC plant automatically eligible because it uses fly ash?
++
+No. Many Indian AAC formulations use fly ash, but using an industrial by-product does not automatically establish incentive eligibility.
+
+Is SGST reimbursement calculated on sales turnover?
++
+Not necessarily. The applicable policy may consider eligible SGST deposited after prescribed adjustments and apply annual or overall limits.
+
+
+Are interstate sales eligible for an SGST-linked benefit?
++
+Eligibility varies. Because interstate and intrastate sales have different tax treatment, the expected sales mix must be considered during modelling.
+
+Can an existing AAC plant receive incentives for expansion?
++
+Possibly. Some policies cover expansion, diversification or modernisation, while others apply only to new units.
+
+Should subsidy be deducted from initial project cost?
++
+Not automatically. Financing should remain workable even if an expected reimbursement is delayed, reduced or not approved.
+
+Who confirms final eligibility?
++
+The competent government authority determines eligibility. Policy interpretation should be verified by a qualified subsidy, tax or legal professional before expenditure is committed.

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AAC Plant Batch Size & Capacity Selection Guide by Laxmi En-Fab. Learn how batch size, mould cycles, autoclave scheduling, and steam boiler TPH determine true daily plant capacity." />
+  <meta name="keywords" content="AAC plant capacity, AAC batch size, AAC plant sizing, autoclave capacity, AAC mixer volume, boiler TPH, Laxmi En-Fab" />
+  <title>AAC Plant Capacity &amp; Batch Size Selection Guide | Laxmi En-Fab</title>
+  
+  <!-- Google Fonts: Geist & Geist Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/homepage.css" />
+  <link rel="stylesheet" href="css/engineering.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AAC Plant Capacity Selection Guide: Batch Size, Autoclave Balancing & System Sync",
+    "description": "Comprehensive buyer and engineer guide on calculating practical AAC plant yield and matching mixer cycles with autoclaves and steam boilers.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Laxmi En-Fab Pvt. Ltd."
+    }
+  }
+  </script>
+</head>
+<body class="engineering-inner-page">
+
+  <!-- Shared Header -->
+  <div id="site-header"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <nav class="site-breadcrumb" aria-label="Breadcrumb">
+    <div class="site-breadcrumb__inner">
+      <a href="index.html">Home</a>
+      <span class="bc-sep">/</span>
+      <a href="engineering-center.html">AAC Engineering Center</a>
+      <span class="bc-sep">/</span>
+      <span class="bc-current">Batch Sizing &amp; Capacity Selection</span>
+    </div>
+  </nav>
+
+  <!-- Sticky In-Page Sub-Navigation Strip -->
+  <nav class="eng-nav-strip" aria-label="Capacity Navigation">
+    <div class="eng-nav-strip__inner">
+      <a href="#overview" class="eng-nav-btn active"><span class="eng-nav-num">01</span> Overview</a>
+      <a href="#balance" class="eng-nav-btn"><span class="eng-nav-num">02</span> System Balance</a>
+      <a href="#matrix" class="eng-nav-btn"><span class="eng-nav-num">03</span> Sizing Matrix</a>
+      <a href="#diligence" class="eng-nav-btn"><span class="eng-nav-num">04</span> 8 Due Diligence Checks</a>
+      <a href="#consultation" class="eng-nav-btn"><span class="eng-nav-num">05</span> Sizing Sheet</a>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- ============ 01. HERO SECTION (EDITORIAL FULL SCREEN IMAGE BACKGROUND) ============ -->
+    <section class="editorial-hero editorial-hero--light is-loaded" id="overview" aria-label="AAC Plant Capacity Overview">
+      <div class="editorial-hero__media" aria-hidden="true">
+        <div class="editorial-hero__video-wrap">
+          <img
+            class="editorial-hero__poster"
+            src="assets/images/decisions-plant-bg.png"
+            alt="Complete AAC Plant Batch Synchronization and Sizing"
+            fetchpriority="high"
+          />
+        </div>
+        <div class="editorial-hero__overlay"></div>
+      </div>
+
+      <div class="editorial-hero__inner">
+        <div class="editorial-hero__content">
+          <span class="editorial-hero__eyebrow">PILLAR 03 · CAPACITY &amp; BATCH SIZING GUIDE</span>
+          <h1 class="editorial-hero__title">
+            <span>AAC Plant Capacity</span>
+            <span class="editorial-hero__title-light">&amp; Batch Sizing.</span>
+          </h1>
+          <p class="editorial-hero__sub">
+            Why sustainable daily output depends on total system balance—synchronizing raw material dosing, mixer batch volume, pre-curing mould cycle, wire cutting speed, autoclave turnover, and boiler TPH.
+          </p>
+
+          <div class="eng-hero__stats">
+            <div class="eng-stat-item">
+              <div class="eng-stat-item__val">4.0–6.0 <span>m³</span></div>
+              <div class="eng-stat-item__lbl">Standard Batch Sizes</div>
+            </div>
+            <div class="eng-stat-item">
+              <div class="eng-stat-item__val">3.5–4.0 <span>min</span></div>
+              <div class="eng-stat-item__lbl">Mixer Cycle Time</div>
+            </div>
+            <div class="eng-stat-item">
+              <div class="eng-stat-item__val">150–1500 <span>m³</span></div>
+              <div class="eng-stat-item__lbl">Daily Plant Output</div>
+            </div>
+            <div class="eng-stat-item">
+              <div class="eng-stat-item__val">10–12 <span>hrs</span></div>
+              <div class="eng-stat-item__lbl">Autoclave Cycle</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 02. SECTION 01: TOTAL SYSTEM BALANCE ============ -->
+    <section class="eng-section eng-section--white" id="balance">
+      <div class="eng-container">
+        
+        <div>
+          <span class="eng-eyebrow">01 · CORE ENGINEERING PRINCIPLE</span>
+          <h2 class="eng-title">
+            <span>Total system balance.</span>
+            <span class="eng-title-light">Never size a plant by autoclave count alone.</span>
+          </h2>
+          <p class="eng-lead">
+            A plant is only as fast as its slowest sub-system. If your slurry batching takes 7 minutes per cycle, or your pre-curing tunnel cannot release moulds every 4 minutes, adding extra autoclaves will not increase your daily block output.
+          </p>
+        </div>
+
+        <!-- 2 Highlight Principle Cards -->
+        <div class="eng-chem-grid">
+          <div class="eng-chem-card">
+            <div class="eng-chem-card__badge">PRINCIPLE 01 · PRACTICAL YIELD EQUATION</div>
+            <h3 class="eng-chem-card__title">True Daily Block Yield Calculation</h3>
+            <div class="eng-chem-card__formula">
+              <code>Daily Yield (m³) = (60 / T_cycle) × V_mould × H_eff × (1 - R_waste)</code>
+            </div>
+            <p class="eng-chem-card__desc">
+              Practical output is determined by mixer cycle frequency ($T_{cycle} \approx 3.5\text{ min}$), usable mould volume ($V_{mould} = 4.0–6.0\text{ m³}$), effective operating hours ($H_{eff}$), and green cake cut scrap recovery.
+            </p>
+          </div>
+
+          <div class="eng-chem-card eng-chem-card--highlight">
+            <div class="eng-chem-card__badge">PRINCIPLE 02 · 5-STAGE SYNCHRONIZATION</div>
+            <h3 class="eng-chem-card__title">Synchronized Sub-System Matching</h3>
+            <div class="eng-chem-card__formula">
+              <code>Batching (4 min) ↔ Pre-Cure (150 min) ↔ Cutting (3.5 min) ↔ Autoclave (11 hr) ↔ Boiler TPH</code>
+            </div>
+            <p class="eng-chem-card__desc">
+              Every station must match the target pace. Adding autoclaves without matching steam boiler rating (TPH) causes steam starvation during concurrent vessel pressurization, degrading block strength.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ 03. SECTION 02: CAPACITY SIZING MATRIX ============ -->
+    <section class="eng-section eng-section--light" id="matrix">
+      <div class="eng-container">
+        
+        <div>
+          <span class="eng-eyebrow">02 · CAPACITY MATRIX</span>
+          <h2 class="eng-title">
+            <span>Standard plant tiers.</span>
+            <span class="eng-title-light">Equipment sizing &amp; utility requirements.</span>
+          </h2>
+          <p class="eng-lead">
+            Compare usable batch sizes, mixer frequencies, autoclave counts, boiler ratings, and land requirements across 5 standardized production tiers.
+          </p>
+        </div>
+
+        <!-- Master Sizing Table -->
+        <div class="eng-matrix-table-wrap">
+          <table class="eng-matrix-table">
+            <thead>
+              <tr>
+                <th>Plant Tier</th>
+                <th>Usable Batch Size</th>
+                <th>Mixer Frequency</th>
+                <th>Autoclave Setup</th>
+                <th>Boiler Rating (TPH)</th>
+                <th>Land Area</th>
+                <th>Shift Strategy</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="eng-material-cell">
+                    <span class="eng-material-name">150 m³/Day</span>
+                    <span class="eng-material-formula">Entry Level Setup</span>
+                  </div>
+                </td>
+                <td>4.0 m³ (4.2m × 1.2m × 0.6m)</td>
+                <td><span class="eng-prop-badge">3–4 Batches / hr</span></td>
+                <td>2 Units (Ø2.0m × 21m)</td>
+                <td><span class="eng-qc-tag">3.0 – 4.0 TPH</span></td>
+                <td>2.5 – 3.0 Acres</td>
+                <td>1–2 Shifts / Day (Ideal starter plant)</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="eng-material-cell">
+                    <span class="eng-material-name">300 m³/Day</span>
+                    <span class="eng-material-formula">Commercial Standard</span>
+                  </div>
+                </td>
+                <td>4.0 – 4.8 m³</td>
+                <td><span class="eng-prop-badge">4–6 Batches / hr</span></td>
+                <td>3–4 Units (Ø2.0m × 31m)</td>
+                <td><span class="eng-qc-tag">6.0 TPH</span></td>
+                <td>3.5 – 4.5 Acres</td>
+                <td>2–3 Shifts (Most popular commercial plant)</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="eng-material-cell">
+                    <span class="eng-material-name">450 m³/Day</span>
+                    <span class="eng-material-formula">High-Yield Operation</span>
+                  </div>
+                </td>
+                <td>4.8 m³ (4.8m × 1.2m × 0.6m)</td>
+                <td><span class="eng-prop-badge">6–8 Batches / hr</span></td>
+                <td>4–5 Units (Ø2.0m × 31m)</td>
+                <td><span class="eng-qc-tag">8.0 TPH</span></td>
+                <td>4.5 – 5.5 Acres</td>
+                <td>3 Shifts / Continuous high-yield operation</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="eng-material-cell">
+                    <span class="eng-material-name">600 m³/Day</span>
+                    <span class="eng-material-formula">Automated Facility</span>
+                  </div>
+                </td>
+                <td>4.8 – 6.0 m³</td>
+                <td><span class="eng-prop-badge">7–9 Batches / hr</span></td>
+                <td>5–6 Units (Ø2.5m × 31m)</td>
+                <td><span class="eng-qc-tag">8.0 – 10.0 TPH</span></td>
+                <td>5.5 – 7.0 Acres</td>
+                <td>Full automation with automated palletizing</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="eng-material-cell">
+                    <span class="eng-material-name">1,000+ m³/Day</span>
+                    <span class="eng-material-formula">Mega Industrial Line</span>
+                  </div>
+                </td>
+                <td>6.0 m³ Dual Lines</td>
+                <td><span class="eng-prop-badge">12–14 Batches / hr</span></td>
+                <td>8–10 Units (Ø2.5m × 35m)</td>
+                <td><span class="eng-qc-tag">12.0 – 15.0 TPH</span></td>
+                <td>8.0 – 12.0 Acres</td>
+                <td>Mega industrial facility for blocks &amp; ALC panels</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ 04. SECTION 03: 8 DUE DILIGENCE CHECKS ============ -->
+    <section class="eng-section eng-section--white" id="diligence">
+      <div class="eng-container">
+        
+        <div>
+          <span class="eng-eyebrow">03 · DUE DILIGENCE</span>
+          <h2 class="eng-title">
+            <span>8 verification checkpoints.</span>
+            <span class="eng-title-light">Validating equipment quotes before procurement.</span>
+          </h2>
+          <p class="eng-lead">
+            Critical technical questions every investor and engineering team must ask before finalizing capacity contracts and placing machinery orders.
+          </p>
+        </div>
+
+        <!-- 8 Contiguous Checkpoint Boxes (4 columns x 2 rows) -->
+        <div class="eng-circuit-grid">
+          
+          <!-- Check 01 -->
+          <div class="eng-circuit-box">
+            <div class="eng-circuit-box__top">
+              <span class="eng-circuit-box__num">CHECK 01 · DOSING</span>
+              <h3 class="eng-circuit-box__title">Usable Slurry Volume vs Gross Tank</h3>
+              <p class="eng-circuit-box__desc">
+                Verify whether the machinery quote specifies net usable slurry per discharge or just total tank volume without freeboard allowance.
+              </p>
+            </div>
+            <div class="eng-circuit-box__spec">
+              <span>Metric: Net Usable m³</span>
+              <span>Freeboard Buffer</span>
+            </div>
+          </div>
+
+          <!-- Check 02 -->
+          <div class="eng-circuit-box">
+            <div class="eng-circuit-box__top">
+              <span class="eng-circuit-box__num">CHECK 02 · CUTTING SPEED</span>
+              <h3 class="eng-circuit-box__title">Cutting Machine Cycle Speed</h3>
+              <p class="eng-circuit-box__desc">
+                Ensure the cutting line cycle (tilting, wire pass, vertical cross-cut, demoulding) takes less than 3.5 minutes per cake to prevent line queueing.
+              </p>
+            </div>
+            <div class="eng-circuit-box__spec">
+              <span>Target: &lt;3.5 min/cake</span>
+              <span>2-Axis Oscillation</span>
+            </div>
+          </div>
+
+          <!-- Check 03 -->
+          <div class="eng-circuit-box">
+            <div class="eng-circuit-box__top">
+              <span class="eng-circuit-box__num">CHECK 03 · MOULD COUNT</span>
+              <h3 class="eng-circuit-box__title">Total Active Mould Quantity</h3>
+              <p class="eng-circuit-box__desc">
+                Calculate moulds required: $\text{Moulds} = (\text{Pre-curing Time} / \text{Casting Cycle}) + \text{Circulation Buffer}$ to avoid pouring downtime.
+              </p>
+            </div>
+            <div class="eng-circuit-box__spec">
+              <span>Buffer: +15% Reserve</span>
+              <span>Track Synchronization</span>
+            </div>
+          </div>
+
+          <!-- Check 04 -->
+          <div class="eng-circuit-box">
+            <div class="eng-circuit-box__top">
+              <span class="eng-circuit-box__num">CHECK 04 · STEAM BOILER</span>
+              <h3 class="eng-circuit-box__title">Steam Boiler Peak Load TPH</h3>
+              <p class="eng-circuit-box__desc">
+                Ensure boiler rating handles peak concurrent autoclave pressurization without causing steam starvation in already soaking vessels.
+              </p>
+            </div>
+            <div class="eng-circuit-box__spec">
+              <span>Peak Demand: Concurrent Rise</span>
+              <span>Steam Header Buffer</span>
+            </div>
+          </div>
+
+          <!-- Check 05 -->
+          <div class="eng-circuit-box">
+            <div class="eng-circuit-box__top">
+              <span class="eng-circuit-box__num">CHECK 05 · BALL MILL</span>
+              <h3 class="eng-circuit-box__title">Fly Ash &amp; Sand Slurry Milling Rate</h3>
+              <p class="eng-circuit-box__desc">
+                Check that the wet ball mill output (TPH) replenishes slurry storage faster than maximum peak batching consumption.
+              </p>
+            </div>
+            <div class="eng-circuit-box__spec">
+              <span>Fineness: &lt;15% / 45µm</span>
+              <span>Continuous Output</span>
+            </div>
+          </div>
+
+          <!-- Check 06 -->
+          <div class="eng-circuit-box">
+            <div class="eng-circuit-box__top">
+              <span class="eng-circuit-box__num">CHECK 06 · RAIL SPEED</span>
+              <h3 class="eng-circuit-box__title">Crane &amp; Ferry Cart Handling Speed</h3>
+              <p class="eng-circuit-box__desc">
+                Verify that transfer cars and overhead cranes can service both the pouring track and the de-panning track without traffic collisions.
+              </p>
+            </div>
+            <div class="eng-circuit-box__spec">
+              <span>Transfer: &lt;90 sec</span>
+              <span>PLC Anti-Collision</span>
+            </div>
+          </div>
+
+          <!-- Check 07 -->
+          <div class="eng-circuit-box">
+            <div class="eng-circuit-box__top">
+              <span class="eng-circuit-box__num">CHECK 07 · PACKAGING</span>
+              <h3 class="eng-circuit-box__title">Packaging &amp; De-panning Rate</h3>
+              <p class="eng-circuit-box__desc">
+                Ensure cured block cake separation and pallet strapping throughput matches continuous autoclave discharge rates (50–60 m³/hr).
+              </p>
+            </div>
+            <div class="eng-circuit-box__spec">
+              <span>Rate: 60+ m³/hr</span>
+              <span>Zero Edge Chipping</span>
+            </div>
+          </div>
+
+          <!-- Check 08 -->
+          <div class="eng-circuit-box">
+            <div class="eng-circuit-box__top">
+              <span class="eng-circuit-box__num">CHECK 08 · SEASONAL SHIFT</span>
+              <h3 class="eng-circuit-box__title">Seasonal Pre-Curing Variations</h3>
+              <p class="eng-circuit-box__desc">
+                Account for winter temperature drops which can extend pre-curing times from 120 mins up to 180 mins if tunnels lack heating insulation.
+              </p>
+            </div>
+            <div class="eng-circuit-box__spec">
+              <span>Winter Buffer: +45 min</span>
+              <span>Heated Tunnel Option</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ 05. SECTION 04: MASS-BALANCE SIZING BANNER ============ -->
+    <section class="eng-section eng-section--light" id="consultation">
+      <div class="eng-container">
+        
+        <div class="eng-alc-banner">
+          <div class="eng-alc-banner__left">
+            <span class="eng-eyebrow" style="color:#56b4f5;">04 · MASS-BALANCE SHEET</span>
+            <h2 class="eng-alc-banner__title">
+              <span>Get an exact mass-balance</span>
+              <span style="color:#93c5fd;">&amp; equipment sizing calculation.</span>
+            </h2>
+            <p class="eng-alc-banner__lead">
+              Our engineering team will prepare an exact mass-balance breakdown, daily raw material consumption schedule, boiler fuel consumption, and equipment count for your target output.
+            </p>
+            <div class="eng-alc-features">
+              <div class="eng-alc-feature">
+                <strong>01. Daily Raw Material Breakdown (TPD)</strong>
+                <p>Calculates exact daily metric tonnes required for Fly Ash, Quicklime, Cement, Gypsum, and Aluminium Powder.</p>
+              </div>
+              <div class="eng-alc-feature">
+                <strong>02. Autoclave Shift Turnaround Schedule</strong>
+                <p>Computerized steam scheduling modeling 24-hour autoclave cycles with zero peak steam conflict.</p>
+              </div>
+              <div class="eng-alc-feature">
+                <strong>03. Connected Electrical &amp; Steam Load Sheet</strong>
+                <p>Comprehensive kW power demand and boiler steam TPH ratings calculated for phase-1 and phase-2 operations.</p>
+              </div>
+            </div>
+          </div>
+          <div class="eng-alc-banner__right">
+            <div class="eng-alc-stat-card">
+              <div class="eng-alc-stat-num">±2%</div>
+              <div class="eng-alc-stat-label">Mass-Balance Yield Accuracy</div>
+            </div>
+            <div class="eng-alc-stat-card">
+              <div class="eng-alc-stat-num">24 Hours</div>
+              <div class="eng-alc-stat-label">Engineering Sizing Sheet Turnaround</div>
+            </div>
+            <div class="eng-alc-stat-card">
+              <div class="eng-alc-stat-num">100%</div>
+              <div class="eng-alc-stat-label">Customized to Your Local Raw Materials</div>
+            </div>
+            <div class="eng-alc-stat-card">
+              <div class="eng-alc-stat-num">0 Cost</div>
+              <div class="eng-alc-stat-label">Preliminary Feasibility Sizing Sheet</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ 06. CHAPTER NAVIGATION & EDITORIAL CTA ============ -->
+    <section class="eng-chapter-nav-section">
+      <div class="eng-container">
+        <div class="eng-chapter-nav">
+          <a href="plant-layout.html" class="eng-chapter-nav__btn eng-chapter-nav__btn--prev">
+            <span class="eng-chapter-nav__sub">← PREVIOUS CHAPTER</span>
+            <span class="eng-chapter-nav__title">AAC Plant Layout Design</span>
+          </a>
+          <a href="machinery-equipment.html" class="eng-chapter-nav__btn eng-chapter-nav__btn--next">
+            <span class="eng-chapter-nav__sub">NEXT CHAPTER →</span>
+            <span class="eng-chapter-nav__title">Plant Machinery &amp; Equipment</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final Conversion Banner -->
+    <section class="eng-cta-banner" id="cta">
+      <div class="eng-cta-banner__inner">
+        <span class="eng-cta-banner__eyebrow">CAPACITY CONSULTING</span>
+        <h2 class="eng-cta-banner__title">
+          <span>Get a custom mass-balance</span>
+          <span class="eng-cta-banner__title-light">&amp; equipment sizing report.</span>
+        </h2>
+        <p class="eng-cta-banner__lead">
+          Share your target daily production volume and available power/land coordinates with Laxmi En-Fab engineers to receive a comprehensive equipment sizing report and utility schedule.
+        </p>
+        <div class="eng-cta-banner__actions">
+          <a href="contact.html" class="eng-cta-banner__btn-white">
+            <span>Request Capacity Sizing Sheet</span>
+            <span class="eng-cta-banner__btn-arrow">↗</span>
+          </a>
+          <a href="#overview" class="eng-cta-banner__link-top">
+            <span>Return to top ↑</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Shared Global Footer Injection -->
+  <div id="site-footer"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/components.js"></script>
+</body>
+</html>

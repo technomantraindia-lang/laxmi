@@ -4,9 +4,9 @@
 
 - Workspace: laxmi
 - Indexed: 55 source files
-- Reused unchanged: 8
-- Rescanned: 47
-- Built: 2026-09-02T12:30:03.512Z
+- Reused unchanged: 40
+- Rescanned: 15
+- Built: 2026-09-03T06:37:59.835Z
 
 ## Retrieval policy
 - The native resolver reads the local index and injects at most five task-ranked candidate paths/locators.

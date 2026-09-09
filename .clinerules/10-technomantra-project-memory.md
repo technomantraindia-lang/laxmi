@@ -6,7 +6,7 @@
 - Technology: HTML/CSS/JavaScript
 - Active file at refresh: _list_sections.py
 - Local code graph: 33 files · 27 edges · 0 matched flows
-- Refreshed: 2026-09-02T12:28:19.205Z
+- Refreshed: 2026-09-03T06:37:07.061Z
 
 ## Framework Intelligence (V4.7.8)
 - Profiles: html-static

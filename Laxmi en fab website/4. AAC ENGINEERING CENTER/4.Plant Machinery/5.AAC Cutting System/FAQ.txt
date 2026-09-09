@@ -1,0 +1,17 @@
+What is an AAC cutting system?
+An AAC cutting system cuts a pre-cured green AAC cake into the required product dimensions before autoclaving. Depending on the plant configuration, it can include cake transfer, face trimming, horizontal and vertical wire cutting, bottom-layer removal and cutting-waste recovery.
+
+Is the AAC cake cut before or after autoclaving?
+In the process described here, the green cake is cut after pre-curing and demoulding but before autoclaving. Separate post-autoclave sawing equipment may be used for special finished-product applications.
+
+What affects AAC block cutting accuracy?
+Important factors include cake condition, wire spacing and tension, blade setting, machine alignment, side-plate condition, cake movement and consistent upstream process control.
+
+Can one cutting system produce different block sizes?
+A system can be configured for multiple sizes, but the supported range, wire arrangement and changeover method must be confirmed in the project specification.
+
+How is cutting waste reused?
+Green cutting waste can be collected, converted into controlled waste slurry and returned to production. The usable proportion depends on the recipe, raw materials, slurry properties and quality-control results.
+
+Can the system be installed in an existing AAC plant?
+Yes, subject to a technical assessment of cake size, side plates, layout, foundations, transfer arrangement, controls, waste recovery and the available shutdown period.

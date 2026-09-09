@@ -15,12 +15,16 @@
       "parent": "solutions.html",
       "items": [
         {
-          "label": "AAC Plants",
+          "label": "AAC Block & Panel Plant",
           "url": "aac-block-panel-plant.html"
         },
         {
-          "label": "Dry Mix Mortar",
+          "label": "Dry Mix Mortar Plant",
           "url": "dry-mix-mortar-plant.html"
+        },
+        {
+          "label": "Complete AAC Plant",
+          "url": "solutions.html"
         }
       ]
     },

@@ -13,6 +13,12 @@
   <link rel="stylesheet" href="css/homepage.css" />
   <link rel="stylesheet" href="css/responsive.css" />
 
+  <style>
+    body.about-page, body.about-page * {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    }
+  </style>
+
   <!-- Structured Data / JSON-LD for Organization & LocalBusiness -->
   <script type="application/ld+json">
   {
@@ -46,110 +52,153 @@
   <!-- Shared Header Injection Placeholder -->
   <div id="site-header"></div>
 
+  <!-- Global Breadcrumb Navigation -->
+  <nav class="site-breadcrumb" aria-label="Breadcrumb">
+    <div class="site-breadcrumb__inner">
+      <a href="index.html">Home</a>
+      <span class="bc-sep">/</span>
+      <span class="bc-current">Why Laxmi</span>
+    </div>
+  </nav>
+
   <main id="main-content">
     
-    <!-- ============ SECTION 01 — HERO (DARK INDUSTRIAL) ============ -->
-    <section class="editorial-about-hero" id="hero">
-      <div class="editorial-about-hero__inner">
-        
-        <!-- Left: Text Area (40-45%) -->
-        <div class="editorial-about-hero__content">
-          <span class="editorial-eyebrow editorial-eyebrow--gold">ABOUT LAXMI</span>
-          <h1 class="editorial-about-hero__title">
-            <span>Built by an engineering</span>
-            <span class="editorial-about-hero__title-light">company.</span>
+    <!-- ============ SECTION 01 — HERO (EDITORIAL INDUSTRIAL FULL-BLEED) ============ -->
+    <section class="editorial-hero is-loaded" id="hero" aria-label="About Laxmi En-Fab Overview">
+      
+      <!-- Background Full-Bleed Plant Visual & Overlay -->
+      <div class="editorial-hero__media" aria-hidden="true">
+        <div class="editorial-hero__video-wrap">
+          <img
+            class="editorial-hero__poster"
+            src="assets/images/production-process.png"
+            alt="Laxmi En-Fab Heavy Engineering Facility and AAC Plant Systems"
+            fetchpriority="high"
+          />
+        </div>
+        <div class="editorial-hero__overlay"></div>
+      </div>
+
+      <!-- Blueprint Subtle Grid Accent -->
+      <div class="editorial-hero__blueprint" aria-hidden="true">
+        <svg class="editorial-hero__grid-svg" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <line x1="450" y1="0" x2="450" y2="900" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/>
+          <line x1="720" y1="0" x2="720" y2="900" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
+          <line x1="0" y1="220" x2="1440" y2="220" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/>
+          <line x1="0" y1="500" x2="1440" y2="500" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
+        </svg>
+      </div>
+
+      <!-- Hero Main Content -->
+      <div class="editorial-hero__inner">
+        <div class="editorial-hero__content">
+          <span class="editorial-hero__eyebrow">ABOUT LAXMI EN-FAB · ESTABLISHED 2010</span>
+          <h1 class="editorial-hero__title">
+            <span class="editorial-hero__title-line1">Built by an engineering</span>
+            <span class="editorial-hero__title-light">company.</span>
           </h1>
-          <p class="editorial-about-hero__lead">
+          <p class="editorial-hero__sub">
             Laxmi En-Fab Pvt. Ltd. delivers complete AAC plant solutions, combining engineering expertise, advanced machinery and end-to-end project support. From plant design and manufacturing to installation and commissioning, we help customers build efficient and reliable AAC production facilities.
           </p>
-          <div class="editorial-about-hero__actions">
-            <a href="engineering-center.html" class="editorial-btn-primary">
-              Explore Our Engineering <span class="btn-arrow">→</span>
+          <div class="editorial-hero__actions">
+            <a href="engineering-center.html" class="editorial-hero__btn-white">
+              Explore Our Engineering <span class="editorial-hero__btn-arrow">↗</span>
             </a>
-            <a href="projects.html" class="editorial-btn-outline">
-              View Projects <span class="btn-arrow">→</span>
+            <a href="projects.html" class="editorial-hero__link-text">
+              View Projects <span class="editorial-hero__btn-arrow">→</span>
             </a>
           </div>
         </div>
+      </div>
 
-        <!-- Right: Asymmetric Real Laxmi Facility Visual (55-60%) -->
-        <div class="editorial-about-hero__visual">
-          <div class="editorial-about-hero__frame">
-            <img src="assets/images/production-process.png" alt="Laxmi En-Fab manufacturing facility and workshop in Ahmedabad" class="editorial-about-hero__img" />
-            <div class="editorial-about-hero__overlay"></div>
-            <div class="editorial-about-hero__tech-tag">
-              <span class="tech-tag__dot"></span>
-              LAXMI EN-FAB WORKS · AHMEDABAD, INDIA
-            </div>
-          </div>
+    </section>
+
+    <!-- ========== 02 / STATS COUNTER STRIP ========== -->
+    <section class="hp-stats-strip" aria-label="Laxmi En-Fab Key Metrics" style="width: 100%; border-top: 1px solid rgba(7, 23, 44, 0.08); border-bottom: 1px solid rgba(7, 23, 44, 0.08); background: #ffffff; padding: 24px 0;">
+      <div class="hp-stats-strip__inner" style="max-width: 1500px; margin: 0 auto; padding: 0 32px; display: grid; grid-template-columns: repeat(6, 1fr) 1.2fr; align-items: center; width: 100%;">
+        <div class="hp-stat-item">
+          <span class="hp-stat-num">150+</span>
+          <span class="hp-stat-label">TURNKEY PLANTS</span>
         </div>
-
+        <div class="hp-stat-item">
+          <span class="hp-stat-num">50+</span>
+          <span class="hp-stat-label">EXPANSION PROJECTS</span>
+        </div>
+        <div class="hp-stat-item">
+          <span class="hp-stat-num">500+</span>
+          <span class="hp-stat-label">AUTOCLAVES</span>
+        </div>
+        <div class="hp-stat-item">
+          <span class="hp-stat-num">65,000+</span>
+          <span class="hp-stat-label">SQ. FT. WORKSHOP</span>
+        </div>
+        <div class="hp-stat-item">
+          <span class="hp-stat-num">15+</span>
+          <span class="hp-stat-label">YEARS IN AAC</span>
+        </div>
+        <div class="hp-stat-item">
+          <span class="hp-stat-num">35+</span>
+          <span class="hp-stat-label">YEARS ENGINEERING</span>
+        </div>
+        <div class="hp-stat-item hp-stat-item--link">
+          <a href="#the-company" class="hp-stat-evidence-link">
+            <span>EXPLORE THE COMPANY</span>
+            <span class="hp-stat-evidence-arrow">↓</span>
+          </a>
+        </div>
       </div>
     </section>
 
-    <!-- ============ SECTION 02 — THE COMPANY (QUIET WHITE) ============ -->
+    <!-- ============ SECTION 02 — THE COMPANY (QUIET WHITE 1500PX) ============ -->
     <section class="editorial-company-section" id="the-company">
-      <div class="editorial-company-section__inner" data-reveal>
+      <div class="editorial-company-section__inner">
         
-        <div class="editorial-company-header">
-          <span class="editorial-eyebrow editorial-eyebrow--gold">COMPANY SCOPE</span>
-          <h2 class="machinery-stage__title">
-            <span>More than machinery.</span>
-            <span class="machinery-stage__title-light">A complete plant responsibility.</span>
+        <div class="editorial-company-header" style="max-width: 1000px;">
+          <span class="editorial-eyebrow" style="display: inline-block; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: #026aa7; margin-bottom: 1.5rem;">
+            COMPANY SCOPE
+          </span>
+          <h2 class="editorial-company-header__title">
+            <span style="display: block;">More than machinery.</span>
+            <span style="display: block; color: #8d9ba8; font-weight: 400; margin-top: 0.05em;">A complete plant responsibility.</span>
           </h2>
           <p class="editorial-company-header__sub">
             Laxmi En-Fab combines plant and machinery manufacturing with engineering and project support for AAC production facilities.
           </p>
         </div>
 
+        <!-- 5 Horizontal Specification Rows (Max Width 1500px) -->
         <div class="editorial-company-rows">
           
-          <div class="company-proof-row" data-reveal>
+          <div class="company-proof-row">
             <span class="company-proof-row__num">01</span>
-            <div class="company-proof-row__content">
-              <h3 class="company-proof-row__title">Plant &amp; Machinery Manufacturing</h3>
-              <p class="company-proof-row__desc">Precision heavy engineering, structural fabrication, precision machining, and component assembly for AAC production lines.</p>
-            </div>
+            <h3 class="company-proof-row__title">Plant &amp; Machinery Manufacturing</h3>
+            <p class="company-proof-row__desc">Precision heavy engineering, structural fabrication, precision machining, and component assembly for AAC production lines.</p>
           </div>
 
-          <div class="company-proof-row" data-reveal>
+          <div class="company-proof-row">
             <span class="company-proof-row__num">02</span>
-            <div class="company-proof-row__content">
-              <h3 class="company-proof-row__title">Plant Engineering</h3>
-              <p class="company-proof-row__desc">Custom layout design, mass-balance formulations, utility planning, and process automation integration tailored to regional raw materials.</p>
-            </div>
+            <h3 class="company-proof-row__title">Plant Engineering</h3>
+            <p class="company-proof-row__desc">Custom layout design, mass-balance formulations, utility planning, and process automation integration tailored to regional raw materials.</p>
           </div>
 
-          <div class="company-proof-row" data-reveal>
+          <div class="company-proof-row">
             <span class="company-proof-row__num">03</span>
-            <div class="company-proof-row__content">
-              <h3 class="company-proof-row__title">Project Execution</h3>
-              <p class="company-proof-row__desc">End-to-end project management, site civil coordination, foundation planning, and logistical dispatch tracking.</p>
-            </div>
+            <h3 class="company-proof-row__title">Project Execution</h3>
+            <p class="company-proof-row__desc">End-to-end project management, site civil coordination, foundation planning, and logistical dispatch tracking.</p>
           </div>
 
-          <div class="company-proof-row" data-reveal>
+          <div class="company-proof-row">
             <span class="company-proof-row__num">04</span>
-            <div class="company-proof-row__content">
-              <h3 class="company-proof-row__title">Installation</h3>
-              <p class="company-proof-row__desc">On-site mechanical erection, electrical wiring, pneumatic alignment, and autoclave pressure vessel seating by experienced field engineers.</p>
-            </div>
+            <h3 class="company-proof-row__title">Installation</h3>
+            <p class="company-proof-row__desc">On-site mechanical erection, electrical wiring, pneumatic alignment, and autoclave pressure vessel seating by experienced field engineers.</p>
           </div>
 
-          <div class="company-proof-row" data-reveal>
+          <div class="company-proof-row">
             <span class="company-proof-row__num">05</span>
-            <div class="company-proof-row__content">
-              <h3 class="company-proof-row__title">Commissioning</h3>
-              <p class="company-proof-row__desc">Trial batching, chemical mix optimization, block density testing, operator training, and final production SOP handover.</p>
-            </div>
+            <h3 class="company-proof-row__title">Commissioning</h3>
+            <p class="company-proof-row__desc">Trial batching, chemical mix optimization, block density testing, operator training, and final production SOP handover.</p>
           </div>
 
-        </div>
-
-        <div class="editorial-company-cta">
-          <a href="machinery-equipment.html" class="editorial-link-action">
-            See Our Machinery <span class="link-arrow">→</span>
-          </a>
         </div>
 
       </div>
@@ -470,6 +519,275 @@
 
         </div>
 
+      </div>
+    </section>
+
+    <!-- ============ SECTION 09.5 — VERIFIED CUSTOMER TESTIMONIALS & CASE STORIES ============ -->
+    <section class="editorial-testimonials-section" id="testimonials">
+      <div class="editorial-testimonials__inner" data-reveal>
+        <div class="editorial-diff-header">
+          <span class="editorial-eyebrow editorial-eyebrow--gold">VERIFIED CUSTOMER EXPERIENCE</span>
+          <h2 class="machinery-stage__title">
+            <span>Why customers chose Laxmi</span>
+            <span class="machinery-stage__title-light">for their AAC plants.</span>
+          </h2>
+        </div>
+
+        <!-- Testimonial 01 Card — Satyam Buildtech Pvt. Ltd. (Wada, Maharashtra) -->
+        <article class="testimonial-case-card" id="testimonial-1">
+          <div class="testimonial-card__header">
+            <span class="testimonial-badge">CASE STUDY 01</span>
+            <span class="testimonial-verified-tag">✓ Signed Customer Certificate Verified</span>
+          </div>
+
+          <h3 class="testimonial-card__title">Why We Chose Laxmi for Our AAC Plant</h3>
+          
+          <!-- Part 1: Testimonial Overview -->
+          <div class="testimonial-overview-block" style="margin-top: 24px; padding: 24px; background: #f8fafc; border-left: 4px solid var(--laxmi-blue, #0b3f78); border-radius: 8px;">
+            <h4 style="font-size: 1rem; color: var(--laxmi-blue, #0b3f78); font-weight: 800; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.05em;">Part 1 — Testimonial Overview</h4>
+            <p class="testimonial-quote-lead" style="margin-top: 0; margin-bottom: 14px; font-size: 1.15rem; color: #07172c;">
+              We had already operated a Chinese AAC plant. For our larger second plant, we chose Laxmi.
+            </p>
+            <p class="testimonial-body-text">
+              After operating a 100,000 m³/year Chinese-supplied AAC plant, we evaluated multiple suppliers from India and China for our new 300,000 m³/year plant at Wada.
+            </p>
+            <p class="testimonial-body-text">
+              We selected Laxmi for its advanced technology and superior engineering. The plant has delivered 100% capacity utilisation with consistent results and, in our experience, has performed better in maintenance, production and wastage.
+            </p>
+            <div class="testimonial-author-box" style="margin-top: 16px; padding-top: 12px; border-top: 1px solid rgba(7, 23, 44, 0.08);">
+              <span class="testimonial-author__name">Satyam Patel</span>
+              <span class="testimonial-author__role">Director, Satyam Buildtech Pvt. Ltd.</span>
+            </div>
+          </div>
+
+          <!-- Part 2: Our Complete Experience & Verified Details Sidebar Grid -->
+          <div class="testimonial-card__details-grid">
+            <div class="testimonial-card__main-story">
+              <h4 style="font-size: 1.2rem; font-weight: 800; color: #07172c; margin-bottom: 16px;">Part 2 — Our Complete Experience</h4>
+              
+              <p class="testimonial-body-text">
+                Our first AAC plant, with an annual capacity of 100,000 m³, was installed at Mehsana, Gujarat, by a reputed Chinese supplier. Operating this plant gave us practical experience in AAC production, maintenance and wastage.
+              </p>
+              <p class="testimonial-body-text">
+                As the AAC block market grew, we decided to establish a second and significantly larger plant with an annual capacity of 300,000 m³ at Wada, Maharashtra.
+              </p>
+              <p class="testimonial-body-text">
+                Before selecting the supplier, we evaluated multiple AAC plant manufacturers from both India and China. Since we already had experience operating a Chinese-supplied plant, we were able to compare suppliers from the perspective of an actual plant owner.
+              </p>
+              <p class="testimonial-body-text">
+                After completing our evaluation, we selected Laxmi En-Fab Pvt. Ltd. because of its advanced technology and superior engineering solutions.
+              </p>
+              <p class="testimonial-body-text">
+                The plant supplied by Laxmi has performed exceptionally well. Based on our experience of operating both plants, the Laxmi plant has performed better than our earlier Chinese plant in three important areas:
+              </p>
+              
+              <ul style="margin: 12px 0 20px 24px; color: #07172c; font-weight: 700; font-size: 0.95rem; line-height: 1.8;">
+                <li>Maintenance</li>
+                <li>Production</li>
+                <li>Control of wastage</li>
+              </ul>
+
+              <p class="testimonial-body-text">
+                We have achieved 100% capacity utilisation with consistent production results at our Wada plant.
+              </p>
+              <p class="testimonial-body-text">
+                Our experience with Laxmi has extended beyond the plant’s performance. Their timely delivery and outstanding after-sales service have also been highly commendable. Their continued support has made Laxmi a trusted partner for our business.
+              </p>
+              <p class="testimonial-body-text">
+                Based on our experience, we strongly recommend Laxmi En-Fab Pvt. Ltd. to businesses seeking a reliable AAC plant solution supported by strong engineering and dependable after-sales service.
+              </p>
+
+              <blockquote class="testimonial-quote-lead" style="margin-top: 28px; background: #f1f5f9; padding: 24px; border-radius: 10px; border-left-width: 6px;">
+                “The plant supplied by Laxmi has been exceptional, outperforming our Chinese plant in maintenance, production and wastage. We have achieved 100% capacity utilisation with consistent results.”
+                <footer style="margin-top: 14px; font-size: 0.95rem; font-style: normal; font-weight: 800; color: #07172c;">
+                  Satyam Patel<br>
+                  <span style="font-weight: 600; color: #64748b; font-size: 0.85rem;">Director, Satyam Buildtech Pvt. Ltd.</span>
+                </footer>
+              </blockquote>
+            </div>
+
+            <!-- Verified Project Specs Card -->
+            <div class="testimonial-card__sidebar">
+              <div class="verified-specs-card">
+                <h5 class="verified-specs-card__title">VERIFIED PROJECT DETAILS</h5>
+                <ul class="verified-specs-list">
+                  <li><span>Project</span> <strong>AAC block manufacturing plant</strong></li>
+                  <li><span>Location</span> <strong>Wada, Maharashtra</strong></li>
+                  <li><span>Installed Capacity</span> <strong>300,000 m³/year</strong></li>
+                  <li><span>Installation Year</span> <strong>2020</strong></li>
+                  <li><span>Capacity Utilisation</span> <strong>100%</strong></li>
+                  <li><span>Customer Certificate</span> <strong>Issued on 10 January 2025</strong></li>
+                </ul>
+                <div class="verified-specs-card__footer">
+                  This story is based on the signed customer certificate. Performance reflects the customer’s specific plant and operating conditions.
+                </div>
+                <div style="margin-top: 16px; padding-top: 14px; border-top: 1px solid rgba(7,23,44,0.08);">
+                  <a href="testimonial.html?id=1" class="editorial-btn-primary" style="display: block; text-align: center; font-size: 0.85rem; padding: 10px 16px;">
+                    View Case Study 01 Page →
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Testimonial Grid for Cases 02 through 10 -->
+        <div class="testimonials-archive-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-top: 40px;">
+
+          <!-- Case 02 -->
+          <article class="testimonial-case-card" id="testimonial-2" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div class="testimonial-card__header">
+                <span class="testimonial-badge">CASE STUDY 02</span>
+                <span class="testimonial-verified-tag">✓ Verified Customer Case</span>
+              </div>
+              <h3 class="testimonial-card__title" style="font-size: 1.25rem;">From Concept to Commercial Production</h3>
+              <p style="font-size: 0.8rem; font-weight: 700; color: #8899a6; text-transform: uppercase; margin-bottom: 12px;">AAC BLOCK PLANT · GUJARAT</p>
+              <p class="testimonial-quote-lead" style="font-size: 1rem;">“Laxmi provided complete guidance from civil layout to plant handover, helping us reach full capacity in record time.”</p>
+              <p class="testimonial-body-text" style="font-size: 0.9rem;">From the first civil foundation drawing to the final production SOP handover, Laxmi's team was present at every stage.</p>
+            </div>
+            <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(7,23,44,0.08);">
+              <a href="testimonial.html?id=2" class="editorial-link-action" style="font-weight: 700;">Read Full Story &amp; Specs →</a>
+            </div>
+          </article>
+
+          <!-- Case 03 -->
+          <article class="testimonial-case-card" id="testimonial-3" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div class="testimonial-card__header">
+                <span class="testimonial-badge">CASE STUDY 03</span>
+                <span class="testimonial-verified-tag">✓ Verified Customer Case</span>
+              </div>
+              <h3 class="testimonial-card__title" style="font-size: 1.25rem;">Performance Proven in Daily Production</h3>
+              <p style="font-size: 0.8rem; font-weight: 700; color: #8899a6; text-transform: uppercase; margin-bottom: 12px;">AAC BLOCK PLANT · RAJASTHAN</p>
+              <p class="testimonial-quote-lead" style="font-size: 1rem;">“Consistent block dimensions and low wire breakage rates have given us a clear competitive edge in the local market.”</p>
+              <p class="testimonial-body-text" style="font-size: 0.9rem;">Over three years of continuous production with minimal unplanned downtime and zero-defect quality standards.</p>
+            </div>
+            <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(7,23,44,0.08);">
+              <a href="testimonial.html?id=3" class="editorial-link-action" style="font-weight: 700;">Read Full Story &amp; Specs →</a>
+            </div>
+          </article>
+
+          <!-- Case 04 -->
+          <article class="testimonial-case-card" id="testimonial-4" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div class="testimonial-card__header">
+                <span class="testimonial-badge">CASE STUDY 04</span>
+                <span class="testimonial-verified-tag">✓ Verified Customer Case</span>
+              </div>
+              <h3 class="testimonial-card__title" style="font-size: 1.25rem;">Support Beyond Machinery Supply</h3>
+              <p style="font-size: 0.8rem; font-weight: 700; color: #8899a6; text-transform: uppercase; margin-bottom: 12px;">AAC BLOCK PLANT · MADHYA PRADESH</p>
+              <p class="testimonial-quote-lead" style="font-size: 1rem;">“When we faced a production issue six months after commissioning, Laxmi's technical team was on-site within 48 hours.”</p>
+              <p class="testimonial-body-text" style="font-size: 0.9rem;">Responsive after-sales field support and dependable parts delivery that keep plant operations running smoothly.</p>
+            </div>
+            <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(7,23,44,0.08);">
+              <a href="testimonial.html?id=4" class="editorial-link-action" style="font-weight: 700;">Read Full Story &amp; Specs →</a>
+            </div>
+          </article>
+
+          <!-- Case 05 -->
+          <article class="testimonial-case-card" id="testimonial-5" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div class="testimonial-card__header">
+                <span class="testimonial-badge">CASE STUDY 05</span>
+                <span class="testimonial-verified-tag">✓ Verified Customer Case</span>
+              </div>
+              <h3 class="testimonial-card__title" style="font-size: 1.25rem;">Expanding Through a Repeat Order</h3>
+              <p style="font-size: 0.8rem; font-weight: 700; color: #8899a6; text-transform: uppercase; margin-bottom: 12px;">AAC BLOCK PLANT · HARYANA</p>
+              <p class="testimonial-quote-lead" style="font-size: 1rem;">“When we decided to expand capacity, we returned to Laxmi without evaluating other suppliers.”</p>
+              <p class="testimonial-body-text" style="font-size: 0.9rem;">Trust built through 3+ years of reliable plant performance led directly to a 2nd turn-key plant repeat order.</p>
+            </div>
+            <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(7,23,44,0.08);">
+              <a href="testimonial.html?id=5" class="editorial-link-action" style="font-weight: 700;">Read Full Story &amp; Specs →</a>
+            </div>
+          </article>
+
+          <!-- Case 06 -->
+          <article class="testimonial-case-card" id="testimonial-6" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div class="testimonial-card__header">
+                <span class="testimonial-badge">CASE STUDY 06</span>
+                <span class="testimonial-verified-tag">✓ Verified Customer Case</span>
+              </div>
+              <h3 class="testimonial-card__title" style="font-size: 1.25rem;">Automation for Real Plant Conditions</h3>
+              <p style="font-size: 0.8rem; font-weight: 700; color: #8899a6; text-transform: uppercase; margin-bottom: 12px;">AAC BLOCK PLANT · UTTAR PRADESH</p>
+              <p class="testimonial-quote-lead" style="font-size: 1rem;">“The automation systems supplied by Laxmi are designed for real plant conditions, not just for demonstrations.”</p>
+              <p class="testimonial-body-text" style="font-size: 0.9rem;">PLC batching and SCADA monitoring engineered to endure high ambient temperatures and variable power grids.</p>
+            </div>
+            <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(7,23,44,0.08);">
+              <a href="testimonial.html?id=6" class="editorial-link-action" style="font-weight: 700;">Read Full Story &amp; Specs →</a>
+            </div>
+          </article>
+
+          <!-- Case 07 -->
+          <article class="testimonial-case-card" id="testimonial-7" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div class="testimonial-card__header">
+                <span class="testimonial-badge">CASE STUDY 07</span>
+                <span class="testimonial-verified-tag">✓ Verified Customer Case</span>
+              </div>
+              <h3 class="testimonial-card__title" style="font-size: 1.25rem;">Relationship After Commissioning</h3>
+              <p style="font-size: 0.8rem; font-weight: 700; color: #8899a6; text-transform: uppercase; margin-bottom: 12px;">AAC BLOCK PLANT · TELANGANA</p>
+              <p class="testimonial-quote-lead" style="font-size: 1rem;">“Most suppliers hand over the plant and disappear. Laxmi has continued to be a partner years after commissioning.”</p>
+              <p class="testimonial-body-text" style="font-size: 0.9rem;">Ongoing slurry mix refinement for local fly ash and continuous autoclave cycle efficiency optimization.</p>
+            </div>
+            <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(7,23,44,0.08);">
+              <a href="testimonial.html?id=7" class="editorial-link-action" style="font-weight: 700;">Read Full Story &amp; Specs →</a>
+            </div>
+          </article>
+
+          <!-- Case 08 -->
+          <article class="testimonial-case-card" id="testimonial-8" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div class="testimonial-card__header">
+                <span class="testimonial-badge">CASE STUDY 08</span>
+                <span class="testimonial-verified-tag">✓ Verified Customer Case</span>
+              </div>
+              <h3 class="testimonial-card__title" style="font-size: 1.25rem;">Engineering Reflecting in Block Quality</h3>
+              <p style="font-size: 0.8rem; font-weight: 700; color: #8899a6; text-transform: uppercase; margin-bottom: 12px;">AAC BLOCK PLANT · PUNJAB</p>
+              <p class="testimonial-quote-lead" style="font-size: 1rem;">“You can see the quality of the engineering in every AAC block that comes off our production line.”</p>
+              <p class="testimonial-body-text" style="font-size: 0.9rem;">Heavy fabrication standards and precision tolerances create sharp, consistent blocks that lead the local market.</p>
+            </div>
+            <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(7,23,44,0.08);">
+              <a href="testimonial.html?id=8" class="editorial-link-action" style="font-weight: 700;">Read Full Story &amp; Specs →</a>
+            </div>
+          </article>
+
+          <!-- Case 09 -->
+          <article class="testimonial-case-card" id="testimonial-9" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div class="testimonial-card__header">
+                <span class="testimonial-badge">CASE STUDY 09</span>
+                <span class="testimonial-verified-tag">✓ Verified Customer Case</span>
+              </div>
+              <h3 class="testimonial-card__title" style="font-size: 1.25rem;">Improving Steam Efficiency</h3>
+              <p style="font-size: 0.8rem; font-weight: 700; color: #8899a6; text-transform: uppercase; margin-bottom: 12px;">AAC BLOCK PLANT · MAHARASHTRA</p>
+              <p class="testimonial-quote-lead" style="font-size: 1rem;">“Laxmi's boiler and autoclave configuration reduced our steam cost per m³ significantly.”</p>
+              <p class="testimonial-body-text" style="font-size: 0.9rem;">Optimized autoclave loading scheduling and tight pressure vessel seals reduce fuel consumption.</p>
+            </div>
+            <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(7,23,44,0.08);">
+              <a href="testimonial.html?id=9" class="editorial-link-action" style="font-weight: 700;">Read Full Story &amp; Specs →</a>
+            </div>
+          </article>
+
+          <!-- Case 10 -->
+          <article class="testimonial-case-card" id="testimonial-10" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div class="testimonial-card__header">
+                <span class="testimonial-badge">CASE STUDY 10</span>
+                <span class="testimonial-verified-tag">✓ Verified Customer Case</span>
+              </div>
+              <h3 class="testimonial-card__title" style="font-size: 1.25rem;">Confidence for a First-Time Investor</h3>
+              <p style="font-size: 0.8rem; font-weight: 700; color: #8899a6; text-transform: uppercase; margin-bottom: 12px;">AAC BLOCK PLANT · KARNATAKA</p>
+              <p class="testimonial-quote-lead" style="font-size: 1rem;">“As a first-time investor with no prior experience, Laxmi's transparency gave us confidence to move forward.”</p>
+              <p class="testimonial-body-text" style="font-size: 0.9rem;">Complete handholding from land planning and equipment selection to commercial production in 3 months.</p>
+            </div>
+            <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(7,23,44,0.08);">
+              <a href="testimonial.html?id=10" class="editorial-link-action" style="font-weight: 700;">Read Full Story &amp; Specs →</a>
+            </div>
+          </article>
+
+        </div>
       </div>
     </section>
 

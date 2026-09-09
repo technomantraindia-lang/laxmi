@@ -1,90 +1,121 @@
 /* ==========================================================================
-   Laxmi En-Fab Pvt. Ltd. — AAC Investor Academy Inner Pages Controller
-   Architecture: Reusable Vanilla JS Engine powered by laxmi-aac-investor-academy.json
+   Laxmi En-Fab Pvt. Ltd. — AAC Investor Academy Dynamic Controller
+   Architecture: Reusable Vanilla JS Engine powered by JSON content
+   Supports 2-column sidebar layout, dynamic 3rd level inner topics & deep linking
    ========================================================================== */
 
 (function () {
   'use strict';
 
-  // Approved Laxmi Visual Image Mapping per Stage
-  const STAGE_IMAGES = {
-    'understand-market': 'assets/images/why-aac.png',
-    'design-your-plant': 'assets/images/land-requirement.png',
-    'compare-your-aac-plant': 'assets/images/plant-automation.png',
-    'efficient-your-plant': 'assets/images/production-process.png',
-    'expand-your-plant': 'assets/images/future-of-aac.png'
-  };
+  // Approved Stage Short Titles
+  const STAGE_CONFIG = [
+    { slug: 'understand-market', num: '01', title: '01 MARKET', file: 'understand-market.html' },
+    { slug: 'design-your-plant', num: '02', title: '02 DESIGN', file: 'design-your-plant.html' },
+    { slug: 'compare-your-aac-plant', num: '03', title: '03 COMPARE', file: 'compare-your-aac-plant.html' },
+    { slug: 'efficient-your-plant', num: '04', title: '04 EFFICIENT', file: 'efficient-your-plant.html' },
+    { slug: 'expand-your-plant', num: '05', title: '05 EXPAND', file: 'expand-your-plant.html' }
+  ];
 
-  const STAGE_SHORT_TITLES = {
-    'understand-market': '01 MARKET',
-    'design-your-plant': '02 DESIGN',
-    'compare-your-aac-plant': '03 COMPARE',
-    'efficient-your-plant': '04 EFFICIENT',
-    'expand-your-plant': '05 EXPAND'
-  };
+  document.addEventListener('DOMContentLoaded', initAcademyEngine);
 
-  document.addEventListener('DOMContentLoaded', initAcademyInnerPage);
-
-  async function initAcademyInnerPage() {
+  async function initAcademyEngine() {
     const root = document.getElementById('academy-root');
     if (!root) return;
 
-    // Detect Page Slug
+    // Detect Current Stage Slug
     const bodyPage = document.body.getAttribute('data-academy-page');
     const pathSlug = window.location.pathname.split('/').pop().replace('.html', '');
-    const currentSlug = bodyPage || pathSlug || 'understand-market';
+    const currentStageSlug = bodyPage || pathSlug || 'understand-market';
 
     try {
-      // Fetch JSON data with fallback paths
-      let data = null;
-      try {
-        const res = await fetch('data/laxmi-aac-investor-academy.json');
-        if (res.ok) data = await res.json();
-      } catch (e) {
-        console.warn('Primary JSON path failed, trying fallback...', e);
-      }
+      // 1. Fetch Topics JSON Data
+      const innerData = await fetchJSONData([
+        'data/academy-inner-topics.json',
+        '../data/academy-inner-topics.json',
+        '../../data/academy-inner-topics.json'
+      ]);
 
-      if (!data) {
-        const res2 = await fetch('data/academy-data.json');
-        if (res2.ok) data = await res2.json();
-      }
+      // 2. Fetch General Academy JSON Data
+      const academyData = await fetchJSONData([
+        'data/laxmi-aac-investor-academy.json',
+        '../data/laxmi-aac-investor-academy.json',
+        '../../data/laxmi-aac-investor-academy.json'
+      ]);
 
-      if (!data || !data.pages) {
-        throw new Error('Academy JSON data could not be parsed.');
-      }
-
-      // Find Page Object
-      const page = data.pages.find(p => p.slug === currentSlug) || data.pages[0];
-
-      // Update SEO & Title
-      if (page.seo) {
-        document.title = page.seo.title || page.title;
-        let metaDesc = document.querySelector('meta[name="description"]');
-        if (metaDesc) metaDesc.setAttribute('content', page.seo.description || '');
-        let metaKeys = document.querySelector('meta[name="keywords"]');
-        if (metaKeys && page.seo.keywords) metaKeys.setAttribute('content', page.seo.keywords.join(', '));
-      }
-
-      // Render Complete Page
-      root.innerHTML = `
-        ${renderStageNavRail(data.pages, page.slug)}
-        ${renderHero(page)}
-        ${renderIntro(page)}
-        ${page.slug === 'compare-your-aac-plant' ? renderComparison(page) : renderTopics(page)}
-        ${renderFramework(page)}
-        ${renderCheckpoint(page)}
-        ${renderRelatedLinks(page)}
-        ${renderCTA(data.shared)}
-      `;
-
-      // Attach Interactive Listeners
-      if (page.slug === 'compare-your-aac-plant') {
+      // Check if Stage 03 Comparison Checklist
+      if (currentStageSlug === 'compare-your-aac-plant') {
+        const page = (academyData && academyData.pages) ? academyData.pages.find(p => p.slug === 'compare-your-aac-plant') : { title: 'Compare Your AAC Plant' };
+        updateSEOMetadata(page);
+        renderCompareStageComplete(root, page, currentStageSlug);
         initChecklistListeners();
-      } else {
-        initTopicListeners();
+        initScrollAnimations();
+        return;
       }
 
-      initScrollAnimations();
+      // 3. Stage 01, 02 (or any stage with inner topics)
+      const stageData = innerData && innerData.stages ? innerData.stages[currentStageSlug] : null;
+
+      if (stageData && stageData.topics && stageData.topics.length > 0) {
+        // Determine active topic from URL query param ?topic= or #hash or default
+        const urlParams = new URLSearchParams(window.location.search);
+        const queryTopic = urlParams.get('topic');
+        const hashTopic = window.location.hash.replace('#', '').toLowerCase();
+        
+        let initialTopicId = queryTopic || hashTopic || stageData.defaultTopic || stageData.topics[0].id;
+        
+        // Handle alias mappings
+        const aliasMap = {
+          'capacity': 'capacity-selection',
+          'land': 'land-requirement',
+          'cost': 'project-cost',
+          'project-cost-working-capital': 'project-cost',
+          'roi': 'roi-payback',
+          'finance': 'finance-bank-loan',
+          'subsidy': 'subsidy',
+          'subsidies': 'subsidy',
+          'why': 'why-aac',
+          'future': 'future-of-aac',
+          'demand': 'market-demand',
+          'materials': 'raw-materials',
+          'automatic': 'make-plant-automatic',
+          'quality': 'improve-block-quality',
+          'maintenance': 'plant-maintenance-sop',
+          'steam': 'reduce-steam-cost',
+          'manpower': 'skilled-manpower',
+          'capacity-upgrade': 'upgrade-capacity',
+          'panels': 'reinforced-aac-panels',
+          'mortar': 'dry-mix-mortar-integration',
+          'palletizing': 'auto-palletizing-robotics'
+        };
+        initialTopicId = aliasMap[initialTopicId] || initialTopicId;
+
+        let activeTopic = stageData.topics.find(t => t.id === initialTopicId) || stageData.topics[0];
+
+        // Render full 2-column view
+        renderStageWithTopic(root, stageData, activeTopic, currentStageSlug);
+        
+        // Attach interactive sidebar listener & popstate listener
+        initTopicInteractivity(root, stageData, currentStageSlug);
+        initScrollAnimations();
+        return;
+      }
+
+      // Fallback: Default General Page Render if stage not found in inner-topics
+      if (academyData && academyData.pages) {
+        const page = academyData.pages.find(p => p.slug === currentStageSlug) || academyData.pages[0];
+        updateSEOMetadata(page);
+        root.innerHTML = `
+          ${renderStageNavRail(currentStageSlug)}
+          ${renderHero(page)}
+          ${renderIntro(page)}
+          ${renderTopicsFallback(page)}
+          ${renderFramework(page)}
+          ${renderCheckpoint(page)}
+          ${renderCTA(academyData.shared || {})}
+        `;
+        initTopicListenersFallback(page);
+        initScrollAnimations();
+      }
 
     } catch (err) {
       console.error('Laxmi AAC Investor Academy Render Error:', err);
@@ -92,12 +123,299 @@
     }
   }
 
-  // 00. Stage Navigation Rail
-  function renderStageNavRail(pages, currentSlug) {
-    const itemsHTML = pages.map(p => {
+  // Fetch JSON with fallbacks
+  async function fetchJSONData(paths) {
+    for (const p of paths) {
+      try {
+        const res = await fetch(p);
+        if (res.ok) return await res.json();
+      } catch (e) {}
+    }
+    return null;
+  }
+
+  // Update Breadcrumb & Title
+  function updateSEOMetadata(pageOrTopic) {
+    if (!pageOrTopic) return;
+    if (pageOrTopic.title) {
+      document.title = `${pageOrTopic.title} | AAC Investor Academy | Laxmi En-Fab`;
+    }
+    if (pageOrTopic.lead) {
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.setAttribute('content', pageOrTopic.lead);
+    }
+  }
+
+  // =========================================================================
+  // 2-COLUMN STAGE & INNER TOPIC RENDERER
+  // =========================================================================
+  function renderStageWithTopic(root, stageData, activeTopic, currentStageSlug) {
+    updateSEOMetadata(activeTopic);
+    updateBreadcrumb(stageData.stageTitle, activeTopic.sidebarTitle || activeTopic.title);
+
+    root.innerHTML = `
+      ${renderStageNavRail(currentStageSlug)}
+      
+      <div class="academy-layout-wrap">
+        <!-- ============ LEFT SIDEBAR ============ -->
+        <aside class="academy-sidebar">
+          <div class="academy-sidebar__header">
+            <span class="academy-sidebar__eyebrow">STAGE DIRECTORY</span>
+            <h3 class="academy-sidebar__heading">${stageData.sidebarHeading || 'STAGE INNER TOPICS'}</h3>
+          </div>
+          <ul class="academy-sidebar__menu" id="academy-sidebar-menu">
+            ${stageData.topics.map((t, idx) => {
+              const isActive = t.id === activeTopic.id;
+              const num = String(idx + 1).padStart(2, '0');
+              return `
+                <li>
+                  <a href="?topic=${t.id}" class="academy-sidebar__link ${isActive ? 'is-active' : ''}" data-topic-id="${t.id}">
+                    <span class="academy-sidebar__num">${num}</span>
+                    <span class="academy-sidebar__title">${t.sidebarTitle || t.title}</span>
+                    <span class="academy-sidebar__arrow">→</span>
+                  </a>
+                </li>
+              `;
+            }).join('')}
+          </ul>
+        </aside>
+
+        <!-- ============ RIGHT MAIN ARTICLE ============ -->
+        <article class="academy-content-article" id="academy-content-article">
+          ${renderTopicContentHTML(activeTopic, stageData, currentStageSlug)}
+        </article>
+      </div>
+
+      <!-- CTA Section -->
+      ${renderTopicCTA(activeTopic.cta)}
+    `;
+  }
+
+  // Render Inner Content of a Topic
+  function renderTopicContentHTML(topic, stageData, currentStageSlug) {
+    // Resolve Image Path
+    let imgPath = topic.image || 'assets/images/why-aac.png';
+    if (!imgPath.startsWith('../') && !imgPath.startsWith('/') && window.location.pathname.includes('/academy/')) {
+      imgPath = '../' + imgPath;
+    }
+
+    // Render Checkpoint
+    let checkpointHTML = '';
+    if (topic.checkpoint) {
+      checkpointHTML = `
+        <div class="academy-checkpoint-box" style="background: #f8fafc; border-left: 4px solid #0b3f78; padding: 1.5rem; margin: 2rem 0; border-radius: 0 8px 8px 0;">
+          <h4 style="margin: 0 0 0.5rem 0; color: #07172c; font-size: 1.05rem;">${topic.checkpoint.title || 'CRITICAL BENCHMARK'}</h4>
+          <p style="margin: 0; color: #475569; font-size: 0.95rem; line-height: 1.6;">${topic.checkpoint.text}</p>
+        </div>
+      `;
+    }
+
+    // Render Sections
+    let sectionsHTML = '';
+    if (topic.sections && topic.sections.length > 0) {
+      sectionsHTML = topic.sections.map(sec => {
+        let secInner = '';
+        
+        if (sec.text) {
+          secInner += `<p style="color: #475569; line-height: 1.7; font-size: 1rem; margin-bottom: 1.25rem;">${sec.text}</p>`;
+        }
+
+        // Table
+        if (sec.table) {
+          const ths = sec.table.headers.map(h => `<th style="padding: 12px 16px; border: 1px solid #1e293b;">${h}</th>`).join('');
+          const trs = sec.table.rows.map((row, rIdx) => {
+            const bg = rIdx % 2 === 0 ? '#ffffff' : '#f8fafc';
+            const tds = row.map((cell, cIdx) => {
+              const style = cIdx === 0 ? 'font-weight: 700; color: #0b3f78;' : '';
+              return `<td style="padding: 12px 16px; border: 1px solid #e2e8f0; ${style}">${cell}</td>`;
+            }).join('');
+            return `<tr style="background: ${bg};">${tds}</tr>`;
+          }).join('');
+
+          secInner += `
+            <div style="overflow-x: auto; margin: 1.5rem 0;">
+              <table class="academy-spec-table" style="width: 100%; border-collapse: collapse; font-size: 0.92rem; text-align: left;">
+                <thead>
+                  <tr style="background: #07172c; color: #ffffff;">${ths}</tr>
+                </thead>
+                <tbody>${trs}</tbody>
+              </table>
+            </div>
+          `;
+        }
+
+        // Callout Cards
+        if (sec.cards) {
+          const cardsHTML = sec.cards.map(c => `
+            <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 1.5rem; box-shadow: 0 2px 10px rgba(0,0,0,0.03);">
+              ${c.tag ? `<span style="color: #0b3f78; font-weight: 800; font-size: 0.82rem; letter-spacing: 0.05em; display: block; margin-bottom: 0.5rem;">${c.tag}</span>` : ''}
+              <h3 style="font-size: 1.15rem; color: #07172c; margin-bottom: 0.5rem;">${c.title}</h3>
+              <p style="color: #64748b; font-size: 0.9rem; line-height: 1.6; margin: 0;">${c.text}</p>
+            </div>
+          `).join('');
+
+          secInner += `
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 1.5rem 0;">
+              ${cardsHTML}
+            </div>
+          `;
+        }
+
+        // Bullet List
+        if (sec.list) {
+          const lis = sec.list.map(li => `<li style="margin-bottom: 0.5rem;">${li}</li>`).join('');
+          secInner += `<ul style="color: #334155; line-height: 1.8; font-size: 1rem; padding-left: 1.25rem; margin: 1rem 0;">${lis}</ul>`;
+        }
+
+        return `
+          <div style="margin-top: 2.5rem;">
+            <h2 style="font-size: 1.55rem; color: #07172c; margin-bottom: 1rem;">${sec.heading}</h2>
+            ${secInner}
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Navigation Footer Buttons
+    let prevBtnHTML = '';
+    if (topic.prevTopic) {
+      const prevUrl = topic.prevTopic.stage === currentStageSlug ? `?topic=${topic.prevTopic.id}` : `${topic.prevTopic.stage}.html?topic=${topic.prevTopic.id}`;
+      prevBtnHTML = `
+        <a href="${prevUrl}" class="editorial-btn-outline" style="border-color: #cbd5e1; color: #07172c;" data-topic-nav="${topic.prevTopic.id}">
+          ← Previous: ${topic.prevTopic.title}
+        </a>
+      `;
+    } else {
+      prevBtnHTML = `<span></span>`;
+    }
+
+    let nextBtnHTML = '';
+    if (topic.nextTopic) {
+      const nextUrl = topic.nextTopic.stage === currentStageSlug ? `?topic=${topic.nextTopic.id}` : `${topic.nextTopic.stage}.html?topic=${topic.nextTopic.id}`;
+      nextBtnHTML = `
+        <a href="${nextUrl}" class="editorial-btn-primary" data-topic-nav="${topic.nextTopic.id}">
+          Next: ${topic.nextTopic.title} →
+        </a>
+      `;
+    }
+
+    const navFooterHTML = `
+      <div style="margin-top: 3.5rem; padding-top: 2rem; border-top: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        ${prevBtnHTML}
+        ${nextBtnHTML}
+      </div>
+    `;
+
+    return `
+      <div class="academy-micro-label" style="margin-bottom: 0.75rem;">${topic.eyebrow || `STAGE ${stageData.stageNum} · TOPIC ${topic.number}`}</div>
+      <h1 style="font-size: clamp(2rem, 3.2vw, 2.75rem); line-height: 1.2; margin: 0 0 1.5rem 0;">
+        ${topic.title}
+      </h1>
+
+      <p class="editorial-about-hero__lead" style="font-size: 1.15rem; color: #475569; margin-bottom: 2rem;">
+        ${topic.lead || ''}
+      </p>
+
+      <!-- Hero Visual Image Card -->
+      <div style="margin: 2rem 0; border-radius: 12px; overflow: hidden; border: 1px solid rgba(7, 23, 44, 0.1); box-shadow: 0 4px 20px rgba(0,0,0,0.06);">
+        <img src="${imgPath}" alt="${topic.imageAlt || topic.title}" style="width: 100%; height: auto; display: block;" onerror="this.parentElement.style.display='none'" />
+      </div>
+
+      ${checkpointHTML}
+      ${sectionsHTML}
+      ${navFooterHTML}
+    `;
+  }
+
+  // Update Dynamic Breadcrumb
+  function updateBreadcrumb(stageTitle, topicTitle) {
+    const bc = document.querySelector('.site-breadcrumb__inner');
+    if (!bc) return;
+
+    let rootHome = window.location.pathname.includes('/academy/') ? '../index.html' : 'index.html';
+    let academyHome = window.location.pathname.includes('/academy/') ? 'academy.html' : 'academy/academy.html';
+
+    bc.innerHTML = `
+      <a href="${rootHome}">Home</a>
+      <span class="bc-sep">/</span>
+      <a href="${academyHome}">AAC Investor Academy</a>
+      <span class="bc-sep">/</span>
+      <span class="bc-current">${stageTitle}</span>
+      ${topicTitle ? `<span class="bc-sep">/</span><span class="bc-current" style="color: #38bdf8;">${topicTitle}</span>` : ''}
+    `;
+  }
+
+  // Topic Switcher Interactivity
+  function initTopicInteractivity(root, stageData, currentStageSlug) {
+    document.addEventListener('click', function (e) {
+      const link = e.target.closest('a[data-topic-id], a[data-topic-nav]');
+      if (!link) return;
+
+      const topicId = link.getAttribute('data-topic-id') || link.getAttribute('data-topic-nav');
+      if (!topicId) return;
+
+      // Check if topic exists in current stage
+      const targetTopic = stageData.topics.find(t => t.id === topicId);
+      if (targetTopic) {
+        e.preventDefault();
+
+        // Update URL query string
+        const newUrl = `${window.location.pathname}?topic=${topicId}`;
+        window.history.pushState({ topicId: topicId }, '', newUrl);
+
+        // Update Sidebar active state
+        document.querySelectorAll('.academy-sidebar__link').forEach(sl => {
+          sl.classList.toggle('is-active', sl.getAttribute('data-topic-id') === topicId);
+        });
+
+        // Re-render Article
+        const article = document.getElementById('academy-content-article');
+        if (article) {
+          article.innerHTML = renderTopicContentHTML(targetTopic, stageData, currentStageSlug);
+        }
+
+        // Update SEO & Breadcrumb
+        updateSEOMetadata(targetTopic);
+        updateBreadcrumb(stageData.stageTitle, targetTopic.sidebarTitle || targetTopic.title);
+
+        // Smooth scroll to top of article
+        article.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+
+    // Handle browser back/forward buttons
+    window.addEventListener('popstate', function (e) {
+      const urlParams = new URLSearchParams(window.location.search);
+      const queryTopic = urlParams.get('topic') || (e.state && e.state.topicId) || stageData.defaultTopic;
+      const targetTopic = stageData.topics.find(t => t.id === queryTopic) || stageData.topics[0];
+
+      if (targetTopic) {
+        document.querySelectorAll('.academy-sidebar__link').forEach(sl => {
+          sl.classList.toggle('is-active', sl.getAttribute('data-topic-id') === targetTopic.id);
+        });
+        const article = document.getElementById('academy-content-article');
+        if (article) {
+          article.innerHTML = renderTopicContentHTML(targetTopic, stageData, currentStageSlug);
+        }
+        updateSEOMetadata(targetTopic);
+        updateBreadcrumb(stageData.stageTitle, targetTopic.sidebarTitle || targetTopic.title);
+      }
+    });
+  }
+
+  // =========================================================================
+  // SHARED UI COMPONENTS
+  // =========================================================================
+
+  // Top Stage Navigation Rail
+  function renderStageNavRail(currentSlug) {
+    const itemsHTML = STAGE_CONFIG.map(p => {
       const activeClass = p.slug === currentSlug ? 'is-active' : '';
-      const shortTitle = STAGE_SHORT_TITLES[p.slug] || p.title;
-      return `<a href="${p.url}" class="academy-nav-rail__item ${activeClass}">${shortTitle}</a>`;
+      let url = p.file;
+      if (!window.location.pathname.includes('/academy/')) {
+        url = 'academy/' + p.file;
+      }
+      return `<a href="${url}" class="academy-nav-rail__item ${activeClass}">${p.title}</a>`;
     }).join('');
 
     return `
@@ -112,201 +430,212 @@
     `;
   }
 
-  // 01. Hero Section
-  function renderHero(page) {
-    const heroImg = STAGE_IMAGES[page.slug] || 'assets/images/future-of-aac.png';
-    const eyebrow = page.hero ? page.hero.eyebrow : `STAGE ${page.stage} / ${page.title.toUpperCase()}`;
-    const headline = page.hero ? page.hero.headline : page.title;
-    const subheadline = page.hero ? page.hero.subheadline : page.purpose;
-    const ctaText = page.hero ? page.hero.cta : 'EXPLORE STAGE';
+  // Topic CTA Section (Executive 2-Column Industrial Split Design)
+  function renderTopicCTA(cta) {
+    if (!cta) return '';
+    let btnUrl = cta.btnUrl || 'contact.html';
+    if (window.location.pathname.includes('/academy/') && !btnUrl.startsWith('../') && !btnUrl.startsWith('/')) {
+      btnUrl = '../' + btnUrl;
+    }
+    let engCenterUrl = window.location.pathname.includes('/academy/') ? '../engineering-center.html' : 'engineering-center.html';
+
+    const eyebrow = cta.eyebrow || 'ENGINEERING &amp; FEASIBILITY ADVISORY';
+    const title = cta.title || 'Discuss Your AAC Plant Requirement with Laxmi En-Fab';
+    const text = cta.text || 'From raw material testing to automated plant layout design, Laxmi En-Fab provides complete turnkey manufacturing solutions.';
+    const btnLabel = cta.btnLabel || 'TALK TO LAXMI EXPERTS';
+
+    // Format title to avoid mid-word hyphen breaks
+    let formattedTitle = title;
+    if (title.includes('Laxmi En-Fab')) {
+      formattedTitle = title.replace('with Laxmi En-Fab', '<span class="academy-cta-highlight">with Laxmi&nbsp;En&#8209;Fab</span>');
+    }
 
     return `
-      <section class="editorial-about-hero" id="hero">
-        <div class="editorial-about-hero__inner">
-          
-          <!-- Left: Text Area -->
-          <div class="editorial-about-hero__content">
-            <span class="editorial-eyebrow editorial-eyebrow--gold">${eyebrow}</span>
-            <h1 class="editorial-about-hero__title">
-              ${headline}
-            </h1>
-            <p class="editorial-about-hero__lead">
-              ${subheadline}
-            </p>
-            <div class="editorial-about-hero__actions">
-              <a href="#intro" class="editorial-btn-primary">
-                ${ctaText} <span class="btn-arrow">↓</span>
-              </a>
-              ${page.next ? `
-                <a href="${page.next.url}" class="editorial-btn-outline">
-                  Next: ${page.next.label} <span class="btn-arrow">→</span>
+      <section class="academy-cta-banner" id="academy-cta">
+        <div class="academy-cta-banner__inner">
+          <div class="academy-cta-grid">
+            
+            <!-- Left Column: Content & Actions -->
+            <div class="academy-cta-left">
+              <span class="academy-cta-banner__eyebrow">${eyebrow}</span>
+              <h2 class="academy-cta-banner__title">${formattedTitle}</h2>
+              <p class="academy-cta-banner__lead">${text}</p>
+              
+              <div class="academy-cta-banner__badges">
+                <span class="academy-cta-badge">✓ 150+ Plant Installations</span>
+                <span class="academy-cta-badge">✓ Raw Material XRF Lab</span>
+                <span class="academy-cta-badge">✓ Turnkey EPC Execution</span>
+                <span class="academy-cta-badge">✓ 24/7 Field Support</span>
+              </div>
+
+              <div class="academy-cta-banner__actions">
+                <a href="${btnUrl}" class="academy-cta-banner__btn-white">
+                  <span>${btnLabel.replace('→', '').replace('↗', '').trim()}</span>
+                  <span class="academy-cta-banner__arrow">↗</span>
                 </a>
-              ` : ''}
-            </div>
-          </div>
-
-          <!-- Right: Real Laxmi Visual -->
-          <div class="editorial-about-hero__visual">
-            <div class="editorial-about-hero__frame">
-              <img src="${heroImg}" alt="${page.title}" class="editorial-about-hero__img" />
-              <div class="editorial-about-hero__overlay"></div>
-              <div class="editorial-about-hero__tech-tag">
-                <span class="tech-tag__dot"></span>
-                AAC INVESTOR STAGE ${page.stage}
+                <a href="${engCenterUrl}" class="academy-cta-banner__link-secondary">
+                  Explore Engineering Center →
+                </a>
               </div>
             </div>
-          </div>
 
-        </div>
-      </section>
-    `;
-  }
+            <!-- Right Column: Direct Engineering Desk Card (Architectural Precision Theme) -->
+            <div class="academy-cta-right">
+              <div class="academy-cta-card">
+                <div class="academy-cta-card__header">
+                  <span class="academy-cta-card__tag">DIRECT ADVISORY DESK</span>
+                  <h3 class="academy-cta-card__title">Connect with Senior Engineers</h3>
+                </div>
 
-  // 02. Introduction Section
-  function renderIntro(page) {
-    if (!page.intro) return '';
-    return `
-      <section class="academy-section" id="intro">
-        <div class="academy-section__inner">
-          <div class="academy-micro-label">STAGE ${page.stage} · DECISION CONTEXT</div>
-          <div class="academy-intro-grid">
-            <h2 class="academy-intro-heading">
-              ${page.intro.heading}
-            </h2>
-            <div class="academy-intro-body">
-              <p style="margin: 0;">${page.intro.body}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    `;
-  }
+                <div class="academy-cta-card__items">
+                  <div class="academy-cta-card__item">
+                    <div class="academy-cta-card__icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    </div>
+                    <div>
+                      <span class="academy-cta-card__label">Direct Advisory Hotline</span>
+                      <a href="tel:+919825025247" class="academy-cta-card__val">+91 98250 25247</a>
+                    </div>
+                  </div>
 
-  // 03. Main Topics Section (for Stages 01, 02, 04, 05)
-  function renderTopics(page) {
-    if (!page.topics || !page.topics.length) return '';
+                  <div class="academy-cta-card__item">
+                    <div class="academy-cta-card__icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                    </div>
+                    <div>
+                      <span class="academy-cta-card__label">Project Feasibility &amp; DPR</span>
+                      <a href="mailto:sales@laxmienfab.com" class="academy-cta-card__val">sales@laxmienfab.com</a>
+                    </div>
+                  </div>
 
-    const navItems = page.topics.map((t, idx) => `
-      <button class="academy-topic-item ${idx === 0 ? 'is-active' : ''}" data-topic-id="${t.id}" aria-expanded="${idx === 0}">
-        <span class="academy-topic-item__num">${t.number}</span>
-        <span class="academy-topic-item__title">${t.title}</span>
-      </button>
-    `).join('');
+                  <div class="academy-cta-card__item">
+                    <div class="academy-cta-card__icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    </div>
+                    <div>
+                      <span class="academy-cta-card__label">Heavy Manufacturing Hub</span>
+                      <span class="academy-cta-card__val">Ahmedabad, Gujarat, India</span>
+                    </div>
+                  </div>
+                </div>
 
-    const firstTopic = page.topics[0];
-    const pointsHTML = firstTopic.points ? firstTopic.points.map(p => `
-      <li class="academy-topic-panel__point">
-        <span class="academy-topic-panel__point-icon">✓</span>
-        <span>${p}</span>
-      </li>
-    `).join('') : '';
-
-    return `
-      <section class="academy-section academy-section--alt" id="topics">
-        <div class="academy-section__inner">
-          <div class="academy-micro-label">STAGE ${page.stage} · KEY DECISION TOPICS</div>
-          
-          <div class="academy-topics-layout">
-            <!-- Left Topic Navigation -->
-            <div class="academy-topic-nav" role="tablist">
-              ${navItems}
-            </div>
-
-            <!-- Right Detail Display Panel -->
-            <div class="academy-topic-panel" id="topic-panel-container">
-              <div class="academy-topic-panel__header">
-                <span class="academy-topic-panel__stage" id="panel-topic-num">TOPIC ${firstTopic.number}</span>
-                <h3 class="academy-topic-panel__title" id="panel-topic-title">${firstTopic.title}</h3>
-                <p class="academy-topic-panel__summary" id="panel-topic-summary">${firstTopic.summary}</p>
-              </div>
-
-              <ul class="academy-topic-panel__points" id="panel-topic-points">
-                ${pointsHTML}
-              </ul>
-
-              <div style="padding-top: 1.25rem; border-top: 1px solid rgba(7,23,44,0.08); font-size: 0.82rem; font-weight: 800; letter-spacing: 0.08em; color: var(--laxmi-blue, #0b3f78); display: flex; align-items: center; justify-content: space-between;">
-                <span id="panel-topic-footer">INVESTOR DECISION CHECK POINT</span>
-                <span>SELECT TOPICS TO EXPLORE →</span>
+                <div class="academy-cta-card__footer">
+                  <div class="academy-cta-card__sla">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+                    <span>Initial feasibility &amp; layout turnaround within 48 hours</span>
+                  </div>
+                </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
     `;
   }
 
-  // Topic Switch Listener Function
-  function initTopicListeners() {
-    const buttons = document.querySelectorAll('.academy-topic-item');
-    const panelNum = document.getElementById('panel-topic-num');
-    const panelTitle = document.getElementById('panel-topic-title');
-    const panelSummary = document.getElementById('panel-topic-summary');
-    const panelPoints = document.getElementById('panel-topic-points');
-
-    if (!buttons.length || !panelTitle) return;
-
-    // Get current page topic data from window context or global store
-    const bodyPage = document.body.getAttribute('data-academy-page');
-    const pathSlug = window.location.pathname.split('/').pop().replace('.html', '');
-    const currentSlug = bodyPage || pathSlug || 'understand-market';
-
-    fetch('data/laxmi-aac-investor-academy.json')
-      .then(res => res.json())
-      .then(data => {
-        const page = data.pages.find(p => p.slug === currentSlug);
-        if (!page || !page.topics) return;
-
-        buttons.forEach(btn => {
-          btn.addEventListener('click', function () {
-            buttons.forEach(b => {
-              b.classList.remove('is-active');
-              b.setAttribute('aria-expanded', 'false');
-            });
-            this.classList.add('is-active');
-            this.setAttribute('aria-expanded', 'true');
-
-            const topicId = this.getAttribute('data-topic-id');
-            const target = page.topics.find(t => t.id === topicId);
-
-            if (target) {
-              if (panelNum) panelNum.textContent = `TOPIC ${target.number}`;
-              if (panelTitle) panelTitle.textContent = target.title;
-              if (panelSummary) panelSummary.textContent = target.summary;
-
-              if (panelPoints && target.points) {
-                panelPoints.innerHTML = target.points.map(p => `
-                  <li class="academy-topic-panel__point">
-                    <span class="academy-topic-panel__point-icon">✓</span>
-                    <span>${p}</span>
-                  </li>
-                `).join('');
-              }
-            }
-          });
-        });
-      })
-      .catch(e => console.warn('Topic listener fetch info error:', e));
-  }
-
-  // 03 (Special Case). Investor Comparison Checklist (for Stage 03 `compare-your-aac-plant`)
-  function renderComparison(page) {
-    if (!page.criteria) return '';
+  // =========================================================================
+  // STAGE 03: COMPARE YOUR AAC PLANT — COMPLETE EDITORIAL SUITE
+  // =========================================================================
+  function renderCompareStageComplete(root, page, currentStageSlug) {
+    let heroBg = window.location.pathname.includes('/academy/') ? '../assets/images/complete-system-plant.png' : 'assets/images/complete-system-plant.png';
+    let contactUrl = window.location.pathname.includes('/academy/') ? '../contact.html' : 'contact.html';
+    let nextUrl = window.location.pathname.includes('/academy/') ? 'efficient-your-plant.html' : 'academy/efficient-your-plant.html';
 
     const verifiedList = getVerifiedStorage();
 
-    const cardsHTML = page.criteria.map(c => {
-      const isVerified = verifiedList.includes(c.number);
+    const criteria12 = [
+      {
+        num: "01",
+        title: "Production & Saleable Output Basis",
+        question: "Is capacity calculated on net saleable output after handling/trimming losses (2–3%), or merely theoretical nominal cycles?",
+        check: "Verify exact mould volume (e.g. 4.8m × 1.2m × 0.6m = 3.456 m³), realistic batches/hour, autoclave cycle length (10–12 hrs), and 300 operating days."
+      },
+      {
+        num: "02",
+        title: "Complete Equipment Scope & Battery Limits",
+        question: "Are auxiliary piping, chutes, wiring up to the PLC panel, and slurry agitation tanks fully included or hidden exclusions?",
+        check: "Demand a defined scope battery limit drawing from the raw material storage intake to the dispatched finished block yard."
+      },
+      {
+        num: "03",
+        title: "Automation & Manual Intervention Boundaries",
+        question: "Where exactly does manual intervention remain during regular production, mould demoulding, and wire changeovers?",
+        check: "Require the supplier to map operator touchpoints, manual override requirements, and automated fault recovery routines."
+      },
+      {
+        num: "04",
+        title: "Specific Utilities Consumption Guarantees",
+        question: "What are the contractual specific electrical power (kWh/m³) and steam (kg/m³) consumption figures?",
+        check: "Contractual guarantees should verify specific power ≤ 22–26 kWh/m³ and steam ≤ 280–320 kg/m³ with insulated piping and condensate return."
+      },
+      {
+        num: "05",
+        title: "Shift Manpower Allocation & Roster",
+        question: "What is the exact shift manpower roster (operators, mechanics, chemists, helpers) required to operate the line?",
+        check: "Compare total manpower per shift against claimed automation levels; mechanized lines require 8–12 personnel/shift including lab staff."
+      },
+      {
+        num: "06",
+        title: "Product Versatility & ALC Panel Readiness",
+        question: "Can the cutting machine, mould handling, and autoclave cars process reinforced ALC wall panels and lintels?",
+        check: "Confirm provisions for inserting steel reinforcing mesh cages, specialized panel curing racks, and tongue-and-groove milling."
+      },
+      {
+        num: "07",
+        title: "Manufacturing Evidence & Workshop Capability",
+        question: "Is equipment fabricated in-house with certified heavy CNC machining and ultrasonic weld testing, or outsourced?",
+        check: "Conduct an in-person workshop audit of the supplier's heavy machine shop, CNC floor borers, plate rolling, and stress-relieving facilities."
+      },
+      {
+        num: "08",
+        title: "Running Reference Plant Track Record",
+        question: "Can the supplier provide verifiable operating plant references producing continuous commercial output for 3+ years?",
+        check: "Inspect actual plant availability logs, customer reference satisfaction, block dimensional accuracy (±1.5mm), and edge chipping rates."
+      },
+      {
+        num: "09",
+        title: "Single-Point Turnkey Project Accountability",
+        question: "Does the supplier take unified responsibility for civil foundation drawings, equipment erection, piping, and trial runs?",
+        check: "A single turnkey contract covering layout engineering, IBR boiler compliance, and commissioning prevents multi-vendor disputes."
+      },
+      {
+        num: "10",
+        title: "72-Hour Continuous Performance Acceptance (PG Test)",
+        question: "Is final commercial payment tied to a formal 72-hour continuous performance guarantee trial run meeting rated output?",
+        check: "Contractual acceptance should mandate 100% rated throughput, density tolerance (±25 kg/m³), and compressive strength (IS 2185-3)."
+      },
+      {
+        num: "11",
+        title: "Service Support, Spares Kit & Telemetry SLA",
+        question: "What are the warranty terms, critical spare parts inventory package, and guaranteed on-site technical response SLA?",
+        check: "Ensure supply of a 2-year operational spares kit, remote PLC cloud telemetry diagnostics, and a 24-hour on-site engineer dispatch SLA."
+      },
+      {
+        num: "12",
+        title: "Modular Layout & Phased Expansion Readiness",
+        question: "Can the plant be expanded from 300 m³/day to 600 m³/day or 900 m³/day without altering civil foundations or halting output?",
+        check: "Verify pre-engineered space, rail track alignments, and utility capacity for adding secondary autoclaves and curing lines seamlessly."
+      }
+    ];
+
+    const cardsHTML = criteria12.map(c => {
+      const isVerified = verifiedList.includes(c.num);
       return `
-        <div class="academy-checklist-card ${isVerified ? 'is-verified' : ''}" data-criteria-num="${c.number}">
+        <div class="academy-checklist-card ${isVerified ? 'is-verified' : ''}" data-card-num="${c.num}">
           <div>
             <div class="academy-checklist-card__header">
-              <span class="academy-checklist-card__num">CRITERION ${c.number}</span>
+              <span class="academy-checklist-card__num">CRITERION ${c.num}</span>
               <span class="verification-badge" style="font-size: 0.72rem; font-weight: 800; color: ${isVerified ? '#2e7d32' : '#8a9bb0'};">
                 ${isVerified ? '✓ VERIFIED' : 'PENDING REVIEW'}
               </span>
             </div>
             <h3 class="academy-checklist-card__title">${c.title}</h3>
             <p class="academy-checklist-card__question">"${c.question}"</p>
+            <div style="background: #f8fafc; border-left: 3px solid #0b3f78; padding: 0.85rem 1rem; border-radius: 0 6px 6px 0; margin-bottom: 1.25rem;">
+              <span style="font-size: 0.74rem; font-weight: 800; color: #0b3f78; text-transform: uppercase; display: block; margin-bottom: 0.25rem;">What to Verify &amp; Evidence Required:</span>
+              <p style="font-size: 0.86rem; color: #475569; line-height: 1.55; margin: 0;">${c.check}</p>
+            </div>
           </div>
           <button class="academy-checklist-btn" aria-label="Toggle verification for ${c.title}">
             ${isVerified ? '✓ VERIFIED' : 'VERIFY CRITERION'}
@@ -315,26 +644,476 @@
       `;
     }).join('');
 
-    const noteText = page.checklist ? page.checklist.note : "The checklist is for the investor's own comparison.";
+    const verifiedCount = verifiedList.length;
+    const progressPercent = Math.round((verifiedCount / 12) * 100);
 
-    return `
-      <section class="academy-section academy-section--alt" id="comparison">
-        <div class="academy-section__inner">
-          <div class="academy-micro-label">STAGE 03 · INVESTOR COMPARISON CHECKLIST</div>
-          <h2 style="font-size: clamp(2rem, 3.2vw, 2.8rem); font-weight: 900; color: #07172c; margin-bottom: 0.75rem;">
-            Evaluate plant options systematically.
-          </h2>
-          <p style="font-size: 1.05rem; color: #52677d; max-width: 800px; margin-bottom: 2.5rem;">
-            Use this interactive verification matrix during supplier discussions to ensure project scope, automation, engineering, and long-term support are thoroughly evaluated.
-          </p>
+    root.innerHTML = `
+      ${renderStageNavRail(currentStageSlug)}
+      
+      <!-- ============ 01. HERO SECTION (EDITORIAL HIGH-KEY ARCHITECTURAL COVER) ============ -->
+      <section class="editorial-hero editorial-hero--light is-loaded" id="hero" aria-label="Compare AAC Plant Suppliers Overview" style="min-height: 88vh; display: flex; align-items: center; position: relative;">
+        <div class="editorial-hero__media" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1;">
+          <div class="editorial-hero__video-wrap" style="width: 100%; height: 100%;">
+            <img
+              class="editorial-hero__poster"
+              src="${heroBg}"
+              alt="Complete AAC Manufacturing Plant System and Due Diligence Comparison"
+              fetchpriority="high"
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center right;"
+            />
+          </div>
+          <div class="editorial-hero__overlay" style="position: absolute; inset: 0; background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0.98) 38%, rgba(255, 255, 255, 0.82) 54%, rgba(255, 255, 255, 0.2) 72%, transparent 88%); pointer-events: none;"></div>
+        </div>
 
-          <div class="academy-checklist-grid">
-            ${cardsHTML}
+        <div class="editorial-hero__inner" style="position: relative; z-index: 2; width: 100%; max-width: 1320px; margin: 0 auto; padding: 6rem 1.5rem 5rem;">
+          <div class="editorial-hero__content" style="max-width: 680px;">
+            <span class="editorial-hero__eyebrow" style="display: inline-block; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: #026aa7; margin-bottom: 1.5rem;">
+              AAC INVESTOR GUIDE · SUPPLIER DUE DILIGENCE
+            </span>
+            <h1 class="editorial-hero__title" style="font-size: clamp(2.4rem, 4.2vw, 4.2rem); font-weight: 800; line-height: 1.1; letter-spacing: -0.035em; color: #07172c; margin: 0 0 1.5rem 0;">
+              <span style="display: block;">Compare the plant.</span>
+              <span style="display: block; color: #64748b; font-weight: 500;">Verify the capability.</span>
+            </h1>
+            <p class="editorial-hero__sub" style="font-size: clamp(1.05rem, 1.25vw, 1.22rem); line-height: 1.68; color: #475569; max-width: 580px; margin: 0 0 2.25rem 0;">
+              An AAC plant proposal is more than a machinery list. Compare the production basis, complete scope, operating evidence and accountability behind every offer.
+            </p>
+
+            <div class="editorial-hero__actions" style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1.25rem;">
+              <a href="#matrix" class="editorial-hero__btn-dark" style="padding: 0.95rem 1.85rem; border-radius: 9999px; background: #07172c; color: #ffffff !important; font-weight: 700; text-decoration: none; font-size: 0.94rem; box-shadow: 0 4px 14px rgba(7, 23, 44, 0.15); transition: all 0.25s ease;">
+                View the comparison framework
+              </a>
+              <a href="${contactUrl}" class="editorial-hero__link-dark" style="color: #07172c !important; font-weight: 700; text-decoration: none; font-size: 0.94rem; display: inline-flex; align-items: center; gap: 0.35rem; transition: all 0.2s ease;">
+                <span>Request a proposal review</span>
+                <span>↗</span>
+              </a>
+            </div>
+
+            <p style="font-size: 0.85rem; color: #94a3b8; margin: 0; font-weight: 500;">
+              Designed for investors, technical teams and corporate purchase teams.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SECTION 01: THE DIRECT ANSWER ============ -->
+      <section class="academy-section" id="principle" style="padding: 5.5rem 2rem 5rem; background: #ffffff;">
+        <div class="academy-section__inner" style="max-width: 1500px; margin: 0 auto;">
+          
+          <!-- Top 2-Column Grid -->
+          <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 4.5rem; align-items: center; margin-bottom: 5.5rem;">
+            <div>
+              <span class="academy-micro-label" style="display: inline-block; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: #026aa7; margin-bottom: 1.8rem;">
+                THE DIRECT ANSWER
+              </span>
+              <h2 style="font-size: clamp(3.4rem, 5.6vw, 5.6rem); font-weight: 700; line-height: 1.03; letter-spacing: -0.035em; color: #07172c; margin: 0;">
+                <span style="display: block;">Start with a</span>
+                <span style="display: block;">common basis.</span>
+                <span style="display: block; color: #8d9ba8; font-weight: 400; margin-top: 0.05em;">Not the final price.</span>
+              </h2>
+            </div>
+
+            <div style="max-width: 560px; padding-top: 1.5rem;">
+              <p style="font-size: clamp(1.15rem, 1.35vw, 1.35rem); font-weight: 500; line-height: 1.55; color: #07172c; margin: 0 0 1.25rem 0;">
+                Compare AAC plant suppliers using the same production assumptions, equipment boundaries, automation definition, utility basis, manpower model, commissioning responsibility and acceptance conditions.
+              </p>
+              <p style="font-size: clamp(0.98rem, 1.08vw, 1.08rem); line-height: 1.6; color: #64748b; margin: 0;">
+                A quotation becomes comparable only after its inclusions, exclusions and evidence are visible.
+              </p>
+            </div>
           </div>
 
-          <div class="academy-checklist-note">
-            📌 <strong>Note for Investors:</strong> ${noteText}
+          <!-- Bottom Statement Banner Strip (Single Line, Max-width 1500px, Top & Bottom Borders) -->
+          <div style="border-top: 1px solid #eef2f6; border-bottom: 1px solid #eef2f6; padding: 2.8rem 0; display: flex; justify-content: space-between; align-items: center; gap: 2rem;">
+            <span style="font-size: clamp(1.6rem, 2.3vw, 2.4rem); font-weight: 400; color: #8d9ba8; letter-spacing: -0.025em; white-space: nowrap;">
+              Price can be compared in one line.
+            </span>
+            <span style="font-size: clamp(1.6rem, 2.3vw, 2.4rem); font-weight: 800; color: #07172c; letter-spacing: -0.025em; white-space: nowrap;">
+              Engineering capability cannot.
+            </span>
           </div>
+
+        </div>
+      </section>
+
+      <!-- ============ SECTION 02: A COMPLETE COMPARISON (TWELVE FACTORS) ============ -->
+      <section class="academy-section" id="matrix" style="padding: 6.5rem 2rem 6.5rem; background: #ffffff;">
+        <div class="academy-section__inner" style="max-width: 1500px; margin: 0 auto;">
+          
+          <div style="margin-bottom: 4rem;">
+            <span class="academy-micro-label" style="display: inline-block; font-size: 0.76rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: #026aa7; margin-bottom: 1.8rem;">
+              A COMPLETE COMPARISON
+            </span>
+            <h2 style="font-size: clamp(3rem, 5.2vw, 5.2rem); font-weight: 800; line-height: 1.02; letter-spacing: -0.04em; color: #07172c; margin: 0 0 2rem 0;">
+              <span style="display: block;">Twelve factors.</span>
+              <span style="display: block; color: #8d9ba8; font-weight: 400; margin-top: 0.04em;">One accountable decision.</span>
+            </h2>
+            <p style="font-size: clamp(1.05rem, 1.25vw, 1.25rem); line-height: 1.6; color: #475569; max-width: 680px; margin: 0;">
+              Each factor connects a technical choice to commercial risk, operational stability or future flexibility.
+            </p>
+          </div>
+
+          <!-- 12 Factor Horizontal Spec Rows -->
+          <div style="border-top: 1px solid #eef2f6;">
+            ${[
+              { num: "01", title: "Production basis", desc: "Mould volume, batches, operating hours, density, product mix and saleable output." },
+              { num: "02", title: "Equipment scope", desc: "Machinery, auxiliaries, controls, handling systems and battery limits." },
+              { num: "03", title: "Automation boundary", desc: "Where manual intervention remains in normal operation and fault recovery." },
+              { num: "04", title: "Utilities", desc: "Power, steam and water assumptions on the same production basis." },
+              { num: "05", title: "Manpower", desc: "Operators, helpers, maintenance and supervision required per shift." },
+              { num: "06", title: "Product mix & panels", desc: "Capability to produce reinforced ALC wall panels, lintels and varied block sizes." },
+              { num: "07", title: "Manufacturing evidence", desc: "In-house heavy CNC fabrication, workshop testing, stress relieving and quality control." },
+              { num: "08", title: "Operating references", desc: "Verifiable reference plants running for 3+ years with operating uptime data." },
+              { num: "09", title: "Turnkey accountability", desc: "Civil foundation drawings, erection supervision, electrical integration and single-point responsibility." },
+              { num: "10", title: "Performance acceptance", desc: "Contractual 72-hour continuous performance test (PG Test) linked to commercial handover." },
+              { num: "11", title: "Service & lifecycle spares", desc: "Warranty terms, critical 2-year spare parts package, and on-site engineering SLA." },
+              { num: "12", title: "Future expansion", desc: "Pre-engineered modular space and utility capacity for doubling throughput seamlessly." }
+            ].map(f => `
+              <div style="display: grid; grid-template-columns: 80px 1.1fr 1.9fr; gap: 2rem; align-items: baseline; padding: 2.2rem 0; border-bottom: 1px solid #eef2f6; transition: background 0.2s ease;">
+                <span style="font-size: 0.95rem; font-weight: 700; color: #026aa7; font-family: var(--font-geist-mono), monospace;">${f.num}</span>
+                <h3 style="font-size: clamp(1.2rem, 1.5vw, 1.45rem); font-weight: 700; color: #07172c; margin: 0; letter-spacing: -0.01em;">${f.title}</h3>
+                <p style="font-size: clamp(0.95rem, 1.05vw, 1.05rem); line-height: 1.6; color: #64748b; margin: 0;">${f.desc}</p>
+              </div>
+            `).join('')}
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ============ SECTION 03: EVALUATE (TURN EVERY PROMISE INTO EVIDENCE) ============ -->
+      <section class="academy-section" id="evaluate" style="padding: 7rem 2rem 6.5rem; background: #072646; color: #ffffff;">
+        <div class="academy-section__inner" style="max-width: 1500px; margin: 0 auto;">
+          
+          <div style="margin-bottom: 4.5rem;">
+            <span class="academy-micro-label" style="display: inline-block; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: #38bdf8; margin-bottom: 1.8rem;">
+              EVALUATE
+            </span>
+            <h2 style="font-size: clamp(3rem, 5.2vw, 5.2rem); font-weight: 800; line-height: 1.02; letter-spacing: -0.04em; color: #ffffff; margin: 0 0 2rem 0;">
+              <span style="display: block;">Turn every promise</span>
+              <span style="display: block; color: #93c5fd; font-weight: 400; margin-top: 0.04em;">into evidence.</span>
+            </h2>
+            <p style="font-size: clamp(1.05rem, 1.25vw, 1.25rem); line-height: 1.6; color: rgba(255, 255, 255, 0.75); max-width: 680px; margin: 0;">
+              A supplier presentation can establish interest. It cannot replace measurable assumptions, physical verification or contractual clarity.
+            </p>
+          </div>
+
+          <!-- 4 Evaluation Horizontal Spec Rows -->
+          <div style="border-top: 1px solid rgba(255, 255, 255, 0.12);">
+            ${[
+              { num: "01", title: "Normalize the proposal", desc: "Place each offer into one scope-responsibility matrix. Record supply, erection, cabling, piping, integration, commissioning and testing for every plant section." },
+              { num: "02", title: "Verify how capacity is calculated", desc: "Request mould volume, batches per hour, operating hours, pre-curing constraints, cutting cycle, autoclave loading, curing cycle and saleable-output assumptions." },
+              { num: "03", title: "Map automation by function", desc: "Identify where operators initiate movement, confirm sequences, recover faults, record quality data or manually handle material. Compare functions—not labels." },
+              { num: "04", title: "Use the same utility basis", desc: "Separate connected load from consumption. Compare power, steam, water and manpower for the same production, product mix and shift pattern." }
+            ].map(item => `
+              <div style="display: grid; grid-template-columns: 80px 1.15fr 1.85fr; gap: 2rem; align-items: baseline; padding: 2.4rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.12);">
+                <span style="font-size: 0.95rem; font-weight: 700; color: #38bdf8; font-family: var(--font-geist-mono), monospace;">${item.num}</span>
+                <h3 style="font-size: clamp(1.2rem, 1.5vw, 1.45rem); font-weight: 700; color: #ffffff; margin: 0; letter-spacing: -0.01em;">${item.title}</h3>
+                <p style="font-size: clamp(0.95rem, 1.05vw, 1.05rem); line-height: 1.6; color: rgba(255, 255, 255, 0.75); margin: 0;">${item.desc}</p>
+              </div>
+            `).join('')}
+          </div>
+
+          <!-- Comparison Rule Box -->
+          <div style="border: 1px solid rgba(56, 189, 248, 0.3); background: rgba(3, 16, 32, 0.45); padding: 2.2rem 2.5rem; margin-top: 4.5rem; border-radius: 6px; display: flex; align-items: center; gap: 2.5rem; flex-wrap: wrap;">
+            <span style="font-size: 0.78rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: #38bdf8; white-space: nowrap;">
+              COMPARISON RULE
+            </span>
+            <span style="font-size: clamp(1.05rem, 1.2vw, 1.22rem); font-weight: 600; color: #ffffff; line-height: 1.5;">
+              If two capacity or utility figures use different assumptions, they are not yet comparable.
+            </span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ============ SECTION 04: PHYSICAL VERIFICATION ============ -->
+      <section class="academy-section" id="verification" style="padding: 6.5rem 2rem 6.5rem; background: #ffffff; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+        <div class="academy-section__inner" style="max-width: 1500px; margin: 0 auto;">
+          
+          <div style="margin-bottom: 4.5rem;">
+            <span class="academy-micro-label" style="display: inline-block; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: #026aa7; margin-bottom: 1.8rem; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+              PHYSICAL VERIFICATION
+            </span>
+            <h2 style="font-size: clamp(3.2rem, 5.4vw, 5.4rem); font-weight: 700; line-height: 1.03; letter-spacing: -0.035em; color: #07172c; margin: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+              <span style="display: block;">Visit the places</span>
+              <span style="display: block; color: #8d9ba8; font-weight: 400; margin-top: 0.05em;">where claims become</span>
+              <span style="display: block; color: #8d9ba8; font-weight: 400;">visible.</span>
+            </h2>
+          </div>
+
+          <!-- 2-Column Split: Workshop vs Running Plant -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid #eef2f6;">
+            
+            <!-- Left Column: Workshop -->
+            <div style="padding: 3.5rem 4.5rem 2rem 0;">
+              <span style="display: inline-block; font-size: 0.76rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: #026aa7; margin-bottom: 1.25rem;">
+                01 / WORKSHOP
+              </span>
+              <h3 style="font-size: clamp(1.45rem, 1.85vw, 1.85rem); font-weight: 700; color: #07172c; margin: 0 0 1.1rem 0; letter-spacing: -0.015em;">
+                Inspect manufacturing capability
+              </h3>
+              <p style="font-size: clamp(0.96rem, 1.05vw, 1.05rem); line-height: 1.6; color: #64748b; max-width: 520px; margin: 0 0 2.8rem 0;">
+                A workshop visit should be an evidence review—not a visual judgement of size or housekeeping alone.
+              </p>
+
+              <!-- List of Items -->
+              <div style="border-top: 1px solid #eef2f6;">
+                ${[
+                  "In-house and bought-out equipment scope",
+                  "Fabrication, machining and assembly capability",
+                  "Material traceability and inspection stages",
+                  "Current workload and project resources",
+                  "Testing and pre-dispatch practices"
+                ].map(item => `
+                  <div style="padding: 1.25rem 0; border-bottom: 1px solid #eef2f6; font-size: clamp(0.94rem, 1.02vw, 1.02rem); color: #334155; font-weight: 500;">
+                    ${item}
+                  </div>
+                `).join('')}
+              </div>
+
+              <p style="font-size: clamp(0.88rem, 0.95vw, 0.95rem); line-height: 1.6; color: #8d9ba8; margin: 3.5rem 0 0 0; max-width: 520px;">
+                Do not infer financial strength from workshop appearance. That requires separate due diligence.
+              </p>
+            </div>
+
+            <!-- Right Column: Running Plant -->
+            <div style="padding: 3.5rem 0 2rem 4.5rem; border-left: 1px solid #eef2f6;">
+              <span style="display: inline-block; font-size: 0.76rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: #026aa7; margin-bottom: 1.25rem;">
+                02 / RUNNING PLANT
+              </span>
+              <h3 style="font-size: clamp(1.45rem, 1.85vw, 1.85rem); font-weight: 700; color: #07172c; margin: 0 0 1.1rem 0; letter-spacing: -0.015em;">
+                Verify operating performance
+              </h3>
+              <p style="font-size: clamp(0.96rem, 1.05vw, 1.05rem); line-height: 1.6; color: #64748b; max-width: 520px; margin: 0 0 2.8rem 0;">
+                Select references close to the proposed capacity, raw-material route, automation level, age and product mix.
+              </p>
+
+              <!-- List of Items -->
+              <div style="border-top: 1px solid #eef2f6;">
+                ${[
+                  "Recorded production and saleable output",
+                  "Manpower and manual interventions",
+                  "Product quality and downtime records",
+                  "Utility history where available",
+                  "Service and spare-parts experience"
+                ].map(item => `
+                  <div style="padding: 1.25rem 0; border-bottom: 1px solid #eef2f6; font-size: clamp(0.94rem, 1.02vw, 1.02rem); color: #334155; font-weight: 500;">
+                    ${item}
+                  </div>
+                `).join('')}
+              </div>
+
+              <p style="font-size: clamp(0.88rem, 0.95vw, 0.95rem); line-height: 1.6; color: #8d9ba8; margin: 3.5rem 0 0 0; max-width: 520px;">
+                Observe the plant, speak with the owner and operating team, then cross-check recollections with records.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ============ SECTION 05: DECIDE ============ -->
+      <section class="academy-section" id="decide" style="padding: 6.5rem 2rem 6.5rem; background: #ffffff;">
+        <div class="academy-section__inner" style="max-width: 1500px; margin: 0 auto;">
+          
+          <div style="margin-bottom: 4.5rem;">
+            <span class="academy-micro-label" style="display: inline-block; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: #026aa7; margin-bottom: 1.8rem;">
+              DECIDE
+            </span>
+            <h2 style="font-size: clamp(3.2rem, 5.4vw, 5.4rem); font-weight: 700; line-height: 1.03; letter-spacing: -0.035em; color: #07172c; margin: 0 0 2rem 0;">
+              <span style="display: block;">Choose the solution</span>
+              <span style="display: block; color: #8d9ba8; font-weight: 400; margin-top: 0.05em;">whose responsibilities are</span>
+              <span style="display: block; color: #8d9ba8; font-weight: 400;">clear.</span>
+            </h2>
+            <p style="font-size: clamp(1.05rem, 1.2vw, 1.2rem); line-height: 1.6; color: #475569; max-width: 680px; margin: 0;">
+              The objective is not to find the longest proposal. It is to find the configuration that fits your project and can be verified.
+            </p>
+          </div>
+
+          <!-- Decision Table -->
+          <div style="border-top: 1px solid #eef2f6; margin-top: 3.5rem;">
+            
+            <!-- Table Header -->
+            <div style="display: grid; grid-template-columns: 340px 1fr; gap: 3rem; padding: 1.4rem 0; border-bottom: 1px solid #eef2f6;">
+              <span style="font-size: 0.76rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: #8d9ba8;">
+                DECISION AREA
+              </span>
+              <span style="font-size: 0.76rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: #8d9ba8;">
+                QUESTION TO ANSWER
+              </span>
+            </div>
+
+            <!-- Table Rows -->
+            ${[
+              { area: "Technical fit", question: "Does the configuration suit the required products, raw materials and output?" },
+              { area: "Evidence", question: "Which important claims are supported by documents or relevant operating plants?" },
+              { area: "Scope completeness", question: "Are all equipment, services, interfaces and exclusions visible?" },
+              { area: "Execution capability", question: "Are design, manufacturing, project and commissioning resources demonstrated?" },
+              { area: "Lifecycle responsibility", question: "Are service, spares, training and documentation adequate?" },
+              { area: "Contractual clarity", question: "Are performance obligations and acceptance conditions measurable?" },
+              { area: "Future readiness", question: "Can the layout support realistic expansion or panel requirements?" }
+            ].map(row => `
+              <div style="display: grid; grid-template-columns: 340px 1fr; gap: 3rem; align-items: baseline; padding: 2.2rem 0; border-bottom: 1px solid #eef2f6;">
+                <h3 style="font-size: clamp(1.15rem, 1.35vw, 1.35rem); font-weight: 700; color: #07172c; margin: 0; letter-spacing: -0.01em;">
+                  ${row.area}
+                </h3>
+                <p style="font-size: clamp(0.96rem, 1.06vw, 1.06rem); line-height: 1.6; color: #64748b; margin: 0;">
+                  ${row.question}
+                </p>
+              </div>
+            `).join('')}
+
+          </div>
+
+          <!-- Bottom Gate Decision Banner -->
+          <div style="background: #f8fafc; border: 1px solid #f1f5f9; padding: 2.4rem 2.8rem; margin-top: 4.5rem; border-radius: 4px; display: grid; grid-template-columns: 340px 1fr; gap: 3rem; align-items: center;">
+            <div style="font-size: clamp(1.1rem, 1.25vw, 1.25rem); font-weight: 700; color: #07172c; line-height: 1.4;">
+              Do not let a high total score hide a critical failure.
+            </div>
+            <div style="font-size: clamp(0.92rem, 1.02vw, 1.02rem); line-height: 1.65; color: #64748b;">
+              Unsupported capacity, incomplete safety responsibility, unclear acceptance terms or an essential missing plant section should be treated as decision gates—not merely low-scoring items.
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ============ SECTION 06: BEFORE YOU FINALIZE (EIGHT RED FLAGS) ============ -->
+      <section class="academy-section" id="red-flags" style="padding: 7rem 2rem 7rem; background: #ffffff;">
+        <div class="academy-section__inner" style="max-width: 1500px; margin: 0 auto;">
+          
+          <div style="display: grid; grid-template-columns: 1fr 1.35fr; gap: 5.5rem; align-items: start;">
+            
+            <!-- Left Column: Title -->
+            <div>
+              <span class="academy-micro-label" style="display: inline-block; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: #026aa7; margin-bottom: 2rem;">
+                BEFORE YOU FINALIZE
+              </span>
+              <h2 style="font-size: clamp(3.4rem, 5.8vw, 5.8rem); font-weight: 700; line-height: 1.02; letter-spacing: -0.035em; color: #07172c; margin: 0;">
+                <span style="display: block;">Eight red</span>
+                <span style="display: block;">flags</span>
+                <span style="display: block; color: #8d9ba8; font-weight: 400; margin-top: 0.05em;">worth</span>
+                <span style="display: block; color: #8d9ba8; font-weight: 400;">stopping for.</span>
+              </h2>
+            </div>
+
+            <!-- Right Column: 8 Red Flag Specification Rows -->
+            <div style="border-top: 1px solid #eef2f6; padding-top: 0.5rem;">
+              ${[
+                { num: "01", text: "Capacity without cycle, operating-hour or saleable-output assumptions." },
+                { num: "02", text: "‘Fully automatic’ without a process-level automation boundary." },
+                { num: "03", text: "Utility or manpower savings without a comparable baseline." },
+                { num: "04", text: "Project references without the supplier’s exact scope." },
+                { num: "05", text: "Buyer-scope items without clear interface responsibility." },
+                { num: "06", text: "Commissioning dependent on unnamed resources." },
+                { num: "07", text: "No measurable performance test or acceptance protocol." },
+                { num: "08", text: "Limited access to relevant customers or technical personnel." }
+              ].map(flag => `
+                <div style="display: grid; grid-template-columns: 55px 1fr; gap: 2rem; align-items: baseline; padding: 1.6rem 0; border-bottom: 1px solid #eef2f6;">
+                  <span style="font-size: 0.88rem; font-weight: 700; color: #026aa7; font-family: var(--font-geist-mono), monospace;">${flag.num}</span>
+                  <p style="font-size: clamp(0.98rem, 1.08vw, 1.08rem); line-height: 1.55; color: #334155; margin: 0; font-weight: 500;">
+                    ${flag.text}
+                  </p>
+                </div>
+              `).join('')}
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ============ SECTION 07: INVESTOR QUESTIONS (FAQ ACCORDION) ============ -->
+      <section class="academy-section" id="faq" style="padding: 7rem 2rem 7rem; background: #ffffff;">
+        <div class="academy-section__inner" style="max-width: 1500px; margin: 0 auto;">
+          
+          <div style="display: grid; grid-template-columns: 1fr 1.35fr; gap: 5.5rem; align-items: start;">
+            
+            <!-- Left Column: Title -->
+            <div>
+              <span class="academy-micro-label" style="display: inline-block; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: #026aa7; margin-bottom: 2rem;">
+                INVESTOR QUESTIONS
+              </span>
+              <h2 style="font-size: clamp(3.4rem, 5.8vw, 5.8rem); font-weight: 700; line-height: 1.02; letter-spacing: -0.035em; color: #07172c; margin: 0;">
+                <span style="display: block;">Clear</span>
+                <span style="display: block;">answers.</span>
+                <span style="display: block; color: #8d9ba8; font-weight: 400; margin-top: 0.05em;">Before</span>
+                <span style="display: block; color: #8d9ba8; font-weight: 400;">commitment.</span>
+              </h2>
+            </div>
+
+            <!-- Right Column: Accordion Questions -->
+            <div style="border-top: 1px solid #eef2f6;">
+              ${[
+                {
+                  q: "Should the lowest-priced AAC plant be rejected?",
+                  a: "Not automatically. However, evaluate whether lower cost reflects genuine engineering optimization or hidden exclusions such as battery-limit piping, lower steel grade thickness, basic uncertified automation, missing safety interlocks, or outsourced commissioning responsibility."
+                },
+                {
+                  q: "Is one running-plant visit sufficient?",
+                  a: "Ideally, visit at least two plants: one recently commissioned (to observe modern build quality and technology) and one operating for 3+ years (to inspect long-term wear, cycle reliability, maintenance history, and structural integrity)."
+                },
+                {
+                  q: "How can a buyer verify a ‘fully automatic’ claim?",
+                  a: "Request a complete functional automation sequence diagram. Identify where manual intervention remains for mould opening, oiling, wire cleaning, scrap return, autoclave loading, and packaging. Automation should be evaluated by verified touchpoints, not catalog claims."
+                },
+                {
+                  q: "What is the most important capacity question?",
+                  a: "What is the guaranteed net saleable block volume (m³/day) after factoring in trimming, testing losses (2–3%), actual autoclave cycle time (10–12 hours), and specific raw-material curing behavior, rather than theoretical nominal cycle counts."
+                },
+                {
+                  q: "Should commissioning remain with the equipment supplier?",
+                  a: "Yes. Retaining single-point turnkey commissioning accountability with the OEM prevents multi-vendor blame games during trial runs and guarantees that performance acceptance milestones (PG Test) are contractually enforceable."
+                },
+                {
+                  q: "Which reference plant is most useful?",
+                  a: "A reference plant operating with similar raw material characteristics (fly ash source or sand quality), similar target capacity, and comparable automation levels. Speaking directly with the plant manager and maintenance engineer provides real operational feedback."
+                }
+              ].map(item => `
+                <details style="border-bottom: 1px solid #eef2f6;" class="academy-faq-group">
+                  <summary style="display: flex; justify-content: space-between; align-items: center; padding: 2rem 0; font-size: clamp(1.1rem, 1.3vw, 1.3rem); font-weight: 700; color: #07172c; cursor: pointer; list-style: none; user-select: none;">
+                    <span>${item.q}</span>
+                    <span style="font-size: 1.4rem; font-weight: 400; color: #026aa7; margin-left: 1.5rem; transition: transform 0.2s ease;">+</span>
+                  </summary>
+                  <div style="padding: 0 0 2rem 0; font-size: clamp(0.96rem, 1.05vw, 1.05rem); line-height: 1.65; color: #64748b;">
+                    ${item.a}
+                  </div>
+                </details>
+              `).join('')}
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ============ SECTION 08: BEFORE THE PURCHASE ORDER ============ -->
+      <section class="academy-section" id="final-cta" style="padding: 7.5rem 2rem 7rem; background: #072646; color: #ffffff; text-align: center;">
+        <div class="academy-section__inner" style="max-width: 1500px; margin: 0 auto;">
+          
+          <div style="max-width: 860px; margin: 0 auto; text-align: center;">
+            <span class="academy-micro-label" style="display: inline-block; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: #38bdf8; margin-bottom: 2rem;">
+              BEFORE THE PURCHASE ORDER
+            </span>
+            <h2 style="font-size: clamp(3.2rem, 5.4vw, 5.4rem); font-weight: 700; line-height: 1.03; letter-spacing: -0.035em; color: #ffffff; margin: 0 0 2rem 0; text-align: center;">
+              <span style="display: block;">Review the proposal.</span>
+              <span style="display: block; color: #93c5fd; font-weight: 400; margin-top: 0.05em;">Expose the assumptions.</span>
+            </h2>
+            <p style="font-size: clamp(1.05rem, 1.25vw, 1.25rem); line-height: 1.65; color: rgba(255, 255, 255, 0.82); max-width: 720px; margin: 0 auto 3rem auto; text-align: center;">
+              Share your proposed capacity, product mix and supplier scope sheets. Identify technical deviations, incomplete responsibilities and questions that should be resolved before finalization.
+            </p>
+
+            <div style="display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+              <a href="${contactUrl}" style="padding: 1rem 2rem; border-radius: 9999px; background: #ffffff; color: #07172c !important; font-weight: 700; text-decoration: none; font-size: 0.95rem; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2); transition: all 0.25s ease;">
+                Request a technical proposal review
+              </a>
+              <a href="#matrix" style="color: #ffffff !important; font-weight: 500; font-size: 0.95rem; text-decoration: underline; text-underline-offset: 4px; display: inline-flex; align-items: center; gap: 0.35rem; transition: opacity 0.2s ease;">
+                <span>Revisit the comparison framework</span>
+                <span>↑</span>
+              </a>
+            </div>
+          </div>
+
         </div>
       </section>
     `;
@@ -354,13 +1133,25 @@
     } catch (e) {}
   }
 
-  function initChecklistListeners() {
-    const cards = document.querySelectorAll('.academy-checklist-card');
-    cards.forEach(card => {
-      const btn = card.querySelector('.academy-checklist-btn');
-      const num = card.getAttribute('data-criteria-num');
-      const badge = card.querySelector('.verification-badge');
+  function updateAuditProgressTracker() {
+    const verified = getVerifiedStorage();
+    const count = verified.length;
+    const percent = Math.round((count / 12) * 100);
+    const counterText = document.getElementById('audit-counter-text');
+    const progressBar = document.getElementById('audit-progress-bar');
+    if (counterText) {
+      counterText.textContent = `${count} of 12 Criteria Audited (${percent}%)`;
+    }
+    if (progressBar) {
+      progressBar.style.width = `${percent}%`;
+    }
+  }
 
+  function initChecklistListeners() {
+    document.querySelectorAll('.academy-checklist-card').forEach(card => {
+      const btn = card.querySelector('.academy-checklist-btn');
+      const num = card.getAttribute('data-card-num');
+      const badge = card.querySelector('.verification-badge');
       if (!btn) return;
 
       btn.addEventListener('click', function () {
@@ -383,14 +1174,51 @@
           }
         }
         setVerifiedStorage(verified);
+        updateAuditProgressTracker();
+      });
+    });
+
+    const resetBtn = document.getElementById('btn-reset-audit');
+    if (resetBtn) {
+      resetBtn.addEventListener('click', function () {
+        setVerifiedStorage([]);
+        document.querySelectorAll('.academy-checklist-card').forEach(card => {
+          card.classList.remove('is-verified');
+          const btn = card.querySelector('.academy-checklist-btn');
+          const badge = card.querySelector('.verification-badge');
+          if (btn) btn.textContent = 'VERIFY CRITERION';
+          if (badge) {
+            badge.textContent = 'PENDING REVIEW';
+            badge.style.color = '#8a9bb0';
+          }
+        });
+        updateAuditProgressTracker();
+      });
+    }
+  }
+
+  function initFaqAccordionListeners() {
+    document.querySelectorAll('.academy-faq-item').forEach(item => {
+      const btn = item.querySelector('.academy-faq-question');
+      const ans = item.querySelector('.academy-faq-answer');
+      const icon = item.querySelector('.academy-faq-icon');
+      if (!btn || !ans) return;
+
+      btn.addEventListener('click', function () {
+        const isOpen = ans.style.display === 'block';
+        document.querySelectorAll('.academy-faq-answer').forEach(a => { a.style.display = 'none'; });
+        document.querySelectorAll('.academy-faq-icon').forEach(i => { i.textContent = '+'; });
+
+        if (!isOpen) {
+          ans.style.display = 'block';
+          if (icon) icon.textContent = '−';
+        }
       });
     });
   }
 
-  // 04. Framework Banner
   function renderFramework(page) {
     if (!page.framework) return '';
-
     const nodes = page.framework.heading ? page.framework.heading.split('→').map(n => n.trim()) : [];
     const flowHTML = nodes.map((node, i) => `
       <span class="academy-framework-node">${node}</span>
@@ -404,22 +1232,16 @@
             <div class="academy-micro-label" style="color: rgba(255,255,255,0.7); margin-bottom: 1.25rem;">
               STAGE ${page.stage} · STRATEGIC FRAMEWORK
             </div>
-            <div class="academy-framework-flow">
-              ${flowHTML}
-            </div>
-            <p class="academy-framework-body">
-              ${page.framework.body}
-            </p>
+            <div class="academy-framework-flow">${flowHTML}</div>
+            <p class="academy-framework-body">${page.framework.body}</p>
           </div>
         </div>
       </section>
     `;
   }
 
-  // 05. Stage Checkpoint Section
   function renderCheckpoint(page) {
     if (!page.next) return '';
-
     return `
       <section class="academy-section" id="next-step" style="padding-top: 2rem; padding-bottom: 4rem;">
         <div class="academy-section__inner">
@@ -437,103 +1259,118 @@
     `;
   }
 
-  // 06. Related Links Section
-  function renderRelatedLinks(page) {
-    if (!page.related || !page.related.length) return '';
-
-    const linksHTML = page.related.map(r => `
-      <a href="${r.url}" class="academy-related-link">
-        ${r.label} <span style="font-size: 1.1rem;">→</span>
-      </a>
-    `).join('');
+  function renderCTA(shared) {
+    let contactUrl = window.location.pathname.includes('/academy/') ? '../contact.html' : 'contact.html';
+    let engCenterUrl = window.location.pathname.includes('/academy/') ? '../engineering-center.html' : 'engineering-center.html';
 
     return `
-      <section class="academy-section" style="padding-top: 1rem; padding-bottom: 4rem;">
-        <div class="academy-section__inner">
-          <div class="academy-micro-label" style="margin-bottom: 0.75rem;">CONNECTED ENGINEERING PATHS</div>
-          <div class="academy-related-links">
-            ${linksHTML}
+      <section class="academy-cta-banner" id="academy-cta">
+        <div class="academy-cta-banner__inner">
+          <div class="academy-cta-grid">
+            
+            <div class="academy-cta-left">
+              <span class="academy-cta-banner__eyebrow">TALK TO LAXMI ENGINEERS</span>
+              <h2 class="academy-cta-banner__title">Ready to Set Up Your <span class="academy-cta-highlight">AAC Manufacturing Plant?</span></h2>
+              <p class="academy-cta-banner__lead">Laxmi En-Fab provides end-to-end plant engineering, raw material XRF assay testing, and automated turnkey commissioning.</p>
+              
+              <div class="academy-cta-banner__badges">
+                <span class="academy-cta-badge">✓ 150+ Plant Installations</span>
+                <span class="academy-cta-badge">✓ Raw Material XRF Lab</span>
+                <span class="academy-cta-badge">✓ Turnkey EPC Execution</span>
+                <span class="academy-cta-badge">✓ 24/7 Field Engineering</span>
+              </div>
+
+              <div class="academy-cta-banner__actions">
+                <a href="${contactUrl}" class="academy-cta-banner__btn-white">
+                  <span>TALK TO AN EXPERT</span>
+                  <span class="academy-cta-banner__arrow">↗</span>
+                </a>
+                <a href="${engCenterUrl}" class="academy-cta-banner__link-secondary">
+                  Explore Engineering Center →
+                </a>
+              </div>
+            </div>
+
+            <div class="academy-cta-right">
+              <div class="academy-cta-card">
+                <div class="academy-cta-card__header">
+                  <span class="academy-cta-card__tag">DIRECT ADVISORY DESK</span>
+                  <h3 class="academy-cta-card__title">Connect with Senior Engineers</h3>
+                </div>
+
+                <div class="academy-cta-card__items">
+                  <div class="academy-cta-card__item">
+                    <div class="academy-cta-card__icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    </div>
+                    <div>
+                      <span class="academy-cta-card__label">Direct Advisory Hotline</span>
+                      <a href="tel:+919825025247" class="academy-cta-card__val">+91 98250 25247</a>
+                    </div>
+                  </div>
+
+                  <div class="academy-cta-card__item">
+                    <div class="academy-cta-card__icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                    </div>
+                    <div>
+                      <span class="academy-cta-card__label">Project Feasibility &amp; DPR</span>
+                      <a href="mailto:sales@laxmienfab.com" class="academy-cta-card__val">sales@laxmienfab.com</a>
+                    </div>
+                  </div>
+
+                  <div class="academy-cta-card__item">
+                    <div class="academy-cta-card__icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    </div>
+                    <div>
+                      <span class="academy-cta-card__label">Heavy Manufacturing Hub</span>
+                      <span class="academy-cta-card__val">Ahmedabad, Gujarat, India</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="academy-cta-card__footer">
+                  <div class="academy-cta-card__sla">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+                    <span>Initial feasibility &amp; layout turnaround within 48 hours</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
     `;
   }
 
-  // 07. Final Conversion CTA Section
-  function renderCTA(sharedData) {
-    const primaryLabel = sharedData && sharedData.footer_cta && sharedData.footer_cta.primary ? sharedData.footer_cta.primary.label : 'TALK TO LAXMI';
-    const primaryUrl = sharedData && sharedData.footer_cta && sharedData.footer_cta.primary ? sharedData.footer_cta.primary.url : '/contact.html';
-    const secondaryLabel = sharedData && sharedData.footer_cta && sharedData.footer_cta.secondary ? sharedData.footer_cta.secondary.label : 'EXPLORE SOLUTIONS';
-    const secondaryUrl = sharedData && sharedData.footer_cta && sharedData.footer_cta.secondary ? sharedData.footer_cta.secondary.url : '/solutions.html';
-
-    return `
-      <section class="machinery-cta" id="cta">
-        <div class="machinery-hero__blueprint" aria-hidden="true">
-          <svg class="editorial-hero__grid-svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-            <line x1="200" y1="0" x2="200" y2="900" stroke="rgba(255,255,255,0.06)" stroke-width="0.5"/>
-            <line x1="720" y1="0" x2="720" y2="900" stroke="rgba(255,255,255,0.06)" stroke-width="0.5"/>
-            <line x1="1240" y1="0" x2="1240" y2="900" stroke="rgba(255,255,255,0.06)" stroke-width="0.5"/>
-          </svg>
-        </div>
-        <div class="machinery-cta__inner">
-          <h2 class="machinery-cta__title">
-            READY TO TURN <br><span class="machinery-cta__title-light">KNOWLEDGE INTO ACTION?</span>
-          </h2>
-          <p class="machinery-cta__sub">
-            Move from informed decisions to the plant, engineering and equipment behind the project.
-          </p>
-          <div class="machinery-cta__action">
-            <a href="${primaryUrl}" class="editorial-hero__btn-white">
-              ${primaryLabel} <span class="editorial-hero__btn-arrow">↗</span>
-            </a>
-            <a href="${secondaryUrl}" class="editorial-hero__link-text">
-              ${secondaryLabel} <span class="editorial-hero__btn-arrow">→</span>
-            </a>
-          </div>
-          <div class="machinery-cta__contact-info">
-            <span>Direct Lines: +91-8980800607 | +91-8980800839</span>
-            <span>Email: aac@laxmienfab.com</span>
-          </div>
-        </div>
-      </section>
-    `;
+  function renderTopicsFallback(page) {
+    return '';
   }
 
-  // Error Fallback Handler
+  function initTopicListenersFallback(page) {}
+
   function renderErrorFallback() {
     return `
-      <section class="academy-section" style="padding: 8rem 1.5rem; text-align: center;">
-        <div class="academy-section__inner" style="max-width: 680px;">
-          <div class="academy-micro-label" style="justify-content: center; color: #d32f2f;">ACADEMY SYSTEM NOTICE</div>
-          <h1 style="font-size: 2.2rem; font-weight: 900; color: #07172c; margin-bottom: 1rem;">
-            Unable to load Academy Content.
-          </h1>
-          <p style="font-size: 1rem; color: #52677d; line-height: 1.6; margin-bottom: 2rem;">
-            The JSON content source could not be loaded. Please ensure data/laxmi-aac-investor-academy.json is available.
-          </p>
-          <a href="academy.html" class="editorial-hero__btn-white" style="background: #07172c; color: #ffffff; padding: 0.85rem 1.75rem;">
-            RETURN TO ACADEMY HOME →
-          </a>
-        </div>
-      </section>
+      <div style="padding: 6rem 1.5rem; text-align: center; color: #07172c;">
+        <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">Content Unavailable</h2>
+        <p style="color: #64748b; margin-bottom: 2rem;">We could not load the requested academy stage data. Please refresh or return to the main academy.</p>
+        <a href="academy.html" class="editorial-btn-primary">RETURN TO AAC INVESTOR ACADEMY →</a>
+      </div>
     `;
   }
 
-  // Scroll Animations using IntersectionObserver
   function initScrollAnimations() {
-    if ('matchMedia' in window && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      return; // Skip animation when reduced motion is preferred
-    }
-
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('is-in-view');
+          entry.target.classList.add('is-revealed');
         }
       });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.08 });
 
-    document.querySelectorAll('.academy-section, .academy-checklist-card, .academy-topic-panel').forEach(el => {
+    document.querySelectorAll('.academy-stage-card, .academy-checklist-card').forEach(el => {
       observer.observe(el);
     });
   }

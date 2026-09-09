@@ -1,0 +1,23 @@
+Should the lowest-priced AAC plant be rejected?
+−
+No. Price should be compared only after scope, assumptions, performance obligations and lifecycle responsibilities are normalized. A lower price may be commercially sound when the proposal remains technically complete and verifiable.
+
+Is one running-plant visit sufficient?
+−
+One closely comparable reference provides useful evidence. Additional references improve confidence when technology, capacity, raw materials, product mix or plant age differ.
+
+How can a buyer verify a ‘fully automatic’ claim?
+−
+Map the complete process and record every routine action, manual transfer, operator confirmation, fault-recovery task and quality-data entry. Compare functions rather than labels.
+
+What is the most important capacity question?
+−
+Ask which assumptions convert mould volume and production cycles into saleable cubic metres per day. Without those assumptions, headline capacities are not directly comparable.
+
+Should commissioning remain with the equipment supplier?
+−
+Clear accountability is more important than a particular contracting model. Every interface needs a competent, named and contractually responsible party.
+
+Which reference plant is most useful?
+−
+A plant reasonably close to the proposed technology, capacity, raw-material route, product mix and automation level—and where operating records can be reviewed.

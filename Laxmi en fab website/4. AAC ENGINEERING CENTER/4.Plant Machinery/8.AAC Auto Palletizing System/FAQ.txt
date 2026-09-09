@@ -1,0 +1,31 @@
+What is an AAC auto palletizing system?
+−
+It is a post-autoclave material-handling line that coordinates the required transfer, separation, inspection, grouping, stacking and pack-preparation stages. The exact included operations depend on the agreed project scope.
+
+Does every AAC plant need automatic palletizing?
+−
+No. The decision depends on peak finished-product flow, product mix, labour arrangement, pack format, available space, maintenance capability and project economics. Manual or selective automation may be more appropriate for some plants.
+
+Is plant capacity enough to select the system?
+−
+No. Nominal daily capacity does not show how quickly products arrive after autoclaving. Peak discharge, cakes per handling window, cake dimensions and the required pack cycle must also be evaluated.
+
+Does the palletizing system include block separation?
+−
+Not necessarily. Separation may be a separate machine, an upstream operation or part of an integrated line. The proposal should state the scope boundary clearly.
+
+Can one system handle different AAC block sizes?
+−
+A project may be designed with multiple recipes, but supported dimensions, stack patterns, changeover methods and mechanical adjustments must be confirmed during engineering.
+
+Can the system be installed in an existing AAC plant?
+−
+A retrofit may be possible after surveying the existing unloading method, space, foundations, floor levels, utilities, controls, stockyard movement and allowable shutdown period.
+
+Does automatic palletizing eliminate all manual work?
+−
+No. Operators may still be required for inspection, rejected-block removal, packaging-material replenishment, forklift movement, cleaning, supervision and maintenance.
+
+Does automation always reduce block damage?
+−
+No universal reduction should be assumed. Damage depends on incoming block condition, separation quality, alignment, gripping, movement, support and operating practice.

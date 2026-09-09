@@ -3,306 +3,621 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="AAC Engineering Center by Laxmi En-Fab Pvt. Ltd. Explore the 8-stage AAC production process, general arrangement plant layout, and system integration." />
-  <meta name="keywords" content="AAC Engineering Center, AAC production process, AAC plant layout, AAC general arrangement drawing, AAC manufacturing system, Laxmi En-Fab engineering" />
-  <title>AAC Engineering Center | Production Process &amp; Plant Layout | Laxmi En-Fab</title>
+  <meta name="description" content="AAC Engineering Center by Laxmi En-Fab Pvt. Ltd. Explore complete AAC block production processes, factory layout design, batch capacity selection, and heavy-duty plant machinery." />
+  <meta name="keywords" content="AAC engineering, AAC production process, AAC plant layout, AAC batch size, AAC plant machinery, autoclave curing, cutting system, Laxmi En-Fab" />
+  <title>AAC Engineering Center | Plant Layout, Process &amp; Machinery | Laxmi En-Fab</title>
+  
+  <!-- Google Fonts: Geist & Geist Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet" />
+  
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/components.css" />
   <link rel="stylesheet" href="css/homepage.css" />
+  <link rel="stylesheet" href="css/engineering.css" />
   <link rel="stylesheet" href="css/responsive.css" />
-</head>
-<body class="engineering-page" data-page="engineering">
 
-  <!-- Dynamic Header Injection Placeholder -->
+  <!-- Structured Data / JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AAC Engineering Center — Production Process, Layout Design & Machinery",
+    "description": "Comprehensive engineering intelligence for Autoclaved Aerated Concrete manufacturing facilities.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Laxmi En-Fab Pvt. Ltd.",
+      "url": "https://www.laxmienfab.com"
+    }
+  }
+  </script>
+</head>
+<body class="engineering-page">
+
+  <!-- Shared Global Header Injection -->
   <div id="site-header"></div>
 
+  <!-- Breadcrumb Navigation -->
+  <nav class="site-breadcrumb" aria-label="Breadcrumb">
+    <div class="site-breadcrumb__inner">
+      <a href="index.html">Home</a>
+      <span class="bc-sep">/</span>
+      <span class="bc-current">AAC Engineering Center</span>
+    </div>
+  </nav>
+
   <main id="main-content">
-    
-    <!-- ============ SECTION 01 — HERO (DARK INDUSTRIAL) ============ -->
-    <section class="editorial-about-hero" id="hero">
-      <div class="editorial-about-hero__inner">
-        
-        <!-- Left: Text Area -->
-        <div class="editorial-about-hero__content">
-          <span class="editorial-eyebrow editorial-eyebrow--gold">ENGINEERING CENTER</span>
-          <h1 class="editorial-about-hero__title">
-            <span>Understand the system</span>
-            <span class="editorial-about-hero__title-light">behind the plant.</span>
+
+    <!-- ============ 01. HERO SECTION (EDITORIAL HIGH-KEY ARCHITECTURAL BACKGROUND) ============ -->
+    <section class="editorial-hero editorial-hero--light is-loaded" id="hero" aria-label="AAC Plant Engineering Overview">
+
+      <!-- ── Background media ── -->
+      <div class="editorial-hero__media" aria-hidden="true">
+        <div class="editorial-hero__video-wrap">
+          <img
+            class="editorial-hero__poster"
+            src="assets/images/future-of-aac.png"
+            alt="Modern AAC architectural engineering and precision block production"
+            fetchpriority="high"
+          />
+        </div>
+        <!-- High-key white gradient overlay -->
+        <div class="editorial-hero__overlay"></div>
+      </div>
+
+      <!-- ── Main content area ── -->
+      <div class="editorial-hero__inner">
+        <div class="editorial-hero__content">
+          <span class="editorial-hero__eyebrow">AAC PLANT ENGINEERING · COMPLETE INTELLIGENCE</span>
+          <h1 class="editorial-hero__title">
+            <span>Complete Engineering &amp;</span>
+            <span>Plant Design.</span>
           </h1>
-          <p class="editorial-about-hero__lead">
-            Follow the 8-stage AAC production process, explore interactive general arrangement plant layouts, and see how equipment and civil design synchronize into one continuous facility.
+          <p class="editorial-hero__sub">
+            Autoclaved Aerated Concrete manufacturing requires total synchronization between raw material formulation, mechanical flow logistics, cutting precision, and hydrothermal curing. Explore our engineering frameworks, blueprints, and machinery systems.
           </p>
-          <div class="editorial-about-hero__actions">
-            <a href="plant-layout.html" class="editorial-btn-primary">
-              Interactive GA Layout <span class="btn-arrow">→</span>
+          <div class="editorial-hero__actions">
+            <a href="#pillars" class="editorial-hero__btn-dark">
+              <span>Explore 4 Pillars</span>
+              <span class="editorial-hero__btn-arrow">↓</span>
             </a>
-            <a href="#process" class="editorial-btn-outline">
-              Production Process <span class="btn-arrow">↓</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Right: Real Laxmi Visual -->
-        <div class="editorial-about-hero__visual">
-          <div class="editorial-about-hero__frame">
-            <img src="assets/images/plant-automation.png" alt="Laxmi En-Fab AAC Engineering Center & GA Plant Layout" class="editorial-about-hero__img" />
-            <div class="editorial-about-hero__overlay"></div>
-            <div class="editorial-about-hero__tech-tag">
-              <span class="tech-tag__dot"></span>
-              LAXMI 3D PLANT GENERAL ARRANGEMENT
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ============ 02 / AAC PRODUCTION PROCESS ============ -->
-    <section class="machinery-stage" id="process">
-      <div class="machinery-stage__inner">
-        <div class="machinery-stage__header">
-          <div class="academy-micro-label">PROCESS FLOW · STAGE 01 TO STAGE 08</div>
-          <h2 class="machinery-stage__title">
-            The 8-stage AAC <br><span class="machinery-stage__title-light">production process story.</span>
-          </h2>
-          <p class="machinery-stage__desc">
-            See how raw materials move through preparation, batching, pouring, precuring, cutting, autoclaving and packing to become finished AAC blocks and panels.
-          </p>
-        </div>
-
-        <!-- 8-Stage Sequential Process Flow Grid -->
-        <div class="machinery-catalog__grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
-          
-          <!-- Stage 01 -->
-          <div class="machinery-card" style="padding: 1.75rem;">
-            <span style="font-size: 0.75rem; font-weight: 800; color: var(--laxmi-blue, #0b3f78); letter-spacing: 0.14em;">STAGE 01</span>
-            <h3 style="font-size: 1.4rem; font-weight: 800; color: #07172c; margin: 0.4rem 0 0.6rem 0;">Raw Material Prep</h3>
-            <p style="font-size: 0.94rem; line-height: 1.6; color: #2c4a7c; margin-0 0 1rem 0;">
-              Siliceous materials (fly ash or sand) are wet-ground in heavy ball mills to a specific slurry fineness and stored in continuous-agitation tanks.
-            </p>
-            <div style="font-size: 0.82rem; font-weight: 700; color: #07172c;">EQUIPMENT: Wet Ball Mill &amp; Slurry Tanks</div>
-          </div>
-
-          <!-- Stage 02 -->
-          <div class="machinery-card" style="padding: 1.75rem;">
-            <span style="font-size: 0.75rem; font-weight: 800; color: var(--laxmi-blue, #0b3f78); letter-spacing: 0.14em;">STAGE 02</span>
-            <h3 style="font-size: 1.4rem; font-weight: 800; color: #07172c; margin: 0.4rem 0 0.6rem 0;">Slurry &amp; Binder Mixing</h3>
-            <p style="font-size: 0.94rem; line-height: 1.6; color: #2c4a7c; margin: 0 0 1rem 0;">
-              Fly ash slurry, OPC cement, quicklime powder, and gypsum are blended in high-shear mixers to form a uniform reactive slurry base.
-            </p>
-            <div style="font-size: 0.82rem; font-weight: 700; color: #07172c;">EQUIPMENT: High-Shear Slurry Agitators</div>
-          </div>
-
-          <!-- Stage 03 -->
-          <div class="machinery-card" style="padding: 1.75rem;">
-            <span style="font-size: 0.75rem; font-weight: 800; color: var(--laxmi-blue, #0b3f78); letter-spacing: 0.14em;">STAGE 03</span>
-            <h3 style="font-size: 1.4rem; font-weight: 800; color: #07172c; margin: 0.4rem 0 0.6rem 0;">Batching &amp; Dosing</h3>
-            <p style="font-size: 0.94rem; line-height: 1.6; color: #2c4a7c; margin: 0 0 1rem 0;">
-              PLC-controlled SCADA dosing system meters precise weights of slurry, binders, water, and aluminum powder expansion agent (±0.5% accuracy).
-            </p>
-            <div style="font-size: 0.82rem; font-weight: 700; color: #07172c;">EQUIPMENT: Automated Batching SCADA Tower</div>
-          </div>
-
-          <!-- Stage 04 -->
-          <div class="machinery-card" style="padding: 1.75rem;">
-            <span style="font-size: 0.75rem; font-weight: 800; color: var(--laxmi-blue, #0b3f78); letter-spacing: 0.14em;">STAGE 04</span>
-            <h3 style="font-size: 1.4rem; font-weight: 800; color: #07172c; margin: 0.4rem 0 0.6rem 0;">Pouring &amp; Moulding</h3>
-            <p style="font-size: 0.94rem; line-height: 1.6; color: #2c4a7c; margin: 0 0 1rem 0;">
-              The measured slurry mix is poured into precision oil-sealed steel mould boxes. Aluminum powder reacts with lime to produce millions of hydrogen micro-bubbles.
-            </p>
-            <div style="font-size: 0.82rem; font-weight: 700; color: #07172c;">EQUIPMENT: Pouring Mixer &amp; Mould Boxes</div>
-          </div>
-
-          <!-- Stage 05 -->
-          <div class="machinery-card" style="padding: 1.75rem;">
-            <span style="font-size: 0.75rem; font-weight: 800; color: var(--laxmi-blue, #0b3f78); letter-spacing: 0.14em;">STAGE 05</span>
-            <h3 style="font-size: 1.4rem; font-weight: 800; color: #07172c; margin: 0.4rem 0 0.6rem 0;">Precuring &amp; Rising</h3>
-            <p style="font-size: 0.94rem; line-height: 1.6; color: #2c4a7c; margin: 0 0 1rem 0;">
-              Moulds enter temperature-controlled precuring tunnels (40–50°C) for 2 to 3 hours as the cake expands to full volume and reaches green cake cutting hardness.
-            </p>
-            <div style="font-size: 0.82rem; font-weight: 700; color: #07172c;">EQUIPMENT: Precuring Fermentation Tunnel</div>
-          </div>
-
-          <!-- Stage 06 -->
-          <div class="machinery-card" style="padding: 1.75rem;">
-            <span style="font-size: 0.75rem; font-weight: 800; color: var(--laxmi-blue, #0b3f78); letter-spacing: 0.14em;">STAGE 06</span>
-            <h3 style="font-size: 1.4rem; font-weight: 800; color: #07172c; margin: 0.4rem 0 0.6rem 0;">High-Precision Cutting</h3>
-            <p style="font-size: 0.94rem; line-height: 1.6; color: #2c4a7c; margin: 0 0 1rem 0;">
-              Demoulded green cake is tilted 90° and passes through three-stage oscillating wire cutters for horizontal, vertical, and cross cuts with ±1mm accuracy.
-            </p>
-            <div style="font-size: 0.82rem; font-weight: 700; color: #07172c;">EQUIPMENT: 3-Stage Wire Cutting Machine</div>
-          </div>
-
-          <!-- Stage 07 -->
-          <div class="machinery-card" style="padding: 1.75rem;">
-            <span style="font-size: 0.75rem; font-weight: 800; color: var(--laxmi-blue, #0b3f78); letter-spacing: 0.14em;">STAGE 07</span>
-            <h3 style="font-size: 1.4rem; font-weight: 800; color: #07172c; margin: 0 0 1rem 0;">Autoclave Hydrothermal Curing</h3>
-            <p style="font-size: 0.94rem; line-height: 1.6; color: #2c4a7c; margin: 0 0 1rem 0;">
-              Cut blocks are loaded into ASME-certified pressure vessels for 10-12 hours of hydrothermal curing under 12 bar saturated steam (190°C) to form crystalline Tobermorite strength.
-            </p>
-            <div style="font-size: 0.82rem; font-weight: 700; color: #07172c;">EQUIPMENT: Autoclave Pressure Vessels</div>
-          </div>
-
-          <!-- Stage 08 -->
-          <div class="machinery-card" style="padding: 1.75rem;">
-            <span style="font-size: 0.75rem; font-weight: 800; color: var(--laxmi-blue, #0b3f78); letter-spacing: 0.14em;">STAGE 08</span>
-            <h3 style="font-size: 1.4rem; font-weight: 800; color: #07172c; margin: 0.4rem 0 0.6rem 0;">Cubing, Separating &amp; Packing</h3>
-            <p style="font-size: 0.94rem; line-height: 1.6; color: #2c4a7c; margin: 0 0 1rem 0;">
-              Cured AAC blocks are separated, automatically stacked onto wooden pallets, and wrapped in heavy plastic film for dispatch.
-            </p>
-            <div style="font-size: 0.82rem; font-weight: 700; color: #07172c;">EQUIPMENT: Auto Separator &amp; Strapping Line</div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 03 / AAC PLANT LAYOUT & GA DRAWING ============ -->
-    <section class="machinery-stage machinery-stage--alt" id="layout">
-      <div class="machinery-stage__inner">
-        <div class="machinery-stage__header">
-          <div class="academy-micro-label">INTERACTIVE GA DRAWING · GENERAL ARRANGEMENT</div>
-          <h2 class="machinery-stage__title">
-            AAC plant layout <br><span class="machinery-stage__title-light">&amp; general arrangement.</span>
-          </h2>
-          <p class="machinery-stage__desc">
-            Explore how raw material storage, batching tower, precuring tunnel, cutting line, autoclave bay, and packing yard are spatialized for minimal transport distance.
-          </p>
-        </div>
-
-        <div class="machinery-card" style="padding: 1rem; overflow: hidden; background: #07172c;">
-          <div style="position: relative; width: 100%; height: auto; border-radius: 12px; overflow: hidden;">
-            <img src="assets/images/explored view.png" alt="Laxmi General Arrangement Plant Layout" style="width: 100%; height: auto; display: block;" />
-          </div>
-          <div style="display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 0.5rem 0.5rem 0.5rem; flex-wrap: wrap; gap: 1rem; color: #ffffff;">
-            <span style="font-size: 0.88rem; font-weight: 700; color: rgba(255,255,255,0.85);">3D CIVIL ARRANGEMENT &amp; LOGISTICS FLOW</span>
-            <a href="plant-layout.html" class="editorial-hero__btn-white" style="font-size: 0.88rem; padding: 0.85rem 1.6rem;">
-              OPEN INTERACTIVE PLANT LAYOUT <span class="editorial-hero__btn-arrow">→</span>
+            <a href="#machinery" class="editorial-hero__link-dark">
+              <span>Explore 8 Machinery Lines</span>
+              <span class="editorial-hero__link-arrow">↗</span>
             </a>
           </div>
         </div>
       </div>
+
+      <!-- ── Bottom right product classification tag ── -->
+      <div class="editorial-hero__corner-caption" aria-hidden="true">
+        <span class="editorial-hero__corner-title">AAC blocks · Panels · Lintels</span>
+        <span class="editorial-hero__corner-sub">Products evolving with modern construction</span>
+      </div>
+
     </section>
 
-    <!-- ============ 04 / SYSTEM INTEGRATION FORMULA ============ -->
-    <section class="machinery-stage" id="integration">
-      <div class="machinery-stage__inner">
-        <div class="machinery-stage__header">
-          <h2 class="machinery-stage__title">
-            Process + Machine + Location <br><span class="machinery-stage__title-light">= Complete Production System.</span>
-          </h2>
-          <p class="machinery-stage__desc">
-            Every process stage connects to a specific machine unit and a dedicated footprint in the plant layout.
-          </p>
-        </div>
-
-        <div class="academy-lpe-grid">
-          <div class="academy-lpe-item">
-            <span class="academy-lpe-step">01 · PROCESS</span>
-            <h3 class="academy-lpe-title">What happens?</h3>
-            <p class="academy-lpe-desc">The specific chemical reaction, physical transformation, or material transfer occurring at that phase.</p>
-          </div>
-          <div class="academy-lpe-item">
-            <span class="academy-lpe-step">02 · MACHINE</span>
-            <h3 class="academy-lpe-title">What performs it?</h3>
-            <p class="academy-lpe-desc">The heavy machinery, pressure vessel, PLC dosing scale, or cutting machine executing the work.</p>
-          </div>
-          <div class="academy-lpe-item">
-            <span class="academy-lpe-step">03 · LOCATION</span>
-            <h3 class="academy-lpe-title">Where is it?</h3>
-            <p class="academy-lpe-desc">The spatial position of that equipment in the general arrangement plant layout for optimal workflow.</p>
-          </div>
-        </div>
+    <!-- ============ 02. STICKY SUB-NAVIGATION STRIP ============ -->
+    <nav class="eng-nav-strip" aria-label="Engineering Sections">
+      <div class="eng-nav-strip__inner">
+        <a href="#pillars" class="eng-nav-btn active">
+          <span class="eng-nav-num">01</span> Four Pillars
+        </a>
+        <a href="#process" class="eng-nav-btn">
+          <span class="eng-nav-num">02</span> 8-Step Process
+        </a>
+        <a href="#machinery" class="eng-nav-btn">
+          <span class="eng-nav-num">03</span> Machinery Systems
+        </a>
+        <a href="#faq" class="eng-nav-btn">
+          <span class="eng-nav-num">04</span> Frequently Asked Questions
+        </a>
       </div>
-    </section>
+    </nav>
 
-    <!-- ============ 05 / ENGINEERING PROOF WITHOUT MARKETING NOISE ============ -->
-    <section class="machinery-stage machinery-stage--alt" id="proof">
-      <div class="machinery-stage__inner">
-        <div class="machinery-stage__header">
-          <h2 class="machinery-stage__title">
-            Engineering proof <br><span class="machinery-stage__title-light">without marketing noise.</span>
-          </h2>
-          <p class="machinery-stage__desc">
-            Physical evidence of Laxmi's heavy manufacturing capability, in-house fabrication, and active client installations across India.
-          </p>
-        </div>
-
-        <div class="machinery-card-grid machinery-card-grid--two">
-          <div class="machinery-card">
-            <div class="machinery-card__image-wrap">
-              <img src="assets/images/production-process.png" alt="Laxmi Heavy Fabrication Workshop" class="machinery-card__img" />
-              <span class="machinery-card__overlay-tag">FACILITY VISUALS</span>
-            </div>
-            <div class="machinery-card__content">
-              <h3 class="machinery-card__title">In-House Manufacturing Workshop</h3>
-              <p class="machinery-card__body">Heavy CNC machining, automatic submerged arc welding, autoclave pressure vessel construction, and hydraulic testing under one roof in Ahmedabad.</p>
-              <div class="machinery-card__spec">
-                <a href="why-laxmi.html" class="machinery-text-link">WHY LAXMI MANUFACTURING <span class="machinery-link-arrow">→</span></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="machinery-card">
-            <div class="machinery-card__image-wrap">
-              <img src="assets/images/future-of-aac.png" alt="Active Client Installations" class="machinery-card__img" />
-              <span class="machinery-card__overlay-tag">PROJECT VISUALS</span>
-            </div>
-            <div class="machinery-card__content">
-              <h3 class="machinery-card__title">Active Plant Installations &amp; Proof</h3>
-              <p class="machinery-card__body">Over 100+ active AAC block and panel production plants engineered, commissioned, and operating across India and international markets.</p>
-              <div class="machinery-card__spec">
-                <a href="projects.html" class="machinery-text-link">VIEW PROJECT PROOF <span class="machinery-link-arrow">→</span></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 06 / FINAL CONVERSION CTA ============ -->
-    <section class="machinery-cta" id="cta">
-      <div class="machinery-hero__blueprint" aria-hidden="true">
-        <svg class="editorial-hero__grid-svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-          <line x1="200" y1="0" x2="200" y2="900" stroke="rgba(255,255,255,0.06)" stroke-width="0.5"/>
-          <line x1="720" y1="0" x2="720" y2="900" stroke="rgba(255,255,255,0.06)" stroke-width="0.5"/>
-          <line x1="1240" y1="0" x2="1240" y2="900" stroke="rgba(255,255,255,0.06)" stroke-width="0.5"/>
-        </svg>
-      </div>
-      <div class="machinery-cta__inner">
-        <h2 class="machinery-cta__title">
-          Understand your plant <br><span class="machinery-cta__title-light">before you build it.</span>
+    <!-- ============ 03. SECTION 01: SYSTEM ARCHITECTURE (4-COLUMN CONTIGUOUS FRAME) ============ -->
+    <section class="eng-arch-section" id="pillars">
+      <div class="eng-arch-header">
+        <span class="eng-arch-eyebrow">01 · THE 4 CORE PILLARS</span>
+        <h2 class="eng-arch-title">
+          <span>AAC Engineering Center.</span>
+          <span class="eng-arch-title-light">Technical blueprints &amp; factory systems.</span>
         </h2>
-        <p class="machinery-cta__sub">
-          Explore the production process, plant layout and machinery context with Laxmi's senior engineering team.
+        <div class="eng-arch-lead-wrap">
+          <p class="eng-arch-lead">
+            Explore our end-to-end technical guides covering every phase of setting up, designing, balancing, and operating a high-efficiency AAC manufacturing facility.
+          </p>
+        </div>
+      </div>
+
+      <!-- 4-Column Contiguous Frame -->
+      <div class="eng-arch-grid">
+        
+        <!-- Pillar 01 -->
+        <a href="production-process.html" class="eng-arch-col">
+          <div>
+            <span class="eng-arch-num">PILLAR 01 · PROCESS GUIDE</span>
+            <h3 class="eng-arch-name">AAC Block Production Process</h3>
+            <p class="eng-arch-desc">
+              8-stage manufacturing workflow, stoichiometric raw material chemistry, slurry batching, wire cutting, and hydrothermal autoclave synthesis.
+            </p>
+          </div>
+          <div class="eng-arch-link">
+            <span>Explore Process Guide</span>
+            <span class="eng-arch-arrow">↗</span>
+          </div>
+        </a>
+
+        <!-- Pillar 02 -->
+        <a href="plant-layout.html" class="eng-arch-col">
+          <div>
+            <span class="eng-arch-num">PILLAR 02 · MASTER PLANNING</span>
+            <h3 class="eng-arch-name">AAC Plant Layout</h3>
+            <p class="eng-arch-desc">
+              Straight In-Line vs. L-Shape layouts, single vs. double-door autoclave rail logistics, and 6 master site zoning &amp; setback rules.
+            </p>
+          </div>
+          <div class="eng-arch-link">
+            <span>Explore Plant Layout</span>
+            <span class="eng-arch-arrow">↗</span>
+          </div>
+        </a>
+
+        <!-- Pillar 03 -->
+        <a href="capacity-selection.html" class="eng-arch-col">
+          <div>
+            <span class="eng-arch-num">PILLAR 03 · BATCH SIZING</span>
+            <h3 class="eng-arch-name">Complete AAC Plant</h3>
+            <p class="eng-arch-desc">
+              Usable batch sizing, 5 standardized capacity tiers (150 to 1,500 m³/day), mixer cycle synchronization, and due diligence checkpoints.
+            </p>
+          </div>
+          <div class="eng-arch-link">
+            <span>Explore Complete Plant</span>
+            <span class="eng-arch-arrow">↗</span>
+          </div>
+        </a>
+
+        <!-- Pillar 04 -->
+        <a href="machinery-equipment.html" class="eng-arch-col">
+          <div>
+            <span class="eng-arch-num">PILLAR 04 · EQUIPMENT CATALOG</span>
+            <h3 class="eng-arch-name">Plant Machinery</h3>
+            <p class="eng-arch-desc">
+              8 heavy-duty machinery systems engineered and CNC-machined in Ahmedabad under strict ISO 9001 and IBR statutory compliance.
+            </p>
+          </div>
+          <div class="eng-arch-link">
+            <span>Explore Machinery Lines</span>
+            <span class="eng-arch-arrow">↗</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ============ 04. SECTION 02: 8-STEP CONTINUOUS PROCESS FLOW (FULL-WIDTH EDITORIAL) ============ -->
+    <section class="eng-flow-section" id="process">
+      <div class="eng-flow-header">
+        <span class="eng-flow-eyebrow">02 · MANUFACTURING CIRCUIT</span>
+        <h2 class="eng-flow-title">
+          <span>A synchronized circuit.</span>
+          <span class="eng-flow-title-light">Continuous 8-stage manufacturing.</span>
+        </h2>
+        <p class="eng-flow-lead">
+          Autoclaved Aerated Concrete transforms fly ash / sand and lime into lightweight structural masonry through precision dosing, hydrogen micro-aeration, and high-pressure crystalline hydrothermal synthesis. Eight synchronized stations ensure zero line bottlenecks.
         </p>
-        <div class="machinery-cta__action">
-          <a href="contact.html" class="editorial-hero__btn-white">
-            TALK TO LAXMI <span class="editorial-hero__btn-arrow">↗</span>
+      </div>
+
+      <!-- Full-Width Continuous Circuit Table -->
+      <div class="eng-flow-table">
+        
+        <div class="eng-flow-row">
+          <div class="eng-flow-num">01</div>
+          <div class="eng-flow-name">Raw material milling</div>
+          <div class="eng-flow-desc">Fly ash or quartz sand is wet-ground in a continuous ball mill to a fineness residue &lt;15% on a 45µm sieve, attaining 1.60–1.70 kg/L slurry density.</div>
+        </div>
+
+        <div class="eng-flow-row">
+          <div class="eng-flow-num">02</div>
+          <div class="eng-flow-name">Batching &amp; mixing</div>
+          <div class="eng-flow-desc">Electronic load cells weigh cement, quicklime, gypsum, and slurry with ±0.5% precision. Aluminium suspension is dosed into the high-shear mixer.</div>
+        </div>
+
+        <div class="eng-flow-row">
+          <div class="eng-flow-num">03</div>
+          <div class="eng-flow-name">Mould pouring &amp; rising</div>
+          <div class="eng-flow-desc">Slurry is poured into pre-oiled mould boxes. The alkaline reaction between aluminium and calcium hydroxide releases hydrogen micro-bubbles, expanding volume 2x.</div>
+        </div>
+
+        <div class="eng-flow-row">
+          <div class="eng-flow-num">04</div>
+          <div class="eng-flow-name">Static pre-curing</div>
+          <div class="eng-flow-desc">Moulds circulate through climate-controlled pre-curing tunnels (40–50°C) for 120–180 minutes until the green cake achieves optimum cutting firmness.</div>
+        </div>
+
+        <div class="eng-flow-row">
+          <div class="eng-flow-num">05</div>
+          <div class="eng-flow-name">90° tilting &amp; demoulding</div>
+          <div class="eng-flow-desc">A hydraulic tilting crane locks the side plate, smoothly rotates the cake 90° upright, and strips the mould body with zero edge impact.</div>
+        </div>
+
+        <div class="eng-flow-row">
+          <div class="eng-flow-num">06</div>
+          <div class="eng-flow-name">2-axis wire cutting</div>
+          <div class="eng-flow-desc">Oscillating high-tensile steel wires slice the green cake horizontally, followed by vertical cross-cutting with ±1.0mm precision. Waste crust is 100% recycled.</div>
+        </div>
+
+        <div class="eng-flow-row">
+          <div class="eng-flow-num">07</div>
+          <div class="eng-flow-name">Hydrothermal synthesis</div>
+          <div class="eng-flow-desc">High-pressure saturated steam curing at 12–14 bar (190°C) for 10–12 hours converts reactive silica and lime into permanent Tobermorite crystal needles.</div>
+        </div>
+
+        <div class="eng-flow-row">
+          <div class="eng-flow-num">08</div>
+          <div class="eng-flow-name">Auto palletizing &amp; packing</div>
+          <div class="eng-flow-desc">Hydraulic clamps de-stick autoclaved cake layers, automatically stack blocks onto wooden pallets, and transfer them for protective film strapping.</div>
+        </div>
+
+      </div>
+
+      <div class="eng-flow-action">
+        <div style="color: #64748b; font-size: 0.88rem;">
+          <strong style="color: #ffffff;">Chemical Reaction:</strong> 2Al + 3Ca(OH)₂ + 6H₂O → 3CaO·Al₂O₃·6H₂O + 3H₂ ↑
+        </div>
+        <a href="production-process.html" style="color: #38bdf8; font-weight: 700; font-size: 0.92rem; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem;">
+          <span>Explore Step-by-Step Production Process</span>
+          <span>→</span>
+        </a>
+      </div>
+
+    </section>
+
+    <!-- ============ 05. SECTION 03: 8 CORE MACHINERY SYSTEMS ============ -->
+    <section class="eng-section eng-section--light" id="machinery">
+      <div class="eng-container">
+        
+        <div class="eng-machinery-header">
+          <span class="eng-eyebrow">03 · EQUIPMENT &amp; FABRICATION</span>
+          <h2 class="eng-title">
+            <span>Machinery systems.</span>
+            <span class="eng-title-light">Engineered for continuous duty.</span>
+          </h2>
+          <div class="eng-machinery-header__bar">
+            <p class="eng-lead">
+              Heavy-duty, precision-machined plant equipment designed and fabricated in Ahmedabad by Laxmi En-Fab Pvt. Ltd. with strict adherence to ISO &amp; IBR standards.
+            </p>
+            <a href="machinery-equipment.html" class="eng-catalog-link">
+              <span>View Full Equipment Catalog</span>
+              <span class="eng-catalog-link__arrow">→</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="eng-machinery-grid">
+          
+          <!-- Machine 1 -->
+          <div class="eng-machine-card">
+            <div class="eng-machine-card__bg">
+              <img src="assets/images/engineering/machinery-raw-material-storage.png" alt="" class="eng-machine-card__bg-img" loading="lazy" />
+            </div>
+            <div class="eng-machine-card__top">
+              <span class="eng-machine-category">RAW MATERIAL STORAGE · SILOS</span>
+              <h3 class="eng-machine-title">Storage Silos &amp; Feeders</h3>
+              <p class="eng-machine-desc">
+                60T–200T silos for fly ash, cement, and lime with aeration fluidization pads, bin activators, and pneumatic bulker feed.
+              </p>
+            </div>
+            <a href="machinery-raw-material-storage.html" class="eng-machine-action-link">
+              <span>View system specs</span>
+              <span class="eng-machine-arrow">↗</span>
+            </a>
+          </div>
+
+          <!-- Machine 2 -->
+          <div class="eng-machine-card">
+            <div class="eng-machine-card__bg">
+              <img src="assets/images/engineering/machinery-batching-preparation.png" alt="" class="eng-machine-card__bg-img" loading="lazy" />
+            </div>
+            <div class="eng-machine-card__top">
+              <span class="eng-machine-category">BATCHING &amp; MIXING · SLURRY</span>
+              <h3 class="eng-machine-title">Batching &amp; Slurry Preparation</h3>
+              <p class="eng-machine-desc">
+                Continuous wet ball mills, slurry density measurement, load-cell weighing hoppers, and automated aluminium dosing.
+              </p>
+            </div>
+            <a href="machinery-batching-preparation.html" class="eng-machine-action-link">
+              <span>View system specs</span>
+              <span class="eng-machine-arrow">↗</span>
+            </a>
+          </div>
+
+          <!-- Machine 3 -->
+          <div class="eng-machine-card">
+            <div class="eng-machine-card__bg">
+              <img src="assets/images/engineering/machinery-mould-precuring.png" alt="" class="eng-machine-card__bg-img" loading="lazy" />
+            </div>
+            <div class="eng-machine-card__top">
+              <span class="eng-machine-category">MOULD HANDLING · PRE-CURING</span>
+              <h3 class="eng-machine-title">Mould Handling &amp; Pre-Curing</h3>
+              <p class="eng-machine-desc">
+                CNC-machined mould boxes, detachable side plates, automated hydraulic ferry cars, and insulated cake-rising tunnels.
+              </p>
+            </div>
+            <a href="machinery-mould-precuring.html" class="eng-machine-action-link">
+              <span>View system specs</span>
+              <span class="eng-machine-arrow">↗</span>
+            </a>
+          </div>
+
+          <!-- Machine 4 -->
+          <div class="eng-machine-card">
+            <div class="eng-machine-card__bg">
+              <img src="assets/images/engineering/machinery-tilting-machine.png" alt="" class="eng-machine-card__bg-img" loading="lazy" />
+            </div>
+            <div class="eng-machine-card__top">
+              <span class="eng-machine-category">90° DEMOULDING · TILTING</span>
+              <h3 class="eng-machine-title">AAC 90° Tilting Machine</h3>
+              <p class="eng-machine-desc">
+                Smooth hydraulic 90° tilting crane fixture that secures the side plate and demoulds green cake without cracking.
+              </p>
+            </div>
+            <a href="machinery-tilting-machine.html" class="eng-machine-action-link">
+              <span>View system specs</span>
+              <span class="eng-machine-arrow">↗</span>
+            </a>
+          </div>
+
+          <!-- Machine 5 -->
+          <div class="eng-machine-card">
+            <div class="eng-machine-card__bg">
+              <img src="assets/images/engineering/machinery-cutting-system.png" alt="" class="eng-machine-card__bg-img" loading="lazy" />
+            </div>
+            <div class="eng-machine-card__top">
+              <span class="eng-machine-category">HIGH-PRECISION CUTTING</span>
+              <h3 class="eng-machine-title">High-Precision Cutting System</h3>
+              <p class="eng-machine-desc">
+                High-speed oscillating horizontal wires, vertical cross-cut frames, top crust skimming, and 100% slurry waste recycling.
+              </p>
+            </div>
+            <a href="machinery-cutting-system.html" class="eng-machine-action-link">
+              <span>View system specs</span>
+              <span class="eng-machine-arrow">↗</span>
+            </a>
+          </div>
+
+          <!-- Machine 6 -->
+          <div class="eng-machine-card">
+            <div class="eng-machine-card__bg">
+              <img src="assets/images/engineering/machinery-autoclave.png" alt="" class="eng-machine-card__bg-img" loading="lazy" />
+            </div>
+            <div class="eng-machine-card__top">
+              <span class="eng-machine-category">AUTOCLAVE CURING · VESSELS</span>
+              <h3 class="eng-machine-title">High-Pressure Autoclaves</h3>
+              <p class="eng-machine-desc">
+                Heavy-duty IBR-certified curing vessels (Ø2.0m–Ø2.5m, 21m–35m) with pneumatic safety doors and steam recovery.
+              </p>
+            </div>
+            <a href="machinery-autoclave.html" class="eng-machine-action-link">
+              <span>View system specs</span>
+              <span class="eng-machine-arrow">↗</span>
+            </a>
+          </div>
+
+          <!-- Machine 7 -->
+          <div class="eng-machine-card">
+            <div class="eng-machine-card__bg">
+              <img src="assets/images/engineering/machinery-steam-boiler.png" alt="" class="eng-machine-card__bg-img" loading="lazy" />
+            </div>
+            <div class="eng-machine-card__top">
+              <span class="eng-machine-category">STEAM GENERATION · BOILERS</span>
+              <h3 class="eng-machine-title">Industrial Steam Boiler</h3>
+              <p class="eng-machine-desc">
+                Biomass / Coal / Gas boilers (4 TPH to 12 TPH) engineered to deliver steady high-pressure saturated steam.
+              </p>
+            </div>
+            <a href="machinery-steam-boiler.html" class="eng-machine-action-link">
+              <span>View system specs</span>
+              <span class="eng-machine-arrow">↗</span>
+            </a>
+          </div>
+
+          <!-- Machine 8 -->
+          <div class="eng-machine-card">
+            <div class="eng-machine-card__bg">
+              <img src="assets/images/engineering/machinery-auto-palletizing.png" alt="" class="eng-machine-card__bg-img" loading="lazy" />
+            </div>
+            <div class="eng-machine-card__top">
+              <span class="eng-machine-category">PACKING &amp; STACKING · LOGISTICS</span>
+              <h3 class="eng-machine-title">Auto Palletizing &amp; Packing</h3>
+              <p class="eng-machine-desc">
+                Hydraulic cake separators, block de-sticking clamps, automated pallet stackers, and strapping conveyors.
+              </p>
+            </div>
+            <a href="machinery-auto-palletizing.html" class="eng-machine-action-link">
+              <span>View system specs</span>
+              <span class="eng-machine-arrow">↗</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 06. SECTION 04: EDITORIAL CONVERSION CTA ============ -->
+    <section class="eng-cta-banner" id="cta">
+      <div class="eng-cta-banner__inner">
+        <span class="eng-cta-banner__eyebrow">04 · STRATEGIC PLANNING</span>
+        <h2 class="eng-cta-banner__title">
+          <span>Plan the market.</span>
+          <span class="eng-cta-banner__title-light">Then plan the plant.</span>
+        </h2>
+        <p class="eng-cta-banner__lead">
+          Share your proposed location, expected capacity, available raw materials and current project stage with the Laxmi En-Fab engineering team.
+        </p>
+        <div class="eng-cta-banner__actions">
+          <a href="contact.html" class="eng-cta-banner__btn-white">
+            <span>Request a feasibility discussion</span>
+            <span class="eng-cta-banner__btn-arrow">↗</span>
           </a>
-          <a href="solutions.html" class="editorial-hero__link-text">
-            EXPLORE SOLUTIONS <span class="editorial-hero__btn-arrow">→</span>
+          <a href="#hero" class="eng-cta-banner__link-top">
+            <span>Return to top ↑</span>
           </a>
         </div>
-        <div class="machinery-cta__contact-info">
-          <span>Direct Lines: +91-8980800607 | +91-8980800839</span>
-          <span>Email: aac@laxmienfab.com</span>
+      </div>
+    </section>
+
+    <!-- ============ 07. SECTION 05: SPLIT-SCREEN FAQ SECTION ============ -->
+    <section class="eng-section eng-section--white" id="faq">
+      <div class="eng-container">
+        
+        <div class="eng-faq-layout">
+          
+          <!-- FAQ Left Intro Column -->
+          <div class="eng-faq-header">
+            <span class="eng-faq-eyebrow">05 · INVESTOR FAQS</span>
+            <h2 class="eng-faq-title">
+              <span>Clear answers.</span>
+              <span class="eng-faq-title-light">Better decisions.</span>
+            </h2>
+          </div>
+
+          <!-- FAQ Right Accordion List -->
+          <div class="eng-faq-list">
+            
+            <div class="eng-faq-item">
+              <button class="eng-faq-btn" type="button" aria-expanded="false">
+                <span>Is AAC a good future business in India?</span>
+                <span class="eng-faq-icon">+</span>
+              </button>
+              <div class="eng-faq-answer">
+                Yes. AAC block manufacturing is experiencing strong compound growth driven by government mandates replacing red clay bricks, rapid urbanization, and mandatory ESG/green building norms. With lightweight construction, 3x faster masonry speed, and superior thermal insulation, demand in tier-1, tier-2, and industrial corridors continues to outpace traditional masonry.
+              </div>
+            </div>
+
+            <div class="eng-faq-item">
+              <button class="eng-faq-btn" type="button" aria-expanded="false">
+                <span>What capacity should a new plant have?</span>
+                <span class="eng-faq-icon">+</span>
+              </button>
+              <div class="eng-faq-answer">
+                For most new entrants, a 300 m³/day plant (upgradeable to 600 m³/day) offers the optimal balance between initial capital outlay, operational efficiency, and local market absorption within a 150 km delivery radius. Entry-level 150 m³/day setups are ideal for regional micro-markets with captive construction demand.
+              </div>
+            </div>
+
+            <div class="eng-faq-item">
+              <button class="eng-faq-btn" type="button" aria-expanded="false">
+                <span>Is full automation always better?</span>
+                <span class="eng-faq-icon">+</span>
+              </button>
+              <div class="eng-faq-answer">
+                Automation should be strategically balanced. Core processes like PLC batching, raw material dosing, mould tilting, and wire cutting must be fully automated to guarantee ±1.0mm dimensional accuracy and zero cake breakage. Semi-automated palletizing and dispatch can be customized based on local labor economics.
+              </div>
+            </div>
+
+            <div class="eng-faq-item">
+              <button class="eng-faq-btn" type="button" aria-expanded="false">
+                <span>What is the first step before investing?</span>
+                <span class="eng-faq-icon">+</span>
+              </button>
+              <div class="eng-faq-answer">
+                The first step is conducting a local raw material assay (fly ash reactive silica and lime reactivity) combined with a 150 km market demand radius study. Laxmi En-Fab provides complete pre-feasibility modeling, plot layout blueprints, and project ROI calculations before machinery fabrication begins.
+              </div>
+            </div>
+
+            <div class="eng-faq-item">
+              <button class="eng-faq-btn" type="button" aria-expanded="false">
+                <span>What is the minimum land and power requirement?</span>
+                <span class="eng-faq-icon">+</span>
+              </button>
+              <div class="eng-faq-answer">
+                A standard 300 m³/day plant requires approximately 3.5 to 4.5 acres of land. The connected electrical load is roughly 450–550 kW with an operational power consumption of 22–26 kWh per m³ of finished block and 0.65 m³ water per m³ of AAC.
+              </div>
+            </div>
+
+          </div>
+
         </div>
+
       </div>
     </section>
 
   </main>
 
-  <!-- Dynamic Footer Injection Placeholder -->
+  <!-- Shared Global Footer Injection -->
   <div id="site-footer"></div>
 
+  <!-- Scripts -->
   <script src="js/main.js"></script>
   <script src="js/navigation.js"></script>
   <script src="js/animations.js"></script>
   <script src="js/components.js"></script>
+
+  <!-- Page Interactivity Scripts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // FAQ Accordion Toggle
+      document.querySelectorAll('.eng-faq-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const item = this.closest('.eng-faq-item');
+          const isOpen = item.classList.contains('is-open');
+          
+          // Close all
+          document.querySelectorAll('.eng-faq-item').forEach(i => {
+            i.classList.remove('is-open');
+            i.querySelector('.eng-faq-btn')?.setAttribute('aria-expanded', 'false');
+          });
+          
+          // Toggle clicked
+          if (!isOpen) {
+            item.classList.add('is-open');
+            this.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
+      // Smooth scroll for subnav
+      document.querySelectorAll('.eng-nav-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          if (href && href.startsWith('#')) {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              const navHeight = document.querySelector('.eng-nav-strip')?.offsetHeight || 70;
+              const headerHeight = document.querySelector('.site-header')?.offsetHeight || 70;
+              const topOffset = target.getBoundingClientRect().top + window.pageYOffset - (navHeight + headerHeight + 10);
+              window.scrollTo({ top: topOffset, behavior: 'smooth' });
+              
+              document.querySelectorAll('.eng-nav-btn').forEach(b => b.classList.remove('active'));
+              this.classList.add('active');
+            }
+          }
+        });
+      });
+
+      // Active state highlight on scroll
+      window.addEventListener('scroll', function() {
+        const sections = ['pillars', 'process', 'machinery', 'faq'];
+        const scrollPos = window.pageYOffset + 200;
+
+        sections.forEach(id => {
+          const el = document.getElementById(id);
+          if (el) {
+            const top = el.offsetTop;
+            const height = el.offsetHeight;
+            if (scrollPos >= top && scrollPos < top + height) {
+              document.querySelectorAll('.eng-nav-btn').forEach(b => {
+                b.classList.toggle('active', b.getAttribute('href') === `#${id}`);
+              });
+            }
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
