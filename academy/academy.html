@@ -5,15 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="AAC Investor Academy by Laxmi En-Fab Pvt. Ltd. Step-by-step masterclass for prospective investors covering market analysis, plant design, supplier comparison, operational efficiency, and plant expansion." />
   <meta name="keywords" content="AAC investor academy, AAC plant investment, AAC business plan, AAC market demand, AAC plant cost, AAC supplier comparison, Laxmi En-Fab" />
-  <title>AAC Investor Academy | Complete Investment Roadmap | Laxmi En-Fab</title>
+  <title>AAC Investor Academy | Complete Investment Roadmap &amp; Plant Masterclass | Laxmi En-Fab</title>
 
+  <!-- Google Fonts: Geist & Geist Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet" />
+
+  <!-- Core Stylesheets -->
   <link rel="stylesheet" href="../css/variables.css" />
   <link rel="stylesheet" href="../css/main.css" />
   <link rel="stylesheet" href="../css/components.css" />
   <link rel="stylesheet" href="../css/homepage.css" />
+  <link rel="stylesheet" href="../css/engineering.css" />
   <link rel="stylesheet" href="../css/academy.css" />
   <link rel="stylesheet" href="../css/responsive.css" />
 
@@ -31,6 +35,378 @@
     }
   }
   </script>
+
+  <style>
+    /* ==========================================================================
+       AAC INVESTOR ACADEMY HUB CUSTOM STYLES (1500px CONTAINER & SWISS CARDS)
+       ========================================================================== */
+    .academy-page {
+      background-color: #ffffff;
+      color: #07172c;
+      font-family: var(--font-geist), Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* 5-Stage Masterclass Grid */
+    .academy-masterclass-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+      margin-top: 2.5rem;
+    }
+
+    @media (max-width: 1200px) {
+      .academy-masterclass-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .academy-masterclass-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .academy-stage-card-modern {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 2.25rem 2rem;
+      box-shadow: 0 4px 16px rgba(7, 23, 44, 0.03);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      position: relative;
+    }
+
+    .academy-stage-card-modern:hover {
+      transform: translateY(-4px);
+      border-color: #0b3f78;
+      box-shadow: 0 16px 36px rgba(7, 23, 44, 0.08);
+    }
+
+    .academy-stage-card-modern--featured {
+      background: #040d1a;
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .academy-stage-card-modern--featured:hover {
+      border-color: #e6a822;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+    }
+
+    .academy-stage-card-modern__head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.25rem;
+    }
+
+    .academy-stage-card-modern__num {
+      font-family: var(--font-geist-mono), monospace;
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: #0b3f78;
+      line-height: 1;
+    }
+
+    .academy-stage-card-modern--featured .academy-stage-card-modern__num {
+      color: #e6a822;
+    }
+
+    .academy-stage-card-modern__badge {
+      font-family: var(--font-geist), Arial, sans-serif;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.75rem;
+      border-radius: 20px;
+      background: rgba(11, 63, 120, 0.08);
+      color: #0b3f78;
+    }
+
+    .academy-stage-card-modern--featured .academy-stage-card-modern__badge {
+      background: rgba(230, 168, 34, 0.15);
+      color: #e6a822;
+    }
+
+    .academy-stage-card-modern__title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #07172c;
+      margin: 0 0 0.75rem 0;
+      line-height: 1.3;
+      letter-spacing: -0.015em;
+    }
+
+    .academy-stage-card-modern--featured .academy-stage-card-modern__title {
+      color: #ffffff;
+    }
+
+    .academy-stage-card-modern__desc {
+      font-size: 0.92rem;
+      line-height: 1.65;
+      color: #475569;
+      margin: 0 0 1.5rem 0;
+    }
+
+    .academy-stage-card-modern--featured .academy-stage-card-modern__desc {
+      color: #cbd5e1;
+    }
+
+    .academy-stage-card-modern__links {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 2rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+
+    .academy-stage-card-modern__link-item a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #334155;
+      text-decoration: none;
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    .academy-stage-card-modern__link-item a:hover {
+      color: #0284c7;
+      transform: translateX(3px);
+    }
+
+    .academy-stage-card-modern--featured .academy-stage-card-modern__link-item a {
+      color: #e2e8f0;
+    }
+
+    .academy-stage-card-modern--featured .academy-stage-card-modern__link-item a:hover {
+      color: #e6a822;
+    }
+
+    .academy-stage-card-modern__bullet {
+      color: #0284c7;
+      font-weight: bold;
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+
+    .academy-stage-card-modern--featured .academy-stage-card-modern__bullet {
+      color: #e6a822;
+    }
+
+    .academy-stage-card-modern__btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.5rem;
+      border-radius: 8px;
+      font-family: var(--font-geist), Arial, sans-serif;
+      font-size: 0.84rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-decoration: none;
+      background: #07172c;
+      color: #ffffff;
+      transition: background 0.2s ease, transform 0.2s ease;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .academy-stage-card-modern__btn:hover {
+      background: #0b223d;
+      transform: translateY(-2px);
+    }
+
+    .academy-stage-card-modern--featured .academy-stage-card-modern__btn {
+      background: #e6a822;
+      color: #040d1a;
+    }
+
+    .academy-stage-card-modern--featured .academy-stage-card-modern__btn:hover {
+      background: #f59e0b;
+    }
+
+    /* Financial Sizing Roadmap Matrix */
+    .financial-archetype-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+
+    @media (max-width: 1100px) {
+      .financial-archetype-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .financial-archetype-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .financial-archetype-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 1.75rem 1.5rem;
+      box-shadow: 0 2px 10px rgba(7, 23, 44, 0.03);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: border-color 0.25s ease, transform 0.25s ease;
+    }
+
+    .financial-archetype-card:hover {
+      border-color: #0b3f78;
+      transform: translateY(-3px);
+    }
+
+    .financial-archetype-card__tag {
+      font-family: var(--font-geist-mono), monospace;
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: #0284c7;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.5rem;
+    }
+
+    .financial-archetype-card__title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #07172c;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .financial-archetype-card__capacity {
+      font-family: var(--font-geist-mono), monospace;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #0b3f78;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .financial-archetype-card__specs {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.85rem;
+    }
+
+    .financial-archetype-card__spec-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .financial-archetype-card__spec-lbl {
+      color: #64748b;
+      font-weight: 600;
+    }
+
+    .financial-archetype-card__spec-val {
+      color: #07172c;
+      font-weight: 700;
+      font-family: var(--font-geist-mono), monospace;
+    }
+
+    .financial-archetype-card__ideal {
+      background: #f8fafc;
+      border-left: 3px solid #0284c7;
+      padding: 0.65rem 0.85rem;
+      border-radius: 0 6px 6px 0;
+      font-size: 0.8rem;
+      color: #475569;
+      line-height: 1.45;
+    }
+
+    /* 8-Point Buyer Verification Matrix */
+    .evaluation-matrix-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.75rem;
+      margin-top: 2.5rem;
+    }
+
+    @media (max-width: 860px) {
+      .evaluation-matrix-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .evaluation-matrix-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 2px 10px rgba(7, 23, 44, 0.03);
+    }
+
+    .evaluation-matrix-card__icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(11, 63, 120, 0.08);
+      color: #0b3f78;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      font-weight: 900;
+      margin-bottom: 1.25rem;
+    }
+
+    .evaluation-matrix-card__title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #07172c;
+      margin: 0 0 0.6rem 0;
+    }
+
+    .evaluation-matrix-card__desc {
+      font-size: 0.92rem;
+      line-height: 1.65;
+      color: #475569;
+      margin: 0 0 1.25rem 0;
+    }
+
+    .evaluation-matrix-card__checklist {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      font-size: 0.86rem;
+      color: #334155;
+    }
+
+    .evaluation-matrix-card__check-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .evaluation-matrix-card__check-item svg {
+      color: #10b981;
+      flex-shrink: 0;
+    }
+  </style>
 </head>
 <body class="academy-page">
 
@@ -46,196 +422,790 @@
     </div>
   </nav>
 
+  <!-- Sticky In-Page Sub-Navigation Strip -->
+  <nav class="eng-nav-strip" aria-label="Investor Academy Navigation">
+    <div class="eng-nav-strip__inner">
+      <a href="#stages" class="eng-nav-btn active"><span class="eng-nav-num">01</span> Curriculum Stages</a>
+      <a href="#financial-roadmap" class="eng-nav-btn"><span class="eng-nav-num">02</span> Financial Sizing</a>
+      <a href="#evaluation-matrix" class="eng-nav-btn"><span class="eng-nav-num">03</span> Evaluation Framework</a>
+      <a href="#turnkey-scope" class="eng-nav-btn"><span class="eng-nav-num">04</span> Turnkey Scope</a>
+      <a href="#live-demo" class="eng-nav-btn"><span class="eng-nav-num">05</span> Live Workshop Tour</a>
+    </div>
+  </nav>
+
   <main id="main-content">
 
-    <!-- ============ 01. HERO SECTION ============ -->
-    <section class="editorial-about-hero" id="hero">
-      <div class="editorial-about-hero__inner">
-        <div class="editorial-about-hero__content">
-          <span class="editorial-eyebrow editorial-eyebrow--gold">INVESTOR KNOWLEDGE CENTER</span>
-          <h1 class="editorial-about-hero__title">
-            AAC Investor <span class="highlight">Academy</span>
+    <!-- ============ SECTION 01 — HERO (HIGH-KEY EDITORIAL 1500PX) ============ -->
+    <section class="editorial-hero editorial-hero--light is-loaded" id="hero" aria-label="AAC Investor Academy Overview">
+
+      <!-- Background Visual & Overlay -->
+      <div class="editorial-hero__media" aria-hidden="true">
+        <div class="editorial-hero__video-wrap">
+          <img
+            class="editorial-hero__poster"
+            src="../assets/images/why-aac.png"
+            alt="Laxmi En-Fab AAC Investor Academy Plant Engineering"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </div>
+        <div class="editorial-hero__overlay"></div>
+      </div>
+
+      <!-- Main Hero Content -->
+      <div class="editorial-hero__inner">
+        <div class="editorial-hero__content">
+          <span class="editorial-hero__eyebrow">INVESTOR KNOWLEDGE CENTER · 5-STAGE MASTERCLASS</span>
+          <h1 class="editorial-hero__title">
+            <span>AAC Investor Academy.</span>
+            <span class="editorial-hero__title-light">Complete investment &amp; plant roadmap.</span>
           </h1>
-          <p class="editorial-about-hero__lead">
-            Setting up an Autoclaved Aerated Concrete (AAC) manufacturing plant requires grounded market intelligence, precise capacity engineering, rigorous supplier evaluation, and structured operational discipline. Explore our 5-stage roadmap designed for smart investors.
+          <p class="editorial-hero__sub">
+            Setting up an Autoclaved Aerated Concrete (AAC) manufacturing plant requires grounded market intelligence, precise capacity engineering, rigorous supplier evaluation, and structured operational discipline. Explore our 5-stage masterclass designed for smart investors.
           </p>
-          <div class="editorial-about-hero__actions">
-            <a href="#stages" class="editorial-btn-primary">
-              EXPLORE 5 STAGES <span class="btn-arrow">↓</span>
+          <div class="editorial-hero__actions">
+            <a href="#stages" class="editorial-hero__btn-dark">
+              <span>Explore 5 Masterclass Stages</span>
+              <span class="editorial-hero__btn-arrow">↓</span>
             </a>
-            <a href="understand-market.html" class="editorial-btn-outline">
-              START STAGE 01 <span class="btn-arrow">→</span>
+            <a href="../contact.html" class="editorial-hero__link-dark">
+              <span>Schedule Investor Briefing</span>
+              <span class="editorial-hero__link-arrow">↗</span>
             </a>
           </div>
         </div>
+      </div>
 
-        <div class="editorial-about-hero__visual">
-          <div class="editorial-about-hero__frame">
-            <img src="../assets/images/why-aac.png" alt="Laxmi AAC Investor Academy" class="editorial-about-hero__img" />
-            <div class="editorial-about-hero__overlay"></div>
-            <div class="editorial-about-hero__tech-tag">
-              <span class="tech-tag__dot"></span>
-              INVESTOR CURRICULUM · 5 KEY STAGES
-            </div>
-          </div>
+      <!-- Corner Metadata Caption -->
+      <div class="editorial-hero__corner-caption" aria-hidden="true">
+        <span class="editorial-hero__corner-title">AAC Investor Academy Curriculum</span>
+        <span class="editorial-hero__corner-sub">Stages 01–05 / Sizing 150–1500 m³/day / ROI Payback</span>
+      </div>
+
+    </section>
+
+    <!-- ============ SECTION 02 — DEDICATED SPECIFICATIONS & STATS STRIP ============ -->
+    <section class="eng-stats-strip" aria-label="AAC Investment Benchmarks">
+      <div class="eng-stats-strip__inner">
+        <div class="eng-stat-card">
+          <div class="eng-stat-card__val">05 <span>Stages</span></div>
+          <div class="eng-stat-card__lbl">Structured Masterclass Curriculum</div>
+        </div>
+        <div class="eng-stat-card">
+          <div class="eng-stat-card__val">150–1500 <span>m³/day</span></div>
+          <div class="eng-stat-card__lbl">Scalable Plant Engineering Sizing</div>
+        </div>
+        <div class="eng-stat-card">
+          <div class="eng-stat-card__val">2.5–3.5 <span>Yrs</span></div>
+          <div class="eng-stat-card__lbl">Project Capital Payback Cycle</div>
+        </div>
+        <div class="eng-stat-card">
+          <div class="eng-stat-card__val">100% <span>Turnkey</span></div>
+          <div class="eng-stat-card__lbl">Single-Source Responsibility</div>
         </div>
       </div>
     </section>
 
-    <!-- ============ 02. 5-STAGE CURRICULUM ROADMAP ============ -->
-    <section class="academy-section" id="stages" style="padding-top: 4rem;">
-      <div class="academy-section__inner">
-        <div class="academy-micro-label">MASTERCLASS ARCHITECTURE</div>
-        <div class="academy-intro-grid" style="margin-bottom: 3.5rem;">
-          <h2 class="academy-intro-heading">
-            From Market Opportunity to Profitable Plant Operations
+    <!-- ============ SECTION 03 — 5-STAGE MASTERCLASS ARCHITECTURE GRID ============ -->
+    <section class="eng-section eng-section--white" id="stages">
+      <div class="eng-container">
+        
+        <div class="eng-arch-header">
+          <span class="eng-arch-eyebrow">01 · MASTERCLASS CURRICULUM</span>
+          <h2 class="eng-arch-title">
+            <span>The 5-Stage Investor Roadmap.</span>
+            <span class="eng-arch-title-light">From market feasibility to profitable operations.</span>
           </h2>
-          <div class="academy-intro-body">
-            <p>
-              Each stage provides critical decision frameworks, financial considerations, and engineering criteria so you can make informed, de-risked capital allocation decisions.
+          <div class="eng-arch-lead-wrap">
+            <p class="eng-arch-lead">
+              Each stage provides actionable engineering criteria, CAPEX and OPEX breakdowns, supplier audit benchmarks, and operational SOPs to ensure de-risked capital deployment.
             </p>
           </div>
         </div>
 
-        <!-- 5 Stages Grid -->
-        <div class="academy-stages-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.75rem;">
-          
+        <!-- 5-Stage Modern Grid -->
+        <div class="academy-masterclass-grid">
+
           <!-- Stage 01 -->
-          <article class="academy-stage-card" style="background: #ffffff; border: 1px solid rgba(7, 23, 44, 0.1); border-radius: 12px; padding: 2rem; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04); display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.25s ease, box-shadow 0.25s ease;">
+          <article class="academy-stage-card-modern">
             <div>
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem;">
-                <span style="font-size: 1.5rem; font-weight: 900; color: #0b3f78; font-family: monospace;">01</span>
-                <span style="background: rgba(11, 63, 120, 0.08); color: #0b3f78; font-size: 0.75rem; font-weight: 800; padding: 0.3rem 0.75rem; border-radius: 20px; letter-spacing: 0.05em;">STAGE 01</span>
+              <div class="academy-stage-card-modern__head">
+                <span class="academy-stage-card-modern__num">01</span>
+                <span class="academy-stage-card-modern__badge">STAGE 01 · MARKET</span>
               </div>
-              <h3 style="font-size: 1.35rem; font-weight: 800; color: #07172c; margin-bottom: 0.75rem;">Understand the Market</h3>
-              <p style="color: #4a5568; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.25rem;">
-                Understand market drivers, future demand trends, raw material availability, profitability dynamics, and government policy frameworks before committing capital.
+              <h3 class="academy-stage-card-modern__title">Understand the Market</h3>
+              <p class="academy-stage-card-modern__desc">
+                Evaluate market drivers, rapid red clay brick replacement trends, fly ash sourcing logistics, gross margin profiles, and state green building policy incentives.
               </p>
-              <ul style="list-style: none; padding: 0; margin: 0 0 1.5rem 0; font-size: 0.88rem; color: #2d3748;">
-                <li style="padding: 0.35rem 0; display: flex; align-items: center; gap: 0.5rem;"><span style="color: #0b3f78; font-weight: bold;">•</span> <a href="understand-market.html?topic=why-aac" style="color: inherit; text-decoration: none;">Why AAC &amp; Product Value</a></li>
-                <li style="padding: 0.35rem 0; display: flex; align-items: center; gap: 0.5rem;"><span style="color: #0b3f78; font-weight: bold;">•</span> <a href="understand-market.html?topic=future-of-aac" style="color: inherit; text-decoration: none;">Future of AAC &amp; Adoption</a></li>
-                <li style="padding: 0.35rem 0; display: flex; align-items: center; gap: 0.5rem;"><span style="color: #0b3f78; font-weight: bold;">•</span> <a href="understand-market.html?topic=raw-materials" style="color: inherit; text-decoration: none;">Raw Material Logistics &amp; Fly Ash</a></li>
-                <li style="padding: 0.35rem 0; display: flex; align-items: center; gap: 0.5rem;"><span style="color: #0b3f78; font-weight: bold;">•</span> <a href="understand-market.html?topic=profitability" style="color: inherit; text-decoration: none;">Commercial Profitability &amp; Policies</a></li>
+              <ul class="academy-stage-card-modern__links">
+                <li class="academy-stage-card-modern__link-item">
+                  <a href="understand-market.html?topic=why-aac">
+                    <span class="academy-stage-card-modern__bullet">•</span> Why AAC &amp; Product Value Proposition
+                  </a>
+                </li>
+                <li class="academy-stage-card-modern__link-item">
+                  <a href="understand-market.html?topic=future-of-aac">
+                    <span class="academy-stage-card-modern__bullet">•</span> Future of AAC &amp; Adoption Forecasts
+                  </a>
+                </li>
+                <li class="academy-stage-card-modern__link-item">
+                  <a href="understand-market.html?topic=market-demand">
+                    <span class="academy-stage-card-modern__bullet">•</span> Market Demand Sizing &amp; Brick Replacement
+                  </a>
+                </li>
+                <li class="academy-stage-card-modern__link-item">
+                  <a href="understand-market.html?topic=raw-materials">
+                    <span class="academy-stage-card-modern__bullet">•</span> Raw Material Logistics &amp; Fly Ash Chemistry
+                  </a>
+                </li>
+                <li class="academy-stage-card-modern__link-item">
+                  <a href="understand-market.html?topic=profitability">
+                    <span class="academy-stage-card-modern__bullet">•</span> Commercial Profitability &amp; Subsidies
+                  </a>
+                </li>
               </ul>
             </div>
-            <a href="understand-market.html" class="editorial-btn-primary" style="text-align: center; justify-content: center; width: 100%;">
-              EXPLORE STAGE 01 <span class="btn-arrow">→</span>
+            <a href="understand-market.html" class="academy-stage-card-modern__btn">
+              <span>Explore Stage 01</span>
+              <span>→</span>
             </a>
           </article>
 
           <!-- Stage 02 -->
-          <article class="academy-stage-card" style="background: #ffffff; border: 1px solid rgba(7, 23, 44, 0.1); border-radius: 12px; padding: 2rem; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04); display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.25s ease, box-shadow 0.25s ease;">
+          <article class="academy-stage-card-modern">
             <div>
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem;">
-                <span style="font-size: 1.5rem; font-weight: 900; color: #0b3f78; font-family: monospace;">02</span>
-                <span style="background: rgba(11, 63, 120, 0.08); color: #0b3f78; font-size: 0.75rem; font-weight: 800; padding: 0.3rem 0.75rem; border-radius: 20px; letter-spacing: 0.05em;">STAGE 02</span>
+              <div class="academy-stage-card-modern__head">
+                <span class="academy-stage-card-modern__num">02</span>
+                <span class="academy-stage-card-modern__badge">STAGE 02 · DESIGN</span>
               </div>
-              <h3 style="font-size: 1.35rem; font-weight: 800; color: #07172c; margin-bottom: 0.75rem;">Design Your Plant</h3>
-              <p style="color: #4a5568; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.25rem;">
-                Translate business strategy into engineering specs. Calculate plant capacity, land footprint, total CAPEX, OPEX, working capital, ROI, and bank financing schemes.
+              <h3 class="academy-stage-card-modern__title">Design Your Plant</h3>
+              <p class="academy-stage-card-modern__desc">
+                Translate commercial strategy into hard engineering specs. Calculate daily output, factory plot layout, civil sheds, total CAPEX, working capital, and bank financing.
               </p>
-              <ul style="list-style: none; padding: 0; margin: 0 0 1.5rem 0; font-size: 0.88rem; color: #2d3748;">
-                <li style="padding: 0.35rem 0; display: flex; align-items: center; gap: 0.5rem;"><span style="color: #0b3f78; font-weight: bold;">•</span> <a href="design-your-plant.html?topic=capacity-selection" style="color: inherit; text-decoration: none;">Capacity Selection (150–1500 m³/day)</a></li>
-                <li style="padding: 0.35rem 0; display: flex; align-items: center; gap: 0.5rem;"><span style="color: #0b3f78; font-weight: bold;">•</span> <a href="design-your-plant.html?topic=land-requirement" style="color: inherit; text-decoration: none;">Land Footprint &amp; Material Flow</a></li>
-                <li style="padding: 0.35rem 0; display: flex; align-items: center; gap: 0.5rem;"><span style="color: #0b3f78; font-weight: bold;">•</span> <a href="design-your-plant.html?topic=project-cost" style="color: inherit; text-decoration: none;">Project Cost &amp; Working Capital</a></li>
-                <li style="padding: 0.35rem 0; display: flex; align-items: center; gap: 0.5rem;"><span style="color: #0b3f78; font-weight: bold;">•</span> <a href="design-your-plant.html?topic=roi-payback" style="color: inherit; text-decoration: none;">ROI, Payback, Loans &amp; Subsidies</a></li>
+              <ul class="academy-stage-card-modern__links">
+                <li class="academy-stage-card-modern__link-item">
+                  <a href="design-your-plant.html?topic=capacity-selection">
+                    <span class="academy-stage-card-modern__bullet">•</span> Capacity Selection (150 to 1,500 m³/day)
+                  </a>
+                </li>
+                <li class="academy-stage-card-modern__link-item">
+                  <a href="design-your-plant.html?topic=land-requirement">
+                    <span class="academy-stage-card-modern__bullet">•</span> Land Footprint &amp; Factory Material Flow
+                  </a>
+                </li>
+                <li class="academy-stage-card-modern__link-item">
+                  <a href="design-your-plant.html?topic=project-cost">
+                    <span class="academy-stage-card-modern__bullet">•</span> Project Cost &amp; Working Capital Model
+                  </a>
+                </li>
+                <li class="academy-stage-card-modern__link-item">
+                  <a href="design-your-plant.html?topic=roi-payback">
+                    <span class="academy-stage-card-modern__bullet">•</span> ROI, Payback Horizon &amp; Cash Flows
+                  </a>
+                </li>
+                <li class="academy-stage-card-modern__link-item">
+                  <a href="design-your-plant.html?topic=subsidy">
+                    <span class="academy-stage-card-modern__bullet">•</span> Bank Loans, DPR Preparation &amp; Subsidies
+                  </a>
+                </li>
               </ul>
             </div>
-            <a href="design-your-plant.html" class="editorial-btn-primary" style="text-align: center; justify-content: center; width: 100%;">
-              EXPLORE STAGE 02 <span class="btn-arrow">→</span>
+            <a href="design-your-plant.html" class="academy-stage-card-modern__btn">
+              <span>Explore Stage 02</span>
+              <span>→</span>
             </a>
           </article>
 
-          <!-- Stage 03 -->
-          <article class="academy-stage-card" style="background: #040d1a; color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 12px; padding: 2rem; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.25s ease, box-shadow 0.25s ease;">
+          <!-- Stage 03 (Featured Dark Matrix) -->
+          <article class="academy-stage-card-modern academy-stage-card-modern--featured">
             <div>
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem;">
-                <span style="font-size: 1.5rem; font-weight: 900; color: #e6a822; font-family: monospace;">03</span>
-                <span style="background: rgba(230, 168, 34, 0.15); color: #e6a822; font-size: 0.75rem; font-weight: 800; padding: 0.3rem 0.75rem; border-radius: 20px; letter-spacing: 0.05em;">STAGE 03 · VERIFICATION</span>
+              <div class="academy-stage-card-modern__head">
+                <span class="academy-stage-card-modern__num">03</span>
+                <span class="academy-stage-card-modern__badge">STAGE 03 · VERIFICATION</span>
               </div>
-              <h3 style="font-size: 1.35rem; font-weight: 800; color: #ffffff; margin-bottom: 0.75rem;">Compare Your AAC Plant</h3>
-              <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.25rem;">
-                Compare complete plants rather than headline machinery tags. Use our 8-point comparison checklist covering automation, engineering scope, and long-term support.
+              <h3 class="academy-stage-card-modern__title">Compare Your AAC Plant</h3>
+              <p class="academy-stage-card-modern__desc">
+                Evaluate complete turnkey engineering rather than headline machinery quotations. Use our rigorous 8-point buyer verification matrix to compare suppliers objectively.
               </p>
-              <ul style="list-style: none; padding: 0; margin: 0 0 1.5rem 0; font-size: 0.88rem; color: #e2e8f0;">
-                <li style="padding: 0.35rem 0; display: flex; align-items: center; gap: 0.5rem;"><span style="color: #e6a822; font-weight: bold;">•</span> Configuration &amp; Process Scope</li>
-                <li style="padding: 0.35rem 0; display: flex; align-items: center; gap: 0.5rem;"><span style="color: #e6a822; font-weight: bold;">•</span> Automation &amp; Heavy Fabrication</li>
-                <li style="padding: 0.35rem 0; display: flex; align-items: center; gap: 0.5rem;"><span style="color: #e6a822; font-weight: bold;">•</span> Commissioning Guarantees</li>
-                <li style="padding: 0.35rem 0; display: flex; align-items: center; gap: 0.5rem;"><span style="color: #e6a822; font-weight: bold;">•</span> Interactive 8-Point Buyer Checklist</li>
+              <ul class="academy-stage-card-modern__links">
+                <li class="academy-stage-card-modern__link-item">
+                  <a href="compare-your-aac-plant.html">
+                    <span class="academy-stage-card-modern__bullet">•</span> Flat vs Tilt vs High-Speed Cutting Systems
+                  </a>
+                </li>
+                <li class="academy-stage-card-modern__link-item">
+                  <a href="compare-your-aac-plant.html">
+                    <span class="academy-stage-card-modern__bullet">•</span> Autoclave Curing Pressure &amp; Shell Thickness
+                  </a>
+                </li>
+                <li class="academy-stage-card-modern__link-item">
+                  <a href="compare-your-aac-plant.html">
+                    <span class="academy-stage-card-modern__bullet">•</span> Heavy Steel Fabrication Tonnage Benchmarks
+                  </a>
+                </li>
+                <li class="academy-stage-card-modern__link-item">
+                  <a href="compare-your-aac-plant.html">
+                    <span class="academy-stage-card-modern__bullet">•</span> Single-Source Delivery vs Split Vendor Risks
+                  </a>
+                </li>
+                <li class="academy-stage-card-modern__link-item">
+                  <a href="compare-your-aac-plant.html">
+                    <span class="academy-stage-card-modern__bullet">•</span> Interactive 8-Point Buyer Checklist
+                  </a>
+                </li>
               </ul>
             </div>
-            <a href="compare-your-aac-plant.html" class="editorial-btn-primary" style="background: #e6a822; color: #040d1a; text-align: center; justify-content: center; width: 100%;">
-              EXPLORE STAGE 03 <span class="btn-arrow">→</span>
+            <a href="compare-your-aac-plant.html" class="academy-stage-card-modern__btn">
+              <span>Explore Stage 03</span>
+              <span>→</span>
             </a>
           </article>
 
           <!-- Stage 04 -->
-          <article class="academy-stage-card" style="background: #ffffff; border: 1px solid rgba(7, 23, 44, 0.1); border-radius: 12px; padding: 2rem; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04); display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.25s ease, box-shadow 0.25s ease;">
+          <article class="academy-stage-card-modern">
             <div>
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem;">
-                <span style="font-size: 1.5rem; font-weight: 900; color: #0b3f78; font-family: monospace;">04</span>
-                <span style="background: rgba(11, 63, 120, 0.08); color: #0b3f78; font-size: 0.75rem; font-weight: 800; padding: 0.3rem 0.75rem; border-radius: 20px; letter-spacing: 0.05em;">STAGE 04</span>
+              <div class="academy-stage-card-modern__head">
+                <span class="academy-stage-card-modern__num">04</span>
+                <span class="academy-stage-card-modern__badge">STAGE 04 · EFFICIENCY</span>
               </div>
-              <h3 style="font-size: 1.35rem; font-weight: 800; color: #07172c; margin-bottom: 0.75rem;">Efficient Your Plant</h3>
-              <p style="color: #4a5568; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.25rem;">
-                Master operational excellence. Implement automated process controls, optimize hydrothermal steam consumption, enforce maintenance SOPs, and train technical staff.
+              <h3 class="academy-stage-card-modern__title">Efficient Your Plant</h3>
+              <p class="academy-stage-card-modern__desc">
+                Maximize operating gross profit margins post-commissioning. Eliminate cake crumbling, achieve IS:2185 dimensional tolerances, and cut steam consumption by up to 22%.
               </p>
-              <ul style="list-style: none; padding: 0; margin: 0 0 1.5rem 0; font-size: 0.88rem; color: #2d3748;">
-                <li style="padding: 0.35rem 0; display: flex; align-items: center; gap: 0.5rem;"><span style="color: #0b3f78; font-weight: bold;">•</span> Automation Upgrades &amp; Repeatability</li>
-                <li style="padding: 0.35rem 0; display: flex; align-items: center; gap: 0.5rem;"><span style="color: #0b3f78; font-weight: bold;">•</span> AAC Block Quality &amp; Precision</li>
-                <li style="padding: 0.35rem 0; display: flex; align-items: center; gap: 0.5rem;"><span style="color: #0b3f78; font-weight: bold;">•</span> Preventive Maintenance SOPs</li>
-                <li style="padding: 0.35rem 0; display: flex; align-items: center; gap: 0.5rem;"><span style="color: #0b3f78; font-weight: bold;">•</span> Steam Cost Reduction &amp; Manpower</li>
+              <ul class="academy-stage-card-modern__links">
+                <li class="academy-stage-card-modern__link-item">
+                  <a href="efficient-your-plant.html?topic=make-plant-automatic">
+                    <span class="academy-stage-card-modern__bullet">•</span> Automation Upgrades &amp; Cycle Repeatability
+                  </a>
+                </li>
+                <li class="academy-stage-card-modern__link-item">
+                  <a href="efficient-your-plant.html?topic=improve-block-quality">
+                    <span class="academy-stage-card-modern__bullet">•</span> Block Quality &amp; Strength Calibration
+                  </a>
+                </li>
+                <li class="academy-stage-card-modern__link-item">
+                  <a href="efficient-your-plant.html?topic=reduce-steam-cost">
+                    <span class="academy-stage-card-modern__bullet">•</span> Hydrothermal Steam Curing &amp; Cost Control
+                  </a>
+                </li>
+                <li class="academy-stage-card-modern__link-item">
+                  <a href="efficient-your-plant.html?topic=plant-maintenance-sop">
+                    <span class="academy-stage-card-modern__bullet">•</span> Preventive Maintenance SOPs &amp; Schedules
+                  </a>
+                </li>
+                <li class="academy-stage-card-modern__link-item">
+                  <a href="efficient-your-plant.html?topic=skilled-manpower">
+                    <span class="academy-stage-card-modern__bullet">•</span> Technical Crew Deployment &amp; Operator Training
+                  </a>
+                </li>
               </ul>
             </div>
-            <a href="efficient-your-plant.html" class="editorial-btn-primary" style="text-align: center; justify-content: center; width: 100%;">
-              EXPLORE STAGE 04 <span class="btn-arrow">→</span>
+            <a href="efficient-your-plant.html" class="academy-stage-card-modern__btn">
+              <span>Explore Stage 04</span>
+              <span>→</span>
             </a>
           </article>
 
           <!-- Stage 05 -->
-          <article class="academy-stage-card" style="background: #ffffff; border: 1px solid rgba(7, 23, 44, 0.1); border-radius: 12px; padding: 2rem; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04); display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.25s ease, box-shadow 0.25s ease;">
+          <article class="academy-stage-card-modern">
             <div>
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem;">
-                <span style="font-size: 1.5rem; font-weight: 900; color: #0b3f78; font-family: monospace;">05</span>
-                <span style="background: rgba(11, 63, 120, 0.08); color: #0b3f78; font-size: 0.75rem; font-weight: 800; padding: 0.3rem 0.75rem; border-radius: 20px; letter-spacing: 0.05em;">STAGE 05</span>
+              <div class="academy-stage-card-modern__head">
+                <span class="academy-stage-card-modern__num">05</span>
+                <span class="academy-stage-card-modern__badge">STAGE 05 · EXPANSION</span>
               </div>
-              <h3 style="font-size: 1.35rem; font-weight: 800; color: #07172c; margin-bottom: 0.75rem;">Expand Your Plant</h3>
-              <p style="color: #4a5568; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.25rem;">
-                Scale with confidence. Plan modular capacity doubling, reinforced ALC panel manufacturing, and integrated dry mix mortar production lines.
+              <h3 class="academy-stage-card-modern__title">Expand Your Plant</h3>
+              <p class="academy-stage-card-modern__desc">
+                Scale your manufacturing facility without dismantling existing operations. Plan modular capacity doubling, reinforced ALC panel lines, and dry mortar integration.
               </p>
-              <ul style="list-style: none; padding: 0; margin: 0 0 1.5rem 0; font-size: 0.88rem; color: #2d3748;">
-                <li style="padding: 0.35rem 0; display: flex; align-items: center; gap: 0.5rem;"><span style="color: #0b3f78; font-weight: bold;">•</span> Capacity Expansion &amp; Line Duplication</li>
-                <li style="padding: 0.35rem 0; display: flex; align-items: center; gap: 0.5rem;"><span style="color: #0b3f78; font-weight: bold;">•</span> Plant Upgrades &amp; Advanced Automation</li>
-                <li style="padding: 0.35rem 0; display: flex; align-items: center; gap: 0.5rem;"><span style="color: #0b3f78; font-weight: bold;">•</span> Reinforced AAC Panel Lines</li>
-                <li style="padding: 0.35rem 0; display: flex; align-items: center; gap: 0.5rem;"><span style="color: #0b3f78; font-weight: bold;">•</span> Dry Mix Mortar Integration</li>
+              <ul class="academy-stage-card-modern__links">
+                <li class="academy-stage-card-modern__link-item">
+                  <a href="expand-your-plant.html">
+                    <span class="academy-stage-card-modern__bullet">•</span> Modular Capacity Doubling &amp; Line 2
+                  </a>
+                </li>
+                <li class="academy-stage-card-modern__link-item">
+                  <a href="expand-your-plant.html">
+                    <span class="academy-stage-card-modern__bullet">•</span> Reinforced AAC / ALC Wall Panel Lines
+                  </a>
+                </li>
+                <li class="academy-stage-card-modern__link-item">
+                  <a href="expand-your-plant.html">
+                    <span class="academy-stage-card-modern__bullet">•</span> Dry Mix Mortar Integration &amp; Synergy
+                  </a>
+                </li>
+                <li class="academy-stage-card-modern__link-item">
+                  <a href="expand-your-plant.html">
+                    <span class="academy-stage-card-modern__bullet">•</span> Robotic Palletizing &amp; Auto-Strapping
+                  </a>
+                </li>
+                <li class="academy-stage-card-modern__link-item">
+                  <a href="expand-your-plant.html">
+                    <span class="academy-stage-card-modern__bullet">•</span> Zero-Waste Green Slurry Recycling
+                  </a>
+                </li>
               </ul>
             </div>
-            <a href="expand-your-plant.html" class="editorial-btn-primary" style="text-align: center; justify-content: center; width: 100%;">
-              EXPLORE STAGE 05 <span class="btn-arrow">→</span>
+            <a href="expand-your-plant.html" class="academy-stage-card-modern__btn">
+              <span>Explore Stage 05</span>
+              <span>→</span>
+            </a>
+          </article>
+
+          <!-- Stage Summary Consultation Card -->
+          <article class="academy-stage-card-modern" style="background: #f8fafc; border: 1.5px dashed #cbd5e1;">
+            <div>
+              <div class="academy-stage-card-modern__head">
+                <span class="academy-stage-card-modern__num" style="color: #0284c7;">DPR</span>
+                <span class="academy-stage-card-modern__badge" style="background: #e0f2fe; color: #0284c7;">CUSTOM FEASIBILITY</span>
+              </div>
+              <h3 class="academy-stage-card-modern__title">Request a Custom DPR</h3>
+              <p class="academy-stage-card-modern__desc">
+                Need a location-specific Detailed Project Report (DPR) tailored to your state, fly ash source, and target daily output? Consult our senior project engineers.
+              </p>
+              <ul class="academy-stage-card-modern__links">
+                <li class="academy-stage-card-modern__link-item">
+                  <span style="font-size: 0.85rem; color: #475569; display: flex; align-items: center; gap: 6px;">
+                    <strong style="color: #07172c;">✓</strong> Detailed CAPEX &amp; Working Capital
+                  </span>
+                </li>
+                <li class="academy-stage-card-modern__link-item">
+                  <span style="font-size: 0.85rem; color: #475569; display: flex; align-items: center; gap: 6px;">
+                    <strong style="color: #07172c;">✓</strong> Civil Layout &amp; Shed Drawings
+                  </span>
+                </li>
+                <li class="academy-stage-card-modern__link-item">
+                  <span style="font-size: 0.85rem; color: #475569; display: flex; align-items: center; gap: 6px;">
+                    <strong style="color: #07172c;">✓</strong> Bank Term Loan Subsidy Compliance
+                  </span>
+                </li>
+                <li class="academy-stage-card-modern__link-item">
+                  <span style="font-size: 0.85rem; color: #475569; display: flex; align-items: center; gap: 6px;">
+                    <strong style="color: #07172c;">✓</strong> Fly Ash Mix Chemistry Formulations
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <a href="../contact.html" class="academy-stage-card-modern__btn" style="background: #0284c7;">
+              <span>Request DPR Advisory</span>
+              <span>→</span>
             </a>
           </article>
 
         </div>
+
       </div>
     </section>
 
-    <!-- ============ 03. CALL TO ACTION BANNER ============ -->
-    <section class="academy-section academy-section--dark" style="background: #040d1a; border-top: 1px solid rgba(255,255,255,0.1);">
-      <div class="academy-section__inner" style="text-align: center; max-width: 860px;">
-        <span class="editorial-eyebrow editorial-eyebrow--gold" style="justify-content: center;">DIRECT CONSULTATION</span>
-        <h2 style="font-size: 2.25rem; font-weight: 800; margin: 1rem 0 1.25rem; color: #ffffff;">
-          Planning an AAC Plant Investment?
-        </h2>
-        <p style="font-size: 1.05rem; color: #94a3b8; line-height: 1.7; margin-bottom: 2rem;">
-          Connect with Laxmi En-Fab engineering specialists for feasibility assessment, plant layout customization, and commercial guidance.
-        </p>
-        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-          <a href="../contact.html" class="editorial-btn-primary" style="background: #e6a822; color: #040d1a;">
-            TALK TO AN AAC EXPERT →
-          </a>
-          <a href="../engineering-center.html" class="editorial-btn-outline" style="border-color: rgba(255,255,255,0.3); color: #ffffff;">
-            VISIT ENGINEERING CENTER →
-          </a>
+    <!-- ============ SECTION 04 — FINANCIAL ROADMAP & SIZING ARCHETYPES ============ -->
+    <section class="eng-section eng-section--alt" id="financial-roadmap">
+      <div class="eng-container">
+        
+        <div class="eng-arch-header">
+          <span class="eng-arch-eyebrow">02 · FINANCIAL ROADMAP</span>
+          <h2 class="eng-arch-title">
+            <span>Plant Sizing &amp; Investment Archetypes.</span>
+            <span class="eng-arch-title-light">CAPEX, land requirements &amp; projected payback.</span>
+          </h2>
+          <div class="eng-arch-lead-wrap">
+            <p class="eng-arch-lead">
+              Select the optimal capacity envelope based on regional demand concentration, fly ash proximity, and available equity capital.
+            </p>
+          </div>
+        </div>
+
+        <!-- Sizing Grid -->
+        <div class="financial-archetype-grid">
+
+          <!-- Tier 1 -->
+          <div class="financial-archetype-card">
+            <div>
+              <div class="financial-archetype-card__tag">Tier 1 · Starter</div>
+              <h3 class="financial-archetype-card__title">Regional Entry</h3>
+              <div class="financial-archetype-card__capacity">150–200 m³/day (1 Autoclave)</div>
+              <div class="financial-archetype-card__specs">
+                <div class="financial-archetype-card__spec-row">
+                  <span class="financial-archetype-card__spec-lbl">Land Plot:</span>
+                  <span class="financial-archetype-card__spec-val">2.5–3.5 Acres</span>
+                </div>
+                <div class="financial-archetype-card__spec-row">
+                  <span class="financial-archetype-card__spec-lbl">Plant CAPEX:</span>
+                  <span class="financial-archetype-card__spec-val">₹8.0–12.0 Cr</span>
+                </div>
+                <div class="financial-archetype-card__spec-row">
+                  <span class="financial-archetype-card__spec-lbl">Payback Period:</span>
+                  <span class="financial-archetype-card__spec-val">24–30 Months</span>
+                </div>
+                <div class="financial-archetype-card__spec-row">
+                  <span class="financial-archetype-card__spec-lbl">Connected Power:</span>
+                  <span class="financial-archetype-card__spec-val">200–250 kVA</span>
+                </div>
+              </div>
+            </div>
+            <div class="financial-archetype-card__ideal">
+              <strong>Best For:</strong> First-time investors, Tier 2/3 city clusters, captive real-estate developers.
+            </div>
+          </div>
+
+          <!-- Tier 2 -->
+          <div class="financial-archetype-card">
+            <div>
+              <div class="financial-archetype-card__tag">Tier 2 · Benchmark</div>
+              <h3 class="financial-archetype-card__title">Commercial Standard</h3>
+              <div class="financial-archetype-card__capacity">300–450 m³/day (2 Autoclaves)</div>
+              <div class="financial-archetype-card__specs">
+                <div class="financial-archetype-card__spec-row">
+                  <span class="financial-archetype-card__spec-lbl">Land Plot:</span>
+                  <span class="financial-archetype-card__spec-val">4.5–6.0 Acres</span>
+                </div>
+                <div class="financial-archetype-card__spec-row">
+                  <span class="financial-archetype-card__spec-lbl">Plant CAPEX:</span>
+                  <span class="financial-archetype-card__spec-val">₹16.0–24.0 Cr</span>
+                </div>
+                <div class="financial-archetype-card__spec-row">
+                  <span class="financial-archetype-card__spec-lbl">Payback Period:</span>
+                  <span class="financial-archetype-card__spec-val">28–36 Months</span>
+                </div>
+                <div class="financial-archetype-card__spec-row">
+                  <span class="financial-archetype-card__spec-lbl">Connected Power:</span>
+                  <span class="financial-archetype-card__spec-val">350–450 kVA</span>
+                </div>
+              </div>
+            </div>
+            <div class="financial-archetype-card__ideal">
+              <strong>Best For:</strong> High-growth urban peripheries, institutional project suppliers, established builders.
+            </div>
+          </div>
+
+          <!-- Tier 3 -->
+          <div class="financial-archetype-card">
+            <div>
+              <div class="financial-archetype-card__tag">Tier 3 · High Volume</div>
+              <h3 class="financial-archetype-card__title">Industrial Scaled</h3>
+              <div class="financial-archetype-card__capacity">600–900 m³/day (3–4 Autoclaves)</div>
+              <div class="financial-archetype-card__specs">
+                <div class="financial-archetype-card__spec-row">
+                  <span class="financial-archetype-card__spec-lbl">Land Plot:</span>
+                  <span class="financial-archetype-card__spec-val">7.0–10.0 Acres</span>
+                </div>
+                <div class="financial-archetype-card__spec-row">
+                  <span class="financial-archetype-card__spec-lbl">Plant CAPEX:</span>
+                  <span class="financial-archetype-card__spec-val">₹30.0–45.0 Cr</span>
+                </div>
+                <div class="financial-archetype-card__spec-row">
+                  <span class="financial-archetype-card__spec-lbl">Payback Period:</span>
+                  <span class="financial-archetype-card__spec-val">24–32 Months</span>
+                </div>
+                <div class="financial-archetype-card__spec-row">
+                  <span class="financial-archetype-card__spec-lbl">Connected Power:</span>
+                  <span class="financial-archetype-card__spec-val">600–800 kVA</span>
+                </div>
+              </div>
+            </div>
+            <div class="financial-archetype-card__ideal">
+              <strong>Best For:</strong> Multi-district distribution, government infrastructure contracts, high fly ash availability.
+            </div>
+          </div>
+
+          <!-- Tier 4 -->
+          <div class="financial-archetype-card">
+            <div>
+              <div class="financial-archetype-card__tag">Tier 4 · Enterprise</div>
+              <h3 class="financial-archetype-card__title">Mega Turnkey &amp; ALC</h3>
+              <div class="financial-archetype-card__capacity">1000–1500 m³/day (5+ Autoclaves)</div>
+              <div class="financial-archetype-card__specs">
+                <div class="financial-archetype-card__spec-row">
+                  <span class="financial-archetype-card__spec-lbl">Land Plot:</span>
+                  <span class="financial-archetype-card__spec-val">12.0–18.0 Acres</span>
+                </div>
+                <div class="financial-archetype-card__spec-row">
+                  <span class="financial-archetype-card__spec-lbl">Plant CAPEX:</span>
+                  <span class="financial-archetype-card__spec-val">₹55.0–85.0 Cr</span>
+                </div>
+                <div class="financial-archetype-card__spec-row">
+                  <span class="financial-archetype-card__spec-lbl">Payback Period:</span>
+                  <span class="financial-archetype-card__spec-val">30–38 Months</span>
+                </div>
+                <div class="financial-archetype-card__spec-row">
+                  <span class="financial-archetype-card__spec-lbl">Connected Power:</span>
+                  <span class="financial-archetype-card__spec-val">1000–1400 kVA</span>
+                </div>
+              </div>
+            </div>
+            <div class="financial-archetype-card__ideal">
+              <strong>Best For:</strong> National manufacturing corporations, export-oriented reinforced panel &amp; block facilities.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ SECTION 05 — 8-POINT BUYER VERIFICATION MATRIX ============ -->
+    <section class="eng-section eng-section--white" id="evaluation-matrix">
+      <div class="eng-container">
+        
+        <div class="eng-arch-header">
+          <span class="eng-arch-eyebrow">03 · SUPPLIER EVALUATION CRITERIA</span>
+          <h2 class="eng-arch-title">
+            <span>The 8-Point Buyer Audit Framework.</span>
+            <span class="eng-arch-title-light">What every investor must verify before signing.</span>
+          </h2>
+          <div class="eng-arch-lead-wrap">
+            <p class="eng-arch-lead">
+              Machinery quotations can look identical on paper. Here are the 4 foundational engineering differences that determine whether your plant runs at 99% uptime or suffers chronic downtime.
+            </p>
+          </div>
+        </div>
+
+        <!-- 4 Key Comparison Pillars -->
+        <div class="evaluation-matrix-grid">
+
+          <!-- Pillar 1 -->
+          <div class="evaluation-matrix-card">
+            <div class="evaluation-matrix-card__icon">01</div>
+            <h3 class="evaluation-matrix-card__title">Fabrication Tonnage &amp; Heavy Steel Sections</h3>
+            <p class="evaluation-matrix-card__desc">
+              Low-cost vendors use thin 6–8mm plate steel that warps under hydraulic pressure and repetitive cake cycling. Laxmi builds with 16–25mm structural steel with stress-relieved weldments.
+            </p>
+            <ul class="evaluation-matrix-card__checklist">
+              <li class="evaluation-matrix-card__check-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Total plant structural weight &gt;400 tons on 600 m³/day
+              </li>
+              <li class="evaluation-matrix-card__check-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Machined linear guide rails for zero-vibration mold travel
+              </li>
+            </ul>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="evaluation-matrix-card">
+            <div class="evaluation-matrix-card__icon">02</div>
+            <h3 class="evaluation-matrix-card__title">High-Speed Wire Cutting &amp; Kerf Precision</h3>
+            <p class="evaluation-matrix-card__desc">
+              Cutting accuracy determines block market value. Laxmi's multi-stage horizontal and cross-cutting machines utilize pneumatic wire tensioning for ±1.0mm IS:2185 dimensional tolerance.
+            </p>
+            <ul class="evaluation-matrix-card__checklist">
+              <li class="evaluation-matrix-card__check-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Sub-60 second cutting cycle time with automatic wire cleaning
+              </li>
+              <li class="evaluation-matrix-card__check-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Zero bottom-waste slicing with continuous green cake recycling
+              </li>
+            </ul>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="evaluation-matrix-card">
+            <div class="evaluation-matrix-card__icon">03</div>
+            <h3 class="evaluation-matrix-card__title">Autoclave Shell Thickness &amp; Steam Recovery</h3>
+            <p class="evaluation-matrix-card__desc">
+              Autoclaves account for up to 40% of thermal operating costs. Laxmi autoclaves feature Class 1 pressure vessel certification, 16–20mm SA-516 Grade 70 boiler steel, and dual steam recapture.
+            </p>
+            <ul class="evaluation-matrix-card__checklist">
+              <li class="evaluation-matrix-card__check-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                12–14 bar working pressure rating with quick-locking safety doors
+              </li>
+              <li class="evaluation-matrix-card__check-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Inter-autoclave steam blowdown transfer reducing boiler fuel by 18%
+              </li>
+            </ul>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="evaluation-matrix-card">
+            <div class="evaluation-matrix-card__icon">04</div>
+            <h3 class="evaluation-matrix-card__title">Centralized PLC SCADA &amp; Chemical Dosing</h3>
+            <p class="evaluation-matrix-card__desc">
+              Fragmented relay panels lead to density inconsistencies and cake collapse. Laxmi integrates centralized Siemens or Schneider PLC systems with high-precision load-cell batching.
+            </p>
+            <ul class="evaluation-matrix-card__checklist">
+              <li class="evaluation-matrix-card__check-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                0.2% dosing accuracy on lime, cement, fly ash, and aluminum powder
+              </li>
+              <li class="evaluation-matrix-card__check-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Remote IoT telemetry for real-time cycle tracking &amp; preventative alarms
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ SECTION 06 — SINGLE-SOURCE TURNKEY ACCOUNTABILITY ============ -->
+    <section class="eng-section eng-section--alt" id="turnkey-scope">
+      <div class="eng-container">
+        
+        <div class="eng-checkpoint-box">
+          <div class="eng-checkpoint-col">
+            <span class="eng-checkpoint-tag">THE SINGLE-SOURCE GUARANTEE</span>
+            <h3 class="eng-checkpoint-title">
+              Eliminating the Multi-Vendor Blame Game.
+            </h3>
+            <p class="eng-checkpoint-desc">
+              When an AAC plant suffers poor cake rising, steam leaks, or high rejection rates, multi-vendor projects collapse into endless finger-pointing between the civil contractor, machine fabricator, boiler supplier, and automation vendor.
+            </p>
+            <p class="eng-checkpoint-desc">
+              Laxmi En-Fab provides 100% turnkey accountability. We engineer the civil drawings, fabricate all heavy machinery in Ahmedabad, program the SCADA software, integrate the steam plant, formulate your chemical recipe, and guarantee rated daily output before handover.
+            </p>
+          </div>
+
+          <div class="eng-checkpoint-col">
+            <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 16px rgba(7, 23, 44, 0.04);">
+              <h4 style="font-size: 1.1rem; font-weight: 800; color: #07172c; margin: 0 0 1.25rem 0;">Laxmi Turnkey Scope Deliverables:</h4>
+              <ul style="list-style: none; padding: 0; margin: 0 0 1.75rem 0; display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.88rem; color: #334155;">
+                <li style="display: flex; align-items: center; gap: 0.65rem;">
+                  <span style="color: #10b981; font-weight: 900;">✓</span> <strong>Civil GA Drawings:</strong> Pit depths, load calculations, crane rails
+                </li>
+                <li style="display: flex; align-items: center; gap: 0.65rem;">
+                  <span style="color: #10b981; font-weight: 900;">✓</span> <strong>Mechanical Fabrication:</strong> Ball mills, silos, cutting line, autoclaves
+                </li>
+                <li style="display: flex; align-items: center; gap: 0.65rem;">
+                  <span style="color: #10b981; font-weight: 900;">✓</span> <strong>Electrical &amp; SCADA:</strong> Central MCC, PLC panels, touch screen HMI
+                </li>
+                <li style="display: flex; align-items: center; gap: 0.65rem;">
+                  <span style="color: #10b981; font-weight: 900;">✓</span> <strong>Chemical Recipe Calibration:</strong> On-site fly ash &amp; lime optimization
+                </li>
+                <li style="display: flex; align-items: center; gap: 0.65rem;">
+                  <span style="color: #10b981; font-weight: 900;">✓</span> <strong>Operator Training:</strong> 30-day on-site training of investor's crew
+                </li>
+              </ul>
+              <a href="../contact.html" class="editorial-hero__btn-dark" style="width: 100%; justify-content: center; box-sizing: border-box;">
+                <span>Discuss Turnkey Scope With Engineering</span>
+                <span class="editorial-hero__btn-arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ SECTION 07 — LIVE WORKSHOP & PLANT TOUR ============ -->
+    <section class="eng-section eng-section--white" id="live-demo">
+      <div class="eng-container">
+        
+        <div class="eng-alc-banner">
+          <div class="eng-alc-banner__content">
+            <span class="eng-alc-banner__eyebrow">EXPERIENCE BEFORE YOU INVEST</span>
+            <h2 class="eng-alc-banner__title">
+              Tour Our Manufacturing Works &amp; Running Customer Plants.
+            </h2>
+            <p class="eng-alc-lead">
+              We invite prospective investors and promoter teams to visit our Ahmedabad heavy fabrication facilities to inspect machine construction quality, and tour active 300 to 1200 m³/day customer plants running across Gujarat and Maharashtra.
+            </p>
+            <div class="eng-alc-specs-grid">
+              <div class="eng-alc-spec">
+                <span class="eng-alc-spec__val">Ahmedabad Works</span>
+                <span class="eng-alc-spec__lbl">Heavy Fabrication &amp; Assembly</span>
+              </div>
+              <div class="eng-alc-spec">
+                <span class="eng-alc-spec__val">150+ Running Plants</span>
+                <span class="eng-alc-spec__lbl">Inspect Live Daily Output</span>
+              </div>
+              <div class="eng-alc-spec">
+                <span class="eng-alc-spec__val">Direct Owner Dialogue</span>
+                <span class="eng-alc-spec__lbl">Unbiased Operational Feedback</span>
+              </div>
+            </div>
+            <div style="margin-top: 2rem;">
+              <a href="../contact.html" class="editorial-hero__btn-dark" style="background: #ffffff; color: #07172c !important;">
+                <span>Schedule a Physical Plant Tour</span>
+                <span class="editorial-hero__btn-arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ SECTION 08 — EXECUTIVE CONSULTATION CTA BANNER ============ -->
+    <section class="academy-cta-banner">
+      <div class="academy-cta-banner__inner">
+        <div class="academy-cta-grid">
+          
+          <!-- Left Column: Executive Consultation Proposition -->
+          <div class="academy-cta-left">
+            <span class="academy-cta-banner__eyebrow">DIRECT INVESTOR CONSULTATION</span>
+            <h2 class="academy-cta-banner__title">
+              Ready to Evaluate Your <span class="academy-cta-highlight">AAC Plant Investment?</span>
+            </h2>
+            <p class="academy-cta-banner__lead">
+              Connect with Laxmi En-Fab senior plant engineers to model your location-specific CAPEX, calculate fly ash transportation economics, and receive customized plant layout blueprints.
+            </p>
+            <div class="academy-cta-banner__badges">
+              <span class="academy-cta-badge">✓ Customized DPR &amp; Sizing</span>
+              <span class="academy-cta-badge">✓ Bank Subsidy &amp; Loan Reports</span>
+              <span class="academy-cta-badge">✓ Civil Foundation Blueprints</span>
+            </div>
+            <div class="academy-cta-banner__actions">
+              <a href="../contact.html" class="academy-cta-banner__btn-white">
+                <span>Talk to an AAC Expert</span>
+                <span class="academy-cta-banner__arrow">→</span>
+              </a>
+              <a href="../engineering-center.html" class="academy-cta-banner__link-secondary">
+                <span>Visit Engineering Center</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Direct Engineering Desk Card -->
+          <div class="academy-cta-right">
+            <div class="academy-cta-card">
+              <div class="academy-cta-card__header">
+                <span class="academy-cta-card__tag">DIRECT ENGINEERING DESK</span>
+                <h3 class="academy-cta-card__title">Laxmi En-Fab Project Cell</h3>
+              </div>
+              <div class="academy-cta-card__items">
+                <div class="academy-cta-card__item">
+                  <div class="academy-cta-card__icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                  </div>
+                  <div>
+                    <span class="academy-cta-card__label">Direct Hotline:</span>
+                    <a href="tel:+919825000000" class="academy-cta-card__val">+91 98250 00000 / +91 79 2583 0000</a>
+                  </div>
+                </div>
+                <div class="academy-cta-card__item">
+                  <div class="academy-cta-card__icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  </div>
+                  <div>
+                    <span class="academy-cta-card__label">Project Advisory Email:</span>
+                    <a href="mailto:info@laxmienfab.com" class="academy-cta-card__val">info@laxmienfab.com</a>
+                  </div>
+                </div>
+                <div class="academy-cta-card__item">
+                  <div class="academy-cta-card__icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  </div>
+                  <div>
+                    <span class="academy-cta-card__label">Physical Works &amp; HQ:</span>
+                    <span class="academy-cta-card__val" style="color: #334155; font-size: 0.95rem;">Ahmedabad, Gujarat, India</span>
+                  </div>
+                </div>
+              </div>
+              <div class="academy-cta-card__footer">
+                <div class="academy-cta-card__sla">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Priority Response: Consultation scheduled within 2 hours</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
