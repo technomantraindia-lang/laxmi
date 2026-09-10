@@ -147,7 +147,9 @@
   }
 
   // =========================================================================
-  // 2-COLUMN STAGE & INNER TOPIC RENDERER
+  // =========================================================================
+  // HIGH-KEY ARCHITECTURAL STAGE & INNER TOPIC RENDERER (1500px)
+  // Replicating AAC Engineering Center visual language & structural precision
   // =========================================================================
   function renderStageWithTopic(root, stageData, activeTopic, currentStageSlug) {
     updateSEOMetadata(activeTopic);
@@ -156,42 +158,15 @@
     root.innerHTML = `
       ${renderStageNavRail(currentStageSlug)}
       
-      <div class="academy-layout-wrap">
-        <!-- ============ LEFT SIDEBAR ============ -->
-        <aside class="academy-sidebar">
-          <div class="academy-sidebar__header">
-            <span class="academy-sidebar__eyebrow">STAGE DIRECTORY</span>
-            <h3 class="academy-sidebar__heading">${stageData.sidebarHeading || 'STAGE INNER TOPICS'}</h3>
-          </div>
-          <ul class="academy-sidebar__menu" id="academy-sidebar-menu">
-            ${stageData.topics.map((t, idx) => {
-              const isActive = t.id === activeTopic.id;
-              const num = String(idx + 1).padStart(2, '0');
-              return `
-                <li>
-                  <a href="?topic=${t.id}" class="academy-sidebar__link ${isActive ? 'is-active' : ''}" data-topic-id="${t.id}">
-                    <span class="academy-sidebar__num">${num}</span>
-                    <span class="academy-sidebar__title">${t.sidebarTitle || t.title}</span>
-                    <span class="academy-sidebar__arrow">→</span>
-                  </a>
-                </li>
-              `;
-            }).join('')}
-          </ul>
-        </aside>
-
-        <!-- ============ RIGHT MAIN ARTICLE ============ -->
-        <article class="academy-content-article" id="academy-content-article">
-          ${renderTopicContentHTML(activeTopic, stageData, currentStageSlug)}
-        </article>
+      <div id="academy-topic-container">
+        ${renderTopicContentHTML(activeTopic, stageData, currentStageSlug)}
       </div>
-
-      <!-- CTA Section -->
-      ${renderTopicCTA(activeTopic.cta)}
     `;
+
+    initInPageScrollAndSpy();
   }
 
-  // Render Inner Content of a Topic
+  // Render Inner Content of a Topic in Full Engineering Center Layout
   function renderTopicContentHTML(topic, stageData, currentStageSlug) {
     // Resolve Image Path
     let imgPath = topic.image || 'assets/images/why-aac.png';
@@ -199,132 +174,529 @@
       imgPath = '../' + imgPath;
     }
 
-    // Render Checkpoint
+    const heroTitle = splitHeading(topic.title);
+    const stats = getTopicStats(topic);
+
+    // Build In-Page Sticky Navigation Strip (eng-nav-strip)
+    const navItems = [
+      `<a href="#overview" class="eng-nav-btn active"><span class="eng-nav-num">01</span> Overview</a>`
+    ];
+
+    if (topic.sections && topic.sections.length > 0) {
+      topic.sections.forEach((sec, idx) => {
+        const cleanName = sec.heading.replace(/^\d+\.\s*/, '').split(':')[0].trim();
+        const shortName = cleanName.length > 28 ? cleanName.substring(0, 26) + '…' : cleanName;
+        const numStr = idx + 2 < 10 ? `0${idx + 2}` : `${idx + 2}`;
+        navItems.push(`<a href="#sec-${idx + 1}" class="eng-nav-btn"><span class="eng-nav-num">${numStr}</span> ${shortName}</a>`);
+      });
+    }
+
+    const ctaNum = (topic.sections ? topic.sections.length : 0) + 2;
+    const ctaNumStr = ctaNum < 10 ? `0${ctaNum}` : `${ctaNum}`;
+    navItems.push(`<a href="#cta" class="eng-nav-btn"><span class="eng-nav-num">${ctaNumStr}</span> Next Steps</a>`);
+
+    const navStripHTML = `
+      <nav class="eng-nav-strip" aria-label="Topic In-Page Navigation">
+        <div class="eng-nav-strip__inner">
+          ${navItems.join('')}
+        </div>
+      </nav>
+    `;
+
+    // Hero Section (editorial-hero--light)
+    const heroHTML = `
+      <section class="editorial-hero editorial-hero--light is-loaded" id="overview" aria-label="${topic.title}">
+        <div class="editorial-hero__media" aria-hidden="true">
+          <div class="editorial-hero__video-wrap">
+            <img class="editorial-hero__poster" src="${imgPath}" alt="${topic.imageAlt || topic.title}" fetchpriority="high" decoding="async" onerror="this.src='../assets/images/future-of-aac.png'" />
+          </div>
+          <div class="editorial-hero__overlay"></div>
+        </div>
+
+        <div class="editorial-hero__inner">
+          <div class="editorial-hero__content">
+            <span class="editorial-hero__eyebrow">${topic.eyebrow || `STAGE ${stageData.stageNum} · TOPIC ${topic.number}`}</span>
+            <h1 class="editorial-hero__title">
+              <span>${heroTitle.main}</span>
+              ${heroTitle.sub ? `<span class="editorial-hero__title-light">${heroTitle.sub}</span>` : ''}
+            </h1>
+            <p class="editorial-hero__sub">${topic.lead || ''}</p>
+
+            <div class="editorial-hero__actions">
+              <a href="#sec-1" class="editorial-hero__btn-dark">
+                <span>Explore Intelligence</span>
+                <span class="editorial-hero__btn-arrow">↓</span>
+              </a>
+              <a href="../contact.html" class="editorial-hero__link-dark">
+                <span>Talk to an Expert</span>
+                <span class="editorial-hero__link-arrow">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="editorial-hero__corner-caption" aria-hidden="true">
+          <span class="editorial-hero__corner-title">AAC Investor Academy · Stage ${stageData.stageNum}</span>
+          <span class="editorial-hero__corner-sub">${stageData.stageTitle}</span>
+        </div>
+      </section>
+    `;
+
+    // Dedicated Specifications & Stats Strip Below Hero
+    const statsCardsHTML = stats.map(st => `
+      <div class="eng-stat-card">
+        <div class="eng-stat-card__val">${st.val} <span>${st.unit}</span></div>
+        <div class="eng-stat-card__lbl">${st.lbl}</div>
+      </div>
+    `).join('');
+
+    const statsStripHTML = `
+      <section class="eng-stats-strip" aria-label="Key Specifications & Engineering Benchmarks">
+        <div class="eng-stats-strip__inner">
+          ${statsCardsHTML}
+        </div>
+      </section>
+    `;
+
+    // Checkpoint Block
     let checkpointHTML = '';
     if (topic.checkpoint) {
       checkpointHTML = `
-        <div class="academy-checkpoint-box" style="background: #f8fafc; border-left: 4px solid #0b3f78; padding: 1.5rem; margin: 2rem 0; border-radius: 0 8px 8px 0;">
-          <h4 style="margin: 0 0 0.5rem 0; color: #07172c; font-size: 1.05rem;">${topic.checkpoint.title || 'CRITICAL BENCHMARK'}</h4>
-          <p style="margin: 0; color: #475569; font-size: 0.95rem; line-height: 1.6;">${topic.checkpoint.text}</p>
+        <div class="eng-checkpoint-box">
+          <h4 class="eng-checkpoint-box__title">${topic.checkpoint.title || 'CRITICAL BENCHMARK'}</h4>
+          <p class="eng-checkpoint-box__text">${topic.checkpoint.text}</p>
         </div>
       `;
     }
 
-    // Render Sections
+    // Render Content Sections
     let sectionsHTML = '';
     if (topic.sections && topic.sections.length > 0) {
-      sectionsHTML = topic.sections.map(sec => {
-        let secInner = '';
-        
+      sectionsHTML = topic.sections.map((sec, idx) => {
+        const isLightBg = idx % 2 === 1;
+        const bgClass = isLightBg ? 'eng-section--light' : 'eng-section--white';
+        const secHeadingParts = splitHeading(sec.heading.replace(/^\d+\.\s*/, ''));
+        const cleanEyebrow = sec.heading.replace(/^\d+\.\s*/, '').split(':')[0].trim().toUpperCase();
+
+        let secBodyHTML = '';
+
         if (sec.text) {
-          secInner += `<p style="color: #475569; line-height: 1.7; font-size: 1rem; margin-bottom: 1.25rem;">${sec.text}</p>`;
+          secBodyHTML += `<p class="eng-lead">${sec.text}</p>`;
         }
 
-        // Table
+        // Insert checkpoint in first section or if defined
+        if (idx === 0 && checkpointHTML) {
+          secBodyHTML += checkpointHTML;
+        }
+
+        // Matrix Table
         if (sec.table) {
-          const ths = sec.table.headers.map(h => `<th style="padding: 12px 16px; border: 1px solid #1e293b;">${h}</th>`).join('');
-          const trs = sec.table.rows.map((row, rIdx) => {
-            const bg = rIdx % 2 === 0 ? '#ffffff' : '#f8fafc';
+          const ths = sec.table.headers.map(h => `<th>${h}</th>`).join('');
+          const trs = sec.table.rows.map((row) => {
             const tds = row.map((cell, cIdx) => {
-              const style = cIdx === 0 ? 'font-weight: 700; color: #0b3f78;' : '';
-              return `<td style="padding: 12px 16px; border: 1px solid #e2e8f0; ${style}">${cell}</td>`;
+              if (cIdx === 0) {
+                return `
+                  <td>
+                    <div class="eng-material-cell">
+                      <span class="eng-material-name">${cell}</span>
+                    </div>
+                  </td>
+                `;
+              } else if (cIdx === 1 && row.length > 3) {
+                return `<td><span class="eng-prop-badge">${cell}</span></td>`;
+              } else if (cIdx === row.length - 1) {
+                return `<td><span class="eng-qc-tag">${cell}</span></td>`;
+              }
+              return `<td>${cell}</td>`;
             }).join('');
-            return `<tr style="background: ${bg};">${tds}</tr>`;
+            return `<tr>${tds}</tr>`;
           }).join('');
 
-          secInner += `
-            <div style="overflow-x: auto; margin: 1.5rem 0;">
-              <table class="academy-spec-table" style="width: 100%; border-collapse: collapse; font-size: 0.92rem; text-align: left;">
-                <thead>
-                  <tr style="background: #07172c; color: #ffffff;">${ths}</tr>
-                </thead>
+          secBodyHTML += `
+            <div class="eng-matrix-table-wrap">
+              <table class="eng-matrix-table">
+                <thead><tr>${ths}</tr></thead>
                 <tbody>${trs}</tbody>
               </table>
             </div>
           `;
         }
 
-        // Callout Cards
+        // Contiguous Architectural Feature Grid Cards
         if (sec.cards) {
-          const cardsHTML = sec.cards.map(c => `
-            <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 1.5rem; box-shadow: 0 2px 10px rgba(0,0,0,0.03);">
-              ${c.tag ? `<span style="color: #0b3f78; font-weight: 800; font-size: 0.82rem; letter-spacing: 0.05em; display: block; margin-bottom: 0.5rem;">${c.tag}</span>` : ''}
-              <h3 style="font-size: 1.15rem; color: #07172c; margin-bottom: 0.5rem;">${c.title}</h3>
-              <p style="color: #64748b; font-size: 0.9rem; line-height: 1.6; margin: 0;">${c.text}</p>
+          const colCount = Math.min(sec.cards.length, 3);
+          const cardsCols = sec.cards.map((c, cIdx) => `
+            <div class="eng-arch-col">
+              <div>
+                <span class="eng-arch-num">${c.tag || `KEY BENCHMARK 0${cIdx + 1}`}</span>
+                <h3 class="eng-arch-name">${c.title}</h3>
+                <p class="eng-arch-desc">${c.text}</p>
+              </div>
+              <div class="eng-arch-link">
+                <span>Technical Standard</span>
+                <span class="eng-arch-arrow">↗</span>
+              </div>
             </div>
           `).join('');
 
-          secInner += `
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 1.5rem 0;">
-              ${cardsHTML}
+          secBodyHTML += `
+            <div class="eng-arch-grid" style="grid-template-columns: repeat(${colCount}, 1fr); margin: 2.5rem 0;">
+              ${cardsCols}
             </div>
           `;
         }
 
-        // Bullet List
+        // Process Flow / Numbered List
         if (sec.list) {
-          const lis = sec.list.map(li => `<li style="margin-bottom: 0.5rem;">${li}</li>`).join('');
-          secInner += `<ul style="color: #334155; line-height: 1.8; font-size: 1rem; padding-left: 1.25rem; margin: 1rem 0;">${lis}</ul>`;
+          const rows = sec.list.map((li, lIdx) => {
+            let title = `Parameter 0${lIdx + 1}`;
+            let desc = li;
+            const match = li.match(/<strong>(.*?)<\/strong>:\s*(.*)/i) || li.match(/<strong>(.*?)<\/strong>\s*(.*)/i);
+            if (match) {
+              title = match[1];
+              desc = match[2];
+            }
+            return `
+              <div class="eng-flow-row" style="color: inherit;">
+                <div class="eng-flow-num">0${lIdx + 1}</div>
+                <div class="eng-flow-name" style="color: #07172c;">${title}</div>
+                <div class="eng-flow-desc" style="color: #475569;">${desc}</div>
+              </div>
+            `;
+          }).join('');
+
+          secBodyHTML += `
+            <div class="eng-flow-table" style="border-top: 1px solid #e2e8f0; margin: 2.5rem 0;">
+              ${rows}
+            </div>
+          `;
         }
 
         return `
-          <div style="margin-top: 2.5rem;">
-            <h2 style="font-size: 1.55rem; color: #07172c; margin-bottom: 1rem;">${sec.heading}</h2>
-            ${secInner}
-          </div>
+          <section class="eng-section ${bgClass}" id="sec-${idx + 1}">
+            <div class="eng-container">
+              <span class="eng-eyebrow">0${idx + 1} · ${cleanEyebrow}</span>
+              <h2 class="eng-title">
+                <span>${secHeadingParts.main}</span>
+                ${secHeadingParts.sub ? `<span class="eng-title-light">${secHeadingParts.sub}</span>` : ''}
+              </h2>
+              ${secBodyHTML}
+            </div>
+          </section>
         `;
       }).join('');
     }
 
-    // Navigation Footer Buttons
+    // Strategic Conversion CTA Banner
+    const ctaEyebrow = (topic.cta && topic.cta.eyebrow) || 'STRATEGIC FEASIBILITY';
+    const ctaTitle = (topic.cta && topic.cta.title) || 'Plan the Market. Then Plan the Plant.';
+    const ctaTitleParts = splitHeading(ctaTitle);
+    const ctaText = (topic.cta && topic.cta.text) || 'Share your proposed location, expected capacity, and raw materials with the Laxmi En-Fab engineering team.';
+    const ctaBtnLabel = (topic.cta && topic.cta.btnLabel) || 'Request Feasibility Discussion';
+    const ctaBtnUrl = (topic.cta && topic.cta.btnUrl) ? (topic.cta.btnUrl.startsWith('../') ? topic.cta.btnUrl : '../' + topic.cta.btnUrl) : '../contact.html';
+
+    const ctaBannerHTML = `
+      <section class="eng-cta-banner" id="cta">
+        <div class="eng-cta-banner__inner">
+          <span class="eng-cta-banner__eyebrow">${ctaEyebrow}</span>
+          <h2 class="eng-cta-banner__title">
+            <span>${ctaTitleParts.main}</span>
+            ${ctaTitleParts.sub ? `<span class="eng-cta-banner__title-light">${ctaTitleParts.sub}</span>` : ''}
+          </h2>
+          <p class="eng-cta-banner__lead">${ctaText}</p>
+          <div class="eng-cta-banner__actions">
+            <a href="${ctaBtnUrl}" class="eng-cta-banner__btn-white">
+              <span>${ctaBtnLabel}</span>
+              <span class="eng-cta-banner__btn-arrow">↗</span>
+            </a>
+            <a href="#overview" class="eng-cta-banner__link-top">
+              <span>Return to top ↑</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    `;
+
+    // Chapter Navigation Footer (Previous / Next)
     let prevBtnHTML = '';
     if (topic.prevTopic) {
       const prevUrl = topic.prevTopic.stage === currentStageSlug ? `?topic=${topic.prevTopic.id}` : `${topic.prevTopic.stage}.html?topic=${topic.prevTopic.id}`;
       prevBtnHTML = `
-        <a href="${prevUrl}" class="editorial-btn-outline" style="border-color: #cbd5e1; color: #07172c;" data-topic-nav="${topic.prevTopic.id}">
-          ← Previous: ${topic.prevTopic.title}
+        <a href="${prevUrl}" class="eng-chapter-nav__btn" data-topic-nav="${topic.prevTopic.id}">
+          <span class="eng-chapter-nav__sub">← PREVIOUS TOPIC</span>
+          <span class="eng-chapter-nav__title">${topic.prevTopic.title}</span>
         </a>
       `;
     } else {
-      prevBtnHTML = `<span></span>`;
+      prevBtnHTML = `<div></div>`;
     }
 
     let nextBtnHTML = '';
     if (topic.nextTopic) {
       const nextUrl = topic.nextTopic.stage === currentStageSlug ? `?topic=${topic.nextTopic.id}` : `${topic.nextTopic.stage}.html?topic=${topic.nextTopic.id}`;
       nextBtnHTML = `
-        <a href="${nextUrl}" class="editorial-btn-primary" data-topic-nav="${topic.nextTopic.id}">
-          Next: ${topic.nextTopic.title} →
+        <a href="${nextUrl}" class="eng-chapter-nav__btn eng-chapter-nav__btn--next" data-topic-nav="${topic.nextTopic.id}">
+          <span class="eng-chapter-nav__sub">NEXT TOPIC →</span>
+          <span class="eng-chapter-nav__title">${topic.nextTopic.title}</span>
         </a>
       `;
+    } else {
+      nextBtnHTML = `<div></div>`;
     }
 
-    const navFooterHTML = `
-      <div style="margin-top: 3.5rem; padding-top: 2rem; border-top: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
-        ${prevBtnHTML}
-        ${nextBtnHTML}
-      </div>
+    const chapterNavHTML = `
+      <section class="eng-chapter-nav-section">
+        <div class="eng-chapter-nav">
+          ${prevBtnHTML}
+          ${nextBtnHTML}
+        </div>
+      </section>
     `;
 
     return `
-      <div class="academy-micro-label" style="margin-bottom: 0.75rem;">${topic.eyebrow || `STAGE ${stageData.stageNum} · TOPIC ${topic.number}`}</div>
-      <h1 style="font-size: clamp(2rem, 3.2vw, 2.75rem); line-height: 1.2; margin: 0 0 1.5rem 0;">
-        ${topic.title}
-      </h1>
-
-      <p class="editorial-about-hero__lead" style="font-size: 1.15rem; color: #475569; margin-bottom: 2rem;">
-        ${topic.lead || ''}
-      </p>
-
-      <!-- Hero Visual Image Card -->
-      <div style="margin: 2rem 0; border-radius: 12px; overflow: hidden; border: 1px solid rgba(7, 23, 44, 0.1); box-shadow: 0 4px 20px rgba(0,0,0,0.06);">
-        <img src="${imgPath}" alt="${topic.imageAlt || topic.title}" style="width: 100%; height: auto; display: block;" onerror="this.parentElement.style.display='none'" />
-      </div>
-
-      ${checkpointHTML}
+      ${heroHTML}
+      ${statsStripHTML}
+      ${navStripHTML}
       ${sectionsHTML}
-      ${navFooterHTML}
+      ${ctaBannerHTML}
+      ${chapterNavHTML}
     `;
+  }
+
+  // Topic KPI Stats Provider
+  function getTopicStats(topic) {
+    const statsMap = {
+      // Stage 01: Understand the Market
+      'why-aac': [
+        { val: '550–650', unit: 'kg/m³', lbl: 'Dry Density' },
+        { val: '~65', unit: '%', lbl: 'Dead Load Reduction' },
+        { val: '4', unit: 'Hours', lbl: 'Fire Rating' },
+        { val: '±1.5', unit: 'mm', lbl: 'Wire Accuracy' }
+      ],
+      'future-of-aac': [
+        { val: '12–15', unit: '%', lbl: 'Annual CAGR' },
+        { val: '60', unit: '%', lbl: 'Faster Panel Build' },
+        { val: '35–50', unit: '%', lbl: 'Higher EBITDA ALC' },
+        { val: '70', unit: '%', lbl: 'Recycled Content' }
+      ],
+      'market-demand': [
+        { val: '100–150', unit: 'km', lbl: 'Economic Radius' },
+        { val: '45–55', unit: '%', lbl: 'High-Rise Share' },
+        { val: '₹150–250', unit: '/50km', lbl: 'Transit Cost' },
+        { val: '300', unit: 'm³/day', lbl: 'Optimal Initial Size' }
+      ],
+      'raw-materials': [
+        { val: '<15', unit: '%', lbl: '45µm Fineness' },
+        { val: '1.62–1.68', unit: 'kg/L', lbl: 'Slurry Density' },
+        { val: '>70', unit: '%', lbl: 'Active CaO in Lime' },
+        { val: '40–45', unit: '°C', lbl: 'Batch Temperature' }
+      ],
+      'profitability': [
+        { val: '28–38', unit: '%', lbl: 'EBITDA Margin' },
+        { val: '2.5–3.5', unit: 'Years', lbl: 'Payback Period' },
+        { val: '32–40', unit: '%', lbl: 'Project IRR' },
+        { val: '₹1,850', unit: '/m³', lbl: 'Direct Cost Floor' }
+      ],
+      'government-policies': [
+        { val: '300', unit: 'km', lbl: 'Mandatory Fly Ash Zone' },
+        { val: '30–50', unit: '%', lbl: 'State Capex Subsidy' },
+        { val: '100', unit: '%', lbl: 'Electricity Duty Waiver' },
+        { val: '5', unit: '%', lbl: 'Concessional GST Rate' }
+      ],
+
+      // Stage 02: Design Your Plant
+      'capacity-selection': [
+        { val: '150–1500', unit: 'm³/day', lbl: 'Standard Tiers' },
+        { val: '300', unit: 'm³/day', lbl: 'Optimal Benchmark' },
+        { val: '3–4', unit: 'Carts/hr', lbl: 'Mixer Frequency' },
+        { val: '95', unit: '%', lbl: 'Uptime Target' }
+      ],
+      'land-requirement': [
+        { val: '3.5–4.5', unit: 'Acres', lbl: '300 m³/day Footprint' },
+        { val: '65', unit: 'm', lbl: 'Minimum Shed Length' },
+        { val: '9', unit: 'm', lbl: 'Crane Bay Height' },
+        { val: '12', unit: 'm', lbl: 'Internal Road Width' }
+      ],
+      'project-cost': [
+        { val: '₹18–26', unit: 'Cr', lbl: 'Total Capex Range' },
+        { val: '₹3–5', unit: 'Cr', lbl: 'Working Capital' },
+        { val: '65–70', unit: '%', lbl: 'Machinery Share' },
+        { val: '12–15', unit: '%', lbl: 'Civil Works Share' }
+      ],
+      'roi-payback': [
+        { val: '32–42', unit: '%', lbl: 'Equity IRR' },
+        { val: '2.8–3.5', unit: 'Years', lbl: 'Net Payback' },
+        { val: '1.8–2.2', unit: 'x', lbl: 'DSCR Coverage' },
+        { val: '45', unit: '%', lbl: 'Breakeven Capacity' }
+      ],
+      'finance-bank-loan': [
+        { val: '70:30', unit: 'Ratio', lbl: 'Debt : Equity' },
+        { val: '8.25–9.5', unit: '%', lbl: 'Term Loan Rate' },
+        { val: '7–10', unit: 'Years', lbl: 'Repayment Tenure' },
+        { val: '12–18', unit: 'Months', lbl: 'Moratorium Period' }
+      ],
+      'finance-loan': [
+        { val: '70:30', unit: 'Ratio', lbl: 'Debt : Equity' },
+        { val: '8.25–9.5', unit: '%', lbl: 'Term Loan Rate' },
+        { val: '7–10', unit: 'Years', lbl: 'Repayment Tenure' },
+        { val: '12–18', unit: 'Months', lbl: 'Moratorium Period' }
+      ],
+      'subsidy': [
+        { val: '₹2.5–5.0', unit: 'Cr', lbl: 'Max State Subsidy' },
+        { val: '5–7', unit: '%', lbl: 'Interest Subvention' },
+        { val: '100', unit: '%', lbl: 'Stamp Duty Refund' },
+        { val: '5–7', unit: 'Years', lbl: 'SGST Reimbursement' }
+      ],
+
+      // Stage 04: Efficient Your Plant
+      'make-plant-automatic': [
+        { val: '100', unit: '%', lbl: 'PLC Dosing Automation' },
+        { val: '±0.5', unit: '%', lbl: 'Load Cell Batching' },
+        { val: '40–50', unit: '%', lbl: 'Labour Reduction' },
+        { val: 'Zero', unit: 'Accidents', lbl: 'Interlocked Safety' }
+      ],
+      'improve-block-quality': [
+        { val: '>4.0', unit: 'N/mm²', lbl: 'Target Strength' },
+        { val: '±1.0', unit: 'mm', lbl: 'Dimensional Tolerance' },
+        { val: '<1', unit: '%', lbl: 'Transit Rejection' },
+        { val: '100', unit: '%', lbl: 'IS 2185-3 Compliance' }
+      ],
+      'maintenance-sop': [
+        { val: '98', unit: '%', lbl: 'Plant Availability' },
+        { val: 'Daily/Weekly', unit: 'SOP', lbl: 'Lubrication Routine' },
+        { val: '<2', unit: 'Hours', lbl: 'Mean Time to Repair' },
+        { val: '5000', unit: 'Hours', lbl: 'Boiler Overhaul Cycle' }
+      ],
+      'reduce-steam-cost': [
+        { val: '20–25', unit: '%', lbl: 'Steam Recovery Rate' },
+        { val: '190', unit: '°C', lbl: 'Saturated Steam Temp' },
+        { val: '12–14', unit: 'bar', lbl: 'Working Pressure' },
+        { val: '₹120–160', unit: '/m³', lbl: 'Fuel Cost Savings' }
+      ],
+      'skilled-manpower': [
+        { val: '8–12', unit: 'Staff/Shift', lbl: 'Optimized Crew Size' },
+        { val: '24×7', unit: 'Rotation', lbl: 'Continuous Operations' },
+        { val: '100', unit: '%', lbl: 'Certified Operators' },
+        { val: '40', unit: 'Hours/Yr', lbl: 'Training Refreshers' }
+      ],
+
+      // Stage 05: Expand Your Plant
+      'upgrade-capacity': [
+        { val: '300→600', unit: 'm³/day', lbl: 'Phase 2 Scale' },
+        { val: 'Zero', unit: 'Downtime', lbl: 'Parallel Installation' },
+        { val: '40–50', unit: '%', lbl: 'Lower Incremental Capex' },
+        { val: '2x', unit: 'Revenue', lbl: 'Scale Multiplier' }
+      ],
+      'reinforced-aac-panels': [
+        { val: '6.0', unit: 'm', lbl: 'Max Panel Length' },
+        { val: '₹4,500', unit: '/m³', lbl: 'Selling Realization' },
+        { val: '35–45', unit: '%', lbl: 'EBITDA Margin' },
+        { val: '60', unit: '%', lbl: 'Faster Dry Erection' }
+      ],
+      'dry-mix-mortar-plant': [
+        { val: '10–20', unit: 'TPH', lbl: 'Mortar Batch Capacity' },
+        { val: '35', unit: '%', lbl: 'Gross Margins' },
+        { val: '100', unit: '%', lbl: 'Client Retention' },
+        { val: '2–3', unit: 'mm', lbl: 'Joint Adhesive Grade' }
+      ],
+      'palletizing-robotics': [
+        { val: '100', unit: '%', lbl: 'Automated Strapping' },
+        { val: '<0.5', unit: '%', lbl: 'Handling Edge Loss' },
+        { val: '45', unit: 'Sec', lbl: 'Pallet Cycle Time' },
+        { val: 'ISPM-15', unit: 'Compliant', lbl: 'Export Standard' }
+      ]
+    };
+
+    return statsMap[topic.id] || [
+      { val: '150–1500', unit: 'm³/day', lbl: 'Capacity Tier' },
+      { val: '±1.0', unit: 'mm', lbl: 'Wire Accuracy' },
+      { val: '12–14', unit: 'bar', lbl: 'Autoclave Pressure' },
+      { val: '100', unit: '%', lbl: 'Slurry Recycling' }
+    ];
+  }
+
+  function splitHeading(title) {
+    if (!title) return { main: '', sub: '' };
+    if (title.includes(':')) {
+      const parts = title.split(':');
+      return { main: parts[0].trim() + ':', sub: parts.slice(1).join(':').trim() };
+    }
+    if (title.includes('?')) {
+      const parts = title.split('?');
+      return { main: parts[0].trim() + '?', sub: parts.slice(1).join('?').trim() };
+    }
+    const words = title.split(' ');
+    if (words.length > 5) {
+      const mid = Math.ceil(words.length / 2);
+      return { main: words.slice(0, mid).join(' '), sub: words.slice(mid).join(' ') };
+    }
+    return { main: title, sub: '' };
+  }
+
+  // Sub-Navigation Smooth Scroll & Active Scroll Spy
+  function initInPageScrollAndSpy() {
+    // Smooth scroll for subnav
+    document.querySelectorAll('.eng-nav-btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            const navStrip = document.querySelector('.eng-nav-strip');
+            const navHeight = navStrip ? navStrip.offsetHeight : 60;
+            const header = document.querySelector('.site-header');
+            const headerHeight = header ? header.offsetHeight : 70;
+            const topOffset = target.getBoundingClientRect().top + window.pageYOffset - (navHeight + headerHeight + 10);
+            window.scrollTo({ top: topOffset, behavior: 'smooth' });
+
+            document.querySelectorAll('.eng-nav-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+          }
+        }
+      });
+    });
+
+    // Scroll spy
+    var navBtns = document.querySelectorAll('.eng-nav-btn');
+    if (!navBtns.length) return;
+
+    var sectionIds = Array.from(navBtns).map(b => b.getAttribute('href')).filter(h => h && h.startsWith('#')).map(h => h.substring(1));
+    var sectionCache = [];
+
+    function updateSections() {
+      sectionCache = sectionIds.map(function(id) {
+        var el = document.getElementById(id);
+        return el ? { id: id, top: el.offsetTop, height: el.offsetHeight } : null;
+      }).filter(Boolean);
+    }
+
+    updateSections();
+    window.addEventListener('resize', updateSections, { passive: true });
+
+    var scrollTicking = false;
+    window.addEventListener('scroll', function() {
+      if (!scrollTicking) {
+        window.requestAnimationFrame(function() {
+          var scrollPos = window.pageYOffset + 220;
+          var currentActive = null;
+          for (var i = 0; i < sectionCache.length; i++) {
+            var s = sectionCache[i];
+            if (scrollPos >= s.top && scrollPos < s.top + s.height) {
+              currentActive = s.id;
+              break;
+            }
+          }
+          if (currentActive) {
+            navBtns.forEach(function(b) {
+              b.classList.toggle('active', b.getAttribute('href') === '#' + currentActive);
+            });
+          }
+          scrollTicking = false;
+        });
+        scrollTicking = true;
+      }
+    }, { passive: true });
   }
 
   // Update Dynamic Breadcrumb
@@ -363,23 +735,19 @@
         const newUrl = `${window.location.pathname}?topic=${topicId}`;
         window.history.pushState({ topicId: topicId }, '', newUrl);
 
-        // Update Sidebar active state
-        document.querySelectorAll('.academy-sidebar__link').forEach(sl => {
-          sl.classList.toggle('is-active', sl.getAttribute('data-topic-id') === topicId);
-        });
-
-        // Re-render Article
-        const article = document.getElementById('academy-content-article');
-        if (article) {
-          article.innerHTML = renderTopicContentHTML(targetTopic, stageData, currentStageSlug);
+        // Re-render Container
+        const container = document.getElementById('academy-topic-container');
+        if (container) {
+          container.innerHTML = renderTopicContentHTML(targetTopic, stageData, currentStageSlug);
+          initInPageScrollAndSpy();
         }
 
         // Update SEO & Breadcrumb
         updateSEOMetadata(targetTopic);
         updateBreadcrumb(stageData.stageTitle, targetTopic.sidebarTitle || targetTopic.title);
 
-        // Smooth scroll to top of article
-        article.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Smooth scroll to top of page
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       }
     });
 
@@ -390,12 +758,10 @@
       const targetTopic = stageData.topics.find(t => t.id === queryTopic) || stageData.topics[0];
 
       if (targetTopic) {
-        document.querySelectorAll('.academy-sidebar__link').forEach(sl => {
-          sl.classList.toggle('is-active', sl.getAttribute('data-topic-id') === targetTopic.id);
-        });
-        const article = document.getElementById('academy-content-article');
-        if (article) {
-          article.innerHTML = renderTopicContentHTML(targetTopic, stageData, currentStageSlug);
+        const container = document.getElementById('academy-topic-container');
+        if (container) {
+          container.innerHTML = renderTopicContentHTML(targetTopic, stageData, currentStageSlug);
+          initInPageScrollAndSpy();
         }
         updateSEOMetadata(targetTopic);
         updateBreadcrumb(stageData.stageTitle, targetTopic.sidebarTitle || targetTopic.title);
@@ -826,14 +1192,14 @@
       </section>
 
       <!-- ============ SECTION 04: PHYSICAL VERIFICATION ============ -->
-      <section class="academy-section" id="verification" style="padding: 6.5rem 2rem 6.5rem; background: #ffffff; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+      <section class="academy-section" id="verification" style="padding: 6.5rem 2rem 6.5rem; background: #ffffff; font-family: var(--font-primary, 'Geist', sans-serif);">
         <div class="academy-section__inner" style="max-width: 1500px; margin: 0 auto;">
           
           <div style="margin-bottom: 4.5rem;">
-            <span class="academy-micro-label" style="display: inline-block; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: #026aa7; margin-bottom: 1.8rem; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+            <span class="academy-micro-label" style="display: inline-block; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: #026aa7; margin-bottom: 1.8rem; font-family: var(--font-primary, 'Geist', sans-serif);">
               PHYSICAL VERIFICATION
             </span>
-            <h2 style="font-size: clamp(3.2rem, 5.4vw, 5.4rem); font-weight: 700; line-height: 1.03; letter-spacing: -0.035em; color: #07172c; margin: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+            <h2 style="font-size: clamp(3.2rem, 5.4vw, 5.4rem); font-weight: 700; line-height: 1.03; letter-spacing: -0.035em; color: #07172c; margin: 0; font-family: var(--font-primary, 'Geist', sans-serif);">
               <span style="display: block;">Visit the places</span>
               <span style="display: block; color: #8d9ba8; font-weight: 400; margin-top: 0.05em;">where claims become</span>
               <span style="display: block; color: #8d9ba8; font-weight: 400;">visible.</span>
@@ -1366,6 +1732,7 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('is-revealed');
+          observer.unobserve(entry.target);
         }
       });
     }, { threshold: 0.08 });

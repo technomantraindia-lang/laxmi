@@ -3,8 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="AAC Mould Handling and Pre-Curing System by Laxmi En-Fab. Heavy-duty mould cars, detachable side plates, hydraulic ferry carts, and temperature-controlled curing chambers." />
+  <meta name="description" content="AAC Mould Handling and Pre-Curing System by Laxmi En-Fab. CNC-machined mould boxes, detachable side plates, automated hydraulic ferry transfer cars, mould oiling booths, and insulated fermentation tunnels." />
+  <meta name="keywords" content="AAC mould handling, AAC mould box, side plate, ferry cart, pre-curing tunnel, fermentation room, Laxmi En-Fab" />
   <title>AAC Mould Handling &amp; Pre-Curing Systems | Laxmi En-Fab</title>
+  
+  <!-- Google Fonts: Geist & Geist Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet" />
   
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/main.css" />
@@ -12,11 +18,26 @@
   <link rel="stylesheet" href="css/homepage.css" />
   <link rel="stylesheet" href="css/engineering.css" />
   <link rel="stylesheet" href="css/responsive.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AAC Mould Handling & Pre-Curing Systems",
+    "description": "Technical engineering guide to AAC mould cars, hydraulic traversers, automated oiling booths, and insulated pre-curing fermentation chambers.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Laxmi En-Fab Pvt. Ltd."
+    }
+  }
+  </script>
 </head>
 <body class="engineering-inner-page">
 
+  <!-- Shared Header -->
   <div id="site-header"></div>
 
+  <!-- Breadcrumb Navigation -->
   <nav class="site-breadcrumb" aria-label="Breadcrumb">
     <div class="site-breadcrumb__inner">
       <a href="index.html">Home</a>
@@ -25,110 +46,360 @@
       <span class="bc-sep">/</span>
       <a href="machinery-equipment.html">Plant Machinery</a>
       <span class="bc-sep">/</span>
-      <span class="bc-current">Mould Handling &amp; Pre-Curing</span>
+      <span class="bc-current">System 03 · Mould Handling &amp; Pre-Curing</span>
+    </div>
+  </nav>
+
+  <!-- Sticky In-Page Sub-Navigation Strip -->
+  <nav class="eng-nav-strip" aria-label="System 03 Navigation">
+    <div class="eng-nav-strip__inner">
+      <a href="#overview" class="eng-nav-btn active"><span class="eng-nav-num">01</span> Overview</a>
+      <a href="#circuit" class="eng-nav-btn"><span class="eng-nav-num">02</span> Mould Circuit</a>
+      <a href="#matrix" class="eng-nav-btn"><span class="eng-nav-num">03</span> Technical Matrix</a>
+      <a href="#tunnel" class="eng-nav-btn"><span class="eng-nav-num">04</span> Fermentation Tunnel</a>
+      <a href="#cta" class="eng-nav-btn"><span class="eng-nav-num">05</span> Mould Sizing</a>
     </div>
   </nav>
 
   <main id="main-content">
 
-    <section class="eng-hero">
-      <div class="eng-hero__inner">
-        <div class="eng-hero__content">
-          <div class="eng-badge">SYSTEM 03 · MOULDS &amp; PRECURING</div>
-          <h1 class="eng-hero__title">
-            Mould Handling &amp; <span class="highlight">Pre-Curing Systems</span>
+    <!-- ============ 01. HERO SECTION (EDITORIAL FULL SCREEN IMAGE BACKGROUND) ============ -->
+    <section class="editorial-hero editorial-hero--light is-loaded" id="overview" aria-label="Mould Handling and Pre-Curing Overview">
+      <div class="editorial-hero__media" aria-hidden="true">
+        <div class="editorial-hero__video-wrap">
+          <img
+            class="editorial-hero__poster"
+            src="assets/images/engineering/machinery-mould-precuring.png"
+            alt="AAC Mould Handling and Fermentation Circuit"
+            fetchpriority="high"
+          />
+        </div>
+        <div class="editorial-hero__overlay"></div>
+      </div>
+
+      <div class="editorial-hero__inner">
+        <div class="editorial-hero__content">
+          <span class="editorial-hero__eyebrow">SYSTEM 03 · CASTING &amp; FERMENTATION</span>
+          <h1 class="editorial-hero__title">
+            <span>Mould Handling &amp;</span>
+            <span class="editorial-hero__title-light">Pre-Curing Systems.</span>
           </h1>
-          <p class="eng-hero__lead">
-            Precision CNC-machined mould boxes, detachable side plates, automated hydraulic ferry cars, mould oiling sprayers, and insulated fermentation tunnels maintaining 40–50°C for cake rising.
+          <p class="editorial-hero__sub">
+            Stress-relieved CNC-machined mould boxes, detachable side plates, automated hydraulic ferry traversers, airless release oil sprayers, and insulated pre-curing fermentation tunnels maintaining 40–50°C for cake rising.
           </p>
 
-          <div class="eng-hero__stats">
-            <div class="eng-stat-box">
-              <div class="eng-stat-box__val">4.0–6.0 <span>m³</span></div>
-              <div class="eng-stat-box__lbl">Mould Box Capacities</div>
-            </div>
-            <div class="eng-stat-box">
-              <div class="eng-stat-box__val">40–50 <span>°C</span></div>
-              <div class="eng-stat-box__lbl">Chamber Temperature</div>
-            </div>
-            <div class="eng-stat-box">
-              <div class="eng-stat-box__val">120–180 <span>min</span></div>
-              <div class="eng-stat-box__lbl">Rising &amp; Hardening</div>
-            </div>
+          <div class="editorial-hero__actions">
+            <a href="#circuit" class="editorial-hero__btn-dark">
+              <span>Explore Technical Specs</span>
+              <span class="editorial-hero__btn-arrow">↓</span>
+            </a>
+            <a href="contact.html" class="editorial-hero__link-dark">
+              <span>Consult Mould Engineers</span>
+              <span class="editorial-hero__link-arrow">↗</span>
+            </a>
           </div>
         </div>
+      </div>
 
-        <div class="eng-hero__visual">
-          <div class="eng-hero__visual-card">
-            <img src="assets/images/engineering/machinery-mould-precuring.png" alt="AAC Moulds and Ferry Cars" />
-            <div class="eng-hero__visual-caption">
-              <span><strong>MOULD CIRCULATION LINE</strong> · HEAVY-DUTY FERRY CARTS</span>
-              <span style="color:#e6a822;font-family:monospace;font-weight:700;">LAXMI FABRICATION</span>
-            </div>
-          </div>
+      <div class="editorial-hero__corner-caption" aria-hidden="true">
+        <span class="editorial-hero__corner-title">AAC Plant Machinery · System 03</span>
+        <span class="editorial-hero__corner-sub">Mould Circulation &amp; Curing Circuit</span>
+      </div>
+    </section>
+
+    <!-- ============ DEDICATED SPECIFICATIONS & STATS STRIP BELOW HERO ============ -->
+    <section class="eng-stats-strip" aria-label="Key Mould & Pre-Curing Specifications">
+      <div class="eng-stats-strip__inner">
+        <div class="eng-stat-card">
+          <div class="eng-stat-card__val">4.0–6.0 <span>m³</span></div>
+          <div class="eng-stat-card__lbl">Mould Box Net Cake Volume</div>
+        </div>
+        <div class="eng-stat-card">
+          <div class="eng-stat-card__val">40–50 <span>°C</span></div>
+          <div class="eng-stat-card__lbl">Controlled Tunnel Temp</div>
+        </div>
+        <div class="eng-stat-card">
+          <div class="eng-stat-card__val">120–180 <span>min</span></div>
+          <div class="eng-stat-card__lbl">Cake Rising &amp; Hardening</div>
+        </div>
+        <div class="eng-stat-card">
+          <div class="eng-stat-card__val">Zero <span>Defect</span></div>
+          <div class="eng-stat-card__lbl">Edge Fracture Rate</div>
         </div>
       </div>
     </section>
 
-    <section class="eng-section eng-section--white">
+    <!-- ============ 02. SECTION 01: MOULD CIRCULATION CIRCUIT ============ -->
+    <section class="eng-section eng-section--white" id="circuit">
       <div class="eng-container">
         
-        <div class="eng-section-head">
-          <span class="eng-eyebrow">EQUIPMENT COMPONENTS</span>
-          <h2 class="eng-section-title">Mould Circulation &amp; Fermentation Circuit</h2>
+        <div>
+          <span class="eng-eyebrow">01 · MOULD CIRCULATION &amp; TRANSFER</span>
+          <h2 class="eng-title">
+            <span>Synchronized mould logistics.</span>
+            <span class="eng-title-light">Heavy structural engineering for zero deflection.</span>
+          </h2>
+          <p class="eng-lead">
+            The mould circulation loop forms the physical heartbeat of an AAC plant. Any dimensional warpage in mould boxes or side plates creates slurry leakage, uneven cake rising, or cutting wire breakage.
+          </p>
         </div>
 
-        <div class="eng-pillars-grid" style="gap: 32px; margin-bottom: 48px;">
+        <!-- Contiguous Swiss Architectural Cards -->
+        <div class="eng-arch-grid" style="grid-template-columns: repeat(3, 1fr); margin: 2.5rem 0;">
           
-          <div class="eng-pillar-card" style="padding: 24px;">
-            <h3 style="font-size:1.25rem; font-weight:800; color:#0f172a; margin-bottom:12px;">1. Precision Mould Boxes &amp; Side Plates</h3>
-            <p style="font-size:0.92rem; color:#475569; line-height:1.6;">
-              Fabricated from structural channel and reinforced plates, stress-relieved and CNC-milled on joint faces to ensure zero slurry leakage and exact geometric orthogonality.
-            </p>
+          <div class="eng-arch-col">
+            <div>
+              <span class="eng-arch-num">COMPONENT 01</span>
+              <h3 class="eng-arch-name">CNC Precision Moulds</h3>
+              <p class="eng-arch-desc">
+                Fabricated from heavy channel sections and gusseted side plates, stress-relieved and CNC milled on all mating faces to ensure hermetic rubber seal contact and zero slurry bleed.
+              </p>
+            </div>
+            <div class="eng-arch-link">
+              <span>Stress-Relieved Fabrication</span>
+              <span class="eng-arch-arrow">↗</span>
+            </div>
           </div>
 
-          <div class="eng-pillar-card" style="padding: 24px;">
-            <h3 style="font-size:1.25rem; font-weight:800; color:#0f172a; margin-bottom:12px;">2. Hydraulic Ferry Transfer Carts</h3>
-            <p style="font-size:0.92rem; color:#475569; line-height:1.6;">
-              Bi-directional traverser cars with built-in push-pull hydraulic chains that transfer mould trains across parallel pre-curing and return rail tracks smoothly.
-            </p>
+          <div class="eng-arch-col">
+            <div>
+              <span class="eng-arch-num">COMPONENT 02</span>
+              <h3 class="eng-arch-name">Hydraulic Ferry Traverser Cars</h3>
+              <p class="eng-arch-desc">
+                Heavy-duty bi-directional traverser carts with hydraulic push-pull chains and variable frequency drives (VFD) that shift 15-ton mould trains across parallel fermentation tracks.
+              </p>
+            </div>
+            <div class="eng-arch-link">
+              <span>VFD Smooth Traversal</span>
+              <span class="eng-arch-arrow">↗</span>
+            </div>
           </div>
 
-          <div class="eng-pillar-card" style="padding: 24px;">
-            <h3 style="font-size:1.25rem; font-weight:800; color:#0f172a; margin-bottom:12px;">3. Automated Mould Oiling &amp; Cleaning Station</h3>
-            <p style="font-size:0.92rem; color:#475569; line-height:1.6;">
-              Motorized rotary scrapers clean internal walls before automated airless mist sprayers apply an ultra-thin layer of release oil to prevent green cake adhesion.
-            </p>
+          <div class="eng-arch-col">
+            <div>
+              <span class="eng-arch-num">COMPONENT 03</span>
+              <h3 class="eng-arch-name">Automated Oiling &amp; Cleaning</h3>
+              <p class="eng-arch-desc">
+                Rotary wire-brush scrapers clean hardened residual cake before multi-nozzle airless mist sprayers deposit an ultra-thin 0.05mm release oil film on all interior surfaces.
+              </p>
+            </div>
+            <div class="eng-arch-link">
+              <span>Airless Micro-Oiling</span>
+              <span class="eng-arch-arrow">↗</span>
+            </div>
           </div>
 
-          <div class="eng-pillar-card" style="padding: 24px;">
-            <h3 style="font-size:1.25rem; font-weight:800; color:#0f172a; margin-bottom:12px;">4. Insulated Pre-Curing Enclosures</h3>
-            <p style="font-size:0.92rem; color:#475569; line-height:1.6;">
-              PUF-insulated tunnel enclosures with automated steam radiator fin heating and humidity circulation fans to ensure consistent rising during harsh winter climates.
-            </p>
-          </div>
-
-        </div>
-
-        <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid #e2e8f0; padding-top:32px;">
-          <a href="machinery-batching-preparation.html" class="eng-pillar-card__link">← Previous: Batching System</a>
-          <a href="machinery-tilting-machine.html" class="eng-btn-gold">Next: AAC Tilting Machine →</a>
         </div>
 
       </div>
     </section>
 
-    <section class="eng-cta">
-      <div class="eng-cta__inner">
-        <h2 class="eng-cta__title">Calculate Required Mould Inventory</h2>
-        <p class="eng-cta__text">Consult our engineering team to calculate the exact mould count, side plates, and ferry car speeds for your target shift output.</p>
-        <a href="contact.html" class="eng-btn-gold">Consult Mould Engineers →</a>
+    <!-- ============ 03. SECTION 02: MOULD CIRCULATION MATRIX ============ -->
+    <section class="eng-section eng-section--light" id="matrix">
+      <div class="eng-container">
+        
+        <div>
+          <span class="eng-eyebrow">02 · TECHNICAL PARAMETERS MATRIX</span>
+          <h2 class="eng-title">
+            <span>Mould circuit engineering parameters.</span>
+            <span class="eng-title-light">Capacities, travel speeds &amp; automation interlocks.</span>
+          </h2>
+          <p class="eng-lead">
+            Review detailed mechanical specifications and automation protocols governing each station of the mould circulation circuit.
+          </p>
+        </div>
+
+        <!-- Full-Width Dark-Header Engineering Matrix Table -->
+        <div class="eng-matrix-table-wrap">
+          <table class="eng-matrix-table">
+            <thead>
+              <tr>
+                <th>Station Module</th>
+                <th>Mechanical Configuration</th>
+                <th>Cycle Time / Speed</th>
+                <th>Temperature / Environment</th>
+                <th>Safety &amp; PLC Interlock</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="eng-material-cell">
+                    <span class="eng-material-name">Pouring &amp; Casting Station</span>
+                  </div>
+                </td>
+                <td><span class="eng-prop-badge">Hydraulic Mould Positioning Clamp</span></td>
+                <td>3.5 – 4.5 min / Mould</td>
+                <td>Ambient ($25\text{–}35^\circ\text{C}$)</td>
+                <td><span class="eng-qc-tag">Photoelectric mould alignment verify before mixer discharge</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="eng-material-cell">
+                    <span class="eng-material-name">Pre-Curing Fermentation Tunnel</span>
+                  </div>
+                </td>
+                <td><span class="eng-prop-badge">Multi-Track Chain Pusher Drive</span></td>
+                <td>120 – 180 min Retention</td>
+                <td>Controlled $40\text{–}50^\circ\text{C}$ (Steam Radiant)</td>
+                <td><span class="eng-qc-tag">Multi-zone RTD sensors with automatic steam valve modulation</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="eng-material-cell">
+                    <span class="eng-material-name">Hydraulic Ferry Traversers</span>
+                  </div>
+                </td>
+                <td><span class="eng-prop-badge">Bi-Directional Heavy Rail Traverser</span></td>
+                <td>12 – 18 m/min Travel Speed</td>
+                <td>Industrial Plant Floor</td>
+                <td><span class="eng-qc-tag">Laser track position encoder; mechanical rail locking wedges</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="eng-material-cell">
+                    <span class="eng-material-name">Side Plate Return &amp; Cleaning Track</span>
+                  </div>
+                </td>
+                <td><span class="eng-prop-badge">Continuous Motorized Roller Track</span></td>
+                <td>15 – 20 m/min Return Speed</td>
+                <td>Dry Industrial Bay</td>
+                <td><span class="eng-qc-tag">Side plate flatness scanner; auto reject for deformed plates</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="eng-material-cell">
+                    <span class="eng-material-name">Mould Re-assembly &amp; Clamping</span>
+                  </div>
+                </td>
+                <td><span class="eng-prop-badge">Overhead Crane Guided Alignment</span></td>
+                <td>60 – 90 sec Re-latch</td>
+                <td>Ambient</td>
+                <td><span class="eng-qc-tag">Pneumatic wedge locks verify zero gap along side plate joints</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Critical Benchmark Callout Box -->
+        <div class="eng-checkpoint-box">
+          <h4 class="eng-checkpoint-box__title">CRITICAL PROCESS BENCHMARK · PRE-CURING HARDNESS &amp; PENETRATION</h4>
+          <p class="eng-checkpoint-box__text">
+            The green cake must reach a precise penetration resistance hardness ($0.18\text{–}0.25\text{ MPa}$, measured with a calibrated green penetrometer) before demoulding and wire cutting. Premature cutting causes wire collapse and block deformation; over-curing causes excessive wire drag, high wire breakage rates, and corner chipping.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ 04. SECTION 03: FERMENTATION TUNNEL ARCHITECTURE ============ -->
+    <section class="eng-section eng-section--white" id="tunnel">
+      <div class="eng-container">
+        
+        <div>
+          <span class="eng-eyebrow">03 · FERMENTATION TUNNEL DESIGN</span>
+          <h2 class="eng-title">
+            <span>Thermal enclosure engineering.</span>
+            <span class="eng-title-light">Continuous rising stability through winter climates.</span>
+          </h2>
+          <p class="eng-lead">
+            Laxmi pre-curing fermentation chambers maintain rock-solid thermal and humidity profiles, protecting the fragile rising cake from ambient drafts and seasonal cold fronts.
+          </p>
+        </div>
+
+        <div class="eng-arch-grid" style="grid-template-columns: repeat(3, 1fr); margin: 2.5rem 0;">
+          
+          <div class="eng-arch-col">
+            <div>
+              <span class="eng-arch-num">FEATURE 01</span>
+              <h3 class="eng-arch-name">PUF Insulated Wall Panels</h3>
+              <p class="eng-arch-desc">
+                Modular 50mm PUF-insulated sandwich panels with pre-coated GI steel sheets minimize thermal heat dissipation to under 15 W/m²·K.
+              </p>
+            </div>
+            <div class="eng-arch-link">
+              <span>Thermal Efficiency</span>
+              <span class="eng-arch-arrow">↗</span>
+            </div>
+          </div>
+
+          <div class="eng-arch-col">
+            <div>
+              <span class="eng-arch-num">FEATURE 02</span>
+              <h3 class="eng-arch-name">Steam Fin Radiator Coils</h3>
+              <p class="eng-arch-desc">
+                High-efficiency finned stainless steel steam heating coils deliver radiant warmth without spraying wet condensation onto rising cake surfaces.
+              </p>
+            </div>
+            <div class="eng-arch-link">
+              <span>Radiant Steam Heating</span>
+              <span class="eng-arch-arrow">↗</span>
+            </div>
+          </div>
+
+          <div class="eng-arch-col">
+            <div>
+              <span class="eng-arch-num">FEATURE 03</span>
+              <h3 class="eng-arch-name">Automated Air Circulation</h3>
+              <p class="eng-arch-desc">
+                Multi-zone ceiling convection fans eliminate thermal stratification, ensuring identical temperature from top to bottom mould tiers.
+              </p>
+            </div>
+            <div class="eng-arch-link">
+              <span>Uniform Thermal Distribution</span>
+              <span class="eng-arch-arrow">↗</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ 05. CHAPTER NAVIGATION FOOTER ============ -->
+    <section class="eng-chapter-nav-section">
+      <div class="eng-container">
+        <div class="eng-chapter-nav">
+          <a href="machinery-batching-preparation.html" class="eng-chapter-nav__btn eng-chapter-nav__btn--prev">
+            <span class="eng-chapter-nav__sub">← PREVIOUS SYSTEM</span>
+            <span class="eng-chapter-nav__title">System 02 · Batching &amp; Slurry Preparation</span>
+          </a>
+          <a href="machinery-tilting-machine.html" class="eng-chapter-nav__btn eng-chapter-nav__btn--next">
+            <span class="eng-chapter-nav__sub">NEXT MACHINERY SYSTEM →</span>
+            <span class="eng-chapter-nav__title">System 04 · AAC 90° Tilting Machine</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 06. STRATEGIC CONVERSION CTA BANNER ============ -->
+    <section class="eng-cta-banner" id="cta">
+      <div class="eng-cta-banner__inner">
+        <span class="eng-cta-banner__eyebrow">MOULD INVENTORY &amp; FERMENTATION SIZING</span>
+        <h2 class="eng-cta-banner__title">
+          <span>Calculate exact mould count</span>
+          <span class="eng-cta-banner__title-light">&amp; ferry speeds for your plant.</span>
+        </h2>
+        <p class="eng-cta-banner__lead">
+          Our engineering team calculates optimal mould box numbers, side plates, and fermentation tunnel track counts matched to your daily volume targets.
+        </p>
+        <div class="eng-cta-banner__actions">
+          <a href="contact.html" class="eng-cta-banner__btn-white">
+            <span>Consult Mould Engineers</span>
+            <span class="eng-cta-banner__btn-arrow">↗</span>
+          </a>
+          <a href="#overview" class="eng-cta-banner__link-top">
+            <span>Return to top ↑</span>
+          </a>
+        </div>
       </div>
     </section>
 
   </main>
 
+  <!-- Shared Global Footer Injection -->
   <div id="site-footer"></div>
+
   <script src="js/main.js"></script>
   <script src="js/navigation.js"></script>
   <script src="js/animations.js"></script>

@@ -61,6 +61,7 @@
             src="assets/images/future-of-aac.png"
             alt="Modern AAC architectural engineering and precision block production"
             fetchpriority="high"
+            decoding="async"
           />
         </div>
         <!-- High-key white gradient overlay -->
@@ -302,7 +303,7 @@
           <!-- Machine 1 -->
           <div class="eng-machine-card">
             <div class="eng-machine-card__bg">
-              <img src="assets/images/engineering/machinery-raw-material-storage.png" alt="" class="eng-machine-card__bg-img" loading="lazy" />
+              <img src="assets/images/engineering/machinery-raw-material-storage.png" alt="" class="eng-machine-card__bg-img" loading="lazy" decoding="async" />
             </div>
             <div class="eng-machine-card__top">
               <span class="eng-machine-category">RAW MATERIAL STORAGE · SILOS</span>
@@ -320,7 +321,7 @@
           <!-- Machine 2 -->
           <div class="eng-machine-card">
             <div class="eng-machine-card__bg">
-              <img src="assets/images/engineering/machinery-batching-preparation.png" alt="" class="eng-machine-card__bg-img" loading="lazy" />
+              <img src="assets/images/engineering/machinery-batching-preparation.png" alt="" class="eng-machine-card__bg-img" loading="lazy" decoding="async" />
             </div>
             <div class="eng-machine-card__top">
               <span class="eng-machine-category">BATCHING &amp; MIXING · SLURRY</span>
@@ -338,7 +339,7 @@
           <!-- Machine 3 -->
           <div class="eng-machine-card">
             <div class="eng-machine-card__bg">
-              <img src="assets/images/engineering/machinery-mould-precuring.png" alt="" class="eng-machine-card__bg-img" loading="lazy" />
+              <img src="assets/images/engineering/machinery-mould-precuring.png" alt="" class="eng-machine-card__bg-img" loading="lazy" decoding="async" />
             </div>
             <div class="eng-machine-card__top">
               <span class="eng-machine-category">MOULD HANDLING · PRE-CURING</span>
@@ -356,7 +357,7 @@
           <!-- Machine 4 -->
           <div class="eng-machine-card">
             <div class="eng-machine-card__bg">
-              <img src="assets/images/engineering/machinery-tilting-machine.png" alt="" class="eng-machine-card__bg-img" loading="lazy" />
+              <img src="assets/images/engineering/machinery-tilting-machine.png" alt="" class="eng-machine-card__bg-img" loading="lazy" decoding="async" />
             </div>
             <div class="eng-machine-card__top">
               <span class="eng-machine-category">90° DEMOULDING · TILTING</span>
@@ -374,7 +375,7 @@
           <!-- Machine 5 -->
           <div class="eng-machine-card">
             <div class="eng-machine-card__bg">
-              <img src="assets/images/engineering/machinery-cutting-system.png" alt="" class="eng-machine-card__bg-img" loading="lazy" />
+              <img src="assets/images/engineering/machinery-cutting-system.png" alt="" class="eng-machine-card__bg-img" loading="lazy" decoding="async" />
             </div>
             <div class="eng-machine-card__top">
               <span class="eng-machine-category">HIGH-PRECISION CUTTING</span>
@@ -392,7 +393,7 @@
           <!-- Machine 6 -->
           <div class="eng-machine-card">
             <div class="eng-machine-card__bg">
-              <img src="assets/images/engineering/machinery-autoclave.png" alt="" class="eng-machine-card__bg-img" loading="lazy" />
+              <img src="assets/images/engineering/machinery-autoclave.png" alt="" class="eng-machine-card__bg-img" loading="lazy" decoding="async" />
             </div>
             <div class="eng-machine-card__top">
               <span class="eng-machine-category">AUTOCLAVE CURING · VESSELS</span>
@@ -410,7 +411,7 @@
           <!-- Machine 7 -->
           <div class="eng-machine-card">
             <div class="eng-machine-card__bg">
-              <img src="assets/images/engineering/machinery-steam-boiler.png" alt="" class="eng-machine-card__bg-img" loading="lazy" />
+              <img src="assets/images/engineering/machinery-steam-boiler.png" alt="" class="eng-machine-card__bg-img" loading="lazy" decoding="async" />
             </div>
             <div class="eng-machine-card__top">
               <span class="eng-machine-category">STEAM GENERATION · BOILERS</span>
@@ -428,7 +429,7 @@
           <!-- Machine 8 -->
           <div class="eng-machine-card">
             <div class="eng-machine-card__bg">
-              <img src="assets/images/engineering/machinery-auto-palletizing.png" alt="" class="eng-machine-card__bg-img" loading="lazy" />
+              <img src="assets/images/engineering/machinery-auto-palletizing.png" alt="" class="eng-machine-card__bg-img" loading="lazy" decoding="async" />
             </div>
             <div class="eng-machine-card__top">
               <span class="eng-machine-category">PACKING &amp; STACKING · LOGISTICS</span>
@@ -599,24 +600,44 @@
         });
       });
 
-      // Active state highlight on scroll
-      window.addEventListener('scroll', function() {
-        const sections = ['pillars', 'process', 'machinery', 'faq'];
-        const scrollPos = window.pageYOffset + 200;
+      // Active state highlight on scroll (throttled with rAF & cached geometry)
+      var navBtns = document.querySelectorAll('.eng-nav-btn');
+      var sectionIds = ['pillars', 'process', 'machinery', 'faq'];
+      var sectionCache = [];
 
-        sections.forEach(id => {
-          const el = document.getElementById(id);
-          if (el) {
-            const top = el.offsetTop;
-            const height = el.offsetHeight;
-            if (scrollPos >= top && scrollPos < top + height) {
-              document.querySelectorAll('.eng-nav-btn').forEach(b => {
-                b.classList.toggle('active', b.getAttribute('href') === `#${id}`);
+      function updateSections() {
+        sectionCache = sectionIds.map(function(id) {
+          var el = document.getElementById(id);
+          return el ? { id: id, top: el.offsetTop, height: el.offsetHeight } : null;
+        }).filter(Boolean);
+      }
+
+      updateSections();
+      window.addEventListener('resize', updateSections, { passive: true });
+
+      var scrollTicking = false;
+      window.addEventListener('scroll', function() {
+        if (!scrollTicking) {
+          window.requestAnimationFrame(function() {
+            var scrollPos = window.pageYOffset + 200;
+            var currentActive = null;
+            for (var i = 0; i < sectionCache.length; i++) {
+              var s = sectionCache[i];
+              if (scrollPos >= s.top && scrollPos < s.top + s.height) {
+                currentActive = s.id;
+                break;
+              }
+            }
+            if (currentActive) {
+              navBtns.forEach(function(b) {
+                b.classList.toggle('active', b.getAttribute('href') === '#' + currentActive);
               });
             }
-          }
-        });
-      });
+            scrollTicking = false;
+          });
+          scrollTicking = true;
+        }
+      }, { passive: true });
     });
   </script>
 </body>

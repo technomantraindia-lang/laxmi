@@ -4,6 +4,12 @@
    ============================================================= */
 
 :root {
+  --font-primary: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-geist: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-geist-mono: 'Geist Mono', 'SF Mono', Consolas, Monaco, monospace;
+  --font-mono: 'Geist Mono', 'SF Mono', Consolas, Monaco, monospace;
+  --hp-font: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --hp-font-mono: 'Geist Mono', 'SF Mono', Consolas, Monaco, monospace;
   --hp-ink: #07172c;
   --hp-ink-soft: #4b5e71;
   --hp-navy: #07172c;
@@ -35,7 +41,7 @@
 }
 
 .hp-section-title {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Geist', system-ui, sans-serif;
   font-size: clamp(2.4rem, 4.5vw, 3.8rem);
   font-weight: 900;
   line-height: 1.08;
@@ -70,7 +76,7 @@
   background: #07172c;
   color: #ffffff;
   padding: 130px 0 90px;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 .editorial-hero__media {
@@ -126,7 +132,7 @@
 
 .editorial-hero__eyebrow {
   display: inline-block;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -136,7 +142,7 @@
 }
 
 .editorial-hero__title {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
   font-size: clamp(3.4rem, 6.2vw, 5.6rem) !important;
   line-height: 1.05 !important;
   letter-spacing: -0.035em !important;
@@ -158,7 +164,7 @@
 }
 
 .editorial-hero__sub {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: clamp(1.1rem, 1.35vw, 1.25rem);
   line-height: 1.6;
   color: #cbd5e1;
@@ -180,7 +186,7 @@
   padding: 15px 30px;
   background: #ffffff;
   color: #07172c;
-  font-family: Geist, Inter, 'Helvetica Neue', Arial, sans-serif !important;
+  font-family: var(--font-primary, 'Geist', sans-serif) !important;
   font-weight: 800;
   font-size: 0.92rem;
   text-decoration: none;
@@ -200,7 +206,7 @@
   align-items: center;
   gap: 8px;
   color: #ffffff;
-  font-family: Geist, Inter, 'Helvetica Neue', Arial, sans-serif !important;
+  font-family: var(--font-primary, 'Geist', sans-serif) !important;
   font-weight: 700;
   font-size: 0.95rem;
   text-decoration: none;
@@ -243,36 +249,64 @@
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 999;
+  z-index: 9999;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 4px;
+  box-shadow: -2px 6px 20px rgba(0, 0, 0, 0.15);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .hp-float-btn {
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffff;
   text-decoration: none;
-  transition: transform 0.2s, background 0.2s;
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.hp-float-btn:first-child {
+  border-top-left-radius: 10px;
+}
+
+.hp-float-btn:last-child {
+  border-bottom-left-radius: 10px;
+}
+
+.hp-float-btn svg {
+  display: block;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
 }
 
 .hp-float-btn--whatsapp {
   background: #25d366;
 }
 
-.hp-float-btn--phone {
-  background: #07172c;
-  border-top: 1px solid rgba(255,255,255,0.1);
+.hp-float-btn--whatsapp:hover {
+  background: #1eb853;
+  transform: translateX(-5px);
+  box-shadow: -4px 4px 14px rgba(37, 211, 102, 0.4);
 }
 
-.hp-float-btn:hover {
-  transform: translateX(-4px);
+.hp-float-btn--phone {
+  background: #07172c;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.hp-float-btn--phone:hover {
+  background: #0d223f;
+  transform: translateX(-5px);
+  box-shadow: -4px 4px 14px rgba(7, 23, 44, 0.4);
+}
+
+.hp-float-btn:hover svg {
+  transform: scale(1.1);
 }
 
 
@@ -389,7 +423,7 @@
 }
 
 .hp-stat-num {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 2.35rem;
   font-weight: 800;
   color: #0b4d8c;
@@ -398,7 +432,7 @@
 }
 
 .hp-stat-label {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 0.65rem;
   font-weight: 700;
   color: #64748b;
@@ -412,7 +446,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -442,7 +476,7 @@
   color: #ffffff;
   overflow: hidden;
   padding: 120px 0;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .hp-credibility-banner__media {
@@ -480,7 +514,7 @@
 
 .hp-credibility-banner__eyebrow {
   display: inline-block;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -490,7 +524,7 @@
 }
 
 .hp-credibility-banner__title {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: clamp(3.4rem, 6.2vw, 5.6rem) !important;
   line-height: 1.04 !important;
   letter-spacing: -0.03em !important;
@@ -512,7 +546,7 @@
 }
 
 .hp-credibility-banner__desc {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: clamp(1.05rem, 1.25vw, 1.18rem);
   line-height: 1.6;
   color: #cbd5e1;
@@ -528,7 +562,7 @@
   padding: 15px 30px;
   background: #ffffff;
   color: #07172c;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-weight: 800;
   font-size: 0.92rem;
   text-decoration: none;
@@ -572,7 +606,7 @@
 .hp-journey-section {
   padding: 100px 0 120px;
   background: #ffffff;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .hp-journey-header {
@@ -581,7 +615,7 @@
 
 .hp-journey-eyebrow {
   display: inline-block;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 0.82rem;
   font-weight: 800;
   letter-spacing: 0.14em;
@@ -591,7 +625,7 @@
 }
 
 .hp-journey-title {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: clamp(3rem, 5.5vw, 4.8rem) !important;
   line-height: 1.06 !important;
   letter-spacing: -0.035em !important;
@@ -644,7 +678,7 @@
 }
 
 .hp-journey-row-num {
-  font-family: 'Inter', monospace, sans-serif;
+  font-family: 'Geist', monospace, sans-serif;
   font-size: 0.85rem;
   font-weight: 500;
   color: #94a3b8;
@@ -724,7 +758,7 @@
   background: #ffffff;
   border-top: 1px solid rgba(7, 23, 44, 0.08);
   border-bottom: 1px solid rgba(7, 23, 44, 0.08);
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   position: relative;
 }
 
@@ -768,7 +802,7 @@
 
 .hp-academy-eyebrow {
   display: inline-block;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 0.82rem;
   font-weight: 800;
   letter-spacing: 0.14em;
@@ -778,7 +812,7 @@
 }
 
 .hp-academy-title {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: clamp(2.8rem, 4.2vw, 4.4rem) !important;
   line-height: 1.05 !important;
   letter-spacing: -0.035em !important;
@@ -845,7 +879,7 @@
 }
 
 .hp-academy-row-num {
-  font-family: 'Inter', monospace, sans-serif;
+  font-family: 'Geist', monospace, sans-serif;
   font-size: 0.85rem;
   font-weight: 600;
   color: #0b4d8c;
@@ -925,7 +959,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 0.92rem;
   font-weight: 800;
   color: #07172c;
@@ -986,7 +1020,7 @@
   color: #ffffff;
   overflow: hidden;
   padding: 120px 0;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .hp-verify__bg {
@@ -1028,7 +1062,7 @@
 
 .hp-verify__eyebrow {
   display: inline-block;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 0.82rem;
   font-weight: 800;
   letter-spacing: 0.14em;
@@ -1038,7 +1072,7 @@
 }
 
 .hp-verify__title {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: clamp(2.8rem, 4.8vw, 4.8rem) !important;
   line-height: 1.06 !important;
   letter-spacing: -0.035em !important;
@@ -1097,7 +1131,7 @@
 }
 
 .hp-verify__item-num {
-  font-family: 'Inter', monospace, sans-serif;
+  font-family: 'Geist', monospace, sans-serif;
   font-size: 0.8rem;
   font-weight: 700;
   color: #38bdf8;
@@ -1124,7 +1158,7 @@
   padding: 16px 32px;
   background: #ffffff;
   color: #07172c;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-weight: 800;
   font-size: 0.92rem;
   text-decoration: none;
@@ -1144,7 +1178,7 @@
   align-items: center;
   gap: 8px;
   color: #ffffff;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-weight: 700;
   font-size: 0.94rem;
   text-decoration: none;
@@ -1183,7 +1217,7 @@
 .hp-facility-section {
   padding: 120px 0 100px;
   background: #ffffff;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .hp-facility-header {
@@ -1196,7 +1230,7 @@
 
 .hp-facility-eyebrow {
   display: inline-block;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 0.8rem;
   font-weight: 800;
   letter-spacing: 0.14em;
@@ -1206,7 +1240,7 @@
 }
 
 .hp-facility-title {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: clamp(3.2rem, 5.8vw, 5.4rem) !important;
   line-height: 1.04 !important;
   letter-spacing: -0.04em !important;
@@ -1247,7 +1281,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 0.92rem;
   font-weight: 800;
   color: #07172c;
@@ -1331,7 +1365,7 @@
 }
 
 .hp-facility-step-num {
-  font-family: 'Inter', monospace, sans-serif;
+  font-family: 'Geist', monospace, sans-serif;
   font-size: 0.78rem;
   font-weight: 700;
   color: #0b4d8c;
@@ -1442,7 +1476,7 @@
 }
 
 .hp-system-title {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: clamp(3.2rem, 5.8vw, 5.4rem) !important;
   line-height: 1.04 !important;
   letter-spacing: -0.04em !important;
@@ -1649,7 +1683,7 @@
 }
 
 .hp-projects-title {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: clamp(3.2rem, 5.8vw, 5.4rem) !important;
   line-height: 1.04 !important;
   letter-spacing: -0.04em !important;
@@ -1779,7 +1813,7 @@
 }
 
 .hp-execution-title {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: clamp(3.2rem, 5.8vw, 5.4rem) !important;
   line-height: 1.04 !important;
   letter-spacing: -0.04em !important;
@@ -1845,7 +1879,7 @@
   color: #07172c;
   margin: 0 0 14px 0;
   letter-spacing: -0.015em;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Geist', sans-serif;
 }
 
 .hp-case-desc {
@@ -1960,7 +1994,7 @@
 }
 
 .hp-decisions-title {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: clamp(3.2rem, 5.8vw, 5.4rem) !important;
   line-height: 1.04 !important;
   letter-spacing: -0.04em !important;
@@ -2093,7 +2127,7 @@
 }
 
 .hp-tools-title {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: clamp(3rem, 5.4vw, 5.2rem) !important;
   line-height: 1.04 !important;
   letter-spacing: -0.04em !important;
@@ -2209,7 +2243,7 @@
 }
 
 .hp-walkthroughs-title {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: clamp(3rem, 5.4vw, 5.2rem) !important;
   line-height: 1.04 !important;
   letter-spacing: -0.04em !important;
@@ -2313,7 +2347,7 @@
 }
 
 .hp-resp-title {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: clamp(3rem, 5.4vw, 5.2rem) !important;
   line-height: 1.04 !important;
   letter-spacing: -0.04em !important;
@@ -2422,7 +2456,7 @@
 }
 
 .hp-decision-dark__title {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: clamp(3rem, 5.4vw, 5.2rem) !important;
   line-height: 1.04 !important;
   letter-spacing: -0.04em !important;
@@ -2453,7 +2487,7 @@
 }
 
 .hp-decision-confidence-text {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   margin: 0;
   font-size: clamp(2rem, 3.4vw, 3.2rem) !important;
   font-weight: 800 !important;
@@ -2485,7 +2519,7 @@
 }
 
 .hp-next-steps-title {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: clamp(3rem, 5.4vw, 5.2rem) !important;
   line-height: 1.04 !important;
   letter-spacing: -0.04em !important;
@@ -2631,7 +2665,7 @@
 .machinery-section__heading,
 .machinery-stage__title,
 .machinery-catalog__title {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  font-family: 'Geist', system-ui, -apple-system, sans-serif !important;
   font-size: clamp(2.8rem, 5.2vw, 4.8rem) !important;
   font-weight: 900 !important;
   line-height: 1.05 !important;
@@ -2668,7 +2702,7 @@
 .machinery-hero__title,
 .machinery-proof__title,
 .machinery-cta__title {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  font-family: 'Geist', system-ui, -apple-system, sans-serif !important;
   font-size: clamp(2.4rem, 4.4vw, 4.2rem) !important;
   font-weight: 900 !important;
   line-height: 1.08 !important;
@@ -2687,7 +2721,7 @@
 .about-page .editorial-quality-title,
 .about-page .editorial-diff-title,
 .about-page .machinery-stage__title {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  font-family: 'Geist', system-ui, -apple-system, sans-serif !important;
   font-size: clamp(2.2rem, 3.8vw, 3.4rem) !important;
   font-weight: 700 !important;
   line-height: 1.1 !important;
@@ -2697,7 +2731,7 @@
 
 .about-page .editorial-chain-title,
 .about-page .editorial-chain-section .machinery-stage__title {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  font-family: 'Geist', system-ui, -apple-system, sans-serif !important;
   font-size: clamp(2.2rem, 3.8vw, 3.4rem) !important;
   font-weight: 700 !important;
   line-height: 1.1 !important;
@@ -3017,7 +3051,7 @@
   align-items: center;
   gap: 8px;
   padding: 13px 24px;
-  font-family: var(--font-primary, 'Inter', sans-serif);
+  font-family: var(--font-primary, 'Geist', sans-serif);
   font-size: 0.88rem;
   font-weight: 700;
   text-decoration: none;
@@ -3223,14 +3257,7 @@
 
 /* Animated dot inside mouse */
 .editorial-hero__scroll-dot {
-  animation: heroMouseDot 2s ease-in-out infinite;
-}
-
-@keyframes heroMouseDot {
-  0%   { cy: 10; opacity: 0.8; }
-  40%  { cy: 22; opacity: 0.2; }
-  80%  { cy: 10; opacity: 0; }
-  100% { cy: 10; opacity: 0.8; }
+  transform: translateZ(0);
 }
 
 /* Text label */
@@ -3260,18 +3287,19 @@
 .editorial-hero__scroll-line::after {
   content: "";
   position: absolute;
-  top: -100%;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.5));
+  transform: translateY(-100%);
   animation: heroScrollPulse 2.5s ease-in-out infinite;
 }
 
 @keyframes heroScrollPulse {
-  0%   { top: -100%; }
-  50%  { top: 100%; }
-  100% { top: 100%; }
+  0%   { transform: translateY(-100%); }
+  50%  { transform: translateY(100%); }
+  100% { transform: translateY(100%); }
 }
 
 /* ── Entrance animation keyframes ── */
@@ -4423,7 +4451,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Geist', system-ui, sans-serif;
   font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.18em;
@@ -4451,7 +4479,7 @@
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Geist', system-ui, sans-serif;
   font-size: 0.85rem;
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -4474,7 +4502,7 @@
 }
 
 .academy-seq-caption {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Geist', system-ui, sans-serif;
   font-size: 0.94rem;
   font-weight: 500;
   color: #52677d;
@@ -6275,7 +6303,7 @@
 }
 
 .machinery-hero__title {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Geist', system-ui, -apple-system, sans-serif;
   font-size: clamp(2.8rem, 4.8vw, 4.5rem);
   font-weight: 900;
   line-height: 1.06;
@@ -6290,7 +6318,7 @@
 }
 
 .machinery-hero__lead {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Geist', system-ui, -apple-system, sans-serif;
   font-size: clamp(1rem, 1.25vw, 1.15rem);
   line-height: 1.65;
   color: rgba(255, 255, 255, 0.82);
@@ -6444,7 +6472,7 @@
 }
 
 .machinery-rail__link {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Geist', system-ui, sans-serif;
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -6551,7 +6579,7 @@
 }
 
 .machinery-stage__title {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Geist', system-ui, sans-serif;
   font-size: clamp(2.8rem, 5.2vw, 4.8rem) !important;
   font-weight: 900 !important;
   color: var(--hp-ink, #0a1930);
@@ -6570,7 +6598,7 @@
 }
 
 .machinery-stage__desc {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Geist', system-ui, sans-serif;
   font-size: 1.08rem;
   line-height: 1.65;
   color: var(--hp-ink-soft, #2c4a7c);
@@ -6656,7 +6684,7 @@
   left: 0.85rem;
   bottom: auto;
   z-index: 2;
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Geist', system-ui, sans-serif;
   font-size: 0.68rem;
   font-weight: 800;
   letter-spacing: 0.14em;
@@ -6678,7 +6706,7 @@
 }
 
 .machinery-card__title {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Geist', system-ui, sans-serif;
   font-size: 1.25rem;
   font-weight: 800;
   letter-spacing: -0.015em;
@@ -6688,7 +6716,7 @@
 }
 
 .machinery-card__body {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Geist', system-ui, sans-serif;
   font-size: 0.92rem;
   line-height: 1.65;
   color: var(--hp-ink-soft, #2c4a7c);
@@ -6697,7 +6725,7 @@
 }
 
 .machinery-card__spec {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Geist', system-ui, sans-serif;
   font-size: 0.78rem;
   font-weight: 700;
   color: var(--laxmi-blue, #0b3f78);
@@ -6718,7 +6746,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Geist', system-ui, sans-serif;
   font-size: 0.88rem;
   font-weight: 800;
   letter-spacing: 0.06em;
@@ -6775,7 +6803,7 @@
 }
 
 .machinery-proof__title {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Geist', system-ui, sans-serif;
   font-size: clamp(2rem, 3.5vw, 3.2rem);
   font-weight: 800;
   color: #ffffff;
@@ -6784,7 +6812,7 @@
 }
 
 .machinery-proof__lead {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Geist', system-ui, sans-serif;
   font-size: 1.05rem;
   line-height: 1.65;
   color: rgba(255, 255, 255, 0.8);
@@ -6830,7 +6858,7 @@
 }
 
 .machinery-proof__num {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Geist', system-ui, sans-serif;
   font-size: 0.85rem;
   font-weight: 900;
   color: var(--hp-gold, #b98a2f);
@@ -6839,7 +6867,7 @@
 }
 
 .machinery-proof__card-title {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Geist', system-ui, sans-serif;
   font-size: 1.15rem;
   font-weight: 800;
   letter-spacing: 0.04em;
@@ -6848,7 +6876,7 @@
 }
 
 .machinery-proof__card-desc {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Geist', system-ui, sans-serif;
   font-size: 0.9rem;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.75);
@@ -6871,7 +6899,7 @@
 }
 
 .machinery-catalog__title {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Geist', system-ui, sans-serif;
   font-size: clamp(2rem, 3.5vw, 3rem);
   font-weight: 800;
   color: var(--hp-ink, #0a1930);
@@ -6879,7 +6907,7 @@
 }
 
 .machinery-catalog__lead {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Geist', system-ui, sans-serif;
   font-size: 1.05rem;
   color: var(--hp-ink-soft, #2c4a7c);
   margin: 0;
@@ -6897,7 +6925,7 @@
 }
 
 .machinery-catalog__item {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Geist', system-ui, sans-serif;
   font-size: 0.98rem;
   font-weight: 700;
   color: var(--hp-ink, #0a1930);
@@ -6914,7 +6942,7 @@
 }
 
 .machinery-catalog__item span {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Geist', system-ui, sans-serif;
   font-size: 0.78rem;
   color: var(--laxmi-blue, #0b3f78);
   font-weight: 900;
@@ -6945,7 +6973,7 @@
 }
 
 .machinery-cta__title {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Geist', system-ui, sans-serif;
   font-size: clamp(2.4rem, 4.8vw, 4.2rem) !important;
   font-weight: 900 !important;
   line-height: 1.08 !important;
@@ -6961,7 +6989,7 @@
 }
 
 .machinery-cta__sub {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Geist', system-ui, sans-serif;
   font-size: 1.1rem;
   line-height: 1.65;
   color: rgba(255, 255, 255, 0.8);
@@ -6982,7 +7010,7 @@
   flex-direction: column;
   gap: 0.5rem;
   margin-top: 2.75rem;
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Geist', system-ui, sans-serif;
   font-size: 0.88rem;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.7);
@@ -9188,7 +9216,7 @@
 }
 
 .editorial-company-header__title {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary, 'Geist', sans-serif);
   font-size: clamp(2.5rem, 4.5vw, 4.2rem);
   font-weight: 700;
   color: #07172c;
@@ -9198,7 +9226,7 @@
 }
 
 .editorial-company-header__sub {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary, 'Geist', sans-serif);
   font-size: 1.15rem;
   color: #475569;
   margin: 0;
@@ -9239,7 +9267,7 @@
 }
 
 .company-proof-row__title {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary, 'Geist', sans-serif);
   font-size: 1.35rem;
   font-weight: 700;
   color: #07172c;
@@ -9248,7 +9276,7 @@
 }
 
 .company-proof-row__desc {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary, 'Geist', sans-serif);
   font-size: 1.02rem;
   line-height: 1.6;
   color: #64748b;
@@ -9305,7 +9333,7 @@
 }
 
 .editorial-facility-title {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary, 'Geist', sans-serif);
   font-size: clamp(2rem, 3.5vw, 3.2rem);
   font-weight: 700;
   color: #07172c;
@@ -9314,7 +9342,7 @@
 }
 
 .editorial-facility-statement {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary, 'Geist', sans-serif);
   font-size: 1.15rem;
   font-weight: 700;
   color: #026aa7;
@@ -9322,7 +9350,7 @@
 }
 
 .editorial-facility-desc {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary, 'Geist', sans-serif);
   font-size: 1rem;
   line-height: 1.6;
   color: #475569;
@@ -9352,7 +9380,7 @@
 }
 
 .spec-value {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary, 'Geist', sans-serif);
   font-size: 0.88rem;
   font-weight: 700;
   color: #07172c;
@@ -9375,7 +9403,7 @@
 }
 
 .editorial-mfg-header__title {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary, 'Geist', sans-serif);
   font-size: clamp(2rem, 3.5vw, 3.2rem);
   font-weight: 700;
   color: #07172c;
@@ -9405,7 +9433,7 @@
 }
 
 .mfg-step-title {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary, 'Geist', sans-serif);
   font-size: 1.15rem;
   font-weight: 900;
   letter-spacing: 0.04em;
@@ -9414,7 +9442,7 @@
 }
 
 .mfg-step-desc {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary, 'Geist', sans-serif);
   font-size: 0.88rem;
   line-height: 1.6;
   color: #475569;
@@ -9440,7 +9468,7 @@
 }
 
 .editorial-chain-title {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary, 'Geist', sans-serif);
   font-size: clamp(2.4rem, 4.5vw, 3.8rem);
   font-weight: 700;
   line-height: 1.1;
@@ -9450,7 +9478,7 @@
 }
 
 .editorial-chain-sub {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary, 'Geist', sans-serif);
   font-size: 1.1rem;
   color: #94a3b8;
   margin: 0 0 3rem 0;
@@ -9467,7 +9495,7 @@
 }
 
 .chain-node {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary, 'Geist', sans-serif);
   font-size: clamp(1rem, 1.6vw, 1.4rem);
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -9508,7 +9536,7 @@
 }
 
 .editorial-expertise-title {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary, 'Geist', sans-serif);
   font-size: clamp(2rem, 3.5vw, 3.2rem);
   font-weight: 700;
   color: #07172c;
@@ -9516,7 +9544,7 @@
 }
 
 .editorial-expertise-desc {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary, 'Geist', sans-serif);
   font-size: 1.05rem;
   line-height: 1.6;
   color: #475569;
@@ -9579,7 +9607,7 @@
 }
 
 .editorial-projects-title {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary, 'Geist', sans-serif);
   font-size: clamp(2rem, 3.5vw, 3.2rem);
   font-weight: 700;
   color: #07172c;
@@ -9587,7 +9615,7 @@
 }
 
 .editorial-projects-sub {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary, 'Geist', sans-serif);
   font-size: 1.05rem;
   color: #475569;
   margin: 0;
@@ -9649,7 +9677,7 @@
 }
 
 .project-proof-card__title {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary, 'Geist', sans-serif);
   font-size: 1.25rem;
   font-weight: 700;
   color: #07172c;
@@ -9657,7 +9685,7 @@
 }
 
 .project-proof-card__desc {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary, 'Geist', sans-serif);
   font-size: 0.95rem;
   line-height: 1.6;
   color: #475569;
@@ -9681,7 +9709,7 @@
 }
 
 .editorial-quality-title {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary, 'Geist', sans-serif);
   font-size: clamp(2rem, 3.5vw, 3.2rem);
   font-weight: 700;
   color: #07172c;
@@ -9717,7 +9745,7 @@
 }
 
 .quality-doc-card__title {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary, 'Geist', sans-serif);
   font-size: 1.15rem;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -9726,7 +9754,7 @@
 }
 
 .quality-doc-card__desc {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary, 'Geist', sans-serif);
   font-size: 0.92rem;
   line-height: 1.6;
   color: #475569;
@@ -9751,7 +9779,7 @@
 }
 
 .editorial-diff-title {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary, 'Geist', sans-serif);
   font-size: clamp(2rem, 3.5vw, 3.2rem);
   font-weight: 700;
   color: #07172c;
@@ -9791,7 +9819,7 @@
 }
 
 .diff-editorial-row__title {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary, 'Geist', sans-serif);
   font-size: 1.35rem;
   font-weight: 700;
   letter-spacing: -0.01em;
@@ -9800,7 +9828,7 @@
 }
 
 .diff-editorial-row__desc {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary, 'Geist', sans-serif);
   font-size: 1.02rem;
   line-height: 1.6;
   color: #475569;
@@ -9826,7 +9854,7 @@
 }
 
 .editorial-about-cta__title {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary, 'Geist', sans-serif);
   font-size: clamp(2.4rem, 4.8vw, 4rem);
   font-weight: 700;
   line-height: 1.08;
@@ -9836,7 +9864,7 @@
 }
 
 .editorial-about-cta__sub {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary, 'Geist', sans-serif);
   font-size: 1.1rem;
   line-height: 1.6;
   color: #94a3b8;
@@ -9957,7 +9985,7 @@
 }
 
 .academy-lpe-step {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Geist', system-ui, sans-serif;
   font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.14em;
@@ -9965,21 +9993,21 @@
 }
 
 .academy-lpe-title {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Geist', system-ui, sans-serif;
   font-size: 1.35rem;
   font-weight: 800;
   color: #07172c;
 }
 
 .academy-lpe-desc {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Geist', system-ui, sans-serif;
   font-size: 0.94rem;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
 }
 
 .academy-research-num {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Geist', system-ui, sans-serif;
   font-size: 1.4rem;
   font-weight: 900;
   color: var(--laxmi-blue, #0b3f78);
@@ -9987,7 +10015,7 @@
 }
 
 .academy-research-title {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Geist', system-ui, sans-serif;
   font-size: 1.3rem;
   font-weight: 800;
   color: #07172c;
@@ -9995,7 +10023,7 @@
 }
 
 .academy-research-desc {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Geist', system-ui, sans-serif;
   font-size: 0.96rem;
   color: #4a607a;
   line-height: 1.5;

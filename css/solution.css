@@ -7,7 +7,7 @@
 .solution-inner-body {
   background-color: #ffffff;
   color: #07172c;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-geist, 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif);
   -webkit-font-smoothing: antialiased;
   margin: 0;
   padding: 0;
@@ -24,7 +24,9 @@
 }
 
 .solution-nav-rail__inner {
-  max-width: 1280px;
+  max-width: 1500px;
+  padding: 0 32px;
+  box-sizing: border-box;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -85,7 +87,9 @@
 }
 
 .solution-section__inner {
-  max-width: 1280px;
+  max-width: 1500px;
+  padding: 0 32px;
+  box-sizing: border-box;
   margin: 0 auto;
 }
 
@@ -112,7 +116,9 @@
 }
 
 .solution-sys-intro__inner {
-  max-width: 1280px;
+  max-width: 1500px;
+  padding: 0 32px;
+  box-sizing: border-box;
   margin: 0 auto;
 }
 

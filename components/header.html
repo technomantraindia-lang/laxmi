@@ -12,7 +12,7 @@
         body { margin: 0; padding-top: 80px; background: #f8fafc; }
         .preview-note {
             max-width: 1280px; margin: 24px auto; padding: 16px 24px;
-            font-family: system-ui, sans-serif; color: #07172c; font-size: 14px;
+            font-family: var(--font-primary, 'Geist', sans-serif); color: #07172c; font-size: 14px;
         }
     </style>
 </head>
@@ -96,7 +96,7 @@
             <div class="drawer-primary-col">
                 <nav class="drawer-nav">
                     <ul class="drawer-menu-list">
-                        <li class="drawer-menu-item has-sub is-active" data-sub="solutions">
+                        <li class="drawer-menu-item has-sub" data-sub="solutions">
                             <a href="../solutions.html" class="drawer-menu-link">
                                 <span>Start Your AAC Journey</span>
                                 <span class="drawer-arrow">›</span>
@@ -137,7 +137,7 @@
             <!-- COLUMN 2: SECONDARY SUB-PANES -->
             <div class="drawer-secondary-col" id="drawer-secondary-col">
                 <!-- Subpane 1: Start Your AAC Journey -->
-                <div class="drawer-sub-pane is-active" id="sub-pane-solutions">
+                <div class="drawer-sub-pane" id="sub-pane-solutions">
                     <h3 class="sub-pane-title"><a href="../solutions.html">Start Your AAC Journey</a></h3>
                     <ul class="col2-menu-list">
                         <li class="col2-item" data-tertiary="sol-plants">
@@ -162,7 +162,7 @@
                 <div class="drawer-sub-pane" id="sub-pane-academy">
                     <h3 class="sub-pane-title"><a href="../academy/academy.html">AAC Investor Academy</a></h3>
                     <ul class="col2-menu-list">
-                        <li class="col2-item has-tertiary is-active" data-tertiary="academy-market">
+                        <li class="col2-item has-tertiary" data-tertiary="academy-market">
                             <a href="../academy/understand-market.html" class="col2-link">
                                 <span><strong class="sub-num">01</strong> Understand the Market</span>
                                 <span class="col2-arrow">›</span>
@@ -212,7 +212,7 @@
                                 <strong>Complete AAC Plant</strong>
                             </a>
                         </li>
-                        <li class="col2-item has-tertiary is-active" data-tertiary="eng-machinery">
+                        <li class="col2-item has-tertiary" data-tertiary="eng-machinery">
                             <a href="../machinery-equipment.html" class="col2-link">
                                 <strong>Plant Machinery</strong>
                                 <span class="col2-arrow">›</span>
@@ -225,7 +225,7 @@
                 <div class="drawer-sub-pane" id="sub-pane-whylaxmi">
                     <h3 class="sub-pane-title"><a href="../why-laxmi.html">Why Laxmi</a></h3>
                     <ul class="col2-menu-list">
-                        <li class="col2-item has-tertiary is-active" data-tertiary="whylaxmi-testimonial">
+                        <li class="col2-item has-tertiary" data-tertiary="whylaxmi-testimonial">
                             <a href="../why-laxmi.html#testimonial" class="col2-link">
                                 <strong>Testimonial content</strong>
                                 <span class="col2-arrow">›</span>
@@ -238,7 +238,7 @@
             <!-- COLUMN 3: TERTIARY INNER PAGES -->
             <div class="drawer-tertiary-col" id="drawer-tertiary-col">
                 <!-- Tertiary Pane 1: Understand the Market -->
-                <div class="tertiary-pane is-active" id="tertiary-pane-academy-market">
+                <div class="tertiary-pane" id="tertiary-pane-academy-market">
                     <h4 class="tertiary-pane-title">Understand the Market Inner Pages</h4>
                     <ul class="tertiary-menu-list">
                         <li><a href="../academy/understand-market.html?topic=why-aac" class="tertiary-link"><span class="tertiary-icon">📄</span> Why AAC</a></li>

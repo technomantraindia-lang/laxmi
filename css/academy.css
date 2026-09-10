@@ -9,7 +9,7 @@
 #academy-root {
   background-color: #ffffff;
   color: #07172c;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary, 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif);
   -webkit-font-smoothing: antialiased;
   margin: 0;
   padding: 0;
@@ -18,7 +18,7 @@
 .academy-page *,
 .academy-inner-body *,
 #academy-root * {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: inherit;
 }
 
 details.academy-faq-group summary::-webkit-details-marker {
@@ -40,8 +40,9 @@ details.academy-faq-group[open] summary span:last-child {
 }
 
 .academy-nav-rail__inner {
-  max-width: 1280px;
+  max-width: 1500px;
   margin: 0 auto;
+  padding: 0 32px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -106,8 +107,9 @@ details.academy-faq-group[open] summary span:last-child {
 }
 
 .academy-section__inner {
-  max-width: 1280px;
+  max-width: 1500px;
   margin: 0 auto;
+  padding: 0 32px;
 }
 
 .academy-micro-label {
@@ -463,20 +465,17 @@ details.academy-faq-group[open] summary span:last-child {
    Inner Pages Sidebar Navigation (Understand the Market & others)
    ========================================================================== */
 .academy-layout-wrap {
-  display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 3.5rem;
-  align-items: start;
-  max-width: 1320px;
+  display: block;
+  width: 100%;
+  max-width: 1500px;
   margin: 0 auto;
-  padding: 3.5rem 1.5rem 6rem;
+  padding: 3.5rem 32px 6rem;
+  box-sizing: border-box;
 }
 
 @media (max-width: 992px) {
   .academy-layout-wrap {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-    padding: 2rem 1.25rem 4rem;
+    padding: 2rem 20px 4rem;
   }
 }
 
@@ -595,17 +594,20 @@ details.academy-faq-group[open] summary span:last-child {
 }
 
 .academy-content-article {
-  background: #ffffff;
-  border: 1px solid rgba(7, 23, 44, 0.08);
-  border-radius: 18px;
-  padding: 3.5rem;
-  box-shadow: 0 6px 35px rgba(0, 0, 0, 0.04);
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  max-width: 1500px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
   .academy-content-article {
-    padding: 1.75rem 1.25rem;
-    border-radius: 12px;
+    padding: 0;
+    border-radius: 0;
   }
 }
 
@@ -686,8 +688,9 @@ details.academy-faq-group[open] summary span:last-child {
 }
 
 .academy-cta-banner__inner {
-  max-width: 1320px;
+  max-width: 1500px;
   margin: 0 auto;
+  padding: 0 32px;
   position: relative;
   z-index: 2;
 }

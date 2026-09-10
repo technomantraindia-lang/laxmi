@@ -23,7 +23,7 @@
     '<div class="nav-drawer__inner">' +
     '<div class="drawer-primary-col">' +
     '<nav class="drawer-nav"><ul class="drawer-menu-list">' +
-    '<li class="drawer-menu-item has-sub is-active" data-sub="solutions"><a href="solutions.html" class="drawer-menu-link"><span>Start Your AAC Journey</span><span class="drawer-arrow">›</span></a></li>' +
+    '<li class="drawer-menu-item has-sub" data-sub="solutions"><a href="solutions.html" class="drawer-menu-link"><span>Start Your AAC Journey</span><span class="drawer-arrow">›</span></a></li>' +
     '<li class="drawer-menu-item has-sub" data-sub="academy"><a href="academy/academy.html" class="drawer-menu-link"><span>AAC Investor Academy</span><span class="drawer-arrow">›</span></a></li>' +
     '<li class="drawer-menu-item has-sub" data-sub="engineering"><a href="engineering-center.html" class="drawer-menu-link"><span>AAC Engineering Center</span><span class="drawer-arrow">›</span></a></li>' +
     '<li class="drawer-menu-item has-sub" data-sub="whylaxmi"><a href="why-laxmi.html" class="drawer-menu-link"><span>Why Laxmi</span><span class="drawer-arrow">›</span></a></li>' +
@@ -32,13 +32,13 @@
     '<div class="drawer-footer-contact"><p class="drawer-contact-title">TALK TO OUR EXPERT</p><a href="tel:+918980800839" class="drawer-phone">+91 89808 00839</a><a href="mailto:aac@laxmienfab.com" class="drawer-email">aac@laxmienfab.com</a><a href="contact.html" class="drawer-cta-btn">TALK TO AN EXPERT →</a></div>' +
     '</div>' +
     '<div class="drawer-secondary-col" id="drawer-secondary-col">' +
-    '<div class="drawer-sub-pane is-active" id="sub-pane-solutions"><h3 class="sub-pane-title"><a href="solutions.html">Start Your AAC Journey</a></h3><ul class="col2-menu-list"><li class="col2-item" data-tertiary="sol-plants"><a href="aac-block-panel-plant.html" class="col2-link"><strong>AAC Block &amp; Panel Plant</strong></a></li><li class="col2-item" data-tertiary="sol-mortar"><a href="dry-mix-mortar-plant.html" class="col2-link"><strong>Dry Mix Mortar Plant</strong></a></li><li class="col2-item" data-tertiary="sol-complete"><a href="solutions.html" class="col2-link"><strong>Complete AAC Plant</strong></a></li></ul></div>' +
-    '<div class="drawer-sub-pane" id="sub-pane-academy"><h3 class="sub-pane-title"><a href="academy/academy.html">AAC Investor Academy</a></h3><ul class="col2-menu-list"><li class="col2-item has-tertiary is-active" data-tertiary="academy-market"><a href="academy/understand-market.html" class="col2-link"><span><strong class="sub-num">01</strong> Understand the Market</span><span class="col2-arrow">›</span></a></li><li class="col2-item has-tertiary" data-tertiary="academy-design"><a href="academy/design-your-plant.html" class="col2-link"><span><strong class="sub-num">02</strong> Design Your Plant</span><span class="col2-arrow">›</span></a></li><li class="col2-item" data-tertiary="academy-compare"><a href="academy/compare-your-aac-plant.html" class="col2-link"><span><strong class="sub-num">03</strong> Compare Your AAC Plant</span></a></li><li class="col2-item has-tertiary" data-tertiary="academy-efficient"><a href="academy/efficient-your-plant.html" class="col2-link"><span><strong class="sub-num">04</strong> Efficient Your Plant</span><span class="col2-arrow">›</span></a></li><li class="col2-item" data-tertiary="academy-expand"><a href="academy/expand-your-plant.html" class="col2-link"><span><strong class="sub-num">05</strong> Expand Your Plant</span></a></li></ul></div>' +
-    '<div class="drawer-sub-pane" id="sub-pane-engineering"><h3 class="sub-pane-title"><a href="engineering-center.html">AAC Engineering Center</a></h3><ul class="col2-menu-list"><li class="col2-item" data-tertiary="eng-process"><a href="production-process.html" class="col2-link"><strong>AAC Block Production Process</strong></a></li><li class="col2-item" data-tertiary="eng-layout"><a href="plant-layout.html" class="col2-link"><strong>AAC Plant Layout</strong></a></li><li class="col2-item" data-tertiary="eng-complete"><a href="capacity-selection.html" class="col2-link"><strong>Complete AAC Plant</strong></a></li><li class="col2-item has-tertiary is-active" data-tertiary="eng-machinery"><a href="machinery-equipment.html" class="col2-link"><strong>Plant Machinery</strong><span class="col2-arrow">›</span></a></li></ul></div>' +
-    '<div class="drawer-sub-pane" id="sub-pane-whylaxmi"><h3 class="sub-pane-title"><a href="why-laxmi.html">Why Laxmi</a></h3><ul class="col2-menu-list"><li class="col2-item has-tertiary is-active" data-tertiary="whylaxmi-testimonial"><a href="why-laxmi.html#testimonial" class="col2-link"><strong>Testimonial content</strong><span class="col2-arrow">›</span></a></li></ul></div>' +
+    '<div class="drawer-sub-pane" id="sub-pane-solutions"><h3 class="sub-pane-title"><a href="solutions.html">Start Your AAC Journey</a></h3><ul class="col2-menu-list"><li class="col2-item" data-tertiary="sol-plants"><a href="aac-block-panel-plant.html" class="col2-link"><strong>AAC Block &amp; Panel Plant</strong></a></li><li class="col2-item" data-tertiary="sol-mortar"><a href="dry-mix-mortar-plant.html" class="col2-link"><strong>Dry Mix Mortar Plant</strong></a></li><li class="col2-item" data-tertiary="sol-complete"><a href="solutions.html" class="col2-link"><strong>Complete AAC Plant</strong></a></li></ul></div>' +
+    '<div class="drawer-sub-pane" id="sub-pane-academy"><h3 class="sub-pane-title"><a href="academy/academy.html">AAC Investor Academy</a></h3><ul class="col2-menu-list"><li class="col2-item has-tertiary" data-tertiary="academy-market"><a href="academy/understand-market.html" class="col2-link"><span><strong class="sub-num">01</strong> Understand the Market</span><span class="col2-arrow">›</span></a></li><li class="col2-item has-tertiary" data-tertiary="academy-design"><a href="academy/design-your-plant.html" class="col2-link"><span><strong class="sub-num">02</strong> Design Your Plant</span><span class="col2-arrow">›</span></a></li><li class="col2-item" data-tertiary="academy-compare"><a href="academy/compare-your-aac-plant.html" class="col2-link"><span><strong class="sub-num">03</strong> Compare Your AAC Plant</span></a></li><li class="col2-item has-tertiary" data-tertiary="academy-efficient"><a href="academy/efficient-your-plant.html" class="col2-link"><span><strong class="sub-num">04</strong> Efficient Your Plant</span><span class="col2-arrow">›</span></a></li><li class="col2-item" data-tertiary="academy-expand"><a href="academy/expand-your-plant.html" class="col2-link"><span><strong class="sub-num">05</strong> Expand Your Plant</span></a></li></ul></div>' +
+    '<div class="drawer-sub-pane" id="sub-pane-engineering"><h3 class="sub-pane-title"><a href="engineering-center.html">AAC Engineering Center</a></h3><ul class="col2-menu-list"><li class="col2-item" data-tertiary="eng-process"><a href="production-process.html" class="col2-link"><strong>AAC Block Production Process</strong></a></li><li class="col2-item" data-tertiary="eng-layout"><a href="plant-layout.html" class="col2-link"><strong>AAC Plant Layout</strong></a></li><li class="col2-item" data-tertiary="eng-complete"><a href="capacity-selection.html" class="col2-link"><strong>Complete AAC Plant</strong></a></li><li class="col2-item has-tertiary" data-tertiary="eng-machinery"><a href="machinery-equipment.html" class="col2-link"><strong>Plant Machinery</strong><span class="col2-arrow">›</span></a></li></ul></div>' +
+    '<div class="drawer-sub-pane" id="sub-pane-whylaxmi"><h3 class="sub-pane-title"><a href="why-laxmi.html">Why Laxmi</a></h3><ul class="col2-menu-list"><li class="col2-item has-tertiary" data-tertiary="whylaxmi-testimonial"><a href="why-laxmi.html#testimonial" class="col2-link"><strong>Testimonial content</strong><span class="col2-arrow">›</span></a></li></ul></div>' +
     '</div>' +
     '<div class="drawer-tertiary-col" id="drawer-tertiary-col">' +
-    '<div class="tertiary-pane is-active" id="tertiary-pane-academy-market"><h4 class="tertiary-pane-title">Understand the Market Inner Pages</h4><ul class="tertiary-menu-list"><li><a href="academy/understand-market.html?topic=why-aac" class="tertiary-link"><span class="tertiary-icon">📄</span> Why AAC</a></li><li><a href="academy/understand-market.html?topic=future-of-aac" class="tertiary-link"><span class="tertiary-icon">🚀</span> Future of AAC</a></li><li><a href="academy/understand-market.html?topic=market-demand" class="tertiary-link"><span class="tertiary-icon">📈</span> Market Demand</a></li><li><a href="academy/understand-market.html?topic=raw-materials" class="tertiary-link"><span class="tertiary-icon">🏗️</span> Raw Materials</a></li><li><a href="academy/understand-market.html?topic=profitability" class="tertiary-link"><span class="tertiary-icon">💰</span> Profitability</a></li><li><a href="academy/understand-market.html?topic=government-policies" class="tertiary-link"><span class="tertiary-icon">🏛️</span> Government Policies</a></li></ul></div>' +
+    '<div class="tertiary-pane" id="tertiary-pane-academy-market"><h4 class="tertiary-pane-title">Understand the Market Inner Pages</h4><ul class="tertiary-menu-list"><li><a href="academy/understand-market.html?topic=why-aac" class="tertiary-link"><span class="tertiary-icon">📄</span> Why AAC</a></li><li><a href="academy/understand-market.html?topic=future-of-aac" class="tertiary-link"><span class="tertiary-icon">🚀</span> Future of AAC</a></li><li><a href="academy/understand-market.html?topic=market-demand" class="tertiary-link"><span class="tertiary-icon">📈</span> Market Demand</a></li><li><a href="academy/understand-market.html?topic=raw-materials" class="tertiary-link"><span class="tertiary-icon">🏗️</span> Raw Materials</a></li><li><a href="academy/understand-market.html?topic=profitability" class="tertiary-link"><span class="tertiary-icon">💰</span> Profitability</a></li><li><a href="academy/understand-market.html?topic=government-policies" class="tertiary-link"><span class="tertiary-icon">🏛️</span> Government Policies</a></li></ul></div>' +
     '<div class="tertiary-pane" id="tertiary-pane-academy-design"><h4 class="tertiary-pane-title">Design Your Plant Inner Pages</h4><ul class="tertiary-menu-list"><li><a href="academy/design-your-plant.html?topic=capacity-selection" class="tertiary-link"><span class="tertiary-icon">⚡</span> Capacity Selection</a></li><li><a href="academy/design-your-plant.html?topic=land-requirement" class="tertiary-link"><span class="tertiary-icon">📐</span> Land Requirement</a></li><li><a href="academy/design-your-plant.html?topic=project-cost" class="tertiary-link"><span class="tertiary-icon">💵</span> Project Cost &amp; Working Capital</a></li><li><a href="academy/design-your-plant.html?topic=roi-payback" class="tertiary-link"><span class="tertiary-icon">📊</span> ROI &amp; Payback</a></li><li><a href="academy/design-your-plant.html?topic=finance-bank-loan" class="tertiary-link"><span class="tertiary-icon">🏦</span> Finance &amp; Bank Loan</a></li><li><a href="academy/design-your-plant.html?topic=subsidy" class="tertiary-link"><span class="tertiary-icon">🎁</span> Subsidy</a></li></ul></div>' +
     '<div class="tertiary-pane" id="tertiary-pane-academy-efficient"><h4 class="tertiary-pane-title">Efficient Your Plant Inner Pages</h4><ul class="tertiary-menu-list"><li><a href="academy/efficient-your-plant.html?topic=make-plant-automatic" class="tertiary-link"><span class="tertiary-icon">🤖</span> Make Plant Automatic</a></li><li><a href="academy/efficient-your-plant.html?topic=improve-block-quality" class="tertiary-link"><span class="tertiary-icon">⭐</span> Improve AAC Block Quality</a></li><li><a href="academy/efficient-your-plant.html?topic=plant-maintenance-sop" class="tertiary-link"><span class="tertiary-icon">🛠️</span> AAC Plant Maintenance SOP</a></li><li><a href="academy/efficient-your-plant.html?topic=reduce-steam-cost" class="tertiary-link"><span class="tertiary-icon">🔥</span> Reduce Your Steam Cost</a></li><li><a href="academy/efficient-your-plant.html?topic=skilled-manpower" class="tertiary-link"><span class="tertiary-icon">👥</span> Skilled Manpower Requirement</a></li></ul></div>' +
     '<div class="tertiary-pane" id="tertiary-pane-eng-machinery"><h4 class="tertiary-pane-title">Plant Machinery 8 Systems</h4><ul class="tertiary-menu-list"><li><a href="machinery-raw-material-storage.html" class="tertiary-link"><span class="tertiary-icon">🏬</span> AAC Plant Raw Material Storage</a></li><li><a href="machinery-batching-preparation.html" class="tertiary-link"><span class="tertiary-icon">⚙️</span> AAC Batching System &amp; Raw Material Prep</a></li><li><a href="machinery-mould-precuring.html" class="tertiary-link"><span class="tertiary-icon">📦</span> AAC Mould Handling &amp; Precuring Process</a></li><li><a href="machinery-tilting-machine.html" class="tertiary-link"><span class="tertiary-icon">🔄</span> AAC Tilting Machine</a></li><li><a href="machinery-cutting-system.html" class="tertiary-link"><span class="tertiary-icon">✂️</span> AAC Cutting System</a></li><li><a href="machinery-autoclave.html" class="tertiary-link"><span class="tertiary-icon">🎛️</span> AAC Autoclave</a></li><li><a href="machinery-steam-boiler.html" class="tertiary-link"><span class="tertiary-icon">💨</span> AAC Steam Boiler</a></li><li><a href="machinery-auto-palletizing.html" class="tertiary-link"><span class="tertiary-icon">🏗️</span> AAC Auto Palletizing System</a></li></ul></div>' +
@@ -200,7 +200,7 @@
   }
 
   function initDropdowns() {
-    // Top dropdown popovers removed in favor of side navigation drawer
+    // Top dropdown popovers removed in favor of progressive side navigation drawer
   }
 
   function initMobileMenu() {
@@ -219,67 +219,80 @@
     var drawer = document.getElementById('nav-drawer');
     var burgerBtn = document.getElementById('nav-burger');
     var closeBtn = document.getElementById('drawer-close-btn');
+    var siteHeader = document.getElementById('site-header');
 
     if (!drawer) return;
 
-    function openDrawerWithSub(targetSub, e) {
-      if (e) e.preventDefault();
+    var secondaryCol = document.getElementById('drawer-secondary-col');
+    var tertiaryCol = document.getElementById('drawer-tertiary-col');
+    var menuItems = drawer.querySelectorAll('.drawer-menu-item');
+    var subPanes = drawer.querySelectorAll('.drawer-sub-pane');
+    var col2Items = drawer.querySelectorAll('.col2-item');
+    var tertiaryPanes = drawer.querySelectorAll('.tertiary-pane');
+
+    var closeTimer = null;
+    var openTimer = null;
+
+    function resetDrawerState() {
+      // Reset all columns and panes so only Layer 1 is ready and unselected
+      menuItems.forEach(function (mi) { mi.classList.remove('is-active'); });
+      subPanes.forEach(function (sp) { sp.classList.remove('is-active'); });
+      col2Items.forEach(function (ci) { ci.classList.remove('is-active'); });
+      tertiaryPanes.forEach(function (tp) { tp.classList.remove('is-active'); });
+      if (secondaryCol) secondaryCol.classList.remove('is-active');
+      if (tertiaryCol) tertiaryCol.classList.remove('is-active');
+    }
+
+    // Opens drawer from left showing ONLY Layer 1 with NO links pre-hovered
+    function openDrawer() {
+      clearTimeout(closeTimer);
+      clearTimeout(openTimer);
+      resetDrawerState();
       drawer.classList.add('is-active');
+      drawer.setAttribute('aria-hidden', 'false');
       if (overlay) overlay.classList.add('is-active');
-      document.body.style.overflow = 'hidden';
-
-      if (targetSub) {
-        var menuItem = document.querySelector('.drawer-menu-item[data-sub="' + targetSub + '"]');
-        if (menuItem) {
-          document.querySelectorAll('.drawer-menu-item').forEach(function (mi) { mi.classList.remove('is-active'); });
-          document.querySelectorAll('.drawer-sub-pane').forEach(function (sp) { sp.classList.remove('is-active'); });
-
-          menuItem.classList.add('is-active');
-          var targetPane = document.getElementById('sub-pane-' + targetSub);
-          if (targetPane) {
-            targetPane.classList.add('is-active');
-            var firstCol2 = targetPane.querySelector('.col2-item');
-            if (firstCol2) activateCol2Item(firstCol2);
-          }
-        }
-      }
     }
 
     function closeDrawer(e) {
-      if (e) e.preventDefault();
+      if (e && e.preventDefault) e.preventDefault();
+      clearTimeout(closeTimer);
+      clearTimeout(openTimer);
       drawer.classList.remove('is-active');
+      drawer.setAttribute('aria-hidden', 'true');
       if (overlay) overlay.classList.remove('is-active');
       document.body.style.overflow = '';
+      resetDrawerState();
     }
 
-    // Top navbar link triggers
-    document.querySelectorAll('[data-drawer-trigger]').forEach(function (link) {
-      link.addEventListener('click', function (e) {
-        var targetSub = this.getAttribute('data-drawer-trigger');
-        openDrawerWithSub(targetSub, e);
-      });
-    });
+    // Hover on Layer 1 link -> opens Layer 2 (smoothly), closes Layer 3
+    function handleLayer1Hover(item) {
+      var targetSub = item.getAttribute('data-sub');
+      menuItems.forEach(function (mi) { mi.classList.remove('is-active'); });
+      item.classList.add('is-active');
 
-    if (burgerBtn) {
-      burgerBtn.addEventListener('click', function (e) {
-        openDrawerWithSub('solutions', e);
-      });
+      if (item.classList.contains('has-sub') && targetSub && targetSub !== 'none') {
+        var targetPane = document.getElementById('sub-pane-' + targetSub);
+        subPanes.forEach(function (sp) { sp.classList.remove('is-active'); });
+        if (targetPane) {
+          targetPane.classList.add('is-active');
+          targetPane.querySelectorAll('.col2-item').forEach(function (ci) { ci.classList.remove('is-active'); });
+        }
+        if (secondaryCol) secondaryCol.classList.add('is-active');
+
+        // Layer 3 remains closed until hovering Layer 2 item
+        tertiaryPanes.forEach(function (tp) { tp.classList.remove('is-active'); });
+        if (tertiaryCol) tertiaryCol.classList.remove('is-active');
+      } else {
+        // No sub items (e.g. Knowledge Hub): close both Layer 2 and Layer 3
+        subPanes.forEach(function (sp) { sp.classList.remove('is-active'); });
+        if (secondaryCol) secondaryCol.classList.remove('is-active');
+        tertiaryPanes.forEach(function (tp) { tp.classList.remove('is-active'); });
+        if (tertiaryCol) tertiaryCol.classList.remove('is-active');
+      }
     }
-    if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
-    if (overlay) overlay.addEventListener('click', closeDrawer);
 
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') closeDrawer();
-    });
-
-    var menuItems = document.querySelectorAll('.drawer-menu-item.has-sub');
-    var subPanes = document.querySelectorAll('.drawer-sub-pane');
-    var col2Items = document.querySelectorAll('.col2-item');
-    var tertiaryCol = document.getElementById('drawer-tertiary-col');
-    var tertiaryPanes = document.querySelectorAll('.tertiary-pane');
-
-    function activateCol2Item(c2) {
-      if (!c2) return;
+    // Hover on Layer 2 link -> opens Layer 3 (if item has tertiary), or closes Layer 3
+    function handleLayer2Hover(c2) {
       var parentPane = c2.closest('.drawer-sub-pane');
       if (parentPane) {
         parentPane.querySelectorAll('.col2-item').forEach(function (ci) { ci.classList.remove('is-active'); });
@@ -290,55 +303,75 @@
       var targetTertiaryPane = tertiaryTarget ? document.getElementById('tertiary-pane-' + tertiaryTarget) : null;
 
       if (c2.classList.contains('has-tertiary') && targetTertiaryPane) {
+        // Open Layer 3
         tertiaryPanes.forEach(function (tp) { tp.classList.remove('is-active'); });
         targetTertiaryPane.classList.add('is-active');
         if (tertiaryCol) tertiaryCol.classList.add('is-active');
       } else {
+        // Close Layer 3
         tertiaryPanes.forEach(function (tp) { tp.classList.remove('is-active'); });
         if (tertiaryCol) tertiaryCol.classList.remove('is-active');
       }
     }
 
+    // Attach Layer 1 Hover & Click Listeners
     menuItems.forEach(function (item) {
-      var targetSub = item.getAttribute('data-sub');
-
-      function activateSub() {
-        menuItems.forEach(function (mi) { mi.classList.remove('is-active'); });
-        subPanes.forEach(function (sp) { sp.classList.remove('is-active'); });
-
-        item.classList.add('is-active');
-        var targetPane = document.getElementById('sub-pane-' + targetSub);
-        if (targetPane) {
-          targetPane.classList.add('is-active');
-          var firstCol2 = targetPane.querySelector('.col2-item');
-          if (firstCol2) {
-            activateCol2Item(firstCol2);
-          } else {
-            tertiaryPanes.forEach(function (tp) { tp.classList.remove('is-active'); });
-            if (tertiaryCol) tertiaryCol.classList.remove('is-active');
+      item.addEventListener('mouseenter', function () { handleLayer1Hover(item); });
+      item.addEventListener('click', function (e) {
+        if (item.classList.contains('has-sub')) {
+          var targetSub = item.getAttribute('data-sub');
+          var targetPane = document.getElementById('sub-pane-' + targetSub);
+          if (targetPane && !targetPane.classList.contains('is-active')) {
+            e.preventDefault();
+            handleLayer1Hover(item);
           }
         }
-      }
-
-      item.addEventListener('mouseenter', activateSub);
-      item.addEventListener('click', activateSub);
+      });
     });
 
+    // Attach Layer 2 Hover & Click Listeners
     col2Items.forEach(function (c2) {
-      c2.addEventListener('mouseenter', function () { activateCol2Item(c2); });
-      c2.addEventListener('click', function () { activateCol2Item(c2); });
+      c2.addEventListener('mouseenter', function () { handleLayer2Hover(c2); });
+      c2.addEventListener('click', function (e) {
+        if (c2.classList.contains('has-tertiary')) {
+          var tertiaryTarget = c2.getAttribute('data-tertiary');
+          var targetTertiaryPane = tertiaryTarget ? document.getElementById('tertiary-pane-' + tertiaryTarget) : null;
+          if (targetTertiaryPane && !targetTertiaryPane.classList.contains('is-active')) {
+            e.preventDefault();
+            handleLayer2Hover(c2);
+          }
+        }
+      });
     });
 
-    // Ensure all drawer links close drawer and navigate smoothly
+    // Top navbar link triggers - Click opens the drawer
+    document.querySelectorAll('[data-drawer-trigger]').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        openDrawer();
+      });
+    });
+
+    if (burgerBtn) {
+      burgerBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        openDrawer();
+      });
+    }
+
+    if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+    if (overlay) overlay.addEventListener('click', closeDrawer);
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeDrawer();
+    });
+
+    // Drawer links navigation
     drawer.querySelectorAll('a[href]').forEach(function (link) {
       link.addEventListener('click', function (e) {
         var href = this.getAttribute('href');
         if (!href || href === '#') return;
 
-        var parentItem = this.closest('.drawer-menu-item, .col2-item');
-        var isCategoryTrigger = parentItem && (parentItem.classList.contains('has-sub') || parentItem.classList.contains('has-tertiary'));
-
-        // If clicking a leaf link OR double-clicking/navigating parent category link:
         closeDrawer();
 
         var currentPath = window.location.pathname.split('/').pop() || 'index.html';

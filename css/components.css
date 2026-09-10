@@ -1,5 +1,12 @@
 
 
+:root {
+  --font-primary: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-geist: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-geist-mono: 'Geist Mono', 'SF Mono', Consolas, Monaco, monospace;
+  --font-mono: 'Geist Mono', 'SF Mono', Consolas, Monaco, monospace;
+}
+
 /* ==================================================
    LAXMI EN-FAB - GLOBAL NAVIGATION BAR STYLES
    ================================================== */
@@ -385,7 +392,7 @@
   background: #07172c !important;
   color: #ffffff !important;
   padding: 80px 0 32px 0 !important;
-  font-family: var(--font-primary, 'Inter', sans-serif) !important;
+  font-family: var(--font-primary, 'Geist', sans-serif) !important;
   border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
   width: 100% !important;
   display: block !important;
@@ -421,7 +428,7 @@
 }
 
 .site-footer__logo-text {
-  font-family: var(--font-primary, 'Inter', sans-serif) !important;
+  font-family: var(--font-primary, 'Geist', sans-serif) !important;
   font-size: 42px !important;
   font-weight: 900 !important;
   letter-spacing: 0.08em !important;
@@ -434,7 +441,7 @@
 }
 
 .site-footer__heading {
-  font-family: var(--font-primary, 'Inter', sans-serif) !important;
+  font-family: var(--font-primary, 'Geist', sans-serif) !important;
   font-size: clamp(34px, 4vw, 56px) !important;
   font-weight: 800 !important;
   line-height: 1.05 !important;
@@ -465,7 +472,7 @@
 }
 
 .site-footer__col-title {
-  font-family: var(--font-primary, 'Inter', sans-serif) !important;
+  font-family: var(--font-primary, 'Geist', sans-serif) !important;
   font-size: 12px !important;
   font-weight: 700 !important;
   letter-spacing: 0.14em !important;
@@ -495,7 +502,7 @@
 }
 
 .site-footer__links a {
-  font-family: var(--font-primary, 'Inter', sans-serif) !important;
+  font-family: var(--font-primary, 'Geist', sans-serif) !important;
   font-size: 15px !important;
   color: #8fa0b5 !important;
   text-decoration: none !important;
@@ -526,7 +533,7 @@
 }
 
 .site-footer__info-label {
-  font-family: var(--font-primary, 'Inter', sans-serif) !important;
+  font-family: var(--font-primary, 'Geist', sans-serif) !important;
   display: block !important;
   font-size: 11px !important;
   font-weight: 700 !important;
@@ -537,7 +544,7 @@
 }
 
 .site-footer__address {
-  font-family: var(--font-primary, 'Inter', sans-serif) !important;
+  font-family: var(--font-primary, 'Geist', sans-serif) !important;
   font-style: normal !important;
   font-size: 14px !important;
   line-height: 1.55 !important;
@@ -554,7 +561,7 @@
 
 .site-footer__connect-links a,
 .site-footer__social-links a {
-  font-family: var(--font-primary, 'Inter', sans-serif) !important;
+  font-family: var(--font-primary, 'Geist', sans-serif) !important;
   font-size: 14px !important;
   color: #8fa0b5 !important;
   text-decoration: none !important;
@@ -574,7 +581,7 @@
   align-items: center !important;
   padding-top: 32px !important;
   padding-bottom: 0 !important;
-  font-family: var(--font-primary, 'Inter', sans-serif) !important;
+  font-family: var(--font-primary, 'Geist', sans-serif) !important;
   font-size: 13px !important;
   color: #526a87 !important;
   background: transparent !important;
@@ -648,21 +655,23 @@
 .drawer-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(3, 16, 41, 0.65);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  background: rgba(3, 16, 41, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   z-index: 9998;
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 0.5s cubic-bezier(0.25, 1, 0.35, 1), visibility 0.5s ease;
 }
 
 .drawer-overlay.is-active {
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
 }
 
-/* ── Drawer Main Container ── */
+/* ── Drawer Main Container (Sliding Door from Left to Right) ── */
 .nav-drawer {
   position: fixed;
   top: 0;
@@ -672,14 +681,24 @@
   z-index: 9999;
   display: flex;
   flex-direction: column;
-  transform: translateX(-100%);
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 20px 0 50px rgba(3, 16, 41, 0.25);
+  transform: translate3d(-100%, 0, 0);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: transform 0.55s cubic-bezier(0.25, 1, 0.35, 1), opacity 0.4s ease, visibility 0.55s ease;
+  box-shadow: 28px 0 70px rgba(3, 16, 41, 0.25);
   background: #ffffff;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  width: auto;
+  max-width: 98vw;
 }
 
 .nav-drawer.is-active {
-  transform: translateX(0);
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 /* ── Drawer Top Header Bar ── */
@@ -687,10 +706,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 28px;
+  padding: 18px 24px;
   background: #ffffff;
   border-bottom: 1px solid rgba(7, 23, 44, 0.08);
   flex-shrink: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .drawer-header-brand {
@@ -719,13 +740,14 @@
   font-weight: 800;
   letter-spacing: 0.08em;
   cursor: pointer;
-  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  transition: all 0.25s cubic-bezier(0.25, 1, 0.35, 1);
 }
 
 .drawer-close-icon-btn:hover {
   background: #07172c;
   color: #ffffff;
   border-color: #07172c;
+  transform: translateY(-1px);
 }
 
 .close-x {
@@ -733,7 +755,7 @@
   font-weight: 800;
 }
 
-/* ── Drawer Inner 2-Column Container ── */
+/* ── Drawer Inner Cascading Container ── */
 .nav-drawer__inner {
   display: flex;
   flex-grow: 1;
@@ -741,16 +763,18 @@
   overflow: hidden;
 }
 
-/* ── Primary Left Column (Main Links) ── */
+/* ── Primary Left Column (Layer 1) ── */
 .drawer-primary-col {
-  width: 320px;
+  width: 290px;
+  min-width: 290px;
   background: #ffffff;
   border-right: 1px solid rgba(7, 23, 44, 0.08);
   display: flex;
   flex-direction: column;
-  padding: 24px 28px;
+  padding: 24px;
   overflow-y: auto;
   flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 .drawer-menu-list {
@@ -769,36 +793,57 @@
   padding: 0;
 }
 
+.nav-drawer.is-active .drawer-menu-item {
+  animation: slidingDoorItem 0.45s cubic-bezier(0.25, 1, 0.35, 1) both;
+}
+.nav-drawer.is-active .drawer-menu-item:nth-child(1) { animation-delay: 0.08s; }
+.nav-drawer.is-active .drawer-menu-item:nth-child(2) { animation-delay: 0.13s; }
+.nav-drawer.is-active .drawer-menu-item:nth-child(3) { animation-delay: 0.18s; }
+.nav-drawer.is-active .drawer-menu-item:nth-child(4) { animation-delay: 0.23s; }
+.nav-drawer.is-active .drawer-menu-item:nth-child(5) { animation-delay: 0.28s; }
+
+@keyframes slidingDoorItem {
+  0% {
+    opacity: 0;
+    transform: translate3d(-18px, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 .drawer-menu-link {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 16px;
+  padding: 13px 16px;
   font-family: var(--font-primary, system-ui, sans-serif);
-  font-size: 1rem;
+  font-size: 0.96rem;
   font-weight: 700;
   color: #07172c;
   text-decoration: none;
   border-radius: 8px;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition: all 0.25s cubic-bezier(0.25, 1, 0.35, 1);
 }
 
 .drawer-menu-link:hover,
 .drawer-menu-item.is-active .drawer-menu-link {
   background: #f1f5f9;
   color: var(--laxmi-blue, #0b3f78);
+  transform: translateX(3px);
 }
 
 .drawer-arrow {
   font-size: 1.2rem;
   color: #94a3b8;
-  transition: transform 0.2s ease, color 0.2s ease;
+  transition: transform 0.25s cubic-bezier(0.25, 1, 0.35, 1), color 0.2s ease;
 }
 
 .drawer-menu-item.is-active .drawer-arrow,
 .drawer-menu-link:hover .drawer-arrow {
   color: var(--laxmi-blue, #0b3f78);
-  transform: translateX(4px);
+  transform: translateX(5px);
 }
 
 /* Drawer Footer Contact Box */
@@ -847,56 +892,72 @@
   background: var(--laxmi-blue, #0b3f78);
   border-radius: 6px;
   text-decoration: none;
-  transition: background 0.2s ease;
+  transition: all 0.25s cubic-bezier(0.25, 1, 0.35, 1);
 }
 
 .drawer-cta-btn:hover {
   background: #0d4d92;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(11, 63, 120, 0.25);
 }
 
-/* ── 3-Column Drawer Layout ── */
-.nav-drawer {
-  width: auto;
-  max-width: 960px;
-}
-
-.drawer-primary-col {
-  width: 270px;
-  background: #ffffff;
-  border-right: 1px solid rgba(7, 23, 44, 0.08);
-  display: flex;
-  flex-direction: column;
-  padding: 24px;
-  overflow-y: auto;
-  flex-shrink: 0;
-}
-
-/* ── Secondary Column (Column 2) ── */
+/* ── Secondary Column (Layer 2) - Smooth Sliding Door Expansion ── */
 .drawer-secondary-col {
-  width: 300px;
+  width: 0;
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
   background: #f8fafc;
-  border-right: 1px solid rgba(7, 23, 44, 0.08);
-  padding: 24px;
-  overflow-y: auto;
-  flex-shrink: 0;
+  border-right: 0px solid rgba(7, 23, 44, 0.08);
+  padding: 24px 0;
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
+  transform: translate3d(-20px, 0, 0);
+  pointer-events: none;
+  visibility: hidden;
+  box-sizing: border-box;
+  transition: width 0.45s cubic-bezier(0.25, 1, 0.35, 1),
+              max-width 0.45s cubic-bezier(0.25, 1, 0.35, 1),
+              padding 0.45s cubic-bezier(0.25, 1, 0.35, 1),
+              opacity 0.35s ease,
+              transform 0.45s cubic-bezier(0.25, 1, 0.35, 1),
+              visibility 0.45s ease;
+  will-change: transform, opacity;
+}
+
+.drawer-secondary-col.is-active {
+  width: 320px;
+  max-width: 320px;
+  opacity: 1;
+  padding: 24px;
+  border-right: 1px solid rgba(7, 23, 44, 0.08);
+  transform: translate3d(0, 0, 0);
+  pointer-events: auto;
+  visibility: visible;
 }
 
 .drawer-sub-pane {
   display: none;
   flex-direction: column;
   gap: 14px;
-  animation: fadeInPane 0.25s ease forwards;
+  min-width: 272px;
 }
 
 .drawer-sub-pane.is-active {
   display: flex;
+  animation: slideDoorPane 0.36s cubic-bezier(0.25, 1, 0.35, 1) forwards;
 }
 
-@keyframes fadeInPane {
-  from { opacity: 0; transform: translateX(8px); }
-  to { opacity: 1; transform: translateX(0); }
+@keyframes slideDoorPane {
+  0% {
+    opacity: 0;
+    transform: translate3d(-15px, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 .sub-pane-title {
@@ -907,14 +968,14 @@
 
 .sub-pane-title a {
   font-family: var(--font-primary, system-ui, sans-serif);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 800;
   color: #07172c;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  transition: color 0.2s ease, transform 0.2s ease;
+  transition: all 0.25s cubic-bezier(0.25, 1, 0.35, 1);
 }
 
 .sub-pane-title a:hover {
@@ -950,7 +1011,7 @@
   font-size: 0.88rem;
   font-weight: 700;
   color: #07172c;
-  transition: all 0.2s ease;
+  transition: all 0.25s cubic-bezier(0.25, 1, 0.35, 1);
 }
 
 .col2-item:hover .col2-link,
@@ -958,6 +1019,7 @@
   background: #07172c;
   color: #ffffff;
   border-color: #07172c;
+  transform: translateX(3px);
 }
 
 .col2-item:hover .col2-link .sub-num,
@@ -968,39 +1030,61 @@
 .col2-arrow {
   font-size: 1.1rem;
   color: #94a3b8;
-  transition: transform 0.2s ease, color 0.2s ease;
+  transition: transform 0.25s cubic-bezier(0.25, 1, 0.35, 1), color 0.2s ease;
 }
 
 .col2-item:hover .col2-arrow,
 .col2-item.is-active .col2-arrow {
   color: #38bdf8;
-  transform: translateX(4px);
+  transform: translateX(5px);
 }
 
-/* ── Tertiary Column (Column 3) ── */
+/* ── Tertiary Column (Layer 3) - Smooth Sliding Door Expansion ── */
 .drawer-tertiary-col {
-  width: 340px;
+  width: 0;
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
   background: #ffffff;
-  padding: 24px;
-  overflow-y: auto;
-  flex-shrink: 0;
-  display: none;
+  border-left: 0px solid rgba(7, 23, 44, 0.06);
+  padding: 24px 0;
+  display: flex;
   flex-direction: column;
+  flex-shrink: 0;
+  transform: translate3d(-20px, 0, 0);
+  pointer-events: none;
+  visibility: hidden;
+  box-sizing: border-box;
+  transition: width 0.45s cubic-bezier(0.25, 1, 0.35, 1),
+              max-width 0.45s cubic-bezier(0.25, 1, 0.35, 1),
+              padding 0.45s cubic-bezier(0.25, 1, 0.35, 1),
+              opacity 0.35s ease,
+              transform 0.45s cubic-bezier(0.25, 1, 0.35, 1),
+              visibility 0.45s ease;
+  will-change: transform, opacity;
 }
 
 .drawer-tertiary-col.is-active {
-  display: flex;
+  width: 350px;
+  max-width: 350px;
+  opacity: 1;
+  padding: 24px;
+  border-left: 1px solid rgba(7, 23, 44, 0.06);
+  transform: translate3d(0, 0, 0);
+  pointer-events: auto;
+  visibility: visible;
 }
 
 .tertiary-pane {
   display: none;
   flex-direction: column;
   gap: 12px;
-  animation: fadeInPane 0.25s ease forwards;
+  min-width: 302px;
 }
 
 .tertiary-pane.is-active {
   display: flex;
+  animation: slideDoorPane 0.36s cubic-bezier(0.25, 1, 0.35, 1) forwards;
 }
 
 .tertiary-pane-title {
@@ -1043,7 +1127,7 @@
   font-weight: 600;
   color: #1e293b;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .tertiary-link:hover {
@@ -1070,9 +1154,9 @@
 }
 
 .site-breadcrumb__inner {
-  max-width: 1280px;
+  max-width: 1500px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 32px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -1515,4 +1599,72 @@
   .t-full-story-section {
     padding: 28px 20px;
   }
+}
+
+/* ==================================================
+   GLOBAL FLOATING QUICK CONTACT WIDGETS
+   ================================================== */
+.hp-floating-widgets {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: -2px 6px 20px rgba(0, 0, 0, 0.15);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.hp-float-btn {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-decoration: none;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.hp-float-btn:first-child {
+  border-top-left-radius: 10px;
+}
+
+.hp-float-btn:last-child {
+  border-bottom-left-radius: 10px;
+}
+
+.hp-float-btn svg {
+  display: block;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.hp-float-btn--whatsapp {
+  background: #25d366;
+}
+
+.hp-float-btn--whatsapp:hover {
+  background: #1eb853;
+  transform: translateX(-5px);
+  box-shadow: -4px 4px 14px rgba(37, 211, 102, 0.4);
+}
+
+.hp-float-btn--phone {
+  background: #07172c;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.hp-float-btn--phone:hover {
+  background: #0d223f;
+  transform: translateX(-5px);
+  box-shadow: -4px 4px 14px rgba(7, 23, 44, 0.4);
+}
+
+.hp-float-btn:hover svg {
+  transform: scale(1.1);
 }

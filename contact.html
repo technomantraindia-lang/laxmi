@@ -3,32 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Talk to an AAC Plant Expert at Laxmi En-Fab Pvt. Ltd. Direct technical consultation for turnkey AAC Block & Panel Plants, project cost estimation, plant layouts, and equipment manufacturing." />
-  <meta name="keywords" content="Talk to AAC Expert, Laxmi En-Fab contact, AAC plant consultation, AAC project cost inquiry, AAC plant manufacturer Ahmedabad" />
+  <meta name="description" content="Talk to an AAC Plant Expert at Laxmi En-Fab Pvt. Ltd. Direct engineering consultation for turnkey AAC Block & Panel Plants, project cost estimation, custom plant layouts, raw material testing, and factory visits." />
+  <meta name="keywords" content="Talk to AAC Expert, Laxmi En-Fab contact, AAC plant consultation, AAC project cost inquiry, AAC plant manufacturer Ahmedabad, AAC plant layout design, turnkey AAC plant engineering" />
   <title>Talk to an Expert | Direct Engineering Consultation | Laxmi En-Fab</title>
+
+  <!-- Google Fonts: Geist & Geist Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/components.css" />
   <link rel="stylesheet" href="css/homepage.css" />
+  <link rel="stylesheet" href="css/engineering.css" />
   <link rel="stylesheet" href="css/responsive.css" />
 
-  <!-- Structured Data / JSON-LD -->
+  <!-- Structured Data / JSON-LD for ContactPage & Organization -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    "name": "Talk to an Expert — Laxmi En-Fab Pvt. Ltd.",
-    "description": "Direct contact and technical advisory for AAC manufacturing plants and industrial dry mortar systems.",
+    "name": "Talk to an AAC Plant Expert — Laxmi En-Fab Pvt. Ltd.",
+    "description": "Direct contact and technical advisory for AAC manufacturing plants, project CAPEX sizing, plant layout design, and heavy industrial machinery.",
     "url": "https://www.laxmienfab.com/contact.html",
     "mainEntity": {
       "@type": "Organization",
       "name": "Laxmi En-Fab Pvt. Ltd.",
-      "telephone": "+918980800839",
+      "telephone": "+91-8980800607",
       "email": "aac@laxmienfab.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "2nd Floor, Pelican Business Hub, Odhav",
+        "streetAddress": "48 Block A, 2nd Floor, Pelican Complex, Opp Odhav BRTS, GIDC, Odhav",
         "addressLocality": "Ahmedabad",
         "addressRegion": "Gujarat",
         "postalCode": "382415",
@@ -37,416 +43,8 @@
     }
   }
   </script>
-
-  <style>
-    /* Contact Page Specific Styles */
-    .contact-hero {
-      background: #040d1a;
-      color: #ffffff;
-      padding: 5rem 1.5rem 4rem 1.5rem;
-      position: relative;
-      overflow: hidden;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .contact-hero__inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 3.5rem;
-      align-items: center;
-    }
-
-    .contact-hero__eyebrow {
-      display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 800;
-      letter-spacing: 0.14em;
-      color: #e6a822;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
-    }
-
-    .contact-hero__title {
-      font-size: clamp(2.4rem, 4.5vw, 3.8rem);
-      font-weight: 900;
-      line-height: 1.1;
-      margin: 0 0 1.25rem 0;
-      letter-spacing: -0.02em;
-    }
-
-    .contact-hero__title .highlight {
-      color: #3b82f6;
-    }
-
-    .contact-hero__lead {
-      font-size: 1.15rem;
-      line-height: 1.7;
-      color: #cbd5e1;
-      margin: 0 0 2rem 0;
-      max-width: 680px;
-    }
-
-    .contact-hero__badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .contact-hero__badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.5rem 1rem;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 6px;
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: #e2e8f0;
-    }
-
-    .contact-hero__badge-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #10b981;
-    }
-
-    /* Main Content Layout */
-    .contact-main-section {
-      padding: 5rem 1.5rem;
-      background: #f8fafc;
-    }
-
-    .contact-main-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 3.5rem;
-      align-items: start;
-    }
-
-    /* Form Container */
-    .contact-form-card {
-      background: #ffffff;
-      border-radius: 16px;
-      border: 1px solid rgba(7, 23, 44, 0.1);
-      box-shadow: 0 15px 45px rgba(7, 23, 44, 0.06);
-      padding: 3rem;
-    }
-
-    .contact-form-header {
-      margin-bottom: 2rem;
-      border-bottom: 1px solid rgba(7, 23, 44, 0.08);
-      padding-bottom: 1.5rem;
-    }
-
-    .contact-form-title {
-      font-size: 1.65rem;
-      font-weight: 800;
-      color: #07172c;
-      margin: 0 0 0.5rem 0;
-    }
-
-    .contact-form-subtitle {
-      font-size: 0.95rem;
-      color: #64748b;
-      margin: 0;
-    }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.25rem;
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-    }
-
-    .form-group--full {
-      grid-column: 1 / -1;
-    }
-
-    .form-label {
-      font-size: 0.82rem;
-      font-weight: 800;
-      letter-spacing: 0.04em;
-      color: #1e293b;
-      text-transform: uppercase;
-    }
-
-    .form-label span.req {
-      color: #ef4444;
-    }
-
-    .form-control {
-      width: 100%;
-      padding: 0.85rem 1rem;
-      border-radius: 8px;
-      border: 1.5px solid #cbd5e1;
-      background: #ffffff;
-      font-size: 0.95rem;
-      color: #07172c;
-      font-family: inherit;
-      transition: all 0.2s ease;
-      box-sizing: border-box;
-    }
-
-    .form-control:focus {
-      outline: none;
-      border-color: #0b3f78;
-      box-shadow: 0 0 0 4px rgba(11, 63, 120, 0.12);
-    }
-
-    select.form-control {
-      cursor: pointer;
-      appearance: none;
-      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-      background-repeat: no-repeat;
-      background-position: right 1rem center;
-      background-size: 1em;
-    }
-
-    textarea.form-control {
-      resize: vertical;
-      min-height: 120px;
-    }
-
-    .form-submit-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.75rem;
-      width: 100%;
-      padding: 1.1rem 2rem;
-      background: #0b3f78;
-      color: #ffffff;
-      border: none;
-      border-radius: 8px;
-      font-size: 0.95rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: all 0.25s ease;
-      margin-top: 1rem;
-      box-shadow: 0 4px 14px rgba(11, 63, 120, 0.25);
-    }
-
-    .form-submit-btn:hover {
-      background: #072a52;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(11, 63, 120, 0.35);
-    }
-
-    /* Right Side Cards */
-    .contact-info-wrap {
-      display: flex;
-      flex-direction: column;
-      gap: 1.75rem;
-    }
-
-    .contact-card {
-      background: #ffffff;
-      border-radius: 14px;
-      border: 1px solid rgba(7, 23, 44, 0.1);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-      padding: 2rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .contact-card--dark {
-      background: #040d1a;
-      color: #ffffff;
-      border-color: rgba(255, 255, 255, 0.12);
-    }
-
-    .contact-card__tag {
-      font-size: 0.72rem;
-      font-weight: 800;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #0b3f78;
-      margin-bottom: 0.75rem;
-      display: block;
-    }
-
-    .contact-card--dark .contact-card__tag {
-      color: #e6a822;
-    }
-
-    .contact-card__title {
-      font-size: 1.35rem;
-      font-weight: 800;
-      margin: 0 0 1rem 0;
-      color: #07172c;
-    }
-
-    .contact-card--dark .contact-card__title {
-      color: #ffffff;
-    }
-
-    .contact-item-row {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      margin-bottom: 1.25rem;
-    }
-
-    .contact-item-icon {
-      font-size: 1.25rem;
-      line-height: 1;
-      padding-top: 2px;
-    }
-
-    .contact-item-label {
-      font-size: 0.75rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: #64748b;
-      margin-bottom: 0.2rem;
-    }
-
-    .contact-card--dark .contact-item-label {
-      color: #94a3b8;
-    }
-
-    .contact-item-val {
-      font-size: 0.95rem;
-      color: #1e293b;
-      line-height: 1.5;
-    }
-
-    .contact-card--dark .contact-item-val {
-      color: #f1f5f9;
-    }
-
-    .contact-item-val a {
-      color: inherit;
-      text-decoration: none;
-      font-weight: 700;
-      transition: color 0.2s;
-    }
-
-    .contact-item-val a:hover {
-      color: #3b82f6;
-    }
-
-    .contact-card--dark .contact-item-val a:hover {
-      color: #e6a822;
-    }
-
-    .direct-call-box {
-      background: rgba(11, 63, 120, 0.08);
-      border: 1px solid rgba(11, 63, 120, 0.15);
-      border-radius: 10px;
-      padding: 1.25rem;
-      margin-top: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .contact-card--dark .direct-call-box {
-      background: rgba(255, 255, 255, 0.06);
-      border-color: rgba(255, 255, 255, 0.12);
-    }
-
-    .direct-call-number {
-      font-size: 1.25rem;
-      font-weight: 900;
-      color: #0b3f78;
-      text-decoration: none;
-    }
-
-    .contact-card--dark .direct-call-number {
-      color: #e6a822;
-    }
-
-    /* Workshop & Tour Section */
-    .workshop-strip {
-      background: #ffffff;
-      border-top: 1px solid rgba(7, 23, 44, 0.1);
-      border-bottom: 1px solid rgba(7, 23, 44, 0.1);
-      padding: 4rem 1.5rem;
-    }
-
-    .workshop-strip__inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 2rem;
-    }
-
-    .workshop-feature-box {
-      border: 1px solid rgba(7, 23, 44, 0.1);
-      border-radius: 12px;
-      padding: 2rem;
-      background: #f8fafc;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .workshop-feature-num {
-      font-size: 1.75rem;
-      font-weight: 900;
-      color: #0b3f78;
-      font-family: monospace;
-      margin-bottom: 0.75rem;
-    }
-
-    .workshop-feature-title {
-      font-size: 1.2rem;
-      font-weight: 800;
-      color: #07172c;
-      margin: 0 0 0.5rem 0;
-    }
-
-    .workshop-feature-desc {
-      font-size: 0.92rem;
-      color: #52677d;
-      line-height: 1.6;
-      margin: 0;
-    }
-
-    @media (max-width: 992px) {
-      .contact-hero__inner {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-      }
-      .contact-main-inner {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-      }
-      .workshop-strip__inner {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .form-grid {
-        grid-template-columns: 1fr;
-      }
-      .contact-form-card {
-        padding: 2rem 1.25rem;
-      }
-      .contact-hero {
-        padding: 4rem 1.25rem 3rem 1.25rem;
-      }
-    }
-  </style>
 </head>
-<body class="contact-page">
+<body class="engineering-inner-page contact-page">
 
   <!-- Shared Global Header Injection -->
   <div id="site-header"></div>
@@ -460,215 +58,307 @@
     </div>
   </nav>
 
+  <!-- Sticky In-Page Sub-Navigation Strip -->
+  <nav class="eng-nav-strip" aria-label="Consultation Page Navigation">
+    <div class="eng-nav-strip__inner">
+      <a href="#consultation-form" class="eng-nav-btn active"><span class="eng-nav-num">01</span> Consultation Form</a>
+      <a href="#direct-channels" class="eng-nav-btn"><span class="eng-nav-num">02</span> Direct Channels</a>
+      <a href="#facility" class="eng-nav-btn"><span class="eng-nav-num">03</span> Ahmedabad Works</a>
+      <a href="#process" class="eng-nav-btn"><span class="eng-nav-num">04</span> Advisory Process</a>
+      <a href="#faq" class="eng-nav-btn"><span class="eng-nav-num">05</span> Project FAQ</a>
+    </div>
+  </nav>
+
   <main id="main-content">
 
-    <!-- ============ 01. HERO SECTION ============ -->
-    <section class="contact-hero" id="hero">
-      <div class="contact-hero__inner">
-        <div>
-          <span class="contact-hero__eyebrow">DIRECT ENGINEERING CONSULTATION</span>
-          <h1 class="contact-hero__title">
-            Talk to an AAC <span class="highlight">Plant Expert</span>
+    <!-- ============ SECTION 01 — HERO (HIGH-KEY EDITORIAL 1500PX) ============ -->
+    <section class="editorial-hero editorial-hero--light is-loaded" id="overview" aria-label="Talk to an AAC Plant Expert Overview">
+      
+      <!-- Background Full-Bleed Visual & Overlay -->
+      <div class="editorial-hero__media" aria-hidden="true">
+        <div class="editorial-hero__video-wrap">
+          <img
+            class="editorial-hero__poster"
+            src="assets/images/production-process.png"
+            alt="Laxmi En-Fab AAC Plant Engineering & Consultation Center"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </div>
+        <div class="editorial-hero__overlay"></div>
+      </div>
+
+      <!-- Hero Main Content -->
+      <div class="editorial-hero__inner">
+        <div class="editorial-hero__content">
+          <span class="editorial-hero__eyebrow">DIRECT ENGINEERING CONSULTATION · SENIOR TECHNICAL ADVISORY</span>
+          <h1 class="editorial-hero__title">
+            <span>Talk to an AAC plant expert.</span>
+            <span class="editorial-hero__title-light">Direct technical &amp; project sizing advisory.</span>
           </h1>
-          <p class="contact-hero__lead">
-            Whether evaluating plant capacity, calculating total project CAPEX &amp; ROI, upgrading autoclave steam automation, or exploring state industrial subsidies, discuss your project directly with Laxmi En-Fab's senior engineering team.
+          <p class="editorial-hero__sub">
+            Connect directly with Laxmi En-Fab's senior process and machinery engineering team. From preliminary CAPEX modeling, block vs. panel sizing, to raw material suitability, site civil layout blueprints, and live workshop tours in Ahmedabad.
           </p>
-          <div class="contact-hero__badges">
-            <div class="contact-hero__badge">
-              <span class="contact-hero__badge-dot"></span>
-              Average Technical Response: Under 4 Hours
-            </div>
-            <div class="contact-hero__badge">
-              <span class="contact-hero__badge-dot"></span>
-              On-Site Workshop Tours at Kheda
-            </div>
-            <div class="contact-hero__badge">
-              <span class="contact-hero__badge-dot"></span>
-              Certified IBR &amp; IS 2185 Advisory
-            </div>
+          <div class="editorial-hero__actions">
+            <a href="#consultation-form" class="editorial-hero__btn-dark">
+              <span>Request Consultation</span>
+              <span class="editorial-hero__btn-arrow">↓</span>
+            </a>
+            <a href="tel:+918980800607" class="editorial-hero__link-dark">
+              <span>Call Senior Sales Desk</span>
+              <span class="editorial-hero__link-arrow">↗</span>
+            </a>
           </div>
         </div>
+      </div>
 
-        <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 2.5rem;">
-          <div style="font-size: 0.75rem; font-weight: 800; color: #e6a822; letter-spacing: 0.1em; margin-bottom: 0.75rem;">DIRECT DIAL HOTLINES</div>
-          <div style="font-size: 1.8rem; font-weight: 900; margin-bottom: 0.5rem;">
-            <a href="tel:+918980800839" style="color: #ffffff; text-decoration: none;">+91 89808 00839</a>
-          </div>
-          <div style="font-size: 1.35rem; font-weight: 800; color: #94a3b8; margin-bottom: 1.5rem;">
-            <a href="tel:+918980800607" style="color: #cbd5e1; text-decoration: none;">+91 89808 00607</a>
-          </div>
-          <div style="font-size: 0.95rem; color: #cbd5e1; margin-bottom: 1.5rem;">
-            Direct Email: <a href="mailto:aac@laxmienfab.com" style="color: #60a5fa; text-decoration: none; font-weight: 700;">aac@laxmienfab.com</a>
-          </div>
-          <a href="https://wa.me/918980800839?text=Hello%20Laxmi%20En-Fab%20Team,%20I%20would%20like%20to%20consult%20an%20AAC%20plant%20expert." target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem; width: 100%; background: #25d366; color: #ffffff; font-weight: 800; font-size: 0.9rem; padding: 0.9rem 1.5rem; border-radius: 8px; text-decoration: none; letter-spacing: 0.05em;">
-            <span>💬</span> CHAT ON WHATSAPP NOW
-          </a>
+      <div class="editorial-hero__corner-caption" aria-hidden="true">
+        <span class="editorial-hero__corner-title">Talk to an AAC Plant Expert</span>
+        <span class="editorial-hero__corner-sub">Technical Advisory &amp; Project Sizing / Ahmedabad, India</span>
+      </div>
+
+    </section>
+
+    <!-- ============ SECTION 02 — DEDICATED SPECIFICATIONS & STATS STRIP ============ -->
+    <section class="eng-stats-strip" aria-label="Technical Consultation Key Benchmarks">
+      <div class="eng-stats-strip__inner">
+        <div class="eng-stat-card">
+          <div class="eng-stat-card__val">&lt; 2 <span>Hours</span></div>
+          <div class="eng-stat-card__lbl">Technical Response Guarantee</div>
+        </div>
+        <div class="eng-stat-card">
+          <div class="eng-stat-card__val">100% <span>Direct</span></div>
+          <div class="eng-stat-card__lbl">Senior Process Engineers</div>
+        </div>
+        <div class="eng-stat-card">
+          <div class="eng-stat-card__val">150+ <span>Plants</span></div>
+          <div class="eng-stat-card__lbl">Turnkey Execution Experience</div>
+        </div>
+        <div class="eng-stat-card">
+          <div class="eng-stat-card__val">Free <span>Review</span></div>
+          <div class="eng-stat-card__lbl">Site Layout &amp; CAPEX Sizing</div>
         </div>
       </div>
     </section>
 
-    <!-- ============ 02. CONSULTATION FORM & OFFICE CARDS ============ -->
-    <section class="contact-main-section" id="consultation-form">
-      <div class="contact-main-inner">
+    <!-- ============ SECTION 03 — 2-COLUMN CONSULTATION FORM & DIRECT CHANNELS ============ -->
+    <section class="eng-section eng-section--white" id="consultation-form">
+      <div class="eng-contact-layout">
         
-        <!-- Left: Interactive Technical Inquiry Form -->
-        <div class="contact-form-card">
-          <div class="contact-form-header">
-            <h2 class="contact-form-title">Request a Project Consultation</h2>
-            <p class="contact-form-subtitle">Fill out your project parameters for a structured engineering proposal.</p>
+        <!-- Left: Interactive Technical Project Inquiry Form -->
+        <div class="eng-form-card">
+          <div class="eng-form-header">
+            <span class="eng-form-badge">01 · PROJECT SCOPING &amp; DPR INQUIRY</span>
+            <h2 class="eng-form-title">Request an Engineering Consultation</h2>
+            <p class="eng-form-subtitle">
+              Fill out your project parameters below to receive a customized plant layout, CAPEX breakdown, and technical proposal from our chief process engineers.
+            </p>
           </div>
 
-          <form id="expert-inquiry-form" onsubmit="handleFormSubmit(event)">
-            <div class="form-grid">
+          <form id="expert-inquiry-form" onsubmit="handleExpertFormSubmit(event)">
+            <div class="eng-form-grid">
               
-              <div class="form-group">
-                <label class="form-label" for="contact-name">Full Name <span class="req">*</span></label>
-                <input type="text" id="contact-name" name="name" class="form-control" placeholder="e.g. Rajesh Sharma" required />
+              <div class="eng-form-group">
+                <label class="eng-form-label" for="contact-name">Full Name <span class="req">*</span></label>
+                <input type="text" id="contact-name" name="name" class="eng-form-control" placeholder="e.g. Rajesh Sharma" required />
               </div>
 
-              <div class="form-group">
-                <label class="form-label" for="contact-company">Company / Enterprise</label>
-                <input type="text" id="contact-company" name="company" class="form-control" placeholder="e.g. Apex Infra Projects" />
+              <div class="eng-form-group">
+                <label class="eng-form-label" for="contact-company">Company / Enterprise <span class="opt">(Optional)</span></label>
+                <input type="text" id="contact-company" name="company" class="eng-form-control" placeholder="e.g. Apex Infra Projects Pvt. Ltd." />
               </div>
 
-              <div class="form-group">
-                <label class="form-label" for="contact-phone">Phone / WhatsApp Number <span class="req">*</span></label>
-                <input type="tel" id="contact-phone" name="phone" class="form-control" placeholder="+91 98765 43210" required />
+              <div class="eng-form-group">
+                <label class="eng-form-label" for="contact-phone">Phone / WhatsApp Number <span class="req">*</span></label>
+                <input type="tel" id="contact-phone" name="phone" class="eng-form-control" placeholder="+91 98765 43210" required />
               </div>
 
-              <div class="form-group">
-                <label class="form-label" for="contact-email">Email Address <span class="req">*</span></label>
-                <input type="email" id="contact-email" name="email" class="form-control" placeholder="name@company.com" required />
+              <div class="eng-form-group">
+                <label class="eng-form-label" for="contact-email">Corporate Email Address <span class="req">*</span></label>
+                <input type="email" id="contact-email" name="email" class="eng-form-control" placeholder="name@company.com" required />
               </div>
 
-              <div class="form-group form-group--full">
-                <label class="form-label" for="inquiry-type">Project / Inquiry Focus <span class="req">*</span></label>
-                <select id="inquiry-type" name="inquiry_type" class="form-control" required>
+              <div class="eng-form-group eng-form-group--full">
+                <label class="eng-form-label" for="inquiry-type">Project Focus &amp; Plant Capacity <span class="req">*</span></label>
+                <select id="inquiry-type" name="inquiry_type" class="eng-form-control" required>
                   <option value="" disabled selected>Select Primary Discussion Subject...</option>
-                  <option value="New AAC Block Plant (150 - 600 m3/day)">New AAC Block Plant (150 – 600 m³/day)</option>
-                  <option value="High-Capacity AAC Plant (600 - 1500 m3/day)">High-Capacity AAC Plant (600 – 1500 m³/day)</option>
-                  <option value="Reinforced ALC Wall & Floor Panel Plant">Reinforced ALC Wall &amp; Floor Panel Plant</option>
-                  <option value="Dry Mix Mortar & Block Adhesive Unit">Dry Mix Mortar &amp; Block Adhesive Unit</option>
-                  <option value="Plant Automation & SCADA Modernization">Plant Automation &amp; SCADA Modernization</option>
-                  <option value="Autoclaves, Steam Boilers & Heat Recovery">Autoclaves, Steam Boilers &amp; Heat Recovery</option>
-                  <option value="State Industrial Subsidy & Bank DPR Support">State Industrial Subsidy &amp; Bank DPR Support</option>
-                  <option value="Workshop Tour & Live Plant Visit">Workshop Tour &amp; Live Plant Visit</option>
+                  <option value="New AAC Block Plant (150 - 300 m3/day)">New AAC Block Plant (150 – 300 m³/day) — Single Autoclave</option>
+                  <option value="Standard AAC Block Plant (300 - 600 m3/day)">Standard AAC Block Plant (300 – 600 m³/day) — 2 Autoclaves</option>
+                  <option value="High-Capacity Mega Plant (600 - 1500 m3/day)">High-Capacity Mega Plant (600 – 1500 m³/day) — Fully Automated</option>
+                  <option value="Reinforced ALC Wall & Floor Panel Plant">Reinforced ALC Wall &amp; Floor Panel Plant (Caging &amp; Slotted Autoclaves)</option>
+                  <option value="Dry Mix Mortar & Block Adhesive Unit">Dry Mix Mortar &amp; Block Jointing Mortar Unit</option>
+                  <option value="Plant Automation, SCADA & Retrofit">Plant Automation, SCADA Modernization &amp; Machinery Retrofit</option>
+                  <option value="Autoclaves, Steam Boilers & Heat Recovery">Autoclaves, Steam Boilers &amp; Heat Recovery Systems</option>
+                  <option value="State Industrial Subsidy & Bank DPR Support">State Industrial Subsidy, DPR &amp; Project Financing</option>
+                  <option value="Ahmedabad Workshop Tour & Live Plant Visit">Ahmedabad Workshop Tour &amp; Operational Plant Visit</option>
                 </select>
               </div>
 
-              <div class="form-group">
-                <label class="form-label" for="plant-location">Proposed Plant Location (State/City)</label>
-                <input type="text" id="plant-location" name="location" class="form-control" placeholder="e.g. Pune, Maharashtra" />
+              <div class="eng-form-group">
+                <label class="eng-form-label" for="plant-location">Proposed Plant Location (State/City)</label>
+                <input type="text" id="plant-location" name="location" class="eng-form-control" placeholder="e.g. Pune, Maharashtra / Surat, Gujarat" />
               </div>
 
-              <div class="form-group">
-                <label class="form-label" for="project-timeline">Target Commissioning Timeline</label>
-                <select id="project-timeline" name="timeline" class="form-control">
-                  <option value="Immediate (1-3 Months)">Immediate (1–3 Months)</option>
-                  <option value="3-6 Months">3–6 Months</option>
-                  <option value="6-12 Months">6–12 Months</option>
-                  <option value="Concept / Feasibility Stage">Concept / Feasibility Stage</option>
+              <div class="eng-form-group">
+                <label class="eng-form-label" for="land-availability">Land Status / Plot Area</label>
+                <select id="land-availability" name="land_status" class="eng-form-control">
+                  <option value="2-4 Acres Acquired">2 – 4 Acres Land Acquired</option>
+                  <option value="5+ Acres Acquired">5+ Acres Land Acquired</option>
+                  <option value="Industrial Plot Finalized">Industrial GIDC / MIDC Plot Finalized</option>
+                  <option value="Actively Sourcing Land">Actively Sourcing Land</option>
+                  <option value="Existing Factory Shed Expansion">Existing Factory Shed Expansion</option>
                 </select>
               </div>
 
-              <div class="form-group form-group--full">
-                <label class="form-label" for="contact-message">Technical Requirements / Message</label>
-                <textarea id="contact-message" name="message" class="form-control" placeholder="Describe your available land area, desired daily capacity, fly ash supply distance, or specific machinery questions..."></textarea>
+              <div class="eng-form-group">
+                <label class="eng-form-label" for="raw-material">Primary Raw Material Proximity</label>
+                <select id="raw-material" name="raw_material" class="eng-form-control">
+                  <option value="Fly Ash from TPS < 50km">Fly Ash from Thermal Power Station (&lt; 50 km)</option>
+                  <option value="Fly Ash from TPS 50-150km">Fly Ash from Thermal Power Station (50 – 150 km)</option>
+                  <option value="Pond Ash / Slag Available">Pond Ash / Blast Furnace Slag Available</option>
+                  <option value="River Sand / Quartz Processing">River Sand / Quartz Sifting Line Required</option>
+                  <option value="Need Raw Material Advisory">Need Raw Material Feasibility Advisory</option>
+                </select>
               </div>
 
-              <div class="form-group form-group--full">
-                <button type="submit" id="submit-btn" class="form-submit-btn">
-                  SUBMIT INQUIRY TO ENGINEERING TEAM <span style="font-size: 1.1rem;">→</span>
+              <div class="eng-form-group">
+                <label class="eng-form-label" for="project-timeline">Target Commissioning Timeline</label>
+                <select id="project-timeline" name="timeline" class="eng-form-control">
+                  <option value="Immediate (1-3 Months)">Immediate Execution (1–3 Months)</option>
+                  <option value="3-6 Months">Medium Term (3–6 Months)</option>
+                  <option value="6-12 Months">Long Term Planning (6–12 Months)</option>
+                  <option value="Concept / Feasibility Stage">Preliminary Feasibility / DPR Stage</option>
+                </select>
+              </div>
+
+              <div class="eng-form-group eng-form-group--full">
+                <label class="eng-form-label" for="contact-message">Technical Requirements &amp; Message</label>
+                <textarea id="contact-message" name="message" class="eng-form-control" placeholder="Describe your available power load (kVA), boiler fuel choice (coal/briquette/gas), preferred cutting technology, or civil layout requirements..."></textarea>
+              </div>
+
+              <div class="eng-form-group eng-form-group--full">
+                <button type="submit" id="expert-submit-btn" class="eng-form-btn">
+                  <span>SUBMIT FOR TECHNICAL REVIEW &amp; CAPEX ESTIMATION</span>
+                  <span style="font-size: 1.15rem;">→</span>
                 </button>
               </div>
 
             </div>
           </form>
 
-          <div id="form-success-msg" style="display: none; background: #ecfdf5; border: 1px solid #10b981; border-radius: 8px; padding: 1.5rem; margin-top: 1.5rem; text-align: center;">
-            <span style="font-size: 2rem;">✅</span>
-            <h3 style="font-size: 1.25rem; font-weight: 800; color: #065f46; margin: 0.5rem 0;">Thank You! Your Inquiry Has Been Received.</h3>
-            <p style="font-size: 0.95rem; color: #047857; margin: 0;">Our senior plant engineer will review your requirements and contact you within 4 business hours.</p>
+          <div class="eng-form-security">
+            <span class="eng-form-security-icon">🔒</span>
+            <span><strong>Confidentiality Assured:</strong> All project parameters, soil data, and commercial discussions remain under strict Non-Disclosure. Zero spam guarantee.</span>
+          </div>
+
+          <!-- Dynamic Form Submission Success State -->
+          <div id="expert-form-success" style="display: none; background: #ecfdf5; border: 1.5px solid #10b981; border-radius: 10px; padding: 2.5rem 2rem; margin-top: 1.5rem; text-align: center;">
+            <div style="width: 56px; height: 56px; border-radius: 50%; background: #10b981; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; margin: 0 auto 1.25rem;">✓</div>
+            <h3 style="font-family: var(--font-geist), Arial, sans-serif; font-size: 1.45rem; font-weight: 800; color: #065f46; margin: 0 0 0.5rem 0;">Technical Inquiry Successfully Logged!</h3>
+            <p style="font-size: 0.95rem; color: #047857; margin: 0 0 1.25rem 0; line-height: 1.6;">
+              Thank you for submitting your AAC project parameters. A Senior Process Engineer at Laxmi En-Fab has been assigned to your case and will respond within <strong>2 business hours</strong> with initial sizing data.
+            </p>
+            <div style="display: inline-block; background: #ffffff; border: 1px dashed #10b981; border-radius: 6px; padding: 0.6rem 1.25rem; font-family: var(--font-geist-mono), monospace; font-size: 0.85rem; font-weight: 700; color: #065f46;">
+              Reference ID: <span id="ref-id-display">LX-ENG-2026-9482</span>
+            </div>
           </div>
         </div>
 
-        <!-- Right: Location & Corporate Coordinates -->
-        <div class="contact-info-wrap">
+        <!-- Right: Direct Engineering Channels & Corporate Coordinates -->
+        <div class="eng-contact-sidebar">
           
-          <!-- Card 1: Corporate Office -->
-          <div class="contact-card">
-            <span class="contact-card__tag">HEADQUARTERS</span>
-            <h3 class="contact-card__title">Corporate Office</h3>
+          <!-- Card 1: Senior Engineering Desks (Direct Phone / WhatsApp) -->
+          <div class="eng-contact-card" id="direct-channels">
+            <span class="eng-contact-card__tag">DIRECT ENGINEERING HOTLINES</span>
+            <h3 class="eng-contact-card__title">Direct Technical Desks</h3>
             
-            <div class="contact-item-row">
-              <span class="contact-item-icon">📍</span>
-              <div>
-                <div class="contact-item-label">Address</div>
-                <div class="contact-item-val">
-                  <strong>Laxmi En-Fab Pvt. Ltd.</strong><br>
-                  2nd Floor, Pelican Business Hub,<br>
-                  Opp. Odhav BRTS, GIDC, Odhav,<br>
-                  Ahmedabad, Gujarat 382415, India
+            <div class="eng-contact-row">
+              <div class="eng-contact-icon">📞</div>
+              <div class="eng-contact-detail">
+                <div class="eng-contact-lbl">Senior Technical Sales</div>
+                <div class="eng-contact-val">
+                  <a href="tel:+918980800607">+91 89808 00607</a>
                 </div>
               </div>
             </div>
 
-            <div class="contact-item-row">
-              <span class="contact-item-icon">📞</span>
-              <div>
-                <div class="contact-item-label">Direct Lines</div>
-                <div class="contact-item-val">
-                  <a href="tel:+918980800839">+91 89808 00839</a> / <a href="tel:+918980800607">+91 89808 00607</a>
+            <div class="eng-contact-row">
+              <div class="eng-contact-icon">⚙️</div>
+              <div class="eng-contact-detail">
+                <div class="eng-contact-lbl">Chief Project Engineer</div>
+                <div class="eng-contact-val">
+                  <a href="tel:+918980800839">+91 89808 00839</a>
                 </div>
               </div>
             </div>
 
-            <div class="contact-item-row">
-              <span class="contact-item-icon">✉️</span>
-              <div>
-                <div class="contact-item-label">Email</div>
-                <div class="contact-item-val">
+            <div class="eng-contact-row">
+              <div class="eng-contact-icon">✉️</div>
+              <div class="eng-contact-detail">
+                <div class="eng-contact-lbl">Process Engineering Email</div>
+                <div class="eng-contact-val">
                   <a href="mailto:aac@laxmienfab.com">aac@laxmienfab.com</a>
                 </div>
               </div>
             </div>
 
-            <div class="direct-call-box">
-              <span style="font-size: 0.82rem; font-weight: 800; color: #0b3f78;">CALL CORPORATE DESK</span>
-              <a href="tel:+918980800839" class="direct-call-number">+91 89808 00839</a>
+            <a href="https://wa.me/918980800839?text=Hello%20Laxmi%20En-Fab%20Team,%20I%20would%20like%20to%20consult%20an%20AAC%20plant%20expert." target="_blank" rel="noopener noreferrer" class="eng-whatsapp-btn">
+              <span>💬</span> CHAT ON WHATSAPP NOW
+            </a>
+          </div>
+
+          <!-- Card 2: Corporate Design Center (Ahmedabad) -->
+          <div class="eng-contact-card eng-contact-card--dark">
+            <span class="eng-contact-card__tag">HEADQUARTERS &amp; DESIGN CENTER</span>
+            <h3 class="eng-contact-card__title">Ahmedabad Corporate Office</h3>
+            
+            <div class="eng-contact-row">
+              <div class="eng-contact-icon">📍</div>
+              <div class="eng-contact-detail">
+                <div class="eng-contact-lbl">Office Address</div>
+                <div class="eng-contact-val">
+                  <strong>Laxmi En-Fab Pvt. Ltd.</strong><br />
+                  48 Block A, 2nd Floor, Pelican Complex,<br />
+                  Opp. Odhav BRTS, GIDC, Odhav,<br />
+                  Ahmedabad, Gujarat 382415, India
+                </div>
+              </div>
+            </div>
+
+            <div class="eng-contact-row">
+              <div class="eng-contact-icon">⏱️</div>
+              <div class="eng-contact-detail">
+                <div class="eng-contact-lbl">Working Hours</div>
+                <div class="eng-contact-val">
+                  Monday – Saturday: 9:00 AM – 7:30 PM IST<br />
+                  <span style="color: #94a3b8; font-size: 0.85rem;">(Sunday: By Prior Appointment)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="eng-direct-call-box">
+              <span class="eng-direct-call-lbl">HEADQUARTERS DESK</span>
+              <a href="tel:+918980800607" class="eng-direct-call-num">+91 89808 00607</a>
             </div>
           </div>
 
-          <!-- Card 2: Manufacturing Workshop -->
-          <div class="contact-card contact-card--dark">
-            <span class="contact-card__tag">HEAVY FABRICATION WORKSHOP</span>
-            <h3 class="contact-card__title">Manufacturing Facility</h3>
-            
-            <div class="contact-item-row">
-              <span class="contact-item-icon">🏭</span>
-              <div>
-                <div class="contact-item-label">Workshop Location</div>
-                <div class="contact-item-val">
-                  <strong>Laxmi En-Fab Heavy Engineering Works</strong><br>
-                  NH 48, Kheda Bypass, Kheda,<br>
-                  Gujarat 387411, India
-                </div>
-              </div>
+          <!-- Card 3: Engineering Response SLA Status -->
+          <div class="eng-sla-box">
+            <div class="eng-sla-head">
+              <span class="eng-sla-dot"></span>
+              <span>Engineering Response SLA</span>
             </div>
-
-            <div class="contact-item-row">
-              <span class="contact-item-icon">🛠️</span>
-              <div>
-                <div class="contact-item-label">Workshop Highlights</div>
-                <div class="contact-item-val">
-                  Heavy plate rolling up to 32mm, submerged arc welding, autoclave hydrostatic testing facility, and CNC cutting machine assembly bays.
-                </div>
-              </div>
+            <div class="eng-sla-item">
+              <span class="eng-sla-time">&lt; 2 Hours</span>
+              <span class="eng-sla-text">Technical review &amp; engineer assignment</span>
             </div>
-
-            <div class="direct-call-box">
-              <span style="font-size: 0.82rem; font-weight: 800; color: #e6a822;">SCHEDULE WORKSHOP VISIT</span>
-              <a href="tel:+918980800607" class="direct-call-number">+91 89808 00607</a>
+            <div class="eng-sla-item">
+              <span class="eng-sla-time">&lt; 24 Hours</span>
+              <span class="eng-sla-text">Customized preliminary CAPEX estimation</span>
+            </div>
+            <div class="eng-sla-item">
+              <span class="eng-sla-time">&lt; 48 Hours</span>
+              <span class="eng-sla-text">2D Civil CAD plot layout feasibility review</span>
             </div>
           </div>
 
@@ -677,40 +367,314 @@
       </div>
     </section>
 
-    <!-- ============ 03. WHAT TO EXPECT WHEN YOU TALK TO US ============ -->
-    <section class="workshop-strip">
-      <div class="workshop-strip__inner">
+    <!-- ============ SECTION 04 — DIRECT CHANNELS & MANUFACTURING WORKS ============ -->
+    <section class="eng-section eng-section--light" id="facility">
+      <div class="eng-container">
         
-        <div class="workshop-feature-box">
-          <div>
-            <div class="workshop-feature-num">01</div>
-            <h3 class="workshop-feature-title">Ground-Level Feasibility</h3>
-            <p class="workshop-feature-desc">
-              We review your local fly ash sourcing logistics, raw material proximity, and power/water availability before proposing equipment.
+        <div>
+          <span class="eng-eyebrow">02 · PHYSICAL LOCATIONS &amp; WORKS</span>
+          <h2 class="eng-title">
+            <span>Corporate design center &amp;</span>
+            <span class="eng-title-light">heavy manufacturing facilities.</span>
+          </h2>
+          <p class="eng-lead">
+            Every piece of AAC plant machinery is designed in our Ahmedabad engineering office and fabricated in-house across our dedicated heavy engineering works.
+          </p>
+        </div>
+
+        <!-- 3 Contiguous Swiss Architectural Cards -->
+        <div class="eng-arch-grid" style="grid-template-columns: repeat(3, 1fr); margin: 2.5rem 0 1.5rem;">
+          
+          <!-- Card 01 -->
+          <div class="eng-arch-col">
+            <div>
+              <span class="eng-arch-num">FACILITY 01</span>
+              <h3 class="eng-arch-name">Corporate HQ &amp; Design Center</h3>
+              <p class="eng-arch-desc">
+                Pelican Complex, Odhav GIDC, Ahmedabad. Houses our CAD blueprinting teams, SCADA control programming lab, raw material mass-balance lab, and client consultation suites.
+              </p>
+            </div>
+            <div class="eng-arch-link">
+              <span>Ahmedabad HQ</span>
+              <span class="eng-arch-arrow">↗</span>
+            </div>
+          </div>
+
+          <!-- Card 02 -->
+          <div class="eng-arch-col">
+            <div>
+              <span class="eng-arch-num">FACILITY 02</span>
+              <h3 class="eng-arch-name">Heavy Fabrication Works</h3>
+              <p class="eng-arch-desc">
+                NH 48, Kheda Bypass, Gujarat. 100,000+ sq.ft. heavy machinery facility equipped with 32mm plate rolling, submerged arc autoclave welding, and CNC oscillating wire frame assembly.
+              </p>
+            </div>
+            <div class="eng-arch-link">
+              <span>Heavy Engineering</span>
+              <span class="eng-arch-arrow">↗</span>
+            </div>
+          </div>
+
+          <!-- Card 03 -->
+          <div class="eng-arch-col">
+            <div>
+              <span class="eng-arch-num">FACILITY 03</span>
+              <h3 class="eng-arch-name">Global Turnkey Export Desk</h3>
+              <p class="eng-arch-desc">
+                Dedicated export engineering cell handling containerized sea shipping, overseas civil supervisory teams, and multi-currency billing across Africa, Middle East, and SAARC nations.
+              </p>
+            </div>
+            <div class="eng-arch-link">
+              <span>Export Inquiries</span>
+              <span class="eng-arch-arrow">↗</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ SECTION 05 — WHAT TO EXPECT DURING ADVISORY ============ -->
+    <section class="eng-section eng-section--white" id="process">
+      <div class="eng-container">
+        
+        <div>
+          <span class="eng-eyebrow">03 · CONSULTATION DELIVERABLES</span>
+          <h2 class="eng-title">
+            <span>What to expect when</span>
+            <span class="eng-title-light">you consult our engineering team.</span>
+          </h2>
+          <p class="eng-lead">
+            We provide structured, data-driven engineering advisory at every project milestone, ensuring you receive realistic budgets, proven chemistry, and optimized land layouts before investing capital.
+          </p>
+        </div>
+
+        <!-- 4 Contiguous Swiss Architectural Cards -->
+        <div class="eng-arch-grid" style="grid-template-columns: repeat(4, 1fr); margin: 2.5rem 0 2rem;">
+          
+          <div class="eng-arch-col">
+            <div>
+              <span class="eng-arch-num">PHASE 01</span>
+              <h3 class="eng-arch-name">Raw Material Chemistry</h3>
+              <p class="eng-arch-desc">
+                Fly ash sieve analysis, free lime % testing, and reactive silica formulation modeling tailored to your nearest thermal power station supply.
+              </p>
+            </div>
+            <div class="eng-arch-link">
+              <span>Lab Verification</span>
+              <span class="eng-arch-arrow">↗</span>
+            </div>
+          </div>
+
+          <div class="eng-arch-col">
+            <div>
+              <span class="eng-arch-num">PHASE 02</span>
+              <h3 class="eng-arch-name">CAPEX &amp; Capacity Sizing</h3>
+              <p class="eng-arch-desc">
+                Precise sizing of autoclaves, steam boiler steam generation ton/hr, mould turnaround cycles, and required connected electrical load (kVA).
+              </p>
+            </div>
+            <div class="eng-arch-link">
+              <span>Equipment Sizing</span>
+              <span class="eng-arch-arrow">↗</span>
+            </div>
+          </div>
+
+          <div class="eng-arch-col">
+            <div>
+              <span class="eng-arch-num">PHASE 03</span>
+              <h3 class="eng-arch-name">CAD Plant Layout</h3>
+              <p class="eng-arch-desc">
+                Custom plot footprint blueprinting, raw material intake logistics, precuring chamber rail tracks, and finished block yard flow optimization.
+              </p>
+            </div>
+            <div class="eng-arch-link">
+              <span>2D CAD Blueprint</span>
+              <span class="eng-arch-arrow">↗</span>
+            </div>
+          </div>
+
+          <div class="eng-arch-col">
+            <div>
+              <span class="eng-arch-num">PHASE 04</span>
+              <h3 class="eng-arch-name">DPR &amp; Subsidy Advisory</h3>
+              <p class="eng-arch-desc">
+                Bankable Detailed Project Report (DPR) financials, debt-equity modeling, and state industrial capital investment subsidy guidance.
+              </p>
+            </div>
+            <div class="eng-arch-link">
+              <span>Financial DPR</span>
+              <span class="eng-arch-arrow">↗</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Engineering Checkpoint Callout Box -->
+        <div class="eng-checkpoint-box">
+          <div class="eng-checkpoint-box__left">
+            <span class="eng-checkpoint-box__badge">100% IN-HOUSE FABRICATION GUARANTEE</span>
+            <h3 class="eng-checkpoint-box__title">Zero reliance on third-party job work or unverified machine traders.</h3>
+            <p class="eng-checkpoint-box__text">
+              Every pressure vessel, cutting machine carriage, and high-shear mixer is built within Laxmi En-Fab's own workshop facilities in Gujarat. You deal directly with the engineers designing and manufacturing your equipment.
             </p>
+          </div>
+          <div class="eng-checkpoint-box__right">
+            <a href="why-laxmi.html" class="eng-checkpoint-box__btn">
+              <span>Explore Why Laxmi</span>
+              <span class="eng-checkpoint-box__arrow">→</span>
+            </a>
           </div>
         </div>
 
-        <div class="workshop-feature-box">
-          <div>
-            <div class="workshop-feature-num">02</div>
-            <h3 class="workshop-feature-title">Tailored CAPEX &amp; Layout</h3>
-            <p class="workshop-feature-desc">
-              Receive realistic project cost sheets, working capital breakdowns, and preliminary civil layout CAD drawings customized to your plot.
+      </div>
+    </section>
+
+    <!-- ============ SECTION 06 — FACTORY VISIT BANNER ============ -->
+    <section class="eng-section eng-section--light" id="visit">
+      <div class="eng-container">
+        
+        <div class="eng-alc-banner">
+          <div class="eng-alc-banner__left">
+            <span class="eng-eyebrow" style="color: #56b4f5;">04 · LIVE WORKSHOP DEMONSTRATIONS</span>
+            <h2 class="eng-alc-banner__title">
+              <span>Schedule an Ahmedabad</span>
+              <span style="color: #93c5fd;">workshop &amp; plant tour.</span>
+            </h2>
+            <p class="eng-alc-banner__lead">
+              We invite investors, engineering consultants, and project heads to visit our 100,000+ sq.ft. heavy machinery works in Odhav GIDC, Ahmedabad to inspect live CNC machining, submerged arc welding, and running customer plants.
             </p>
+            <div class="eng-alc-features">
+              <div class="eng-alc-feature">
+                <strong>01. Live CNC &amp; Pressure Vessel Bays</strong>
+                <p>Observe precision machining of cutting frames, autoclave shell rolling, and submerged arc welding bays.</p>
+              </div>
+              <div class="eng-alc-feature">
+                <strong>02. Operational Test Rig Demonstrations</strong>
+                <p>Witness live dry-run trials of 2-axis oscillating wire cutting machines and hydraulic tilting cranes.</p>
+              </div>
+              <div class="eng-alc-feature">
+                <strong>03. Direct Consultation with Chief Engineers</strong>
+                <p>Review your proposed plant layout drawings, soil parameters, and utility budgets directly with our senior designers.</p>
+              </div>
+            </div>
+          </div>
+          <div class="eng-alc-banner__right">
+            <div class="eng-alc-stat-card">
+              <div class="eng-alc-stat-num">100,000+</div>
+              <div class="eng-alc-stat-label">Sq. Ft. Dedicated Workshop Area</div>
+            </div>
+            <div class="eng-alc-stat-card">
+              <div class="eng-alc-stat-num">40+ Years</div>
+              <div class="eng-alc-stat-label">Engineering &amp; Heavy Fabrication Legacy</div>
+            </div>
+            <div class="eng-alc-stat-card">
+              <div class="eng-alc-stat-num">100% In-House</div>
+              <div class="eng-alc-stat-label">Zero Reliance on Third-Party Job Workers</div>
+            </div>
+            <div class="eng-alc-stat-card">
+              <div class="eng-alc-stat-num">150+</div>
+              <div class="eng-alc-stat-label">Plants &amp; Heavy Equipment Installations</div>
+            </div>
           </div>
         </div>
 
-        <div class="workshop-feature-box">
-          <div>
-            <div class="workshop-feature-num">03</div>
-            <h3 class="workshop-feature-title">Workshop Verification</h3>
-            <p class="workshop-feature-desc">
-              Visit our Kheda heavy engineering facility to inspect live machine fabrication, ultrasonic weld testing, and running customer plants.
-            </p>
-          </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 07 — PROJECT CONSULTATION FAQ ACCORDION ============ -->
+    <section class="eng-section eng-section--white" id="faq">
+      <div class="eng-container">
+        
+        <div>
+          <span class="eng-eyebrow">05 · FREQUENTLY ASKED QUESTIONS</span>
+          <h2 class="eng-title">
+            <span>Project consultation</span>
+            <span class="eng-title-light">&amp; plant setup guidance.</span>
+          </h2>
+          <p class="eng-lead">
+            Clear answers to the most common questions prospective plant owners and project managers ask our engineering team.
+          </p>
         </div>
 
+        <div class="eng-faq-grid">
+          
+          <details class="eng-faq-item" open>
+            <summary class="eng-faq-summary">
+              <span>How quickly can I get a customized CAPEX quote and preliminary plant layout?</span>
+              <span class="eng-faq-icon">+</span>
+            </summary>
+            <div class="eng-faq-body">
+              Once you submit your preliminary project parameters (target daily m³, plot area, and state location), our technical team delivers an initial CAPEX cost schedule and equipment list within <strong>24 hours</strong>. If plot dimensions are shared, a customized 2D civil CAD layout is completed within <strong>48 hours</strong>.
+            </div>
+          </details>
+
+          <details class="eng-faq-item">
+            <summary class="eng-faq-summary">
+              <span>Do you perform raw material testing on our local fly ash and lime before machinery order?</span>
+              <span class="eng-faq-icon">+</span>
+            </summary>
+            <div class="eng-faq-body">
+              Yes. You can courier raw material samples (fly ash, quicklime, gypsum, aluminium powder) to our Ahmedabad lab. We perform fineness sieve tests, chemical composition checks, and autoclave sample trials to establish the optimal batching recipe and temperature curves before finalized equipment manufacturing.
+            </div>
+          </details>
+
+          <details class="eng-faq-item">
+            <summary class="eng-faq-summary">
+              <span>Can we visit an operational Laxmi En-Fab AAC plant to observe daily production?</span>
+              <span class="eng-faq-icon">+</span>
+            </summary>
+            <div class="eng-faq-body">
+              Absolutely. In addition to touring our Ahmedabad manufacturing workshop, we regularly arrange guided client visits to operating customer plants across Gujarat, Maharashtra, Rajasthan, and Madhya Pradesh so you can witness real daily throughput, autoclave steam cycles, and block packaging.
+            </div>
+          </details>
+
+          <details class="eng-faq-item">
+            <summary class="eng-faq-summary">
+              <span>What documentation do you provide for bank loan approvals and DPR submissions?</span>
+              <span class="eng-faq-icon">+</span>
+            </summary>
+            <div class="eng-faq-body">
+              We provide comprehensive bank-ready Detailed Project Report (DPR) data packages, including machinery performance pro-forma invoices, utility consumption metrics (power, steam, water), raw material mass-balance calculations, and projected unit manufacturing costs per m³ required by banks and financial institutions.
+            </div>
+          </details>
+
+          <details class="eng-faq-item">
+            <summary class="eng-faq-summary">
+              <span>Do you assist with civil foundation blueprints, shed design, and boiler piping?</span>
+              <span class="eng-faq-icon">+</span>
+            </summary>
+            <div class="eng-faq-body">
+              Yes. Our engineering scope includes full civil dynamic load GA drawings, foundation anchor bolt layouts, crane rail bridge elevations, autoclave pit cross-sections, and complete IBR steam piping / condensate return P&amp;ID schematics.
+            </div>
+          </details>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ SECTION 08 — FINAL STRATEGIC CONVERSION CTA BANNER ============ -->
+    <section class="eng-cta-banner" id="cta">
+      <div class="eng-cta-banner__inner">
+        <span class="eng-cta-banner__eyebrow">START YOUR TECHNICAL CONSULTATION</span>
+        <h2 class="eng-cta-banner__title">
+          <span>Ready to calculate your</span>
+          <span class="eng-cta-banner__title-light">plant CAPEX and layout?</span>
+        </h2>
+        <p class="eng-cta-banner__lead">
+          Connect with Laxmi En-Fab's senior process engineering team today to review your raw materials, plot blueprints, and machinery requirements.
+        </p>
+        <div class="eng-cta-banner__actions">
+          <a href="#consultation-form" class="eng-cta-banner__btn-white">
+            <span>Request Project Sizing</span>
+            <span class="eng-cta-banner__btn-arrow">↑</span>
+          </a>
+          <a href="#overview" class="eng-cta-banner__link-top">
+            <span>Return to top ↑</span>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -722,22 +686,29 @@
   <!-- Scripts -->
   <script src="js/components.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/navigation.js"></script>
   <script src="js/animations.js"></script>
   <script>
-    function handleFormSubmit(e) {
+    function handleExpertFormSubmit(e) {
       e.preventDefault();
       var form = document.getElementById('expert-inquiry-form');
-      var btn = document.getElementById('submit-btn');
-      var successBox = document.getElementById('form-success-msg');
+      var btn = document.getElementById('expert-submit-btn');
+      var successBox = document.getElementById('expert-form-success');
+      var refDisplay = document.getElementById('ref-id-display');
 
       btn.disabled = true;
-      btn.innerHTML = 'SENDING INQUIRY... ⏳';
+      btn.innerHTML = 'LOGGING INQUIRY WITH ENGINEERING TEAM... ⏳';
+
+      var randomId = 'LX-ENG-' + new Date().getFullYear() + '-' + Math.floor(1000 + Math.random() * 9000);
+      if (refDisplay) {
+        refDisplay.textContent = randomId;
+      }
 
       setTimeout(function() {
         form.style.display = 'none';
         successBox.style.display = 'block';
-        window.scrollTo({ top: successBox.offsetTop - 120, behavior: 'smooth' });
-      }, 800);
+        window.scrollTo({ top: successBox.offsetTop - 140, behavior: 'smooth' });
+      }, 700);
     }
   </script>
 </body>

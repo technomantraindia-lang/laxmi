@@ -3,8 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="AAC Auto Palletizing System by Laxmi En-Fab. Automated post-autoclave block handling, layer de-sticking separators, robotic pallet stackers, and strapping conveyors." />
+  <meta name="description" content="AAC Auto Palletizing and Packing Lines by Laxmi En-Fab. Hydraulic layer de-sticking separators, automated wooden pallet dispensers, high-speed overhead gantry cube stackers, and automated PET strapping lines." />
+  <meta name="keywords" content="AAC auto palletizing, block stacker, cake separator, de-sticking clamp, pallet dispenser, PET strapping, stretch hood, Laxmi En-Fab" />
   <title>AAC Auto Palletizing &amp; Packing Line | Laxmi En-Fab</title>
+  
+  <!-- Google Fonts: Geist & Geist Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet" />
   
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/main.css" />
@@ -12,11 +18,26 @@
   <link rel="stylesheet" href="css/homepage.css" />
   <link rel="stylesheet" href="css/engineering.css" />
   <link rel="stylesheet" href="css/responsive.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AAC Auto Palletizing & Packing Lines",
+    "description": "Technical guide on automated post-autoclave AAC block handling, de-sticking separators, robotic pallet stackers, and strapping conveyors.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Laxmi En-Fab Pvt. Ltd."
+    }
+  }
+  </script>
 </head>
 <body class="engineering-inner-page">
 
+  <!-- Shared Header -->
   <div id="site-header"></div>
 
+  <!-- Breadcrumb Navigation -->
   <nav class="site-breadcrumb" aria-label="Breadcrumb">
     <div class="site-breadcrumb__inner">
       <a href="index.html">Home</a>
@@ -25,97 +46,340 @@
       <span class="bc-sep">/</span>
       <a href="machinery-equipment.html">Plant Machinery</a>
       <span class="bc-sep">/</span>
-      <span class="bc-current">Auto Palletizing &amp; Packing Line</span>
+      <span class="bc-current">System 08 · Auto Palletizing &amp; Packing</span>
+    </div>
+  </nav>
+
+  <!-- Sticky In-Page Sub-Navigation Strip -->
+  <nav class="eng-nav-strip" aria-label="System 08 Navigation">
+    <div class="eng-nav-strip__inner">
+      <a href="#overview" class="eng-nav-btn active"><span class="eng-nav-num">01</span> Overview</a>
+      <a href="#sequence" class="eng-nav-btn"><span class="eng-nav-num">02</span> Packaging Sequence</a>
+      <a href="#matrix" class="eng-nav-btn"><span class="eng-nav-num">03</span> Automation Matrix</a>
+      <a href="#dispatch" class="eng-nav-btn"><span class="eng-nav-num">04</span> Transit Standards</a>
+      <a href="#cta" class="eng-nav-btn"><span class="eng-nav-num">05</span> Packaging Consultation</a>
     </div>
   </nav>
 
   <main id="main-content">
 
-    <section class="eng-hero">
-      <div class="eng-hero__inner">
-        <div class="eng-hero__content">
-          <div class="eng-badge">SYSTEM 08 · DE-PANNING &amp; PACKAGING</div>
-          <h1 class="eng-hero__title">
-            AAC Auto Palletizing &amp; <span class="highlight">Packing Lines</span>
+    <!-- ============ 01. HERO SECTION (EDITORIAL FULL SCREEN IMAGE BACKGROUND) ============ -->
+    <section class="editorial-hero editorial-hero--light is-loaded" id="overview" aria-label="Auto Palletizing and Packing Overview">
+      <div class="editorial-hero__media" aria-hidden="true">
+        <div class="editorial-hero__video-wrap">
+          <img
+            class="editorial-hero__poster"
+            src="assets/images/engineering/machinery-auto-palletizing.png"
+            alt="Automated AAC Block Palletizing and Packing System"
+            fetchpriority="high"
+          />
+        </div>
+        <div class="editorial-hero__overlay"></div>
+      </div>
+
+      <div class="editorial-hero__inner">
+        <div class="editorial-hero__content">
+          <span class="editorial-hero__eyebrow">SYSTEM 08 · DE-PANNING &amp; PACKAGING</span>
+          <h1 class="editorial-hero__title">
+            <span>AAC Auto Palletizing &amp;</span>
+            <span class="editorial-hero__title-light">Packing Lines.</span>
           </h1>
-          <p class="eng-hero__lead">
-            Hydraulic block separators, layer de-sticking clamps, automated wooden pallet dispensers, high-speed gantry cube stackers, and automated PET strapping lines.
+          <p class="editorial-hero__sub">
+            Hydraulic block separators, layer de-sticking clamps, automated wooden pallet dispensers, high-speed overhead gantry cube stackers, and automated PET plastic strapping / stretch hood wrapping lines for zero-damage transit.
           </p>
 
-          <div class="eng-hero__stats">
-            <div class="eng-stat-box">
-              <div class="eng-stat-box__val">60+ <span>m³/hr</span></div>
-              <div class="eng-stat-box__lbl">Stacking Capacity</div>
-            </div>
-            <div class="eng-stat-box">
-              <div class="eng-stat-box__val">0 <span>Chipping</span></div>
-              <div class="eng-stat-box__lbl">Edge Protection Clamps</div>
-            </div>
-            <div class="eng-stat-box">
-              <div class="eng-stat-box__val">100 <span>%</span></div>
-              <div class="eng-stat-box__lbl">Dispatch Automation</div>
-            </div>
+          <div class="editorial-hero__actions">
+            <a href="#sequence" class="editorial-hero__btn-dark">
+              <span>Explore Technical Specs</span>
+              <span class="editorial-hero__btn-arrow">↓</span>
+            </a>
+            <a href="contact.html" class="editorial-hero__link-dark">
+              <span>Consult Packaging Engineers</span>
+              <span class="editorial-hero__link-arrow">↗</span>
+            </a>
           </div>
         </div>
+      </div>
 
-        <div class="eng-hero__visual">
-          <div class="eng-hero__visual-card">
-            <img src="assets/images/engineering/machinery-auto-palletizing.png" alt="Auto Palletizing and Stacking System" />
-            <div class="eng-hero__visual-caption">
-              <span><strong>AUTOMATED BLOCK PACKAGING</strong> · HYDRAULIC CLAMP</span>
-              <span style="color:#e6a822;font-family:monospace;font-weight:700;">FAST STACKING</span>
-            </div>
-          </div>
+      <div class="editorial-hero__corner-caption" aria-hidden="true">
+        <span class="editorial-hero__corner-title">AAC Plant Machinery · System 08</span>
+        <span class="editorial-hero__corner-sub">Automated Finished Goods Packaging &amp; Dispatch</span>
+      </div>
+    </section>
+
+    <!-- ============ DEDICATED SPECIFICATIONS & STATS STRIP BELOW HERO ============ -->
+    <section class="eng-stats-strip" aria-label="Key Palletizing Specifications">
+      <div class="eng-stats-strip__inner">
+        <div class="eng-stat-card">
+          <div class="eng-stat-card__val">40–60 <span>sec</span></div>
+          <div class="eng-stat-card__lbl">Palletizing Cycle Time</div>
+        </div>
+        <div class="eng-stat-card">
+          <div class="eng-stat-card__val">60+ <span>m³/hr</span></div>
+          <div class="eng-stat-card__lbl">Packaging Throughput</div>
+        </div>
+        <div class="eng-stat-card">
+          <div class="eng-stat-card__val">&lt;0.5 <span>%</span></div>
+          <div class="eng-stat-card__lbl">Handling Edge Chipping</div>
+        </div>
+        <div class="eng-stat-card">
+          <div class="eng-stat-card__val">100 <span>%</span></div>
+          <div class="eng-stat-card__lbl">Automated Strapping &amp; Hooding</div>
         </div>
       </div>
     </section>
 
-    <section class="eng-section eng-section--white">
+    <!-- ============ 02. SECTION 01: PACKAGING SEQUENCE ============ -->
+    <section class="eng-section eng-section--white" id="sequence">
       <div class="eng-container">
         
-        <div class="eng-section-head">
-          <span class="eng-eyebrow">POST-AUTOCLAVE AUTOMATION</span>
-          <h2 class="eng-section-title">Palletizing &amp; Packaging Line Stages</h2>
+        <div>
+          <span class="eng-eyebrow">01 · POST-AUTOCLAVE PACKAGING SEQUENCE</span>
+          <h2 class="eng-title">
+            <span>4-stage automated packaging flow.</span>
+            <span class="eng-title-light">De-sticking separation to pallet stretch hooding.</span>
+          </h2>
+          <p class="eng-lead">
+            Eliminate manual handling breakages and accelerate truck dispatch turnarounds. Laxmi automated packaging lines transform post-autoclave cakes into weather-proof shipping cubes in 60 seconds.
+          </p>
         </div>
 
-        <div class="eng-pillars-grid" style="gap: 32px; margin-bottom: 48px;">
-          <div class="eng-pillar-card" style="padding: 24px;">
-            <h3 style="font-size:1.25rem; font-weight:800; color:#0f172a; margin-bottom:12px;">1. Hydraulic Cake Separator (De-Sticking)</h3>
-            <p style="font-size:0.92rem; color:#475569; line-height:1.6;">During high-pressure steam curing, adjacent block layers can lightly fuse at wire-cut interfaces. The hydraulic separator applies gentle, uniform tensile separation without edge fracture.</p>
+        <!-- Contiguous Swiss Architectural Cards -->
+        <div class="eng-arch-grid" style="grid-template-columns: repeat(4, 1fr); margin: 2.5rem 0;">
+          
+          <div class="eng-arch-col">
+            <div>
+              <span class="eng-arch-num">STAGE 01</span>
+              <h3 class="eng-arch-name">Cake Layer De-Sticking</h3>
+              <p class="eng-arch-desc">
+                Hydraulic multi-point separator applies uniform, gentle expansion to break the micro-adhesion between autoclaved block layers without fracturing delicate corners.
+              </p>
+            </div>
+            <div class="eng-arch-link">
+              <span>Zero Edge Fracture</span>
+              <span class="eng-arch-arrow">↗</span>
+            </div>
           </div>
-          <div class="eng-pillar-card" style="padding: 24px;">
-            <h3 style="font-size:1.25rem; font-weight:800; color:#0f172a; margin-bottom:12px;">2. Gantry Block Stacker &amp; Cube Builder</h3>
-            <p style="font-size:0.92rem; color:#475569; line-height:1.6;">High-speed overhead servo gantry clamp lifts full block rows (up to 1.2m cube volume) and stacks them neatly onto standard wooden or plastic pallets.</p>
-          </div>
-          <div class="eng-pillar-card" style="padding: 24px;">
-            <h3 style="font-size:1.25rem; font-weight:800; color:#0f172a; margin-bottom:12px;">3. Automatic Wooden Pallet Feeder</h3>
-            <p style="font-size:0.92rem; color:#475569; line-height:1.6;">Magazine-loaded pallet dispenser feeds single empty pallets onto the roller conveyor synchronously as completed block cubes move forward.</p>
-          </div>
-          <div class="eng-pillar-card" style="padding: 24px;">
-            <h3 style="font-size:1.25rem; font-weight:800; color:#0f172a; margin-bottom:12px;">4. Automated PET Strapping &amp; Film Wrapping</h3>
-            <p style="font-size:0.92rem; color:#475569; line-height:1.6;">Rotary stretch wrapper applies rainproof polyethylene stretch hood film, followed by dual-axis PET plastic strapping to secure packs for road transit.</p>
-          </div>
-        </div>
 
-        <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid #e2e8f0; padding-top:32px;">
-          <a href="machinery-steam-boiler.html" class="eng-pillar-card__link">← Previous: Steam Boiler</a>
-          <a href="machinery-equipment.html" class="eng-btn-gold">Back to All Machinery →</a>
+          <div class="eng-arch-col">
+            <div>
+              <span class="eng-arch-num">STAGE 02</span>
+              <h3 class="eng-arch-name">Automatic Pallet Dispenser</h3>
+              <p class="eng-arch-desc">
+                Magazine-fed automated pallet feeder deposits single wooden or composite pallets onto the heavy-duty roller conveyor synchronously with block feed.
+              </p>
+            </div>
+            <div class="eng-arch-link">
+              <span>Magazine Auto Feeder</span>
+              <span class="eng-arch-arrow">↗</span>
+            </div>
+          </div>
+
+          <div class="eng-arch-col">
+            <div>
+              <span class="eng-arch-num">STAGE 03</span>
+              <h3 class="eng-arch-name">Servo Gantry Cube Stacker</h3>
+              <p class="eng-arch-desc">
+                High-speed overhead servo clamp lifts complete block tiers (up to 1.2m cube volume) and stacks them neatly onto standard wooden pallets.
+              </p>
+            </div>
+            <div class="eng-arch-link">
+              <span>High-Torque Servo Gantry</span>
+              <span class="eng-arch-arrow">↗</span>
+            </div>
+          </div>
+
+          <div class="eng-arch-col">
+            <div>
+              <span class="eng-arch-num">STAGE 04</span>
+              <h3 class="eng-arch-name">PET Strapping &amp; Hooding</h3>
+              <p class="eng-arch-desc">
+                Automated rotary stretch hood wrapper applies rainproof polyethylene film, followed by dual-axis PET plastic strapping with cardboard corner protectors.
+              </p>
+            </div>
+            <div class="eng-arch-link">
+              <span>Export Transit Grade</span>
+              <span class="eng-arch-arrow">↗</span>
+            </div>
+          </div>
+
         </div>
 
       </div>
     </section>
 
-    <section class="eng-cta">
-      <div class="eng-cta__inner">
-        <h2 class="eng-cta__title">Automate Your Finished Goods Handling</h2>
-        <p class="eng-cta__text">Eliminate manual handling breakages and accelerate truck dispatch turnarounds with Laxmi En-Fab auto-palletizing lines.</p>
-        <a href="contact.html" class="eng-btn-gold">Consult Packaging Engineers →</a>
+    <!-- ============ 03. SECTION 02: AUTOMATION COMPARISON MATRIX ============ -->
+    <section class="eng-section eng-section--light" id="matrix">
+      <div class="eng-container">
+        
+        <div>
+          <span class="eng-eyebrow">02 · PACKAGING LINE COMPARISON</span>
+          <h2 class="eng-title">
+            <span>Automation levels comparison matrix.</span>
+            <span class="eng-title-light">Throughput, manpower &amp; transit damage analysis.</span>
+          </h2>
+          <p class="eng-lead">
+            Evaluate the financial and operational impact of transitioning from manual yard stacking to Laxmi's fully automated packaging line.
+          </p>
+        </div>
+
+        <!-- Full-Width Dark-Header Engineering Matrix Table -->
+        <div class="eng-matrix-table-wrap">
+          <table class="eng-matrix-table">
+            <thead>
+              <tr>
+                <th>Operational Metric</th>
+                <th>Laxmi Fully-Automated Line</th>
+                <th>Semi-Automated Clamp Stacking</th>
+                <th>Manual Manual Labour Handling</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="eng-material-cell">
+                    <span class="eng-material-name">Line Packaging Throughput</span>
+                  </div>
+                </td>
+                <td><span class="eng-prop-badge">60 – 80 m³ / hr</span></td>
+                <td>25 – 35 m³ / hr</td>
+                <td>10 – 15 m³ / hr</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="eng-material-cell">
+                    <span class="eng-material-name">Required Yard Manpower</span>
+                  </div>
+                </td>
+                <td><span class="eng-prop-badge">1 Operator + 1 Forklift Driver</span></td>
+                <td>4 – 6 Workers</td>
+                <td>12 – 18 Manual Labourers</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="eng-material-cell">
+                    <span class="eng-material-name">Edge Chipping / Rejection Rate</span>
+                  </div>
+                </td>
+                <td><span class="eng-prop-badge">&lt; 0.5 % (Zero Defect Dispatch)</span></td>
+                <td>2.0 – 3.5 %</td>
+                <td>5.0 – 8.0 % (Heavy Breakage)</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="eng-material-cell">
+                    <span class="eng-material-name">Truck Loading Turnaround Time</span>
+                  </div>
+                </td>
+                <td><span class="eng-prop-badge">12 – 15 min / 40-Ton Truck</span></td>
+                <td>35 – 45 min / Truck</td>
+                <td>90 – 120 min / Truck</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="eng-material-cell">
+                    <span class="eng-material-name">Export &amp; Rainproof Packaging</span>
+                  </div>
+                </td>
+                <td><span class="eng-prop-badge">100% Stretch Hood + PET Strapping</span></td>
+                <td>Manual top cover film</td>
+                <td>Unprotected loose stacking</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Critical Benchmark Callout Box -->
+        <div class="eng-checkpoint-box">
+          <h4 class="eng-checkpoint-box__title">CRITICAL LOGISTICS BENCHMARK · LAYER DE-STICKING &amp; TRANSIT STABILITY</h4>
+          <p class="eng-checkpoint-box__text">
+            Post-autoclave AAC blocks exhibit slight hydrothermal surface adhesion at horizontal cut lines. Forcing cubes apart manually causes severe corner breakages. Laxmi's hydraulic de-sticking separator applies uniform multi-point expansion before servo stacking, guaranteeing zero-defect export-quality packs.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ 04. SECTION 03: TRANSIT STANDARDS & DISPATCH ============ -->
+    <section class="eng-section eng-section--white" id="dispatch">
+      <div class="eng-container">
+        
+        <div>
+          <span class="eng-eyebrow">03 · DISPATCH &amp; EXPORT STANDARDS</span>
+          <h2 class="eng-title">
+            <span>High-speed yard logistics.</span>
+            <span class="eng-title-light">Weather-proof protection &amp; instant truck loading.</span>
+          </h2>
+          <p class="eng-lead">
+            Properly palletized and strapped AAC blocks eliminate en-route shifting, transit damage disputes, and off-loading delays at construction sites.
+          </p>
+        </div>
+
+        <div class="eng-flow-table" style="border-top: 1px solid #e2e8f0; margin: 2.5rem 0;">
+          <div class="eng-flow-row">
+            <div class="eng-flow-num">01</div>
+            <div class="eng-flow-name">High-Tension Dual-Axis PET Strapping</div>
+            <div class="eng-flow-desc">Automated strapping heads apply 19mm embossed PET plastic straps with up to 3,500 N tension, securing the block cube firmly against pallet stringers.</div>
+          </div>
+          <div class="eng-flow-row">
+            <div class="eng-flow-num">02</div>
+            <div class="eng-flow-name">All-Weather Polyethylene Stretch Hooding</div>
+            <div class="eng-flow-desc">Tubular elastic stretch hood film covers the top and all four vertical faces, providing 100% UV protection and weatherproofing for outdoor storage.</div>
+          </div>
+          <div class="eng-flow-row">
+            <div class="eng-flow-num">03</div>
+            <div class="eng-flow-name">Instant Forklift Yard Logistics</div>
+            <div class="eng-flow-desc">Standardized 1200mm × 1000mm pallet footprints enable twin-forklift trucks to load a 40-ton trailer in under 15 minutes with zero physical handling.</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ 05. CHAPTER NAVIGATION FOOTER ============ -->
+    <section class="eng-chapter-nav-section">
+      <div class="eng-container">
+        <div class="eng-chapter-nav">
+          <a href="machinery-steam-boiler.html" class="eng-chapter-nav__btn eng-chapter-nav__btn--prev">
+            <span class="eng-chapter-nav__sub">← PREVIOUS SYSTEM</span>
+            <span class="eng-chapter-nav__title">System 07 · Industrial Steam Boiler</span>
+          </a>
+          <a href="machinery-equipment.html" class="eng-chapter-nav__btn eng-chapter-nav__btn--next">
+            <span class="eng-chapter-nav__sub">RETURN TO CATALOG →</span>
+            <span class="eng-chapter-nav__title">Plant Machinery Hub</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 06. STRATEGIC CONVERSION CTA BANNER ============ -->
+    <section class="eng-cta-banner" id="cta">
+      <div class="eng-cta-banner__inner">
+        <span class="eng-cta-banner__eyebrow">PACKAGING AUTOMATION CONSULTATION</span>
+        <h2 class="eng-cta-banner__title">
+          <span>Automate your finished goods handling</span>
+          <span class="eng-cta-banner__title-light">&amp; eliminate yard breakages.</span>
+        </h2>
+        <p class="eng-cta-banner__lead">
+          Connect with our packaging and logistics engineering specialists to integrate an automated de-sticking and palletizing line into your AAC plant layout.
+        </p>
+        <div class="eng-cta-banner__actions">
+          <a href="contact.html" class="eng-cta-banner__btn-white">
+            <span>Consult Packaging Engineers</span>
+            <span class="eng-cta-banner__btn-arrow">↗</span>
+          </a>
+          <a href="#overview" class="eng-cta-banner__link-top">
+            <span>Return to top ↑</span>
+          </a>
+        </div>
       </div>
     </section>
 
   </main>
 
+  <!-- Shared Global Footer Injection -->
   <div id="site-footer"></div>
+
   <script src="js/main.js"></script>
   <script src="js/navigation.js"></script>
   <script src="js/animations.js"></script>

@@ -99,24 +99,45 @@
 
     var links = railNav.querySelectorAll('.machinery-rail__link');
     var sections = document.querySelectorAll('section[id]');
+    var isTicking = false;
+    var sectionCache = [];
+
+    function updateSectionCache() {
+      sectionCache = [];
+      sections.forEach(function (sec) {
+        sectionCache.push({
+          id: sec.getAttribute('id'),
+          top: sec.offsetTop,
+          height: sec.offsetHeight
+        });
+      });
+    }
+
+    updateSectionCache();
+    window.addEventListener('resize', updateSectionCache, { passive: true });
 
     window.addEventListener('scroll', function () {
-      var scrollPos = window.scrollY + 200;
-      sections.forEach(function (sec) {
-        var top = sec.offsetTop;
-        var height = sec.offsetHeight;
-        var id = sec.getAttribute('id');
-        if (scrollPos >= top && scrollPos < top + height) {
-          links.forEach(function (link) {
-            if (link.getAttribute('href') === '#' + id) {
-              link.classList.add('is-active');
-            } else {
-              link.classList.remove('is-active');
+      if (!isTicking) {
+        window.requestAnimationFrame(function () {
+          var scrollPos = window.scrollY + 200;
+          var activeId = null;
+          for (var i = 0; i < sectionCache.length; i++) {
+            var item = sectionCache[i];
+            if (scrollPos >= item.top && scrollPos < item.top + item.height) {
+              activeId = item.id;
+              break;
             }
-          });
-        }
-      });
-    });
+          }
+          if (activeId) {
+            links.forEach(function (link) {
+              link.classList.toggle('is-active', link.getAttribute('href') === '#' + activeId);
+            });
+          }
+          isTicking = false;
+        });
+        isTicking = true;
+      }
+    }, { passive: true });
   }
 
   function initAll() {

@@ -3,8 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="AAC Steam Boiler & Energy Systems by Laxmi En-Fab. High-pressure steam generation (4 TPH to 12 TPH), fuel selection (Biomass/Coal/Gas), and automated condensate recovery." />
+  <meta name="description" content="AAC Steam Boiler & Utilities by Laxmi En-Fab. High-efficiency biomass, coal, briquette, and gas-fired steam boilers (4 TPH to 15 TPH), economizers, steam headers, and automated condensate heat recovery." />
+  <meta name="keywords" content="AAC steam boiler, IBR boiler, boiler TPH sizing, biomass boiler, briquette steam boiler, condensate recovery, Laxmi En-Fab" />
   <title>Industrial Steam Boiler for AAC Plants | Laxmi En-Fab</title>
+  
+  <!-- Google Fonts: Geist & Geist Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet" />
   
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/main.css" />
@@ -12,11 +18,26 @@
   <link rel="stylesheet" href="css/homepage.css" />
   <link rel="stylesheet" href="css/engineering.css" />
   <link rel="stylesheet" href="css/responsive.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Industrial Steam Boiler & Energy Systems for AAC Plants",
+    "description": "Technical sizing guide for matching steam boiler TPH with autoclave peak demand curves and heat recovery in AAC manufacturing.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Laxmi En-Fab Pvt. Ltd."
+    }
+  }
+  </script>
 </head>
 <body class="engineering-inner-page">
 
+  <!-- Shared Header -->
   <div id="site-header"></div>
 
+  <!-- Breadcrumb Navigation -->
   <nav class="site-breadcrumb" aria-label="Breadcrumb">
     <div class="site-breadcrumb__inner">
       <a href="index.html">Home</a>
@@ -25,64 +46,107 @@
       <span class="bc-sep">/</span>
       <a href="machinery-equipment.html">Plant Machinery</a>
       <span class="bc-sep">/</span>
-      <span class="bc-current">Industrial Steam Boiler</span>
+      <span class="bc-current">System 07 · Industrial Steam Boiler</span>
+    </div>
+  </nav>
+
+  <!-- Sticky In-Page Sub-Navigation Strip -->
+  <nav class="eng-nav-strip" aria-label="System 07 Navigation">
+    <div class="eng-nav-strip__inner">
+      <a href="#overview" class="eng-nav-btn active"><span class="eng-nav-num">01</span> Overview</a>
+      <a href="#matrix" class="eng-nav-btn"><span class="eng-nav-num">02</span> Sizing Matrix</a>
+      <a href="#recovery" class="eng-nav-btn"><span class="eng-nav-num">03</span> Heat Recovery</a>
+      <a href="#utilities" class="eng-nav-btn"><span class="eng-nav-num">04</span> Water Treatment</a>
+      <a href="#cta" class="eng-nav-btn"><span class="eng-nav-num">05</span> Boiler Consultation</a>
     </div>
   </nav>
 
   <main id="main-content">
 
-    <section class="eng-hero">
-      <div class="eng-hero__inner">
-        <div class="eng-hero__content">
-          <div class="eng-badge">SYSTEM 07 · STEAM &amp; UTILITIES</div>
-          <h1 class="eng-hero__title">
-            AAC Industrial <span class="highlight">Steam Boiler</span> Systems
+    <!-- ============ 01. HERO SECTION (EDITORIAL FULL SCREEN IMAGE BACKGROUND) ============ -->
+    <section class="editorial-hero editorial-hero--light is-loaded" id="overview" aria-label="Industrial Steam Boiler Overview">
+      <div class="editorial-hero__media" aria-hidden="true">
+        <div class="editorial-hero__video-wrap">
+          <img
+            class="editorial-hero__poster"
+            src="assets/images/engineering/machinery-steam-boiler.png"
+            alt="AAC Industrial Steam Boiler House and Utilities"
+            fetchpriority="high"
+          />
+        </div>
+        <div class="editorial-hero__overlay"></div>
+      </div>
+
+      <div class="editorial-hero__inner">
+        <div class="editorial-hero__content">
+          <span class="editorial-hero__eyebrow">SYSTEM 07 · STEAM &amp; UTILITIES</span>
+          <h1 class="editorial-hero__title">
+            <span>AAC Industrial</span>
+            <span class="editorial-hero__title-light">Steam Boiler Systems.</span>
           </h1>
-          <p class="eng-hero__lead">
-            High-efficiency biomass, coal, briquette, and gas-fired steam boilers (4 TPH to 12 TPH) engineered to deliver steady 16–18 bar saturated steam matched with autoclave peak demand curves.
+          <p class="editorial-hero__sub">
+            High-efficiency multi-fuel biomass, coal, briquette, and gas-fired steam boilers (4 TPH to 15 TPH) engineered to deliver steady 16–18 bar saturated steam matched with autoclave peak demand curves and automated condensate heat recovery.
           </p>
 
-          <div class="eng-hero__stats">
-            <div class="eng-stat-box">
-              <div class="eng-stat-box__val">4–12 <span>TPH</span></div>
-              <div class="eng-stat-box__lbl">Boiler Capacity Range</div>
-            </div>
-            <div class="eng-stat-box">
-              <div class="eng-stat-box__val">17.5 <span>kg/cm²</span></div>
-              <div class="eng-stat-box__lbl">Working Steam Pressure</div>
-            </div>
-            <div class="eng-stat-box">
-              <div class="eng-stat-box__val">82–88 <span>%</span></div>
-              <div class="eng-stat-box__lbl">Thermal Efficiency</div>
-            </div>
+          <div class="editorial-hero__actions">
+            <a href="#matrix" class="editorial-hero__btn-dark">
+              <span>Explore Technical Specs</span>
+              <span class="editorial-hero__btn-arrow">↓</span>
+            </a>
+            <a href="contact.html" class="editorial-hero__link-dark">
+              <span>Consult Boiler Engineers</span>
+              <span class="editorial-hero__link-arrow">↗</span>
+            </a>
           </div>
         </div>
+      </div>
 
-        <div class="eng-hero__visual">
-          <div class="eng-hero__visual-card">
-            <img src="assets/images/engineering/machinery-steam-boiler.png" alt="AAC Industrial Steam Boiler" />
-            <div class="eng-hero__visual-caption">
-              <span><strong>HIGH-EFFICIENCY STEAM GENERATION</strong> · CONDENSATE RECOVERY</span>
-              <span style="color:#e6a822;font-family:monospace;font-weight:700;">IBR BOILER</span>
-            </div>
-          </div>
+      <div class="editorial-hero__corner-caption" aria-hidden="true">
+        <span class="editorial-hero__corner-title">AAC Plant Machinery · System 07</span>
+        <span class="editorial-hero__corner-sub">IBR High-Pressure Steam House &amp; Energy Loop</span>
+      </div>
+    </section>
+
+    <!-- ============ DEDICATED SPECIFICATIONS & STATS STRIP BELOW HERO ============ -->
+    <section class="eng-stats-strip" aria-label="Key Steam Boiler Specifications">
+      <div class="eng-stats-strip__inner">
+        <div class="eng-stat-card">
+          <div class="eng-stat-card__val">4–15 <span>TPH</span></div>
+          <div class="eng-stat-card__lbl">Steam Output Range</div>
+        </div>
+        <div class="eng-stat-card">
+          <div class="eng-stat-card__val">17.5 <span>bar</span></div>
+          <div class="eng-stat-card__lbl">Working Steam Pressure</div>
+        </div>
+        <div class="eng-stat-card">
+          <div class="eng-stat-card__val">84–88 <span>%</span></div>
+          <div class="eng-stat-card__lbl">Thermal Efficiency</div>
+        </div>
+        <div class="eng-stat-card">
+          <div class="eng-stat-card__val">Multi-Fuel</div>
+          <div class="eng-stat-card__lbl">Briquette / Biomass / Gas</div>
         </div>
       </div>
     </section>
 
-    <section class="eng-section eng-section--white">
+    <!-- ============ 02. SECTION 01: BOILER SIZING & AUTOCLAVE MATCHING ============ -->
+    <section class="eng-section eng-section--white" id="matrix">
       <div class="eng-container">
         
-        <div class="eng-section-head">
-          <span class="eng-eyebrow">BOILER SIZING CALCULATION</span>
-          <h2 class="eng-section-title">Matching Boiler TPH with Autoclave Schedule</h2>
-          <p class="eng-section-desc">
-            An AAC boiler must be sized for peak concurrent steam demand during the initial pressurization phase of multiple autoclaves, not average steam consumption.
+        <div>
+          <span class="eng-eyebrow">01 · BOILER SIZING CALCULATION</span>
+          <h2 class="eng-title">
+            <span>Matching boiler TPH with autoclave schedules.</span>
+            <span class="eng-title-light">Sizing for peak pressurization ramps, not average consumption.</span>
+          </h2>
+          <p class="eng-lead">
+            An AAC steam boiler must be sized for concurrent peak steam demand during initial pressurization phases of multiple autoclaves. Sizing only for average hourly consumption leads to severe steam starvation.
           </p>
         </div>
 
-        <div class="eng-table-wrap" style="margin-bottom: 48px;">
-          <table class="eng-table">
+        <!-- Full-Width Dark-Header Engineering Matrix Table -->
+        <div class="eng-matrix-table-wrap">
+          <table class="eng-matrix-table">
             <thead>
               <tr>
                 <th>Target Plant Output</th>
@@ -94,56 +158,209 @@
             </thead>
             <tbody>
               <tr>
-                <td><strong>150 m³/Day</strong></td>
+                <td>
+                  <div class="eng-material-cell">
+                    <span class="eng-material-name">150 m³ / Day</span>
+                  </div>
+                </td>
                 <td>2 Units (Ø2.0m × 21m)</td>
-                <td>~2.5 – 3.0 Tons/hr</td>
-                <td><strong>3.5 – 4.0 TPH</strong></td>
-                <td>Condensate return saves 12–15% fuel</td>
+                <td>~2.5 – 3.0 Tons / hr</td>
+                <td><span class="eng-prop-badge">3.5 – 4.0 TPH (17.5 bar)</span></td>
+                <td><span class="eng-qc-tag">Condensate return saves 12–15% fuel</span></td>
               </tr>
               <tr>
-                <td><strong>300 m³/Day</strong></td>
+                <td>
+                  <div class="eng-material-cell">
+                    <span class="eng-material-name">300 m³ / Day</span>
+                  </div>
+                </td>
                 <td>4 Units (Ø2.0m × 31m)</td>
-                <td>~4.5 – 5.5 Tons/hr</td>
-                <td><strong>6.0 TPH</strong></td>
-                <td>Air pre-heater + economizer saves 20% fuel</td>
+                <td>~4.5 – 5.5 Tons / hr</td>
+                <td><span class="eng-prop-badge">6.0 TPH (17.5 bar)</span></td>
+                <td><span class="eng-qc-tag">Air pre-heater + economizer saves 20% fuel</span></td>
               </tr>
               <tr>
-                <td><strong>600 m³/Day</strong></td>
+                <td>
+                  <div class="eng-material-cell">
+                    <span class="eng-material-name">600 m³ / Day</span>
+                  </div>
+                </td>
                 <td>6 Units (Ø2.5m × 31m)</td>
-                <td>~7.5 – 9.0 Tons/hr</td>
-                <td><strong>10.0 TPH</strong></td>
-                <td>Inter-autoclave steam transfer reduces 25% peak demand</td>
+                <td>~7.5 – 9.0 Tons / hr</td>
+                <td><span class="eng-prop-badge">10.0 TPH (17.5 bar)</span></td>
+                <td><span class="eng-qc-tag">Inter-autoclave steam transfer reduces 25% peak demand</span></td>
               </tr>
               <tr>
-                <td><strong>1,000+ m³/Day</strong></td>
+                <td>
+                  <div class="eng-material-cell">
+                    <span class="eng-material-name">1,000+ m³ / Day</span>
+                  </div>
+                </td>
                 <td>8–10 Units (Ø2.5m × 35m)</td>
-                <td>~11.0 – 14.0 Tons/hr</td>
-                <td><strong>12.0 – 15.0 TPH</strong></td>
-                <td>Dual-boiler synchronized header configuration</td>
+                <td>~11.0 – 14.0 Tons / hr</td>
+                <td><span class="eng-prop-badge">12.0 – 15.0 TPH (Dual-Header)</span></td>
+                <td><span class="eng-qc-tag">Dual-boiler synchronized header configuration</span></td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid #e2e8f0; padding-top:32px;">
-          <a href="machinery-autoclave.html" class="eng-pillar-card__link">← Previous: AAC Autoclaves</a>
-          <a href="machinery-auto-palletizing.html" class="eng-btn-gold">Next: Auto Palletizing Line →</a>
+        <!-- Critical Benchmark Callout Box -->
+        <div class="eng-checkpoint-box">
+          <h4 class="eng-checkpoint-box__title">CRITICAL PROCESS BENCHMARK · STEAM PRESSURE &amp; TOBERMORITE SYNTHESIS</h4>
+          <p class="eng-checkpoint-box__text">
+            Sizing a boiler for average hourly steam consumption causes acute steam starvation when multiple autoclaves enter concurrent pressurization ramps. Saturated steam pressure dropping below $10\text{ bar}$ prevents complete tobermorite crystal synthesis, leading to high block drying shrinkage and sub-par compressive strength.
+          </p>
         </div>
 
       </div>
     </section>
 
-    <section class="eng-cta">
-      <div class="eng-cta__inner">
-        <h2 class="eng-cta__title">Optimize Your Steam Consumption &amp; Fuel Cost</h2>
-        <p class="eng-cta__text">Laxmi En-Fab designs complete boiler houses with steam headers, condensate return loops, and water softening plants.</p>
-        <a href="contact.html" class="eng-btn-gold">Consult Boiler Engineers →</a>
+    <!-- ============ 03. SECTION 02: HEAT RECOVERY & THERMAL ARCHITECTURE ============ -->
+    <section class="eng-section eng-section--light" id="recovery">
+      <div class="eng-container">
+        
+        <div>
+          <span class="eng-eyebrow">02 · ENERGY RECOVERY &amp; THERMAL DESIGN</span>
+          <h2 class="eng-title">
+            <span>Closed-loop thermal efficiency.</span>
+            <span class="eng-title-light">Flue gas economizers &amp; high-pressure headers.</span>
+          </h2>
+          <p class="eng-lead">
+            Laxmi boiler houses integrate advanced thermal energy recovery systems that capture flue gas waste heat and return 85°C boiler feedwater, slashing recurring fuel expenditure.
+          </p>
+        </div>
+
+        <!-- Contiguous Swiss Architectural Cards -->
+        <div class="eng-arch-grid" style="grid-template-columns: repeat(3, 1fr); margin: 2.5rem 0;">
+          
+          <div class="eng-arch-col">
+            <div>
+              <span class="eng-arch-num">FEATURE 01</span>
+              <h3 class="eng-arch-name">Flue Gas Economizer</h3>
+              <p class="eng-arch-desc">
+                Heavy-duty finned-tube economizer extracts residual heat from 280°C flue gases, pre-heating boiler feed water to 80°C–85°C and raising overall thermal efficiency to 88%.
+              </p>
+            </div>
+            <div class="eng-arch-link">
+              <span>Feedwater Pre-Heating</span>
+              <span class="eng-arch-arrow">↗</span>
+            </div>
+          </div>
+
+          <div class="eng-arch-col">
+            <div>
+              <span class="eng-arch-num">FEATURE 02</span>
+              <h3 class="eng-arch-name">High-Pressure Steam Header</h3>
+              <p class="eng-arch-desc">
+                Centralized distribution header fitted with pneumatic pressure-reducing valves (PRDS) and automated isolation dampers to route steam to each autoclave line independently.
+              </p>
+            </div>
+            <div class="eng-arch-link">
+              <span>PRDS Manifold Control</span>
+              <span class="eng-arch-arrow">↗</span>
+            </div>
+          </div>
+
+          <div class="eng-arch-col">
+            <div>
+              <span class="eng-arch-num">FEATURE 03</span>
+              <h3 class="eng-arch-name">Condensate Return Sump</h3>
+              <p class="eng-arch-desc">
+                Pressurized condensate recovery tanks return high-temperature distilled water directly to the deaerator tank, reducing both fuel usage and fresh water chemical treatment costs.
+              </p>
+            </div>
+            <div class="eng-arch-link">
+              <span>Closed-Loop Condensate</span>
+              <span class="eng-arch-arrow">↗</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ 04. SECTION 03: WATER TREATMENT & AUXILIARIES ============ -->
+    <section class="eng-section eng-section--white" id="utilities">
+      <div class="eng-container">
+        
+        <div>
+          <span class="eng-eyebrow">03 · UTILITIES &amp; WATER TREATMENT</span>
+          <h2 class="eng-title">
+            <span>Boiler feed water conditioning.</span>
+            <span class="eng-title-light">Preventing scaling &amp; tube corrosion.</span>
+          </h2>
+          <p class="eng-lead">
+            Raw groundwater contains dissolved calcium and magnesium salts that rapidly cause boiler scale and tube burnout if not demineralized.
+          </p>
+        </div>
+
+        <div class="eng-flow-table" style="border-top: 1px solid #e2e8f0; margin: 2.5rem 0;">
+          <div class="eng-flow-row">
+            <div class="eng-flow-num">01</div>
+            <div class="eng-flow-name">Multi-Bed Industrial Water Softening</div>
+            <div class="eng-flow-desc">Dual ion-exchange softening resin beds reduce raw water total hardness to &lt;5 ppm CaCO3, ensuring zero scale formation inside boiler tubes.</div>
+          </div>
+          <div class="eng-flow-row">
+            <div class="eng-flow-num">02</div>
+            <div class="eng-flow-name">Atmospheric Deaerator Tank</div>
+            <div class="eng-flow-desc">Thermal deaeration removes dissolved oxygen ($O_2$) and carbon dioxide ($CO_2$) from feedwater, eliminating pitting corrosion in boiler shells and steam lines.</div>
+          </div>
+          <div class="eng-flow-row">
+            <div class="eng-flow-num">03</div>
+            <div class="eng-flow-name">Automatic Continuous Blowdown System</div>
+            <div class="eng-flow-desc">Conductivity-controlled automatic blowdown valves vent concentrated TDS sludge while recovering thermal energy via a flash steam heat exchanger.</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ 05. CHAPTER NAVIGATION FOOTER ============ -->
+    <section class="eng-chapter-nav-section">
+      <div class="eng-container">
+        <div class="eng-chapter-nav">
+          <a href="machinery-autoclave.html" class="eng-chapter-nav__btn eng-chapter-nav__btn--prev">
+            <span class="eng-chapter-nav__sub">← PREVIOUS SYSTEM</span>
+            <span class="eng-chapter-nav__title">System 06 · High-Pressure Autoclaves</span>
+          </a>
+          <a href="machinery-auto-palletizing.html" class="eng-chapter-nav__btn eng-chapter-nav__btn--next">
+            <span class="eng-chapter-nav__sub">NEXT MACHINERY SYSTEM →</span>
+            <span class="eng-chapter-nav__title">System 08 · Auto Palletizing &amp; Packing</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 06. STRATEGIC CONVERSION CTA BANNER ============ -->
+    <section class="eng-cta-banner" id="cta">
+      <div class="eng-cta-banner__inner">
+        <span class="eng-cta-banner__eyebrow">BOILER SIZING &amp; FUEL EFFICIENCY CONSULTATION</span>
+        <h2 class="eng-cta-banner__title">
+          <span>Optimize boiler TPH</span>
+          <span class="eng-cta-banner__title-light">&amp; slash monthly steam fuel cost.</span>
+        </h2>
+        <p class="eng-cta-banner__lead">
+          Laxmi En-Fab designs complete turnkey boiler houses with steam headers, condensate return loops, economizers, and water softening systems.
+        </p>
+        <div class="eng-cta-banner__actions">
+          <a href="contact.html" class="eng-cta-banner__btn-white">
+            <span>Consult Boiler Engineers</span>
+            <span class="eng-cta-banner__btn-arrow">↗</span>
+          </a>
+          <a href="#overview" class="eng-cta-banner__link-top">
+            <span>Return to top ↑</span>
+          </a>
+        </div>
       </div>
     </section>
 
   </main>
 
+  <!-- Shared Global Footer Injection -->
   <div id="site-footer"></div>
+
   <script src="js/main.js"></script>
   <script src="js/navigation.js"></script>
   <script src="js/animations.js"></script>
