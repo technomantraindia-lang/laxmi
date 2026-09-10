@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore established AAC plants and running projects manufactured and commissioned by Laxmi En-Fab Pvt. Ltd. 150+ turnkey installations across 18+ states in India and global export markets." />
+  <meta name="keywords" content="AAC plant projects, established AAC plants, running AAC plants India, Laxmi En-Fab installations, turnkey AAC plants, AAC block plant portfolio, ALC panel projects" />
+  <title>Established AAC Plants &amp; Running Projects | Laxmi En-Fab</title>
+
+  <!-- Google Fonts: Geist & Geist Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/homepage.css" />
+  <link rel="stylesheet" href="css/engineering.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <!-- Structured Data / JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Established AAC Plants & Running Projects — Laxmi En-Fab Pvt. Ltd.",
+    "description": "Verified industrial portfolio of 150+ turnkey AAC Block, ALC Panel, and Dry Mix Mortar plants installed across India and international markets.",
+    "url": "https://www.laxmienfab.com/projects.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Laxmi En-Fab Pvt. Ltd.",
+      "telephone": "+91-8980800607",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "48 Block A, 2nd Floor, Pelican Complex, Opp Odhav BRTS, GIDC, Odhav",
+        "addressLocality": "Ahmedabad",
+        "addressRegion": "Gujarat",
+        "postalCode": "382415",
+        "addressCountry": "IN"
+      }
+    }
+  }
+  </script>
+
+  <style>
+    /* Filter Pill Strip */
+    .project-filter-strip {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      margin: 2rem 0 2.5rem;
+    }
+
+    .project-filter-btn {
+      padding: 0.6rem 1.25rem;
+      border-radius: 9999px;
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      font-family: var(--font-geist), Arial, sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #475569;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .project-filter-btn:hover {
+      background: #e2e8f0;
+      color: #07172c;
+    }
+
+    .project-filter-btn.is-active {
+      background: #07172c;
+      color: #ffffff;
+      border-color: #07172c;
+      box-shadow: 0 4px 12px rgba(7, 23, 44, 0.15);
+    }
+
+    /* Project Cards Grid */
+    .project-card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .project-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(7, 23, 44, 0.03);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-3px);
+      border-color: #0b3f78;
+      box-shadow: 0 12px 30px rgba(7, 23, 44, 0.08);
+    }
+
+    .project-card__head {
+      padding: 1.75rem 2rem 1.25rem;
+      border-bottom: 1px solid #f1f5f9;
+      background: #ffffff;
+    }
+
+    .project-card__meta-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+    }
+
+    .project-card__location {
+      font-family: var(--font-geist-mono), monospace;
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: #0284c7;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .project-card__year {
+      font-family: var(--font-geist-mono), monospace;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #64748b;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    .project-card__title {
+      font-family: var(--font-geist), Arial, sans-serif;
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #07172c;
+      margin: 0 0 0.5rem 0;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+    }
+
+    .project-card__body {
+      padding: 1.5rem 2rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .project-card__specs-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.25rem;
+    }
+
+    .project-card__specs-table tr {
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .project-card__specs-table tr:last-child {
+      border-bottom: none;
+    }
+
+    .project-card__specs-table td {
+      padding: 0.5rem 0;
+      font-size: 0.85rem;
+      line-height: 1.4;
+    }
+
+    .project-card__specs-lbl {
+      color: #64748b;
+      font-weight: 600;
+      width: 42%;
+    }
+
+    .project-card__specs-val {
+      color: #07172c;
+      font-weight: 700;
+      font-family: var(--font-geist-mono), monospace;
+    }
+
+    .project-card__highlight {
+      background: #f8fafc;
+      border-left: 3px solid #0284c7;
+      padding: 0.75rem 1rem;
+      border-radius: 0 6px 6px 0;
+      font-size: 0.84rem;
+      color: #334155;
+      line-height: 1.5;
+      margin-bottom: 1.25rem;
+    }
+
+    .project-card__foot {
+      padding: 1.25rem 2rem;
+      background: #f8fafc;
+      border-top: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .project-card__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-family: var(--font-geist), Arial, sans-serif;
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: #07172c;
+      text-decoration: none;
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    .project-card__cta:hover {
+      color: #0284c7;
+      transform: translateX(2px);
+    }
+
+    .project-card__verified-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-family: var(--font-geist-mono), monospace;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #10b981;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    @media (max-width: 992px) {
+      .project-card-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body class="engineering-inner-page projects-page">
+
+  <!-- Shared Global Header Injection -->
+  <div id="site-header"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <nav class="site-breadcrumb" aria-label="Breadcrumb">
+    <div class="site-breadcrumb__inner">
+      <a href="index.html">Home</a>
+      <span class="bc-sep">/</span>
+      <a href="why-laxmi.html">Why Laxmi</a>
+      <span class="bc-sep">/</span>
+      <span class="bc-current">Established Plants &amp; Projects</span>
+    </div>
+  </nav>
+
+  <!-- Sticky In-Page Sub-Navigation Strip -->
+  <nav class="eng-nav-strip" aria-label="Projects Navigation">
+    <div class="eng-nav-strip__inner">
+      <a href="#plants-showcase" class="eng-nav-btn active"><span class="eng-nav-num">01</span> Plant Showcase</a>
+      <a href="#capacities" class="eng-nav-btn"><span class="eng-nav-num">02</span> Capacity Tiers</a>
+      <a href="#geography" class="eng-nav-btn"><span class="eng-nav-num">03</span> Geographic Reach</a>
+      <a href="#specialized" class="eng-nav-btn"><span class="eng-nav-num">04</span> ALC &amp; Mortar Lines</a>
+      <a href="#visit" class="eng-nav-btn"><span class="eng-nav-num">05</span> Live Plant Tour</a>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- ============ SECTION 01 — HERO (HIGH-KEY EDITORIAL 1500PX) ============ -->
+    <section class="editorial-hero editorial-hero--light is-loaded" id="overview" aria-label="Established AAC Plants Overview">
+      
+      <!-- Background Full-Bleed Plant Visual & Overlay -->
+      <div class="editorial-hero__media" aria-hidden="true">
+        <div class="editorial-hero__video-wrap">
+          <img
+            class="editorial-hero__poster"
+            src="assets/images/production-process.png"
+            alt="Laxmi En-Fab Established Turnkey AAC Plant Installations"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </div>
+        <div class="editorial-hero__overlay"></div>
+      </div>
+
+      <!-- Hero Main Content -->
+      <div class="editorial-hero__inner">
+        <div class="editorial-hero__content">
+          <span class="editorial-hero__eyebrow">PROVEN INDUSTRIAL FOOTPRINT · 150+ TURNKEY INSTALLATIONS</span>
+          <h1 class="editorial-hero__title">
+            <span>Established AAC plants.</span>
+            <span class="editorial-hero__title-light">150+ running plants across 18+ states.</span>
+          </h1>
+          <p class="editorial-hero__sub">
+            Explore Laxmi En-Fab's verified turnkey plant installations across India and international export markets. From 150 m³/day single-autoclave units to 1500 m³/day fully automated mega-complexes and reinforced ALC structural panel lines.
+          </p>
+          <div class="editorial-hero__actions">
+            <a href="#plants-showcase" class="editorial-hero__btn-dark">
+              <span>Explore Running Plants</span>
+              <span class="editorial-hero__btn-arrow">↓</span>
+            </a>
+            <a href="contact.html" class="editorial-hero__link-dark">
+              <span>Schedule Live Plant Visit</span>
+              <span class="editorial-hero__link-arrow">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="editorial-hero__corner-caption" aria-hidden="true">
+        <span class="editorial-hero__corner-title">Established AAC Plants &amp; Projects</span>
+        <span class="editorial-hero__corner-sub">150+ Turnkey Units / 18+ Indian States / Global Exports</span>
+      </div>
+
+    </section>
+
+    <!-- ============ SECTION 02 — DEDICATED SPECIFICATIONS & STATS STRIP ============ -->
+    <section class="eng-stats-strip" aria-label="Laxmi En-Fab Plant Benchmarks">
+      <div class="eng-stats-strip__inner">
+        <div class="eng-stat-card">
+          <div class="eng-stat-card__val">150+ <span>Plants</span></div>
+          <div class="eng-stat-card__lbl">Operational Turnkey Installations</div>
+        </div>
+        <div class="eng-stat-card">
+          <div class="eng-stat-card__val">18+ <span>States</span></div>
+          <div class="eng-stat-card__lbl">Pan-India &amp; Global Footprint</div>
+        </div>
+        <div class="eng-stat-card">
+          <div class="eng-stat-card__val">99.2% <span>Uptime</span></div>
+          <div class="eng-stat-card__lbl">Average Operational Reliability</div>
+        </div>
+        <div class="eng-stat-card">
+          <div class="eng-stat-card__val">12M+ <span>m³/yr</span></div>
+          <div class="eng-stat-card__lbl">Cumulative Production Output</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 03 — INTERACTIVE PLANT SHOWCASE ============ -->
+    <section class="eng-section eng-section--white" id="plants-showcase">
+      <div class="eng-container">
+        
+        <div>
+          <span class="eng-eyebrow">01 · PROVEN RUNNING PLANTS</span>
+          <h2 class="eng-title">
+            <span>Verified turnkey projects.</span>
+            <span class="eng-title-light">Engineering running at peak daily capacity.</span>
+          </h2>
+          <p class="eng-lead">
+            Every plant in our portfolio was designed, fabricated, installed, and commissioned by Laxmi En-Fab's in-house engineering team with single-source accountability.
+          </p>
+        </div>
+
+        <!-- Filter Pill Strip -->
+        <div class="project-filter-strip" id="project-filters">
+          <button type="button" class="project-filter-btn is-active" data-filter="all">All Running Plants (150+)</button>
+          <button type="button" class="project-filter-btn" data-filter="mega">Mega Plants (600–1500 m³/day)</button>
+          <button type="button" class="project-filter-btn" data-filter="standard">Standard Plants (300–600 m³/day)</button>
+          <button type="button" class="project-filter-btn" data-filter="entry">Regional Units (150–300 m³/day)</button>
+          <button type="button" class="project-filter-btn" data-filter="panel">Reinforced ALC Panel Lines</button>
+          <button type="button" class="project-filter-btn" data-filter="mortar">Dry Mix Mortar Units</button>
+        </div>
+
+        <!-- 2-Column Project Showcase Grid -->
+        <div class="project-card-grid" id="project-grid">
+          
+          <!-- Project 01 -->
+          <article class="project-card" data-category="mega">
+            <div class="project-card__head">
+              <div class="project-card__meta-top">
+                <span class="project-card__location">📍 WADA, MAHARASHTRA</span>
+                <span class="project-card__year">EST. 2020 · RUNNING</span>
+              </div>
+              <h3 class="project-card__title">Satyam Buildtech AAC Mega-Complex</h3>
+            </div>
+            <div class="project-card__body">
+              <table class="project-card__specs-table">
+                <tr>
+                  <td class="project-card__specs-lbl">Daily Capacity</td>
+                  <td class="project-card__specs-val">1000 m³/day (300,000 m³/year)</td>
+                </tr>
+                <tr>
+                  <td class="project-card__specs-lbl">Autoclave Fleet</td>
+                  <td class="project-card__specs-val">4x Autoclaves (Ø 2.5m x 38m, 17.5 bar)</td>
+                </tr>
+                <tr>
+                  <td class="project-card__specs-lbl">Cutting Machine</td>
+                  <td class="project-card__specs-val">2-Axis High-Frequency Wire Frame</td>
+                </tr>
+                <tr>
+                  <td class="project-card__specs-lbl">Boiler Setup</td>
+                  <td class="project-card__specs-val">10 TPH Multi-Fuel Steam Boiler</td>
+                </tr>
+              </table>
+              <div class="project-card__highlight">
+                <strong>Verified Result:</strong> Operating at 100% capacity utilization since commissioning with zero unplanned shutdowns. Supplies major Mumbai-MMR infrastructure projects.
+              </div>
+            </div>
+            <div class="project-card__foot">
+              <span class="project-card__verified-badge">✓ Verified Client Plant</span>
+              <a href="testimonial.html?id=1" class="project-card__cta">
+                <span>Read Full Case Study 01</span>
+                <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 02 -->
+          <article class="project-card" data-category="standard">
+            <div class="project-card__head">
+              <div class="project-card__meta-top">
+                <span class="project-card__location">📍 SURAT, GUJARAT</span>
+                <span class="project-card__year">EST. 2021 · RUNNING</span>
+              </div>
+              <h3 class="project-card__title">South Gujarat Turnkey AAC Facility</h3>
+            </div>
+            <div class="project-card__body">
+              <table class="project-card__specs-table">
+                <tr>
+                  <td class="project-card__specs-lbl">Daily Capacity</td>
+                  <td class="project-card__specs-val">600 m³/day (180,000 m³/year)</td>
+                </tr>
+                <tr>
+                  <td class="project-card__specs-lbl">Autoclave Fleet</td>
+                  <td class="project-card__specs-val">3x Autoclaves (Ø 2.5m x 32m)</td>
+                </tr>
+                <tr>
+                  <td class="project-card__specs-lbl">Tilting Crane</td>
+                  <td class="project-card__specs-val">90° Box-Girder Hydraulic Demoulding</td>
+                </tr>
+                <tr>
+                  <td class="project-card__specs-lbl">Commissioning</td>
+                  <td class="project-card__specs-val">Record 90 Days from Civil Handover</td>
+                </tr>
+              </table>
+              <div class="project-card__highlight">
+                <strong>Verified Result:</strong> Fast-track commissioning enabled the investor to achieve commercial break-even within 5 months of plant handover.
+              </div>
+            </div>
+            <div class="project-card__foot">
+              <span class="project-card__verified-badge">✓ Verified Client Plant</span>
+              <a href="testimonial.html?id=2" class="project-card__cta">
+                <span>Read Full Case Study 02</span>
+                <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 03 -->
+          <article class="project-card" data-category="standard">
+            <div class="project-card__head">
+              <div class="project-card__meta-top">
+                <span class="project-card__location">📍 JAIPUR / KOTA, RAJASTHAN</span>
+                <span class="project-card__year">EST. 2022 · RUNNING</span>
+              </div>
+              <h3 class="project-card__title">Rajasthan Heavy-Duty AAC Plant</h3>
+            </div>
+            <div class="project-card__body">
+              <table class="project-card__specs-table">
+                <tr>
+                  <td class="project-card__specs-lbl">Daily Capacity</td>
+                  <td class="project-card__specs-val">450 m³/day (135,000 m³/year)</td>
+                </tr>
+                <tr>
+                  <td class="project-card__specs-lbl">Raw Material</td>
+                  <td class="project-card__specs-val">100% Thermal Power Plant Fly Ash</td>
+                </tr>
+                <tr>
+                  <td class="project-card__specs-lbl">Cutting Precision</td>
+                  <td class="project-card__specs-val">±1.0 mm (EN 771-4 European Norm)</td>
+                </tr>
+                <tr>
+                  <td class="project-card__specs-lbl">Breakage Rate</td>
+                  <td class="project-card__specs-val">&lt; 0.3% Total Handling Breakage</td>
+                </tr>
+              </table>
+              <div class="project-card__highlight">
+                <strong>Verified Result:</strong> Extreme high-temperature desert operation maintained without cake deformation due to optimized pre-curing heat tunnel loops.
+              </div>
+            </div>
+            <div class="project-card__foot">
+              <span class="project-card__verified-badge">✓ Verified Client Plant</span>
+              <a href="testimonial.html?id=3" class="project-card__cta">
+                <span>Read Full Case Study 03</span>
+                <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 04 -->
+          <article class="project-card" data-category="mortar">
+            <div class="project-card__head">
+              <div class="project-card__meta-top">
+                <span class="project-card__location">📍 INDORE, MADHYA PRADESH</span>
+                <span class="project-card__year">EST. 2023 · RUNNING</span>
+              </div>
+              <h3 class="project-card__title">MP Integrated AAC &amp; Mortar Complex</h3>
+            </div>
+            <div class="project-card__body">
+              <table class="project-card__specs-table">
+                <tr>
+                  <td class="project-card__specs-lbl">AAC Block Capacity</td>
+                  <td class="project-card__specs-val">500 m³/day (150,000 m³/year)</td>
+                </tr>
+                <tr>
+                  <td class="project-card__specs-lbl">Dry Mortar Unit</td>
+                  <td class="project-card__specs-val">20 TPH Thin-Bed Jointing Adhesive</td>
+                </tr>
+                <tr>
+                  <td class="project-card__specs-lbl">Steam Heat Recovery</td>
+                  <td class="project-card__specs-val">Autoclave Blow-Down Heat Exchange</td>
+                </tr>
+                <tr>
+                  <td class="project-card__specs-lbl">Fuel Savings</td>
+                  <td class="project-card__specs-val">28% Steam Fuel Cost Reduction</td>
+                </tr>
+              </table>
+              <div class="project-card__highlight">
+                <strong>Verified Result:</strong> Bundled dry mix mortar unit generates 32% gross margins, supplying complete certified wall systems across Central India.
+              </div>
+            </div>
+            <div class="project-card__foot">
+              <span class="project-card__verified-badge">✓ Verified Client Plant</span>
+              <a href="testimonial.html?id=9" class="project-card__cta">
+                <span>Read Full Case Study 09</span>
+                <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 05 -->
+          <article class="project-card" data-category="panel">
+            <div class="project-card__head">
+              <div class="project-card__meta-top">
+                <span class="project-card__location">📍 BENGALURU, KARNATAKA</span>
+                <span class="project-card__year">EST. 2024 · RUNNING</span>
+              </div>
+              <h3 class="project-card__title">South India Reinforced ALC Panel Plant</h3>
+            </div>
+            <div class="project-card__body">
+              <table class="project-card__specs-table">
+                <tr>
+                  <td class="project-card__specs-lbl">Total Capacity</td>
+                  <td class="project-card__specs-val">600 m³/day Blocks + 150 m³/day ALC</td>
+                </tr>
+                <tr>
+                  <td class="project-card__specs-lbl">Panel Products</td>
+                  <td class="project-card__specs-val">Reinforced Wall, Floor &amp; Roof Panels</td>
+                </tr>
+                <tr>
+                  <td class="project-card__specs-lbl">Reinforcing Setup</td>
+                  <td class="project-card__specs-val">Automated Mesh Caging &amp; Slotted Track</td>
+                </tr>
+                <tr>
+                  <td class="project-card__specs-lbl">Investor Profile</td>
+                  <td class="project-card__specs-val">First-Time Manufacturing Investor</td>
+                </tr>
+              </table>
+              <div class="project-card__highlight">
+                <strong>Verified Result:</strong> Laxmi's end-to-end investor training, SOP manuals, and engineer deputation ensured full commercial run within 3 months.
+              </div>
+            </div>
+            <div class="project-card__foot">
+              <span class="project-card__verified-badge">✓ Verified Client Plant</span>
+              <a href="testimonial.html?id=10" class="project-card__cta">
+                <span>Read Full Case Study 10</span>
+                <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 06 -->
+          <article class="project-card" data-category="mega">
+            <div class="project-card__head">
+              <div class="project-card__meta-top">
+                <span class="project-card__location">📍 PANIPAT, HARYANA</span>
+                <span class="project-card__year">EST. 2021 (EXPANDED 2024)</span>
+              </div>
+              <h3 class="project-card__title">NCR Region Phase 2 Expansion Plant</h3>
+            </div>
+            <div class="project-card__body">
+              <table class="project-card__specs-table">
+                <tr>
+                  <td class="project-card__specs-lbl">Expanded Capacity</td>
+                  <td class="project-card__specs-val">800 m³/day Total Throughput</td>
+                </tr>
+                <tr>
+                  <td class="project-card__specs-lbl">Order Type</td>
+                  <td class="project-card__specs-val">100% Repeat Turnkey Order</td>
+                </tr>
+                <tr>
+                  <td class="project-card__specs-lbl">Automation</td>
+                  <td class="project-card__specs-val">Central SCADA PLC Synchronized</td>
+                </tr>
+                <tr>
+                  <td class="project-card__specs-lbl">Infrastructure</td>
+                  <td class="project-card__specs-val">Shared Silos &amp; Boiler Utility Loop</td>
+                </tr>
+              </table>
+              <div class="project-card__highlight">
+                <strong>Verified Result:</strong> Zero downtime during Phase 2 expansion tie-in. The investor seamlessly doubled capacity to meet surging Delhi-NCR demand.
+              </div>
+            </div>
+            <div class="project-card__foot">
+              <span class="project-card__verified-badge">✓ Verified Repeat Order</span>
+              <a href="testimonial.html?id=5" class="project-card__cta">
+                <span>Read Full Case Study 05</span>
+                <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 07 -->
+          <article class="project-card" data-category="standard">
+            <div class="project-card__head">
+              <div class="project-card__meta-top">
+                <span class="project-card__location">📍 HYDERABAD, TELANGANA</span>
+                <span class="project-card__year">EST. 2022 · RUNNING</span>
+              </div>
+              <h3 class="project-card__title">Telangana Fly Ash Optimization Unit</h3>
+            </div>
+            <div class="project-card__body">
+              <table class="project-card__specs-table">
+                <tr>
+                  <td class="project-card__specs-lbl">Daily Capacity</td>
+                  <td class="project-card__specs-val">400 m³/day (120,000 m³/year)</td>
+                </tr>
+                <tr>
+                  <td class="project-card__specs-lbl">Chemistry Optimization</td>
+                  <td class="project-card__specs-val">High-Carbon Fly Ash Formula Tuning</td>
+                </tr>
+                <tr>
+                  <td class="project-card__specs-lbl">Cycle Speedup</td>
+                  <td class="project-card__specs-val">+25% Pre-Curing Cycle Gain</td>
+                </tr>
+                <tr>
+                  <td class="project-card__specs-lbl">Compressive Strength</td>
+                  <td class="project-card__specs-val">Grade 1 IS 2185 (Part 3) Certified</td>
+                </tr>
+              </table>
+              <div class="project-card__highlight">
+                <strong>Verified Result:</strong> Ongoing post-commissioning chemical advisory from Laxmi process engineers reduced chemical additive costs by 18%.
+              </div>
+            </div>
+            <div class="project-card__foot">
+              <span class="project-card__verified-badge">✓ Verified Client Plant</span>
+              <a href="testimonial.html?id=7" class="project-card__cta">
+                <span>Read Full Case Study 07</span>
+                <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 08 -->
+          <article class="project-card" data-category="entry">
+            <div class="project-card__head">
+              <div class="project-card__meta-top">
+                <span class="project-card__location">📍 LUDHIANA, PUNJAB</span>
+                <span class="project-card__year">EST. 2023 · RUNNING</span>
+              </div>
+              <h3 class="project-card__title">Punjab Premium Masonry AAC Unit</h3>
+            </div>
+            <div class="project-card__body">
+              <table class="project-card__specs-table">
+                <tr>
+                  <td class="project-card__specs-lbl">Daily Capacity</td>
+                  <td class="project-card__specs-val">300 m³/day (90,000 m³/year)</td>
+                </tr>
+                <tr>
+                  <td class="project-card__specs-lbl">Autoclave Count</td>
+                  <td class="project-card__specs-val">2x Autoclaves (Ø 2.5m x 32m)</td>
+                </tr>
+                <tr>
+                  <td class="project-card__specs-lbl">Target Market</td>
+                  <td class="project-card__specs-val">Commercial High-Rises &amp; Industrial</td>
+                </tr>
+                <tr>
+                  <td class="project-card__specs-lbl">Tolerance Norm</td>
+                  <td class="project-card__specs-val">±1.0 mm Razor-Sharp Edges</td>
+                </tr>
+              </table>
+              <div class="project-card__highlight">
+                <strong>Verified Result:</strong> Precision wire cutting technology enables client to sell at a 10% market premium over competitors using local wire frames.
+              </div>
+            </div>
+            <div class="project-card__foot">
+              <span class="project-card__verified-badge">✓ Verified Client Plant</span>
+              <a href="testimonial.html?id=8" class="project-card__cta">
+                <span>Read Full Case Study 08</span>
+                <span>→</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ SECTION 04 — CAPACITY TIER CLASSIFICATION ============ -->
+    <section class="eng-section eng-section--light" id="capacities">
+      <div class="eng-container">
+        
+        <div>
+          <span class="eng-eyebrow">02 · CAPACITY CLASSIFICATION</span>
+          <h2 class="eng-title">
+            <span>Scalable plant tiers.</span>
+            <span class="eng-title-light">Sized for your capital and regional market demand.</span>
+          </h2>
+          <p class="eng-lead">
+            Whether starting as a first-time manufacturing investor or establishing an institutional-scale building materials hub, Laxmi En-Fab configures the optimal equipment footprint.
+          </p>
+        </div>
+
+        <!-- 3 Contiguous Swiss Architectural Cards -->
+        <div class="eng-arch-grid" style="grid-template-columns: repeat(3, 1fr); margin: 2.5rem 0 1.5rem;">
+          
+          <div class="eng-arch-col">
+            <div>
+              <span class="eng-arch-num">TIER 01</span>
+              <h3 class="eng-arch-name">Regional Entry Plant (150–300 m³/day)</h3>
+              <p class="eng-arch-desc">
+                Single autoclave unit ideal for emerging tier-2/3 cities. Requires 2–3 acres land, 3–4 TPH boiler, and modular layout ready for Phase 2 dual-autoclave expansion without stopping production.
+              </p>
+            </div>
+            <div class="eng-arch-link">
+              <span>Capex: ₹8–14 Cr</span>
+              <span class="eng-arch-arrow">↗</span>
+            </div>
+          </div>
+
+          <div class="eng-arch-col">
+            <div>
+              <span class="eng-arch-num">TIER 02</span>
+              <h3 class="eng-arch-name">Commercial Standard Plant (300–600 m³/day)</h3>
+              <p class="eng-arch-desc">
+                Dual autoclave setup representing India's most popular commercial capacity. Balances optimum capex investment, 3–5 acres land, high-speed cutting, and rapid 2.5-year capital payback.
+              </p>
+            </div>
+            <div class="eng-arch-link">
+              <span>Capex: ₹15–24 Cr</span>
+              <span class="eng-arch-arrow">↗</span>
+            </div>
+          </div>
+
+          <div class="eng-arch-col">
+            <div>
+              <span class="eng-arch-num">TIER 03</span>
+              <h3 class="eng-arch-name">Industrial Mega-Complex (600–1500 m³/day)</h3>
+              <p class="eng-arch-desc">
+                3–6 autoclave mega-complex with automated robotic palletizing, continuous cutting lines, SCADA central control room, and optional co-located ALC structural panel manufacturing.
+              </p>
+            </div>
+            <div class="eng-arch-link">
+              <span>Capex: ₹25–50+ Cr</span>
+              <span class="eng-arch-arrow">↗</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ SECTION 05 — PAN-INDIA & GLOBAL REACH ============ -->
+    <section class="eng-section eng-section--white" id="geography">
+      <div class="eng-container">
+        
+        <div>
+          <span class="eng-eyebrow">03 · GEOGRAPHIC REACH</span>
+          <h2 class="eng-title">
+            <span>Operational footprint across 18+ states</span>
+            <span class="eng-title-light">&amp; turnkey overseas exports.</span>
+          </h2>
+          <p class="eng-lead">
+            Our plants operate across every climatic zone in India—from the extreme desert temperatures of Rajasthan to high-humidity coastal zones of Maharashtra and Gujarat.
+          </p>
+        </div>
+
+        <!-- 4-Column Geographic Matrix Grid -->
+        <div class="eng-arch-grid" style="grid-template-columns: repeat(4, 1fr); margin: 2.5rem 0 2rem;">
+          
+          <div class="eng-arch-col">
+            <div>
+              <span class="eng-arch-num">REGION 01</span>
+              <h3 class="eng-arch-name">Western India</h3>
+              <p class="eng-arch-desc">
+                <strong>Gujarat &amp; Maharashtra:</strong> 55+ Plants operating across Surat, Ahmedabad, Vadodara, Wada, Pune, Nagpur, and Nashik.
+              </p>
+            </div>
+            <div class="eng-arch-link">
+              <span>55+ Plants Installed</span>
+              <span class="eng-arch-arrow">↗</span>
+            </div>
+          </div>
+
+          <div class="eng-arch-col">
+            <div>
+              <span class="eng-arch-num">REGION 02</span>
+              <h3 class="eng-arch-name">Northern &amp; NCR</h3>
+              <p class="eng-arch-desc">
+                <strong>Rajasthan, Haryana, Punjab &amp; UP:</strong> 40+ Plants across Jaipur, Panipat, Ludhiana, Kanpur, and Greater Noida.
+              </p>
+            </div>
+            <div class="eng-arch-link">
+              <span>40+ Plants Installed</span>
+              <span class="eng-arch-arrow">↗</span>
+            </div>
+          </div>
+
+          <div class="eng-arch-col">
+            <div>
+              <span class="eng-arch-num">REGION 03</span>
+              <h3 class="eng-arch-name">South &amp; Central</h3>
+              <p class="eng-arch-desc">
+                <strong>Karnataka, Telangana, AP &amp; MP:</strong> 35+ Plants across Bengaluru, Hyderabad, Visakhapatnam, Indore, and Jabalpur.
+              </p>
+            </div>
+            <div class="eng-arch-link">
+              <span>35+ Plants Installed</span>
+              <span class="eng-arch-arrow">↗</span>
+            </div>
+          </div>
+
+          <div class="eng-arch-col">
+            <div>
+              <span class="eng-arch-num">REGION 04</span>
+              <h3 class="eng-arch-name">Global Turnkey Exports</h3>
+              <p class="eng-arch-desc">
+                <strong>Africa, Middle East &amp; SAARC:</strong> 20+ Turnkey overseas plants with containerized sea shipping and Indian supervisor teams.
+              </p>
+            </div>
+            <div class="eng-arch-link">
+              <span>Global Exports</span>
+              <span class="eng-arch-arrow">↗</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ SECTION 06 — SPECIALIZED LINES (ALC & MORTAR) ============ -->
+    <section class="eng-section eng-section--light" id="specialized">
+      <div class="eng-container">
+        
+        <div>
+          <span class="eng-eyebrow">04 · ADVANCED PRODUCT LINES</span>
+          <h2 class="eng-title">
+            <span>Specialized manufacturing systems.</span>
+            <span class="eng-title-light">Reinforced ALC panels &amp; co-located dry mix mortar.</span>
+          </h2>
+          <p class="eng-lead">
+            Expand your product catalog beyond commodity blocks into high-margin structural reinforced panels and bundled thin-bed jointing mortar.
+          </p>
+        </div>
+
+        <div class="eng-arch-grid" style="grid-template-columns: 1fr 1fr; margin: 2.5rem 0 2rem;">
+          
+          <div class="eng-arch-col">
+            <div>
+              <span class="eng-arch-num">SPECIALIZED LINE 01</span>
+              <h3 class="eng-arch-name">Reinforced ALC Wall &amp; Floor Panel Plants</h3>
+              <p class="eng-arch-desc">
+                Engineered for rapid precast construction. Includes automated steel mesh spot-welding, anti-corrosion dipping tanks, mesh insertion cranes, and slotted autoclave track systems. Panels span up to 6 meters with fire resistance up to 4 hours.
+              </p>
+            </div>
+            <a href="aac-block-panel-plant.html" class="eng-arch-link" style="text-decoration: none;">
+              <span>Explore ALC Panel Technology</span>
+              <span class="eng-arch-arrow">→</span>
+            </a>
+          </div>
+
+          <div class="eng-arch-col">
+            <div>
+              <span class="eng-arch-num">SPECIALIZED LINE 02</span>
+              <h3 class="eng-arch-name">Co-Located Dry Mix Mortar Plants (10–30 TPH)</h3>
+              <p class="eng-arch-desc">
+                High-shear twin-shaft paddle mixers for thin-bed AAC jointing adhesive, ready-mix eco plaster, and wall putties. Shares raw material bulkers and pneumatic conveying systems with the main AAC plant, maximizing site profitability.
+              </p>
+            </div>
+            <a href="dry-mix-mortar-plant.html" class="eng-arch-link" style="text-decoration: none;">
+              <span>Explore Dry Mortar Technology</span>
+              <span class="eng-arch-arrow">→</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ SECTION 07 — LIVE RUNNING PLANT TOUR BANNER ============ -->
+    <section class="eng-section eng-section--white" id="visit">
+      <div class="eng-container">
+        
+        <div class="eng-alc-banner">
+          <div class="eng-alc-banner__left">
+            <span class="eng-eyebrow" style="color: #56b4f5;">05 · ON-SITE VERIFICATION</span>
+            <h2 class="eng-alc-banner__title">
+              <span>Visit an operational</span>
+              <span style="color: #93c5fd;">Laxmi AAC plant in your region.</span>
+            </h2>
+            <p class="eng-alc-banner__lead">
+              We arrange guided on-site visits to operational client plants across Gujarat, Maharashtra, Rajasthan, Karnataka, and MP. Witness live cutting, autoclave steam cycles, and finished block packaging under real commercial conditions.
+            </p>
+            <div class="eng-alc-features">
+              <div class="eng-alc-feature">
+                <strong>01. Commercial Daily Throughput</strong>
+                <p>Observe uninterrupted 3-shift production cycles, mould demoulding speed, and automated block strapping.</p>
+              </div>
+              <div class="eng-alc-feature">
+                <strong>02. Direct Feedback from Plant Owners</strong>
+                <p>Talk directly with running plant owners about machinery reliability, steam efficiency, and Laxmi En-Fab service support.</p>
+              </div>
+              <div class="eng-alc-feature">
+                <strong>03. Ahmedabad Works Machine Inspection</strong>
+                <p>Combine your plant visit with a tour of our 100,000+ sq.ft. heavy machinery workshop in Odhav GIDC, Ahmedabad.</p>
+              </div>
+            </div>
+          </div>
+          <div class="eng-alc-banner__right">
+            <div class="eng-alc-stat-card">
+              <div class="eng-alc-stat-num">150+</div>
+              <div class="eng-alc-stat-label">Verified Operational Plants</div>
+            </div>
+            <div class="eng-alc-stat-card">
+              <div class="eng-alc-stat-num">18+ States</div>
+              <div class="eng-alc-stat-label">Pan-India Running Locations</div>
+            </div>
+            <div class="eng-alc-stat-card">
+              <div class="eng-alc-stat-num">100% In-House</div>
+              <div class="eng-alc-stat-label">Fabricated in Ahmedabad Works</div>
+            </div>
+            <div class="eng-alc-stat-card">
+              <div class="eng-alc-stat-num">10 Cases</div>
+              <div class="eng-alc-stat-label">Detailed Documented Case Studies</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ SECTION 08 — FINAL STRATEGIC CONVERSION CTA BANNER ============ -->
+    <section class="eng-cta-banner" id="cta">
+      <div class="eng-cta-banner__inner">
+        <span class="eng-cta-banner__eyebrow">SCHEDULE A RUNNING PLANT VISIT</span>
+        <h2 class="eng-cta-banner__title">
+          <span>Schedule an on-site visit</span>
+          <span class="eng-cta-banner__title-light">to an operating Laxmi AAC plant.</span>
+        </h2>
+        <p class="eng-cta-banner__lead">
+          Connect with our technical sales division to arrange a guided visit to an operational plant near your city and review your proposed plant capacity with senior process engineers.
+        </p>
+        <div class="eng-cta-banner__actions">
+          <a href="contact.html" class="eng-cta-banner__btn-white">
+            <span>Schedule Plant Visit</span>
+            <span class="eng-cta-banner__btn-arrow">↗</span>
+          </a>
+          <a href="#overview" class="eng-cta-banner__link-top">
+            <span>Return to top ↑</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Shared Global Footer Injection -->
+  <div id="site-footer"></div>
+
+  <!-- Scripts -->
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/animations.js"></script>
+  <script>
+    // Project Filter Controller
+    document.addEventListener('DOMContentLoaded', function () {
+      var filterButtons = document.querySelectorAll('.project-filter-btn');
+      var projectCards = document.querySelectorAll('.project-card');
+
+      filterButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          filterButtons.forEach(function (b) { b.classList.remove('is-active'); });
+          this.classList.add('is-active');
+
+          var selectedFilter = this.getAttribute('data-filter');
+
+          projectCards.forEach(function (card) {
+            var category = card.getAttribute('data-category');
+            if (selectedFilter === 'all' || category === selectedFilter) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // URL parameter filter support (?state= or ?type=)
+      var urlParams = new URLSearchParams(window.location.search);
+      var typeParam = urlParams.get('type');
+      if (typeParam) {
+        var matchBtn = document.querySelector('.project-filter-btn[data-filter="' + typeParam + '"]');
+        if (matchBtn) matchBtn.click();
+      }
+    });
+  </script>
+</body>
+</html>
