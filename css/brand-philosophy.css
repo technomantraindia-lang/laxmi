@@ -1,0 +1,768 @@
+/* ==========================================================================
+   Laxmi En-Fab — Brand Philosophy Hero & Page Design System
+   Exact 1:1 Match to Screenshot (Enhanced Large Display Typography)
+   ========================================================================== */
+
+:root {
+  --ph-bg-hero: #071526;
+  --ph-bg-dark: #040d18;
+  --ph-bg-card: #081a2f;
+  --ph-cyan-accent: #6cb4ee;
+  --ph-cyan-eyebrow: #5bb2e0;
+  --ph-cyan-glow: rgba(56, 160, 235, 0.22);
+  --ph-text-white: #ffffff;
+  --ph-text-sub: #cbd5e1;
+  --ph-text-muted: #94a3b8;
+  --ph-text-dark: #071526;
+  --ph-border-light: #e2e8f0;
+}
+
+/* Base Body */
+.brand-philosophy-body {
+  background-color: #ffffff;
+  color: #071526;
+  font-family: var(--font-sans, 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================================================
+   HERO SECTION (EXACT MATCH TO USER SCREENSHOT - ENLARGED DISPLAY FONT)
+   ========================================================================== */
+.ph-hero {
+  position: relative;
+  background-color: #061322;
+  background-image: 
+    radial-gradient(circle at 82% 38%, rgba(35, 115, 185, 0.42) 0%, rgba(12, 45, 78, 0.22) 40%, transparent 65%),
+    linear-gradient(135deg, #05101d 0%, #07172a 50%, #040e1b 100%);
+  color: #ffffff;
+  padding: 8rem 3rem 7rem;
+  overflow: hidden;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Concentric decorative background circles on right */
+.ph-hero__bg-circles {
+  position: absolute;
+  top: 50%;
+  right: -8%;
+  transform: translateY(-50%);
+  width: 950px;
+  height: 950px;
+  border-radius: 50%;
+  border: 1px solid rgba(100, 180, 240, 0.09);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.ph-hero__bg-circles::after {
+  content: '';
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  border: 1px solid rgba(100, 180, 240, 0.05);
+}
+
+.ph-hero__container {
+  max-width: 1260px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.ph-eyebrow {
+  display: inline-block;
+  font-family: var(--font-mono, 'Geist Mono', monospace);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ph-cyan-eyebrow);
+  margin-bottom: 2.25rem;
+}
+
+.ph-eyebrow--dark {
+  color: #64748b;
+}
+
+.ph-hero__title {
+  font-size: clamp(3.5rem, 7.5vw, 6.25rem);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+  color: #ffffff;
+  max-width: 1050px;
+  margin: 0 0 2.25rem;
+}
+
+.ph-hero__title-accent {
+  color: var(--ph-cyan-accent);
+  display: block;
+}
+
+.ph-hero__sub {
+  font-size: clamp(1.25rem, 2.1vw, 1.55rem);
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.86);
+  max-width: 680px;
+  margin: 0 0 3.25rem;
+}
+
+.ph-btn-pill-white {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.875rem;
+  background: #ffffff;
+  color: #071526;
+  padding: 1.125rem 2.6rem;
+  border-radius: 9999px;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.35);
+}
+
+.ph-btn-pill-white:hover {
+  background: #e2f0fc;
+  color: #040e1b;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(108, 180, 238, 0.4);
+}
+
+.ph-btn-pill-white .btn-arrow {
+  font-size: 1.25rem;
+  transition: transform 0.2s ease;
+}
+
+.ph-btn-pill-white:hover .btn-arrow {
+  transform: translate(3px, -3px);
+}
+
+/* Scroll to discover watermark on bottom right */
+.ph-hero__scroll-indicator {
+  position: absolute;
+  bottom: 2.75rem;
+  right: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-mono, 'Geist Mono', monospace);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  z-index: 2;
+}
+
+.ph-hero__scroll-line {
+  width: 36px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* ==========================================================================
+   SECTION 2: VERIFY IT (EXACT SCREENSHOT MATCH - ENLARGED)
+   ========================================================================== */
+.ph-verify {
+  background-color: #040e1b;
+  background-image: linear-gradient(180deg, #051120 0%, #030a14 100%);
+  padding: 8rem 2rem 9rem;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.ph-verify__container {
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+.ph-verify__header {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 5rem;
+}
+
+.ph-verify__title {
+  font-size: clamp(3.75rem, 7.5vw, 6rem);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+  color: #ffffff;
+  margin: 0.75rem 0 1.25rem;
+}
+
+.ph-verify__subtitle {
+  font-size: clamp(1.125rem, 1.6vw, 1.35rem);
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.55;
+  margin: 0;
+  font-weight: 400;
+}
+
+.ph-verify__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.ph-card-dark {
+  background: linear-gradient(180deg, #071728 0%, #040f1c 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 3.5rem 2.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 480px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Concentric arc in top-right of cards */
+.ph-card-dark::after {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  pointer-events: none;
+  transition: all 0.35s ease;
+}
+
+.ph-card-dark--featured,
+.ph-card-dark:hover {
+  background: linear-gradient(180deg, #09477b 0%, #052a4e 100%);
+  border-color: rgba(100, 180, 240, 0.35);
+  transform: translateY(-5px);
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.55), 0 0 35px rgba(9, 71, 123, 0.35);
+}
+
+.ph-card-dark--featured::after,
+.ph-card-dark:hover::after {
+  border-color: rgba(120, 200, 255, 0.14);
+  width: 280px;
+  height: 280px;
+}
+
+.ph-card-dark__num {
+  font-family: var(--font-mono, 'Geist Mono', monospace);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #5bb2e0;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 4rem;
+}
+
+.ph-card-dark--featured .ph-card-dark__num,
+.ph-card-dark:hover .ph-card-dark__num {
+  color: #8ed0f8;
+}
+
+.ph-card-dark__title {
+  font-size: clamp(2.15rem, 3vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+  color: #ffffff;
+  margin: 0 0 1.5rem;
+}
+
+.ph-card-dark__desc {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.78);
+  margin: 0 0 3rem;
+}
+
+.ph-card-dark__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(4, 14, 27, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  font-size: 1.25rem;
+  transition: all 0.25s ease;
+  align-self: flex-start;
+}
+
+.ph-card-dark--featured .ph-card-dark__btn,
+.ph-card-dark:hover .ph-card-dark__btn {
+  background: rgba(3, 10, 20, 0.9);
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  transform: translate(3px, -3px);
+}
+
+/* ==========================================================================
+   SECTION 3: WE DO NOT BEGIN WITH MACHINERY (ENLARGED DISPLAY)
+   ========================================================================== */
+.ph-intro {
+  background: #ffffff;
+  padding: 8rem 3rem 8.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.ph-intro__container {
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+.ph-intro__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.25rem;
+}
+
+.ph-intro__eyebrow {
+  font-family: var(--font-mono, 'Geist Mono', monospace);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #1e40af;
+  margin: 0;
+}
+
+.ph-intro__num {
+  font-family: var(--font-mono, 'Geist Mono', monospace);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #94a3b8;
+}
+
+.ph-intro__title {
+  font-size: clamp(3.25rem, 6.8vw, 5.5rem);
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+  color: #071526;
+  margin: 0 0 4rem;
+}
+
+.ph-intro__title-muted {
+  color: #94a3b8;
+  font-weight: 800;
+  display: block;
+  margin-top: 0.25rem;
+}
+
+.ph-intro__divider {
+  border: none;
+  border-top: 1px solid #e2e8f0;
+  margin: 0 0 4rem;
+}
+
+.ph-intro__grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 5.5rem;
+  align-items: start;
+}
+
+.ph-intro__lead {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: -0.025em;
+  color: #071526;
+  margin: 0;
+}
+
+.ph-intro__body {
+  font-size: 1.2rem;
+  line-height: 1.75;
+  color: #64748b;
+  margin: 0;
+}
+
+/* ==========================================================================
+   SECTION 4: DARK MANIFESTO QUOTE STRIP (ENLARGED DISPLAY)
+   ========================================================================== */
+.ph-manifesto {
+  background: #06111f;
+  background-image: linear-gradient(180deg, #071526 0%, #050f1a 100%);
+  color: #ffffff;
+  padding: 8.5rem 3rem 9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ph-manifesto__container {
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+.ph-manifesto__eyebrow {
+  display: inline-block;
+  font-family: var(--font-mono, 'Geist Mono', monospace);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #5bb2e0;
+  margin-bottom: 2.75rem;
+}
+
+.ph-manifesto__quote {
+  font-size: clamp(2.5rem, 5.2vw, 4.5rem);
+  line-height: 1.18;
+  letter-spacing: -0.04em;
+  font-weight: 400;
+  color: #52637a;
+  margin: 0;
+  max-width: 1180px;
+}
+
+.ph-manifesto__quote-dim {
+  color: #52637a;
+  display: block;
+}
+
+.ph-manifesto__quote-bold {
+  display: block;
+  font-weight: 800;
+  color: #ffffff;
+  margin-top: 0.25rem;
+}
+
+/* ==========================================================================
+   SECTION 5: FOUR BELIEFS. ONE RESPONSIBILITY (ENLARGED)
+   ========================================================================== */
+.ph-beliefs {
+  background: #ffffff;
+  padding: 8.5rem 2rem;
+  border-bottom: 1px solid var(--ph-border-light);
+}
+
+.ph-beliefs__container {
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+.ph-beliefs__title {
+  font-size: clamp(3.25rem, 6.5vw, 5.25rem);
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+  color: var(--ph-text-dark);
+  margin: 0 0 4.5rem;
+}
+
+.ph-beliefs__title-muted {
+  color: var(--ph-text-muted);
+  font-weight: 800;
+  display: block;
+}
+
+.ph-beliefs__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.ph-row {
+  display: grid;
+  grid-template-columns: 100px 1.15fr 1.35fr;
+  gap: 3rem;
+  padding: 3.5rem 0;
+  border-top: 1px solid var(--ph-border-light);
+  align-items: baseline;
+}
+
+.ph-row:last-child {
+  border-bottom: 1px solid var(--ph-border-light);
+}
+
+.ph-row__num {
+  font-family: var(--font-mono, 'Geist Mono', monospace);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #cbd5e1;
+}
+
+.ph-row__title {
+  font-size: clamp(1.6rem, 2.5vw, 2.15rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+  color: var(--ph-text-dark);
+  margin: 0;
+}
+
+.ph-row__desc {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #475569;
+  margin: 0;
+}
+
+/* ==========================================================================
+   SECTION 6: NEITHER UNDERBUILT. NOR OVERENGINEERED (ENLARGED)
+   ========================================================================== */
+.ph-discipline {
+  background: #040e1b;
+  color: #ffffff;
+  padding: 8.5rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.ph-discipline__container {
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+.ph-discipline__grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.ph-discipline__title {
+  font-size: clamp(3.25rem, 6.5vw, 5.25rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+  margin: 0;
+}
+
+.ph-discipline__title-cyan {
+  color: var(--ph-cyan-accent);
+  display: block;
+}
+
+.ph-discipline__text {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.82);
+  margin: 0;
+}
+
+.ph-discipline__tags {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  font-family: var(--font-mono, 'Geist Mono', monospace);
+  font-size: 0.875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* ==========================================================================
+   SECTION 7: COMMITMENTS THAT DO NOT CHANGE (ENLARGED)
+   ========================================================================== */
+.ph-commitments {
+  background: #f8fafc;
+  padding: 8.5rem 2rem;
+  border-bottom: 1px solid var(--ph-border-light);
+}
+
+.ph-commitments__container {
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+.ph-commitments__title {
+  font-size: clamp(3.25rem, 6.5vw, 5.25rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  color: var(--ph-text-dark);
+  margin: 0 0 4.5rem;
+}
+
+.ph-commitments__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid #cbd5e1;
+  margin-bottom: 5.5rem;
+}
+
+.ph-commitments__item {
+  padding: 1.85rem 2.25rem 1.85rem 0;
+  border-bottom: 1px solid #cbd5e1;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ph-text-dark);
+  display: flex;
+  align-items: center;
+}
+
+.ph-commitments__item:nth-child(even) {
+  padding-left: 3rem;
+  border-left: 1px solid #cbd5e1;
+}
+
+.ph-commitments__closing {
+  max-width: 1050px;
+}
+
+.ph-commitments__closing-lead {
+  font-size: clamp(1.6rem, 3vw, 2.35rem);
+  font-weight: 400;
+  color: var(--ph-text-muted);
+  line-height: 1.35;
+  margin: 0;
+}
+
+.ph-commitments__closing-bold {
+  display: block;
+  font-weight: 800;
+  color: var(--ph-text-dark);
+  margin-top: 0.65rem;
+}
+
+/* ==========================================================================
+   SECTION 8: FINAL BRAND HERO CTA (ENLARGED)
+   ========================================================================== */
+.ph-cta {
+  background: #ffffff;
+  padding: 9.5rem 2rem 8.5rem;
+  text-align: center;
+}
+
+.ph-cta__container {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.ph-cta__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono, 'Geist Mono', monospace);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #2563eb;
+  background: #eff6ff;
+  padding: 0.6rem 1.4rem;
+  border-radius: 9999px;
+  margin-bottom: 2rem;
+}
+
+.ph-cta__title {
+  font-size: clamp(3.5rem, 6.8vw, 5.25rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  color: var(--ph-text-dark);
+  margin: 0 0 1.75rem;
+}
+
+.ph-cta__sub {
+  font-size: 1.35rem;
+  line-height: 1.65;
+  color: #64748b;
+  margin: 0 0 3.5rem;
+}
+
+.ph-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.875rem;
+  background: #040e1b;
+  color: #ffffff;
+  padding: 1.25rem 2.85rem;
+  border-radius: 9999px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 6px 25px rgba(4, 14, 27, 0.25);
+}
+
+.ph-cta__btn:hover {
+  background: #2563eb;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.35);
+}
+
+/* --- RESPONSIVE ADAPTATIONS --- */
+@media (max-width: 1024px) {
+  .ph-verify__grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .ph-intro__grid,
+  .ph-discipline__grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .ph-row {
+    grid-template-columns: 70px 1fr;
+    gap: 1.5rem;
+  }
+  
+  .ph-row__desc {
+    grid-column: 2 / -1;
+  }
+  
+  .ph-hero__scroll-indicator {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .ph-hero {
+    padding: 6rem 1.25rem 4.5rem;
+  }
+  
+  .ph-verify,
+  .ph-intro,
+  .ph-manifesto,
+  .ph-beliefs,
+  .ph-discipline,
+  .ph-commitments,
+  .ph-cta {
+    padding: 5rem 1.25rem;
+  }
+  
+  .ph-commitments__grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ph-commitments__item:nth-child(even) {
+    padding-left: 0;
+    border-left: none;
+  }
+  
+  .ph-discipline__tags {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.875rem;
+  }
+}

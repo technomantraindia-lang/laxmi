@@ -391,11 +391,62 @@
   }
 }
 
+@media (max-width: 768px) {
+  .solution-nav-rail {
+    top: 72px !important;
+    padding: 0.65rem 1rem !important;
+    position: sticky !important;
+    z-index: 95 !important;
+  }
+
+  .solution-nav-rail__inner {
+    padding: 0 !important;
+    gap: 0.65rem !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+  }
+
+  .solution-nav-rail__inner::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .solution-nav-rail__inner > span {
+    font-size: 0.65rem !important;
+    letter-spacing: 0.1em !important;
+    padding-right: 0.65rem !important;
+    flex-shrink: 0 !important;
+  }
+
+  .solution-nav-rail__items {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.4rem !important;
+    flex-shrink: 0 !important;
+  }
+
+  .solution-nav-rail__item {
+    padding: 0.45rem 0.85rem !important;
+    font-size: 0.72rem !important;
+    letter-spacing: 0.06em !important;
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+  }
+
+  .solution-section {
+    padding: 3.5rem 1.25rem !important;
+  }
+
+  .solution-section__inner {
+    padding: 0 !important;
+  }
+}
+
 @media (max-width: 600px) {
   .solution-section {
-    padding: 4rem 1.25rem;
+    padding: 3rem 1.25rem !important;
   }
   .journey-stage-panel {
-    padding: 1.75rem;
+    padding: 1.5rem 1.25rem !important;
   }
 }

@@ -153,14 +153,18 @@
   display: block;
   font-weight: 800 !important;
   color: #ffffff !important;
-  white-space: nowrap;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .editorial-hero__title-light {
   font-weight: 400 !important;
   color: #8c9ba5 !important;
   display: block;
-  white-space: nowrap;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .editorial-hero__sub {
@@ -1626,26 +1630,143 @@
 }
 
 @media (max-width: 768px) {
+  .hp-system-section {
+    padding: 50px 0 0 !important;
+  }
+
   .hp-system-hero-wrap {
-    min-height: auto;
-    padding: 60px 0 40px;
+    min-height: auto !important;
+    padding: 0 0 24px 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    aspect-ratio: auto !important;
   }
+
+  .hp-system-container {
+    padding: 0 5vw !important;
+    order: 1;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .hp-system-eyebrow {
+    font-size: 0.72rem !important;
+    letter-spacing: 0.14em !important;
+    margin-bottom: 12px !important;
+  }
+
+  .hp-system-title {
+    font-size: clamp(2.1rem, 7.5vw, 2.8rem) !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.03em !important;
+    margin-bottom: 16px !important;
+  }
+
+  .hp-system-title-bold {
+    white-space: normal !important;
+    display: block !important;
+  }
+
+  .hp-system-title-light {
+    display: block !important;
+  }
+
+  .hp-system-desc {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    color: #475569 !important;
+    margin-bottom: 24px !important;
+  }
+
   .hp-desc-line {
-    white-space: normal;
+    white-space: normal !important;
+    display: inline !important;
   }
+
+  .hp-system-action {
+    width: 100% !important;
+    margin-bottom: 24px !important;
+  }
+
+  .hp-system-btn {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 13px 20px !important;
+    font-size: 0.92rem !important;
+    box-sizing: border-box !important;
+    border-radius: 8px !important;
+  }
+
   .hp-system-bg-media {
-    position: relative;
-    height: 320px;
-    margin-top: 30px;
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: 200px !important;
+    order: 2;
+    margin-top: 6px !important;
+    padding: 0 5vw !important;
+    box-sizing: border-box !important;
   }
+
+  .hp-system-bg-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    border-radius: 10px !important;
+    border: 1px solid rgba(7, 23, 44, 0.08) !important;
+    box-shadow: 0 4px 14px rgba(7, 23, 44, 0.06) !important;
+  }
+
+  .hp-system-gradient-fade {
+    display: none !important;
+  }
+
+  .hp-system-strip-wrap {
+    background: #f8fafc !important;
+    padding: 28px 0 40px !important;
+    border-top: 1px solid rgba(7, 23, 44, 0.08) !important;
+  }
+
+  .hp-system-strip-container {
+    padding: 0 5vw !important;
+    box-sizing: border-box !important;
+  }
+
   .hp-system-strip {
-    grid-template-columns: repeat(2, 1fr);
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+    border: none !important;
+    width: 100% !important;
   }
-  .hp-system-strip-item:nth-child(odd) {
-    border-right: 1px solid rgba(7, 23, 44, 0.08);
-  }
+
   .hp-system-strip-item {
-    border-bottom: 1px solid rgba(7, 23, 44, 0.08);
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 14px 16px !important;
+    background: #ffffff !important;
+    border: 1px solid rgba(7, 23, 44, 0.08) !important;
+    border-radius: 8px !important;
+    text-decoration: none !important;
+    box-shadow: 0 2px 6px rgba(7, 23, 44, 0.03) !important;
+    box-sizing: border-box !important;
+  }
+
+  .hp-system-strip-num {
+    font-size: 0.78rem !important;
+    font-weight: 800 !important;
+    color: #0b5796 !important;
+    margin-bottom: 4px !important;
+  }
+
+  .hp-system-strip-name {
+    font-size: 0.92rem !important;
+    font-weight: 700 !important;
+    color: #07172c !important;
+    white-space: normal !important;
   }
 }
 

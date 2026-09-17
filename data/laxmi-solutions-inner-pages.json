@@ -12,19 +12,15 @@
       "dry_mix_mortar_plant": "dry-mix-mortar-plant.html"
     },
     "navigation": {
-      "parent": "solutions.html",
+      "parent": "why-aac-blocks.html",
       "items": [
         {
-          "label": "AAC Block & Panel Plant",
-          "url": "aac-block-panel-plant.html"
+          "label": "Why AAC Blocks?",
+          "url": "why-aac-blocks.html"
         },
         {
-          "label": "Dry Mix Mortar Plant",
-          "url": "dry-mix-mortar-plant.html"
-        },
-        {
-          "label": "Complete AAC Plant",
-          "url": "solutions.html"
+          "label": "Raw Materials",
+          "url": "raw-materials.html"
         }
       ]
     },

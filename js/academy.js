@@ -1010,51 +1010,46 @@
       `;
     }).join('');
 
-    const verifiedCount = verifiedList.length;
-    const progressPercent = Math.round((verifiedCount / 12) * 100);
-
     root.innerHTML = `
       ${renderStageNavRail(currentStageSlug)}
       
-      <!-- ============ 01. HERO SECTION (EDITORIAL HIGH-KEY ARCHITECTURAL COVER) ============ -->
-      <section class="editorial-hero editorial-hero--light is-loaded" id="hero" aria-label="Compare AAC Plant Suppliers Overview" style="min-height: 88vh; display: flex; align-items: center; position: relative;">
-        <div class="editorial-hero__media" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1;">
-          <div class="editorial-hero__video-wrap" style="width: 100%; height: 100%;">
+      <!-- ============ 01. HERO SECTION ============ -->
+      <section class="editorial-hero editorial-hero--light is-loaded" id="hero" aria-label="Compare AAC Plant Suppliers Overview">
+        <div class="editorial-hero__media" aria-hidden="true">
+          <div class="editorial-hero__video-wrap">
             <img
               class="editorial-hero__poster"
               src="${heroBg}"
               alt="Complete AAC Manufacturing Plant System and Due Diligence Comparison"
               fetchpriority="high"
-              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center right;"
             />
           </div>
-          <div class="editorial-hero__overlay" style="position: absolute; inset: 0; background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0.98) 38%, rgba(255, 255, 255, 0.82) 54%, rgba(255, 255, 255, 0.2) 72%, transparent 88%); pointer-events: none;"></div>
+          <div class="editorial-hero__overlay"></div>
         </div>
 
-        <div class="editorial-hero__inner" style="position: relative; z-index: 2; width: 100%; max-width: 1320px; margin: 0 auto; padding: 6rem 1.5rem 5rem;">
-          <div class="editorial-hero__content" style="max-width: 680px;">
-            <span class="editorial-hero__eyebrow" style="display: inline-block; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: #026aa7; margin-bottom: 1.5rem;">
+        <div class="editorial-hero__inner">
+          <div class="editorial-hero__content">
+            <span class="editorial-hero__eyebrow">
               AAC INVESTOR GUIDE · SUPPLIER DUE DILIGENCE
             </span>
-            <h1 class="editorial-hero__title" style="font-size: clamp(2.4rem, 4.2vw, 4.2rem); font-weight: 800; line-height: 1.1; letter-spacing: -0.035em; color: #07172c; margin: 0 0 1.5rem 0;">
-              <span style="display: block;">Compare the plant.</span>
-              <span style="display: block; color: #64748b; font-weight: 500;">Verify the capability.</span>
+            <h1 class="editorial-hero__title">
+              <span>Compare the plant.</span>
+              <span class="editorial-hero__title-light">Verify the capability.</span>
             </h1>
-            <p class="editorial-hero__sub" style="font-size: clamp(1.05rem, 1.25vw, 1.22rem); line-height: 1.68; color: #475569; max-width: 580px; margin: 0 0 2.25rem 0;">
+            <p class="editorial-hero__sub">
               An AAC plant proposal is more than a machinery list. Compare the production basis, complete scope, operating evidence and accountability behind every offer.
             </p>
 
-            <div class="editorial-hero__actions" style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1.25rem;">
-              <a href="#matrix" class="editorial-hero__btn-dark" style="padding: 0.95rem 1.85rem; border-radius: 9999px; background: #07172c; color: #ffffff !important; font-weight: 700; text-decoration: none; font-size: 0.94rem; box-shadow: 0 4px 14px rgba(7, 23, 44, 0.15); transition: all 0.25s ease;">
-                View the comparison framework
+            <div class="editorial-hero__actions">
+              <a href="#matrix" class="editorial-hero__btn-dark">
+                <span>View Comparison Framework ↓</span>
               </a>
-              <a href="${contactUrl}" class="editorial-hero__link-dark" style="color: #07172c !important; font-weight: 700; text-decoration: none; font-size: 0.94rem; display: inline-flex; align-items: center; gap: 0.35rem; transition: all 0.2s ease;">
-                <span>Request a proposal review</span>
-                <span>↗</span>
+              <a href="${contactUrl}" class="editorial-hero__link-dark">
+                <span>Request a Proposal Review ↗</span>
               </a>
             </div>
 
-            <p style="font-size: 0.85rem; color: #94a3b8; margin: 0; font-weight: 500;">
+            <p style="font-size: 0.85rem; color: #64748b; margin: 0; font-weight: 500;">
               Designed for investors, technical teams and corporate purchase teams.
             </p>
           </div>
@@ -1062,38 +1057,37 @@
       </section>
 
       <!-- ============ SECTION 01: THE DIRECT ANSWER ============ -->
-      <section class="academy-section" id="principle" style="padding: 5.5rem 2rem 5rem; background: #ffffff;">
-        <div class="academy-section__inner" style="max-width: 1500px; margin: 0 auto;">
+      <section class="academy-section" id="principle">
+        <div class="academy-section__inner">
           
           <!-- Top 2-Column Grid -->
-          <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 4.5rem; align-items: center; margin-bottom: 5.5rem;">
+          <div class="academy-compare-intro-grid">
             <div>
-              <span class="academy-micro-label" style="display: inline-block; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: #026aa7; margin-bottom: 1.8rem;">
+              <span class="academy-micro-label">
                 THE DIRECT ANSWER
               </span>
-              <h2 style="font-size: clamp(3.4rem, 5.6vw, 5.6rem); font-weight: 700; line-height: 1.03; letter-spacing: -0.035em; color: #07172c; margin: 0;">
-                <span style="display: block;">Start with a</span>
-                <span style="display: block;">common basis.</span>
-                <span style="display: block; color: #8d9ba8; font-weight: 400; margin-top: 0.05em;">Not the final price.</span>
+              <h2 class="academy-compare-title">
+                <span>Start with a common basis.</span>
+                <span class="academy-compare-title-light">Not the final price.</span>
               </h2>
             </div>
 
-            <div style="max-width: 560px; padding-top: 1.5rem;">
-              <p style="font-size: clamp(1.15rem, 1.35vw, 1.35rem); font-weight: 500; line-height: 1.55; color: #07172c; margin: 0 0 1.25rem 0;">
+            <div>
+              <p class="academy-compare-lead">
                 Compare AAC plant suppliers using the same production assumptions, equipment boundaries, automation definition, utility basis, manpower model, commissioning responsibility and acceptance conditions.
               </p>
-              <p style="font-size: clamp(0.98rem, 1.08vw, 1.08rem); line-height: 1.6; color: #64748b; margin: 0;">
+              <p class="academy-compare-sub">
                 A quotation becomes comparable only after its inclusions, exclusions and evidence are visible.
               </p>
             </div>
           </div>
 
-          <!-- Bottom Statement Banner Strip (Single Line, Max-width 1500px, Top & Bottom Borders) -->
-          <div style="border-top: 1px solid #eef2f6; border-bottom: 1px solid #eef2f6; padding: 2.8rem 0; display: flex; justify-content: space-between; align-items: center; gap: 2rem;">
-            <span style="font-size: clamp(1.6rem, 2.3vw, 2.4rem); font-weight: 400; color: #8d9ba8; letter-spacing: -0.025em; white-space: nowrap;">
+          <!-- Bottom Statement Banner Strip -->
+          <div class="academy-compare-statement-strip">
+            <span class="academy-compare-statement-light">
               Price can be compared in one line.
             </span>
-            <span style="font-size: clamp(1.6rem, 2.3vw, 2.4rem); font-weight: 800; color: #07172c; letter-spacing: -0.025em; white-space: nowrap;">
+            <span class="academy-compare-statement-bold">
               Engineering capability cannot.
             </span>
           </div>
@@ -1102,24 +1096,24 @@
       </section>
 
       <!-- ============ SECTION 02: A COMPLETE COMPARISON (TWELVE FACTORS) ============ -->
-      <section class="academy-section" id="matrix" style="padding: 6.5rem 2rem 6.5rem; background: #ffffff;">
-        <div class="academy-section__inner" style="max-width: 1500px; margin: 0 auto;">
+      <section class="academy-section academy-section--alt" id="matrix">
+        <div class="academy-section__inner">
           
-          <div style="margin-bottom: 4rem;">
-            <span class="academy-micro-label" style="display: inline-block; font-size: 0.76rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: #026aa7; margin-bottom: 1.8rem;">
+          <div class="academy-compare-header">
+            <span class="academy-micro-label">
               A COMPLETE COMPARISON
             </span>
-            <h2 style="font-size: clamp(3rem, 5.2vw, 5.2rem); font-weight: 800; line-height: 1.02; letter-spacing: -0.04em; color: #07172c; margin: 0 0 2rem 0;">
-              <span style="display: block;">Twelve factors.</span>
-              <span style="display: block; color: #8d9ba8; font-weight: 400; margin-top: 0.04em;">One accountable decision.</span>
+            <h2 class="academy-compare-title">
+              <span>Twelve factors.</span>
+              <span class="academy-compare-title-light">One accountable decision.</span>
             </h2>
-            <p style="font-size: clamp(1.05rem, 1.25vw, 1.25rem); line-height: 1.6; color: #475569; max-width: 680px; margin: 0;">
+            <p class="academy-compare-sub">
               Each factor connects a technical choice to commercial risk, operational stability or future flexibility.
             </p>
           </div>
 
           <!-- 12 Factor Horizontal Spec Rows -->
-          <div style="border-top: 1px solid #eef2f6;">
+          <div class="academy-compare-spec-list">
             ${[
               { num: "01", title: "Production basis", desc: "Mould volume, batches, operating hours, density, product mix and saleable output." },
               { num: "02", title: "Equipment scope", desc: "Machinery, auxiliaries, controls, handling systems and battery limits." },
@@ -1134,10 +1128,10 @@
               { num: "11", title: "Service & lifecycle spares", desc: "Warranty terms, critical 2-year spare parts package, and on-site engineering SLA." },
               { num: "12", title: "Future expansion", desc: "Pre-engineered modular space and utility capacity for doubling throughput seamlessly." }
             ].map(f => `
-              <div style="display: grid; grid-template-columns: 80px 1.1fr 1.9fr; gap: 2rem; align-items: baseline; padding: 2.2rem 0; border-bottom: 1px solid #eef2f6; transition: background 0.2s ease;">
-                <span style="font-size: 0.95rem; font-weight: 700; color: #026aa7; font-family: var(--font-geist-mono), monospace;">${f.num}</span>
-                <h3 style="font-size: clamp(1.2rem, 1.5vw, 1.45rem); font-weight: 700; color: #07172c; margin: 0; letter-spacing: -0.01em;">${f.title}</h3>
-                <p style="font-size: clamp(0.95rem, 1.05vw, 1.05rem); line-height: 1.6; color: #64748b; margin: 0;">${f.desc}</p>
+              <div class="academy-compare-spec-row">
+                <span class="academy-compare-spec-num">${f.num}</span>
+                <h3 class="academy-compare-spec-title">${f.title}</h3>
+                <p class="academy-compare-spec-desc">${f.desc}</p>
               </div>
             `).join('')}
           </div>
@@ -1145,45 +1139,45 @@
         </div>
       </section>
 
-      <!-- ============ SECTION 03: EVALUATE (TURN EVERY PROMISE INTO EVIDENCE) ============ -->
-      <section class="academy-section" id="evaluate" style="padding: 7rem 2rem 6.5rem; background: #072646; color: #ffffff;">
-        <div class="academy-section__inner" style="max-width: 1500px; margin: 0 auto;">
+      <!-- ============ SECTION 04: EVALUATE (TURN EVERY PROMISE INTO EVIDENCE) ============ -->
+      <section class="academy-section academy-section--dark" id="evaluate">
+        <div class="academy-section__inner">
           
-          <div style="margin-bottom: 4.5rem;">
-            <span class="academy-micro-label" style="display: inline-block; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: #38bdf8; margin-bottom: 1.8rem;">
+          <div class="academy-compare-header">
+            <span class="academy-micro-label">
               EVALUATE
             </span>
-            <h2 style="font-size: clamp(3rem, 5.2vw, 5.2rem); font-weight: 800; line-height: 1.02; letter-spacing: -0.04em; color: #ffffff; margin: 0 0 2rem 0;">
-              <span style="display: block;">Turn every promise</span>
-              <span style="display: block; color: #93c5fd; font-weight: 400; margin-top: 0.04em;">into evidence.</span>
+            <h2 class="academy-compare-title academy-compare-title--white">
+              <span>Turn every promise</span>
+              <span class="academy-compare-title-light">into evidence.</span>
             </h2>
-            <p style="font-size: clamp(1.05rem, 1.25vw, 1.25rem); line-height: 1.6; color: rgba(255, 255, 255, 0.75); max-width: 680px; margin: 0;">
+            <p class="academy-compare-sub academy-compare-sub--light">
               A supplier presentation can establish interest. It cannot replace measurable assumptions, physical verification or contractual clarity.
             </p>
           </div>
 
           <!-- 4 Evaluation Horizontal Spec Rows -->
-          <div style="border-top: 1px solid rgba(255, 255, 255, 0.12);">
+          <div class="academy-compare-eval-list">
             ${[
               { num: "01", title: "Normalize the proposal", desc: "Place each offer into one scope-responsibility matrix. Record supply, erection, cabling, piping, integration, commissioning and testing for every plant section." },
               { num: "02", title: "Verify how capacity is calculated", desc: "Request mould volume, batches per hour, operating hours, pre-curing constraints, cutting cycle, autoclave loading, curing cycle and saleable-output assumptions." },
               { num: "03", title: "Map automation by function", desc: "Identify where operators initiate movement, confirm sequences, recover faults, record quality data or manually handle material. Compare functions—not labels." },
               { num: "04", title: "Use the same utility basis", desc: "Separate connected load from consumption. Compare power, steam, water and manpower for the same production, product mix and shift pattern." }
             ].map(item => `
-              <div style="display: grid; grid-template-columns: 80px 1.15fr 1.85fr; gap: 2rem; align-items: baseline; padding: 2.4rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.12);">
-                <span style="font-size: 0.95rem; font-weight: 700; color: #38bdf8; font-family: var(--font-geist-mono), monospace;">${item.num}</span>
-                <h3 style="font-size: clamp(1.2rem, 1.5vw, 1.45rem); font-weight: 700; color: #ffffff; margin: 0; letter-spacing: -0.01em;">${item.title}</h3>
-                <p style="font-size: clamp(0.95rem, 1.05vw, 1.05rem); line-height: 1.6; color: rgba(255, 255, 255, 0.75); margin: 0;">${item.desc}</p>
+              <div class="academy-compare-eval-row">
+                <span class="academy-compare-eval-num">${item.num}</span>
+                <h3 class="academy-compare-eval-title">${item.title}</h3>
+                <p class="academy-compare-eval-desc">${item.desc}</p>
               </div>
             `).join('')}
           </div>
 
           <!-- Comparison Rule Box -->
-          <div style="border: 1px solid rgba(56, 189, 248, 0.3); background: rgba(3, 16, 32, 0.45); padding: 2.2rem 2.5rem; margin-top: 4.5rem; border-radius: 6px; display: flex; align-items: center; gap: 2.5rem; flex-wrap: wrap;">
-            <span style="font-size: 0.78rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: #38bdf8; white-space: nowrap;">
+          <div class="academy-compare-rule-box">
+            <span class="academy-compare-rule-tag">
               COMPARISON RULE
             </span>
-            <span style="font-size: clamp(1.05rem, 1.2vw, 1.22rem); font-weight: 600; color: #ffffff; line-height: 1.5;">
+            <span class="academy-compare-rule-text">
               If two capacity or utility figures use different assumptions, they are not yet comparable.
             </span>
           </div>
@@ -1191,38 +1185,37 @@
         </div>
       </section>
 
-      <!-- ============ SECTION 04: PHYSICAL VERIFICATION ============ -->
-      <section class="academy-section" id="verification" style="padding: 6.5rem 2rem 6.5rem; background: #ffffff; font-family: var(--font-primary, 'Geist', sans-serif);">
-        <div class="academy-section__inner" style="max-width: 1500px; margin: 0 auto;">
+      <!-- ============ SECTION 05: PHYSICAL VERIFICATION ============ -->
+      <section class="academy-section academy-section--alt" id="verification">
+        <div class="academy-section__inner">
           
-          <div style="margin-bottom: 4.5rem;">
-            <span class="academy-micro-label" style="display: inline-block; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: #026aa7; margin-bottom: 1.8rem; font-family: var(--font-primary, 'Geist', sans-serif);">
+          <div class="academy-compare-header">
+            <span class="academy-micro-label">
               PHYSICAL VERIFICATION
             </span>
-            <h2 style="font-size: clamp(3.2rem, 5.4vw, 5.4rem); font-weight: 700; line-height: 1.03; letter-spacing: -0.035em; color: #07172c; margin: 0; font-family: var(--font-primary, 'Geist', sans-serif);">
-              <span style="display: block;">Visit the places</span>
-              <span style="display: block; color: #8d9ba8; font-weight: 400; margin-top: 0.05em;">where claims become</span>
-              <span style="display: block; color: #8d9ba8; font-weight: 400;">visible.</span>
+            <h2 class="academy-compare-title">
+              <span>Visit the places</span>
+              <span class="academy-compare-title-light">where claims become visible.</span>
             </h2>
           </div>
 
           <!-- 2-Column Split: Workshop vs Running Plant -->
-          <div style="display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid #eef2f6;">
+          <div class="academy-compare-verify-grid">
             
             <!-- Left Column: Workshop -->
-            <div style="padding: 3.5rem 4.5rem 2rem 0;">
-              <span style="display: inline-block; font-size: 0.76rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: #026aa7; margin-bottom: 1.25rem;">
+            <div class="academy-compare-verify-col">
+              <span class="academy-compare-verify-tag">
                 01 / WORKSHOP
               </span>
-              <h3 style="font-size: clamp(1.45rem, 1.85vw, 1.85rem); font-weight: 700; color: #07172c; margin: 0 0 1.1rem 0; letter-spacing: -0.015em;">
+              <h3 class="academy-compare-verify-title">
                 Inspect manufacturing capability
               </h3>
-              <p style="font-size: clamp(0.96rem, 1.05vw, 1.05rem); line-height: 1.6; color: #64748b; max-width: 520px; margin: 0 0 2.8rem 0;">
+              <p class="academy-compare-sub" style="margin-bottom: 2rem;">
                 A workshop visit should be an evidence review—not a visual judgement of size or housekeeping alone.
               </p>
 
               <!-- List of Items -->
-              <div style="border-top: 1px solid #eef2f6;">
+              <div class="academy-compare-verify-list">
                 ${[
                   "In-house and bought-out equipment scope",
                   "Fabrication, machining and assembly capability",
@@ -1230,31 +1223,31 @@
                   "Current workload and project resources",
                   "Testing and pre-dispatch practices"
                 ].map(item => `
-                  <div style="padding: 1.25rem 0; border-bottom: 1px solid #eef2f6; font-size: clamp(0.94rem, 1.02vw, 1.02rem); color: #334155; font-weight: 500;">
+                  <div class="academy-compare-verify-item">
                     ${item}
                   </div>
                 `).join('')}
               </div>
 
-              <p style="font-size: clamp(0.88rem, 0.95vw, 0.95rem); line-height: 1.6; color: #8d9ba8; margin: 3.5rem 0 0 0; max-width: 520px;">
+              <p style="font-size: 0.85rem; line-height: 1.6; color: #8d9ba8; margin: 2.5rem 0 0 0;">
                 Do not infer financial strength from workshop appearance. That requires separate due diligence.
               </p>
             </div>
 
             <!-- Right Column: Running Plant -->
-            <div style="padding: 3.5rem 0 2rem 4.5rem; border-left: 1px solid #eef2f6;">
-              <span style="display: inline-block; font-size: 0.76rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: #026aa7; margin-bottom: 1.25rem;">
+            <div class="academy-compare-verify-col">
+              <span class="academy-compare-verify-tag">
                 02 / RUNNING PLANT
               </span>
-              <h3 style="font-size: clamp(1.45rem, 1.85vw, 1.85rem); font-weight: 700; color: #07172c; margin: 0 0 1.1rem 0; letter-spacing: -0.015em;">
+              <h3 class="academy-compare-verify-title">
                 Verify operating performance
               </h3>
-              <p style="font-size: clamp(0.96rem, 1.05vw, 1.05rem); line-height: 1.6; color: #64748b; max-width: 520px; margin: 0 0 2.8rem 0;">
+              <p class="academy-compare-sub" style="margin-bottom: 2rem;">
                 Select references close to the proposed capacity, raw-material route, automation level, age and product mix.
               </p>
 
               <!-- List of Items -->
-              <div style="border-top: 1px solid #eef2f6;">
+              <div class="academy-compare-verify-list">
                 ${[
                   "Recorded production and saleable output",
                   "Manpower and manual interventions",
@@ -1262,13 +1255,13 @@
                   "Utility history where available",
                   "Service and spare-parts experience"
                 ].map(item => `
-                  <div style="padding: 1.25rem 0; border-bottom: 1px solid #eef2f6; font-size: clamp(0.94rem, 1.02vw, 1.02rem); color: #334155; font-weight: 500;">
+                  <div class="academy-compare-verify-item">
                     ${item}
                   </div>
                 `).join('')}
               </div>
 
-              <p style="font-size: clamp(0.88rem, 0.95vw, 0.95rem); line-height: 1.6; color: #8d9ba8; margin: 3.5rem 0 0 0; max-width: 520px;">
+              <p style="font-size: 0.85rem; line-height: 1.6; color: #8d9ba8; margin: 2.5rem 0 0 0;">
                 Observe the plant, speak with the owner and operating team, then cross-check recollections with records.
               </p>
             </div>
@@ -1278,35 +1271,66 @@
         </div>
       </section>
 
-      <!-- ============ SECTION 05: DECIDE ============ -->
-      <section class="academy-section" id="decide" style="padding: 6.5rem 2rem 6.5rem; background: #ffffff;">
-        <div class="academy-section__inner" style="max-width: 1500px; margin: 0 auto;">
+      <!-- ============ SECTION 05B: 12-POINT AUDIT CHECKLIST ============ -->
+      <section class="academy-section academy-section--alt" id="checklist">
+        <div class="academy-section__inner">
           
-          <div style="margin-bottom: 4.5rem;">
-            <span class="academy-micro-label" style="display: inline-block; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: #026aa7; margin-bottom: 1.8rem;">
+          <div class="academy-compare-header">
+            <span class="academy-micro-label">
+              INTERACTIVE AUDIT
+            </span>
+            <h2 class="academy-compare-title">
+              <span>12-Point Due Diligence</span>
+              <span class="academy-compare-title-light">Verification Checklist.</span>
+            </h2>
+            <p class="academy-compare-sub">
+              Audit your supplier proposals against core engineering deliverables, performance guarantees, and operational benchmarks.
+            </p>
+          </div>
+
+          <!-- Audit Progress Tracker -->
+          <div class="academy-audit-tracker">
+            <div class="academy-audit-tracker__top">
+              <span id="audit-counter-text" class="academy-audit-tracker__count">0 of 12 Criteria Audited (0%)</span>
+              <button id="btn-reset-audit" class="academy-audit-tracker__reset">Reset Checklist</button>
+            </div>
+            <div class="academy-audit-tracker__bar-bg">
+              <div id="audit-progress-bar" class="academy-audit-tracker__bar-fill" style="width: 0%;"></div>
+            </div>
+          </div>
+
+          <!-- Cards Grid -->
+          <div class="academy-checklist-grid">
+            ${cardsHTML}
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ============ SECTION 06: DECIDE ============ -->
+      <section class="academy-section" id="decide">
+        <div class="academy-section__inner">
+          
+          <div class="academy-compare-header">
+            <span class="academy-micro-label">
               DECIDE
             </span>
-            <h2 style="font-size: clamp(3.2rem, 5.4vw, 5.4rem); font-weight: 700; line-height: 1.03; letter-spacing: -0.035em; color: #07172c; margin: 0 0 2rem 0;">
-              <span style="display: block;">Choose the solution</span>
-              <span style="display: block; color: #8d9ba8; font-weight: 400; margin-top: 0.05em;">whose responsibilities are</span>
-              <span style="display: block; color: #8d9ba8; font-weight: 400;">clear.</span>
+            <h2 class="academy-compare-title">
+              <span>Choose the solution</span>
+              <span class="academy-compare-title-light">whose responsibilities are clear.</span>
             </h2>
-            <p style="font-size: clamp(1.05rem, 1.2vw, 1.2rem); line-height: 1.6; color: #475569; max-width: 680px; margin: 0;">
+            <p class="academy-compare-sub">
               The objective is not to find the longest proposal. It is to find the configuration that fits your project and can be verified.
             </p>
           </div>
 
           <!-- Decision Table -->
-          <div style="border-top: 1px solid #eef2f6; margin-top: 3.5rem;">
+          <div class="academy-compare-decide-table">
             
             <!-- Table Header -->
-            <div style="display: grid; grid-template-columns: 340px 1fr; gap: 3rem; padding: 1.4rem 0; border-bottom: 1px solid #eef2f6;">
-              <span style="font-size: 0.76rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: #8d9ba8;">
-                DECISION AREA
-              </span>
-              <span style="font-size: 0.76rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: #8d9ba8;">
-                QUESTION TO ANSWER
-              </span>
+            <div class="academy-compare-decide-header">
+              <span>DECISION AREA</span>
+              <span>QUESTION TO ANSWER</span>
             </div>
 
             <!-- Table Rows -->
@@ -1319,11 +1343,11 @@
               { area: "Contractual clarity", question: "Are performance obligations and acceptance conditions measurable?" },
               { area: "Future readiness", question: "Can the layout support realistic expansion or panel requirements?" }
             ].map(row => `
-              <div style="display: grid; grid-template-columns: 340px 1fr; gap: 3rem; align-items: baseline; padding: 2.2rem 0; border-bottom: 1px solid #eef2f6;">
-                <h3 style="font-size: clamp(1.15rem, 1.35vw, 1.35rem); font-weight: 700; color: #07172c; margin: 0; letter-spacing: -0.01em;">
+              <div class="academy-compare-decide-row">
+                <h3 class="academy-compare-decide-name">
                   ${row.area}
                 </h3>
-                <p style="font-size: clamp(0.96rem, 1.06vw, 1.06rem); line-height: 1.6; color: #64748b; margin: 0;">
+                <p class="academy-compare-sub">
                   ${row.question}
                 </p>
               </div>
@@ -1332,11 +1356,11 @@
           </div>
 
           <!-- Bottom Gate Decision Banner -->
-          <div style="background: #f8fafc; border: 1px solid #f1f5f9; padding: 2.4rem 2.8rem; margin-top: 4.5rem; border-radius: 4px; display: grid; grid-template-columns: 340px 1fr; gap: 3rem; align-items: center;">
-            <div style="font-size: clamp(1.1rem, 1.25vw, 1.25rem); font-weight: 700; color: #07172c; line-height: 1.4;">
+          <div class="academy-compare-gate-banner">
+            <div class="academy-compare-gate-title">
               Do not let a high total score hide a critical failure.
             </div>
-            <div style="font-size: clamp(0.92rem, 1.02vw, 1.02rem); line-height: 1.65; color: #64748b;">
+            <div class="academy-compare-gate-text">
               Unsupported capacity, incomplete safety responsibility, unclear acceptance terms or an essential missing plant section should be treated as decision gates—not merely low-scoring items.
             </div>
           </div>
@@ -1344,27 +1368,25 @@
         </div>
       </section>
 
-      <!-- ============ SECTION 06: BEFORE YOU FINALIZE (EIGHT RED FLAGS) ============ -->
-      <section class="academy-section" id="red-flags" style="padding: 7rem 2rem 7rem; background: #ffffff;">
-        <div class="academy-section__inner" style="max-width: 1500px; margin: 0 auto;">
+      <!-- ============ SECTION 07: BEFORE YOU FINALIZE (EIGHT RED FLAGS) ============ -->
+      <section class="academy-section academy-section--alt" id="red-flags">
+        <div class="academy-section__inner">
           
-          <div style="display: grid; grid-template-columns: 1fr 1.35fr; gap: 5.5rem; align-items: start;">
+          <div class="academy-compare-split-layout">
             
             <!-- Left Column: Title -->
             <div>
-              <span class="academy-micro-label" style="display: inline-block; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: #026aa7; margin-bottom: 2rem;">
+              <span class="academy-micro-label">
                 BEFORE YOU FINALIZE
               </span>
-              <h2 style="font-size: clamp(3.4rem, 5.8vw, 5.8rem); font-weight: 700; line-height: 1.02; letter-spacing: -0.035em; color: #07172c; margin: 0;">
-                <span style="display: block;">Eight red</span>
-                <span style="display: block;">flags</span>
-                <span style="display: block; color: #8d9ba8; font-weight: 400; margin-top: 0.05em;">worth</span>
-                <span style="display: block; color: #8d9ba8; font-weight: 400;">stopping for.</span>
+              <h2 class="academy-compare-title">
+                <span>Eight red flags</span>
+                <span class="academy-compare-title-light">worth stopping for.</span>
               </h2>
             </div>
 
             <!-- Right Column: 8 Red Flag Specification Rows -->
-            <div style="border-top: 1px solid #eef2f6; padding-top: 0.5rem;">
+            <div style="border-top: 1px solid #eef2f6;">
               ${[
                 { num: "01", text: "Capacity without cycle, operating-hour or saleable-output assumptions." },
                 { num: "02", text: "‘Fully automatic’ without a process-level automation boundary." },
@@ -1375,9 +1397,9 @@
                 { num: "07", text: "No measurable performance test or acceptance protocol." },
                 { num: "08", text: "Limited access to relevant customers or technical personnel." }
               ].map(flag => `
-                <div style="display: grid; grid-template-columns: 55px 1fr; gap: 2rem; align-items: baseline; padding: 1.6rem 0; border-bottom: 1px solid #eef2f6;">
-                  <span style="font-size: 0.88rem; font-weight: 700; color: #026aa7; font-family: var(--font-geist-mono), monospace;">${flag.num}</span>
-                  <p style="font-size: clamp(0.98rem, 1.08vw, 1.08rem); line-height: 1.55; color: #334155; margin: 0; font-weight: 500;">
+                <div class="academy-compare-spec-row" style="grid-template-columns: 45px 1fr;">
+                  <span class="academy-compare-spec-num">${flag.num}</span>
+                  <p class="academy-compare-sub" style="font-weight: 500; color: #334155;">
                     ${flag.text}
                   </p>
                 </div>
@@ -1389,22 +1411,20 @@
         </div>
       </section>
 
-      <!-- ============ SECTION 07: INVESTOR QUESTIONS (FAQ ACCORDION) ============ -->
-      <section class="academy-section" id="faq" style="padding: 7rem 2rem 7rem; background: #ffffff;">
-        <div class="academy-section__inner" style="max-width: 1500px; margin: 0 auto;">
+      <!-- ============ SECTION 08: INVESTOR QUESTIONS (FAQ ACCORDION) ============ -->
+      <section class="academy-section" id="faq">
+        <div class="academy-section__inner">
           
-          <div style="display: grid; grid-template-columns: 1fr 1.35fr; gap: 5.5rem; align-items: start;">
+          <div class="academy-compare-split-layout">
             
             <!-- Left Column: Title -->
             <div>
-              <span class="academy-micro-label" style="display: inline-block; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: #026aa7; margin-bottom: 2rem;">
+              <span class="academy-micro-label">
                 INVESTOR QUESTIONS
               </span>
-              <h2 style="font-size: clamp(3.4rem, 5.8vw, 5.8rem); font-weight: 700; line-height: 1.02; letter-spacing: -0.035em; color: #07172c; margin: 0;">
-                <span style="display: block;">Clear</span>
-                <span style="display: block;">answers.</span>
-                <span style="display: block; color: #8d9ba8; font-weight: 400; margin-top: 0.05em;">Before</span>
-                <span style="display: block; color: #8d9ba8; font-weight: 400;">commitment.</span>
+              <h2 class="academy-compare-title">
+                <span>Clear answers.</span>
+                <span class="academy-compare-title-light">Before commitment.</span>
               </h2>
             </div>
 
@@ -1437,11 +1457,11 @@
                 }
               ].map(item => `
                 <details style="border-bottom: 1px solid #eef2f6;" class="academy-faq-group">
-                  <summary style="display: flex; justify-content: space-between; align-items: center; padding: 2rem 0; font-size: clamp(1.1rem, 1.3vw, 1.3rem); font-weight: 700; color: #07172c; cursor: pointer; list-style: none; user-select: none;">
+                  <summary style="display: flex; justify-content: space-between; align-items: center; padding: 1.6rem 0; font-size: clamp(1.05rem, 1.25vw, 1.25rem); font-weight: 700; color: #07172c; cursor: pointer; list-style: none; user-select: none;">
                     <span>${item.q}</span>
-                    <span style="font-size: 1.4rem; font-weight: 400; color: #026aa7; margin-left: 1.5rem; transition: transform 0.2s ease;">+</span>
+                    <span style="font-size: 1.3rem; font-weight: 400; color: #026aa7; margin-left: 1rem; transition: transform 0.2s ease;">+</span>
                   </summary>
-                  <div style="padding: 0 0 2rem 0; font-size: clamp(0.96rem, 1.05vw, 1.05rem); line-height: 1.65; color: #64748b;">
+                  <div style="padding: 0 0 1.5rem 0; font-size: clamp(0.94rem, 1vw, 1rem); line-height: 1.65; color: #64748b;">
                     ${item.a}
                   </div>
                 </details>
@@ -1453,29 +1473,28 @@
         </div>
       </section>
 
-      <!-- ============ SECTION 08: BEFORE THE PURCHASE ORDER ============ -->
-      <section class="academy-section" id="final-cta" style="padding: 7.5rem 2rem 7rem; background: #072646; color: #ffffff; text-align: center;">
-        <div class="academy-section__inner" style="max-width: 1500px; margin: 0 auto;">
+      <!-- ============ SECTION 09: BEFORE THE PURCHASE ORDER (CTA) ============ -->
+      <section class="academy-section academy-section--dark" id="final-cta" style="text-align: center;">
+        <div class="academy-section__inner">
           
           <div style="max-width: 860px; margin: 0 auto; text-align: center;">
-            <span class="academy-micro-label" style="display: inline-block; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: #38bdf8; margin-bottom: 2rem;">
+            <span class="academy-micro-label" style="color: #38bdf8; margin-bottom: 1.5rem;">
               BEFORE THE PURCHASE ORDER
             </span>
-            <h2 style="font-size: clamp(3.2rem, 5.4vw, 5.4rem); font-weight: 700; line-height: 1.03; letter-spacing: -0.035em; color: #ffffff; margin: 0 0 2rem 0; text-align: center;">
-              <span style="display: block;">Review the proposal.</span>
-              <span style="display: block; color: #93c5fd; font-weight: 400; margin-top: 0.05em;">Expose the assumptions.</span>
+            <h2 class="academy-compare-title academy-compare-title--white" style="text-align: center;">
+              <span>Review the proposal.</span>
+              <span class="academy-compare-title-light">Expose the assumptions.</span>
             </h2>
-            <p style="font-size: clamp(1.05rem, 1.25vw, 1.25rem); line-height: 1.65; color: rgba(255, 255, 255, 0.82); max-width: 720px; margin: 0 auto 3rem auto; text-align: center;">
+            <p class="academy-compare-sub academy-compare-sub--light" style="max-width: 720px; margin: 0 auto 2.5rem auto;">
               Share your proposed capacity, product mix and supplier scope sheets. Identify technical deviations, incomplete responsibilities and questions that should be resolved before finalization.
             </p>
 
-            <div style="display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap;">
-              <a href="${contactUrl}" style="padding: 1rem 2rem; border-radius: 9999px; background: #ffffff; color: #07172c !important; font-weight: 700; text-decoration: none; font-size: 0.95rem; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2); transition: all 0.25s ease;">
-                Request a technical proposal review
+            <div style="display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+              <a href="${contactUrl}" class="editorial-hero__btn-dark" style="background: #ffffff; color: #07172c !important; font-weight: 800;">
+                <span>Request a Technical Proposal Review ↗</span>
               </a>
-              <a href="#matrix" style="color: #ffffff !important; font-weight: 500; font-size: 0.95rem; text-decoration: underline; text-underline-offset: 4px; display: inline-flex; align-items: center; gap: 0.35rem; transition: opacity 0.2s ease;">
-                <span>Revisit the comparison framework</span>
-                <span>↑</span>
+              <a href="#matrix" style="color: #ffffff !important; font-weight: 600; font-size: 0.92rem; text-decoration: underline; text-underline-offset: 4px;">
+                Revisit the comparison framework ↑
               </a>
             </div>
           </div>
@@ -1514,6 +1533,7 @@
   }
 
   function initChecklistListeners() {
+    updateAuditProgressTracker();
     document.querySelectorAll('.academy-checklist-card').forEach(card => {
       const btn = card.querySelector('.academy-checklist-btn');
       const num = card.getAttribute('data-card-num');
