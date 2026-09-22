@@ -869,7 +869,7 @@ main {
   margin-bottom: 14px;
 }
 
-.step-num {
+.process-step-card .step-num {
   display: inline-block;
   padding: 3px 10px;
   font-size: 12px;
