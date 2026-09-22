@@ -16,7 +16,7 @@
   --muted: #84909c;
   --line: #dce2e7;
   --highlight: #8fc6ec;
-  --shell: min(1400px, 88vw);
+  --shell: min(1400px, 100% - 12vw);
 }
 
 .autoclave-page {
@@ -62,20 +62,23 @@
 }
 
 .autoclave-page h1 span {
-  color: rgba(255, 255, 255, 0.6);
+  color: #cbd5df;
   font-weight: 480;
   display: block;
 }
 
 .autoclave-page h2 {
-  font-size: clamp(2.4rem, 4.8vw, 4.8rem);
-  font-weight: 620;
-  max-width: 900px;
+  font-size: clamp(44px, 5.4vw, 82px);
+  font-weight: 580;
+  letter-spacing: -0.045em;
+  line-height: 0.96;
+  max-width: 1000px;
 }
 
-.autoclave-page h2 span {
+.autoclave-page h2 span,
+.autoclave-page .section-head h2 span {
   color: var(--muted);
-  font-weight: 480;
+  font-weight: 470;
   display: block;
 }
 
@@ -91,7 +94,7 @@
 }
 
 .autoclave-page .section {
-  padding-block: clamp(90px, 9vw, 150px);
+  padding-block: clamp(100px, 10vw, 168px);
 }
 
 .autoclave-page .silver {
@@ -268,7 +271,7 @@
 }
 
 /* Direct Answer Section / Intro */
-.autoclave-page .intro {
+.autoclave-page .intro-grid {
   grid-template-columns: 1.15fr 0.85fr;
   align-items: start;
   gap: 8vw;
@@ -423,7 +426,7 @@
 }
 
 /* Pressure Safety Section */
-.autoclave-page .safety {
+.autoclave-page .safety-layout {
   grid-template-columns: 1.1fr 0.9fr;
   gap: 8vw;
   display: grid;
@@ -554,7 +557,7 @@
 }
 
 /* FAQ Section */
-.autoclave-page .faq {
+.autoclave-page .faq-layout {
   grid-template-columns: 0.75fr 1.25fr;
   gap: 8vw;
   display: grid;
@@ -653,17 +656,17 @@
 
 /* Responsive Media Queries */
 @media (max-width: 1024px) {
-  .autoclave-page .intro,
-  .autoclave-page .safety,
+  .autoclave-page .intro-grid,
+  .autoclave-page .safety-layout,
   .autoclave-page .evidence-grid,
   .autoclave-page .lifecycle-grid,
-  .autoclave-page .faq {
+  .autoclave-page .faq-layout {
     grid-template-columns: 1fr;
     gap: 40px;
   }
 
   .autoclave-page .safety-lead,
-  .autoclave-page .faq .section-head {
+  .autoclave-page .faq-layout .section-head {
     position: static;
   }
 
