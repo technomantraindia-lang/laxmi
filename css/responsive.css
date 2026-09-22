@@ -637,27 +637,7 @@ html, body {
   }
 
   .eng-nav-strip {
-    top: 72px !important;
-    padding: 0.6rem 1rem !important;
-  }
-
-  .eng-nav-strip__inner {
-    padding: 0 !important;
-    gap: 0.4rem !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-    scrollbar-width: none !important;
-  }
-
-  .eng-nav-strip__inner::-webkit-scrollbar {
     display: none !important;
-  }
-
-  .eng-nav-btn {
-    padding: 0.45rem 0.85rem !important;
-    font-size: 0.72rem !important;
-    flex-shrink: 0 !important;
-    white-space: nowrap !important;
   }
 
   /* Section & Container Side Padding */
