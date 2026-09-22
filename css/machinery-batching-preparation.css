@@ -1,0 +1,806 @@
+/* ==========================================================================
+   AAC BATCHING SYSTEM & RAW MATERIAL PREPARATION PAGE STYLES
+   Scope: .batching-page
+   ========================================================================== */
+
+:root {
+  --navy: #0b1727;
+  --blue: #0c4f80;
+  --deep-a: #104f7d;
+  --deep-b: #09263d;
+  --white: #ffffff;
+  --silver: #eef2f5;
+  --light: #f5f7f8;
+  --text: #0b1727;
+  --secondary: #5e6874;
+  --muted: #84909c;
+  --line: #dce2e7;
+  --highlight: #8fc6ec;
+  --shell: min(1400px, 88vw);
+}
+
+.batching-page {
+  color: var(--text);
+  background: var(--white);
+  font-family: 'Geist', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}
+
+.batching-page * {
+  box-sizing: border-box;
+}
+
+.batching-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.batching-page p {
+  color: var(--secondary);
+  margin: 0;
+  font-size: clamp(1rem, 1.15vw, 1.16rem);
+  line-height: 1.72;
+}
+
+.batching-page h1,
+.batching-page h2,
+.batching-page h3 {
+  letter-spacing: -0.045em;
+  margin: 0;
+  line-height: 0.98;
+  color: var(--navy);
+}
+
+.batching-page h1 {
+  color: var(--white);
+  font-size: clamp(3.2rem, 6.2vw, 6.2rem);
+  font-weight: 650;
+  max-width: 900px;
+}
+
+.batching-page h1 span {
+  color: #b9c5cf;
+  font-weight: 480;
+  display: block;
+}
+
+.batching-page h2 {
+  font-size: clamp(2.4rem, 4.8vw, 4.8rem);
+  font-weight: 620;
+  max-width: 900px;
+}
+
+.batching-page h3 {
+  font-size: clamp(1.25rem, 1.6vw, 1.6rem);
+  line-height: 1.2;
+  font-weight: 650;
+}
+
+.batching-page .shell {
+  width: var(--shell);
+  margin-inline: auto;
+}
+
+.batching-page .section {
+  padding-block: clamp(90px, 9vw, 150px);
+}
+
+.batching-page .silver {
+  background: var(--silver);
+}
+
+.batching-page .dark {
+  background: linear-gradient(135deg, var(--deep-a) 0%, var(--deep-b) 100%);
+  color: var(--white);
+}
+
+.batching-page .dark h2 {
+  color: var(--white);
+}
+
+.batching-page .dark p {
+  color: #c4d0d9;
+}
+
+.batching-page .eyebrow {
+  color: var(--blue) !important;
+  letter-spacing: 0.2em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 1.5rem !important;
+  font-size: 0.75rem !important;
+  font-weight: 750 !important;
+  line-height: 1 !important;
+  display: block !important;
+  gap: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  width: fit-content;
+}
+
+.batching-page .eyebrow::before {
+  content: none !important;
+  display: none !important;
+}
+
+.batching-page .eyebrow.light,
+.batching-page .dark .eyebrow,
+.batching-page .consultation .eyebrow {
+  color: var(--highlight) !important;
+}
+
+.batching-page .lead {
+  color: #34404c;
+  margin-top: 1.8rem;
+  font-size: clamp(1.15rem, 1.45vw, 1.4rem);
+  line-height: 1.6;
+}
+
+.batching-page .narrow {
+  max-width: 52rem;
+}
+
+/* Hero Section */
+.batching-page .hero {
+  background: var(--navy);
+  align-items: center;
+  min-height: 92vh;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.batching-page .hero-media {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.batching-page .hero::after {
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(7, 20, 35, 0.88) 0%, rgba(7, 20, 35, 0.6) 42%, rgba(7, 20, 35, 0.2) 75%, transparent 100%);
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.batching-page .hero-content {
+  z-index: 3;
+  padding-top: 60px;
+  position: relative;
+}
+
+.batching-page .hero-content > * {
+  max-width: min(720px, 52vw);
+}
+
+.batching-page .hero-copy {
+  color: #c6d0d8;
+  max-width: 39rem;
+  margin-top: 1.8rem;
+  font-size: clamp(1.05rem, 1.3vw, 1.25rem);
+  line-height: 1.65;
+}
+
+.batching-page .hero-actions {
+  align-items: center;
+  gap: 24px;
+  margin-top: 2.2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.batching-page .button {
+  border-radius: 999px;
+  justify-content: center;
+  align-items: center;
+  min-height: 50px;
+  padding: 0 28px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  display: inline-flex;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.batching-page .button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.batching-page .button-light {
+  background: var(--white);
+  color: var(--navy);
+}
+
+.batching-page .button-light:hover {
+  background: #f0f4f8;
+}
+
+.batching-page .text-link {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  align-items: center;
+  gap: 0.55rem;
+  padding-block: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  display: inline-flex;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.batching-page .text-link.light {
+  color: var(--white);
+}
+
+.batching-page .text-link.light:hover {
+  color: var(--highlight);
+  border-color: var(--highlight);
+}
+
+.batching-page .hero-note {
+  color: #9eabb5;
+  letter-spacing: 0.04em;
+  margin-top: 2rem;
+  font-size: 0.8rem;
+}
+
+/* Section Headings */
+.batching-page .section-heading {
+  margin-bottom: clamp(3rem, 6vw, 6rem);
+}
+
+.batching-page .section-heading.two-col {
+  grid-template-columns: 1fr 3fr;
+  align-items: start;
+  gap: 6vw;
+  display: grid;
+}
+
+.batching-page .section-heading.two-col > div {
+  max-width: 58rem;
+}
+
+.batching-page .section-heading.two-col h2 {
+  max-width: 14ch;
+}
+
+.batching-page .section-heading.two-col p:not(.eyebrow) {
+  max-width: 46rem;
+}
+
+/* Direct Answer Statement Box */
+.batching-page .statement {
+  background: var(--light);
+  border-top: 1px solid var(--line);
+  margin-top: 5rem;
+  padding: clamp(2.5rem, 5vw, 4.5rem);
+  border-radius: 4px;
+}
+
+.batching-page .statement p {
+  max-width: 32ch;
+  color: var(--navy);
+  letter-spacing: -0.04em;
+  font-size: clamp(1.8rem, 3.2vw, 3.5rem);
+  line-height: 1.1;
+  font-weight: 650;
+}
+
+.batching-page .statement span {
+  color: var(--blue);
+  letter-spacing: 0.03em;
+  margin-top: 1.8rem;
+  font-size: 0.95rem;
+  font-weight: 750;
+  display: block;
+}
+
+/* Three Material Routes */
+.batching-page .route-list {
+  border-top: 1px solid #cdd5db;
+}
+
+.batching-page .route {
+  border-bottom: 1px solid #cdd5db;
+  grid-template-columns: 0.6fr 1.3fr 2.4fr 2.4fr;
+  align-items: start;
+  gap: 2vw;
+  padding-block: 2.5rem;
+  display: grid;
+}
+
+.batching-page .route-number {
+  color: var(--blue);
+  font-size: 0.8rem;
+  font-weight: 750;
+  font-family: monospace;
+}
+
+.batching-page .route h3 {
+  letter-spacing: -0.03em;
+  color: var(--navy);
+}
+
+.batching-page .route-flow {
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.batching-page .route p {
+  font-size: 1rem;
+}
+
+/* Slurry Density / Control Insight */
+.batching-page .density-grid,
+.batching-page .selection-grid {
+  grid-template-columns: 1.15fr 1fr;
+  align-items: start;
+  gap: 8vw;
+  display: grid;
+}
+
+.batching-page .density h2,
+.batching-page .selection h2 {
+  color: var(--white);
+  max-width: 14ch;
+}
+
+.batching-page .density-copy .lead {
+  color: var(--white);
+  margin-top: 0;
+}
+
+.batching-page .density-copy > p + p {
+  margin-top: 1.5rem;
+}
+
+.batching-page .micro-rule {
+  color: var(--white);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 1.8rem;
+  font-size: 0.85rem;
+  font-weight: 750;
+  display: flex;
+}
+
+.batching-page .micro-rule i {
+  color: var(--highlight);
+  font-style: normal;
+  font-size: 1.1rem;
+}
+
+/* System Scope (5 Connected Functions) */
+.batching-page .equipment-rows {
+  border-top: 1px solid var(--line);
+}
+
+.batching-page .equipment-rows article {
+  border-bottom: 1px solid var(--line);
+  grid-template-columns: 0.55fr 1.25fr 3.2fr;
+  align-items: start;
+  gap: 2vw;
+  padding-block: 2rem;
+  display: grid;
+}
+
+.batching-page .equipment-rows article > span {
+  color: var(--blue);
+  font-size: 0.8rem;
+  font-weight: 750;
+  font-family: monospace;
+}
+
+.batching-page .equipment-rows h3 {
+  color: var(--navy);
+}
+
+.batching-page .equipment-rows p {
+  max-width: 49rem;
+  font-size: 1rem;
+}
+
+/* Batch Sequence (6 Steps) */
+.batching-page .sequence-grid {
+  grid-template-columns: 1fr 1.2fr;
+  align-items: start;
+  gap: 9vw;
+  display: grid;
+}
+
+.batching-page .sequence-sticky {
+  position: sticky;
+  top: 100px;
+}
+
+.batching-page .sequence-sticky h2 {
+  max-width: 12ch;
+}
+
+.batching-page .sequence-sticky > p:last-child {
+  max-width: 32rem;
+  margin-top: 1.8rem;
+}
+
+.batching-page .steps {
+  border-top: 1px solid #cbd4da;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.batching-page .steps li {
+  border-bottom: 1px solid #cbd4da;
+  grid-template-columns: 3.3rem 1fr;
+  gap: 1.3rem;
+  padding-block: 2rem;
+  display: grid;
+}
+
+.batching-page .steps li > span {
+  color: var(--blue);
+  font-size: 0.8rem;
+  font-weight: 750;
+  font-family: monospace;
+}
+
+.batching-page .steps h3 {
+  margin-bottom: 0.65rem;
+  color: var(--navy);
+}
+
+.batching-page .steps p {
+  font-size: 1rem;
+}
+
+/* Automation Without Myths Table */
+.batching-page .compare {
+  border-top: 1px solid var(--line);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.batching-page .compare > div {
+  border-bottom: 1px solid var(--line);
+  grid-template-columns: 1fr 2.5fr;
+  display: grid;
+}
+
+.batching-page .compare span,
+.batching-page .compare strong {
+  padding: 1.35rem 1.2rem;
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+.batching-page .compare strong {
+  color: var(--navy);
+  background: #fafbfc;
+}
+
+.batching-page .compare-head {
+  background: var(--navy) !important;
+  color: var(--white) !important;
+  font-size: 0.8rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.batching-page .compare-head span {
+  background: transparent !important;
+  color: var(--white) !important;
+}
+
+/* Selection Section */
+.batching-page .selection-list {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.batching-page .selection-list li {
+  color: var(--white);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  grid-template-columns: 3.2rem 1fr;
+  gap: 1rem;
+  padding-block: 1.45rem;
+  font-size: clamp(1rem, 1.25vw, 1.2rem);
+  line-height: 1.45;
+  display: grid;
+}
+
+.batching-page .selection-list span {
+  color: var(--highlight);
+  font-size: 0.78rem;
+  font-weight: 750;
+  font-family: monospace;
+}
+
+/* Mistakes Table */
+.batching-page .mistakes {
+  overflow-x: auto;
+}
+
+.batching-page .mistake-table {
+  border-top: 1px solid var(--line);
+  min-width: 780px;
+}
+
+.batching-page .mistake-table > div {
+  border-bottom: 1px solid var(--line);
+  grid-template-columns: 1.2fr 1.4fr 1.4fr;
+  display: grid;
+}
+
+.batching-page .mistake-table span,
+.batching-page .mistake-table strong {
+  padding: 1.5rem 1.3rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.batching-page .mistake-table strong {
+  color: var(--navy);
+  background: #fafbfc;
+}
+
+.batching-page .mistake-head {
+  color: var(--white);
+  background: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  font-weight: 750;
+}
+
+.batching-page .mistake-head span {
+  color: var(--white);
+}
+
+/* Qualification Banner */
+.batching-page .qualification {
+  background: #e6edf2;
+  border-block: 1px solid #d3dde4;
+  padding-block: 3.8rem;
+}
+
+.batching-page .qualification-inner {
+  grid-template-columns: 1fr 3fr;
+  gap: 6vw;
+  display: grid;
+  align-items: center;
+}
+
+.batching-page .qualification-inner p:last-child {
+  color: var(--navy);
+  max-width: 55rem;
+  font-size: clamp(1.2rem, 1.8vw, 1.6rem);
+  line-height: 1.45;
+  font-weight: 550;
+}
+
+/* FAQ Section */
+.batching-page .faq-grid {
+  grid-template-columns: 1fr 1.35fr;
+  align-items: start;
+  gap: 9vw;
+  display: grid;
+}
+
+.batching-page .faq-intro {
+  position: sticky;
+  top: 100px;
+}
+
+.batching-page .faq-intro h2 {
+  max-width: 12ch;
+}
+
+.batching-page .faq-intro > p:last-child {
+  max-width: 27rem;
+  margin-top: 1.8rem;
+}
+
+.batching-page .accordion {
+  border-top: 1px solid #cbd4da;
+}
+
+.batching-page details {
+  border-bottom: 1px solid #cbd4da;
+}
+
+.batching-page summary {
+  cursor: pointer;
+  color: var(--navy);
+  justify-content: space-between;
+  gap: 2rem;
+  padding-block: 1.55rem;
+  font-size: clamp(1.08rem, 1.35vw, 1.28rem);
+  font-weight: 700;
+  list-style: none;
+  display: flex;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+
+.batching-page summary::-webkit-details-marker {
+  display: none;
+}
+
+.batching-page summary:hover {
+  color: var(--blue);
+}
+
+.batching-page summary span {
+  color: var(--blue);
+  font-size: 1.6rem;
+  font-weight: 300;
+  transition: transform 0.2s ease;
+}
+
+.batching-page details[open] summary span {
+  transform: rotate(45deg);
+}
+
+.batching-page details p {
+  max-width: 45rem;
+  padding: 0 3rem 1.7rem 0;
+  font-size: 1rem;
+}
+
+/* Consultation Section */
+.batching-page .consultation {
+  color: var(--white);
+  background: linear-gradient(135deg, var(--deep-a) 0%, var(--deep-b) 100%);
+  padding-block: clamp(90px, 9vw, 150px);
+}
+
+.batching-page .consultation-inner h2 {
+  max-width: 14ch;
+  color: var(--white);
+}
+
+.batching-page .consultation-inner > p:not(.eyebrow) {
+  color: #c4d0d9;
+  max-width: 51rem;
+  margin-top: 1.8rem;
+  font-size: clamp(1.08rem, 1.35vw, 1.28rem);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .batching-page .section-heading.two-col,
+  .batching-page .density-grid,
+  .batching-page .selection-grid,
+  .batching-page .sequence-grid,
+  .batching-page .qualification-inner,
+  .batching-page .faq-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .batching-page .route {
+    grid-template-columns: 0.35fr 1fr 1.6fr;
+  }
+
+  .batching-page .route > p:last-child {
+    grid-column: 2 / -1;
+  }
+
+  .batching-page .hero::after {
+    background: linear-gradient(90deg, rgba(7, 20, 35, 0.94) 0%, rgba(7, 20, 35, 0.75) 50%, rgba(7, 20, 35, 0.2) 80%);
+  }
+
+  .batching-page .hero-content > * {
+    max-width: 68vw;
+  }
+
+  .batching-page .sequence-sticky,
+  .batching-page .faq-intro {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .batching-page .shell,
+  .batching-page .hero-content {
+    width: calc(100% - 36px);
+  }
+
+  .batching-page .section {
+    padding-block: 70px;
+  }
+
+  .batching-page .hero {
+    align-items: flex-end;
+    min-height: 760px;
+    padding-bottom: 50px;
+  }
+
+  .batching-page .hero-media {
+    object-position: 70% center;
+  }
+
+  .batching-page .hero::after {
+    background: linear-gradient(180deg, rgba(7, 20, 35, 0.2) 0%, rgba(7, 20, 35, 0.8) 45%, rgba(7, 20, 35, 0.98) 95%);
+  }
+
+  .batching-page .hero-content {
+    padding-top: 200px;
+  }
+
+  .batching-page .hero-content > * {
+    max-width: 100%;
+  }
+
+  .batching-page h1 {
+    font-size: clamp(2.8rem, 11vw, 4rem);
+  }
+
+  .batching-page h2 {
+    font-size: clamp(2.2rem, 9vw, 3.2rem);
+  }
+
+  .batching-page .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .batching-page .button {
+    width: 100%;
+  }
+
+  .batching-page .statement {
+    margin-top: 3rem;
+    padding: 24px 20px;
+  }
+
+  .batching-page .route {
+    grid-template-columns: 2.5rem 1fr;
+    gap: 12px;
+  }
+
+  .batching-page .route .route-flow,
+  .batching-page .route > p:last-child {
+    grid-column: 2;
+  }
+
+  .batching-page .equipment-rows article {
+    grid-template-columns: 2.5rem 1fr;
+    gap: 12px;
+  }
+
+  .batching-page .equipment-rows article p {
+    grid-column: 2;
+  }
+
+  .batching-page .compare {
+    overflow-x: auto;
+  }
+
+  .batching-page .compare > div {
+    min-width: 600px;
+  }
+}

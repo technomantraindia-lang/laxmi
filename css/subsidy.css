@@ -1,0 +1,830 @@
+/* ==========================================================================
+   AAC BLOCK PLANT SUBSIDY IN INDIA — STYLES
+   Source: https://laxmi-en-fab-complete.mitesh958.chatgpt.site/imported/aac-plant-subsidies-india/
+   ========================================================================== */
+
+:root {
+  --navy: #0b1727;
+  --blue: #0c4f80;
+  --silver: #eef2f5;
+  --white: #fff;
+  --text: #0b1727;
+  --secondary: #5e6874;
+  --muted: #84909c;
+  --line: #dce2e7;
+  --highlight: #8fc6ec;
+  --max: 1400px;
+}
+
+.subsidy-page {
+  background: #fff;
+  color: var(--text);
+  font-family: 'Geist', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.subsidy-page * {
+  box-sizing: border-box;
+}
+
+.subsidy-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.subsidy-page button {
+  font: inherit;
+}
+
+.subsidy-page .shell {
+  width: min(var(--max), calc(100% - 12vw));
+  margin: auto;
+}
+
+/* ==========================================================================
+   Eyebrow & Label Resets (Prevent main.css badge styles from leaking)
+   ========================================================================== */
+
+.subsidy-page .eyebrow,
+.subsidy-page .label {
+  color: var(--blue);
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  margin: 0 0 24px !important;
+  font-size: 12px;
+  font-weight: 750;
+  line-height: 1.2;
+  display: block !important;
+  background: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  gap: 0 !important;
+  width: auto !important;
+  max-width: none !important;
+}
+
+.subsidy-page .eyebrow::before,
+.subsidy-page .label::before {
+  content: none !important;
+  display: none !important;
+}
+
+.subsidy-page .eyebrow.pale,
+.subsidy-page .pale,
+.subsidy-page .dark .eyebrow,
+.subsidy-page .conversion .eyebrow,
+.subsidy-page .formula .label,
+.subsidy-page .dark-columns .label {
+  color: var(--highlight) !important;
+}
+
+/* ==========================================================================
+   Headings & Typography
+   ========================================================================== */
+
+.subsidy-page h1,
+.subsidy-page h2,
+.subsidy-page .conversion h2 {
+  letter-spacing: -.055em;
+  margin: 0;
+  font-weight: 480;
+  line-height: .94;
+}
+
+.subsidy-page h1 {
+  max-width: 730px;
+  font-size: clamp(58px, 7vw, 108px);
+}
+
+.subsidy-page h1 span,
+.subsidy-page h2 span,
+.subsidy-page .conversion h2 span {
+  color: var(--muted);
+  display: block;
+}
+
+.subsidy-page .hero-copy {
+  max-width: 650px;
+  color: var(--secondary);
+  margin: 34px 0 28px;
+  font-size: clamp(17px, 1.4vw, 20px);
+  line-height: 1.55;
+}
+
+.subsidy-page .actions {
+  align-items: center;
+  gap: 26px;
+  display: flex;
+}
+
+.subsidy-page .button {
+  border-radius: 999px;
+  justify-content: center;
+  align-items: center;
+  min-height: 46px;
+  padding: 0 22px;
+  font-size: 13px;
+  font-weight: 650;
+  transition: transform .2s, background .2s;
+  display: inline-flex;
+}
+
+.subsidy-page .button.primary {
+  background: var(--blue);
+  color: #fff;
+}
+
+.subsidy-page .button.light {
+  color: var(--navy);
+  background: #fff;
+}
+
+.subsidy-page .button:hover {
+  transform: translateY(-2px);
+}
+
+.subsidy-page .text-link {
+  font-size: 14px;
+  font-weight: 650;
+  display: inline-flex;
+  align-items: center;
+}
+
+.subsidy-page .text-link span {
+  margin-left: 6px;
+}
+
+.subsidy-page .light-link {
+  color: #fff;
+}
+
+.subsidy-page .micro {
+  color: var(--muted);
+  margin: 22px 0 0;
+  font-size: 12px;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+
+.subsidy-page .hero {
+  background: #f7f9fb;
+  align-items: center;
+  min-height: calc(100vh - 70px);
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.subsidy-page .hero-media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.subsidy-page .hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.subsidy-page .hero-wash {
+  background: linear-gradient(90deg, #fffffffa 0%, #fffffff0 31%, #ffffff59 53%, #fff0 72%);
+  position: absolute;
+  inset: 0;
+}
+
+.subsidy-page .hero-content {
+  z-index: 2;
+  padding-top: 8vh;
+  padding-bottom: 8vh;
+  position: relative;
+}
+
+/* ==========================================================================
+   Section Bases
+   ========================================================================== */
+
+.subsidy-page .section {
+  padding: clamp(100px, 11vw, 170px) 0;
+}
+
+.subsidy-page .white {
+  background: #fff;
+}
+
+.subsidy-page .silver {
+  background: var(--silver);
+}
+
+.subsidy-page .dark {
+  background: var(--navy);
+  color: #fff;
+}
+
+.subsidy-page .split-heading {
+  grid-template-columns: minmax(0, 1.65fr) minmax(280px, .7fr);
+  align-items: end;
+  gap: 9vw;
+  display: grid;
+}
+
+.subsidy-page .section h2,
+.subsidy-page .conversion h2 {
+  font-size: clamp(44px, 6vw, 86px);
+}
+
+.subsidy-page .split-heading > p {
+  color: var(--secondary);
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+/* ==========================================================================
+   01 · Understand Support Grid
+   ========================================================================== */
+
+.subsidy-page .support-grid {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 80px;
+  display: grid;
+}
+
+.subsidy-page .support-grid article {
+  border-right: 1px solid var(--line);
+  min-height: 235px;
+  padding: 32px 26px;
+}
+
+.subsidy-page .support-grid article:last-child {
+  border-right: 0;
+}
+
+.subsidy-page .support-grid span,
+.subsidy-page .numbered-row > span,
+.subsidy-page .faq-no {
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.subsidy-page .support-grid h3 {
+  margin: 48px 0 10px;
+  font-size: 20px;
+  font-weight: 520;
+  color: var(--navy);
+}
+
+.subsidy-page .support-grid p,
+.subsidy-page .mistake-grid p,
+.subsidy-page .numbered-row p,
+.subsidy-page .method-rows p {
+  color: var(--secondary);
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ==========================================================================
+   The Central Principle (Dark Navy)
+   ========================================================================== */
+
+.subsidy-page .dark h2 {
+  max-width: 1100px;
+  color: #fff;
+}
+
+.subsidy-page .dark-columns {
+  grid-template-columns: 1fr 1fr;
+  gap: 7vw;
+  margin-top: 100px;
+  display: grid;
+}
+
+.subsidy-page .dark-columns > div {
+  border-top: 1px solid #ffffff38;
+  padding-top: 28px;
+}
+
+.subsidy-page .dark-columns h3 {
+  max-width: 520px;
+  margin: 0 0 18px;
+  font-size: 28px;
+  font-weight: 450;
+  line-height: 1.14;
+  color: #fff;
+}
+
+.subsidy-page .dark-columns p:last-child {
+  color: #a7b2bf;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.subsidy-page .dark blockquote {
+  letter-spacing: -.035em;
+  border-top: 1px solid #ffffff2e;
+  margin: 90px 0 0;
+  padding-top: 46px;
+  font-size: clamp(28px, 3.2vw, 50px);
+  line-height: 1.12;
+  color: #fff;
+  font-style: normal;
+}
+
+/* ==========================================================================
+   02 · Evaluate Numbered Rows
+   ========================================================================== */
+
+.subsidy-page .numbered-list {
+  border-top: 1px solid var(--line);
+  margin-top: 78px;
+}
+
+.subsidy-page .numbered-row {
+  border-bottom: 1px solid var(--line);
+  grid-template-columns: 70px minmax(220px, .72fr) 1.3fr;
+  align-items: center;
+  gap: 26px;
+  padding: 27px 0;
+  display: grid;
+}
+
+.subsidy-page .numbered-row h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 520;
+  color: var(--navy);
+}
+
+.subsidy-page .numbered-row p {
+  max-width: 650px;
+  margin: 0;
+}
+
+/* ==========================================================================
+   SGST-Linked Formula Panel
+   ========================================================================== */
+
+.subsidy-page .calc-grid {
+  grid-template-columns: 1fr .88fr;
+  align-items: center;
+  gap: 10vw;
+  display: grid;
+}
+
+.subsidy-page .calc-grid > div:first-child > p:last-child {
+  max-width: 590px;
+  color: var(--secondary);
+  font-size: 17px;
+  line-height: 1.65;
+  margin-top: 20px;
+}
+
+.subsidy-page .formula {
+  background: var(--navy);
+  color: #fff;
+  text-align: center;
+  padding: 58px;
+  border-radius: 4px;
+}
+
+.subsidy-page .formula strong {
+  font-size: 26px;
+  font-weight: 480;
+  display: block;
+  color: #fff;
+}
+
+.subsidy-page .formula span {
+  color: #acb6c1;
+  margin: 14px 0;
+  display: block;
+}
+
+.subsidy-page .formula hr {
+  border: 0;
+  border-top: 1px solid #ffffff33;
+  margin: 32px 0;
+}
+
+.subsidy-page .formula small {
+  color: #aeb7c2;
+  font-size: 13px;
+  line-height: 1.6;
+  display: block;
+}
+
+/* ==========================================================================
+   Common Mistakes Grid
+   ========================================================================== */
+
+.subsidy-page .mistake-grid {
+  border-top: 1px solid var(--line);
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 75px;
+  display: grid;
+}
+
+.subsidy-page .mistake-grid article {
+  border-bottom: 1px solid var(--line);
+  padding: 34px 8vw 42px 0;
+}
+
+.subsidy-page .mistake-grid article:nth-child(odd) {
+  border-right: 1px solid var(--line);
+}
+
+.subsidy-page .mistake-grid article:nth-child(2n) {
+  padding-left: 5vw;
+  padding-right: 0;
+}
+
+.subsidy-page .mistake-grid h3 {
+  margin: 0 0 15px;
+  font-size: 25px;
+  font-weight: 500;
+  color: var(--navy);
+}
+
+/* ==========================================================================
+   03 · Decide Decision Table & Methodology
+   ========================================================================== */
+
+.subsidy-page .decision-table {
+  margin-top: 84px;
+  font-size: 14px;
+}
+
+.subsidy-page .table-head,
+.subsidy-page .table-row {
+  border-bottom: 1px solid #d4dce2;
+  grid-template-columns: .75fr 1.05fr 1.3fr;
+  gap: 30px;
+  padding: 22px 18px;
+  display: grid;
+}
+
+.subsidy-page .table-head {
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  padding-top: 0;
+  font-size: 10px;
+  font-weight: 750;
+}
+
+.subsidy-page .table-row {
+  color: var(--secondary);
+  background: #ffffff57;
+  line-height: 1.5;
+}
+
+.subsidy-page .table-row .strong {
+  color: var(--text);
+  font-weight: 650;
+}
+
+.subsidy-page .methodology {
+  border-top: 1px solid #d4dce2;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 10vw;
+  margin-top: 130px;
+  padding-top: 85px;
+  display: grid;
+}
+
+.subsidy-page .methodology h2 {
+  font-size: clamp(42px, 5.4vw, 74px);
+}
+
+.subsidy-page .method-rows > div {
+  border-bottom: 1px solid #d4dce2;
+  grid-template-columns: 165px 1fr;
+  gap: 25px;
+  padding: 22px 0;
+  display: grid;
+}
+
+.subsidy-page .method-rows strong {
+  font-size: 14px;
+  color: var(--navy);
+}
+
+/* ==========================================================================
+   Investor Questions (FAQs)
+   ========================================================================== */
+
+.subsidy-page .faq-section h2 {
+  max-width: 800px;
+}
+
+.subsidy-page .faq-list {
+  border-top: 1px solid var(--line);
+  margin-top: 72px;
+}
+
+.subsidy-page .faq-item {
+  border-bottom: 1px solid var(--line);
+}
+
+.subsidy-page .faq-item h3 {
+  margin: 0;
+}
+
+.subsidy-page .faq-item button {
+  width: 100%;
+  color: var(--text);
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+  background: 0 0;
+  border: 0;
+  grid-template-columns: 50px 1fr 32px;
+  align-items: center;
+  gap: 20px;
+  padding: 26px 0;
+  font-size: 20px;
+  font-weight: 600;
+  display: grid;
+}
+
+.subsidy-page .faq-item button b {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 300;
+  transition: transform .2s ease;
+}
+
+.subsidy-page .faq-item.open button b {
+  transform: rotate(45deg);
+}
+
+.subsidy-page .faq-answer {
+  color: var(--secondary);
+  max-width: 1000px;
+  padding: 0 60px 28px 70px;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* ==========================================================================
+   Conversion Banner
+   ========================================================================== */
+
+.subsidy-page .conversion {
+  color: #fff;
+  background: linear-gradient(125deg, #104f7d, #09263d);
+  padding: clamp(110px, 12vw, 175px) 0;
+}
+
+.subsidy-page .conversion h2 {
+  max-width: 1050px;
+  color: #fff;
+}
+
+.subsidy-page .conversion h2 span {
+  color: #9aafc0;
+}
+
+.subsidy-page .conversion > .shell > p:not(.eyebrow) {
+  color: #d3dce4;
+  max-width: 730px;
+  margin: 35px 0 30px;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.subsidy-page .conversion small {
+  color: #9eb0bf;
+  margin-top: 28px;
+  line-height: 1.5;
+  display: block;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+@media (max-width: 900px) {
+  .subsidy-page .shell {
+    width: calc(100% - 80px);
+  }
+
+  .subsidy-page .support-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .subsidy-page .support-grid article:nth-child(2) {
+    border-right: 0;
+  }
+
+  .subsidy-page .support-grid article:nth-child(-n+2) {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .subsidy-page .split-heading,
+  .subsidy-page .calc-grid,
+  .subsidy-page .methodology {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .subsidy-page .split-heading > p {
+    max-width: 620px;
+  }
+
+  .subsidy-page .numbered-row {
+    grid-template-columns: 50px .65fr 1fr;
+  }
+
+  .subsidy-page .dark-columns {
+    gap: 40px;
+  }
+
+  .subsidy-page .methodology {
+    margin-top: 95px;
+  }
+
+  .subsidy-page h1 {
+    font-size: clamp(56px, 9vw, 82px);
+  }
+}
+
+@media (max-width: 720px) {
+  .subsidy-page .shell {
+    width: calc(100% - 44px);
+  }
+
+  .subsidy-page .hero {
+    align-items: flex-start;
+    min-height: calc(100svh - 66px);
+  }
+
+  .subsidy-page .hero-media img {
+    object-position: center bottom;
+  }
+
+  .subsidy-page .hero-wash {
+    background: linear-gradient(#fffffffa 0%, #ffffffe6 33%, #ffffff14 65%, #fff0 100%);
+  }
+
+  .subsidy-page .hero-content {
+    padding-top: 9vh;
+  }
+
+  .subsidy-page h1 {
+    max-width: 92%;
+    font-size: clamp(48px, 14vw, 69px);
+  }
+
+  .subsidy-page .hero-copy {
+    max-width: 92%;
+    margin-top: 24px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .subsidy-page .actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .subsidy-page .button {
+    width: 100%;
+    max-width: 330px;
+    min-height: 48px;
+  }
+
+  .subsidy-page .micro {
+    max-width: 270px;
+  }
+
+  .subsidy-page .section {
+    padding: 90px 0;
+  }
+
+  .subsidy-page .section h2,
+  .subsidy-page .conversion h2 {
+    font-size: clamp(43px, 12vw, 62px);
+  }
+
+  .subsidy-page .support-grid {
+    grid-template-columns: 1fr;
+    margin-top: 55px;
+  }
+
+  .subsidy-page .support-grid article {
+    border-right: 0;
+    min-height: 0;
+    padding: 26px 0;
+    border-bottom: 1px solid var(--line) !important;
+  }
+
+  .subsidy-page .support-grid article:last-child {
+    border-bottom: 0 !important;
+  }
+
+  .subsidy-page .support-grid h3 {
+    margin: 25px 0 8px;
+  }
+
+  .subsidy-page .dark-columns {
+    grid-template-columns: 1fr;
+    margin-top: 65px;
+  }
+
+  .subsidy-page .dark blockquote {
+    margin-top: 65px;
+  }
+
+  .subsidy-page .numbered-list {
+    margin-top: 55px;
+  }
+
+  .subsidy-page .numbered-row {
+    grid-template-columns: 38px 1fr;
+    gap: 8px 16px;
+  }
+
+  .subsidy-page .numbered-row p {
+    grid-column: 2;
+  }
+
+  .subsidy-page .formula {
+    padding: 40px 24px;
+  }
+
+  .subsidy-page .formula strong {
+    font-size: 22px;
+  }
+
+  .subsidy-page .mistake-grid {
+    grid-template-columns: 1fr;
+    margin-top: 55px;
+  }
+
+  .subsidy-page .mistake-grid article,
+  .subsidy-page .mistake-grid article:nth-child(2n) {
+    border-right: 0;
+    padding: 28px 0;
+  }
+
+  .subsidy-page .decision-table {
+    margin-right: -22px;
+    padding-right: 22px;
+    overflow-x: auto;
+  }
+
+  .subsidy-page .table-head,
+  .subsidy-page .table-row {
+    min-width: 720px;
+  }
+
+  .subsidy-page .method-rows > div {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .subsidy-page .faq-item button {
+    grid-template-columns: 34px 1fr 24px;
+    gap: 8px;
+    font-size: 17px;
+  }
+
+  .subsidy-page .faq-answer {
+    padding: 0 24px 24px 42px;
+  }
+
+  .subsidy-page .conversion .actions {
+    align-items: flex-start;
+  }
+
+  .subsidy-page .conversion .button {
+    max-width: none;
+  }
+
+  .subsidy-page .light-link {
+    padding-left: 4px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, :before, :after {
+    transition: none !important;
+    animation: none !important;
+  }
+}

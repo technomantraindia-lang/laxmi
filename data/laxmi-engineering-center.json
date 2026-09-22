@@ -37,7 +37,7 @@
         "id": "complete-plant",
         "num": "03",
         "title": "Complete AAC Plant & Capacity Selection",
-        "slug": "capacity-selection.html",
+        "slug": "complete-aac-plant.html",
         "tagline": "Batch Sizing, Autoclave Balancing & TPH Matching",
         "summary": "Why real plant output depends on total system synchronization—matching mixer batch volume (4.0–6.0 m³), cutting cycle time (3.5–4.5 min), autoclave schedule (10–12h), and boiler TPH.",
         "image": "assets/images/engineering/complete-plant-3d.png",

@@ -79,11 +79,11 @@
           "prevTopic": null,
           "nextTopic": { "id": "future-of-aac", "title": "Future of AAC", "stage": "understand-market" },
           "cta": {
-            "eyebrow": "ENGINEERING ADVISORY",
-            "title": "Discuss Your AAC Plant Requirement with Laxmi En-Fab",
-            "text": "From raw material testing to automated plant layout design, Laxmi En-Fab provides complete turnkey manufacturing solutions.",
-            "btnLabel": "TALK TO LAXMI EXPERTS →",
-            "btnUrl": "contact.html"
+            "eyebrow": "FULL ENGINEERING GUIDE",
+            "title": "Explore the Detailed Why AAC Blocks Engineering Guide",
+            "text": "Review comprehensive mechanical limits, thermal properties, cost comparisons, and structural advantages with Laxmi En-Fab.",
+            "btnLabel": "OPEN WHY AAC BLOCKS GUIDE →",
+            "btnUrl": "../why-aac-blocks.html"
           }
         },
         {
@@ -290,11 +290,11 @@
           "prevTopic": { "id": "market-demand", "title": "Market Demand", "stage": "understand-market" },
           "nextTopic": { "id": "profitability", "title": "Profitability", "stage": "understand-market" },
           "cta": {
-            "eyebrow": "LABORATORY TESTING",
-            "title": "Get Your Regional Raw Materials Tested by Laxmi",
-            "text": "Send us fly ash, lime, and water samples from your project location. Laxmi En-Fab provides complete XRF chemical analysis, slaking curves, and autoclaved test block formulation.",
-            "btnLabel": "REQUEST RAW MATERIAL LAB TEST →",
-            "btnUrl": "contact.html"
+            "eyebrow": "INTERACTIVE GUIDE & TESTING",
+            "title": "Explore the Full AAC Raw Materials Guide & Benchmarks",
+            "text": "Review detailed dry mix share benchmarks, 5-formulation comparison tables, regional India sourcing clusters, and request chemical analysis from Laxmi En-Fab.",
+            "btnLabel": "OPEN FULL RAW MATERIALS GUIDE →",
+            "btnUrl": "../raw-materials.html"
           }
         },
         {
@@ -907,54 +907,12 @@
             }
           ],
           "prevTopic": { "id": "plant-maintenance-sop", "title": "Maintenance SOP", "stage": "efficient-your-plant" },
-          "nextTopic": { "id": "skilled-manpower", "title": "Skilled Manpower", "stage": "efficient-your-plant" },
+          "nextTopic": null,
           "cta": {
             "eyebrow": "ENERGY AUDIT",
             "title": "Calculate Your Plant's Steam & Fuel Savings",
             "text": "Laxmi thermal engineers perform steam balance studies to identify immediate cost reduction opportunities.",
             "btnLabel": "REQUEST A THERMAL ENERGY AUDIT →",
-            "btnUrl": "contact.html"
-          }
-        },
-        {
-          "id": "skilled-manpower",
-          "icon": "👥",
-          "number": "05",
-          "sidebarTitle": "Skilled Manpower",
-          "eyebrow": "STAGE 04 · TOPIC 05",
-          "title": "Skilled Manpower Requirement, Shift Organization & Training",
-          "lead": "Modern automated AAC manufacturing plants minimize manual labor while requiring specialized technical competency in PLC operation, chemical slurry testing, and mechanical rigging.",
-          "image": "assets/images/manpower-structure.png",
-          "imageAlt": "AAC Plant Manpower and Shift Hierarchy",
-          "checkpoint": {
-            "title": "MANPOWER METRIC",
-            "text": "A modern 600 m³/day Laxmi automated plant requires only 14–16 personnel per shift across batching, cutting, autoclaving, boiler, and quality control."
-          },
-          "sections": [
-            {
-              "heading": "1. Recommended Shift Organization & Skill Roles",
-              "table": {
-                "headers": ["Department / Role", "Headcount (per Shift)", "Skill Level Required", "Key Responsibility"],
-                "rows": [
-                  ["Plant Head / Shift Manager", "1", "High (B.E. Mechanical / Chemical)", "Overall production planning, line synchronization & safety"],
-                  ["SCADA / PLC Operator", "1", "High (Diploma Electrical / Instrumentation)", "Monitoring automated raw material batching & cake rising"],
-                  ["Quality / Lab Chemist", "1", "High (B.Sc / M.Sc Chemistry)", "Slurry density, lime reactivity, cake hardness, cube testing"],
-                  ["Tilter & Cutting Operators", "2", "Medium (ITI Mechanical)", "Wire tension calibration, side plate locking, scrap recycling"],
-                  ["Autoclave & Boiler In-Charge", "2", "Certified (IBR 1st/2nd Class)", "Hydrothermal cycle monitoring, boiler firing & steam safety"],
-                  ["Overhead Crane & Forklift Drivers", "3", "Certified Machine Operators", "Green cake transport, autoclave car loading, yard stacking"],
-                  ["Maintenance Fitters & Electrician", "2", "Medium (ITI / Diploma)", "Preventive greasing, seal inspection, quick breakdown response"],
-                  ["General Utility Helpers", "4", "Entry-level / Semi-skilled", "Mould cleaning, yard strapping, housekeeping"]
-                ]
-              }
-            }
-          ],
-          "prevTopic": { "id": "reduce-steam-cost", "title": "Reduce Steam Cost", "stage": "efficient-your-plant" },
-          "nextTopic": null,
-          "cta": {
-            "eyebrow": "OPERATOR TRAINING PROGRAM",
-            "title": "Train Your Workforce at Laxmi's Kheda Workshop",
-            "text": "We provide comprehensive 3-week hands-on training for your plant engineers, lab chemists, and SCADA operators prior to commissioning.",
-            "btnLabel": "LEARN ABOUT TRAINING PROGRAMS →",
             "btnUrl": "contact.html"
           }
         }

@@ -1,40 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="AAC Steam Boiler & Utilities by Laxmi En-Fab. High-efficiency biomass, coal, briquette, and gas-fired steam boilers (4 TPH to 15 TPH), economizers, steam headers, and automated condensate heat recovery." />
-  <meta name="keywords" content="AAC steam boiler, IBR boiler, boiler TPH sizing, biomass boiler, briquette steam boiler, condensate recovery, Laxmi En-Fab" />
-  <title>Industrial Steam Boiler for AAC Plants | Laxmi En-Fab</title>
-  
-  <!-- Google Fonts: Geist & Geist Mono -->
+  <title>AAC Steam Boiler: Capacity Selection for AAC Plants | Laxmi En-Fab</title>
+  <meta name="description" content="Learn how AAC boiler capacity is selected using autoclave size, peak steam demand, cycle timing, feedwater, steam transfer and expansion requirements." />
+  <meta name="keywords" content="AAC steam boiler, IBR boiler, boiler TPH sizing, steam demand curve, biomass boiler, briquette steam boiler, condensate recovery, Laxmi En-Fab" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="AAC Steam Boiler Capacity Selection for AAC Plants | Laxmi En-Fab" />
+  <meta property="og:description" content="Select boiler capacity from peak autoclave demand—not plant m³/day alone." />
+  <meta property="og:url" content="https://www.laxmienfab.com/machinery-steam-boiler.html" />
+  <meta property="og:site_name" content="Laxmi En-Fab Pvt. Ltd." />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:image" content="assets/images/engineering/machinery-steam-boiler.png" />
+  <meta property="og:image:width" content="1680" />
+  <meta property="og:image:height" content="945" />
+  <meta property="og:image:alt" content="AAC plant steam boiler house, chimney and utility piping" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AAC Steam Boiler Capacity Selection | Laxmi En-Fab" />
+  <meta name="twitter:description" content="An engineering guide to peak demand, steam recovery and capacity expansion." />
+  <meta name="twitter:image" content="assets/images/engineering/machinery-steam-boiler.png" />
+
+  <link rel="canonical" href="https://www.laxmienfab.com/machinery-steam-boiler.html" />
+
+  <!-- Google Fonts: Geist & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet" />
-  
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/components.css" />
-  <link rel="stylesheet" href="css/homepage.css" />
-  <link rel="stylesheet" href="css/engineering.css" />
+  <link rel="stylesheet" href="css/machinery-steam-boiler.css" />
   <link rel="stylesheet" href="css/responsive.css" />
 
+  <!-- Structured Data / JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "Industrial Steam Boiler & Energy Systems for AAC Plants",
-    "description": "Technical sizing guide for matching steam boiler TPH with autoclave peak demand curves and heat recovery in AAC manufacturing.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Laxmi En-Fab Pvt. Ltd."
-    }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.laxmienfab.com/#organization",
+        "name": "Laxmi En-Fab Pvt. Ltd.",
+        "url": "https://www.laxmienfab.com/",
+        "logo": "assets/images/laxmi-logo.png"
+      },
+      {
+        "@type": "Product",
+        "@id": "https://www.laxmienfab.com/machinery-steam-boiler.html#product",
+        "name": "AAC Industrial Steam Boiler System",
+        "category": "AAC plant machinery",
+        "description": "High-efficiency multi-fuel steam boilers (4 TPH to 15 TPH) engineered to deliver steady 16-18 bar saturated steam matched with autoclave peak demand curves.",
+        "brand": {
+          "@type": "Brand",
+          "name": "Laxmi En-Fab"
+        },
+        "manufacturer": {
+          "@id": "https://www.laxmienfab.com/#organization"
+        },
+        "image": "assets/images/engineering/machinery-steam-boiler.png"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.laxmienfab.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "AAC Engineering Center",
+            "item": "https://www.laxmienfab.com/engineering-center.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Plant Machinery",
+            "item": "https://www.laxmienfab.com/machinery-equipment.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "AAC Steam Boiler"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How is AAC boiler capacity calculated?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Capacity is determined from a time-based steam-demand assessment covering autoclave geometry, loading, cycle stages, overlapping demand, feedwater conditions, validated recovery, distribution losses and the boiler rating basis."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many TPH are required for a 500 m³/day AAC plant?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "There is no universal answer. A final recommendation requires the autoclave configuration, loading, cycle timing, pressure profile, feedwater condition, recovery design and boiler rating basis."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is a 6 TPH boiler compulsory for a 500 m³/day plant?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No fixed m³/day-to-TPH rule should be treated as final engineering. The appropriate capacity must be calculated from the project’s peak fresh-steam demand."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What happens if the boiler is undersized?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It may slow pressure build-up, disturb the autoclave schedule or restrict production during peak demand. The actual effect depends on the complete system and operating pattern."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is an oversized boiler better for expansion?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not automatically. Excess capacity can increase investment and may create prolonged part-load operation. Expansion provision should be based on a defined future load."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is steam transfer the same as condensate recovery?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Steam transfer moves pressurised steam between compatible cycle stages. Condensate recovery returns hot liquid water or recovers its heat. Their constraints and benefits differ."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What information is needed for an assessment?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Share the production target, autoclave quantity and dimensions, cycle plan, fuel, feedwater data, existing boiler information, recovery arrangement and available drawings or operating records."
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
 </head>
-<body class="engineering-inner-page">
+<body class="boiler-page">
 
-  <!-- Shared Header -->
+  <!-- Shared Global Header Injection Placeholder -->
   <div id="site-header"></div>
 
   <!-- Breadcrumb Navigation -->
@@ -46,311 +174,483 @@
       <span class="bc-sep">/</span>
       <a href="machinery-equipment.html">Plant Machinery</a>
       <span class="bc-sep">/</span>
-      <span class="bc-current">System 07 · Industrial Steam Boiler</span>
+      <span class="bc-current">System 07 · AAC Steam Boiler</span>
     </div>
   </nav>
 
-  <!-- Sticky In-Page Sub-Navigation Strip -->
-  <nav class="eng-nav-strip" aria-label="System 07 Navigation">
+  <!-- Sticky In-Page System Navigation Strip -->
+  <nav class="eng-nav-strip" aria-label="System Navigation">
     <div class="eng-nav-strip__inner">
-      <a href="#overview" class="eng-nav-btn active"><span class="eng-nav-num">01</span> Overview</a>
-      <a href="#matrix" class="eng-nav-btn"><span class="eng-nav-num">02</span> Sizing Matrix</a>
-      <a href="#recovery" class="eng-nav-btn"><span class="eng-nav-num">03</span> Heat Recovery</a>
-      <a href="#utilities" class="eng-nav-btn"><span class="eng-nav-num">04</span> Water Treatment</a>
-      <a href="#cta" class="eng-nav-btn"><span class="eng-nav-num">05</span> Boiler Consultation</a>
+      <a href="#understand" class="eng-nav-btn"><span class="eng-nav-num">01</span> Understand</a>
+      <a href="#system" class="eng-nav-btn"><span class="eng-nav-num">02</span> Connected System</a>
+      <a href="#evaluate" class="eng-nav-btn"><span class="eng-nav-num">03</span> 7 Inputs</a>
+      <a href="#calculation" class="eng-nav-btn"><span class="eng-nav-num">04</span> Sizing Method</a>
+      <a href="#decide" class="eng-nav-btn"><span class="eng-nav-num">05</span> Trade-offs</a>
+      <a href="#recovery" class="eng-nav-btn"><span class="eng-nav-num">06</span> Recovery</a>
+      <a href="#pressure" class="eng-nav-btn"><span class="eng-nav-num">07</span> Pressure Meanings</a>
+      <a href="#india" class="eng-nav-btn"><span class="eng-nav-num">08</span> India Reality</a>
+      <a href="#quote-check" class="eng-nav-btn"><span class="eng-nav-num">09</span> Quote Checklist</a>
+      <a href="#expansion" class="eng-nav-btn"><span class="eng-nav-num">10</span> Expansion</a>
+      <a href="#methodology" class="eng-nav-btn"><span class="eng-nav-num">11</span> Methodology</a>
+      <a href="#faq" class="eng-nav-btn"><span class="eng-nav-num">12</span> FAQ</a>
     </div>
   </nav>
 
-  <main id="main-content">
+  <main id="main">
 
-    <!-- ============ 01. HERO SECTION (EDITORIAL FULL SCREEN IMAGE BACKGROUND) ============ -->
-    <section class="editorial-hero editorial-hero--light is-loaded" id="overview" aria-label="Industrial Steam Boiler Overview">
-      <div class="editorial-hero__media" aria-hidden="true">
-        <div class="editorial-hero__video-wrap">
-          <img
-            class="editorial-hero__poster"
-            src="assets/images/engineering/machinery-steam-boiler.png"
-            alt="AAC Industrial Steam Boiler House and Utilities"
-            fetchpriority="high"
-          />
+    <!-- ============ HERO SECTION ============ -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <img
+        class="hero-image"
+        src="assets/images/engineering/machinery-steam-boiler.png"
+        alt="Aerial view of an AAC plant steam boiler house, chimney and utility tanks"
+        fetchpriority="high"
+      />
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-content shell">
+        <p class="eyebrow light">AAC INVESTOR ACADEMY · STEAM ENGINEERING</p>
+        <h1 id="hero-title">Select steam capacity.<br /><span>Not simply boiler TPH.</span></h1>
+        <p class="hero-copy">
+          An AAC steam boiler must match the peak demand of the complete autoclave schedule—not plant m³/day alone. Autoclave configuration, cycle timing, feedwater and steam recovery change the final decision.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#consultation">Request a steam assessment</a>
+          <a class="text-link" href="#evaluate">See the selection framework <span aria-hidden="true">↓</span></a>
         </div>
-        <div class="editorial-hero__overlay"></div>
+        <p class="hero-note">Project-specific capacity requires an engineering heat-and-steam balance.</p>
       </div>
+    </section>
 
-      <div class="editorial-hero__inner">
-        <div class="editorial-hero__content">
-          <span class="editorial-hero__eyebrow">SYSTEM 07 · STEAM &amp; UTILITIES</span>
-          <h1 class="editorial-hero__title">
-            <span>AAC Industrial</span>
-            <span class="editorial-hero__title-light">Steam Boiler Systems.</span>
-          </h1>
-          <p class="editorial-hero__sub">
-            High-efficiency multi-fuel biomass, coal, briquette, and gas-fired steam boilers (4 TPH to 15 TPH) engineered to deliver steady 16–18 bar saturated steam matched with autoclave peak demand curves and automated condensate heat recovery.
-          </p>
-
-          <div class="editorial-hero__actions">
-            <a href="#matrix" class="editorial-hero__btn-dark">
-              <span>Explore Technical Specs</span>
-              <span class="editorial-hero__btn-arrow">↓</span>
-            </a>
-            <a href="contact.html" class="editorial-hero__link-dark">
-              <span>Consult Boiler Engineers</span>
-              <span class="editorial-hero__link-arrow">↗</span>
-            </a>
+    <!-- ============ 01. UNDERSTAND SECTION ============ -->
+    <section class="intro section" id="understand">
+      <div class="shell">
+        <div class="section-index">01 · Understand</div>
+        <div class="editorial-grid">
+          <h2>Daily output is an input.<br /><span>Peak steam demand is the decision.</span></h2>
+          <div class="editorial-copy">
+            <p>
+              Boiler TPH describes a steam-generation rate under stated rating conditions. AAC production creates a changing demand: pressure build-up needs high flow, holding has a different demand, and other cycle stages need little or no fresh steam.
+            </p>
+            <p>
+              The correct question is not only “How large is the plant?” It is <strong>“How much fresh steam must the complete autoclaving system receive at its highest practical demand?”</strong>
+            </p>
           </div>
         </div>
-      </div>
-
-      <div class="editorial-hero__corner-caption" aria-hidden="true">
-        <span class="editorial-hero__corner-title">AAC Plant Machinery · System 07</span>
-        <span class="editorial-hero__corner-sub">IBR High-Pressure Steam House &amp; Energy Loop</span>
+        <blockquote>
+          Two plants with the same m³/day can require different boiler capacity because their autoclaves, cycle overlap and steam-management systems are different.
+        </blockquote>
       </div>
     </section>
 
-    <!-- ============ DEDICATED SPECIFICATIONS & STATS STRIP BELOW HERO ============ -->
-    <section class="eng-stats-strip" aria-label="Key Steam Boiler Specifications">
-      <div class="eng-stats-strip__inner">
-        <div class="eng-stat-card">
-          <div class="eng-stat-card__val">4–15 <span>TPH</span></div>
-          <div class="eng-stat-card__lbl">Steam Output Range</div>
+    <!-- ============ 02. THE CONNECTED SYSTEM ============ -->
+    <section class="dark-section section" id="system" aria-labelledby="system-title">
+      <div class="shell">
+        <p class="eyebrow light">THE CONNECTED SYSTEM</p>
+        <h2 id="system-title" class="light-heading">A boiler is one component.<br /><span>The steam system determines delivery.</span></h2>
+        <div class="system-flow" aria-label="AAC steam system sequence">
+          <div class="flow-step">
+            <span>01</span>
+            <strong>Boiler</strong>
+          </div>
+          <div class="flow-step">
+            <span>02</span>
+            <strong>Main header</strong>
+          </div>
+          <div class="flow-step">
+            <span>03</span>
+            <strong>Distribution &amp; control</strong>
+          </div>
+          <div class="flow-step">
+            <span>04</span>
+            <strong>Autoclaves</strong>
+          </div>
+          <div class="flow-step">
+            <span>05</span>
+            <strong>Recovery &amp; feedwater</strong>
+          </div>
         </div>
-        <div class="eng-stat-card">
-          <div class="eng-stat-card__val">17.5 <span>bar</span></div>
-          <div class="eng-stat-card__lbl">Working Steam Pressure</div>
+        <p class="dark-note">
+          A higher nameplate rating cannot compensate for excessive pressure loss, unsuitable control valves, ineffective drainage, poor insulation or an impractical autoclave schedule.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ 03. EVALUATE (7 INPUTS) ============ -->
+    <section class="factors section" id="evaluate">
+      <div class="shell">
+        <div class="section-index">02 · Evaluate</div>
+        <div class="section-heading-row">
+          <h2>Seven inputs.<br /><span>One balanced steam decision.</span></h2>
+          <p>Each factor changes engineering scope and commercial exposure. Evaluate them together using visible assumptions.</p>
         </div>
-        <div class="eng-stat-card">
-          <div class="eng-stat-card__val">84–88 <span>%</span></div>
-          <div class="eng-stat-card__lbl">Thermal Efficiency</div>
-        </div>
-        <div class="eng-stat-card">
-          <div class="eng-stat-card__val">Multi-Fuel</div>
-          <div class="eng-stat-card__lbl">Briquette / Biomass / Gas</div>
+        <div class="factor-list" id="framework">
+          <article class="factor-row">
+            <span class="factor-number">01</span>
+            <h3>Production basis</h3>
+            <p>Daily output, operating hours and the production schedule define how often steam demand returns.</p>
+          </article>
+          <article class="factor-row">
+            <span class="factor-number">02</span>
+            <h3>Autoclave configuration</h3>
+            <p>Quantity, dimensions, loading and cycles determine the steam required by each curing sequence.</p>
+          </article>
+          <article class="factor-row">
+            <span class="factor-number">03</span>
+            <h3>Peak demand</h3>
+            <p>Overlapping pressure-build stages can require far more steam than a simple hourly average suggests.</p>
+          </article>
+          <article class="factor-row">
+            <span class="factor-number">04</span>
+            <h3>Feedwater condition</h3>
+            <p>Actual feedwater temperature and treatment influence the energy needed to generate reliable steam.</p>
+          </article>
+          <article class="factor-row">
+            <span class="factor-number">05</span>
+            <h3>Steam management</h3>
+            <p>Steam transfer, condensate return and heat recovery must be treated as separate, validated systems.</p>
+          </article>
+          <article class="factor-row">
+            <span class="factor-number">06</span>
+            <h3>Boiler performance</h3>
+            <p>Rated output, pressure, fuel basis, turndown and auxiliaries must be compared under equivalent conditions.</p>
+          </article>
+          <article class="factor-row">
+            <span class="factor-number">07</span>
+            <h3>Expansion strategy</h3>
+            <p>Present capacity should support a defined future stage without creating unnecessary part-load operation today.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ============ 02. SECTION 01: BOILER SIZING & AUTOCLAVE MATCHING ============ -->
-    <section class="eng-section eng-section--white" id="matrix">
-      <div class="eng-container">
-        
-        <div>
-          <span class="eng-eyebrow">01 · BOILER SIZING CALCULATION</span>
-          <h2 class="eng-title">
-            <span>Matching boiler TPH with autoclave schedules.</span>
-            <span class="eng-title-light">Sizing for peak pressurization ramps, not average consumption.</span>
-          </h2>
-          <p class="eng-lead">
-            An AAC steam boiler must be sized for concurrent peak steam demand during initial pressurization phases of multiple autoclaves. Sizing only for average hourly consumption leads to severe steam starvation.
-          </p>
+    <!-- ============ 04. SIZING METHOD (CALCULATION) ============ -->
+    <section class="calculation section" id="calculation">
+      <div class="shell calculation-grid">
+        <div class="sticky-copy">
+          <p class="eyebrow">SIZING METHOD</p>
+          <h2>Map the cycle.<br /><span>Find the peak.</span></h2>
+          <p>A daily total divided by operating hours gives an average rate. It can hide short periods when two autoclave operations create a much higher combined demand.</p>
         </div>
+        <ol class="method-list">
+          <li>
+            <span>01</span>
+            <div>
+              <h3>Define the production basis</h3>
+              <p>Confirm required m³/day, operating hours, product mix and realistic utilisation.</p>
+            </div>
+          </li>
+          <li>
+            <span>02</span>
+            <div>
+              <h3>Define every autoclave cycle</h3>
+              <p>Record geometry, loading, pressure profile, stage timing and cycles per day.</p>
+            </div>
+          </li>
+          <li>
+            <span>03</span>
+            <div>
+              <h3>Build a time-based demand profile</h3>
+              <p>Identify the highest combined demand when pressure-build stages overlap.</p>
+            </div>
+          </li>
+          <li>
+            <span>04</span>
+            <div>
+              <h3>Credit only validated recovery</h3>
+              <p>Treat steam transfer, heat recovery and hot-condensate return separately.</p>
+            </div>
+          </li>
+          <li>
+            <span>05</span>
+            <div>
+              <h3>Check boiler-side conditions</h3>
+              <p>Confirm pressure, feedwater, fuel properties, turndown, auxiliaries and rating basis.</p>
+            </div>
+          </li>
+          <li>
+            <span>06</span>
+            <div>
+              <h3>Apply a documented margin</h3>
+              <p>Allow for credible operating variation without creating unjustified oversizing.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
 
-        <!-- Full-Width Dark-Header Engineering Matrix Table -->
-        <div class="eng-matrix-table-wrap">
-          <table class="eng-matrix-table">
+    <!-- ============ 05. TRADE-OFFS (DECIDE) ============ -->
+    <section class="tradeoff section" id="decide">
+      <div class="shell">
+        <div class="section-index">03 · Decide</div>
+        <h2>Under-sizing can restrict cycles.<br /><span>Over-sizing can weaken capital efficiency.</span></h2>
+        <div class="comparison">
+          <article>
+            <p class="eyebrow">Undersized</p>
+            <h3>Lower initial rating can become a permanent process bottleneck.</h3>
+            <p>Peak demand may slow pressure build-up, disturb autoclave scheduling and restrict practical production.</p>
+          </article>
+          <article>
+            <p class="eyebrow">Correctly engineered</p>
+            <h3>Capacity and operating range align with the approved cycle schedule.</h3>
+            <p>The selection balances required output, part-load operation, site conditions and a realistic expansion plan.</p>
+          </article>
+          <article>
+            <p class="eyebrow">Excessively oversized</p>
+            <h3>Extra nameplate capacity does not automatically create more AAC output.</h3>
+            <p>Investment may remain unused and part-load behaviour can become commercially inefficient, depending on boiler design.</p>
+          </article>
+        </div>
+        <p class="qualification">
+          These are potential consequences, not guaranteed outcomes. Actual performance depends on boiler design, controls, fuel, maintenance and the complete steam system.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ 06. RECOVERY CLARITY ============ -->
+    <section class="recovery section silver" id="recovery">
+      <div class="shell">
+        <p class="eyebrow">RECOVERY CLARITY</p>
+        <h2>Steam transfer is not condensate return.<br /><span>Measure each benefit separately.</span></h2>
+        <div class="recovery-grid">
+          <article>
+            <span>01</span>
+            <h3>Steam transfer</h3>
+            <p>Moves pressurised steam between compatible autoclave cycle stages. Value depends on timing, pressure control and interlocks.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Condensate return</h3>
+            <p>Recovers hot liquid water and sensible heat where contamination, pressure and water treatment permit safe reuse.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Exhaust heat recovery</h3>
+            <p>Transfers thermal energy to another circuit without assuming contaminated condensate can return directly.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Loss reduction</h3>
+            <p>Insulation, drainage and steam-trap condition affect the useful steam that actually reaches the autoclaves.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 07. PRESSURE NUANCES ============ -->
+    <section class="pressure section" id="pressure">
+      <div class="shell">
+        <div class="section-heading-row">
+          <h2>One word: pressure.<br /><span>Five different meanings.</span></h2>
+          <p>Every value must identify the measurement point and whether it is gauge or absolute pressure.</p>
+        </div>
+        <div class="table-wrap" role="region" aria-label="Pressure terminology comparison" tabindex="0">
+          <table>
             <thead>
               <tr>
-                <th>Target Plant Output</th>
-                <th>Autoclaves In Operation</th>
-                <th>Peak Steam Demand</th>
-                <th>Recommended Boiler Rating</th>
-                <th>Economizer / Condensate Saving</th>
+                <th>Term</th>
+                <th>What it means</th>
+                <th>Buyer check</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>
-                  <div class="eng-material-cell">
-                    <span class="eng-material-name">150 m³ / Day</span>
-                  </div>
-                </td>
-                <td>2 Units (Ø2.0m × 21m)</td>
-                <td>~2.5 – 3.0 Tons / hr</td>
-                <td><span class="eng-prop-badge">3.5 – 4.0 TPH (17.5 bar)</span></td>
-                <td><span class="eng-qc-tag">Condensate return saves 12–15% fuel</span></td>
+                <th>Boiler design pressure</th>
+                <td>Pressure basis used for the boiler’s design under the applicable code.</td>
+                <td>Do not treat it as the normal operating setpoint.</td>
               </tr>
               <tr>
-                <td>
-                  <div class="eng-material-cell">
-                    <span class="eng-material-name">300 m³ / Day</span>
-                  </div>
-                </td>
-                <td>4 Units (Ø2.0m × 31m)</td>
-                <td>~4.5 – 5.5 Tons / hr</td>
-                <td><span class="eng-prop-badge">6.0 TPH (17.5 bar)</span></td>
-                <td><span class="eng-qc-tag">Air pre-heater + economizer saves 20% fuel</span></td>
+                <th>Boiler working pressure</th>
+                <td>Pressure at which the boiler is intended to operate within approved limits.</td>
+                <td>Confirm downstream demand and allowable losses.</td>
               </tr>
               <tr>
-                <td>
-                  <div class="eng-material-cell">
-                    <span class="eng-material-name">600 m³ / Day</span>
-                  </div>
-                </td>
-                <td>6 Units (Ø2.5m × 31m)</td>
-                <td>~7.5 – 9.0 Tons / hr</td>
-                <td><span class="eng-prop-badge">10.0 TPH (17.5 bar)</span></td>
-                <td><span class="eng-qc-tag">Inter-autoclave steam transfer reduces 25% peak demand</span></td>
+                <th>Steam-header pressure</th>
+                <td>Pressure available in the main distribution header.</td>
+                <td>Check pressure drop during peak demand.</td>
               </tr>
               <tr>
-                <td>
-                  <div class="eng-material-cell">
-                    <span class="eng-material-name">1,000+ m³ / Day</span>
-                  </div>
-                </td>
-                <td>8–10 Units (Ø2.5m × 35m)</td>
-                <td>~11.0 – 14.0 Tons / hr</td>
-                <td><span class="eng-prop-badge">12.0 – 15.0 TPH (Dual-Header)</span></td>
-                <td><span class="eng-qc-tag">Dual-boiler synchronized header configuration</span></td>
+                <th>Autoclave design pressure</th>
+                <td>Pressure basis used for the autoclave pressure-vessel design.</td>
+                <td>Verify approved vessel documentation.</td>
+              </tr>
+              <tr>
+                <th>Autoclave operating pressure</th>
+                <td>Pressure used during the approved curing cycle.</td>
+                <td>Connect it to the process recipe, not design pressure.</td>
               </tr>
             </tbody>
           </table>
         </div>
-
-        <!-- Critical Benchmark Callout Box -->
-        <div class="eng-checkpoint-box">
-          <h4 class="eng-checkpoint-box__title">CRITICAL PROCESS BENCHMARK · STEAM PRESSURE &amp; TOBERMORITE SYNTHESIS</h4>
-          <p class="eng-checkpoint-box__text">
-            Sizing a boiler for average hourly steam consumption causes acute steam starvation when multiple autoclaves enter concurrent pressurization ramps. Saturated steam pressure dropping below $10\text{ bar}$ prevents complete tobermorite crystal synthesis, leading to high block drying shrinkage and sub-par compressive strength.
-          </p>
-        </div>
-
+        <p class="qualification">Appropriate values are project-specific and must be confirmed from approved boiler, piping, autoclave and process documentation.</p>
       </div>
     </section>
 
-    <!-- ============ 03. SECTION 02: HEAT RECOVERY & THERMAL ARCHITECTURE ============ -->
-    <section class="eng-section eng-section--light" id="recovery">
-      <div class="eng-container">
-        
+    <!-- ============ 08. INDIA REALITY ============ -->
+    <section class="india section" id="india">
+      <div class="shell india-grid">
         <div>
-          <span class="eng-eyebrow">02 · ENERGY RECOVERY &amp; THERMAL DESIGN</span>
-          <h2 class="eng-title">
-            <span>Closed-loop thermal efficiency.</span>
-            <span class="eng-title-light">Flue gas economizers &amp; high-pressure headers.</span>
-          </h2>
-          <p class="eng-lead">
-            Laxmi boiler houses integrate advanced thermal energy recovery systems that capture flue gas waste heat and return 85°C boiler feedwater, slashing recurring fuel expenditure.
-          </p>
+          <p class="eyebrow">INDIA PROJECT REALITY</p>
+          <h2>Fuel. Water. Compliance.<br /><span>All change lifecycle cost.</span></h2>
         </div>
-
-        <!-- Contiguous Swiss Architectural Cards -->
-        <div class="eng-arch-grid" style="grid-template-columns: repeat(3, 1fr); margin: 2.5rem 0;">
-          
-          <div class="eng-arch-col">
-            <div>
-              <span class="eng-arch-num">FEATURE 01</span>
-              <h3 class="eng-arch-name">Flue Gas Economizer</h3>
-              <p class="eng-arch-desc">
-                Heavy-duty finned-tube economizer extracts residual heat from 280°C flue gases, pre-heating boiler feed water to 80°C–85°C and raising overall thermal efficiency to 88%.
-              </p>
-            </div>
-            <div class="eng-arch-link">
-              <span>Feedwater Pre-Heating</span>
-              <span class="eng-arch-arrow">↗</span>
-            </div>
-          </div>
-
-          <div class="eng-arch-col">
-            <div>
-              <span class="eng-arch-num">FEATURE 02</span>
-              <h3 class="eng-arch-name">High-Pressure Steam Header</h3>
-              <p class="eng-arch-desc">
-                Centralized distribution header fitted with pneumatic pressure-reducing valves (PRDS) and automated isolation dampers to route steam to each autoclave line independently.
-              </p>
-            </div>
-            <div class="eng-arch-link">
-              <span>PRDS Manifold Control</span>
-              <span class="eng-arch-arrow">↗</span>
-            </div>
-          </div>
-
-          <div class="eng-arch-col">
-            <div>
-              <span class="eng-arch-num">FEATURE 03</span>
-              <h3 class="eng-arch-name">Condensate Return Sump</h3>
-              <p class="eng-arch-desc">
-                Pressurized condensate recovery tanks return high-temperature distilled water directly to the deaerator tank, reducing both fuel usage and fresh water chemical treatment costs.
-              </p>
-            </div>
-            <div class="eng-arch-link">
-              <span>Closed-Loop Condensate</span>
-              <span class="eng-arch-arrow">↗</span>
-            </div>
-          </div>
-
+        <div class="india-items">
+          <article>
+            <h3>Fuel selection</h3>
+            <p>Compare availability, calorific value, moisture, ash, storage, handling, combustion equipment and emissions-control needs—not price per tonne alone.</p>
+          </article>
+          <article>
+            <h3>Feedwater and treatment</h3>
+            <p>Base treatment on representative water analysis and the boiler manufacturer’s approved limits. Feedwater quality influences reliability, blowdown and maintenance.</p>
+          </article>
+          <article>
+            <h3>IBR and operating responsibility</h3>
+            <p>Identify applicable approvals, boiler and piping documentation, inspections, relief arrangements, interlocks, emergency shutdown and trained operating responsibility.</p>
+          </article>
         </div>
-
       </div>
     </section>
 
-    <!-- ============ 04. SECTION 03: WATER TREATMENT & AUXILIARIES ============ -->
-    <section class="eng-section eng-section--white" id="utilities">
-      <div class="eng-container">
-        
+    <!-- ============ 09. PURCHASE-TEAM FRAMEWORK ============ -->
+    <section class="quote-check section" id="quote-check">
+      <div class="shell">
+        <p class="eyebrow">PURCHASE-TEAM FRAMEWORK</p>
+        <h2>Same TPH does not mean<br /><span>the same technical offer.</span></h2>
+        <p class="section-lead">Normalise every quotation against equivalent rating conditions and written battery limits.</p>
+        <div class="quote-grid">
+          <div><span>01</span>Rated output &amp; pressure</div>
+          <div><span>02</span>Fuel and efficiency basis</div>
+          <div><span>03</span>Feedwater condition</div>
+          <div><span>04</span>Turndown &amp; part load</div>
+          <div><span>05</span>Water treatment &amp; blowdown</div>
+          <div><span>06</span>Auxiliaries &amp; emissions</div>
+          <div><span>07</span>Safety &amp; IBR scope</div>
+          <div><span>08</span>Header &amp; autoclave interface</div>
+          <div><span>09</span>Testing &amp; commissioning</div>
+          <div><span>10</span>Service, spares &amp; training</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 10. FUTURE CAPACITY (EXPANSION) ============ -->
+    <section class="expansion section" id="expansion">
+      <div class="shell expansion-grid">
         <div>
-          <span class="eng-eyebrow">03 · UTILITIES &amp; WATER TREATMENT</span>
-          <h2 class="eng-title">
-            <span>Boiler feed water conditioning.</span>
-            <span class="eng-title-light">Preventing scaling &amp; tube corrosion.</span>
-          </h2>
-          <p class="eng-lead">
-            Raw groundwater contains dissolved calcium and magnesium salts that rapidly cause boiler scale and tube burnout if not demineralized.
+          <p class="eyebrow light">FUTURE CAPACITY</p>
+          <h2 class="light-heading">Plan the next stage.<br /><span>Do not buy uncertainty.</span></h2>
+        </div>
+        <div>
+          <p>Expansion-ready design does not automatically mean installing the largest boiler today. Depending on the verified load, the project may protect space and interfaces, stage multiple boilers, improve recovery or revise autoclave scheduling.</p>
+          <p>The correct option depends on expansion probability, timing, fuel system, load profile, downtime tolerance and lifecycle cost.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 11. LAXMI METHODOLOGY ============ -->
+    <section class="methodology section" id="methodology">
+      <div class="shell">
+        <p class="eyebrow">LAXMI EN-FAB METHODOLOGY</p>
+        <h2>Generation. Distribution. Utilisation.<br /><span>Reviewed as one steam system.</span></h2>
+        <div class="methodology-grid">
+          <article>
+            <span>01</span>
+            <h3>Production basis</h3>
+            <p>Required output, product mix, operating pattern and approved expansion stage.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Autoclave schedule</h3>
+            <p>Configuration, loading, cycle timing, peak overlap and pressure requirements.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Utility conditions</h3>
+            <p>Fuel, feedwater, distribution, controls, recovery and operating constraints.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 12. FAQ SECTION ============ -->
+    <section class="faq section" id="faq" aria-labelledby="faq-title">
+      <div class="shell">
+        <p class="eyebrow">INVESTOR QUESTIONS</p>
+        <h2 id="faq-title">Frequently asked.<br /><span>Directly answered.</span></h2>
+        <div class="faq-list">
+          <details open>
+            <summary><span>01</span>How is AAC boiler capacity calculated?<b aria-hidden="true">+</b></summary>
+            <div>
+              <p>Capacity is determined from a time-based steam-demand assessment covering autoclave geometry, loading, cycle stages, overlapping demand, feedwater conditions, validated recovery, distribution losses and the boiler rating basis.</p>
+            </div>
+          </details>
+          <details>
+            <summary><span>02</span>How many TPH are required for a 500 m³/day AAC plant?<b aria-hidden="true">+</b></summary>
+            <div>
+              <p>There is no universal answer. A final recommendation requires the autoclave configuration, loading, cycle timing, pressure profile, feedwater condition, recovery design and boiler rating basis.</p>
+            </div>
+          </details>
+          <details>
+            <summary><span>03</span>Is a 6 TPH boiler compulsory for a 500 m³/day plant?<b aria-hidden="true">+</b></summary>
+            <div>
+              <p>No fixed m³/day-to-TPH rule should be treated as final engineering. The appropriate capacity must be calculated from the project’s peak fresh-steam demand.</p>
+            </div>
+          </details>
+          <details>
+            <summary><span>04</span>What happens if the boiler is undersized?<b aria-hidden="true">+</b></summary>
+            <div>
+              <p>It may slow pressure build-up, disturb the autoclave schedule or restrict production during peak demand. The actual effect depends on the complete system and operating pattern.</p>
+            </div>
+          </details>
+          <details>
+            <summary><span>05</span>Is an oversized boiler better for expansion?<b aria-hidden="true">+</b></summary>
+            <div>
+              <p>Not automatically. Excess capacity can increase investment and may create prolonged part-load operation. Expansion provision should be based on a defined future load.</p>
+            </div>
+          </details>
+          <details>
+            <summary><span>06</span>Is steam transfer the same as condensate recovery?<b aria-hidden="true">+</b></summary>
+            <div>
+              <p>No. Steam transfer moves pressurised steam between compatible cycle stages. Condensate recovery returns hot liquid water or recovers its heat. Their constraints and benefits differ.</p>
+            </div>
+          </details>
+          <details>
+            <summary><span>07</span>What information is needed for an assessment?<b aria-hidden="true">+</b></summary>
+            <div>
+              <p>Share the production target, autoclave quantity and dimensions, cycle plan, fuel, feedwater data, existing boiler information, recovery arrangement and available drawings or operating records.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 13. CONVERSION CTA ============ -->
+    <section class="conversion" id="consultation">
+      <div class="shell conversion-grid">
+        <div>
+          <p class="eyebrow light">BEFORE THE BOILER IS FINALISED</p>
+          <h2 class="light-heading">Define the steam requirement.<br /><span>Then compare the equipment.</span></h2>
+        </div>
+        <div class="conversion-copy">
+          <p>
+            Share your production target, autoclave configuration, cycle plan, fuel preference, feedwater data and expansion requirement. Receive a focused discussion around the inputs that should shape your boiler and steam-system specification.
           </p>
-        </div>
-
-        <div class="eng-flow-table" style="border-top: 1px solid #e2e8f0; margin: 2.5rem 0;">
-          <div class="eng-flow-row">
-            <div class="eng-flow-num">01</div>
-            <div class="eng-flow-name">Multi-Bed Industrial Water Softening</div>
-            <div class="eng-flow-desc">Dual ion-exchange softening resin beds reduce raw water total hardness to &lt;5 ppm CaCO3, ensuring zero scale formation inside boiler tubes.</div>
+          <div class="conversion-actions">
+            <a class="button button-light" href="contact.html">Request a steam requirement assessment</a>
+            <a href="machinery-autoclave.html">Review AAC autoclave engineering →</a>
           </div>
-          <div class="eng-flow-row">
-            <div class="eng-flow-num">02</div>
-            <div class="eng-flow-name">Atmospheric Deaerator Tank</div>
-            <div class="eng-flow-desc">Thermal deaeration removes dissolved oxygen ($O_2$) and carbon dioxide ($CO_2$) from feedwater, eliminating pitting corrosion in boiler shells and steam lines.</div>
-          </div>
-          <div class="eng-flow-row">
-            <div class="eng-flow-num">03</div>
-            <div class="eng-flow-name">Automatic Continuous Blowdown System</div>
-            <div class="eng-flow-desc">Conductivity-controlled automatic blowdown valves vent concentrated TDS sludge while recovering thermal energy via a flash steam heat exchanger.</div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ============ 05. CHAPTER NAVIGATION FOOTER ============ -->
-    <section class="eng-chapter-nav-section">
-      <div class="eng-container">
-        <div class="eng-chapter-nav">
-          <a href="machinery-autoclave.html" class="eng-chapter-nav__btn eng-chapter-nav__btn--prev">
-            <span class="eng-chapter-nav__sub">← PREVIOUS SYSTEM</span>
-            <span class="eng-chapter-nav__title">System 06 · High-Pressure Autoclaves</span>
-          </a>
-          <a href="machinery-auto-palletizing.html" class="eng-chapter-nav__btn eng-chapter-nav__btn--next">
-            <span class="eng-chapter-nav__sub">NEXT MACHINERY SYSTEM →</span>
-            <span class="eng-chapter-nav__title">System 08 · Auto Palletizing &amp; Packing</span>
-          </a>
         </div>
       </div>
     </section>
 
-    <!-- ============ 06. STRATEGIC CONVERSION CTA BANNER ============ -->
-    <section class="eng-cta-banner" id="cta">
-      <div class="eng-cta-banner__inner">
-        <span class="eng-cta-banner__eyebrow">BOILER SIZING &amp; FUEL EFFICIENCY CONSULTATION</span>
-        <h2 class="eng-cta-banner__title">
-          <span>Optimize boiler TPH</span>
-          <span class="eng-cta-banner__title-light">&amp; slash monthly steam fuel cost.</span>
-        </h2>
-        <p class="eng-cta-banner__lead">
-          Laxmi En-Fab designs complete turnkey boiler houses with steam headers, condensate return loops, economizers, and water softening systems.
-        </p>
-        <div class="eng-cta-banner__actions">
-          <a href="contact.html" class="eng-cta-banner__btn-white">
-            <span>Consult Boiler Engineers</span>
-            <span class="eng-cta-banner__btn-arrow">↗</span>
+    <!-- ============ 8 SYSTEMS CHAPTER NAVIGATION ============ -->
+    <section class="eng-chapter-nav-section" style="background: var(--light); padding-block: 40px; border-top: 1px solid var(--line);">
+      <div class="shell">
+        <div class="eng-chapter-nav" style="display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
+          <a href="machinery-autoclave.html" class="eng-chapter-nav__btn eng-chapter-nav__btn--prev" style="text-decoration: none; padding: 20px 24px; background: var(--white); border: 1px solid var(--line); border-radius: 4px; flex: 1; min-width: 260px;">
+            <span class="eng-chapter-nav__sub" style="display: block; font-size: 0.75rem; color: var(--blue); font-weight: 750; letter-spacing: 0.08em; margin-bottom: 6px;">← PREVIOUS SYSTEM</span>
+            <span class="eng-chapter-nav__title" style="display: block; font-size: 1.05rem; color: var(--navy); font-weight: 700;">System 06 · AAC Autoclave</span>
           </a>
-          <a href="#overview" class="eng-cta-banner__link-top">
-            <span>Return to top ↑</span>
+          <a href="machinery-auto-palletizing.html" class="eng-chapter-nav__btn eng-chapter-nav__btn--next" style="text-decoration: none; padding: 20px 24px; background: var(--white); border: 1px solid var(--line); border-radius: 4px; flex: 1; min-width: 260px; text-align: right;">
+            <span class="eng-chapter-nav__sub" style="display: block; font-size: 0.75rem; color: var(--blue); font-weight: 750; letter-spacing: 0.08em; margin-bottom: 6px;">NEXT MACHINERY SYSTEM →</span>
+            <span class="eng-chapter-nav__title" style="display: block; font-size: 1.05rem; color: var(--navy); font-weight: 700;">System 08 · Auto Palletizing &amp; Packing</span>
           </a>
         </div>
       </div>
@@ -358,9 +658,10 @@
 
   </main>
 
-  <!-- Shared Global Footer Injection -->
+  <!-- Shared Global Footer Injection Placeholder -->
   <div id="site-footer"></div>
 
+  <!-- Scripts -->
   <script src="js/main.js"></script>
   <script src="js/navigation.js"></script>
   <script src="js/animations.js"></script>

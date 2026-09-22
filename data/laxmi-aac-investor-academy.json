@@ -519,18 +519,6 @@
             "Operating consistency",
             "Efficiency review"
           ]
-        },
-        {
-          "number": "05",
-          "id": "skilled-manpower",
-          "title": "Skilled Manpower",
-          "summary": "Recognize the role of trained people in maintaining process discipline, quality and equipment operation.",
-          "points": [
-            "Operator understanding",
-            "Process discipline",
-            "Maintenance capability",
-            "Training and responsibility"
-          ]
         }
       ],
       "framework": {

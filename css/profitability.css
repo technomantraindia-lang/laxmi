@@ -1,0 +1,797 @@
+/* ==========================================================================
+   IS AAC BLOCK BUSINESS PROFITABLE IN INDIA? — STYLES
+   Exact replicate from: https://laxmi-en-fab-complete.mitesh958.chatgpt.site/imported/aac-profitability-india/
+   ========================================================================== */
+
+:root {
+  --navy: #0b1727;
+  --blue: #0c4f80;
+  --deep: #09263d;
+  --white: #fff;
+  --silver: #eef2f5;
+  --light: #f5f7f8;
+  --secondary: #5e6874;
+  --muted: #84909c;
+  --line: #dce2e7;
+  --highlight: #8fc6ec;
+  --shell: min(1400px, calc(100% - 8vw));
+}
+
+.profitability-page {
+  color: var(--navy);
+  font-family: 'Geist', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #fff;
+  margin: 0;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.profitability-page * {
+  box-sizing: border-box;
+}
+
+.profitability-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.profitability-page .shell {
+  width: var(--shell);
+  max-width: 1400px;
+  margin-inline: auto;
+  padding-inline: clamp(16px, 2vw, 32px);
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   Typography & Shared Utilities
+   ========================================================================== */
+
+.profitability-page .eyebrow {
+  color: var(--blue);
+  letter-spacing: .17em;
+  text-transform: uppercase;
+  margin: 0 0 18px !important;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+  display: block !important;
+  background: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  gap: 0 !important;
+  width: auto !important;
+  max-width: none !important;
+}
+
+.profitability-page .eyebrow::before {
+  content: none !important;
+  display: none !important;
+}
+
+.profitability-page .button {
+  border-radius: 999px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  min-height: 48px;
+  padding: 0 22px;
+  font-size: 13px;
+  font-weight: 700;
+  transition: transform .2s ease, background .2s ease;
+  display: inline-flex;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.profitability-page .button:hover {
+  transform: translateY(-2px);
+}
+
+.profitability-page .button-dark {
+  color: #fff !important;
+  background: var(--navy);
+}
+
+.profitability-page .button-light {
+  color: var(--navy) !important;
+  background: #fff;
+}
+
+.profitability-page .text-link {
+  font-size: 14px;
+  font-weight: 650;
+  border-bottom: 1.5px solid #9fa8b1;
+  padding-bottom: 3px;
+  transition: color .2s ease, border-color .2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+}
+
+.profitability-page .text-link:hover {
+  color: var(--blue);
+  border-bottom-color: var(--blue);
+}
+
+.profitability-page .section {
+  padding: 130px 0;
+}
+
+.profitability-page .section-intro {
+  margin-bottom: 82px;
+}
+
+.profitability-page .split {
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, .65fr);
+  align-items: end;
+  gap: 9vw;
+  display: grid;
+}
+
+.profitability-page h2 {
+  letter-spacing: -.055em;
+  margin: 0;
+  font-size: clamp(44px, 5.3vw, 80px);
+  font-weight: 620;
+  line-height: .98;
+  color: var(--navy);
+}
+
+.profitability-page h2 span {
+  color: var(--muted);
+  font-weight: 470;
+}
+
+.profitability-page .intro-copy {
+  max-width: 520px;
+  color: var(--secondary);
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+
+.profitability-page .hero {
+  background: #f5f7f9;
+  align-items: center;
+  min-height: calc(100vh - 84px);
+  padding: 40px 0;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.profitability-page .hero-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  object-position: right 45%;
+}
+
+.profitability-page .hero-fade {
+  background: linear-gradient(90deg, #fffffffa 0%, #ffffffe0 28%, #ffffff88 48%, #ffffff00 70%);
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.profitability-page .hero-copy {
+  z-index: 2;
+  padding: 8vh 0 6vh;
+  position: relative;
+  width: min(680px, 52vw);
+  max-width: 100%;
+}
+
+.profitability-page .hero h1 {
+  letter-spacing: -.055em;
+  max-width: 780px;
+  margin: 0;
+  font-size: clamp(44px, 5.2vw, 84px);
+  font-weight: 640;
+  line-height: .98;
+  color: var(--navy);
+}
+
+.profitability-page .hero-title-line {
+  display: block;
+  white-space: nowrap;
+  color: var(--navy);
+  font-weight: 640;
+}
+
+.profitability-page .hero-title-line.hero-title-sub,
+.profitability-page .hero-title-sub {
+  color: var(--muted) !important;
+  font-weight: 470 !important;
+}
+
+.profitability-page .hero-lead {
+  max-width: 540px;
+  color: var(--secondary);
+  margin: 28px 0 0;
+  font-size: clamp(16px, 1.25vw, 19px);
+  line-height: 1.55;
+}
+
+.profitability-page .hero-actions {
+  align-items: center;
+  gap: 24px;
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profitability-page .hero-note {
+  z-index: 2;
+  letter-spacing: .08em;
+  color: var(--secondary);
+  margin: 0;
+  font-size: 12px;
+  position: absolute;
+  bottom: 28px;
+  right: 5vw;
+}
+
+/* ==========================================================================
+   01 Understand Profitability
+   ========================================================================== */
+
+.profitability-page .equation {
+  border-block: 1px solid var(--line);
+  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+}
+
+.profitability-page .equation > div {
+  border-right: 1px solid var(--line);
+  min-height: 220px;
+  padding: 34px 34px 30px 0;
+}
+
+.profitability-page .equation > div + div {
+  padding-left: 34px;
+}
+
+.profitability-page .equation > div:last-child {
+  border-right: 0;
+}
+
+.profitability-page .equation span,
+.profitability-page .decision-grid span {
+  color: var(--muted);
+  margin-bottom: 38px;
+  font-size: 12px;
+  display: block;
+}
+
+.profitability-page .equation strong {
+  font-size: 23px;
+  display: block;
+  color: var(--navy);
+}
+
+.profitability-page .equation p {
+  color: var(--secondary);
+  margin: 16px 0 0;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.profitability-page .statement-row,
+.profitability-page .warning-line,
+.profitability-page .capacity-principle {
+  grid-template-columns: .5fr 1.5fr;
+  align-items: start;
+  gap: 5vw;
+  padding-top: 66px;
+  display: grid;
+}
+
+.profitability-page .statement-row > p:last-child,
+.profitability-page .capacity-principle > p:last-child {
+  letter-spacing: -.035em;
+  max-width: 900px;
+  color: var(--secondary);
+  margin: 0;
+  font-size: clamp(25px, 3vw, 46px);
+  line-height: 1.18;
+}
+
+.profitability-page .statement-row strong {
+  color: var(--navy);
+}
+
+/* ==========================================================================
+   02 Evaluate the Project
+   ========================================================================== */
+
+.profitability-page .evaluate {
+  background: var(--navy);
+  color: #fff;
+}
+
+.profitability-page .evaluate .eyebrow {
+  color: var(--highlight) !important;
+}
+
+.profitability-page .evaluate h2 {
+  color: #fff;
+}
+
+.profitability-page .dark-intro h2 span {
+  color: #718094;
+}
+
+.profitability-page .evaluate .intro-copy {
+  color: #aab4bf;
+}
+
+.profitability-page .factor-list {
+  border-top: 1px solid #ffffff24;
+}
+
+.profitability-page .factor-row {
+  border-bottom: 1px solid #ffffff24;
+  grid-template-columns: 80px .65fr 1.35fr;
+  align-items: center;
+  gap: 30px;
+  min-height: 112px;
+  display: grid;
+}
+
+.profitability-page .factor-number {
+  color: #6f7c8c;
+  font-size: 12px;
+}
+
+.profitability-page .factor-row h3 {
+  letter-spacing: -.02em;
+  margin: 0;
+  font-size: clamp(19px, 1.7vw, 25px);
+  color: #fff;
+  font-weight: 600;
+}
+
+.profitability-page .factor-row p {
+  color: #aeb8c3;
+  max-width: 720px;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.profitability-page .warning-line {
+  border-top: 1px solid #8fc6ec73;
+  margin-top: 70px;
+  padding-top: 34px;
+}
+
+.profitability-page .warning-line > p:last-child {
+  color: #dbe4eb;
+  max-width: 900px;
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.45;
+}
+
+/* ==========================================================================
+   03 Avoid the Extremes (Traps)
+   ========================================================================== */
+
+.profitability-page .trap-comparison {
+  border: 1px solid var(--line);
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+}
+
+.profitability-page .trap-comparison article {
+  min-height: 390px;
+  padding: clamp(34px, 5vw, 74px);
+}
+
+.profitability-page .trap-comparison article + article {
+  border-left: 1px solid var(--line);
+  background: var(--light);
+}
+
+.profitability-page .trap-comparison h3 {
+  letter-spacing: -.045em;
+  margin: 0 0 28px;
+  font-size: clamp(29px, 3.1vw, 48px);
+  line-height: 1;
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.profitability-page .trap-comparison article > p:not(.eyebrow) {
+  max-width: 520px;
+  color: var(--secondary);
+  margin: 0 0 38px;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.profitability-page .trap-comparison strong {
+  max-width: 500px;
+  color: var(--blue);
+  font-size: 16px;
+  line-height: 1.5;
+  display: block;
+}
+
+.profitability-page .capacity-principle {
+  border-top: 1px solid var(--line);
+  margin-top: 60px;
+  padding-top: 38px;
+}
+
+.profitability-page .capacity-principle > p:last-child {
+  color: var(--navy);
+}
+
+/* ==========================================================================
+   04 Decide with Discipline
+   ========================================================================== */
+
+.profitability-page .decide {
+  background: var(--silver);
+}
+
+.profitability-page .decision-grid {
+  border-block: 1px solid #cbd3d9;
+  grid-template-columns: repeat(4, 1fr);
+  display: grid;
+}
+
+.profitability-page .decision-grid > div {
+  border-right: 1px solid #cbd3d9;
+  min-height: 260px;
+  padding: 34px 28px 30px 0;
+}
+
+.profitability-page .decision-grid > div + div {
+  padding-left: 28px;
+}
+
+.profitability-page .decision-grid > div:last-child {
+  border-right: 0;
+}
+
+.profitability-page .decision-grid h3 {
+  letter-spacing: -.025em;
+  margin: 0;
+  font-size: 21px;
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.profitability-page .decision-grid p {
+  color: var(--secondary);
+  margin: 16px 0 0;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.profitability-page .guide-links {
+  color: var(--secondary);
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 28px;
+  margin-top: 52px;
+  font-size: 13px;
+  display: flex;
+}
+
+.profitability-page .guide-links > span {
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  margin-right: auto;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.profitability-page .guide-links a {
+  transition: color .2s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.profitability-page .guide-links a:hover {
+  color: var(--blue);
+  border-bottom-color: var(--blue);
+}
+
+/* ==========================================================================
+   05 Consultation / Conversion
+   ========================================================================== */
+
+.profitability-page .conversion {
+  color: #fff;
+  background: linear-gradient(130deg, #104f7d, #09263d 72%);
+  padding: 125px 0;
+}
+
+.profitability-page .conversion .eyebrow {
+  color: #b9ddf5 !important;
+}
+
+.profitability-page .conversion-inner h2 {
+  color: #fff;
+  font-size: clamp(54px, 7vw, 96px);
+  letter-spacing: -.055em;
+  line-height: .98;
+}
+
+.profitability-page .conversion-inner > p:not(.eyebrow) {
+  color: #c9d7e2;
+  max-width: 700px;
+  margin: 34px 0 0;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.profitability-page .conversion-actions {
+  align-items: center;
+  gap: 28px;
+  margin-top: 36px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profitability-page .conversion-actions > a:not(.button) {
+  color: #d8e4ed;
+  font-size: 14px;
+  border-bottom: 1px solid #7395ac;
+  padding-bottom: 2px;
+  transition: color .2s ease, border-color .2s ease;
+}
+
+.profitability-page .conversion-actions > a:not(.button):hover {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+/* ==========================================================================
+   06 Investor FAQs
+   ========================================================================== */
+
+.profitability-page .faq-section {
+  grid-template-columns: .72fr 1.28fr;
+  align-items: start;
+  gap: 9vw;
+  display: grid;
+}
+
+.profitability-page .faq-heading h2 {
+  font-size: clamp(48px, 5.2vw, 78px);
+}
+
+.profitability-page .faq-list {
+  border-top: 1px solid var(--line);
+}
+
+.profitability-page .faq-item {
+  border-bottom: 1px solid var(--line);
+}
+
+.profitability-page .faq-item h3 {
+  margin: 0;
+}
+
+.profitability-page .faq-item button {
+  width: 100%;
+  min-height: 76px;
+  color: var(--navy);
+  text-align: left;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  justify-content: space-between;
+  align-items: center;
+  gap: 22px;
+  padding: 18px 0;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+}
+
+.profitability-page .faq-item button > span:last-child {
+  color: var(--blue);
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.profitability-page .faq-panel {
+  display: none;
+}
+
+.profitability-page .faq-item.is-open .faq-panel {
+  display: block;
+}
+
+.profitability-page .faq-panel p {
+  max-width: 760px;
+  color: var(--secondary);
+  margin: 0;
+  padding: 0 45px 26px 0;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+@media (max-width: 980px) {
+  :root {
+    --shell: min(100% - 48px, 1400px);
+  }
+  .profitability-page .hero {
+    min-height: 720px;
+    padding: 30px 0;
+  }
+  .profitability-page .hero-image {
+    object-position: right 38%;
+  }
+  .profitability-page .hero-fade {
+    background: linear-gradient(90deg, #fffffffa 0%, #ffffffea 45%, #ffffff22 75%);
+  }
+  .profitability-page .hero-copy {
+    width: min(560px, 85%);
+    padding-top: 40px;
+  }
+  .profitability-page .split {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+  .profitability-page .section-intro {
+    margin-bottom: 58px;
+  }
+  .profitability-page .factor-row {
+    grid-template-columns: 55px .7fr 1.3fr;
+  }
+  .profitability-page .decision-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .profitability-page .decision-grid > div:nth-child(2) {
+    border-right: 0;
+  }
+  .profitability-page .decision-grid > div:nth-child(-n+2) {
+    border-bottom: 1px solid #cbd3d9;
+  }
+  .profitability-page .faq-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  :root {
+    --shell: calc(100% - 32px);
+  }
+  .profitability-page .hero {
+    align-items: flex-start;
+    min-height: 620px;
+    padding-top: 20px;
+  }
+  .profitability-page .hero-image {
+    object-position: 65% bottom;
+    opacity: .85;
+  }
+  .profitability-page .hero-fade {
+    background: linear-gradient(#fffffffc 0%, #ffffffe6 50%, #ffffff33 80%);
+  }
+  .profitability-page .hero-copy {
+    padding-top: 30px;
+    width: 100%;
+  }
+  .profitability-page .hero h1 {
+    font-size: clamp(34px, 10.5vw, 54px);
+    line-height: .98;
+  }
+  .profitability-page .hero-lead {
+    max-width: 90%;
+    margin-top: 26px;
+    font-size: 16px;
+  }
+  .profitability-page .hero-actions,
+  .profitability-page .conversion-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+  .profitability-page .button {
+    width: 100%;
+  }
+  .profitability-page .hero-note {
+    font-size: 10px;
+    bottom: 20px;
+    right: 22px;
+  }
+  .profitability-page .section {
+    padding: 88px 0;
+  }
+  .profitability-page h2 {
+    font-size: clamp(42px, 12vw, 58px);
+  }
+  .profitability-page .intro-copy {
+    font-size: 16px;
+  }
+  .profitability-page .equation {
+    grid-template-columns: 1fr;
+  }
+  .profitability-page .equation > div,
+  .profitability-page .equation > div + div {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+    min-height: auto;
+    padding: 28px 0;
+  }
+  .profitability-page .equation > div:last-child {
+    border-bottom: 0;
+  }
+  .profitability-page .equation span,
+  .profitability-page .decision-grid span {
+    margin-bottom: 18px;
+  }
+  .profitability-page .statement-row,
+  .profitability-page .warning-line,
+  .profitability-page .capacity-principle {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .profitability-page .factor-row {
+    grid-template-columns: 38px 1fr;
+    gap: 18px;
+    padding: 26px 0;
+  }
+  .profitability-page .factor-row p {
+    grid-column: 2;
+  }
+  .profitability-page .trap-comparison {
+    grid-template-columns: 1fr;
+  }
+  .profitability-page .trap-comparison article {
+    min-height: 0;
+  }
+  .profitability-page .trap-comparison article + article {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+  .profitability-page .decision-grid {
+    grid-template-columns: 1fr;
+  }
+  .profitability-page .decision-grid > div,
+  .profitability-page .decision-grid > div + div {
+    border-bottom: 1px solid #cbd3d9;
+    border-right: 0;
+    min-height: 0;
+    padding: 28px 0;
+  }
+  .profitability-page .guide-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .profitability-page .guide-links > span {
+    margin-right: 0;
+  }
+  .profitability-page .conversion {
+    padding: 92px 0;
+  }
+  .profitability-page .conversion-inner h2 {
+    font-size: clamp(52px, 15vw, 74px);
+  }
+  .profitability-page .faq-item button {
+    min-height: 70px;
+    font-size: 15px;
+  }
+}

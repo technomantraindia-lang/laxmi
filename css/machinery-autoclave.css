@@ -1,0 +1,794 @@
+/* ==========================================================================
+   AAC AUTOCLAVE & PRESSURE CURING VESSEL PAGE STYLES
+   Scope: .autoclave-page
+   ========================================================================== */
+
+:root {
+  --navy: #0b1727;
+  --blue: #0c4f80;
+  --deep-a: #104f7d;
+  --deep-b: #09263d;
+  --white: #ffffff;
+  --silver: #eef2f5;
+  --light: #f5f7f8;
+  --text: #0b1727;
+  --secondary: #5e6874;
+  --muted: #84909c;
+  --line: #dce2e7;
+  --highlight: #8fc6ec;
+  --shell: min(1400px, 88vw);
+}
+
+.autoclave-page {
+  color: var(--text);
+  background: var(--white);
+  font-family: 'Geist', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}
+
+.autoclave-page * {
+  box-sizing: border-box;
+}
+
+.autoclave-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.autoclave-page p {
+  color: var(--secondary);
+  margin: 0;
+  font-size: clamp(1rem, 1.15vw, 1.16rem);
+  line-height: 1.72;
+}
+
+.autoclave-page h1,
+.autoclave-page h2,
+.autoclave-page h3 {
+  letter-spacing: -0.045em;
+  margin: 0;
+  line-height: 0.98;
+  color: var(--navy);
+}
+
+.autoclave-page h1 {
+  color: var(--white);
+  font-size: clamp(3.2rem, 6.2vw, 6.2rem);
+  font-weight: 650;
+  max-width: 900px;
+}
+
+.autoclave-page h1 span {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 480;
+  display: block;
+}
+
+.autoclave-page h2 {
+  font-size: clamp(2.4rem, 4.8vw, 4.8rem);
+  font-weight: 620;
+  max-width: 900px;
+}
+
+.autoclave-page h2 span {
+  color: var(--muted);
+  font-weight: 480;
+  display: block;
+}
+
+.autoclave-page h3 {
+  font-size: clamp(1.25rem, 1.6vw, 1.6rem);
+  line-height: 1.2;
+  font-weight: 650;
+}
+
+.autoclave-page .shell {
+  width: var(--shell);
+  margin-inline: auto;
+}
+
+.autoclave-page .section {
+  padding-block: clamp(90px, 9vw, 150px);
+}
+
+.autoclave-page .silver {
+  background: var(--silver);
+}
+
+.autoclave-page .navy {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.autoclave-page .navy h2,
+.autoclave-page .inverse h2,
+.autoclave-page .lifecycle h2 {
+  color: var(--white);
+}
+
+.autoclave-page .navy h2 span,
+.autoclave-page .inverse h2 span,
+.autoclave-page .lifecycle h2 span {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* Eyebrows */
+.autoclave-page .eyebrow {
+  color: var(--blue) !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+  gap: 0 !important;
+  letter-spacing: 0.2em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 1.5rem !important;
+  font-size: 0.75rem !important;
+  font-weight: 750 !important;
+  line-height: 1 !important;
+  width: fit-content;
+}
+
+.autoclave-page .eyebrow::before {
+  content: none !important;
+  display: none !important;
+}
+
+.autoclave-page .eyebrow.light,
+.autoclave-page .navy .eyebrow,
+.autoclave-page .lifecycle .eyebrow,
+.autoclave-page .conversion .eyebrow {
+  color: var(--highlight) !important;
+}
+
+.autoclave-page .lead {
+  color: var(--navy);
+  margin-top: 1.8rem;
+  font-size: clamp(1.2rem, 1.5vw, 1.55rem);
+  line-height: 1.45;
+  letter-spacing: -0.025em;
+  font-weight: 550;
+}
+
+/* Hero Section */
+.autoclave-page .hero {
+  background: var(--navy);
+  align-items: center;
+  min-height: 92vh;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.autoclave-page .hero-image {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.autoclave-page .hero-shade {
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(7, 19, 33, 0.96) 0%, rgba(7, 19, 33, 0.88) 30%, rgba(7, 19, 33, 0.55) 60%, rgba(7, 19, 33, 0.15) 100%);
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.autoclave-page .hero-content {
+  z-index: 3;
+  padding-top: 60px;
+  position: relative;
+}
+
+.autoclave-page .hero-content > * {
+  max-width: min(720px, 54vw);
+}
+
+.autoclave-page .hero-copy {
+  color: #c6d0d8;
+  max-width: 39rem;
+  margin-top: 1.8rem;
+  font-size: clamp(1.05rem, 1.3vw, 1.25rem);
+  line-height: 1.65;
+}
+
+.autoclave-page .hero-actions,
+.autoclave-page .conversion-actions {
+  align-items: center;
+  gap: 24px;
+  margin-top: 2.2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.autoclave-page .button {
+  border-radius: 999px;
+  justify-content: center;
+  align-items: center;
+  min-height: 50px;
+  padding: 0 28px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  display: inline-flex;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.autoclave-page .button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.autoclave-page .button-light {
+  background: var(--white);
+  color: var(--navy);
+}
+
+.autoclave-page .button-light:hover {
+  background: #f0f4f8;
+}
+
+.autoclave-page .text-link {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  align-items: center;
+  gap: 0.55rem;
+  padding-block: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  display: inline-flex;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.autoclave-page .light-link {
+  color: var(--white);
+}
+
+.autoclave-page .light-link:hover {
+  color: var(--highlight);
+  border-color: var(--highlight);
+}
+
+.autoclave-page .hero-note {
+  color: #9eabb5;
+  letter-spacing: 0.04em;
+  margin-top: 2rem;
+  font-size: 0.8rem;
+}
+
+/* Direct Answer Section / Intro */
+.autoclave-page .intro {
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: start;
+  gap: 8vw;
+  display: grid;
+}
+
+.autoclave-page .intro-copy {
+  padding-top: 20px;
+}
+
+.autoclave-page .intro-copy p + p {
+  margin-top: 1.5rem;
+}
+
+/* Curing Journey (7 Stages) */
+.autoclave-page .section-head {
+  max-width: 1040px;
+  margin-bottom: 60px;
+}
+
+.autoclave-page .section-head > p {
+  max-width: 660px;
+  margin-top: 24px;
+}
+
+.autoclave-page .cycle-list {
+  border-top: 1px solid var(--line);
+  margin: 0;
+  padding: 0;
+}
+
+.autoclave-page .cycle-row {
+  border-bottom: 1px solid var(--line);
+  grid-template-columns: 80px 200px 1fr;
+  align-items: center;
+  gap: 24px;
+  padding: 26px 0;
+  display: grid;
+}
+
+.autoclave-page .cycle-row > span,
+.autoclave-page .driver-grid b,
+.autoclave-page .safety-sequence li > span,
+.autoclave-page .checklist span,
+.autoclave-page summary span {
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  font-size: 0.82rem;
+  font-weight: 750;
+  font-family: monospace;
+}
+
+.autoclave-page .cycle-row h3 {
+  font-size: 1.35rem;
+}
+
+.autoclave-page .cycle-row p {
+  font-size: 0.98rem;
+}
+
+/* Selection Section (4 Drivers) */
+.autoclave-page .driver-grid {
+  border-block: 1px solid var(--line);
+  grid-template-columns: repeat(4, 1fr);
+  display: grid;
+  margin-top: 40px;
+}
+
+.autoclave-page .driver-grid article {
+  border-right: 1px solid var(--line);
+  padding: 34px 26px 36px 0;
+}
+
+.autoclave-page .driver-grid article:not(:first-child) {
+  padding-left: 26px;
+}
+
+.autoclave-page .driver-grid article:last-child {
+  border-right: 0;
+}
+
+.autoclave-page .driver-grid h3 {
+  margin: 32px 0 14px;
+  font-size: 1.3rem;
+}
+
+.autoclave-page .driver-grid p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.autoclave-page .statement {
+  border-left: 3px solid var(--blue);
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+  margin-top: 70px;
+  padding: 20px 0 20px 4vw;
+  display: grid;
+  background: var(--light);
+}
+
+.autoclave-page .statement p {
+  letter-spacing: -0.045em;
+  margin: 0;
+  font-size: clamp(1.6rem, 2.5vw, 2.6rem);
+  line-height: 1.15;
+  color: var(--navy);
+  font-weight: 650;
+}
+
+.autoclave-page .statement span {
+  color: var(--secondary);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+/* Comparison Table */
+.autoclave-page .comparison-table {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 40px;
+}
+
+.autoclave-page .compare-row {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  grid-template-columns: 1fr 1.2fr 2fr;
+  gap: 30px;
+  padding: 24px 0;
+  display: grid;
+  align-items: center;
+}
+
+.autoclave-page .compare-row span,
+.autoclave-page .compare-row p {
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.autoclave-page .compare-row b {
+  font-size: 1.08rem;
+  color: var(--white);
+}
+
+.autoclave-page .compare-head span {
+  color: var(--highlight) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.78rem;
+  font-weight: 750;
+}
+
+/* Pressure Safety Section */
+.autoclave-page .safety {
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 8vw;
+  display: grid;
+}
+
+.autoclave-page .safety-lead {
+  align-self: start;
+  position: sticky;
+  top: 100px;
+}
+
+.autoclave-page .safety-lead h2 {
+  margin-bottom: 24px;
+}
+
+.autoclave-page .safety-sequence {
+  border-top: 1px solid var(--line);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.autoclave-page .safety-sequence li {
+  border-bottom: 1px solid var(--line);
+  grid-template-columns: 50px 1fr;
+  gap: 20px;
+  padding: 24px 0;
+  display: grid;
+}
+
+.autoclave-page .safety-sequence h3 {
+  margin-bottom: 6px;
+  font-size: 1.25rem;
+}
+
+/* Manufacturing Evidence */
+.autoclave-page .evidence-grid {
+  grid-template-columns: 1fr 1fr;
+  gap: 8vw;
+  display: grid;
+}
+
+.autoclave-page .checklist {
+  border-top: 1px solid var(--line);
+}
+
+.autoclave-page .checklist p {
+  border-bottom: 1px solid var(--line);
+  grid-template-columns: 50px 1fr;
+  gap: 16px;
+  margin: 0;
+  padding: 18px 0;
+  font-size: 1rem;
+  display: grid;
+  color: var(--navy);
+  font-weight: 550;
+}
+
+/* System Integration */
+.autoclave-page .split {
+  grid-template-columns: 1fr 1fr;
+  gap: 6vw;
+  display: grid;
+  margin-top: 40px;
+}
+
+.autoclave-page .split article {
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+}
+
+.autoclave-page .split h3 {
+  font-size: 1.55rem;
+  margin-bottom: 14px;
+}
+
+.autoclave-page .split .limitation {
+  border-left: 2px solid var(--blue);
+  background: var(--light);
+  margin-top: 20px;
+  padding: 16px;
+  font-size: 0.9rem;
+  color: var(--secondary);
+}
+
+.autoclave-page .system-flow {
+  background: var(--light);
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 60px;
+  padding: 26px 36px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  display: flex;
+  border-radius: 4px;
+}
+
+.autoclave-page .system-flow i {
+  color: var(--blue);
+  font-style: normal;
+  font-size: 1.2rem;
+}
+
+/* Lifecycle Section */
+.autoclave-page .lifecycle {
+  background: linear-gradient(135deg, var(--deep-a) 0%, var(--deep-b) 100%);
+  color: var(--white);
+}
+
+.autoclave-page .lifecycle-grid {
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: end;
+  gap: 8vw;
+  display: grid;
+}
+
+.autoclave-page .lifecycle-grid p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.autoclave-page .lifecycle-grid p + p {
+  margin-top: 1.2rem;
+}
+
+.autoclave-page .lifecycle-grid .text-link {
+  margin-top: 24px;
+}
+
+/* FAQ Section */
+.autoclave-page .faq {
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: 8vw;
+  display: grid;
+}
+
+.autoclave-page .faq .section-head {
+  align-self: start;
+  position: sticky;
+  top: 100px;
+}
+
+.autoclave-page .faq-list {
+  border-top: 1px solid var(--line);
+}
+
+.autoclave-page details {
+  border-bottom: 1px solid var(--line);
+}
+
+.autoclave-page summary {
+  cursor: pointer;
+  grid-template-columns: 44px 1fr 24px;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 0;
+  font-size: clamp(1.05rem, 1.25vw, 1.2rem);
+  font-weight: 650;
+  line-height: 1.45;
+  list-style: none;
+  display: grid;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+
+.autoclave-page summary::-webkit-details-marker {
+  display: none;
+}
+
+.autoclave-page summary:hover {
+  color: var(--blue);
+}
+
+.autoclave-page summary i {
+  color: var(--blue);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 300;
+  transition: transform 0.2s ease;
+  text-align: right;
+}
+
+.autoclave-page details[open] summary i {
+  transform: rotate(45deg);
+}
+
+.autoclave-page details > p {
+  max-width: 700px;
+  color: var(--secondary);
+  margin: 0 24px 22px 60px;
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+/* Conversion Section */
+.autoclave-page .conversion {
+  background: linear-gradient(135deg, var(--deep-a) 0%, var(--deep-b) 100%);
+  color: var(--white);
+  padding: clamp(90px, 10vw, 150px) 0;
+}
+
+.autoclave-page .conversion-inner {
+  text-align: center;
+  max-width: 1120px;
+}
+
+.autoclave-page .conversion h2 {
+  color: var(--white);
+  margin-bottom: 24px;
+}
+
+.autoclave-page .conversion-inner > p:not(.eyebrow) {
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 760px;
+  margin: 0 auto 36px;
+  font-size: clamp(1.05rem, 1.25vw, 1.22rem);
+  line-height: 1.7;
+}
+
+.autoclave-page .conversion-inner > div {
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .autoclave-page .intro,
+  .autoclave-page .safety,
+  .autoclave-page .evidence-grid,
+  .autoclave-page .lifecycle-grid,
+  .autoclave-page .faq {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .autoclave-page .safety-lead,
+  .autoclave-page .faq .section-head {
+    position: static;
+  }
+
+  .autoclave-page .driver-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .autoclave-page .driver-grid article:nth-child(2) {
+    border-right: 0;
+  }
+
+  .autoclave-page .compare-row {
+    grid-template-columns: 0.8fr 1.1fr 1.6fr;
+  }
+
+  .autoclave-page .hero-content > * {
+    max-width: 68vw;
+  }
+
+  .autoclave-page .split {
+    gap: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .autoclave-page .shell {
+    width: calc(100% - 36px);
+  }
+
+  .autoclave-page .section {
+    padding-block: 70px;
+  }
+
+  .autoclave-page .hero {
+    align-items: flex-end;
+    min-height: 760px;
+    padding-bottom: 50px;
+  }
+
+  .autoclave-page .hero-image {
+    object-position: 62% center;
+  }
+
+  .autoclave-page .hero-shade {
+    background: linear-gradient(180deg, rgba(7, 19, 33, 0.2) 0%, rgba(7, 19, 33, 0.8) 45%, rgba(7, 19, 33, 0.98) 95%);
+  }
+
+  .autoclave-page .hero-content {
+    padding-top: 200px;
+  }
+
+  .autoclave-page .hero-content > * {
+    max-width: 100%;
+  }
+
+  .autoclave-page h1 {
+    font-size: clamp(2.6rem, 10vw, 3.8rem);
+  }
+
+  .autoclave-page h2 {
+    font-size: clamp(2.1rem, 8vw, 3rem);
+  }
+
+  .autoclave-page .hero-actions,
+  .autoclave-page .conversion-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .autoclave-page .button {
+    width: 100%;
+  }
+
+  .autoclave-page .cycle-row {
+    grid-template-columns: 45px 1fr;
+    gap: 12px;
+  }
+
+  .autoclave-page .cycle-row p {
+    grid-column: 2;
+  }
+
+  .autoclave-page .driver-grid,
+  .autoclave-page .split {
+    grid-template-columns: 1fr;
+  }
+
+  .autoclave-page .driver-grid article,
+  .autoclave-page .driver-grid article:not(:first-child) {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+    padding: 24px 0;
+  }
+
+  .autoclave-page .statement {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 50px;
+    padding: 20px;
+  }
+
+  .autoclave-page .comparison-table {
+    overflow-x: auto;
+  }
+
+  .autoclave-page .compare-row {
+    min-width: 620px;
+  }
+
+  .autoclave-page .system-flow {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .autoclave-page .system-flow i {
+    transform: rotate(90deg);
+  }
+
+  .autoclave-page .conversion-inner > div {
+    flex-direction: column;
+  }
+
+  .autoclave-page details > p {
+    margin-left: 45px;
+  }
+}

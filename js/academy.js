@@ -81,7 +81,6 @@
           'quality': 'improve-block-quality',
           'maintenance': 'plant-maintenance-sop',
           'steam': 'reduce-steam-cost',
-          'manpower': 'skilled-manpower',
           'capacity-upgrade': 'upgrade-capacity',
           'panels': 'reinforced-aac-panels',
           'mortar': 'dry-mix-mortar-integration',
@@ -572,12 +571,6 @@
         { val: '190', unit: '°C', lbl: 'Saturated Steam Temp' },
         { val: '12–14', unit: 'bar', lbl: 'Working Pressure' },
         { val: '₹120–160', unit: '/m³', lbl: 'Fuel Cost Savings' }
-      ],
-      'skilled-manpower': [
-        { val: '8–12', unit: 'Staff/Shift', lbl: 'Optimized Crew Size' },
-        { val: '24×7', unit: 'Rotation', lbl: 'Continuous Operations' },
-        { val: '100', unit: '%', lbl: 'Certified Operators' },
-        { val: '40', unit: 'Hours/Yr', lbl: 'Training Refreshers' }
       ],
 
       // Stage 05: Expand Your Plant

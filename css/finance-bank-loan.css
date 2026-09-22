@@ -1,0 +1,857 @@
+/* ==========================================================================
+   AAC PLANT PROJECT FINANCE & BANK LOAN GUIDE — STYLES
+   Source: https://laxmi-en-fab-complete.mitesh958.chatgpt.site/imported/aac-plant-finance-bank-loan/
+   ========================================================================== */
+
+:root {
+  --navy: #0b1727;
+  --blue: #0c4f80;
+  --white: #fff;
+  --silver: #eef2f5;
+  --light: #f5f7f8;
+  --secondary: #5e6874;
+  --muted: #84909c;
+  --line: #dce2e7;
+  --highlight: #8fc6ec;
+  --max: 1400px;
+}
+
+.finance-page {
+  background: #fff;
+  color: var(--navy);
+  font-family: 'Geist', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.finance-page * {
+  box-sizing: border-box;
+}
+
+.finance-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.finance-page button {
+  font: inherit;
+}
+
+.finance-page .wrap {
+  width: min(var(--max, 1400px), calc(100% - 12vw));
+  margin-inline: auto;
+}
+
+/* ==========================================================================
+   Typography & Eyebrow Reset
+   ========================================================================== */
+
+.finance-page .eyebrow,
+.finance-page .mini-label {
+  color: var(--blue);
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  margin: 0 0 24px !important;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+  display: block !important;
+  background: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  gap: 0 !important;
+  width: auto !important;
+  max-width: none !important;
+}
+
+.finance-page .eyebrow::before,
+.finance-page .mini-label::before {
+  content: none !important;
+  display: none !important;
+}
+
+.finance-page .eyebrow.light,
+.finance-page .light,
+.finance-page .dark .eyebrow,
+.finance-page .consultation .eyebrow,
+.finance-page .formula-panel .mini-label,
+.finance-page .dark-columns .mini-label {
+  color: var(--highlight) !important;
+}
+
+.finance-page h1,
+.finance-page h2,
+.finance-page .consultation h2 {
+  letter-spacing: -.055em;
+  margin: 0 0 30px;
+  font-weight: 480;
+  line-height: .96;
+}
+
+.finance-page h1 {
+  font-size: clamp(52px, 6.8vw, 108px);
+  max-width: 800px !important;
+  color: var(--navy);
+  margin-bottom: 28px;
+}
+
+.finance-page h2 {
+  font-size: clamp(42px, 5.5vw, 82px);
+  color: var(--navy);
+}
+
+.finance-page h1 span,
+.finance-page h2 span {
+  color: var(--muted);
+  font-weight: 320;
+}
+
+.finance-page .dark h2,
+.finance-page .consultation h2,
+.finance-page .insight h2 {
+  color: #fff;
+}
+
+.finance-page .dark h2 span,
+.finance-page .consultation h2 span,
+.finance-page .insight h2 span {
+  color: #9ab3c5;
+  font-weight: 320;
+}
+
+.finance-page h3 {
+  letter-spacing: -.025em;
+  margin: 0;
+  font-size: 22px;
+  font-weight: 520;
+}
+
+.finance-page p {
+  margin: 0;
+  line-height: 1.65;
+}
+
+.finance-page .section {
+  padding: clamp(90px, 10vw, 160px) 0;
+}
+
+.finance-page .white {
+  background: #fff;
+}
+
+.finance-page .silver {
+  background: var(--silver);
+}
+
+.finance-page .dark {
+  background: var(--navy);
+  color: #fff;
+}
+
+.finance-page .editorial-head {
+  grid-template-columns: minmax(0, 2.15fr) minmax(280px, .85fr);
+  align-items: end;
+  gap: 8vw;
+  margin-bottom: 72px;
+  display: grid;
+}
+
+.finance-page .editorial-head > p,
+.finance-page .editorial-head > div {
+  color: var(--secondary);
+  max-width: 440px;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.finance-page .editorial-head > div p {
+  margin-bottom: 16px;
+}
+
+.finance-page .editorial-head > div p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Buttons & Links
+   ========================================================================== */
+
+.finance-page .actions {
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+  display: flex;
+}
+
+.finance-page .button {
+  border-radius: 999px;
+  justify-content: center;
+  align-items: center;
+  min-height: 48px;
+  padding: 13px 26px;
+  font-size: 13.5px;
+  font-weight: 650;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+  display: inline-flex;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+}
+
+.finance-page .button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(11, 23, 39, 0.15);
+}
+
+.finance-page .button-blue {
+  background: var(--blue);
+  color: #fff !important;
+  box-shadow: 0 8px 24px rgba(12, 79, 128, 0.18);
+}
+
+.finance-page .button-blue:hover {
+  background: #093c62;
+  box-shadow: 0 12px 30px rgba(12, 79, 128, 0.28);
+}
+
+.finance-page .button-white {
+  color: var(--navy) !important;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.finance-page .button-white:hover {
+  background: #f0f4f7;
+}
+
+.finance-page .text-link {
+  font-size: 14px;
+  font-weight: 650;
+  color: var(--navy);
+  transition: color .2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.finance-page .text-link:hover {
+  color: var(--blue);
+}
+
+.finance-page .text-link.light-link {
+  color: #fff;
+}
+
+.finance-page .text-link.light-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+
+.finance-page .hero {
+  background: var(--light);
+  align-items: center;
+  min-height: calc(100vh - 72px);
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.finance-page .hero-image {
+  object-fit: cover;
+  object-position: right center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+}
+
+.finance-page .hero-wash {
+  background: linear-gradient(90deg, #fffffffa 0%, #fffffff2 26%, #ffffff8c 48%, rgba(255, 255, 255, 0) 68%);
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.finance-page .hero-wrap {
+  position: relative;
+  z-index: 2;
+}
+
+.finance-page .hero-copy {
+  z-index: 2;
+  padding-block: 80px;
+  position: relative;
+  max-width: 820px;
+  width: 100%;
+}
+
+.finance-page .hero-lead {
+  color: var(--secondary);
+  margin-bottom: 30px;
+  font-size: clamp(17px, 1.4vw, 20px);
+  line-height: 1.6;
+  max-width: 610px !important;
+}
+
+.finance-page .support-note {
+  color: var(--muted);
+  margin-top: 24px;
+  font-size: 12.5px;
+}
+
+/* ==========================================================================
+   01 · Understand (3 Definition Cards)
+   ========================================================================== */
+
+.finance-page .definition-grid {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+}
+
+.finance-page .definition-grid article {
+  padding: 34px 36px 42px 0;
+}
+
+.finance-page .definition-grid article + article {
+  border-left: 1px solid var(--line);
+  padding-left: 36px;
+}
+
+.finance-page .index,
+.finance-page .numbered-rows article > span,
+.finance-page .three-insights article > span,
+.finance-page .process article > span,
+.finance-page .faq-index {
+  color: var(--blue);
+  letter-spacing: .1em;
+  font-size: 12px;
+  font-weight: 700;
+  display: block;
+}
+
+.finance-page .definition-grid h3 {
+  letter-spacing: -.03em;
+  margin: 28px 0 12px;
+  font-size: 22px;
+  color: var(--navy);
+}
+
+.finance-page .definition-grid p {
+  color: var(--secondary);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   The Central Principle (Dark Insight)
+   ========================================================================== */
+
+.finance-page .insight h2 {
+  max-width: 1150px;
+}
+
+.finance-page .dark-columns {
+  grid-template-columns: 1fr 1fr;
+  gap: 7vw;
+  margin-top: 80px;
+  display: grid;
+}
+
+.finance-page .dark-columns article {
+  border-top: 1px solid #304051;
+  padding-top: 28px;
+}
+
+.finance-page .dark-columns h3 {
+  max-width: 540px;
+  font-size: 26px;
+  font-weight: 500;
+  color: #fff;
+  margin: 16px 0 12px;
+  line-height: 1.3;
+}
+
+.finance-page .dark-columns p {
+  color: #9da8b3;
+  font-size: 15.5px;
+  line-height: 1.65;
+}
+
+.finance-page blockquote {
+  letter-spacing: -.04em;
+  border-top: 1px solid #304051;
+  max-width: 1200px;
+  margin: 90px 0 0;
+  padding-top: 48px;
+  font-size: clamp(28px, 3.2vw, 48px);
+  line-height: 1.2;
+  color: #fff;
+  font-weight: 540;
+}
+
+/* ==========================================================================
+   Numbered Rows (02 · Evaluate & Project Cost & Downside)
+   ========================================================================== */
+
+.finance-page .numbered-rows {
+  border-top: 1px solid var(--line);
+}
+
+.finance-page .numbered-rows article {
+  border-bottom: 1px solid var(--line);
+  grid-template-columns: 70px minmax(220px, .75fr) 1.7fr;
+  align-items: center;
+  gap: 24px;
+  padding: 28px 0;
+  display: grid;
+}
+
+.finance-page .numbered-rows h3 {
+  letter-spacing: -.025em;
+  margin: 0;
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.finance-page .numbered-rows p {
+  color: var(--secondary);
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.finance-page .numbered-rows.compact article {
+  padding: 22px 0;
+}
+
+/* ==========================================================================
+   Lender-Ready DPR (Split Feature & Formula Panel)
+   ========================================================================== */
+
+.finance-page .split-feature {
+  grid-template-columns: 1.15fr .85fr;
+  align-items: center;
+  gap: 8vw;
+  display: grid;
+}
+
+.finance-page .split-feature > div > p:last-child {
+  color: var(--secondary);
+  max-width: 560px;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.finance-page .formula-panel {
+  background: var(--navy);
+  color: #fff;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 420px;
+  padding: 48px;
+  border-radius: 4px;
+  display: flex;
+  box-shadow: 0 20px 50px rgba(11, 23, 39, 0.12);
+}
+
+.finance-page .formula-panel strong {
+  font-size: 24px;
+  font-weight: 550;
+  line-height: 1.35;
+  color: #fff;
+}
+
+.finance-page .formula-panel > span {
+  color: #96a2ad;
+  margin: 16px 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.finance-page .formula-panel hr {
+  border: 0;
+  border-top: 1px solid #344354;
+  width: 100%;
+  margin: 28px 0;
+}
+
+.finance-page .formula-panel p:last-child {
+  color: #a8b1bb;
+  text-align: left;
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   AAC Engineering Reality (3 Dark Insights)
+   ========================================================================== */
+
+.finance-page .three-insights {
+  border-top: 1px solid #304051;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 70px;
+  display: grid;
+}
+
+.finance-page .three-insights article {
+  padding: 36px 38px 12px 0;
+}
+
+.finance-page .three-insights article + article {
+  border-left: 1px solid #304051;
+  padding-left: 38px;
+}
+
+.finance-page .three-insights article > span {
+  color: var(--highlight);
+  font-size: 13px;
+}
+
+.finance-page .three-insights h3 {
+  margin: 24px 0 12px;
+  font-size: 22px;
+  color: #fff;
+}
+
+.finance-page .three-insights p {
+  color: #a2adb8;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   03 · Decide (5 Process Steps & Methodology)
+   ========================================================================== */
+
+.finance-page .process {
+  border-top: 1px solid #ced6dc;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 70px;
+  display: grid;
+}
+
+.finance-page .process article {
+  padding: 34px 24px 20px 0;
+}
+
+.finance-page .process article + article {
+  border-left: 1px solid #ced6dc;
+  padding-left: 24px;
+}
+
+.finance-page .process article > span {
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.finance-page .process h3 {
+  margin: 26px 0 10px;
+  font-size: 19px;
+  color: var(--navy);
+}
+
+.finance-page .process p {
+  color: var(--secondary);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.finance-page .method-divider {
+  background: #ced6dc;
+  height: 1px;
+  margin: 100px 0;
+}
+
+.finance-page .method {
+  grid-template-columns: 1fr 1fr;
+  gap: 8vw;
+  align-items: center;
+  display: grid;
+}
+
+.finance-page .method-list p {
+  border-bottom: 1px solid #ced6dc;
+  grid-template-columns: 150px 1fr;
+  gap: 28px;
+  padding: 22px 0;
+  font-size: 14.5px;
+  display: grid;
+  align-items: center;
+}
+
+.finance-page .method-list p:first-child {
+  border-top: 1px solid #ced6dc;
+}
+
+.finance-page .method-list b {
+  color: var(--navy);
+  font-size: 16px;
+  font-weight: 650;
+}
+
+.finance-page .method-list span {
+  color: var(--secondary);
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   Investor Questions / FAQ Section
+   ========================================================================== */
+
+.finance-page .faq-section h2 {
+  margin-bottom: 60px;
+}
+
+.finance-page .faqs {
+  border-top: 1px solid var(--line);
+}
+
+.finance-page details {
+  border-bottom: 1px solid var(--line);
+}
+
+.finance-page summary {
+  cursor: pointer;
+  grid-template-columns: 70px 1fr 32px;
+  align-items: center;
+  padding: 28px 0;
+  list-style: none;
+  display: grid;
+}
+
+.finance-page summary::-webkit-details-marker {
+  display: none;
+}
+
+.finance-page summary b {
+  letter-spacing: -.02em;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.finance-page .plus {
+  font-size: 26px;
+  font-weight: 350;
+  color: var(--blue);
+  transition: transform .2s ease;
+  justify-self: end;
+}
+
+.finance-page details[open] .plus {
+  transform: rotate(45deg);
+}
+
+.finance-page details > p {
+  color: var(--secondary);
+  max-width: 820px;
+  margin: 0 70px 28px;
+  font-size: 15.5px;
+  line-height: 1.65;
+}
+
+/* ==========================================================================
+   Closing Consultation Section
+   ========================================================================== */
+
+.finance-page .consultation {
+  color: #fff;
+  background: linear-gradient(120deg, #104f7d, #09263d);
+  padding: clamp(100px, 11vw, 170px) 0;
+}
+
+.finance-page .consultation h2 {
+  max-width: 1100px;
+  margin-bottom: 26px;
+}
+
+.finance-page .consultation > .wrap > p:not(.eyebrow) {
+  color: #cddae3;
+  max-width: 720px;
+  margin-bottom: 34px;
+  font-size: 17.5px;
+  line-height: 1.65;
+}
+
+.finance-page .consultation small {
+  color: #96adbe;
+  margin-top: 34px;
+  font-size: 12.5px;
+  line-height: 1.55;
+  display: block;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+@media (max-width: 1000px) {
+  .finance-page .wrap {
+    width: min(100% - 48px, var(--max, 1400px));
+  }
+  .finance-page .hero {
+    align-items: flex-start;
+    min-height: 800px;
+  }
+  .finance-page .hero-image {
+    object-position: 62% center;
+    opacity: .65;
+  }
+  .finance-page .hero-wash {
+    background: linear-gradient(90deg, #fffffffc 0%, #ffffffe6 55%, #ffffff2e 100%);
+  }
+  .finance-page .editorial-head,
+  .finance-page .split-feature,
+  .finance-page .method {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+  .finance-page .process {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .finance-page .process article:nth-child(odd) {
+    border-left: 0;
+    padding-left: 0;
+  }
+  .finance-page .process article:nth-child(2n) {
+    border-left: 1px solid #ced6dc;
+    padding-left: 25px;
+  }
+  .finance-page .definition-grid,
+  .finance-page .three-insights {
+    grid-template-columns: 1fr 1fr;
+  }
+  .finance-page .definition-grid article:nth-child(3),
+  .finance-page .three-insights article:nth-child(3) {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+    padding-left: 0;
+  }
+  .finance-page .three-insights article:nth-child(3) {
+    border-color: #304051;
+  }
+  .finance-page .method-divider {
+    margin: 70px 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .finance-page .wrap {
+    width: calc(100% - 32px);
+  }
+  .finance-page .hero {
+    min-height: 600px;
+    align-items: flex-end;
+    padding-top: 20px;
+  }
+  .finance-page .hero-copy {
+    padding: 100px 0 40px;
+    width: 100%;
+  }
+  .finance-page .hero-image {
+    object-position: 70% center;
+  }
+  .finance-page .hero-wash {
+    background: linear-gradient(#fffffffa 0%, #fffffff0 58%, #ffffff94 100%);
+  }
+  .finance-page h1 {
+    font-size: clamp(44px, 13vw, 68px);
+    line-height: .96;
+  }
+  .finance-page h2 {
+    font-size: clamp(34px, 11vw, 54px);
+  }
+  .finance-page .actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .finance-page .button {
+    width: 100%;
+    justify-content: center;
+  }
+  .finance-page .section {
+    padding: 80px 0;
+  }
+  .finance-page .definition-grid,
+  .finance-page .dark-columns,
+  .finance-page .three-insights {
+    grid-template-columns: 1fr;
+  }
+  .finance-page .definition-grid article,
+  .finance-page .definition-grid article + article,
+  .finance-page .three-insights article,
+  .finance-page .three-insights article + article {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+    padding: 24px 0;
+  }
+  .finance-page .definition-grid {
+    border-top: 0;
+  }
+  .finance-page .three-insights article,
+  .finance-page .three-insights article + article {
+    border-color: #304051;
+  }
+  .finance-page .dark-columns {
+    gap: 30px;
+    margin-top: 50px;
+  }
+  .finance-page .numbered-rows article {
+    grid-template-columns: 42px 1fr;
+    align-items: start;
+    gap: 8px 14px;
+  }
+  .finance-page .numbered-rows article p {
+    grid-column: 2;
+  }
+  .finance-page .formula-panel {
+    min-height: 340px;
+    padding: 34px 22px;
+  }
+  .finance-page .process {
+    border-top: 0;
+    grid-template-columns: 1fr;
+  }
+  .finance-page .process article,
+  .finance-page .process article:nth-child(2n),
+  .finance-page .process article:nth-child(odd) {
+    border-top: 1px solid #ced6dc;
+    border-left: 0;
+    padding: 24px 0;
+  }
+  .finance-page .method-list p {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  .finance-page .method-divider {
+    margin: 60px 0;
+  }
+  .finance-page summary {
+    grid-template-columns: 36px 1fr 24px;
+    gap: 10px;
+    padding: 22px 0;
+  }
+  .finance-page summary b {
+    font-size: 17px;
+  }
+  .finance-page details > p {
+    margin: 0 0 24px 36px;
+  }
+  .finance-page .consultation {
+    padding: 85px 0;
+  }
+}

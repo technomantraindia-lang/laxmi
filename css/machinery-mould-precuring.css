@@ -1,0 +1,925 @@
+/* ==========================================================================
+   AAC MOULD HANDLING & PRE-CURING SYSTEM PAGE STYLES
+   Scope: .mould-page
+   ========================================================================== */
+
+:root {
+  --navy: #0b1727;
+  --blue: #0c4f80;
+  --deep-a: #104f7d;
+  --deep-b: #09263d;
+  --white: #ffffff;
+  --silver: #eef2f5;
+  --light: #f5f7f8;
+  --text: #0b1727;
+  --secondary: #5e6874;
+  --muted: #84909c;
+  --line: #dce2e7;
+  --highlight: #8fc6ec;
+  --shell: min(1400px, 88vw);
+}
+
+.mould-page {
+  color: var(--text);
+  background: var(--white);
+  font-family: 'Geist', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}
+
+.mould-page * {
+  box-sizing: border-box;
+}
+
+.mould-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.mould-page p {
+  color: var(--secondary);
+  margin: 0;
+  font-size: clamp(1rem, 1.15vw, 1.16rem);
+  line-height: 1.72;
+}
+
+.mould-page h1,
+.mould-page h2,
+.mould-page h3 {
+  letter-spacing: -0.045em;
+  margin: 0;
+  line-height: 0.98;
+  color: var(--navy);
+}
+
+.mould-page h1 {
+  color: var(--white);
+  font-size: clamp(3.2rem, 6.2vw, 6.2rem);
+  font-weight: 650;
+  max-width: 900px;
+}
+
+.mould-page h1 span,
+.mould-page h2 span {
+  color: #8995a0;
+  font-weight: 480;
+  display: block;
+}
+
+.mould-page h2 {
+  font-size: clamp(2.4rem, 4.8vw, 4.8rem);
+  font-weight: 620;
+  max-width: 900px;
+}
+
+.mould-page h3 {
+  font-size: clamp(1.25rem, 1.6vw, 1.6rem);
+  line-height: 1.2;
+  font-weight: 650;
+}
+
+.mould-page .shell {
+  width: var(--shell);
+  margin-inline: auto;
+}
+
+.mould-page .section-pad {
+  padding-block: clamp(90px, 9vw, 150px);
+}
+
+/* Eyebrows */
+.mould-page .eyebrow {
+  color: var(--blue) !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+  gap: 0 !important;
+  letter-spacing: 0.2em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 1.5rem !important;
+  font-size: 0.75rem !important;
+  font-weight: 750 !important;
+  line-height: 1 !important;
+  width: fit-content;
+}
+
+.mould-page .eyebrow::before {
+  content: none !important;
+  display: none !important;
+}
+
+.mould-page .eyebrow.light,
+.mould-page .statement-section .eyebrow,
+.mould-page .calculation-section .eyebrow,
+.mould-page .mistakes-section .eyebrow,
+.mould-page .consultation-section .eyebrow {
+  color: var(--highlight) !important;
+}
+
+.mould-page .lead {
+  color: var(--navy);
+  margin-top: 1.8rem;
+  font-size: clamp(1.25rem, 1.6vw, 1.65rem);
+  line-height: 1.45;
+  letter-spacing: -0.025em;
+  font-weight: 550;
+}
+
+/* Hero Section */
+.mould-page .hero {
+  background: var(--navy);
+  align-items: center;
+  min-height: 92vh;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.mould-page .hero-image {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.mould-page .hero-shade {
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(7, 19, 33, 0.95) 0%, rgba(7, 19, 33, 0.85) 30%, rgba(7, 19, 33, 0.55) 60%, rgba(7, 19, 33, 0.15) 100%);
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.mould-page .hero-content {
+  z-index: 3;
+  padding-top: 60px;
+  position: relative;
+}
+
+.mould-page .hero-content > * {
+  max-width: min(720px, 54vw);
+}
+
+.mould-page .hero-copy {
+  color: #c6d0d8;
+  max-width: 39rem;
+  margin-top: 1.8rem;
+  font-size: clamp(1.05rem, 1.3vw, 1.25rem);
+  line-height: 1.65;
+}
+
+.mould-page .hero-actions,
+.mould-page .consultation-actions {
+  align-items: center;
+  gap: 24px;
+  margin-top: 2.2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mould-page .button {
+  border-radius: 999px;
+  justify-content: center;
+  align-items: center;
+  min-height: 50px;
+  padding: 0 28px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  display: inline-flex;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.mould-page .button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.mould-page .button-light {
+  background: var(--white);
+  color: var(--navy);
+}
+
+.mould-page .button-light:hover {
+  background: #f0f4f8;
+}
+
+.mould-page .text-link {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  align-items: center;
+  gap: 0.55rem;
+  padding-block: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  display: inline-flex;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.mould-page .light-link {
+  color: var(--white);
+}
+
+.mould-page .light-link:hover {
+  color: var(--highlight);
+  border-color: var(--highlight);
+}
+
+.mould-page .hero-note {
+  color: #9eabb5;
+  letter-spacing: 0.04em;
+  margin-top: 2rem;
+  font-size: 0.8rem;
+}
+
+/* Direct Answer Section */
+.mould-page .answer-section {
+  background: var(--white);
+}
+
+.mould-page .answer-grid {
+  grid-template-columns: 0.85fr 1.15fr;
+  align-items: start;
+  gap: 8vw;
+  display: grid;
+}
+
+.mould-page .answer-grid h2 {
+  max-width: 560px;
+  font-size: clamp(2.4rem, 4.2vw, 4.2rem);
+}
+
+.mould-page .answer-copy > p:last-child {
+  margin-top: 1.5rem;
+}
+
+/* Statement Section */
+.mould-page .statement-section {
+  color: var(--white);
+  background: linear-gradient(135deg, var(--deep-a) 0%, var(--deep-b) 100%);
+}
+
+.mould-page .statement-wrap h2 {
+  max-width: 1180px;
+  color: var(--white);
+  font-size: clamp(2.2rem, 4.4vw, 4.5rem);
+  line-height: 1.1;
+}
+
+.mould-page .statement-wrap h2 span {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* Process Section (The Complete Cycle) */
+.mould-page .process-section,
+.mould-page .comparison-section,
+.mould-page .inputs-section {
+  background: var(--light);
+}
+
+.mould-page .section-intro {
+  grid-template-columns: 1.3fr 0.7fr;
+  align-items: end;
+  gap: 8vw;
+  margin-bottom: clamp(60px, 7vw, 100px);
+  display: grid;
+}
+
+.mould-page .section-intro h2 {
+  max-width: 930px;
+}
+
+.mould-page .section-intro > p {
+  max-width: 470px;
+  margin-top: 0;
+}
+
+.mould-page .process-list {
+  border-top: 1px solid var(--line);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mould-page .process-list li {
+  border-bottom: 1px solid var(--line);
+  grid-template-columns: 80px minmax(180px, 0.7fr) 1.3fr;
+  align-items: center;
+  gap: 28px;
+  min-height: 110px;
+  padding-block: 1.5rem;
+  display: grid;
+}
+
+.mould-page .step-number,
+.mould-page .automation-rows article > span,
+.mould-page .input-list span,
+.mould-page .scope-grid article > span {
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  font-size: 0.82rem;
+  font-weight: 750;
+  font-family: monospace;
+}
+
+.mould-page .process-list h3 {
+  letter-spacing: -0.025em;
+  margin: 0;
+  font-size: clamp(1.2rem, 1.6vw, 1.6rem);
+}
+
+.mould-page .process-list p {
+  max-width: 650px;
+  color: var(--secondary);
+  font-size: 1rem;
+}
+
+/* System Scope (6 Critical Interfaces) */
+.mould-page .scope-section {
+  background: var(--white);
+}
+
+.mould-page .scope-grid {
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+}
+
+.mould-page .scope-grid article {
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  min-height: 240px;
+  padding: 36px 32px;
+  transition: background 0.2s ease;
+}
+
+.mould-page .scope-grid article:hover {
+  background: var(--light);
+}
+
+.mould-page .scope-grid h3 {
+  letter-spacing: -0.025em;
+  margin: 40px 0 12px;
+  font-size: 1.35rem;
+}
+
+.mould-page .scope-grid p {
+  color: var(--secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Precuring Control */
+.mould-page .precuring-section {
+  background: var(--silver);
+}
+
+.mould-page .split-feature {
+  grid-template-columns: 1fr 1fr;
+  gap: 9vw;
+  display: grid;
+}
+
+.mould-page .feature-heading {
+  align-self: start;
+  position: sticky;
+  top: 100px;
+}
+
+.mould-page .feature-body {
+  max-width: 660px;
+}
+
+.mould-page .feature-body > p:first-of-type {
+  margin-top: 0;
+}
+
+.mould-page .feature-body h3 {
+  letter-spacing: -0.02em;
+  margin: 0 0 14px;
+  font-size: 1.45rem;
+}
+
+.mould-page .quiet-rule {
+  background: var(--line);
+  width: 100%;
+  height: 1px;
+  margin: 45px 0;
+}
+
+/* Calculation Section */
+.mould-page .calculation-section {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.mould-page .calculation-section h2 {
+  color: var(--white);
+}
+
+.mould-page .calculation-section h2 span {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.mould-page .calculation-grid {
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 8vw;
+  display: grid;
+  margin-top: 1.5rem;
+}
+
+.mould-page .calculation-grid > div > p {
+  color: #c6d0d8;
+  max-width: 620px;
+  margin-top: 1.5rem;
+}
+
+.mould-page .formula {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: clamp(32px, 4vw, 54px);
+  border-radius: 4px;
+}
+
+.mould-page .formula > span {
+  color: var(--highlight);
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+  font-weight: 750;
+  display: block;
+}
+
+.mould-page .formula strong {
+  color: var(--white);
+  margin-top: 36px;
+  font-size: clamp(1.4rem, 2vw, 1.9rem);
+  font-weight: 600;
+  display: block;
+}
+
+.mould-page .formula p {
+  color: var(--white);
+  letter-spacing: -0.035em;
+  margin: 18px 0 24px;
+  font-size: clamp(1.5rem, 2.4vw, 2.2rem);
+  line-height: 1.25;
+}
+
+.mould-page .formula i {
+  color: var(--highlight);
+  font-size: 1.4rem;
+  font-style: normal;
+  display: inline-block;
+  margin-block: 4px;
+}
+
+.mould-page .formula small {
+  color: #a4b3be;
+  line-height: 1.6;
+  font-size: 0.85rem;
+  display: block;
+}
+
+/* Comparison Section (Mould vs Side Plate) */
+.mould-page .comparison-table {
+  border: 1px solid var(--line);
+  background: var(--white);
+  overflow-x: auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.mould-page table {
+  border-collapse: collapse;
+  text-align: left;
+  width: 100%;
+  min-width: 740px;
+}
+
+.mould-page th,
+.mould-page td {
+  border-bottom: 1px solid var(--line);
+  vertical-align: middle;
+  padding: 24px 26px;
+  font-size: 0.96rem;
+  line-height: 1.55;
+}
+
+.mould-page thead th {
+  background: var(--navy);
+  color: var(--white);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  font-weight: 750;
+}
+
+.mould-page tbody th {
+  width: 22%;
+  color: var(--navy);
+  background: #fafbfc;
+  font-weight: 700;
+}
+
+.mould-page tbody td {
+  color: var(--secondary);
+}
+
+.mould-page tbody tr:last-child > * {
+  border-bottom: 0;
+}
+
+.mould-page .table-note {
+  max-width: 880px;
+  color: var(--muted);
+  margin-top: 18px;
+  font-size: 0.86rem;
+  line-height: 1.6;
+}
+
+/* Automation Section */
+.mould-page .automation-section {
+  background: var(--white);
+}
+
+.mould-page .automation-rows {
+  border-top: 1px solid var(--line);
+}
+
+.mould-page .automation-rows article {
+  border-bottom: 1px solid var(--line);
+  grid-template-columns: 70px 0.65fr 1.2fr 1fr;
+  align-items: center;
+  gap: 24px;
+  min-height: 135px;
+  padding-block: 1.5rem;
+  display: grid;
+}
+
+.mould-page .automation-rows h3 {
+  letter-spacing: -0.025em;
+  margin: 0;
+  font-size: 1.45rem;
+}
+
+.mould-page .automation-rows p {
+  color: var(--secondary);
+  font-size: 0.95rem;
+}
+
+.mould-page .automation-rows small {
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.mould-page .definition-callout {
+  background: var(--silver);
+  margin-top: 55px;
+  padding: clamp(32px, 4.5vw, 60px);
+  border-radius: 4px;
+}
+
+.mould-page .definition-callout h3 {
+  letter-spacing: -0.04em;
+  max-width: 920px;
+  margin: 0;
+  font-size: clamp(1.6rem, 2.6vw, 2.5rem);
+  line-height: 1.15;
+}
+
+.mould-page .definition-callout > p:last-child {
+  max-width: 760px;
+  color: var(--secondary);
+  margin-top: 18px;
+  line-height: 1.7;
+}
+
+/* Mistakes Section */
+.mould-page .mistakes-section {
+  color: var(--white);
+  background: linear-gradient(135deg, var(--deep-a) 0%, var(--deep-b) 100%);
+}
+
+.mould-page .mistakes-section h2 {
+  color: var(--white);
+}
+
+.mould-page .mistakes-section h2 span {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.mould-page .mistakes-grid {
+  grid-template-columns: 1fr 1fr;
+  gap: 8vw;
+  display: grid;
+  align-items: start;
+}
+
+.mould-page .mistakes-grid ol {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mould-page .mistakes-grid li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  grid-template-columns: 48px 1fr;
+  gap: 16px;
+  padding-block: 1.45rem;
+  display: grid;
+}
+
+.mould-page .mistakes-grid li span {
+  color: var(--highlight);
+  font-size: 0.8rem;
+  font-weight: 750;
+  font-family: monospace;
+}
+
+.mould-page .mistakes-grid li p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+/* Inputs Section */
+.mould-page .input-list {
+  border-top: 1px solid var(--line);
+}
+
+.mould-page .input-list > div {
+  border-bottom: 1px solid var(--line);
+  grid-template-columns: 70px 0.75fr 1.25fr;
+  align-items: center;
+  gap: 24px;
+  min-height: 96px;
+  padding-block: 1.2rem;
+  display: grid;
+}
+
+.mould-page .input-list h3 {
+  letter-spacing: -0.02em;
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.mould-page .input-list p {
+  color: var(--secondary);
+  font-size: 0.95rem;
+}
+
+/* FAQ Section */
+.mould-page .faq-section {
+  background: var(--white);
+}
+
+.mould-page .faq-grid {
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 9vw;
+  display: grid;
+}
+
+.mould-page .faq-heading {
+  align-self: start;
+  position: sticky;
+  top: 100px;
+}
+
+.mould-page .faq-list {
+  border-top: 1px solid var(--line);
+}
+
+.mould-page .faq-list details {
+  border-bottom: 1px solid var(--line);
+}
+
+.mould-page .faq-list summary {
+  cursor: pointer;
+  grid-template-columns: 48px 1fr 24px;
+  align-items: center;
+  gap: 16px;
+  padding-block: 1.55rem;
+  font-size: clamp(1.05rem, 1.3vw, 1.22rem);
+  font-weight: 650;
+  line-height: 1.4;
+  list-style: none;
+  display: grid;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+
+.mould-page .faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.mould-page .faq-list summary:hover {
+  color: var(--blue);
+}
+
+.mould-page .faq-list summary span {
+  color: var(--blue);
+  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+  font-family: monospace;
+}
+
+.mould-page .faq-list summary:after {
+  content: "+";
+  color: var(--blue);
+  justify-self: end;
+  font-size: 1.5rem;
+  font-weight: 300;
+  transition: transform 0.2s ease;
+}
+
+.mould-page .faq-list details[open] summary:after {
+  content: "−";
+}
+
+.mould-page .faq-list details p {
+  color: var(--secondary);
+  padding: 0 36px 24px 64px;
+  font-size: 0.98rem;
+  line-height: 1.68;
+}
+
+/* Consultation Section */
+.mould-page .consultation-section {
+  color: var(--white);
+  background: linear-gradient(135deg, var(--deep-a) 0%, var(--deep-b) 100%);
+}
+
+.mould-page .consultation-section h2 {
+  color: var(--white);
+}
+
+.mould-page .consultation-section h2 span {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.mould-page .consultation-grid {
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: end;
+  gap: 8vw;
+  display: grid;
+}
+
+.mould-page .consultation-grid > div > p {
+  color: #c4d0d9;
+  margin-top: 0;
+  font-size: clamp(1.05rem, 1.25vw, 1.22rem);
+  line-height: 1.7;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .mould-page .answer-grid,
+  .mould-page .split-feature,
+  .mould-page .calculation-grid,
+  .mould-page .mistakes-grid,
+  .mould-page .faq-grid,
+  .mould-page .consultation-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .mould-page .section-intro {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .mould-page .scope-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mould-page .feature-heading,
+  .mould-page .faq-heading {
+    position: static;
+  }
+
+  .mould-page .automation-rows article {
+    grid-template-columns: 60px 0.75fr 1.25fr;
+  }
+
+  .mould-page .automation-rows small {
+    grid-column: 3;
+  }
+
+  .mould-page .hero-content > * {
+    max-width: 68vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .mould-page .shell {
+    width: calc(100% - 36px);
+  }
+
+  .mould-page .section-pad {
+    padding-block: 70px;
+  }
+
+  .mould-page .hero {
+    align-items: flex-end;
+    min-height: 760px;
+    padding-bottom: 50px;
+  }
+
+  .mould-page .hero-image {
+    object-position: 65% center;
+  }
+
+  .mould-page .hero-shade {
+    background: linear-gradient(180deg, rgba(7, 19, 33, 0.25) 0%, rgba(7, 19, 33, 0.85) 50%, rgba(7, 19, 33, 0.98) 95%);
+  }
+
+  .mould-page .hero-content {
+    padding-top: 200px;
+  }
+
+  .mould-page .hero-content > * {
+    max-width: 100%;
+  }
+
+  .mould-page h1 {
+    font-size: clamp(2.6rem, 10vw, 3.8rem);
+  }
+
+  .mould-page h2 {
+    font-size: clamp(2.1rem, 8vw, 3rem);
+  }
+
+  .mould-page .hero-actions,
+  .mould-page .consultation-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .mould-page .button {
+    width: 100%;
+  }
+
+  .mould-page .process-list li {
+    grid-template-columns: 48px 1fr;
+    gap: 12px;
+    padding-block: 1.2rem;
+  }
+
+  .mould-page .process-list p {
+    grid-column: 2;
+  }
+
+  .mould-page .scope-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mould-page .formula {
+    padding: 24px 20px;
+  }
+
+  .mould-page .automation-rows article {
+    grid-template-columns: 44px 1fr;
+    gap: 12px;
+    padding-block: 1.2rem;
+  }
+
+  .mould-page .automation-rows p,
+  .mould-page .automation-rows small {
+    grid-column: 2;
+  }
+
+  .mould-page .input-list > div {
+    grid-template-columns: 42px 1fr;
+    gap: 12px;
+    padding-block: 1.1rem;
+  }
+
+  .mould-page .input-list p {
+    grid-column: 2;
+  }
+
+  .mould-page .faq-list summary {
+    grid-template-columns: 36px 1fr 20px;
+    gap: 10px;
+    font-size: 1rem;
+  }
+
+  .mould-page .faq-list details p {
+    padding-left: 46px;
+    padding-right: 12px;
+  }
+}

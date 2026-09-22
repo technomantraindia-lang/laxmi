@@ -1,40 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="AAC Plant Batch Size & Capacity Selection Guide by Laxmi En-Fab. Learn how batch size, mould cycles, autoclave scheduling, and steam boiler TPH determine true daily plant capacity." />
-  <meta name="keywords" content="AAC plant capacity, AAC batch size, AAC plant sizing, autoclave capacity, AAC mixer volume, boiler TPH, Laxmi En-Fab" />
-  <title>AAC Plant Capacity &amp; Batch Size Selection Guide | Laxmi En-Fab</title>
-  
-  <!-- Google Fonts: Geist & Geist Mono -->
+  <title>AAC Plant Capacity Selection Guide for India | Laxmi En-Fab</title>
+  <meta name="description" content="Learn how to select AAC plant capacity using market demand, utilisation, production economics, product mix and future expansion planning." />
+  <meta name="keywords" content="AAC plant capacity selection, AAC capacity planning India, AAC plant size, AAC production capacity, Laxmi En-Fab" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="How to Select the Right AAC Plant Capacity | Laxmi En-Fab" />
+  <meta property="og:description" content="A practical engineering and commercial guide for AAC plant investors in India." />
+  <meta property="og:url" content="https://www.laxmienfab.com/capacity-selection.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="assets/images/capacity-selection.png" />
+  <meta property="og:image:width" content="1672" />
+  <meta property="og:image:height" content="940" />
+  <meta property="og:image:alt" content="Three correctly proportioned AAC block arrangements representing undersized, balanced and oversized plant capacity" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How to Select the Right AAC Plant Capacity | Laxmi En-Fab" />
+  <meta name="twitter:description" content="A practical engineering and commercial guide for AAC plant investors in India." />
+  <meta name="twitter:image" content="assets/images/capacity-selection.png" />
+
+  <link rel="canonical" href="https://www.laxmienfab.com/capacity-selection.html" />
+
+  <!-- Google Fonts: Geist & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet" />
-  
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/components.css" />
-  <link rel="stylesheet" href="css/homepage.css" />
-  <link rel="stylesheet" href="css/engineering.css" />
+  <link rel="stylesheet" href="css/capacity-selection.css" />
   <link rel="stylesheet" href="css/responsive.css" />
 
+  <!-- Structured Data / JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "AAC Plant Capacity Selection Guide: Batch Size, Autoclave Balancing & System Sync",
-    "description": "Comprehensive buyer and engineer guide on calculating practical AAC plant yield and matching mixer cycles with autoclaves and steam boilers.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Laxmi En-Fab Pvt. Ltd."
-    }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.laxmienfab.com/#organization",
+        "name": "Laxmi En-Fab Pvt. Ltd.",
+        "url": "https://www.laxmienfab.com/",
+        "logo": "assets/images/laxmi-logo.png"
+      },
+      {
+        "@type": "Article",
+        "@id": "https://www.laxmienfab.com/capacity-selection.html#article",
+        "headline": "How to Select the Right AAC Plant Capacity",
+        "description": "A practical capacity-selection framework for AAC plant investors in India.",
+        "author": {
+          "@id": "https://www.laxmienfab.com/#organization"
+        },
+        "publisher": {
+          "@id": "https://www.laxmienfab.com/#organization"
+        },
+        "image": "assets/images/capacity-selection.png"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.laxmienfab.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "AAC Investor Academy",
+            "item": "https://www.laxmienfab.com/academy/academy.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "02 Design Your Plant",
+            "item": "https://www.laxmienfab.com/academy/design-your-plant.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Capacity Selection"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the best AAC plant capacity for a new investor?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "There is no universally best capacity. The right choice depends on achievable demand, delivered cost, utilisation, product mix, available capital and the practical route to expansion."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is rated capacity the same as actual production?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Rated capacity is a design figure under stated conditions. Achievable and saleable production are affected by maintenance, raw materials, product mix, process stability, rejection and handling loss."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does a larger AAC plant always have a lower production cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not necessarily. Scale can distribute fixed costs across more output, but only when enough saleable demand and utilisation exist. Low utilisation and high financing exposure can offset that advantage."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can an AAC plant be expanded later?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Many configurations can be expanded, but the original design must account for raw-material preparation, casting, cutting, autoclaving, steam, packing, utilities and material flow."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does transportation affect capacity selection?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Freight changes delivered cost and therefore the market a plant can serve competitively. Capacity should be linked to demand within commercially viable distance bands."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is needed for a preliminary capacity review?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Proposed location, target territory, expected monthly sales, raw-material route, product mix, available land, project timeline and future growth plan."
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
 </head>
-<body class="engineering-inner-page">
+<body class="capacity-page">
 
-  <!-- Shared Header -->
+  <!-- Shared Global Header Injection Placeholder -->
   <div id="site-header"></div>
 
   <!-- Breadcrumb Navigation -->
@@ -42,464 +158,334 @@
     <div class="site-breadcrumb__inner">
       <a href="index.html">Home</a>
       <span class="bc-sep">/</span>
-      <a href="engineering-center.html">AAC Engineering Center</a>
+      <a href="academy/academy.html">AAC Investor Academy</a>
       <span class="bc-sep">/</span>
-      <span class="bc-current">Batch Sizing &amp; Capacity Selection</span>
+      <a href="academy/design-your-plant.html">02 Design Your Plant</a>
+      <span class="bc-sep">/</span>
+      <span class="bc-current">Capacity Selection</span>
     </div>
   </nav>
 
-  <!-- Sticky In-Page Sub-Navigation Strip -->
-  <nav class="eng-nav-strip" aria-label="Capacity Navigation">
-    <div class="eng-nav-strip__inner">
-      <a href="#overview" class="eng-nav-btn active"><span class="eng-nav-num">01</span> Overview</a>
-      <a href="#balance" class="eng-nav-btn"><span class="eng-nav-num">02</span> System Balance</a>
-      <a href="#matrix" class="eng-nav-btn"><span class="eng-nav-num">03</span> Sizing Matrix</a>
-      <a href="#diligence" class="eng-nav-btn"><span class="eng-nav-num">04</span> 8 Due Diligence Checks</a>
-      <a href="#consultation" class="eng-nav-btn"><span class="eng-nav-num">05</span> Sizing Sheet</a>
-    </div>
-  </nav>
+  <main id="top">
 
-  <main id="main-content">
-
-    <!-- ============ 01. HERO SECTION (EDITORIAL FULL SCREEN IMAGE BACKGROUND) ============ -->
-    <section class="editorial-hero editorial-hero--light is-loaded" id="overview" aria-label="AAC Plant Capacity Overview">
-      <div class="editorial-hero__media" aria-hidden="true">
-        <div class="editorial-hero__video-wrap">
-          <img
-            class="editorial-hero__poster"
-            src="assets/images/decisions-plant-bg.png"
-            alt="Complete AAC Plant Batch Synchronization and Sizing"
-            fetchpriority="high"
-          />
-        </div>
-        <div class="editorial-hero__overlay"></div>
-      </div>
-
-      <div class="editorial-hero__inner">
-        <div class="editorial-hero__content">
-          <span class="editorial-hero__eyebrow">PILLAR 03 · CAPACITY &amp; BATCH SIZING GUIDE</span>
-          <h1 class="editorial-hero__title">
-            <span>AAC Plant Capacity</span>
-            <span class="editorial-hero__title-light">&amp; Batch Sizing.</span>
-          </h1>
-          <p class="editorial-hero__sub">
-            Why sustainable daily output depends on total system balance—synchronizing raw material dosing, mixer batch volume, pre-curing mould cycle, wire cutting speed, autoclave turnover, and boiler TPH.
+    <!-- ============ HERO SECTION ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-shade" aria-hidden="true"></div>
+      <img
+        class="hero-image"
+        src="assets/images/capacity-selection.png"
+        alt="Three correctly proportioned AAC block arrangements representing undersized, balanced and oversized plant capacity"
+        width="1672"
+        height="940"
+        fetchpriority="high"
+      />
+      <div class="wrap hero-wrap">
+        <div class="hero-copy">
+          <p class="eyebrow">AAC investor academy · Capacity planning</p>
+          <h1 id="hero-title">Select the right capacity.<br /><span>Not simply the biggest.</span></h1>
+          <p class="hero-lead">
+            The right AAC plant capacity balances saleable demand, delivered cost, realistic utilisation and future expansion—before machinery is finalised.
           </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#consultation">Request a capacity discussion <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#framework">See the planning framework <span aria-hidden="true">↓</span></a>
+          </div>
+          <p class="micro-note">Capacity must be evaluated against project-specific assumptions.</p>
+        </div>
+      </div>
+    </section>
 
-          <div class="eng-hero__stats">
-            <div class="eng-stat-item">
-              <div class="eng-stat-item__val">4.0–6.0 <span>m³</span></div>
-              <div class="eng-stat-item__lbl">Standard Batch Sizes</div>
-            </div>
-            <div class="eng-stat-item">
-              <div class="eng-stat-item__val">3.5–4.0 <span>min</span></div>
-              <div class="eng-stat-item__lbl">Mixer Cycle Time</div>
-            </div>
-            <div class="eng-stat-item">
-              <div class="eng-stat-item__val">150–1500 <span>m³</span></div>
-              <div class="eng-stat-item__lbl">Daily Plant Output</div>
-            </div>
-            <div class="eng-stat-item">
-              <div class="eng-stat-item__val">10–12 <span>hrs</span></div>
-              <div class="eng-stat-item__lbl">Autoclave Cycle</div>
-            </div>
+    <!-- ============ 01 · UNDERSTAND SECTION ============ -->
+    <section class="intro section" id="understand">
+      <div class="wrap">
+        <p class="eyebrow">01 · Understand</p>
+        <div class="statement-grid">
+          <h2>Capacity is an economic decision.<br /><span>Machinery follows.</span></h2>
+          <div class="intro-copy">
+            <p>
+              A plant should be large enough to remain commercially competitive, yet disciplined enough to avoid unnecessary capital exposure.
+            </p>
+            <p>
+              Financial feasibility should be based on realistic <strong>saleable production</strong>—not machinery nameplate capacity alone.
+            </p>
+          </div>
+        </div>
+
+        <div class="definitions" aria-label="Capacity definitions">
+          <article>
+            <span>01</span>
+            <h3>Rated capacity</h3>
+            <p>Theoretical output under defined operating conditions.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Achievable production</h3>
+            <p>Expected output after operating hours, maintenance and process availability.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Saleable production</h3>
+            <p>Dispatchable output after verified loss, rejection and handling damage.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ THE CENTRAL TRADE-OFF (TENSION SECTION) ============ -->
+    <section class="tension section">
+      <div class="wrap">
+        <p class="eyebrow light">The central trade-off</p>
+        <h2>Too small raises exposure to unit cost.<br /><span>Too large raises exposure to utilisation.</span></h2>
+        <div class="split-compare">
+          <article>
+            <p class="compare-label">Undersized</p>
+            <h3>Lower entry cost can hide a higher cost per saleable m³.</h3>
+            <p>Management, supervision, quality control, utilities and factory overhead may remain fixed or step-fixed within a production range.</p>
+          </article>
+          <article>
+            <p class="compare-label">Oversized</p>
+            <h3>More installed output can create financial weight before demand exists.</h3>
+            <p>Financing, depreciation, infrastructure and working capital increase while early-stage utilisation may remain low.</p>
+          </article>
+        </div>
+        <blockquote>“What volume can we produce, sell and deliver competitively—and how should the plant grow with the market?”</blockquote>
+      </div>
+    </section>
+
+    <!-- ============ 02 · EVALUATE FRAMEWORK ============ -->
+    <section class="framework section" id="evaluate">
+      <div class="wrap">
+        <p class="eyebrow">02 · Evaluate</p>
+        <div class="section-heading">
+          <h2 id="framework">Seven inputs.<br /><span>One balanced decision.</span></h2>
+          <p>Each factor changes both engineering scope and commercial risk. They must be evaluated together, using visible assumptions.</p>
+        </div>
+
+        <div class="numbered-list">
+          <article>
+            <span>01</span>
+            <h3>Achievable demand</h3>
+            <p>Base capacity on saleable regional demand—not broad national potential.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Delivery economics</h3>
+            <p>Evaluate freight and handling by distance band because delivered cost defines the practical market.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Operating pattern</h3>
+            <p>State operating days, shifts, maintenance allowances and equipment availability.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Capacity utilisation</h3>
+            <p>Test conservative, base and high-demand scenarios instead of assuming immediate full output.</p>
+          </article>
+          <article>
+            <span>05</span>
+            <h3>Saleable yield</h3>
+            <p>Allow for verified process loss, rejection, breakage and quality-related holding.</p>
+          </article>
+          <article>
+            <span>06</span>
+            <h3>Product mix</h3>
+            <p>Blocks, panels, lintels and special profiles place different demands on the process.</p>
+          </article>
+          <article>
+            <span>07</span>
+            <h3>Expansion strategy</h3>
+            <p>Balance every stage for future throughput; reserved land alone does not create expandability.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRELIMINARY CALCULATION ============ -->
+    <section class="calculation section">
+      <div class="wrap calculation-grid">
+        <div>
+          <p class="eyebrow">Preliminary calculation</p>
+          <h2>Start with demand.<br /><span>Then test the assumptions.</span></h2>
+          <p>The calculation provides an initial capacity requirement. Seasonality, product mix, bottlenecks, utilities, storage and dispatch must still be evaluated.</p>
+        </div>
+        <div class="formula-panel" aria-label="AAC plant capacity calculation formula">
+          <p class="formula-title">Required rated capacity per day</p>
+          <p class="formula">Target saleable volume</p>
+          <span class="fraction-line"></span>
+          <p class="denominator">Operating days × expected utilisation × saleable yield</p>
+          <div class="formula-note">
+            <strong>Do not add an arbitrary future percentage.</strong> Define a demand trigger and a technically balanced Phase-2 plan.
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ 02. SECTION 01: TOTAL SYSTEM BALANCE ============ -->
-    <section class="eng-section eng-section--white" id="balance">
-      <div class="eng-container">
-        
-        <div>
-          <span class="eng-eyebrow">01 · CORE ENGINEERING PRINCIPLE</span>
-          <h2 class="eng-title">
-            <span>Total system balance.</span>
-            <span class="eng-title-light">Never size a plant by autoclave count alone.</span>
-          </h2>
-          <p class="eng-lead">
-            A plant is only as fast as its slowest sub-system. If your slurry batching takes 7 minutes per cycle, or your pre-curing tunnel cannot release moulds every 4 minutes, adding extra autoclaves will not increase your daily block output.
-          </p>
+    <!-- ============ THE COMPLETE PRODUCTION BALANCE ============ -->
+    <section class="system section">
+      <div class="wrap">
+        <p class="eyebrow">The complete production balance</p>
+        <div class="section-heading">
+          <h2>Actual output is set by the weakest stage.<br /><span>Not by one machine.</span></h2>
+          <p>Every major stage must support the same production plan. Otherwise installed capacity and practical output will diverge.</p>
         </div>
 
-        <!-- 2 Highlight Principle Cards -->
-        <div class="eng-chem-grid">
-          <div class="eng-chem-card">
-            <div class="eng-chem-card__badge">PRINCIPLE 01 · PRACTICAL YIELD EQUATION</div>
-            <h3 class="eng-chem-card__title">True Daily Block Yield Calculation</h3>
-            <div class="eng-chem-card__formula">
-              <code>Daily Yield (m³) = (60 / T_cycle) × V_mould × H_eff × (1 - R_waste)</code>
-            </div>
-            <p class="eng-chem-card__desc">
-              Practical output is determined by mixer cycle frequency ($T_{cycle} \approx 3.5\text{ min}$), usable mould volume ($V_{mould} = 4.0–6.0\text{ m³}$), effective operating hours ($H_{eff}$), and green cake cut scrap recovery.
-            </p>
-          </div>
-
-          <div class="eng-chem-card eng-chem-card--highlight">
-            <div class="eng-chem-card__badge">PRINCIPLE 02 · 5-STAGE SYNCHRONIZATION</div>
-            <h3 class="eng-chem-card__title">Synchronized Sub-System Matching</h3>
-            <div class="eng-chem-card__formula">
-              <code>Batching (4 min) ↔ Pre-Cure (150 min) ↔ Cutting (3.5 min) ↔ Autoclave (11 hr) ↔ Boiler TPH</code>
-            </div>
-            <p class="eng-chem-card__desc">
-              Every station must match the target pace. Adding autoclaves without matching steam boiler rating (TPH) causes steam starvation during concurrent vessel pressurization, degrading block strength.
-            </p>
-          </div>
+        <div class="process-line" aria-label="AAC capacity bottleneck stages">
+          <article>
+            <span>01</span>
+            <h3>Raw material</h3>
+            <p>Grinding, slurry preparation, storage and dosing</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Casting</h3>
+            <p>Mixer output, mould volume, cycle time and mould availability</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Cutting</h3>
+            <p>Pre-curing stability, available space and cutting-cycle capacity</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Autoclaving</h3>
+            <p>Loading volume, cycle duration, handling and steam availability</p>
+          </article>
+          <article>
+            <span>05</span>
+            <h3>Dispatch</h3>
+            <p>Separation, packing, storage and vehicle loading</p>
+          </article>
         </div>
-
       </div>
     </section>
 
-    <!-- ============ 03. SECTION 02: CAPACITY SIZING MATRIX ============ -->
-    <section class="eng-section eng-section--light" id="matrix">
-      <div class="eng-container">
-        
-        <div>
-          <span class="eng-eyebrow">02 · CAPACITY MATRIX</span>
-          <h2 class="eng-title">
-            <span>Standard plant tiers.</span>
-            <span class="eng-title-light">Equipment sizing &amp; utility requirements.</span>
-          </h2>
-          <p class="eng-lead">
-            Compare usable batch sizes, mixer frequencies, autoclave counts, boiler ratings, and land requirements across 5 standardized production tiers.
-          </p>
+    <!-- ============ 03 · DECIDE SECTION ============ -->
+    <section class="decision section" id="decide">
+      <div class="wrap">
+        <p class="eyebrow">03 · Decide</p>
+        <div class="section-heading">
+          <h2>Plan Phase 1.<br /><span>Protect Phase 2.</span></h2>
+          <p>Expansion-ready design does not mean purchasing every future machine today. It means protecting the provisions that become difficult or expensive to change later.</p>
         </div>
 
-        <!-- Master Sizing Table -->
-        <div class="eng-matrix-table-wrap">
-          <table class="eng-matrix-table">
+        <div class="strategy-table" role="region" aria-label="Capacity strategy comparison" tabindex="0">
+          <table>
             <thead>
               <tr>
-                <th>Plant Tier</th>
-                <th>Usable Batch Size</th>
-                <th>Mixer Frequency</th>
-                <th>Autoclave Setup</th>
-                <th>Boiler Rating (TPH)</th>
-                <th>Land Area</th>
-                <th>Shift Strategy</th>
+                <th>Strategy</th>
+                <th>Potential advantage</th>
+                <th>Principal risk</th>
+                <th>May suit</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>
-                  <div class="eng-material-cell">
-                    <span class="eng-material-name">150 m³/Day</span>
-                    <span class="eng-material-formula">Entry Level Setup</span>
-                  </div>
-                </td>
-                <td>4.0 m³ (4.2m × 1.2m × 0.6m)</td>
-                <td><span class="eng-prop-badge">3–4 Batches / hr</span></td>
-                <td>2 Units (Ø2.0m × 21m)</td>
-                <td><span class="eng-qc-tag">3.0 – 4.0 TPH</span></td>
-                <td>2.5 – 3.0 Acres</td>
-                <td>1–2 Shifts / Day (Ideal starter plant)</td>
+                <th>Smaller initial plant</th>
+                <td>Lower initial capital exposure</td>
+                <td>Higher unit cost or restricted growth</td>
+                <td>Limited demand with practical expansion</td>
+              </tr>
+              <tr class="recommended">
+                <th>Balanced commercial plant <small>Preferred principle</small></th>
+                <td>Investment aligned with realistic demand</td>
+                <td>Requires reliable feasibility inputs</td>
+                <td>Established regional opportunity</td>
               </tr>
               <tr>
-                <td>
-                  <div class="eng-material-cell">
-                    <span class="eng-material-name">300 m³/Day</span>
-                    <span class="eng-material-formula">Commercial Standard</span>
-                  </div>
-                </td>
-                <td>4.0 – 4.8 m³</td>
-                <td><span class="eng-prop-badge">4–6 Batches / hr</span></td>
-                <td>3–4 Units (Ø2.0m × 31m)</td>
-                <td><span class="eng-qc-tag">6.0 TPH</span></td>
-                <td>3.5 – 4.5 Acres</td>
-                <td>2–3 Shifts (Most popular commercial plant)</td>
+                <th>Expansion-ready plant</th>
+                <td>Controls early investment while preserving growth</td>
+                <td>Poor Phase-1 design can disrupt expansion</td>
+                <td>Demand expected in identifiable stages</td>
               </tr>
               <tr>
-                <td>
-                  <div class="eng-material-cell">
-                    <span class="eng-material-name">450 m³/Day</span>
-                    <span class="eng-material-formula">High-Yield Operation</span>
-                  </div>
-                </td>
-                <td>4.8 m³ (4.8m × 1.2m × 0.6m)</td>
-                <td><span class="eng-prop-badge">6–8 Batches / hr</span></td>
-                <td>4–5 Units (Ø2.0m × 31m)</td>
-                <td><span class="eng-qc-tag">8.0 TPH</span></td>
-                <td>4.5 – 5.5 Acres</td>
-                <td>3 Shifts / Continuous high-yield operation</td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="eng-material-cell">
-                    <span class="eng-material-name">600 m³/Day</span>
-                    <span class="eng-material-formula">Automated Facility</span>
-                  </div>
-                </td>
-                <td>4.8 – 6.0 m³</td>
-                <td><span class="eng-prop-badge">7–9 Batches / hr</span></td>
-                <td>5–6 Units (Ø2.5m × 31m)</td>
-                <td><span class="eng-qc-tag">8.0 – 10.0 TPH</span></td>
-                <td>5.5 – 7.0 Acres</td>
-                <td>Full automation with automated palletizing</td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="eng-material-cell">
-                    <span class="eng-material-name">1,000+ m³/Day</span>
-                    <span class="eng-material-formula">Mega Industrial Line</span>
-                  </div>
-                </td>
-                <td>6.0 m³ Dual Lines</td>
-                <td><span class="eng-prop-badge">12–14 Batches / hr</span></td>
-                <td>8–10 Units (Ø2.5m × 35m)</td>
-                <td><span class="eng-qc-tag">12.0 – 15.0 TPH</span></td>
-                <td>8.0 – 12.0 Acres</td>
-                <td>Mega industrial facility for blocks &amp; ALC panels</td>
+                <th>Large initial plant</th>
+                <td>Serves substantial demand without early expansion</td>
+                <td>Low utilisation and high financial exposure</td>
+                <td>Contract-backed or strongly validated demand</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-      </div>
-    </section>
-
-    <!-- ============ 04. SECTION 03: 8 DUE DILIGENCE CHECKS ============ -->
-    <section class="eng-section eng-section--white" id="diligence">
-      <div class="eng-container">
-        
-        <div>
-          <span class="eng-eyebrow">03 · DUE DILIGENCE</span>
-          <h2 class="eng-title">
-            <span>8 verification checkpoints.</span>
-            <span class="eng-title-light">Validating equipment quotes before procurement.</span>
-          </h2>
-          <p class="eng-lead">
-            Critical technical questions every investor and engineering team must ask before finalizing capacity contracts and placing machinery orders.
-          </p>
-        </div>
-
-        <!-- 8 Contiguous Checkpoint Boxes (4 columns x 2 rows) -->
-        <div class="eng-circuit-grid">
-          
-          <!-- Check 01 -->
-          <div class="eng-circuit-box">
-            <div class="eng-circuit-box__top">
-              <span class="eng-circuit-box__num">CHECK 01 · DOSING</span>
-              <h3 class="eng-circuit-box__title">Usable Slurry Volume vs Gross Tank</h3>
-              <p class="eng-circuit-box__desc">
-                Verify whether the machinery quote specifies net usable slurry per discharge or just total tank volume without freeboard allowance.
-              </p>
-            </div>
-            <div class="eng-circuit-box__spec">
-              <span>Metric: Net Usable m³</span>
-              <span>Freeboard Buffer</span>
-            </div>
+        <div class="method">
+          <div>
+            <p class="eyebrow">Laxmi En-Fab methodology</p>
+            <h2>Market. Process. Finance.<br /><span>Reviewed as one system.</span></h2>
           </div>
-
-          <!-- Check 02 -->
-          <div class="eng-circuit-box">
-            <div class="eng-circuit-box__top">
-              <span class="eng-circuit-box__num">CHECK 02 · CUTTING SPEED</span>
-              <h3 class="eng-circuit-box__title">Cutting Machine Cycle Speed</h3>
-              <p class="eng-circuit-box__desc">
-                Ensure the cutting line cycle (tilting, wire pass, vertical cross-cut, demoulding) takes less than 3.5 minutes per cake to prevent line queueing.
-              </p>
-            </div>
-            <div class="eng-circuit-box__spec">
-              <span>Target: &lt;3.5 min/cake</span>
-              <span>2-Axis Oscillation</span>
-            </div>
-          </div>
-
-          <!-- Check 03 -->
-          <div class="eng-circuit-box">
-            <div class="eng-circuit-box__top">
-              <span class="eng-circuit-box__num">CHECK 03 · MOULD COUNT</span>
-              <h3 class="eng-circuit-box__title">Total Active Mould Quantity</h3>
-              <p class="eng-circuit-box__desc">
-                Calculate moulds required: $\text{Moulds} = (\text{Pre-curing Time} / \text{Casting Cycle}) + \text{Circulation Buffer}$ to avoid pouring downtime.
-              </p>
-            </div>
-            <div class="eng-circuit-box__spec">
-              <span>Buffer: +15% Reserve</span>
-              <span>Track Synchronization</span>
-            </div>
-          </div>
-
-          <!-- Check 04 -->
-          <div class="eng-circuit-box">
-            <div class="eng-circuit-box__top">
-              <span class="eng-circuit-box__num">CHECK 04 · STEAM BOILER</span>
-              <h3 class="eng-circuit-box__title">Steam Boiler Peak Load TPH</h3>
-              <p class="eng-circuit-box__desc">
-                Ensure boiler rating handles peak concurrent autoclave pressurization without causing steam starvation in already soaking vessels.
-              </p>
-            </div>
-            <div class="eng-circuit-box__spec">
-              <span>Peak Demand: Concurrent Rise</span>
-              <span>Steam Header Buffer</span>
-            </div>
-          </div>
-
-          <!-- Check 05 -->
-          <div class="eng-circuit-box">
-            <div class="eng-circuit-box__top">
-              <span class="eng-circuit-box__num">CHECK 05 · BALL MILL</span>
-              <h3 class="eng-circuit-box__title">Fly Ash &amp; Sand Slurry Milling Rate</h3>
-              <p class="eng-circuit-box__desc">
-                Check that the wet ball mill output (TPH) replenishes slurry storage faster than maximum peak batching consumption.
-              </p>
-            </div>
-            <div class="eng-circuit-box__spec">
-              <span>Fineness: &lt;15% / 45µm</span>
-              <span>Continuous Output</span>
-            </div>
-          </div>
-
-          <!-- Check 06 -->
-          <div class="eng-circuit-box">
-            <div class="eng-circuit-box__top">
-              <span class="eng-circuit-box__num">CHECK 06 · RAIL SPEED</span>
-              <h3 class="eng-circuit-box__title">Crane &amp; Ferry Cart Handling Speed</h3>
-              <p class="eng-circuit-box__desc">
-                Verify that transfer cars and overhead cranes can service both the pouring track and the de-panning track without traffic collisions.
-              </p>
-            </div>
-            <div class="eng-circuit-box__spec">
-              <span>Transfer: &lt;90 sec</span>
-              <span>PLC Anti-Collision</span>
-            </div>
-          </div>
-
-          <!-- Check 07 -->
-          <div class="eng-circuit-box">
-            <div class="eng-circuit-box__top">
-              <span class="eng-circuit-box__num">CHECK 07 · PACKAGING</span>
-              <h3 class="eng-circuit-box__title">Packaging &amp; De-panning Rate</h3>
-              <p class="eng-circuit-box__desc">
-                Ensure cured block cake separation and pallet strapping throughput matches continuous autoclave discharge rates (50–60 m³/hr).
-              </p>
-            </div>
-            <div class="eng-circuit-box__spec">
-              <span>Rate: 60+ m³/hr</span>
-              <span>Zero Edge Chipping</span>
-            </div>
-          </div>
-
-          <!-- Check 08 -->
-          <div class="eng-circuit-box">
-            <div class="eng-circuit-box__top">
-              <span class="eng-circuit-box__num">CHECK 08 · SEASONAL SHIFT</span>
-              <h3 class="eng-circuit-box__title">Seasonal Pre-Curing Variations</h3>
-              <p class="eng-circuit-box__desc">
-                Account for winter temperature drops which can extend pre-curing times from 120 mins up to 180 mins if tunnels lack heating insulation.
-              </p>
-            </div>
-            <div class="eng-circuit-box__spec">
-              <span>Winter Buffer: +45 min</span>
-              <span>Heated Tunnel Option</span>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ============ 05. SECTION 04: MASS-BALANCE SIZING BANNER ============ -->
-    <section class="eng-section eng-section--light" id="consultation">
-      <div class="eng-container">
-        
-        <div class="eng-alc-banner">
-          <div class="eng-alc-banner__left">
-            <span class="eng-eyebrow" style="color:#56b4f5;">04 · MASS-BALANCE SHEET</span>
-            <h2 class="eng-alc-banner__title">
-              <span>Get an exact mass-balance</span>
-              <span style="color:#93c5fd;">&amp; equipment sizing calculation.</span>
-            </h2>
-            <p class="eng-alc-banner__lead">
-              Our engineering team will prepare an exact mass-balance breakdown, daily raw material consumption schedule, boiler fuel consumption, and equipment count for your target output.
+          <div class="method-points">
+            <p>
+              <b>Market planning</b>
+              <span>Target territory, achievable sales, competitor presence, delivery economics and product mix.</span>
             </p>
-            <div class="eng-alc-features">
-              <div class="eng-alc-feature">
-                <strong>01. Daily Raw Material Breakdown (TPD)</strong>
-                <p>Calculates exact daily metric tonnes required for Fly Ash, Quicklime, Cement, Gypsum, and Aluminium Powder.</p>
-              </div>
-              <div class="eng-alc-feature">
-                <strong>02. Autoclave Shift Turnaround Schedule</strong>
-                <p>Computerized steam scheduling modeling 24-hour autoclave cycles with zero peak steam conflict.</p>
-              </div>
-              <div class="eng-alc-feature">
-                <strong>03. Connected Electrical &amp; Steam Load Sheet</strong>
-                <p>Comprehensive kW power demand and boiler steam TPH ratings calculated for phase-1 and phase-2 operations.</p>
-              </div>
-            </div>
+            <p>
+              <b>Process engineering</b>
+              <span>Raw-material route, production balancing, autoclaves, steam, utilities, manpower and expansion.</span>
+            </p>
+            <p>
+              <b>Financial planning</b>
+              <span>Capital priorities, cost per saleable m³, working capital, break-even sensitivity and phased investment.</span>
+            </p>
           </div>
-          <div class="eng-alc-banner__right">
-            <div class="eng-alc-stat-card">
-              <div class="eng-alc-stat-num">±2%</div>
-              <div class="eng-alc-stat-label">Mass-Balance Yield Accuracy</div>
-            </div>
-            <div class="eng-alc-stat-card">
-              <div class="eng-alc-stat-num">24 Hours</div>
-              <div class="eng-alc-stat-label">Engineering Sizing Sheet Turnaround</div>
-            </div>
-            <div class="eng-alc-stat-card">
-              <div class="eng-alc-stat-num">100%</div>
-              <div class="eng-alc-stat-label">Customized to Your Local Raw Materials</div>
-            </div>
-            <div class="eng-alc-stat-card">
-              <div class="eng-alc-stat-num">0 Cost</div>
-              <div class="eng-alc-stat-label">Preliminary Feasibility Sizing Sheet</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ============ 06. CHAPTER NAVIGATION & EDITORIAL CTA ============ -->
-    <section class="eng-chapter-nav-section">
-      <div class="eng-container">
-        <div class="eng-chapter-nav">
-          <a href="plant-layout.html" class="eng-chapter-nav__btn eng-chapter-nav__btn--prev">
-            <span class="eng-chapter-nav__sub">← PREVIOUS CHAPTER</span>
-            <span class="eng-chapter-nav__title">AAC Plant Layout Design</span>
-          </a>
-          <a href="machinery-equipment.html" class="eng-chapter-nav__btn eng-chapter-nav__btn--next">
-            <span class="eng-chapter-nav__sub">NEXT CHAPTER →</span>
-            <span class="eng-chapter-nav__title">Plant Machinery &amp; Equipment</span>
-          </a>
         </div>
       </div>
     </section>
 
-    <!-- Final Conversion Banner -->
-    <section class="eng-cta-banner" id="cta">
-      <div class="eng-cta-banner__inner">
-        <span class="eng-cta-banner__eyebrow">CAPACITY CONSULTING</span>
-        <h2 class="eng-cta-banner__title">
-          <span>Get a custom mass-balance</span>
-          <span class="eng-cta-banner__title-light">&amp; equipment sizing report.</span>
-        </h2>
-        <p class="eng-cta-banner__lead">
-          Share your target daily production volume and available power/land coordinates with Laxmi En-Fab engineers to receive a comprehensive equipment sizing report and utility schedule.
-        </p>
-        <div class="eng-cta-banner__actions">
-          <a href="contact.html" class="eng-cta-banner__btn-white">
-            <span>Request Capacity Sizing Sheet</span>
-            <span class="eng-cta-banner__btn-arrow">↗</span>
-          </a>
-          <a href="#overview" class="eng-cta-banner__link-top">
-            <span>Return to top ↑</span>
-          </a>
+    <!-- ============ INVESTOR QUESTIONS (FAQ SECTION) ============ -->
+    <section class="faq section" id="faq">
+      <div class="wrap">
+        <p class="eyebrow">Investor questions</p>
+        <h2>Frequently asked.<br /><span>Directly answered.</span></h2>
+
+        <div class="faq-list">
+          <details>
+            <summary><span>01</span>What is the best AAC plant capacity for a new investor?<i aria-hidden="true">+</i></summary>
+            <p>There is no universally best capacity. The right choice depends on achievable demand, delivered cost, utilisation, product mix, available capital and the practical route to expansion.</p>
+          </details>
+          <details>
+            <summary><span>02</span>Is rated capacity the same as actual production?<i aria-hidden="true">+</i></summary>
+            <p>No. Rated capacity is a design figure under stated conditions. Achievable and saleable production are affected by maintenance, raw materials, product mix, process stability, rejection and handling loss.</p>
+          </details>
+          <details>
+            <summary><span>03</span>Does a larger AAC plant always have a lower production cost?<i aria-hidden="true">+</i></summary>
+            <p>Not necessarily. Scale can distribute fixed costs across more output, but only when enough saleable demand and utilisation exist. Low utilisation and high financing exposure can offset that advantage.</p>
+          </details>
+          <details>
+            <summary><span>04</span>Can an AAC plant be expanded later?<i aria-hidden="true">+</i></summary>
+            <p>Many configurations can be expanded, but the original design must account for raw-material preparation, casting, cutting, autoclaving, steam, packing, utilities and material flow.</p>
+          </details>
+          <details>
+            <summary><span>05</span>How does transportation affect capacity selection?<i aria-hidden="true">+</i></summary>
+            <p>Freight changes delivered cost and therefore the market a plant can serve competitively. Capacity should be linked to demand within commercially viable distance bands.</p>
+          </details>
+          <details>
+            <summary><span>06</span>What is needed for a preliminary capacity review?<i aria-hidden="true">+</i></summary>
+            <p>Proposed location, target territory, expected monthly sales, raw-material route, product mix, available land, project timeline and future growth plan.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONVERSION SECTION ============ -->
+    <section class="conversion" id="consultation">
+      <div class="wrap conversion-inner">
+        <p class="eyebrow light">Before machinery is finalised</p>
+        <h2>Build the capacity case.<br /><span>Then build the plant.</span></h2>
+        <p>Share your location, target market, expected monthly demand, product mix and expansion plan. Receive a focused discussion around the assumptions that should shape your plant configuration.</p>
+        <div class="hero-actions">
+          <a class="button inverse" href="contact.html">Request a capacity planning discussion <span aria-hidden="true">↗</span></a>
+          <a class="text-link light-link" href="roi-payback.html">Explore feasibility planning →</a>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- Shared Global Footer Injection -->
+  <!-- Shared Global Footer Injection Placeholder -->
   <div id="site-footer"></div>
 
-  <script src="js/main.js"></script>
-  <script src="js/navigation.js"></script>
-  <script src="js/animations.js"></script>
+  <!-- Shared Scripts Bundle -->
   <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

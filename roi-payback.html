@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AAC Plant ROI Calculator &amp; Break-Even Guide India | Laxmi En-Fab</title>
+  <meta name="description" content="Estimate AAC plant ROI and break-even using project cost, saleable output, operating cost, working capital and market assumptions." />
+  <meta name="keywords" content="AAC plant ROI, AAC plant break-even, AAC plant payback, AAC investment return, Laxmi En-Fab" />
+
+  <!-- Google Fonts: Geist & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/roi-payback.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <!-- Structured Data / JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.laxmienfab.com/#organization",
+        "name": "Laxmi En-Fab Pvt. Ltd.",
+        "url": "https://www.laxmienfab.com/",
+        "logo": "assets/images/laxmi-logo.png"
+      },
+      {
+        "@type": "Article",
+        "headline": "AAC Plant ROI Calculator and Break-Even Guide",
+        "description": "Evaluate AAC plant ROI and break-even using saleable production, net realisation, project cost and working capital.",
+        "author": {
+          "@id": "https://www.laxmienfab.com/#organization"
+        },
+        "publisher": {
+          "@id": "https://www.laxmienfab.com/#organization"
+        },
+        "image": "assets/images/roi-payback.png"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.laxmienfab.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "AAC Investor Academy",
+            "item": "https://www.laxmienfab.com/academy/academy.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "02 Design Your Plant",
+            "item": "https://www.laxmienfab.com/academy/design-your-plant.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "ROI & Break-Even"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is an AAC plant profitable in India?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "An AAC plant can be financially viable when demand, net sales realisation, raw-material availability, plant sizing, operating efficiency, working capital and financing are aligned. Machinery price alone cannot establish profitability."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is AAC plant ROI calculated?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ROI compares a clearly defined annual return with a clearly defined investment base. The calculation must state whether it uses operating profit, profit after tax or project cash flow."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What capacity utilisation should be used?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Use a multi-year ramp-up based on realistic production and sales constraints. Do not assume full rated output from the first year unless market and operating evidence supports it."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does full automation always improve ROI?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Automation can reduce certain manual activities and improve control, but may also increase capital cost and skilled technical dependency. Compare configurations using identical assumptions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does transport affect profitability?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Freight support, unloading, distance, breakage and customer credit can materially change net sales realisation and working capital."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is this result suitable for bank finance?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No preliminary calculator result is a bankable project report. Lenders may require a detailed DPR, quotations, approvals, promoter information and independently reviewed projections."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="roi-page">
+
+  <!-- Shared Header Injection Placeholder -->
+  <div id="site-header"></div>
+
+  <!-- Global Breadcrumb Navigation -->
+  <nav class="site-breadcrumb" aria-label="Breadcrumb">
+    <div class="site-breadcrumb__inner">
+      <a href="index.html">Home</a>
+      <span class="bc-sep">/</span>
+      <a href="academy/academy.html">AAC Investor Academy</a>
+      <span class="bc-sep">/</span>
+      <a href="academy/design-your-plant.html">02 Design Your Plant</a>
+      <span class="bc-sep">/</span>
+      <span class="bc-current">ROI &amp; Break-Even</span>
+    </div>
+  </nav>
+
+  <main id="top">
+    <!-- ============ SECTION 01 — HERO ============ -->
+    <section class="hero" aria-labelledby="page-title">
+      <img
+        class="hero-image"
+        src="assets/images/roi-payback.png"
+        alt="Operational AAC manufacturing plant with mould handling lines and overhead cranes"
+        fetchpriority="high"
+      />
+      <div class="hero-wash" aria-hidden="true"></div>
+      <div class="wrap hero-wrap">
+        <div class="hero-copy">
+          <p class="eyebrow">AAC INVESTOR ACADEMY · FINANCIAL PLANNING</p>
+          <h1 id="page-title">Know the return.<br /><span>Before the investment.</span></h1>
+          <p>
+            AAC plant ROI depends on saleable production, net realisation, operating cost, working capital and market absorption—not machinery price alone.
+          </p>
+          <div class="actions">
+            <a class="button" href="#calculator">Calculate preliminary break-even</a>
+            <a class="text-link" href="#framework">See the decision framework <span aria-hidden="true">↓</span></a>
+          </div>
+          <small>Project-specific assumptions must be independently verified.</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 02 — 01 · UNDERSTAND ============ -->
+    <section class="section white" id="understand">
+      <div class="wrap">
+        <p class="eyebrow">01 · Understand</p>
+        <div class="section-lead">
+          <h2>Profit is not produced by capacity.<br /><span>It is produced by saleable output.</span></h2>
+          <div>
+            <p>Installed capacity is a technical rating. It is not automatically the volume produced, sold or converted into cash.</p>
+            <p>A credible analysis connects engineering performance with regional demand and financial discipline.</p>
+          </div>
+        </div>
+
+        <div class="definition-grid" aria-label="Output definitions">
+          <article>
+            <span>01</span>
+            <h3>Rated capacity</h3>
+            <p>Configured output under defined operating conditions.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Achievable production</h3>
+            <p>Output after operating days, availability, ramp-up and process efficiency.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Saleable production</h3>
+            <p>Dispatchable output after rejection, breakage and quality losses.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Collected revenue</h3>
+            <p>Cash realised after deductions, credit period and collections.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 03 — 02 · EVALUATE (DARK) ============ -->
+    <section class="section dark" id="evaluate">
+      <div class="wrap">
+        <p class="eyebrow light">02 · Evaluate</p>
+        <div class="section-lead">
+          <h2>Four realities.<br /><span>One investment case.</span></h2>
+          <p>Test every factor using visible assumptions. A change in one input can alter plant scope, working capital and financial exposure.</p>
+        </div>
+
+        <div class="numbered-rows">
+          <article>
+            <span>01</span>
+            <h3>Total capital employed</h3>
+            <p>Machinery, civil works, utilities, installation, pre-operative expenses, contingency and working capital.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Saleable production</h3>
+            <p>Rated capacity adjusted for operating days, availability, efficiency, rejection, breakage and sales utilisation.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Net sales realisation</h3>
+            <p>Invoice value after discounts, freight support, dealer incentives, credit cost and selling deductions.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Operating cash generation</h3>
+            <p>Revenue less raw materials, steam, power, manpower, maintenance, administration and distribution cost.</p>
+          </article>
+        </div>
+
+        <blockquote>
+          “How much AAC can the regional market absorb—at what net realisation, operating cost and working-capital cycle?”
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ============ THE DECISION FRAMEWORK ============ -->
+    <section class="section silver" id="framework">
+      <div class="wrap">
+        <p class="eyebrow">The decision framework</p>
+        <div class="section-lead">
+          <h2>Four metrics.<br /><span>Four different questions.</span></h2>
+          <p>ROI, break-even, payback and IRR are related, but not interchangeable. Each requires a clear formula and assumption base.</p>
+        </div>
+
+        <div class="metric-table" role="region" aria-label="Financial metric comparison" tabindex="0">
+          <table>
+            <thead>
+              <tr>
+                <th>Metric</th>
+                <th>Question answered</th>
+                <th>Calculation principle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>ROI</th>
+                <td>What annual return is generated?</td>
+                <td>Defined annual return ÷ investment base × 100</td>
+              </tr>
+              <tr>
+                <th>Break-even</th>
+                <td>How much AAC must be sold?</td>
+                <td>Fixed cost ÷ contribution per saleable m³</td>
+              </tr>
+              <tr>
+                <th>Payback</th>
+                <td>When is invested cash recovered?</td>
+                <td>When cumulative project cash flow becomes positive</td>
+              </tr>
+              <tr>
+                <th>IRR</th>
+                <td>What discount rate makes NPV zero?</td>
+                <td>Timing and amount of multi-year cash flows</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INTERACTIVE CALCULATOR SECTION ============ -->
+    <section class="section calc-section" id="calculator">
+      <div class="wrap">
+        <p class="eyebrow">Preliminary calculation</p>
+        <div class="section-lead">
+          <h2>Test the assumptions.<br /><span>Not the sales promise.</span></h2>
+          <p>Use project-specific inputs. This operating model excludes financing and taxation so its limits remain visible.</p>
+        </div>
+
+        <div class="calculator">
+          <div class="calc-inputs">
+            <label>
+              Total project investment
+              <span>₹ lakh</span>
+              <input type="number" id="input-investment" min="0" value="3000" step="50" />
+            </label>
+            <label>
+              Annual saleable volume
+              <span>m³</span>
+              <input type="number" id="input-volume" min="0" value="90000" step="1000" />
+            </label>
+            <label>
+              Net sales realisation
+              <span>₹/m³</span>
+              <input type="number" id="input-realisation" min="0" value="3600" step="50" />
+            </label>
+            <label>
+              Variable operating cost
+              <span>₹/m³</span>
+              <input type="number" id="input-variable-cost" min="0" value="2550" step="50" />
+            </label>
+            <label style="grid-column: span 2;">
+              Annual fixed operating cost
+              <span>₹ lakh</span>
+              <input type="number" id="input-fixed-cost" min="0" value="540" step="10" />
+            </label>
+          </div>
+
+          <div class="calc-results" aria-live="polite">
+            <p class="eyebrow light">Preliminary result</p>
+            <div>
+              <span>Contribution</span>
+              <strong id="result-contribution">₹1,050<small>/saleable m³</small></strong>
+            </div>
+            <div>
+              <span>Break-even volume</span>
+              <strong id="result-breakeven">51,429<small>m³/year</small></strong>
+            </div>
+            <div>
+              <span>Annual operating surplus</span>
+              <strong id="result-surplus">₹405<small>lakh</small></strong>
+            </div>
+            <div>
+              <span>Indicative operating return</span>
+              <strong id="result-roi">13.5<small>%/year</small></strong>
+            </div>
+            <p class="calc-note">
+              Before interest, tax, depreciation, loan repayment and working-capital changes. Not a profitability guarantee or bankable DPR.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 04 — 03 · DECIDE ============ -->
+    <section class="section white" id="decide">
+      <div class="wrap">
+        <p class="eyebrow">03 · Decide</p>
+        <div class="section-lead">
+          <h2>Stress-test the project.<br /><span>Then select the plant.</span></h2>
+          <p>Compare configurations using the same market, cost, financing and ramp-up assumptions.</p>
+        </div>
+
+        <div class="scenario-grid">
+          <article>
+            <p>Downside</p>
+            <h3>Can the project withstand delay?</h3>
+            <span>Slower sales, lower realisation, higher input cost and longer collections.</span>
+          </article>
+          <article class="preferred">
+            <p>Base case</p>
+            <h3>Is the plan evidence-led?</h3>
+            <span>Defensible demand, practical utilisation and realistic working capital.</span>
+          </article>
+          <article>
+            <p>Upside</p>
+            <h3>What creates additional value?</h3>
+            <span>Faster absorption, stronger product mix and better efficiency.</span>
+          </article>
+        </div>
+
+        <div class="split-callout">
+          <div>
+            <p class="eyebrow">Costs commonly missed</p>
+            <h2>Small omissions.<br /><span>Large cash-flow pressure.</span></h2>
+          </div>
+          <ol>
+            <li>Commissioning delay and trial-production loss</li>
+            <li>Customer credit and inventory</li>
+            <li>Freight, incentives and unloading</li>
+            <li>Shutdown maintenance and major spares</li>
+            <li>Market-development and compliance cost</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LAXMI EN-FAB APPROACH ============ -->
+    <section class="section methodology">
+      <div class="wrap">
+        <p class="eyebrow">Laxmi En-Fab approach</p>
+        <div class="section-lead">
+          <h2>Market. Process. Finance.<br /><span>Reviewed as one system.</span></h2>
+          <p>Machinery price alone cannot define project viability. Test the commercial case against real operating and market conditions.</p>
+        </div>
+        <div class="method-rows">
+          <article>
+            <span>Market planning</span>
+            <p>Target territory, achievable sales, competitor presence, delivery economics and product mix.</p>
+          </article>
+          <article>
+            <span>Process engineering</span>
+            <p>Raw-material route, production balance, utilities, manpower, maintenance and expansion.</p>
+          </article>
+          <article>
+            <span>Financial planning</span>
+            <p>Capital priorities, cost per saleable m³, working capital and break-even sensitivity.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INVESTOR QUESTIONS (FAQS) ============ -->
+    <section class="section faq-section" id="faq">
+      <div class="wrap">
+        <p class="eyebrow">Investor questions</p>
+        <div class="section-lead">
+          <h2>Frequently asked.<br /><span>Directly answered.</span></h2>
+          <p>Clear answers for preliminary evaluation. Final decisions require project-specific verification.</p>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button type="button" aria-expanded="true" aria-controls="faq-0">
+              <span>01</span>
+              Is an AAC plant profitable in India?
+              <b>−</b>
+            </button>
+            <div id="faq-0" class="faq-answer">
+              <p>An AAC plant can be financially viable when demand, net sales realisation, raw-material availability, plant sizing, operating efficiency, working capital and financing are aligned. Machinery price alone cannot establish profitability.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" aria-expanded="false" aria-controls="faq-1">
+              <span>02</span>
+              How is AAC plant ROI calculated?
+              <b>+</b>
+            </button>
+            <div id="faq-1" hidden class="faq-answer">
+              <p>ROI compares a clearly defined annual return with a clearly defined investment base. The calculation must state whether it uses operating profit, profit after tax or project cash flow.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" aria-expanded="false" aria-controls="faq-2">
+              <span>03</span>
+              What capacity utilisation should be used?
+              <b>+</b>
+            </button>
+            <div id="faq-2" hidden class="faq-answer">
+              <p>Use a multi-year ramp-up based on realistic production and sales constraints. Do not assume full rated output from the first year unless market and operating evidence supports it.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" aria-expanded="false" aria-controls="faq-3">
+              <span>04</span>
+              Does full automation always improve ROI?
+              <b>+</b>
+            </button>
+            <div id="faq-3" hidden class="faq-answer">
+              <p>No. Automation can reduce certain manual activities and improve control, but may also increase capital cost and skilled technical dependency. Compare configurations using identical assumptions.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" aria-expanded="false" aria-controls="faq-4">
+              <span>05</span>
+              How does transport affect profitability?
+              <b>+</b>
+            </button>
+            <div id="faq-4" hidden class="faq-answer">
+              <p>Freight support, unloading, distance, breakage and customer credit can materially change net sales realisation and working capital.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" aria-expanded="false" aria-controls="faq-5">
+              <span>06</span>
+              Is this result suitable for bank finance?
+              <b>+</b>
+            </button>
+            <div id="faq-5" hidden class="faq-answer">
+              <p>No preliminary calculator result is a bankable project report. Lenders may require a detailed DPR, quotations, approvals, promoter information and independently reviewed projections.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 05 — CLOSING CONVERSION ============ -->
+    <section class="closing" id="consultation">
+      <div class="wrap">
+        <p class="eyebrow light">Before machinery is finalised</p>
+        <h2>Review the assumptions.<br />Then build the investment case.</h2>
+        <p>
+          Share your location, target market, product mix and preliminary capacity. Receive a focused discussion around the engineering and commercial assumptions shaping your project.
+        </p>
+        <div class="actions">
+          <a class="button white-button" href="contact.html">Request an assumption review</a>
+          <a class="text-link light-link" href="contact.html">Explore feasibility planning <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Footer Injection Placeholder -->
+  <div id="site-footer"></div>
+
+  <!-- Shared Scripts Bundle -->
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Live Calculator Logic
+    document.addEventListener('DOMContentLoaded', function () {
+      var inputInvestment = document.getElementById('input-investment');
+      var inputVolume = document.getElementById('input-volume');
+      var inputRealisation = document.getElementById('input-realisation');
+      var inputVariableCost = document.getElementById('input-variable-cost');
+      var inputFixedCost = document.getElementById('input-fixed-cost');
+
+      var resContribution = document.getElementById('result-contribution');
+      var resBreakeven = document.getElementById('result-breakeven');
+      var resSurplus = document.getElementById('result-surplus');
+      var resRoi = document.getElementById('result-roi');
+
+      function calculate() {
+        var investmentLakh = parseFloat(inputInvestment.value) || 0;
+        var volumeM3 = parseFloat(inputVolume.value) || 0;
+        var realisation = parseFloat(inputRealisation.value) || 0;
+        var varCost = parseFloat(inputVariableCost.value) || 0;
+        var fixedCostLakh = parseFloat(inputFixedCost.value) || 0;
+
+        var contribution = Math.max(0, realisation - varCost);
+        var fixedCostRs = fixedCostLakh * 100000;
+        var breakevenM3 = contribution > 0 ? Math.round(fixedCostRs / contribution) : 0;
+        var totalSurplusRs = (volumeM3 * contribution) - fixedCostRs;
+        var surplusLakh = Math.round((totalSurplusRs / 100000) * 10) / 10;
+        var roiPercent = investmentLakh > 0 ? Math.round((surplusLakh / investmentLakh) * 1000) / 10 : 0;
+
+        resContribution.innerHTML = '₹' + contribution.toLocaleString('en-IN') + '<small>/saleable m³</small>';
+        resBreakeven.innerHTML = breakevenM3.toLocaleString('en-IN') + '<small>m³/year</small>';
+        resSurplus.innerHTML = '₹' + surplusLakh.toLocaleString('en-IN') + '<small>lakh</small>';
+        resRoi.innerHTML = roiPercent.toFixed(1) + '<small>%/year</small>';
+      }
+
+      var allInputs = [inputInvestment, inputVolume, inputRealisation, inputVariableCost, inputFixedCost];
+      allInputs.forEach(function (inp) {
+        if (inp) {
+          inp.addEventListener('input', calculate);
+          inp.addEventListener('change', calculate);
+        }
+      });
+
+      // FAQ Accordion
+      var faqButtons = document.querySelectorAll('.faq-item button');
+      faqButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var isExpanded = btn.getAttribute('aria-expanded') === 'true';
+          var answerId = btn.getAttribute('aria-controls');
+          var answerEl = document.getElementById(answerId);
+          var indicator = btn.querySelector('b');
+
+          faqButtons.forEach(function (otherBtn) {
+            if (otherBtn !== btn) {
+              otherBtn.setAttribute('aria-expanded', 'false');
+              var otherAnswer = document.getElementById(otherBtn.getAttribute('aria-controls'));
+              if (otherAnswer) otherAnswer.hidden = true;
+              var otherInd = otherBtn.querySelector('b');
+              if (otherInd) otherInd.textContent = '+';
+            }
+          });
+
+          if (isExpanded) {
+            btn.setAttribute('aria-expanded', 'false');
+            if (answerEl) answerEl.hidden = true;
+            if (indicator) indicator.textContent = '+';
+          } else {
+            btn.setAttribute('aria-expanded', 'true');
+            if (answerEl) answerEl.hidden = false;
+            if (indicator) indicator.textContent = '−';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

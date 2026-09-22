@@ -1,0 +1,858 @@
+/* ==========================================================================
+   AAC PLANT AUTOMATION UPGRADE & RETROFIT — STYLES
+   Source: https://laxmi-en-fab-complete.mitesh958.chatgpt.site/imported/aac-plant-automation-upgrade/
+   ========================================================================== */
+
+:root {
+  --navy: #0b1727;
+  --blue: #0c4f80;
+  --deep: #09263d;
+  --white: #fff;
+  --silver: #eef2f5;
+  --light: #f5f7f8;
+  --secondary: #5e6874;
+  --muted: #84909c;
+  --line: #dce2e7;
+  --highlight: #8fc6ec;
+  --max: 1400px;
+}
+
+.automation-page {
+  background: var(--white);
+  color: var(--navy);
+  font-family: 'Geist', 'Inter', "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.automation-page * {
+  box-sizing: border-box;
+}
+
+.automation-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.automation-page button {
+  font: inherit;
+}
+
+.automation-page .wrap {
+  width: min(var(--max), calc(100% - 12vw));
+  margin-inline: auto;
+}
+
+.automation-page .section {
+  padding: clamp(100px, 10vw, 168px) 0;
+}
+
+/* ==========================================================================
+   Eyebrow & Label Resets (Prevent global badge styles from leaking)
+   ========================================================================== */
+
+.automation-page .eyebrow {
+  color: var(--blue);
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  margin: 0 0 22px !important;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+  display: block !important;
+  background: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  gap: 0 !important;
+  width: auto !important;
+  max-width: none !important;
+}
+
+.automation-page .eyebrow::before {
+  content: none !important;
+  display: none !important;
+}
+
+.automation-page .eyebrow.light,
+.automation-page .dark-section .eyebrow,
+.automation-page .consultation .eyebrow,
+.automation-page .warning-panel .eyebrow {
+  color: var(--highlight) !important;
+}
+
+/* ==========================================================================
+   Typography & Base Headings
+   ========================================================================== */
+
+.automation-page h1,
+.automation-page h2,
+.automation-page h3,
+.automation-page p {
+  margin-top: 0;
+}
+
+.automation-page h1,
+.automation-page h2 {
+  letter-spacing: -.055em;
+  line-height: .96;
+}
+
+.automation-page h2 {
+  margin-bottom: 0;
+  font-size: clamp(44px, 5.8vw, 82px);
+  font-weight: 580;
+}
+
+.automation-page h2 span,
+.automation-page h1 span {
+  color: var(--muted);
+  display: block;
+}
+
+.automation-page p {
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   Buttons & Links
+   ========================================================================== */
+
+.automation-page .button {
+  border-radius: 999px;
+  justify-content: center;
+  align-items: center;
+  min-height: 54px;
+  padding: 0 25px;
+  font-size: 14px;
+  font-weight: 680;
+  transition: transform .2s, box-shadow .2s;
+  display: inline-flex;
+}
+
+.automation-page .button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(11, 23, 39, 0.14);
+}
+
+.automation-page .button.primary {
+  background: var(--blue);
+  color: #fff;
+}
+
+.automation-page .button.white {
+  color: var(--navy);
+  background: #fff;
+}
+
+.automation-page .text-link {
+  border-bottom: 1px solid var(--muted);
+  padding-bottom: 4px;
+  font-size: 14px;
+  font-weight: 650;
+  display: inline-flex;
+  align-items: center;
+}
+
+.automation-page .text-link span {
+  margin-left: 6px;
+}
+
+.automation-page .light-link {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+
+.automation-page .hero {
+  align-items: center;
+  min-height: 100svh;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  background: #eff2f5;
+}
+
+.automation-page .hero-media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.automation-page .hero-image {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.automation-page .hero-shade {
+  background: linear-gradient(90deg, #eff2f5fc 0%, #eff2f5f7 34%, #eff2f5c7 46%, #eff2f52e 60%, #0000 69%);
+  position: absolute;
+  inset: 0;
+}
+
+.automation-page .hero-content {
+  z-index: 2;
+  padding-top: 80px;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.automation-page .hero-content h1 {
+  max-width: 650px;
+  margin-bottom: 34px;
+  font-size: clamp(58px, 6.4vw, 96px);
+  font-weight: 590;
+}
+
+.automation-page .hero-copy {
+  color: #465361;
+  max-width: 545px;
+  margin-bottom: 34px;
+  font-size: clamp(16px, 1.4vw, 19px);
+  line-height: 1.65;
+}
+
+.automation-page .hero-actions,
+.automation-page .consultation-actions {
+  align-items: center;
+  gap: 28px;
+  display: flex;
+}
+
+.automation-page .micro-note {
+  color: var(--muted);
+  margin: 25px 0 0;
+  font-size: 12px;
+}
+
+/* ==========================================================================
+   01 — Understand Section
+   ========================================================================== */
+
+.automation-page .split-lead {
+  grid-template-columns: minmax(0, 1.65fr) minmax(300px, .75fr);
+  align-items: end;
+  gap: 9vw;
+  display: grid;
+}
+
+.automation-page .lead-copy p {
+  color: var(--secondary);
+  font-size: 18px;
+}
+
+.automation-page .lead-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.automation-page .signal-grid {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 42px;
+  margin-top: 100px;
+  display: grid;
+}
+
+.automation-page .signal-grid article {
+  border-top: 1px solid var(--line);
+  padding-top: 22px;
+}
+
+.automation-page .signal-line {
+  background: var(--blue);
+  width: 38px;
+  height: 2px;
+  margin-top: -23px;
+  margin-bottom: 30px;
+  display: block;
+}
+
+.automation-page .signal-grid h3 {
+  letter-spacing: -.03em;
+  font-size: 23px;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+
+.automation-page .signal-grid p {
+  color: var(--secondary);
+  font-size: 15px;
+  margin: 0;
+}
+
+.automation-page .statement-block {
+  border-top: 1px solid var(--line);
+  margin-top: 110px;
+  padding: 58px 0 0 25%;
+}
+
+.automation-page .statement-block p {
+  letter-spacing: -.04em;
+  margin-bottom: 9px;
+  font-size: clamp(28px, 3vw, 48px);
+  line-height: 1.12;
+  color: var(--navy);
+}
+
+.automation-page .statement-block span {
+  color: var(--secondary);
+  font-size: 17px;
+  display: block;
+}
+
+/* ==========================================================================
+   Where Automation Can Help (Numbered List)
+   ========================================================================== */
+
+.automation-page .light-section {
+  background: var(--light);
+}
+
+.automation-page .compact-heading {
+  max-width: 960px;
+  margin-bottom: 85px;
+}
+
+.automation-page .numbered-list {
+  border-top: 1px solid var(--line);
+}
+
+.automation-page .numbered-row {
+  border-bottom: 1px solid var(--line);
+  grid-template-columns: 90px minmax(220px, .75fr) minmax(300px, 1.25fr);
+  align-items: start;
+  gap: 40px;
+  padding: 37px 0;
+  display: grid;
+}
+
+.automation-page .row-number {
+  color: var(--blue);
+  letter-spacing: .14em;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.automation-page .numbered-row h3 {
+  letter-spacing: -.03em;
+  margin: 0;
+  font-size: 23px;
+  color: var(--navy);
+}
+
+.automation-page .numbered-row p {
+  color: var(--secondary);
+  margin: 0;
+  font-size: 16px;
+}
+
+/* ==========================================================================
+   02 — Evaluate Section (Dark Navy)
+   ========================================================================== */
+
+.automation-page .dark-section {
+  background: var(--navy);
+  color: #fff;
+}
+
+.automation-page .dark-lead {
+  max-width: 1050px;
+}
+
+.automation-page .dark-lead h2 span {
+  color: #8392a3;
+}
+
+.automation-page .dark-lead > p:last-child {
+  color: #b7c1cb;
+  max-width: 700px;
+  margin: 34px 0 0;
+  font-size: 18px;
+}
+
+.automation-page .approach-grid {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 100px;
+  display: grid;
+}
+
+.automation-page .approach-grid article {
+  border-right: 1px solid rgba(255, 255, 255, 0.16);
+  padding: 42px;
+  position: relative;
+}
+
+.automation-page .approach-grid article:last-child {
+  border-right: 0;
+}
+
+.automation-page .approach-grid article.featured {
+  background: linear-gradient(145deg, #104f7d, #09263d);
+}
+
+.automation-page .approach-label {
+  background: var(--highlight);
+  color: var(--navy);
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 10px;
+  font-weight: 800;
+  position: absolute;
+  top: 0;
+  left: 42px;
+  transform: translateY(-50%);
+}
+
+.automation-page .approach-grid h3 {
+  letter-spacing: -.035em;
+  min-height: 62px;
+  margin-bottom: 42px;
+  font-size: 27px;
+  color: #fff;
+}
+
+.automation-page .approach-grid div {
+  margin-top: 28px;
+}
+
+.automation-page .approach-grid div span {
+  color: var(--highlight);
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 750;
+  display: block;
+}
+
+.automation-page .approach-grid div p {
+  color: #c0cad3;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.automation-page .warning-panel {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 90px;
+  padding: 50px 0 0 25%;
+}
+
+.automation-page .warning-panel h3 {
+  letter-spacing: -.04em;
+  max-width: 920px;
+  margin-bottom: 22px;
+  font-size: clamp(30px, 3.3vw, 50px);
+  line-height: 1.1;
+  color: #fff;
+}
+
+.automation-page .warning-panel > p:last-child {
+  color: #b9c4ce;
+  max-width: 800px;
+  font-size: 16px;
+}
+
+/* ==========================================================================
+   Measure What Changes (Metric Table)
+   ========================================================================== */
+
+.automation-page .metrics {
+  background: var(--white);
+}
+
+.automation-page .metric-table {
+  border-top: 1px solid var(--line);
+}
+
+.automation-page .metric-head,
+.automation-page .metric-row {
+  grid-template-columns: .8fr 1.3fr 1fr;
+  gap: 40px;
+  display: grid;
+}
+
+.automation-page .metric-head {
+  color: var(--muted);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 16px 0;
+  font-size: 10px;
+  font-weight: 750;
+}
+
+.automation-page .metric-row {
+  border-top: 1px solid var(--line);
+  padding: 28px 0;
+}
+
+.automation-page .metric-row span {
+  color: var(--secondary);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.automation-page .metric-row span:first-child {
+  color: var(--navy);
+  font-size: 18px;
+  font-weight: 650;
+}
+
+/* ==========================================================================
+   03 — Decide Section (Process List & Payback Callout)
+   ========================================================================== */
+
+.automation-page .process-list {
+  margin-top: 100px;
+}
+
+.automation-page .process-row {
+  border-top: 1px solid var(--line);
+  grid-template-columns: 80px .8fr 1.3fr;
+  gap: 45px;
+  padding: 30px 0;
+  display: grid;
+}
+
+.automation-page .process-row:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.automation-page .process-row > span {
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.automation-page .process-row h3 {
+  margin: 0;
+  font-size: 21px;
+  color: var(--navy);
+}
+
+.automation-page .process-row p {
+  color: var(--secondary);
+  margin: 0;
+  font-size: 15px;
+}
+
+.automation-page .payback-callout {
+  background: #fff;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 80px;
+  margin-top: 100px;
+  padding: 55px;
+  display: grid;
+  border-radius: 4px;
+}
+
+.automation-page .payback-callout h3 {
+  letter-spacing: -.04em;
+  margin: 0;
+  font-size: clamp(28px, 3vw, 44px);
+  line-height: 1.12;
+  color: var(--navy);
+}
+
+.automation-page .payback-callout > p {
+  color: var(--secondary);
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* ==========================================================================
+   Practical Questions (FAQs)
+   ========================================================================== */
+
+.automation-page .faq {
+  background: var(--white);
+}
+
+.automation-page .faq-layout {
+  grid-template-columns: .8fr 1.2fr;
+  align-items: start;
+  gap: 10vw;
+  display: grid;
+}
+
+.automation-page .faq-intro {
+  position: sticky;
+  top: 120px;
+}
+
+.automation-page .faq-intro h2 {
+  font-size: clamp(42px, 5vw, 68px);
+}
+
+.automation-page .faq-intro > p:last-child {
+  max-width: 440px;
+  color: var(--secondary);
+  margin-top: 28px;
+  font-size: 17px;
+}
+
+.automation-page .faq-list {
+  border-top: 1px solid var(--line);
+}
+
+.automation-page .faq-item {
+  border-bottom: 1px solid var(--line);
+}
+
+.automation-page .faq-trigger {
+  width: 100%;
+  min-height: 82px;
+  color: var(--navy);
+  text-align: left;
+  cursor: pointer;
+  background: 0 0;
+  border: 0;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 20px 0;
+  font-size: 17px;
+  font-weight: 650;
+  display: flex;
+}
+
+.automation-page .faq-trigger:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 5px;
+}
+
+.automation-page .faq-mark {
+  color: var(--blue);
+  flex: none;
+  font-size: 26px;
+  font-weight: 350;
+}
+
+.automation-page .faq-answer p {
+  max-width: 700px;
+  color: var(--secondary);
+  margin: -4px 45px 25px 0;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+/* ==========================================================================
+   Consultation Banner
+   ========================================================================== */
+
+.automation-page .consultation {
+  color: #fff;
+  background: linear-gradient(135deg, #104f7d, #09263d 78%);
+  position: relative;
+  overflow: hidden;
+}
+
+.automation-page .consultation-glow {
+  background: rgba(143, 198, 236, 0.12);
+  border-radius: 50%;
+  width: 650px;
+  height: 650px;
+  position: absolute;
+  top: -280px;
+  right: -180px;
+  pointer-events: none;
+}
+
+.automation-page .consultation-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.automation-page .consultation h2 {
+  max-width: 1100px;
+  font-size: clamp(50px, 6.5vw, 92px);
+  color: #fff;
+}
+
+.automation-page .consultation-inner > p:not(.eyebrow) {
+  color: #c7d6e1;
+  max-width: 720px;
+  margin: 34px 0 0;
+  font-size: 18px;
+}
+
+.automation-page .consultation-actions {
+  margin-top: 42px;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+@media (max-width: 1000px) {
+  .automation-page .wrap {
+    width: min(var(--max), calc(100% - 88px));
+  }
+
+  .automation-page .signal-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .automation-page .approach-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .automation-page .approach-grid article {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+    border-right: 0;
+  }
+
+  .automation-page .approach-grid h3 {
+    min-height: 0;
+  }
+
+  .automation-page .split-lead,
+  .automation-page .faq-layout {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .automation-page .faq-intro {
+    position: static;
+  }
+
+  .automation-page .statement-block,
+  .automation-page .warning-panel {
+    padding-left: 0;
+  }
+
+  .automation-page .payback-callout {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+}
+
+@media (max-width: 760px) {
+  .automation-page .wrap {
+    width: calc(100% - 44px);
+  }
+
+  .automation-page .section {
+    padding: 95px 0;
+  }
+
+  .automation-page .hero {
+    align-items: flex-start;
+    min-height: 940px;
+    padding-top: 130px;
+  }
+
+  .automation-page .hero-image {
+    object-position: 63% bottom;
+  }
+
+  .automation-page .hero-shade {
+    background: linear-gradient(#eff2f5fc 0%, #eff2f5f5 43%, #eff2f557 68%, #eff2f514 100%);
+  }
+
+  .automation-page .hero-content {
+    padding-top: 0;
+  }
+
+  .automation-page .hero-content h1 {
+    font-size: clamp(52px, 15vw, 68px);
+  }
+
+  .automation-page .hero-copy {
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  .automation-page .hero-actions,
+  .automation-page .consultation-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .automation-page .button {
+    width: 100%;
+    min-height: 52px;
+  }
+
+  .automation-page .text-link {
+    width: fit-content;
+  }
+
+  .automation-page .signal-grid {
+    grid-template-columns: 1fr;
+    gap: 55px;
+    margin-top: 70px;
+  }
+
+  .automation-page .statement-block {
+    margin-top: 75px;
+  }
+
+  .automation-page .numbered-row,
+  .automation-page .process-row {
+    grid-template-columns: 48px 1fr;
+    gap: 16px;
+  }
+
+  .automation-page .numbered-row p,
+  .automation-page .process-row p {
+    grid-column: 2;
+  }
+
+  .automation-page .approach-grid {
+    margin-top: 70px;
+  }
+
+  .automation-page .approach-grid article {
+    padding: 34px 25px;
+  }
+
+  .automation-page .approach-label {
+    left: 25px;
+  }
+
+  .automation-page .metric-head {
+    display: none;
+  }
+
+  .automation-page .metric-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 28px 0;
+  }
+
+  .automation-page .metric-row span:before {
+    content: attr(data-label);
+    color: var(--muted);
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-size: 9px;
+    font-weight: 750;
+    display: block;
+  }
+
+  .automation-page .payback-callout {
+    margin-top: 70px;
+    padding: 32px 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, :before, :after {
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+  }
+}

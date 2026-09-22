@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AAC Plant Automation Upgrade &amp; Retrofit | Laxmi En-Fab</title>
+  <meta name="description" content="Upgrade an existing AAC plant after a technical audit. Compare selective, hybrid and full automation, retrofit scope, risks, downtime and payback factors." />
+  <meta name="keywords" content="AAC plant automation upgrade, AAC plant retrofit, selective automation AAC, hybrid automation AAC, Laxmi En-Fab" />
+
+  <!-- Google Fonts: Geist & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/make-plant-automatic.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <!-- Structured Data / JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.laxmienfab.com/#organization",
+        "name": "Laxmi En-Fab Pvt. Ltd.",
+        "url": "https://www.laxmienfab.com/",
+        "logo": "assets/images/laxmi-logo.png"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.laxmienfab.com/make-plant-automatic.html#service",
+        "name": "AAC Plant Automation Upgrade",
+        "serviceType": "AAC plant automation upgrade and retrofit assessment",
+        "areaServed": {
+          "@type": "Country",
+          "name": "India"
+        },
+        "provider": {
+          "@id": "https://www.laxmienfab.com/#organization"
+        },
+        "description": "Technical assessment and scope development for selective, hybrid or full-line automation of an existing AAC plant."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.laxmienfab.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "AAC Investor Academy",
+            "item": "https://www.laxmienfab.com/academy/academy.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "04 Efficient Your Plant",
+            "item": "https://www.laxmienfab.com/academy/efficient-your-plant.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Make Plant Automatic"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can every semi-automatic AAC plant be converted to fully automatic?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Feasibility depends on machinery condition, layout, cycle compatibility, utilities, controls, safety requirements, available shutdown and commercial payback."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Should the complete plant be automated at one time?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not necessarily. A phased or hybrid upgrade may create better value when only selected operations are labour-intensive or production-constraining."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will automation increase plant capacity?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It may improve actual output if avoidable waiting, handling or sequence losses are the constraint. It cannot increase output beyond the limits of the remaining production system."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will automation reduce steam and electricity consumption?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not automatically. Any saving must be linked to a measured source of loss and verified in kg steam per saleable m³ or kWh per saleable m³ under comparable conditions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does a fully automatic plant require less skill?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It may require fewer repetitive manual roles, but it normally needs stronger electrical, instrumentation and troubleshooting capability."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How should upgrade performance be accepted?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Agree the baseline, measurement method, operating conditions, exclusions, stabilisation period and acceptance criteria before implementation."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="automation-page">
+  <!-- Shared Header Injection Placeholder -->
+  <div id="site-header"></div>
+
+  <main id="top">
+    <!-- ============ HERO SECTION ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <picture class="hero-media" aria-hidden="true">
+        <source media="(max-width: 720px)" srcset="assets/images/make-plant-automatic.png" />
+        <img src="assets/images/plant-automation.png" alt="Existing AAC manufacturing plant prepared for a practical automation upgrade assessment" class="hero-image" fetchpriority="high" width="1672" height="941" />
+      </picture>
+      <div class="hero-shade"></div>
+      <div class="hero-content wrap">
+        <p class="eyebrow">AAC plant performance improvement</p>
+        <h1 id="hero-title">Automate the<br />right process.<br /><span>Not everything.</span></h1>
+        <p class="hero-copy">
+          An AAC plant automation upgrade should begin with a measured bottleneck—not a standard machinery list. Evaluate selective, hybrid or full-line automation according to your existing plant, operating reality and commercial objective.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#consultation">Request an Automation Assessment</a>
+          <a class="text-link" href="#evaluate">Compare upgrade approaches <span>↘</span></a>
+        </div>
+        <p class="micro-note">For existing AAC manufacturers, plant heads and technical teams.</p>
+      </div>
+    </section>
+
+    <!-- ============ 01 — UNDERSTAND SECTION ============ -->
+    <section class="intro section" id="understand">
+      <div class="wrap">
+        <div class="section-lead split-lead">
+          <div>
+            <p class="eyebrow">01 — Understand</p>
+            <h2>Automation is not the objective.<br /><span>Better plant performance is.</span></h2>
+          </div>
+          <div class="lead-copy">
+            <p>
+              An automation upgrade modernises selected mechanical, electrical and control operations in an existing AAC production line.
+            </p>
+            <p>
+              The right scope may be selective, hybrid or full-line automation. It should be chosen only after measuring equipment condition, layout constraints, operating losses, shutdown limits and the target saleable output.
+            </p>
+          </div>
+        </div>
+
+        <div class="signal-grid">
+          <article>
+            <span class="signal-line"></span>
+            <h3>Waiting</h3>
+            <p>Machines or production sections regularly wait for one another.</p>
+          </article>
+          <article>
+            <span class="signal-line"></span>
+            <h3>Variation</h3>
+            <p>Batching, pouring or mould-cycle timing depends too heavily on individual operators.</p>
+          </article>
+          <article>
+            <span class="signal-line"></span>
+            <h3>Handling</h3>
+            <p>Manual movement creates delays, damage or reliance on a few experienced people.</p>
+          </article>
+          <article>
+            <span class="signal-line"></span>
+            <h3>Visibility</h3>
+            <p>Production data, alarms, downtime causes or process records are incomplete.</p>
+          </article>
+        </div>
+
+        <div class="statement-block">
+          <p>These symptoms do not prove that full automation is required.</p>
+          <span>Maintenance, process correction, equipment replacement or targeted debottlenecking may need priority.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHERE AUTOMATION CAN HELP ============ -->
+    <section class="areas section light-section">
+      <div class="wrap">
+        <div class="compact-heading">
+          <p class="eyebrow">Where automation can help</p>
+          <h2>Upgrade the constraint.<br /><span>Measure the result.</span></h2>
+        </div>
+
+        <div class="numbered-list">
+          <div class="numbered-row">
+            <span class="row-number">01</span>
+            <h3>Batching &amp; recipes</h3>
+            <p>Automated weighing, dosing interlocks and batch records improve repeatability and traceability.</p>
+          </div>
+          <div class="numbered-row">
+            <span class="row-number">02</span>
+            <h3>Mould movement</h3>
+            <p>Coordinated transfer, timers and permissives reduce avoidable waiting between production stages.</p>
+          </div>
+          <div class="numbered-row">
+            <span class="row-number">03</span>
+            <h3>Cutting &amp; handling</h3>
+            <p>Sequence control and handling interlocks support consistent operation and lower handling risk.</p>
+          </div>
+          <div class="numbered-row">
+            <span class="row-number">04</span>
+            <h3>Plant intelligence</h3>
+            <p>PLC, HMI/SCADA, alarms and production data give teams clearer visibility and faster diagnosis.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 02 — EVALUATE SECTION ============ -->
+    <section class="evaluate section dark-section" id="evaluate">
+      <div class="wrap">
+        <div class="section-lead dark-lead">
+          <p class="eyebrow light">02 — Evaluate</p>
+          <h2>Choose the level your plant<br /><span>can operate reliably.</span></h2>
+          <p>
+            Higher automation can reduce repetitive manual work, but it can also increase dependence on sensors, PLC systems, instrumentation, software backups and skilled troubleshooting.
+          </p>
+        </div>
+
+        <div class="approach-grid">
+          <article>
+            <h3>Selective automation</h3>
+            <div>
+              <span>Best suited when</span>
+              <p>One or two measured bottlenecks limit the plant.</p>
+            </div>
+            <div>
+              <span>Main consideration</span>
+              <p>Focused investment and lower integration scope, although other constraints may remain.</p>
+            </div>
+          </article>
+          <article class="featured">
+            <span class="approach-label">Balanced approach</span>
+            <h3>Hybrid automation</h3>
+            <div>
+              <span>Best suited when</span>
+              <p>Labour-intensive or coordination-critical tasks need automation while practical manual control is retained elsewhere.</p>
+            </div>
+            <div>
+              <span>Main consideration</span>
+              <p>Balances labour reduction with technical complexity and maintainability.</p>
+            </div>
+          </article>
+          <article>
+            <h3>Full-line automation</h3>
+            <div>
+              <span>Best suited when</span>
+              <p>Equipment, layout, interfaces and utilities can support coordinated automatic operation.</p>
+            </div>
+            <div>
+              <span>Main consideration</span>
+              <p>Needs stronger instrumentation, maintenance discipline and trained technical supervision.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="warning-panel">
+          <p class="eyebrow light">Important limitation</p>
+          <h3>Automation does not automatically guarantee better quality, lower energy use or higher capacity.</h3>
+          <p>
+            AAC quality still depends on raw materials, formulation, slurry condition, mixing, pre-curing, cutting, autoclaving and laboratory control. Energy and capacity outcomes must be tied to a specific source of loss and verified under comparable operating conditions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MEASURE WHAT CHANGES SECTION ============ -->
+    <section class="metrics section">
+      <div class="wrap">
+        <div class="compact-heading">
+          <p class="eyebrow">Measure what changes</p>
+          <h2>Potential improvement<br /><span>needs a verification metric.</span></h2>
+        </div>
+
+        <div class="metric-table" role="table" aria-label="Potential automation improvements and measurement metrics">
+          <div class="metric-head" role="row">
+            <span role="columnheader">Potential improvement</span>
+            <span role="columnheader">How automation may help</span>
+            <span role="columnheader">Metric to verify</span>
+          </div>
+          <div class="metric-row" role="row">
+            <span role="cell" data-label="Improvement">Production efficiency</span>
+            <span role="cell" data-label="Mechanism">Coordinates machine sequences and reduces avoidable waiting.</span>
+            <span role="cell" data-label="Metric">Saleable m³/day, cycle time and downtime</span>
+          </div>
+          <div class="metric-row" role="row">
+            <span role="cell" data-label="Improvement">Process consistency</span>
+            <span role="cell" data-label="Mechanism">Controls recipes, dosing, timing and operating permissions.</span>
+            <span role="cell" data-label="Metric">Batch variation, density variation and rejection</span>
+          </div>
+          <div class="metric-row" role="row">
+            <span role="cell" data-label="Improvement">Electricity use</span>
+            <span role="cell" data-label="Mechanism">Reduces avoidable idle running and improves sequencing.</span>
+            <span role="cell" data-label="Metric">kWh per saleable m³</span>
+          </div>
+          <div class="metric-row" role="row">
+            <span role="cell" data-label="Improvement">Steam utilisation</span>
+            <span role="cell" data-label="Mechanism">Supports loading discipline, cycle monitoring and planning.</span>
+            <span role="cell" data-label="Metric">kg steam per saleable m³ under comparable conditions</span>
+          </div>
+          <div class="metric-row" role="row">
+            <span role="cell" data-label="Improvement">Manpower deployment</span>
+            <span role="cell" data-label="Mechanism">Automates repetitive handling and routine control tasks.</span>
+            <span role="cell" data-label="Metric">People per shift by role, including technical staff</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 03 — DECIDE SECTION ============ -->
+    <section class="decide section light-section" id="decide">
+      <div class="wrap">
+        <div class="section-lead split-lead">
+          <div>
+            <p class="eyebrow">03 — Decide</p>
+            <h2>Audit first.<br /><span>Define scope second.</span></h2>
+          </div>
+          <div class="lead-copy">
+            <p>
+              A sound brownfield proposal starts with evidence from the running plant. It establishes what can be retained, what must be modified, what needs replacement and where integration risk exists.
+            </p>
+          </div>
+        </div>
+
+        <div class="process-list">
+          <div class="process-row">
+            <span>01</span>
+            <h3>Establish the baseline</h3>
+            <p>Record saleable output, cycle times, downtime, rejection, manpower and utility consumption.</p>
+          </div>
+          <div class="process-row">
+            <span>02</span>
+            <h3>Inspect the running plant</h3>
+            <p>Review machinery condition, layout, controls, utilities, safety and production interfaces.</p>
+          </div>
+          <div class="process-row">
+            <span>03</span>
+            <h3>Identify the constraint</h3>
+            <p>Separate process, equipment, handling, control and operating problems.</p>
+          </div>
+          <div class="process-row">
+            <span>04</span>
+            <h3>Select the upgrade level</h3>
+            <p>Compare repair, selective automation, hybrid automation, full retrofit and new-line alternatives.</p>
+          </div>
+          <div class="process-row">
+            <span>05</span>
+            <h3>Define acceptance</h3>
+            <p>Agree equipment boundaries, measurement methods, assumptions and exclusions before implementation.</p>
+          </div>
+          <div class="process-row">
+            <span>06</span>
+            <h3>Install and stabilise</h3>
+            <p>Plan the shutdown, test safety and sequences, train teams and verify results after stabilisation.</p>
+          </div>
+        </div>
+
+        <div class="payback-callout">
+          <div>
+            <p class="eyebrow">Commercial discipline</p>
+            <h3>Simple payback should use verified operating benefit.</h3>
+          </div>
+          <p>
+            <strong>Simple payback (months)</strong> = Total upgrade investment ÷ verified monthly operating benefit. Include only documented savings and contribution from additional saleable output after accounting for added maintenance, technical manpower, finance and recurring costs.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRACTICAL QUESTIONS (FAQS) ============ -->
+    <section class="faq section" id="faq">
+      <div class="wrap faq-layout">
+        <div class="faq-intro">
+          <p class="eyebrow">Practical questions</p>
+          <h2>Before you automate,<br /><span>ask what changes.</span></h2>
+          <p>Clear answers reduce the risk of investing in automation that does not address the plant’s true constraint.</p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>Can every semi-automatic AAC plant be converted to fully automatic?</span>
+              <span class="faq-mark" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" hidden>
+              <p>No. Feasibility depends on machinery condition, layout, cycle compatibility, utilities, controls, safety requirements, available shutdown and commercial payback.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>Should the complete plant be automated at one time?</span>
+              <span class="faq-mark" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" hidden>
+              <p>Not necessarily. A phased or hybrid upgrade may create better value when only selected operations are labour-intensive or production-constraining.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>Will automation increase plant capacity?</span>
+              <span class="faq-mark" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" hidden>
+              <p>It may improve actual output if avoidable waiting, handling or sequence losses are the constraint. It cannot increase output beyond the limits of the remaining production system.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>Will automation reduce steam and electricity consumption?</span>
+              <span class="faq-mark" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" hidden>
+              <p>Not automatically. Any saving must be linked to a measured source of loss and verified in kg steam per saleable m³ or kWh per saleable m³ under comparable conditions.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>Does a fully automatic plant require less skill?</span>
+              <span class="faq-mark" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" hidden>
+              <p>It may require fewer repetitive manual roles, but it normally needs stronger electrical, instrumentation and troubleshooting capability.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>How should upgrade performance be accepted?</span>
+              <span class="faq-mark" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" hidden>
+              <p>Agree the baseline, measurement method, operating conditions, exclusions, stabilisation period and acceptance criteria before implementation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CLOSING CONSULTATION BANNER ============ -->
+    <section class="consultation section" id="consultation">
+      <div class="consultation-glow"></div>
+      <div class="wrap consultation-inner">
+        <p class="eyebrow light">A better upgrade starts with a better diagnosis</p>
+        <h2>Review your AAC plant<br />automation requirement.</h2>
+        <p>
+          Share your present capacity, target output, main bottleneck, plant location and available layout or production records. The first step is to identify what must be resolved before an upgrade scope and proposal are prepared.
+        </p>
+        <div class="consultation-actions">
+          <a class="button white" href="contact.html">Request a Technical Assessment</a>
+          <a class="text-link light-link" href="#top">Review the page again <span aria-hidden="true">↑</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Footer Injection Placeholder -->
+  <div id="site-footer"></div>
+
+  <!-- Shared Scripts Bundle -->
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // FAQ Accordion Toggle Interaction
+    document.addEventListener('DOMContentLoaded', function () {
+      var faqButtons = document.querySelectorAll('.faq-trigger');
+      faqButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var item = btn.closest('.faq-item');
+          var answer = item.querySelector('.faq-answer');
+          var isExpanded = btn.getAttribute('aria-expanded') === 'true';
+
+          // Close all other open items
+          document.querySelectorAll('.faq-item').forEach(function (otherItem) {
+            if (otherItem !== item) {
+              var otherBtn = otherItem.querySelector('.faq-trigger');
+              if (otherBtn) {
+                otherBtn.setAttribute('aria-expanded', 'false');
+                var mark = otherBtn.querySelector('.faq-mark');
+                if (mark) mark.textContent = '+';
+              }
+              var otherAns = otherItem.querySelector('.faq-answer');
+              if (otherAns) otherAns.hidden = true;
+            }
+          });
+
+          // Toggle current
+          if (isExpanded) {
+            btn.setAttribute('aria-expanded', 'false');
+            answer.hidden = true;
+            btn.querySelector('.faq-mark').textContent = '+';
+          } else {
+            btn.setAttribute('aria-expanded', 'true');
+            answer.hidden = false;
+            btn.querySelector('.faq-mark').textContent = '−';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

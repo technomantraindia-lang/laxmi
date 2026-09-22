@@ -1,0 +1,862 @@
+/* ==========================================================================
+   AAC STEAM BOILER & CAPACITY SELECTION PAGE STYLES
+   Scope: .boiler-page
+   ========================================================================== */
+
+:root {
+  --navy: #0b1727;
+  --blue: #0c4f80;
+  --deep-a: #104f7d;
+  --deep-b: #09263d;
+  --white: #ffffff;
+  --silver: #eef2f5;
+  --light: #f5f7f8;
+  --text: #0b1727;
+  --secondary: #5e6874;
+  --muted: #84909c;
+  --line: #dce2e7;
+  --highlight: #8fc6ec;
+  --shell: min(1400px, 88vw);
+}
+
+.boiler-page {
+  color: var(--text);
+  background: var(--white);
+  font-family: 'Geist', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}
+
+.boiler-page * {
+  box-sizing: border-box;
+}
+
+.boiler-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.boiler-page p {
+  color: var(--secondary);
+  margin: 0;
+  font-size: clamp(1rem, 1.15vw, 1.16rem);
+  line-height: 1.72;
+}
+
+.boiler-page h1,
+.boiler-page h2,
+.boiler-page h3 {
+  letter-spacing: -0.045em;
+  margin: 0;
+  line-height: 1.05;
+  color: var(--navy);
+}
+
+.boiler-page h1 {
+  color: var(--white);
+  font-size: clamp(3rem, 5.8vw, 5.8rem);
+  font-weight: 650;
+  max-width: 960px;
+}
+
+.boiler-page h1 span {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 480;
+  display: block;
+}
+
+.boiler-page h2 {
+  font-size: clamp(2.2rem, 4.4vw, 4.4rem);
+  font-weight: 620;
+  max-width: 900px;
+}
+
+.boiler-page h2 span {
+  color: var(--muted);
+  font-weight: 480;
+  display: block;
+}
+
+.boiler-page h3 {
+  font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+  line-height: 1.25;
+  font-weight: 650;
+}
+
+.boiler-page .page-shell,
+.boiler-page .shell {
+  width: var(--shell);
+  margin-inline: auto;
+}
+
+.boiler-page .section {
+  padding-block: clamp(80px, 8.5vw, 140px);
+}
+
+.boiler-page .silver {
+  background: var(--silver);
+}
+
+.boiler-page .dark-section,
+.boiler-page .navy {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.boiler-page .dark-section h2,
+.boiler-page .navy h2,
+.boiler-page .expansion h2 {
+  color: var(--white);
+}
+
+.boiler-page .dark-section h2 span,
+.boiler-page .navy h2 span,
+.boiler-page .expansion h2 span {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* Eyebrows & Section Indices */
+.boiler-page .eyebrow {
+  color: var(--blue) !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+  gap: 0 !important;
+  letter-spacing: 0.18em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 1.25rem !important;
+  font-size: 0.78rem !important;
+  font-weight: 750 !important;
+  line-height: 1 !important;
+  width: fit-content;
+}
+
+.boiler-page .eyebrow::before {
+  content: none !important;
+  display: none !important;
+}
+
+.boiler-page .eyebrow.light,
+.boiler-page .dark-section .eyebrow,
+.boiler-page .expansion .eyebrow,
+.boiler-page .conversion .eyebrow {
+  color: var(--highlight) !important;
+}
+
+.boiler-page .section-index {
+  color: var(--blue);
+  font-size: 0.85rem;
+  font-weight: 750;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+/* Hero Section */
+.boiler-page .hero {
+  background: var(--navy);
+  align-items: center;
+  min-height: 90vh;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.boiler-page .hero-image {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.boiler-page .hero-shade {
+  background: linear-gradient(90deg, rgba(7, 19, 33, 0.96) 0%, rgba(7, 19, 33, 0.88) 35%, rgba(7, 19, 33, 0.55) 65%, rgba(7, 19, 33, 0.2) 100%);
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.boiler-page .hero-content {
+  z-index: 3;
+  padding-top: 50px;
+  position: relative;
+}
+
+.boiler-page .hero-content > * {
+  max-width: min(760px, 56vw);
+}
+
+.boiler-page .hero-copy {
+  color: #c6d0d8;
+  max-width: 42rem;
+  margin-top: 1.8rem;
+  font-size: clamp(1.05rem, 1.25vw, 1.22rem);
+  line-height: 1.65;
+}
+
+.boiler-page .hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 2.2rem;
+  flex-wrap: wrap;
+}
+
+.boiler-page .hero-note {
+  color: rgba(255, 255, 255, 0.45);
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+}
+
+/* Buttons and Links */
+.boiler-page .button {
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 1rem 1.8rem;
+  font-size: 0.95rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.boiler-page .button-primary,
+.boiler-page .button-light {
+  background: var(--white);
+  color: var(--navy);
+}
+
+.boiler-page .button-primary:hover,
+.boiler-page .button-light:hover {
+  background: #e2e8f0;
+  transform: translateY(-2px);
+}
+
+.boiler-page .text-link {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s ease, gap 0.2s ease;
+}
+
+.boiler-page .text-link:hover {
+  opacity: 0.85;
+  gap: 10px;
+}
+
+/* 01. Understand Section */
+.boiler-page .intro {
+  border-bottom: 1px solid var(--line);
+}
+
+.boiler-page .editorial-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: start;
+}
+
+.boiler-page .editorial-copy p {
+  margin-bottom: 1.25rem;
+}
+
+.boiler-page .intro blockquote {
+  margin: 3.5rem 0 0 0;
+  padding: 2rem 2.5rem;
+  background: var(--light);
+  border-left: 4px solid var(--blue);
+  border-radius: 0 4px 4px 0;
+  font-size: clamp(1.15rem, 1.4vw, 1.45rem);
+  color: var(--navy);
+  font-weight: 550;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+}
+
+/* 02. Connected System (Flow) */
+.boiler-page .system-flow {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-block: 3.5rem 2.5rem;
+}
+
+.boiler-page .flow-step {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+  padding: 24px 20px;
+  position: relative;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.boiler-page .flow-step:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: var(--highlight);
+}
+
+.boiler-page .flow-step span {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 750;
+  color: var(--highlight);
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+
+.boiler-page .flow-step strong {
+  display: block;
+  color: var(--white);
+  font-size: 1.15rem;
+  font-weight: 650;
+  line-height: 1.25;
+}
+
+.boiler-page .dark-note {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 1.05rem;
+  max-width: 900px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 1.5rem;
+}
+
+/* 03. Evaluate (7 Inputs) */
+.boiler-page .section-heading-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+  margin-bottom: 3.5rem;
+  flex-wrap: wrap;
+}
+
+.boiler-page .section-heading-row p {
+  max-width: 480px;
+}
+
+.boiler-page .factor-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.boiler-page .factor-row {
+  background: var(--light);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 30px 28px;
+  position: relative;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.boiler-page .factor-row:hover {
+  transform: translateY(-3px);
+  border-color: var(--blue);
+  box-shadow: 0 10px 24px rgba(11, 23, 39, 0.06);
+}
+
+.boiler-page .factor-number {
+  font-size: 0.9rem;
+  font-weight: 750;
+  color: var(--blue);
+  letter-spacing: 0.1em;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.boiler-page .factor-row h3 {
+  margin-bottom: 10px;
+}
+
+/* 04. Sizing Method (Calculation) */
+.boiler-page .calculation {
+  background: var(--silver);
+}
+
+.boiler-page .calculation-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: clamp(40px, 6vw, 90px);
+  align-items: start;
+}
+
+.boiler-page .sticky-copy {
+  position: sticky;
+  top: 100px;
+}
+
+.boiler-page .sticky-copy p:last-of-type {
+  margin-top: 1.5rem;
+}
+
+.boiler-page .method-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.boiler-page .method-list li {
+  display: flex;
+  gap: 24px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 26px 28px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.boiler-page .method-list li:hover {
+  border-color: var(--blue);
+  transform: translateX(4px);
+}
+
+.boiler-page .method-list li > span {
+  font-size: 1.3rem;
+  font-weight: 750;
+  color: var(--blue);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.boiler-page .method-list li h3 {
+  margin-bottom: 8px;
+  font-size: 1.15rem;
+}
+
+/* 05. Trade-offs (Undersized vs Correct vs Oversized) */
+.boiler-page .tradeoff .comparison {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-block: 3.5rem 2rem;
+}
+
+.boiler-page .tradeoff article {
+  background: var(--light);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+.boiler-page .tradeoff article:nth-child(2) {
+  background: #f0f7fc;
+  border-color: #badcf5;
+  border-top: 4px solid var(--blue);
+}
+
+.boiler-page .tradeoff article h3 {
+  font-size: 1.25rem;
+  margin-bottom: 14px;
+}
+
+.boiler-page .qualification {
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-top: 1.5rem;
+}
+
+/* 06. Recovery Clarity */
+.boiler-page .recovery {
+  background: var(--silver);
+}
+
+.boiler-page .recovery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 3rem;
+}
+
+.boiler-page .recovery-grid article {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 28px 24px;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.boiler-page .recovery-grid article:hover {
+  transform: translateY(-3px);
+  border-color: var(--blue);
+}
+
+.boiler-page .recovery-grid article span {
+  font-size: 0.85rem;
+  font-weight: 750;
+  color: var(--blue);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.boiler-page .recovery-grid article h3 {
+  margin-bottom: 10px;
+}
+
+/* 07. Pressure Nuance (Table) */
+.boiler-page .table-wrap {
+  overflow-x: auto;
+  margin-block: 2.5rem 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--white);
+}
+
+.boiler-page table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.boiler-page thead {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.boiler-page th,
+.boiler-page td {
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--line);
+  font-size: 1rem;
+}
+
+.boiler-page thead th {
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  border-bottom: none;
+}
+
+.boiler-page tbody th {
+  color: var(--navy);
+  font-weight: 650;
+  background: #fbfcfd;
+  width: 25%;
+}
+
+.boiler-page tbody td:nth-child(2) {
+  width: 45%;
+  color: var(--secondary);
+}
+
+.boiler-page tbody td:nth-child(3) {
+  width: 30%;
+  color: var(--navy);
+  font-weight: 500;
+}
+
+.boiler-page tbody tr:last-child th,
+.boiler-page tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* 08. India Reality */
+.boiler-page .india {
+  background: var(--light);
+}
+
+.boiler-page .india-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: clamp(40px, 6vw, 90px);
+  align-items: start;
+}
+
+.boiler-page .india-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.boiler-page .india-items article {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 26px 28px;
+}
+
+.boiler-page .india-items article h3 {
+  margin-bottom: 8px;
+  color: var(--navy);
+}
+
+/* 09. Quote Framework (10-Item Grid) */
+.boiler-page .quote-check {
+  border-bottom: 1px solid var(--line);
+}
+
+.boiler-page .section-lead {
+  font-size: 1.25rem;
+  color: var(--navy);
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+  font-weight: 500;
+}
+
+.boiler-page .quote-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.boiler-page .quote-grid > div {
+  background: var(--light);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 20px 22px;
+  font-size: 1.05rem;
+  font-weight: 650;
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.boiler-page .quote-grid > div:hover {
+  transform: translateY(-2px);
+  border-color: var(--blue);
+}
+
+.boiler-page .quote-grid > div span {
+  font-size: 0.85rem;
+  font-weight: 750;
+  color: var(--blue);
+  background: var(--white);
+  border: 1px solid var(--line);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* 10. Future Capacity (Expansion - Dark) */
+.boiler-page .expansion {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.boiler-page .expansion-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: clamp(40px, 6vw, 90px);
+  align-items: center;
+}
+
+.boiler-page .expansion-grid p {
+  color: #c6d0d8;
+  margin-bottom: 1.2rem;
+}
+
+.boiler-page .expansion-grid p:last-child {
+  margin-bottom: 0;
+}
+
+/* 11. Laxmi Methodology */
+.boiler-page .methodology-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 3rem;
+}
+
+.boiler-page .methodology-grid article {
+  background: var(--light);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 32px 28px;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.boiler-page .methodology-grid article:hover {
+  transform: translateY(-3px);
+  border-color: var(--blue);
+}
+
+.boiler-page .methodology-grid article span {
+  font-size: 0.9rem;
+  font-weight: 750;
+  color: var(--blue);
+  display: block;
+  margin-bottom: 14px;
+}
+
+.boiler-page .methodology-grid article h3 {
+  margin-bottom: 12px;
+}
+
+/* 12. FAQ Accordion */
+.boiler-page .faq {
+  border-top: 1px solid var(--line);
+}
+
+.boiler-page .faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 3rem;
+}
+
+.boiler-page .faq-list details {
+  background: var(--light);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.boiler-page .faq-list details[open] {
+  border-color: var(--blue);
+  background: var(--white);
+}
+
+.boiler-page .faq-list summary {
+  padding: 24px 28px;
+  cursor: pointer;
+  font-weight: 650;
+  font-size: 1.15rem;
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  user-select: none;
+}
+
+.boiler-page .faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.boiler-page .faq-list summary span {
+  font-size: 0.9rem;
+  font-weight: 750;
+  color: var(--blue);
+  margin-right: 18px;
+}
+
+.boiler-page .faq-list summary b {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--muted);
+  transition: transform 0.2s ease;
+}
+
+.boiler-page .faq-list details[open] summary b {
+  transform: rotate(45deg);
+  color: var(--blue);
+}
+
+.boiler-page .faq-list details > div,
+.boiler-page .faq-list details > p {
+  padding: 0 28px 24px 28px;
+}
+
+.boiler-page .faq-list details p {
+  color: var(--secondary);
+  line-height: 1.7;
+}
+
+/* 13. Conversion CTA */
+.boiler-page .conversion {
+  background: linear-gradient(135deg, var(--deep-a) 0%, var(--deep-b) 100%);
+  color: var(--white);
+  padding-block: clamp(80px, 8vw, 130px);
+}
+
+.boiler-page .conversion-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1.2fr;
+  gap: clamp(40px, 6vw, 90px);
+  align-items: center;
+}
+
+.boiler-page .conversion-copy p {
+  color: #c6d0d8;
+  font-size: 1.15rem;
+  margin-bottom: 2rem;
+}
+
+.boiler-page .conversion-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.boiler-page .conversion-actions a:last-child {
+  color: var(--highlight);
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s ease, gap 0.2s ease;
+}
+
+.boiler-page .conversion-actions a:last-child:hover {
+  opacity: 0.85;
+  gap: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .boiler-page .editorial-grid,
+  .boiler-page .calculation-grid,
+  .boiler-page .india-grid,
+  .boiler-page .expansion-grid,
+  .boiler-page .conversion-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .boiler-page .sticky-copy {
+    position: static;
+  }
+
+  .boiler-page .system-flow {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .boiler-page .tradeoff .comparison,
+  .boiler-page .methodology-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .boiler-page .hero-content > * {
+    max-width: 100%;
+  }
+
+  .boiler-page .hero-actions,
+  .boiler-page .conversion-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}

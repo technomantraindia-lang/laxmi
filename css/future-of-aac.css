@@ -1,0 +1,635 @@
+/* ==========================================================================
+   FUTURE OF AAC BLOCKS IN INDIA — STYLES
+   Source: https://laxmi-en-fab-complete.mitesh958.chatgpt.site/imported/future-aac-india/
+   ========================================================================== */
+
+:root {
+  --ink: #0B1727;
+  --blue: #0C4F80;
+  --silver: #EEF2F5;
+  --muted: #687381;
+  --line: #DCE2E7;
+  --hi: #8FC6EC;
+  --pad: clamp(24px, 6vw, 96px);
+}
+
+.future-aac-body {
+  color: var(--ink);
+  font-family: 'Geist', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #fff;
+  margin: 0;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.future-aac-body * {
+  box-sizing: border-box;
+}
+
+.future-aac-body a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   Typography & Shared Utilities
+   ========================================================================== */
+
+.future-eyebrow {
+  color: var(--blue);
+  text-transform: uppercase;
+  letter-spacing: .17em;
+  margin: 0 0 22px;
+  font-size: 12px;
+  font-weight: 680;
+  display: block;
+}
+
+.future-btn {
+  border-radius: 999px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 26px;
+  font-size: 14.5px;
+  font-weight: 640;
+  transition: all .25s ease;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.future-btn:hover {
+  transform: translateY(-2px);
+}
+
+.future-btn-dark {
+  background: var(--ink);
+  color: #fff !important;
+  box-shadow: 0 12px 30px rgba(11, 23, 39, 0.2);
+}
+
+.future-btn-dark:hover {
+  background: #142840;
+  box-shadow: 0 16px 36px rgba(11, 23, 39, 0.3);
+}
+
+.future-btn-white {
+  color: var(--ink) !important;
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.future-btn-white:hover {
+  background: #f0f4f8;
+}
+
+.future-text-link {
+  border-bottom: 1px solid #9fa8b1;
+  padding-bottom: 3px;
+  font-size: 14.5px;
+  font-weight: 620;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.future-text-link:hover {
+  color: var(--blue);
+  border-bottom-color: var(--blue);
+}
+
+.future-text-link.light {
+  color: #fff;
+  border-color: #7395ac;
+}
+
+.future-text-link.light:hover {
+  border-color: #fff;
+  color: #fff;
+}
+
+.future-section {
+  padding: clamp(90px, 11vw, 175px) clamp(24px, 6vw, 96px);
+}
+
+.future-section-intro {
+  max-width: 1010px;
+}
+
+.future-section-intro h2,
+.future-cta-section h2,
+.future-faq-section h2 {
+  letter-spacing: -.055em;
+  max-width: 1000px;
+  margin: 0;
+  font-size: clamp(45px, 6vw, 90px);
+  font-weight: 500;
+  line-height: .98;
+  color: var(--ink);
+}
+
+.future-section-intro h2 span,
+.future-cta-section h2 span {
+  color: #84909c;
+}
+
+.future-section-intro > p:last-child {
+  color: #5e6874;
+  max-width: 600px;
+  margin: 32px 0 0 auto;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+
+.future-hero {
+  align-items: center;
+  min-height: calc(100vh - 72px);
+  padding: 110px clamp(24px, 6vw, 96px) 70px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  background: #f7f9fa;
+}
+
+.future-hero-image {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+}
+
+.future-hero-shade {
+  background: linear-gradient(90deg, #fafbfcfa 0%, #fafbfce6 28%, #fafbfc3b 55%, #fff0 75%);
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.future-hero-content {
+  z-index: 2;
+  width: min(620px, 48vw);
+  position: relative;
+}
+
+.future-hero h1 {
+  letter-spacing: -.07em;
+  margin: 0;
+  font-size: clamp(58px, 7.2vw, 116px);
+  font-weight: 510;
+  line-height: .89;
+  color: var(--ink);
+}
+
+.future-hero-copy {
+  color: #4d5a67;
+  max-width: 570px;
+  margin: 32px 0 0;
+  font-size: clamp(16px, 1.25vw, 20px);
+  line-height: 1.55;
+}
+
+.future-hero-actions,
+.future-cta-actions {
+  align-items: center;
+  gap: 24px;
+  margin-top: 35px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.future-hero-note {
+  z-index: 2;
+  color: #52606d;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  font-size: 11.5px;
+  display: flex;
+  position: absolute;
+  bottom: 36px;
+  right: clamp(24px, 5vw, 80px);
+}
+
+.future-hero-note b {
+  color: var(--ink);
+  font-size: 12.5px;
+}
+
+/* ==========================================================================
+   01 Outlook Section (Driver Grid & Truth Band)
+   ========================================================================== */
+
+.future-section-light {
+  background: #fff;
+}
+
+.future-driver-grid {
+  background: var(--line);
+  border: 1px solid var(--line);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  margin-top: 80px;
+  display: grid;
+}
+
+.future-driver-card {
+  background: #fff;
+  min-height: 290px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+.future-driver-card > span {
+  color: #8a959e;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .08em;
+}
+
+.future-driver-card h3 {
+  letter-spacing: -.025em;
+  margin: 90px 0 16px;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.future-driver-card p {
+  color: #68737e;
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.65;
+}
+
+.future-truth-band {
+  border-top: 1px solid var(--line);
+  grid-template-columns: 1fr 2.5fr;
+  align-items: start;
+  gap: 50px;
+  margin-top: 70px;
+  padding: 50px 0 0;
+  display: grid;
+}
+
+.future-truth-band p {
+  color: var(--blue);
+  margin: 0;
+  font-size: 13.5px;
+  font-weight: 650;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+
+.future-truth-band h3 {
+  letter-spacing: -.035em;
+  margin: 0;
+  font-size: clamp(25px, 3vw, 46px);
+  font-weight: 480;
+  line-height: 1.16;
+  color: var(--ink);
+}
+
+/* ==========================================================================
+   02 Investor Reality (Dark Section with 6 Checks)
+   ========================================================================== */
+
+.future-section-ink {
+  background: var(--ink);
+  color: #fff;
+}
+
+.future-section-ink .future-section-intro.inverse .future-eyebrow {
+  color: #8fc6ec;
+}
+
+.future-section-ink .future-section-intro.inverse h2 {
+  color: #fff;
+}
+
+.future-section-ink .future-section-intro.inverse h2 span {
+  color: #87a2b6;
+}
+
+.future-section-ink .future-section-intro.inverse > p:last-child {
+  color: #aab8c5;
+}
+
+.future-checks {
+  border-top: 1px solid #344150;
+  margin-top: 80px;
+}
+
+.future-check-row {
+  border-bottom: 1px solid #344150;
+  grid-template-columns: 70px minmax(210px, .65fr) 1.25fr;
+  align-items: center;
+  gap: 28px;
+  padding: 26px 0;
+  display: grid;
+}
+
+.future-check-row > span {
+  color: #708496;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.future-check-row h3 {
+  margin: 0;
+  font-size: 23px;
+  font-weight: 540;
+  color: #fff;
+}
+
+.future-check-row p {
+  color: #aeb9c4;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.future-investor-callout {
+  border-top: 2px solid #fff;
+  grid-template-columns: 170px 1fr;
+  gap: 30px;
+  max-width: 780px;
+  margin: 64px 0 0 auto;
+  padding: 30px 0 0;
+  display: grid;
+}
+
+.future-investor-callout span {
+  color: #8fc6ec;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.future-investor-callout p {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.35;
+  color: #fff;
+}
+
+/* ==========================================================================
+   03 Technology Section (Capability List)
+   ========================================================================== */
+
+.future-section-silver {
+  background: linear-gradient(140deg, #f5f7f8, #e9eef2);
+}
+
+.future-capability-list {
+  border-top: 1px solid #c9d0d6;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 75px;
+  display: grid;
+}
+
+.future-capability-list article {
+  border-right: 1px solid #c9d0d6;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 280px;
+  padding: 28px 22px;
+  display: flex;
+}
+
+.future-capability-list article:last-child {
+  border-right: 0;
+}
+
+.future-capability-list > article > span {
+  border: 1px solid #99a7b3;
+  border-radius: 50%;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  font-size: 12px;
+  font-weight: 600;
+  display: grid;
+  color: var(--ink);
+}
+
+.future-capability-list h3 {
+  margin: 0 0 12px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.future-capability-list p {
+  color: #65717d;
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   04 CTA Section
+   ========================================================================== */
+
+.future-cta-section {
+  color: #fff;
+  background: linear-gradient(135deg, #104f7d, #09263d 72%);
+  flex-direction: column;
+  justify-content: center;
+  min-height: 88svh;
+  padding: clamp(100px, 13vw, 190px) clamp(24px, 8vw, 130px);
+  display: flex;
+}
+
+.future-cta-section .future-eyebrow {
+  color: #a9d6f5;
+}
+
+.future-cta-section h2 {
+  color: #fff;
+}
+
+.future-cta-section > p:not(.future-eyebrow) {
+  color: #c6d5e0;
+  max-width: 660px;
+  margin: 34px 0 0;
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   05 FAQ Section
+   ========================================================================== */
+
+.future-faq-section {
+  background: #fff;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 100px;
+  padding: clamp(90px, 11vw, 165px) clamp(24px, 6vw, 96px);
+  display: grid;
+}
+
+.future-faq-section h2 {
+  font-size: clamp(40px, 4.7vw, 70px);
+}
+
+.future-faqs {
+  border-top: 1px solid var(--line);
+}
+
+.future-faqs details {
+  border-bottom: 1px solid var(--line);
+  padding: 0;
+}
+
+.future-faqs summary {
+  cursor: pointer;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 26px 0;
+  font-size: 18px;
+  font-weight: 580;
+  list-style: none;
+  display: flex;
+  color: var(--ink);
+  transition: color 0.2s ease;
+}
+
+.future-faqs summary:hover {
+  color: var(--blue);
+}
+
+.future-faqs summary::-webkit-details-marker {
+  display: none;
+}
+
+.future-faqs summary span {
+  font-size: 25px;
+  font-weight: 300;
+  color: var(--blue);
+  line-height: 1;
+}
+
+.future-faqs details[open] summary span {
+  content: "−";
+}
+
+.future-faqs details p {
+  color: #68737e;
+  margin: 0;
+  padding: 0 50px 26px 0;
+  line-height: 1.65;
+  font-size: 15.5px;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+@media (max-width: 980px) {
+  .future-hero {
+    align-items: flex-start;
+    min-height: 900px;
+    padding-top: 140px;
+  }
+  .future-hero-image {
+    object-position: 60% center;
+  }
+  .future-hero-shade {
+    background: linear-gradient(180deg, #fffffffa 0%, #ffffffd1 38%, #ffffff0d 68%);
+  }
+  .future-hero-content {
+    width: min(680px, 90%);
+  }
+  .future-driver-grid,
+  .future-capability-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .future-capability-list article {
+    border-bottom: 1px solid #c9d0d6;
+  }
+  .future-faq-section {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+}
+
+@media (max-width: 640px) {
+  .future-hero {
+    min-height: 800px;
+    padding-top: 120px;
+  }
+  .future-hero h1 {
+    font-size: 52px;
+  }
+  .future-hero-copy {
+    font-size: 16px;
+  }
+  .future-hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+  .future-hero-actions .future-btn {
+    width: 100%;
+  }
+  .future-hero-note {
+    display: none;
+  }
+  .future-section-intro h2,
+  .future-cta-section h2 {
+    font-size: 42px;
+  }
+  .future-section-intro > p:last-child {
+    font-size: 16px;
+  }
+  .future-driver-grid {
+    grid-template-columns: 1fr;
+  }
+  .future-driver-card {
+    min-height: auto;
+  }
+  .future-driver-card h3 {
+    margin-top: 50px;
+  }
+  .future-truth-band {
+    grid-template-columns: 1fr;
+  }
+  .future-check-row {
+    grid-template-columns: 38px 1fr;
+    gap: 12px;
+  }
+  .future-check-row p {
+    grid-column: 2;
+  }
+  .future-investor-callout {
+    grid-template-columns: 1fr;
+  }
+  .future-investor-callout p {
+    font-size: 20px;
+  }
+  .future-capability-list {
+    grid-template-columns: 1fr;
+  }
+  .future-capability-list article {
+    border-right: 0;
+    min-height: 220px;
+  }
+  .future-cta-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .future-cta-actions .future-btn {
+    width: 100%;
+  }
+}

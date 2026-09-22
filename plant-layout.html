@@ -1,449 +1,598 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="AAC Plant Layout Design Guide by Laxmi En-Fab Pvt. Ltd. Compare Straight-Line and L-Shape layouts, Single vs Double Door autoclaves, land optimization, and phase-2 expansion planning." />
-  <meta name="keywords" content="AAC plant layout, straight line AAC plant, L-shape AAC plant, double door autoclave, AAC factory design, Laxmi En-Fab" />
-  <title>AAC Plant Layout Design | Straight vs L-Shape Factory Planning | Laxmi En-Fab</title>
-  
-  <!-- Google Fonts: Geist & Geist Mono -->
+  <title>AAC Plant Layout: Straight, L-Shape &amp; Autoclaves | Laxmi En-Fab</title>
+  <meta name="description" content="Compare straight and L-shape AAC plant layouts, single- and double-door autoclave arrangements, land factors, process flow and expansion planning." />
+  <meta name="keywords" content="AAC plant layout, straight layout, L-shape layout, single door autoclave, double door autoclave, AAC factory master planning, Laxmi En-Fab" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="AAC Plant Layout: Straight, L-Shape &amp; Autoclaves" />
+  <meta property="og:description" content="Compare straight and L-shape AAC plant layouts, single- and double-door autoclave arrangements, land factors, process flow and expansion planning." />
+  <meta property="og:url" content="https://www.laxmienfab.com/plant-layout.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="assets/images/engineering/plant-layout-3d.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AAC Plant Layout: Straight, L-Shape &amp; Autoclaves" />
+  <meta name="twitter:description" content="Compare straight and L-shape AAC plant layouts, single- and double-door autoclave arrangements, land factors, process flow and expansion planning." />
+  <meta name="twitter:image" content="assets/images/engineering/plant-layout-3d.png" />
+
+  <link rel="canonical" href="https://www.laxmienfab.com/plant-layout.html" />
+
+  <!-- Google Fonts: Geist & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet" />
-  
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/components.css" />
-  <link rel="stylesheet" href="css/homepage.css" />
-  <link rel="stylesheet" href="css/engineering.css" />
+  <link rel="stylesheet" href="css/plant-layout.css" />
   <link rel="stylesheet" href="css/responsive.css" />
 
+  <!-- Structured Data / JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "AAC Plant Layout Design: Choosing the Right Factory Configuration",
-    "description": "Comprehensive engineering guide on factory master planning, straight-line vs L-shape flow, autoclave rail logistics, and land optimization.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Laxmi En-Fab Pvt. Ltd."
-    }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.laxmienfab.com/#organization",
+        "name": "Laxmi En-Fab Pvt. Ltd.",
+        "url": "https://www.laxmienfab.com/",
+        "logo": "assets/images/laxmi-logo.png"
+      },
+      {
+        "@type": "TechArticle",
+        "@id": "https://www.laxmienfab.com/plant-layout.html#article",
+        "headline": "AAC Plant Layout Design: Choosing the Right Factory Configuration",
+        "description": "Compare straight and L-shape AAC plant layouts, single- and double-door autoclave arrangements, land factors, process flow and expansion planning.",
+        "author": {
+          "@id": "https://www.laxmienfab.com/#organization"
+        },
+        "publisher": {
+          "@id": "https://www.laxmienfab.com/#organization"
+        },
+        "image": "assets/images/engineering/plant-layout-3d.png"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.laxmienfab.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "AAC Engineering Center",
+            "item": "https://www.laxmienfab.com/engineering-center.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "AAC Plant Layout"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Which AAC plant layout is best?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "There is no universally best layout. The correct choice depends on the surveyed plot, production target, product mix, automation, transfer system, utilities, dispatch planning and future expansion."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between a straight and an L-shape layout?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A straight layout keeps the main production flow predominantly linear. An L-shape layout changes direction once to use available length and width. The selected handling system must support the chosen geometry."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does an L-shape layout reduce AAC block quality?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Layout shape does not by itself determine block quality. Quality depends on raw materials, batching, process control, pre-curing, cutting, autoclaving and consistent operation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can both layouts achieve the same production capacity?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Equivalent output can be designed in either geometry when the complete machinery and handling system is correctly sized. Capacity must be confirmed by project-specific cycle and bottleneck calculations."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is a single-door autoclave arrangement technically inferior?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not automatically. Same-side loading can suit projects with width constraints, but handling and turnaround must be calculated. Through-flow arrangements also require sufficient access and infrastructure at both ends."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many autoclaves does an AAC plant require?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The number depends on target output, load per charge, curing and handling time, operating hours, availability, mould and trolley circulation, steam supply and other line bottlenecks."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What should I send for a preliminary layout review?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Share the surveyed plot drawing, gate and road details, project location, target capacity, block or panel plan, raw-material basis, preferred automation and future expansion target."
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
 </head>
-<body class="engineering-inner-page">
+<body class="layout-page">
 
-  <!-- Shared Header -->
+  <!-- Shared Global Header Injection -->
   <div id="site-header"></div>
-
-  <!-- Breadcrumb Navigation -->
-  <nav class="site-breadcrumb" aria-label="Breadcrumb">
-    <div class="site-breadcrumb__inner">
-      <a href="index.html">Home</a>
-      <span class="bc-sep">/</span>
-      <a href="engineering-center.html">AAC Engineering Center</a>
-      <span class="bc-sep">/</span>
-      <span class="bc-current">AAC Plant Layout Design</span>
-    </div>
-  </nav>
-
-  <!-- Sticky In-Page Sub-Navigation Strip -->
-  <nav class="eng-nav-strip" aria-label="Layout Navigation">
-    <div class="eng-nav-strip__inner">
-      <a href="#overview" class="eng-nav-btn active"><span class="eng-nav-num">01</span> Overview</a>
-      <a href="#configurations" class="eng-nav-btn"><span class="eng-nav-num">02</span> In-Line vs L-Shape</a>
-      <a href="#autoclave-flow" class="eng-nav-btn"><span class="eng-nav-num">03</span> Autoclave Logistics</a>
-      <a href="#zoning" class="eng-nav-btn"><span class="eng-nav-num">04</span> 6 Zoning Rules</a>
-      <a href="#consultation" class="eng-nav-btn"><span class="eng-nav-num">05</span> CAD Consultation</a>
-    </div>
-  </nav>
 
   <main id="main-content">
 
-    <!-- ============ 01. HERO SECTION (EDITORIAL FULL SCREEN IMAGE BACKGROUND) ============ -->
-    <section class="editorial-hero editorial-hero--light is-loaded" id="overview" aria-label="AAC Plant Layout Overview">
-      <div class="editorial-hero__media" aria-hidden="true">
-        <div class="editorial-hero__video-wrap">
-          <img
-            class="editorial-hero__poster"
-            src="assets/images/engineering/plant-layout-3d.png"
-            alt="AAC Plant Layout 3D Engineering Model"
-            fetchpriority="high"
-          />
-        </div>
-        <div class="editorial-hero__overlay"></div>
-      </div>
-
-      <div class="editorial-hero__inner">
-        <div class="editorial-hero__content">
-          <span class="editorial-hero__eyebrow">PILLAR 02 · FACTORY MASTER PLANNING</span>
-          <h1 class="editorial-hero__title">
-            <span>AAC Plant</span>
-            <span class="editorial-hero__title-light">Layout Design.</span>
-          </h1>
-          <p class="editorial-hero__sub">
-            Choosing the optimal factory configuration for your surveyed land, raw material handling, single vs. double-door autoclave rail circuits, and non-disruptive capacity expansion.
+    <!-- ============ HERO SECTION ============ -->
+    <section class="hero" id="top">
+      <img
+        class="hero-image"
+        src="assets/images/engineering/plant-layout-3d.png"
+        alt="Laxmi AAC plant layout showing batching, mould circulation, cutting, autoclaves and finished block movement"
+        fetchpriority="high"
+      />
+      <div class="hero-wash"></div>
+      <div class="shell hero-wrap">
+        <div class="hero-copy">
+          <p class="eyebrow">AAC Investor Academy · Design your plant</p>
+          <h1>AAC Plant<br /><span>Layout Design</span></h1>
+          <p class="hero-lead">
+            Choose the right factory configuration for your land, production flow and future expansion—not from a standard drawing.
           </p>
+          <div class="actions">
+            <a class="button primary" href="#consultation">Request a land &amp; layout review</a>
+            <a class="text-link" href="#decisions">Understand the decisions ↓</a>
+          </div>
+          <p class="hero-note">Project-specific dimensions and output must be confirmed during engineering.</p>
+        </div>
+      </div>
+    </section>
 
-          <div class="eng-hero__stats">
-            <div class="eng-stat-item">
-              <div class="eng-stat-item__val">2.5–10 <span>Acres</span></div>
-              <div class="eng-stat-item__lbl">Plot Sizing Range</div>
-            </div>
-            <div class="eng-stat-item">
-              <div class="eng-stat-item__val">0 <span>Cross-Traffic</span></div>
-              <div class="eng-stat-item__lbl">Optimized Logistics</div>
-            </div>
-            <div class="eng-stat-item">
-              <div class="eng-stat-item__val">2x <span>Ready</span></div>
-              <div class="eng-stat-item__lbl">Phase-2 Scaling</div>
-            </div>
-            <div class="eng-stat-item">
-              <div class="eng-stat-item__val">30 <span>%</span></div>
-              <div class="eng-stat-item__lbl">Civil Cost Savings</div>
-            </div>
+    <!-- ============ THE DIRECT ANSWER SECTION ============ -->
+    <section class="direct section-pad">
+      <div class="shell statement-grid">
+        <p class="eyebrow">The direct answer</p>
+        <div>
+          <h2>There is no universally <span>best layout.</span></h2>
+          <p>
+            An AAC plant layout coordinates raw-material preparation, batching, casting, pre-curing, cutting, autoclaving, packing, utilities and internal movement. The right configuration is the one that meets the required output safely and maintainably within the project's verified constraints.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TWO DECISIONS SECTION ============ -->
+    <section class="dark decision" id="decisions">
+      <div class="shell">
+        <p class="eyebrow light">Two decisions. One complete system.</p>
+        <div class="decision-heading">
+          <h2>Do not confuse<br />flow with access.</h2>
+          <p>
+            Straight and L-shape describe the direction of production. Single-door and double-door describe how autoclave trolleys enter and leave. They are separate decisions, but must be engineered together.
+          </p>
+        </div>
+        <div class="decision-pairs">
+          <article>
+            <span>01 / Process geometry</span>
+            <h3>Straight or L-shape</h3>
+            <p>How the manufacturing stages are arranged across the available plot.</p>
+          </article>
+          <article>
+            <span>02 / Autoclave movement</span>
+            <h3>Same-side or through-flow</h3>
+            <p>How trolleys are loaded, unloaded and returned through the curing area.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ START WITH VERIFIED INPUTS SECTION ============ -->
+    <section class="inputs section-pad" id="planning">
+      <div class="shell">
+        <div class="split">
+          <div>
+            <p class="eyebrow">Start with verified inputs</p>
+            <h2>A meaningful layout cannot begin with <span>capacity alone.</span></h2>
+          </div>
+          <p>
+            Land shape matters, but so do product range, circulation, utilities, dispatch and expansion. These inputs define whether a concept can become an operable factory.
+          </p>
+        </div>
+        <div class="numbered-rows">
+          <div class="numbered-row">
+            <span>01</span>
+            <h3>Surveyed plot</h3>
+            <p>Boundaries, levels, roads and usable dimensions</p>
+          </div>
+          <div class="numbered-row">
+            <span>02</span>
+            <h3>Production objective</h3>
+            <p>Target output, product mix and operating plan</p>
+          </div>
+          <div class="numbered-row">
+            <span>03</span>
+            <h3>Material basis</h3>
+            <p>Storage, grinding, slurry and unloading requirements</p>
+          </div>
+          <div class="numbered-row">
+            <span>04</span>
+            <h3>Automation</h3>
+            <p>Transfer systems, controls and operator access</p>
+          </div>
+          <div class="numbered-row">
+            <span>05</span>
+            <h3>Utilities</h3>
+            <p>Steam, power, water, air and condensate routes</p>
+          </div>
+          <div class="numbered-row">
+            <span>06</span>
+            <h3>Expansion</h3>
+            <p>Future autoclaves, moulds, storage and line capacity</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ 02. SECTION 01: CONFIGURATION COMPARISON ============ -->
-    <section class="eng-section eng-section--white" id="configurations">
-      <div class="eng-container">
+    <!-- ============ PROCESS-FLOW COMPARISON SECTION ============ -->
+    <section class="comparison section-pad" id="compare">
+      <div class="shell">
+        <p class="eyebrow">Process-flow comparison</p>
+        <h2>Straight or L-shape?<br /><span>Let the plot decide—then verify the system.</span></h2>
         
-        <div>
-          <span class="eng-eyebrow">01 · CONFIGURATION COMPARISON</span>
-          <h2 class="eng-title">
-            <span>Straight In-Line vs. L-Shape.</span>
-            <span class="eng-title-light">Matching production flow to land geometry.</span>
-          </h2>
-          <p class="eng-lead">
-            The layout determines the flow of raw materials, moulds, green cakes, autoclave trolleys, and finished block dispatch across your surveyed plot.
+        <div class="compare-columns">
+          <article>
+            <p class="option">Option A</p>
+            <h3>Straight layout</h3>
+            <p>Often considered for long rectangular plots where the principal production stages can follow a predominantly linear direction.</p>
+            <dl>
+              <div>
+                <dt>Typical site</dt>
+                <dd>Long and comparatively narrow</dd>
+              </div>
+              <div>
+                <dt>Primary benefit</dt>
+                <dd>Clear directional process flow</dd>
+              </div>
+              <div>
+                <dt>Review carefully</dt>
+                <dd>Return circulation, total line length and dispatch access</dd>
+              </div>
+              <div>
+                <dt>Expansion</dt>
+                <dd>Often along or beside the line</dd>
+              </div>
+            </dl>
+          </article>
+
+          <article>
+            <p class="option">Option B</p>
+            <h3>L-shape layout</h3>
+            <p>Often evaluated when usable length and width allow one planned direction change to improve the overall site arrangement.</p>
+            <dl>
+              <div>
+                <dt>Typical site</dt>
+                <dd>Balanced usable length and width</dd>
+              </div>
+              <div>
+                <dt>Primary benefit</dt>
+                <dd>Effective use of the construction envelope</dd>
+              </div>
+              <div>
+                <dt>Review carefully</dt>
+                <dd>Transfer method, controls and maintenance at the turn</dd>
+              </div>
+              <div>
+                <dt>Expansion</dt>
+                <dd>Reserve the correct corridor on either leg</dd>
+              </div>
+            </dl>
+          </article>
+        </div>
+
+        <div class="callout">
+          <p class="eyebrow">Engineering principle</p>
+          <p>
+            Equivalent output can be designed in either geometry when the complete equipment and handling system is sized correctly. This must be demonstrated by the project layout and cycle calculation—not assumed from shape alone.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ AUTOCLAVE ARRANGEMENT SECTION ============ -->
+    <section class="door section-pad">
+      <div class="shell">
+        <div class="split">
+          <div>
+            <p class="eyebrow">Autoclave arrangement</p>
+            <h2>One end or through-flow.<br /><span>Neither is automatically superior.</span></h2>
+          </div>
+          <p>
+            Door arrangement can influence building width, trolley movement, access and turnaround. It does not determine product quality by itself.
           </p>
         </div>
 
-        <!-- Master Configuration Table -->
-        <div class="eng-matrix-table-wrap">
-          <table class="eng-matrix-table">
+        <div class="table-wrap" role="region" aria-label="Autoclave arrangement comparison" tabindex="0">
+          <table>
             <thead>
               <tr>
-                <th>Layout Type</th>
-                <th>Ideal Plot Dimensions</th>
-                <th>Material Flow Dynamic</th>
-                <th>Expansion Suitability</th>
-                <th>Key Engineering Advantage</th>
+                <th>Decision factor</th>
+                <th>Single-door / same-side</th>
+                <th>Double-door / through-flow</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>
-                  <div class="eng-material-cell">
-                    <span class="eng-material-name">Straight In-Line (Linear)</span>
-                    <span class="eng-material-formula">Unidirectional Flow</span>
-                  </div>
-                </td>
-                <td>Long &amp; narrow plots (e.g., 60m width × 250m+ length)</td>
-                <td>Unidirectional flow: Raw materials enter at North, finished blocks exit South</td>
-                <td><span class="eng-prop-badge">Zero Disruption</span> Add parallel lines seamlessly</td>
-                <td><span class="eng-qc-tag">Shortest ferry cart cycle &amp; simplest rail shunting</span></td>
+                <td>Trolley movement</td>
+                <td>Load and unload at one end</td>
+                <td>Load at one end, unload at the other</td>
               </tr>
               <tr>
-                <td>
-                  <div class="eng-material-cell">
-                    <span class="eng-material-name">L-Shape Layout</span>
-                    <span class="eng-material-formula">90° Corner Transition</span>
-                  </div>
-                </td>
-                <td>Square or wide plots (e.g., 120m width × 150m length)</td>
-                <td>Preparation is perpendicular; cutting and autoclaving turn 90° into yard</td>
-                <td><span class="eng-prop-badge">Axial Scaling</span> Expands along yard axis</td>
-                <td><span class="eng-qc-tag">Compact boiler placement &amp; shorter steam headers</span></td>
+                <td>Building arrangement</td>
+                <td>May suit restricted width</td>
+                <td>Requires working access at both ends</td>
               </tr>
               <tr>
-                <td>
-                  <div class="eng-material-cell">
-                    <span class="eng-material-name">U-Shape (Loop) Layout</span>
-                    <span class="eng-material-formula">Single Frontage Access</span>
-                  </div>
-                </td>
-                <td>Plots with single-road frontage access</td>
-                <td>Raw materials and dispatch share the same frontage with segregated gates</td>
-                <td><span class="eng-prop-badge">Modular Mirror</span> Expands in mirrored loop units</td>
-                <td><span class="eng-qc-tag">Consolidates weighbridges &amp; gate security</span></td>
+                <td>Handling sequence</td>
+                <td>Return and sequencing are critical</td>
+                <td>Through-flow can be more direct</td>
+              </tr>
+              <tr>
+                <td>Turnaround</td>
+                <td>Calculate for the actual system</td>
+                <td>Calculate for the actual system</td>
+              </tr>
+              <tr>
+                <td>Capacity conclusion</td>
+                <td>Requires full bottleneck analysis</td>
+                <td>Requires full bottleneck analysis</td>
               </tr>
             </tbody>
           </table>
         </div>
-
+        <p class="table-note">Civil, PEB and operating implications must be quantified project by project. Fixed savings or cycle-time claims should not be assumed.</p>
       </div>
     </section>
 
-    <!-- ============ 03. SECTION 02: CURING LOGISTICS ============ -->
-    <section class="eng-section eng-section--light" id="autoclave-flow">
-      <div class="eng-container">
+    <!-- ============ CIRCULATION SYSTEM SECTION ============ -->
+    <section class="dark system">
+      <div class="shell">
+        <p class="eyebrow light">The factory is a circulation system</p>
+        <h2>Forward flow is only<br /><span>half the layout.</span></h2>
         
+        <div class="driver-grid">
+          <article>
+            <span>01</span>
+            <h3>Return movement</h3>
+            <p>Empty moulds, side plates, pallets and trolleys must return without blocking production.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Utility corridors</h3>
+            <p>Steam, condensate, electrical, water and compressed-air routes need safe access and expansion capacity.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Maintenance &amp; safety</h3>
+            <p>Moving equipment and pressure vessels require controlled access, isolation and removal space.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Dispatch logic</h3>
+            <p>Packing, inventory, forklift movement and truck turning determine the real finished-goods area.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPANSION PLANNING SECTION ============ -->
+    <section class="expansion section-pad">
+      <div class="shell expansion-grid">
         <div>
-          <span class="eng-eyebrow">02 · CURING LOGISTICS</span>
-          <h2 class="eng-title">
-            <span>Single-door vs. double-door.</span>
-            <span class="eng-title-light">Autoclave transfer rail circuits.</span>
-          </h2>
-          <p class="eng-lead">
-            How cake trolleys enter and exit curing vessels dictates internal rail tracks, transfer cranes, cycle turnover, and operator safety.
+          <p class="eyebrow">Plan phase two in phase one</p>
+          <h2>Expansion is not an <span>empty rectangle.</span></h2>
+        </div>
+        <div>
+          <p>
+            A future-ready layout identifies what will be added, how it will connect and where installation affects running production.
+          </p>
+          <ul>
+            <li>Additional autoclaves and trolley routes</li>
+            <li>More mould circulation and pre-curing space</li>
+            <li>Raw-material and finished-goods expansion</li>
+            <li>Boiler, electrical and utility upgrades</li>
+            <li>Safe installation and shutdown interfaces</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 10 LAYOUT MISTAKES SECTION ============ -->
+    <section class="mistakes section-pad">
+      <div class="shell">
+        <p class="eyebrow">Avoid expensive corrections</p>
+        <h2>Ten layout mistakes<br /><span>worth preventing early.</span></h2>
+        
+        <ol>
+          <li>Purchasing land before testing machinery, storage, roads, utilities and expansion.</li>
+          <li>Copying a running plant without matching its capacity, product mix and automation.</li>
+          <li>Planning only the forward process and ignoring return circulation.</li>
+          <li>Comparing layouts by appearance instead of transfer sequence and bottlenecks.</li>
+          <li>Selecting an autoclave arrangement without comparing handling and civil implications.</li>
+          <li>Leaving expansion undefined and disconnected from utilities.</li>
+          <li>Reducing safe maintenance clearances to fit an unsuitable shed.</li>
+          <li>Freezing civil work before machinery loads, levels and interfaces.</li>
+          <li>Underestimating packing, inventory and truck movement.</li>
+          <li>Treating a conceptual sales layout as a construction-ready drawing.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ LAXMI EN-FAB APPROACH SECTION ============ -->
+    <section class="process section-pad">
+      <div class="shell">
+        <div class="split">
+          <div>
+            <p class="eyebrow">Laxmi En-Fab approach</p>
+            <h2>From surveyed land to a <span>coordinated concept.</span></h2>
+          </div>
+          <p>
+            The purpose is to develop a coordinated machinery arrangement—not apply one standard drawing to every project.
           </p>
         </div>
 
-        <!-- 2 Contiguous Comparison Boxes -->
-        <div class="eng-circuit-grid eng-circuit-grid--2col">
-          
-          <!-- Config A -->
-          <div class="eng-circuit-box">
-            <div class="eng-circuit-box__top">
-              <span class="eng-circuit-box__num">CONFIG A · SINGLE-DOOR AUTOCLAVE</span>
-              <h3 class="eng-circuit-box__title">Single-Door End-Loading Circuit</h3>
-              <p class="eng-circuit-box__desc">
-                Trolleys enter and exit from the same front door. Unloading occurs by pulling cured cake trains back out onto the front transfer rail before shunting to the de-panning bay.
-              </p>
-            </div>
-            <div class="eng-circuit-box__spec">
-              <span>Capex: Lower Mechanism Cost</span>
-              <span>Suited: 150–300 m³/day</span>
-            </div>
-          </div>
-
-          <!-- Config B -->
-          <div class="eng-circuit-box">
-            <div class="eng-circuit-box__top">
-              <span class="eng-circuit-box__num">CONFIG B · DOUBLE-DOOR THROUGH-FEED</span>
-              <h3 class="eng-circuit-box__title">Double-Door Through-Feed Circuit</h3>
-              <p class="eng-circuit-box__desc">
-                Uncured green cakes enter through the rear door; fully cured blocks exit through the front door directly into the de-panning bay, creating 100% unidirectional traffic.
-              </p>
-            </div>
-            <div class="eng-circuit-box__spec">
-              <span>Zero Cross-Traffic Flow</span>
-              <span>Suited: 450–1,500+ m³/day</span>
-            </div>
-          </div>
-
+        <div class="process-line">
+          <article>
+            <span>01</span>
+            <h3>Collect</h3>
+            <p>Survey and project requirements</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Define</h3>
+            <p>Capacity, product and automation</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Map</h3>
+            <p>Material, trolley and vehicle movement</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Compare</h3>
+            <p>Flow and autoclave arrangements</p>
+          </article>
+          <article>
+            <span>05</span>
+            <h3>Coordinate</h3>
+            <p>Civil, utilities, safety and expansion</p>
+          </article>
+          <article>
+            <span>06</span>
+            <h3>Freeze</h3>
+            <p>Selected concept before execution</p>
+          </article>
         </div>
 
-      </div>
-    </section>
-
-    <!-- ============ 04. SECTION 03: 6 MASTER ZONING RULES ============ -->
-    <section class="eng-section eng-section--white" id="zoning">
-      <div class="eng-container">
-        
-        <div>
-          <span class="eng-eyebrow">03 · SITE PLANNING CRITERIA</span>
-          <h2 class="eng-title">
-            <span>6 master zoning rules.</span>
-            <span class="eng-title-light">Eliminating bottlenecks before civil construction.</span>
-          </h2>
-          <p class="eng-lead">
-            Precision factory master planning eliminates cross-traffic between raw material bulkers and block transport trucks while minimizing boiler heat loss and pipe routing.
-          </p>
-        </div>
-
-        <!-- 6 Contiguous Zoning Boxes (3 columns x 2 rows) -->
-        <div class="eng-circuit-grid eng-circuit-grid--3col">
-          
-          <!-- Zone 01 -->
-          <div class="eng-circuit-box">
-            <div class="eng-circuit-box__top">
-              <span class="eng-circuit-box__num">ZONE 01 · RAW MATERIALS</span>
-              <h3 class="eng-circuit-box__title">Raw Material Silo Yard</h3>
-              <p class="eng-circuit-box__desc">
-                Locate fly ash, cement, and lime silos near the entrance gate for straightforward bulk-tanker turning radius (min 15m radius) and rapid pneumatic unloading.
-              </p>
-            </div>
-            <div class="eng-circuit-box__spec">
-              <span>Turning Radius: 15m Min</span>
-              <span>Direct Bulker Ingress</span>
-            </div>
-          </div>
-
-          <!-- Zone 02 -->
-          <div class="eng-circuit-box">
-            <div class="eng-circuit-box__top">
-              <span class="eng-circuit-box__num">ZONE 02 · BATCHING</span>
-              <h3 class="eng-circuit-box__title">Gravity Batching Tower</h3>
-              <p class="eng-circuit-box__desc">
-                Gravity-assisted vertical batching tower (18m–22m height) allows slurry, water, and dry materials to discharge directly into the mixer with minimal conveyor wear.
-              </p>
-            </div>
-            <div class="eng-circuit-box__spec">
-              <span>Elevation: 18m–22m</span>
-              <span>Gravity Slurry Feed</span>
-            </div>
-          </div>
-
-          <!-- Zone 03 -->
-          <div class="eng-circuit-box">
-            <div class="eng-circuit-box__top">
-              <span class="eng-circuit-box__num">ZONE 03 · THERMAL BAY</span>
-              <h3 class="eng-circuit-box__title">Pre-Curing Bay Insulation</h3>
-              <p class="eng-circuit-box__desc">
-                Pre-curing lines require insulated cladding to prevent seasonal temperature drops, maintaining 40–50°C for predictable rising kinetics and firm green cakes.
-              </p>
-            </div>
-            <div class="eng-circuit-box__spec">
-              <span>Temp: 40–50°C Regulated</span>
-              <span>Insulated Enclosure</span>
-            </div>
-          </div>
-
-          <!-- Zone 04 -->
-          <div class="eng-circuit-box">
-            <div class="eng-circuit-box__top">
-              <span class="eng-circuit-box__num">ZONE 04 · STEAM UTILITY</span>
-              <h3 class="eng-circuit-box__title">Boiler House &amp; Fuel Yard</h3>
-              <p class="eng-circuit-box__desc">
-                Place the steam boiler centrally relative to autoclaves to minimize steam pipe runs (&lt;30m) and reduce thermal condensation loss, keeping fuel storage downwind.
-              </p>
-            </div>
-            <div class="eng-circuit-box__spec">
-              <span>Header Run: &lt;30m</span>
-              <span>Downwind Fuel Yard</span>
-            </div>
-          </div>
-
-          <!-- Zone 05 -->
-          <div class="eng-circuit-box">
-            <div class="eng-circuit-box__top">
-              <span class="eng-circuit-box__num">ZONE 05 · LOGISTICS</span>
-              <h3 class="eng-circuit-box__title">Finished Goods Stockyard</h3>
-              <p class="eng-circuit-box__desc">
-                Paved block curing yard sized for 10–15 days of production storage with wide driveways (min 8m) for forklift loading and simultaneous 10-wheel truck loading.
-              </p>
-            </div>
-            <div class="eng-circuit-box__spec">
-              <span>Storage: 10–15 Days Yield</span>
-              <span>8m Forklift Lanes</span>
-            </div>
-          </div>
-
-          <!-- Zone 06 -->
-          <div class="eng-circuit-box">
-            <div class="eng-circuit-box__top">
-              <span class="eng-circuit-box__num">ZONE 06 · EXPANSION</span>
-              <h3 class="eng-circuit-box__title">Phase-2 Expansion Reserve</h3>
-              <p class="eng-circuit-box__desc">
-                Earmark dedicated parallel foundation space for future autoclaves, ball mills, and curing tracks so plant capacity can double without halting existing operations.
-              </p>
-            </div>
-            <div class="eng-circuit-box__spec">
-              <span>2x Scale Capacity</span>
-              <span>Zero-Downtime Tie-in</span>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ============ 05. SECTION 04: CAD CONSULTATION BANNER ============ -->
-    <section class="eng-section eng-section--light" id="consultation">
-      <div class="eng-container">
-        
-        <div class="eng-alc-banner">
-          <div class="eng-alc-banner__left">
-            <span class="eng-eyebrow" style="color:#56b4f5;">04 · CIVIL &amp; CAD SERVICES</span>
-            <h2 class="eng-alc-banner__title">
-              <span>Have a surveyed land</span>
-              <span style="color:#93c5fd;">plot drawing or coordinates?</span>
-            </h2>
-            <p class="eng-alc-banner__lead">
-              Send us your land survey, boundary dimensions, and road frontage details. Laxmi En-Fab layout engineers will produce a complete 2D/3D plant layout simulation.
-            </p>
-            <div class="eng-alc-features">
-              <div class="eng-alc-feature">
-                <strong>01. Truck Traffic &amp; Turning Simulation</strong>
-                <p>Ensures bulk raw material tankers, biomass fuel trailers, and dispatch trucks move without gridlock.</p>
-              </div>
-              <div class="eng-alc-feature">
-                <strong>02. Rail Track &amp; Ferry Car Cycle Balancing</strong>
-                <p>Calculates exact shunting crane speeds and ferry car transfer cycles for zero cake queueing.</p>
-              </div>
-              <div class="eng-alc-feature">
-                <strong>03. Foundation &amp; Civil Load Schedule</strong>
-                <p>Pre-engineered foundation dynamic loads for ball mills, batching towers, and autoclave anchor points.</p>
-              </div>
-            </div>
-          </div>
-          <div class="eng-alc-banner__right">
-            <div class="eng-alc-stat-card">
-              <div class="eng-alc-stat-num">48 Hours</div>
-              <div class="eng-alc-stat-label">Preliminary CAD Layout Turnaround</div>
-            </div>
-            <div class="eng-alc-stat-card">
-              <div class="eng-alc-stat-num">30% Less</div>
-              <div class="eng-alc-stat-label">Internal Rail Shunting Capex</div>
-            </div>
-            <div class="eng-alc-stat-card">
-              <div class="eng-alc-stat-num">100%</div>
-              <div class="eng-alc-stat-label">Phase-2 Expansion Future-Proofing</div>
-            </div>
-            <div class="eng-alc-stat-card">
-              <div class="eng-alc-stat-num">0 Cost</div>
-              <div class="eng-alc-stat-label">Initial Site Review for Qualified Projects</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ============ 06. CHAPTER NAVIGATION & EDITORIAL CTA ============ -->
-    <section class="eng-chapter-nav-section">
-      <div class="eng-container">
-        <div class="eng-chapter-nav">
-          <a href="production-process.html" class="eng-chapter-nav__btn eng-chapter-nav__btn--prev">
-            <span class="eng-chapter-nav__sub">← PREVIOUS CHAPTER</span>
-            <span class="eng-chapter-nav__title">AAC Block &amp; Panel Production Process</span>
-          </a>
-          <a href="capacity-selection.html" class="eng-chapter-nav__btn eng-chapter-nav__btn--next">
-            <span class="eng-chapter-nav__sub">NEXT CHAPTER →</span>
-            <span class="eng-chapter-nav__title">Batch Sizing &amp; Capacity Selection</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Final Conversion Banner -->
-    <section class="eng-cta-banner" id="cta">
-      <div class="eng-cta-banner__inner">
-        <span class="eng-cta-banner__eyebrow">FACTORY MASTER PLANNING</span>
-        <h2 class="eng-cta-banner__title">
-          <span>Start your factory master planning</span>
-          <span class="eng-cta-banner__title-light">with certified AAC plant engineers.</span>
-        </h2>
-        <p class="eng-cta-banner__lead">
-          Avoid costly civil design mistakes. Let Laxmi En-Fab engineers review your soil survey, topography, and road access before finalizing your plant boundaries and machinery foundations.
+        <p class="scope">
+          The exact drawings, calculations, responsibilities and approval stages included in supply must be defined in the project's technical-commercial proposal.
         </p>
-        <div class="eng-cta-banner__actions">
-          <a href="contact.html" class="eng-cta-banner__btn-white">
-            <span>Request CAD Layout Review</span>
-            <span class="eng-cta-banner__btn-arrow">↗</span>
-          </a>
-          <a href="#overview" class="eng-cta-banner__link-top">
-            <span>Return to top ↑</span>
-          </a>
+      </div>
+    </section>
+
+    <!-- ============ FAQ SECTION ============ -->
+    <section class="faq section-pad" id="faq">
+      <div class="shell faq-grid">
+        <div>
+          <p class="eyebrow">Frequently asked questions</p>
+          <h2>Clear answers before <span>layout approval.</span></h2>
+        </div>
+
+        <div class="accordion">
+          <details class="faq-item" open>
+            <summary>Which AAC plant layout is best?</summary>
+            <p>
+              There is no universally best layout. The correct choice depends on the surveyed plot, production target, product mix, automation, transfer system, utilities, dispatch planning and future expansion.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What is the difference between a straight and an L-shape layout?</summary>
+            <p>
+              A straight layout keeps the main production flow predominantly linear. An L-shape layout changes direction once to use available length and width. The selected handling system must support the chosen geometry.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Does an L-shape layout reduce AAC block quality?</summary>
+            <p>
+              No. Layout shape does not by itself determine block quality. Quality depends on raw materials, batching, process control, pre-curing, cutting, autoclaving and consistent operation.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can both layouts achieve the same production capacity?</summary>
+            <p>
+              Equivalent output can be designed in either geometry when the complete machinery and handling system is correctly sized. Capacity must be confirmed by project-specific cycle and bottleneck calculations.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Is a single-door autoclave arrangement technically inferior?</summary>
+            <p>
+              Not automatically. Same-side loading can suit projects with width constraints, but handling and turnaround must be calculated. Through-flow arrangements also require sufficient access and infrastructure at both ends.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>How many autoclaves does an AAC plant require?</summary>
+            <p>
+              The number depends on target output, load per charge, curing and handling time, operating hours, availability, mould and trolley circulation, steam supply and other line bottlenecks.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What should I send for a preliminary layout review?</summary>
+            <p>
+              Share the surveyed plot drawing, gate and road details, project location, target capacity, block or panel plan, raw-material basis, preferred automation and future expansion target.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CLOSING CONSULTATION BANNER ============ -->
+    <section class="conversion" id="consultation">
+      <div class="shell">
+        <p class="eyebrow light">Before you freeze the land or machinery</p>
+        <h2>Make the layout prove<br />the investment logic.</h2>
+        <p>
+          Share your surveyed plot, production objective, product plan and future expansion requirement. Laxmi En-Fab's engineering team can define the next planning stage and inputs required for your project.
+        </p>
+        <div class="actions">
+          <a class="button white" href="contact.html">Request a land &amp; layout review</a>
+          <a class="text-link light-link" href="land-requirement.html">Review land requirements →</a>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- Shared Global Footer Injection -->
+  <!-- Shared Footer Injection Placeholder -->
   <div id="site-footer"></div>
 
-  <script src="js/main.js"></script>
-  <script src="js/navigation.js"></script>
-  <script src="js/animations.js"></script>
+  <!-- Shared Scripts Bundle -->
   <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

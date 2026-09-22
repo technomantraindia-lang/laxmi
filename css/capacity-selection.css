@@ -1,0 +1,870 @@
+/* ==========================================================================
+   AAC PLANT CAPACITY SELECTION GUIDE — STYLES
+   Source: https://laxmi-en-fab-complete.mitesh958.chatgpt.site/imported/aac-capacity-selection/
+   ========================================================================== */
+
+:root {
+  --navy: #0b1727;
+  --blue: #0c4f80;
+  --silver: #eef2f5;
+  --light: #f5f7f8;
+  --white: #fff;
+  --text: #0b1727;
+  --secondary: #5e6874;
+  --muted: #84909c;
+  --line: #dce2e7;
+  --pale-blue: #8fc6ec;
+  --max: 1400px;
+}
+
+.capacity-page {
+  color: var(--text);
+  font-family: 'Geist', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: #fff;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.capacity-page * {
+  box-sizing: border-box;
+}
+
+.capacity-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.capacity-page p {
+  color: var(--secondary);
+  margin: 0;
+  font-size: clamp(16px, 1.3vw, 18px);
+  line-height: 1.68;
+}
+
+.capacity-page h1,
+.capacity-page h2,
+.capacity-page h3 {
+  letter-spacing: -.045em;
+  margin: 0;
+  line-height: .98;
+  font-weight: 480;
+}
+
+.capacity-page h1 span,
+.capacity-page h2 span {
+  color: var(--muted);
+  font-weight: 320;
+}
+
+.capacity-page .wrap {
+  width: min(var(--max, 1400px), calc(100% - 12vw));
+  margin-inline: auto;
+}
+
+.capacity-page .section {
+  padding-block: clamp(100px, 11vw, 170px);
+}
+
+/* ==========================================================================
+   Eyebrow & Buttons
+   ========================================================================== */
+
+.capacity-page .eyebrow {
+  color: var(--blue) !important;
+  letter-spacing: .16em !important;
+  text-transform: uppercase !important;
+  margin: 0 0 28px !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  display: block !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  gap: 0 !important;
+  width: auto !important;
+  max-width: none !important;
+}
+
+.capacity-page .eyebrow::before {
+  content: none !important;
+  display: none !important;
+}
+
+.capacity-page .eyebrow.light {
+  color: var(--pale-blue) !important;
+}
+
+.capacity-page .button {
+  border-radius: 999px;
+  justify-content: center;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 24px;
+  font-size: 14px;
+  font-weight: 650;
+  transition: transform .2s ease, background .2s ease;
+  display: inline-flex;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.capacity-page .button:hover {
+  transform: translateY(-2px);
+}
+
+.capacity-page .button.primary {
+  background: var(--navy);
+  color: #fff !important;
+}
+
+.capacity-page .button.inverse {
+  color: var(--navy) !important;
+  background: #fff;
+}
+
+.capacity-page .text-link {
+  color: var(--navy);
+  font-size: 15px;
+  font-weight: 650;
+  border-bottom: 1.5px solid #9fa8b1;
+  padding-bottom: 3px;
+  transition: color .2s ease, border-color .2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+}
+
+.capacity-page .text-link:hover {
+  color: var(--blue);
+  border-bottom-color: var(--blue);
+}
+
+.capacity-page .text-link.light-link {
+  color: #fff;
+  border-bottom-color: #7395ac;
+}
+
+.capacity-page .text-link.light-link:hover {
+  border-bottom-color: #fff;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+
+.capacity-page .hero {
+  background: #f8fafb;
+  align-items: center;
+  min-height: calc(100vh - 72px);
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.capacity-page .hero-image {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+}
+
+.capacity-page .hero-shade {
+  z-index: 1;
+  background: linear-gradient(90deg, #fffffffc 0%, #fffffff0 28%, #ffffff59 59%, #ffffff00 75%);
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.capacity-page .hero-copy {
+  z-index: 2;
+  padding-block: 80px;
+  position: relative;
+}
+
+.capacity-page .hero-copy > * {
+  max-width: 780px;
+}
+
+.capacity-page .hero h1 {
+  letter-spacing: -.055em;
+  max-width: 780px;
+  margin: 0;
+  font-size: clamp(54px, 6.8vw, 102px);
+  font-weight: 480;
+  line-height: .94;
+  color: var(--navy);
+}
+
+.capacity-page .hero h1 span {
+  color: var(--muted);
+  font-weight: 320;
+}
+
+.capacity-page .hero-lead {
+  max-width: 610px;
+  color: var(--secondary);
+  margin-top: 30px;
+  font-size: clamp(16.5px, 1.3vw, 19.5px);
+  line-height: 1.62;
+}
+
+.capacity-page .hero-actions {
+  align-items: center;
+  gap: 28px;
+  margin-top: 34px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.capacity-page .micro-note {
+  color: var(--muted);
+  margin-top: 22px;
+  font-size: 12px;
+}
+
+/* ==========================================================================
+   01 · Understand Section
+   ========================================================================== */
+
+.capacity-page .statement-grid,
+.capacity-page .section-heading {
+  grid-template-columns: minmax(0, 1.6fr) minmax(300px, .7fr);
+  align-items: end;
+  gap: 8vw;
+  display: grid;
+}
+
+.capacity-page .statement-grid h2,
+.capacity-page .section-heading h2,
+.capacity-page .calculation h2,
+.capacity-page .method h2,
+.capacity-page .faq > h2 {
+  font-size: clamp(44px, 5.3vw, 80px);
+  font-weight: 480;
+  line-height: .98;
+}
+
+.capacity-page .intro-copy {
+  gap: 20px;
+  display: grid;
+}
+
+.capacity-page .definitions {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 90px;
+  display: grid;
+}
+
+.capacity-page .definitions article {
+  padding: 34px 38px 40px 0;
+}
+
+.capacity-page .definitions article + article {
+  border-left: 1px solid var(--line);
+  padding-left: 38px;
+}
+
+.capacity-page .definitions span,
+.capacity-page .process-line > article > span {
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 700;
+  display: block;
+}
+
+.capacity-page .definitions h3 {
+  margin: 36px 0 14px;
+  font-size: 24px;
+  font-weight: 520;
+  color: var(--navy);
+}
+
+.capacity-page .definitions p {
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+/* ==========================================================================
+   The Central Trade-Off (Tension Section)
+   ========================================================================== */
+
+.capacity-page .tension {
+  background: var(--navy);
+  color: #fff;
+}
+
+.capacity-page .tension h2 {
+  max-width: 1100px;
+  font-size: clamp(44px, 5.5vw, 84px);
+  color: #fff;
+  font-weight: 480;
+}
+
+.capacity-page .tension h2 span {
+  color: #778392;
+  font-weight: 320;
+}
+
+.capacity-page .split-compare {
+  grid-template-columns: 1fr 1fr;
+  gap: 7vw;
+  margin-top: 90px;
+  display: grid;
+}
+
+.capacity-page .split-compare article {
+  border-top: 1px solid #405062;
+  padding-top: 25px;
+}
+
+.capacity-page .compare-label {
+  color: var(--pale-blue);
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.capacity-page .split-compare h3 {
+  max-width: 520px;
+  margin: 40px 0 22px;
+  font-size: clamp(24px, 2.3vw, 36px);
+  line-height: 1.12;
+  color: #fff;
+  font-weight: 520;
+}
+
+.capacity-page .split-compare p:last-child {
+  color: #aeb7c0;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.capacity-page .tension blockquote {
+  letter-spacing: -.04em;
+  color: #fff;
+  border-top: 1px solid #405062;
+  margin: 100px 0 0;
+  padding: 50px 0 0;
+  font-size: clamp(26px, 3.4vw, 52px);
+  line-height: 1.15;
+  font-style: normal;
+  font-weight: 420;
+}
+
+/* ==========================================================================
+   02 · Evaluate Framework
+   ========================================================================== */
+
+.capacity-page .section-heading > p {
+  max-width: 480px;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.capacity-page .numbered-list {
+  border-top: 1px solid var(--line);
+  margin-top: 90px;
+}
+
+.capacity-page .numbered-list article {
+  border-bottom: 1px solid var(--line);
+  grid-template-columns: 80px minmax(220px, .8fr) 1.5fr;
+  align-items: start;
+  gap: 30px;
+  padding: 30px 0;
+  display: grid;
+}
+
+.capacity-page .numbered-list span {
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.capacity-page .numbered-list h3 {
+  letter-spacing: -.025em;
+  font-size: 23px;
+  color: var(--navy);
+  font-weight: 520;
+}
+
+.capacity-page .numbered-list p {
+  max-width: 720px;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* ==========================================================================
+   Preliminary Calculation
+   ========================================================================== */
+
+.capacity-page .calculation {
+  background: var(--silver);
+}
+
+.capacity-page .calculation-grid {
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 8vw;
+  display: grid;
+}
+
+.capacity-page .calculation h2 {
+  margin-bottom: 24px;
+}
+
+.capacity-page .formula-panel {
+  background: var(--navy);
+  color: #fff;
+  padding: clamp(35px, 5vw, 65px);
+  border-radius: 4px;
+}
+
+.capacity-page .formula-title {
+  text-align: center;
+  color: var(--pale-blue);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.capacity-page .formula {
+  text-align: center;
+  color: #fff;
+  margin-top: 45px;
+  font-size: clamp(20px, 2.2vw, 32px);
+  font-weight: 520;
+}
+
+.capacity-page .fraction-line {
+  background: #7f8b98;
+  height: 1px;
+  margin: 14px 0;
+  display: block;
+}
+
+.capacity-page .denominator {
+  text-align: center;
+  color: #c8d0d8;
+  font-size: clamp(15px, 1.4vw, 18px);
+}
+
+.capacity-page .formula-note {
+  color: #aeb7c0;
+  border-top: 1px solid #405062;
+  margin-top: 50px;
+  padding-top: 25px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.capacity-page .formula-note strong {
+  color: #fff;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* ==========================================================================
+   The Complete Production Balance (Process Line)
+   ========================================================================== */
+
+.capacity-page .process-line {
+  border-top: 1px solid var(--line);
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 90px;
+  display: grid;
+}
+
+.capacity-page .process-line article {
+  padding: 30px 24px 10px 0;
+  position: relative;
+}
+
+.capacity-page .process-line article + article {
+  border-left: 1px solid var(--line);
+  padding-left: 24px;
+}
+
+.capacity-page .process-line h3 {
+  margin: 55px 0 16px;
+  font-size: 21px;
+  color: var(--navy);
+  font-weight: 520;
+}
+
+.capacity-page .process-line p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.capacity-page .process-line article:not(:last-child):after {
+  content: "";
+  background: var(--blue);
+  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+  position: absolute;
+  top: -4px;
+  right: -4px;
+}
+
+/* ==========================================================================
+   03 · Decide & Strategy Table
+   ========================================================================== */
+
+.capacity-page .decision {
+  background: var(--light);
+}
+
+.capacity-page .strategy-table {
+  margin-top: 80px;
+  overflow-x: auto;
+}
+
+.capacity-page .strategy-table table {
+  border-collapse: collapse;
+  text-align: left;
+  width: 100%;
+  min-width: 850px;
+}
+
+.capacity-page .strategy-table th,
+.capacity-page .strategy-table td {
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+  padding: 24px 20px;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.capacity-page .strategy-table thead th {
+  color: var(--muted);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.capacity-page .strategy-table tbody th {
+  width: 23%;
+  font-size: 17px;
+  color: var(--navy);
+  font-weight: 520;
+}
+
+.capacity-page .strategy-table td {
+  color: var(--secondary);
+}
+
+.capacity-page .strategy-table .recommended {
+  background: #fff;
+}
+
+.capacity-page .strategy-table small {
+  background: var(--silver);
+  width: max-content;
+  color: var(--blue);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  border-radius: 999px;
+  margin-top: 8px;
+  padding: 4px 8px;
+  font-size: 10px;
+  display: block;
+  font-weight: 700;
+}
+
+.capacity-page .method {
+  border-top: 1px solid var(--line);
+  grid-template-columns: 1fr 1fr;
+  gap: 8vw;
+  margin-top: 120px;
+  padding-top: 80px;
+  display: grid;
+}
+
+.capacity-page .method-points p {
+  border-bottom: 1px solid var(--line);
+  grid-template-columns: 170px 1fr;
+  gap: 24px;
+  padding: 24px 0;
+  font-size: 15px;
+  display: grid;
+  line-height: 1.6;
+}
+
+.capacity-page .method-points b {
+  color: var(--navy);
+  font-weight: 650;
+}
+
+.capacity-page .method-points span {
+  color: var(--secondary);
+}
+
+/* ==========================================================================
+   Investor FAQs (Accordion via Details/Summary)
+   ========================================================================== */
+
+.capacity-page .faq > h2 {
+  max-width: 900px;
+}
+
+.capacity-page .faq-list {
+  border-top: 1px solid var(--line);
+  margin-top: 80px;
+}
+
+.capacity-page details {
+  border-bottom: 1px solid var(--line);
+}
+
+.capacity-page summary {
+  cursor: pointer;
+  letter-spacing: -.025em;
+  grid-template-columns: 55px 1fr 30px;
+  align-items: center;
+  gap: 18px;
+  padding: 27px 0;
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 520;
+  list-style: none;
+  display: grid;
+  color: var(--navy);
+}
+
+.capacity-page summary::-webkit-details-marker {
+  display: none;
+}
+
+.capacity-page summary span {
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.capacity-page summary i {
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 300;
+  color: var(--blue);
+  transition: transform .2s ease;
+  justify-self: end;
+}
+
+.capacity-page details[open] summary i {
+  transform: rotate(45deg);
+}
+
+.capacity-page details > p {
+  max-width: 900px;
+  padding: 0 0 28px 73px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   Conversion Section
+   ========================================================================== */
+
+.capacity-page .conversion {
+  color: #fff;
+  background: linear-gradient(135deg, #104f7d, #09263d);
+  padding: clamp(110px, 13vw, 180px) 0;
+}
+
+.capacity-page .conversion-inner {
+  max-width: 1100px;
+}
+
+.capacity-page .conversion h2 {
+  font-size: clamp(48px, 7vw, 96px);
+  color: #fff;
+  font-weight: 480;
+}
+
+.capacity-page .conversion h2 span {
+  color: #9fb0be;
+  font-weight: 320;
+}
+
+.capacity-page .conversion-inner > p:not(.eyebrow) {
+  color: #c9d5de;
+  max-width: 700px;
+  margin-top: 30px;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+@media (max-width: 900px) {
+  .capacity-page .wrap {
+    width: min(var(--max), calc(100% - 48px));
+  }
+  .capacity-page .hero {
+    min-height: 720px;
+    padding: 30px 0;
+  }
+  .capacity-page .hero-shade {
+    background: linear-gradient(90deg, #fffffffa 0%, #ffffffdb 55%, #ffffff26 100%);
+  }
+  .capacity-page .hero-copy {
+    width: min(560px, 85%);
+    padding-top: 40px;
+  }
+  .capacity-page .statement-grid,
+  .capacity-page .section-heading,
+  .capacity-page .calculation-grid,
+  .capacity-page .method {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+  .capacity-page .definitions {
+    grid-template-columns: 1fr;
+  }
+  .capacity-page .definitions article,
+  .capacity-page .definitions article + article {
+    border-left: 0;
+    border-bottom: 1px solid var(--line);
+    padding: 30px 0;
+  }
+  .capacity-page .definitions h3 {
+    margin-top: 24px;
+  }
+  .capacity-page .process-line {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .capacity-page .numbered-list article {
+    grid-template-columns: 55px 1fr;
+  }
+  .capacity-page .numbered-list p {
+    grid-column: 2;
+  }
+  .capacity-page .split-compare {
+    gap: 45px;
+  }
+  .capacity-page .method-points p {
+    grid-template-columns: 150px 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .capacity-page .wrap {
+    width: calc(100% - 32px);
+  }
+  .capacity-page .hero {
+    align-items: flex-start;
+    min-height: 620px;
+    padding-top: 20px;
+  }
+  .capacity-page .hero-image {
+    object-position: 64% center;
+  }
+  .capacity-page .hero-shade {
+    background: linear-gradient(#fffffffc 0%, #fffffff5 47%, #ffffff52 70%, #ffffff0d 100%);
+  }
+  .capacity-page .hero-copy {
+    padding-top: 30px;
+    width: 100%;
+  }
+  .capacity-page .hero h1 {
+    font-size: clamp(40px, 12vw, 64px);
+    line-height: .96;
+  }
+  .capacity-page .hero-lead {
+    font-size: 16px;
+    line-height: 1.55;
+  }
+  .capacity-page .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+  .capacity-page .button {
+    width: 100%;
+  }
+  .capacity-page .micro-note {
+    margin-top: 18px;
+  }
+  .capacity-page .section {
+    padding-block: 80px;
+  }
+  .capacity-page .statement-grid h2,
+  .capacity-page .section-heading h2,
+  .capacity-page .calculation h2,
+  .capacity-page .method h2,
+  .capacity-page .faq > h2 {
+    font-size: clamp(34px, 10vw, 48px);
+  }
+  .capacity-page .split-compare {
+    grid-template-columns: 1fr;
+    margin-top: 60px;
+  }
+  .capacity-page .tension blockquote {
+    margin-top: 60px;
+    padding-top: 30px;
+    font-size: clamp(22px, 6vw, 32px);
+  }
+  .capacity-page .numbered-list {
+    margin-top: 60px;
+  }
+  .capacity-page .numbered-list article {
+    grid-template-columns: 38px 1fr;
+    gap: 18px;
+  }
+  .capacity-page .numbered-list h3 {
+    font-size: 20px;
+  }
+  .capacity-page .formula-panel {
+    padding: 34px 22px;
+  }
+  .capacity-page .process-line {
+    grid-template-columns: 1fr;
+  }
+  .capacity-page .process-line article,
+  .capacity-page .process-line article + article {
+    border-left: 0;
+    border-bottom: 1px solid var(--line);
+    padding: 28px 0;
+  }
+  .capacity-page .process-line h3 {
+    margin-top: 25px;
+  }
+  .capacity-page .process-line article:after {
+    display: none;
+  }
+  .capacity-page .method {
+    margin-top: 80px;
+    padding-top: 50px;
+  }
+  .capacity-page .method-points p {
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
+  .capacity-page .faq-list {
+    margin-top: 60px;
+  }
+  .capacity-page summary {
+    grid-template-columns: 34px 1fr 22px;
+    gap: 10px;
+    font-size: 17px;
+  }
+  .capacity-page details > p {
+    padding-left: 44px;
+  }
+}

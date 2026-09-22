@@ -1,0 +1,1093 @@
+/* ==========================================================================
+   AAC PRODUCTION PROCESS PAGE STYLES
+   Matches https://laxmi-en-fab-complete.mitesh958.chatgpt.site/topic/aac-production-process
+   Scope: .process-page
+   ========================================================================== */
+
+:root {
+  --navy: #0b1727;
+  --blue: #0c4f80;
+  --deep: #104f7d;
+  --deep-2: #09263d;
+  --white: #ffffff;
+  --silver: #eef2f5;
+  --light: #f5f7f8;
+  --secondary: #5e6874;
+  --muted: #84909c;
+  --line: #dce2e7;
+  --highlight: #8fc6ec;
+  --max: 1400px;
+}
+
+.process-page {
+  color: var(--navy);
+  background: #ffffff;
+  font-family: 'Inter', 'Geist', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}
+
+.process-page * {
+  box-sizing: border-box;
+}
+
+.process-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Layout Container */
+.process-page .wrap {
+  width: min(1400px, calc(100% - 12vw));
+  margin-inline: auto;
+}
+
+/* Eyebrow */
+.process-page .eyebrow {
+  display: block !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin: 0 0 25px !important;
+  color: var(--blue) !important;
+  letter-spacing: 0.19em !important;
+  text-transform: uppercase !important;
+  font-size: 12px !important;
+  font-weight: 750 !important;
+  line-height: 1.2 !important;
+  width: fit-content !important;
+  box-shadow: none !important;
+}
+
+.process-page .eyebrow::before,
+.process-page .eyebrow::after {
+  content: none !important;
+  display: none !important;
+}
+
+.process-page .eyebrow.light,
+.process-page .evaluate .eyebrow,
+.process-page .conversion .eyebrow {
+  color: var(--highlight) !important;
+}
+
+/* Headings */
+.process-page h1,
+.process-page h2,
+.process-page h3,
+.process-page p {
+  margin-top: 0;
+}
+
+.process-page h1 {
+  letter-spacing: -0.055em;
+  margin-bottom: 26px;
+  font-size: clamp(48px, 5.5vw, 84px);
+  font-weight: 650;
+  line-height: 0.96;
+  color: var(--navy);
+}
+
+.process-page h1 span,
+.process-page h2 span,
+.process-page h3 span {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.process-page .section-lead h2,
+.process-page .evaluate h2,
+.process-page .faq h2,
+.process-page .conversion h2,
+.process-page .related h2 {
+  letter-spacing: -0.05em;
+  margin-bottom: 0;
+  font-size: clamp(38px, 4.8vw, 70px);
+  font-weight: 620;
+  line-height: 1.04;
+  color: var(--navy);
+}
+
+/* Buttons and Links */
+.process-page .button {
+  border-radius: 999px;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  min-height: 50px;
+  padding: 0 24px;
+  font-size: 13px;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  display: inline-flex;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.process-page .button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(11, 23, 39, 0.15);
+}
+
+.process-page .button-primary {
+  background: var(--blue);
+  color: #ffffff;
+}
+
+.process-page .button-primary span {
+  color: var(--highlight);
+}
+
+.process-page .button-light {
+  color: var(--navy);
+  background: #ffffff;
+}
+
+.process-page .button-light:hover {
+  background: var(--light);
+  color: var(--blue);
+}
+
+.process-page .text-link {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--navy);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.process-page .text-link span {
+  color: var(--blue);
+  margin-left: 8px;
+}
+
+.process-page .light-link {
+  color: #ffffff;
+}
+
+.process-page .light-link span {
+  color: var(--highlight);
+  margin-left: 8px;
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+.process-page .hero {
+  background: #edf1f4;
+  min-height: 100vh;
+  padding-top: 84px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.process-page .hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-image: linear-gradient(90deg, #ffffff 0%, #fffffffa 28%, #ffffffdb 46%, #ffffff55 65%, rgba(255, 255, 255, 0) 82%), url(../assets/images/production-process.png);
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.process-page .hero-wrap {
+  position: relative;
+  z-index: 3;
+  width: min(1400px, calc(100% - 12vw));
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - 84px);
+}
+
+.process-page .hero-copy {
+  max-width: 620px;
+  padding: 60px 0;
+  position: relative;
+  z-index: 3;
+}
+
+.process-page .hero-intro {
+  max-width: 590px;
+  color: var(--secondary);
+  margin-bottom: 32px;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.process-page .hero-actions {
+  align-items: center;
+  gap: 26px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.process-page .hero-note {
+  color: var(--muted);
+  align-items: center;
+  gap: 10px;
+  margin-top: 38px;
+  font-size: 11px;
+  display: flex;
+}
+
+.process-page .hero-note span {
+  background: var(--highlight);
+  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+  display: inline-block;
+}
+
+/* ==========================================================================
+   SECTIONS GLOBAL
+   ========================================================================== */
+.process-page .section {
+  padding: clamp(80px, 9vw, 140px) 0;
+}
+
+.process-page .section-lead {
+  max-width: 1050px;
+  margin-bottom: 70px;
+}
+
+.process-page .section-lead.compact {
+  max-width: 960px;
+}
+
+.process-page .section-lead > p:last-child {
+  max-width: 680px;
+  color: var(--secondary);
+  margin-top: 24px;
+  font-size: 17.5px;
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   01 — 12-STAGE PROCESS SEQUENCE
+   ========================================================================== */
+.process-page .intro {
+  background: #ffffff;
+}
+
+.process-page .intro-grid {
+  border-bottom: 1px solid var(--line);
+  grid-template-columns: 1fr 1fr;
+  gap: 8vw;
+  padding-bottom: 70px;
+  display: grid;
+}
+
+.process-page .lead-copy {
+  letter-spacing: -0.03em;
+  font-size: clamp(24px, 2.6vw, 36px);
+  line-height: 1.28;
+  color: var(--navy);
+  font-weight: 550;
+}
+
+.process-page .body-copy p {
+  color: var(--secondary);
+  font-size: 16.5px;
+  line-height: 1.75;
+}
+
+.process-page .body-copy p + p {
+  margin-top: 18px;
+}
+
+.process-page .process-statement {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  color: var(--blue);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  margin: 60px 0 30px;
+  padding: 20px 0;
+  font-size: 11px;
+  font-weight: 750;
+  display: flex;
+  overflow-x: auto;
+}
+
+.process-page .process-statement i {
+  color: var(--muted);
+  font-style: normal;
+}
+
+.process-page .process-rows {
+  margin-top: 10px;
+}
+
+.process-page .process-row {
+  border-bottom: 1px solid var(--line);
+  grid-template-columns: 80px 240px 1fr;
+  align-items: start;
+  gap: 30px;
+  padding: 34px 0;
+  display: grid;
+  position: relative;
+}
+
+.process-page .step-number {
+  color: var(--muted);
+  letter-spacing: 0.14em;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: monospace;
+}
+
+.process-page .process-row h3 {
+  letter-spacing: -0.03em;
+  font-size: 22px;
+  color: var(--navy);
+  margin-top: 0;
+  font-weight: 650;
+}
+
+.process-page .process-row p {
+  max-width: 760px;
+  color: var(--secondary);
+  margin-bottom: 10px;
+  line-height: 1.65;
+  font-size: 15.5px;
+}
+
+.process-page .process-row small {
+  max-width: 760px;
+  color: var(--navy);
+  font-size: 13.5px;
+  line-height: 1.6;
+  display: block;
+}
+
+.process-page .process-row small strong {
+  color: var(--blue);
+}
+
+.process-page .step-line {
+  background: var(--blue);
+  width: 0;
+  height: 1.5px;
+  transition: width 0.35s ease;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+}
+
+.process-page .process-row:hover .step-line {
+  width: 100%;
+}
+
+/* ==========================================================================
+   02 — PREPARATION ROUTES
+   ========================================================================== */
+.process-page .routes {
+  background: var(--light);
+  border-top: 1px solid var(--line);
+}
+
+.process-page .route-list {
+  border-top: 1px solid var(--line);
+  margin-top: 40px;
+}
+
+.process-page .route-list article {
+  border-bottom: 1px solid var(--line);
+  grid-template-columns: 90px 1fr 220px;
+  align-items: start;
+  gap: 40px;
+  padding: 36px 0;
+  display: grid;
+}
+
+.process-page .route-index {
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 700;
+  font-family: monospace;
+}
+
+.process-page .route-list h3 {
+  letter-spacing: -0.035em;
+  font-size: 25px;
+  color: var(--navy);
+  margin-bottom: 8px;
+  font-weight: 650;
+}
+
+.process-page .route-list p {
+  max-width: 690px;
+  color: var(--secondary);
+  margin-bottom: 0;
+  line-height: 1.7;
+  font-size: 15.5px;
+}
+
+.process-page .route-list small {
+  text-align: right;
+  color: var(--blue);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   03 — EVALUATE BEFORE YOU AUTOMATE (DARK GRADIENT)
+   ========================================================================== */
+.process-page .evaluate {
+  color: #ffffff;
+  background: linear-gradient(140deg, var(--deep), var(--deep-2) 72%);
+}
+
+.process-page .evaluate-top {
+  grid-template-columns: 1.3fr 0.7fr;
+  align-items: end;
+  gap: 8vw;
+  display: grid;
+}
+
+.process-page .evaluate h2 {
+  color: #ffffff !important;
+}
+
+.process-page .evaluate h2 span {
+  color: #94a7b7 !important;
+}
+
+.process-page .evaluate-top > p {
+  color: #c7d2dc;
+  margin-bottom: 5px;
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.process-page .control-grid {
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 75px;
+  display: grid;
+}
+
+.process-page .control-grid article {
+  border-right: 1px solid rgba(255, 255, 255, 0.18);
+  min-height: 310px;
+  padding: 34px 28px;
+}
+
+.process-page .control-grid article:last-child {
+  border-right: 0;
+}
+
+.process-page .control-grid span {
+  color: var(--highlight);
+  font-size: 11px;
+  font-weight: 700;
+  font-family: monospace;
+  display: block;
+  margin-bottom: 40px;
+}
+
+.process-page .control-grid h3 {
+  margin-top: 20px;
+  font-size: 21px;
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.process-page .control-grid p {
+  color: #bccbd6;
+  font-size: 14.5px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.process-page .dark-callout {
+  grid-template-columns: 1fr 3fr;
+  gap: 40px;
+  margin-top: 70px;
+  display: grid;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 40px;
+}
+
+.process-page .dark-callout > p {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--highlight);
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.process-page blockquote {
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  max-width: 930px;
+  margin: 0;
+  font-size: clamp(24px, 2.5vw, 38px);
+  line-height: 1.32;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* ==========================================================================
+   04 — BLOCKS AND REINFORCED PANELS COMPARISON TABLE
+   ========================================================================== */
+.process-page .panel-section {
+  background: #ffffff;
+  border-top: 1px solid var(--line);
+}
+
+.process-page .comparison {
+  border-top: 1px solid var(--line);
+  margin-top: 40px;
+  width: 100%;
+}
+
+.process-page .comparison-head,
+.process-page .comparison-row {
+  grid-template-columns: 1.1fr 1.3fr 1.6fr;
+  display: grid;
+}
+
+.process-page .comparison-head span {
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 16px 20px;
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.process-page .comparison-row span {
+  border-top: 1px solid var(--line);
+  color: var(--secondary);
+  padding: 22px 20px;
+  line-height: 1.55;
+  font-size: 15px;
+}
+
+.process-page .comparison-row span:first-child {
+  color: var(--navy);
+  font-weight: 650;
+}
+
+.process-page .verification-note {
+  border-left: 2px solid var(--highlight);
+  max-width: 1020px;
+  color: var(--secondary);
+  margin: 44px 0 0;
+  padding-left: 22px;
+  line-height: 1.7;
+  font-size: 15.5px;
+}
+
+/* ==========================================================================
+   05 — DECIDE WITH EVIDENCE
+   ========================================================================== */
+.process-page .decide {
+  background: var(--silver);
+  border-top: 1px solid var(--line);
+}
+
+.process-page .decision-list {
+  counter-reset: decision;
+  border-top: 1px solid #cfd7de;
+  margin: 40px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.process-page .decision-list li {
+  counter-increment: decision;
+  border-bottom: 1px solid #cfd7de;
+  grid-template-columns: 100px 1fr 1.3fr;
+  gap: 30px;
+  padding: 32px 0;
+  display: grid;
+  align-items: start;
+}
+
+.process-page .decision-list li:before {
+  content: "0" counter(decision);
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 800;
+  font-family: monospace;
+}
+
+.process-page .decision-list h3 {
+  font-size: 20px;
+  color: var(--navy);
+  margin: 0;
+  font-weight: 650;
+}
+
+.process-page .decision-list p {
+  color: var(--secondary);
+  margin-bottom: 0;
+  line-height: 1.65;
+  font-size: 15px;
+}
+
+.process-page .laxmi-approach {
+  background: #ffffff;
+  margin-top: 80px;
+  padding: 60px;
+  border-radius: 8px;
+  border: 1px solid #d4dce3;
+  box-shadow: 0 4px 20px rgba(11, 23, 39, 0.03);
+}
+
+.process-page .laxmi-approach h3 {
+  letter-spacing: -0.04em;
+  font-size: clamp(28px, 3.4vw, 48px);
+  line-height: 1.1;
+  color: var(--navy);
+  font-weight: 620;
+  margin-bottom: 18px;
+}
+
+.process-page .laxmi-approach > p {
+  max-width: 820px;
+  color: var(--secondary);
+  font-size: 16.5px;
+  line-height: 1.7;
+}
+
+.process-page .approach-grid {
+  background: var(--line);
+  border: 1px solid var(--line);
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  margin-top: 44px;
+  display: grid;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.process-page .approach-grid > div {
+  background: #ffffff;
+  padding: 26px 30px;
+}
+
+.process-page .approach-grid small {
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 750;
+  display: block;
+}
+
+.process-page .approach-grid p {
+  color: var(--secondary);
+  margin: 12px 0 0;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* ==========================================================================
+   06 — CONTINUE THE PLANNING JOURNEY
+   ========================================================================== */
+.process-page .related {
+  background: var(--light);
+  border-top: 1px solid var(--line);
+}
+
+.process-page .related-layout {
+  grid-template-columns: 0.85fr 1.15fr;
+  align-items: start;
+  gap: 8vw;
+  display: grid;
+}
+
+.process-page .related-links {
+  border-top: 1px solid var(--line);
+  display: block;
+}
+
+.process-page .related-links a {
+  border-bottom: 1px solid var(--line);
+  grid-template-columns: 42px 1fr 30px;
+  align-items: center;
+  gap: 18px;
+  min-height: 78px;
+  display: grid;
+  text-decoration: none;
+  color: var(--navy);
+  transition: background 0.2s ease;
+  padding: 0 8px;
+}
+
+.process-page .related-links a:hover {
+  background: rgba(12, 79, 128, 0.03);
+}
+
+.process-page .related-links span {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  font-family: monospace;
+}
+
+.process-page .related-links strong {
+  font-size: 17.5px;
+  font-weight: 620;
+}
+
+.process-page .related-links i {
+  color: var(--blue);
+  font-style: normal;
+  transition: transform 0.2s ease;
+  font-size: 18px;
+  text-align: right;
+}
+
+.process-page .related-links a:hover i {
+  transform: translateX(5px);
+}
+
+/* ==========================================================================
+   07 — FREQUENTLY ASKED QUESTIONS
+   ========================================================================== */
+.process-page .faq {
+  background: #ffffff;
+  border-top: 1px solid var(--line);
+}
+
+.process-page .faq-layout {
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 8vw;
+  display: grid;
+}
+
+.process-page .faq-title {
+  align-self: start;
+  position: sticky;
+  top: 120px;
+}
+
+.process-page .faq-list {
+  border-top: 1px solid var(--line);
+}
+
+.process-page details {
+  border-bottom: 1px solid var(--line);
+}
+
+.process-page summary {
+  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 26px 0;
+  font-size: 17.5px;
+  font-weight: 620;
+  line-height: 1.45;
+  list-style: none;
+  display: flex;
+  color: var(--navy);
+  transition: color 0.2s ease;
+}
+
+.process-page summary:hover {
+  color: var(--blue);
+}
+
+.process-page summary::-webkit-details-marker {
+  display: none;
+}
+
+.process-page summary span {
+  border: 1px solid var(--line);
+  width: 30px;
+  height: 30px;
+  color: var(--blue);
+  border-radius: 50%;
+  flex: 0 0 30px;
+  place-items: center;
+  transition: transform 0.25s ease, background 0.2s;
+  display: grid;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.process-page details[open] summary span {
+  transform: rotate(45deg);
+  background: var(--light);
+}
+
+.process-page details p {
+  color: var(--secondary);
+  padding: 0 50px 24px 0;
+  line-height: 1.7;
+  font-size: 15.5px;
+  margin: 0;
+}
+
+/* ==========================================================================
+   08 — CLOSING CONVERSION SECTION
+   ========================================================================== */
+.process-page .conversion {
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--deep), var(--deep-2));
+  text-align: center;
+  padding: clamp(90px, 10vw, 150px) 0;
+  position: relative;
+}
+
+.process-page .conversion .eyebrow {
+  margin: 0 auto 24px !important;
+  text-align: center !important;
+  color: var(--highlight) !important;
+}
+
+.process-page .conversion h2 {
+  color: #ffffff !important;
+  margin-bottom: 0;
+}
+
+.process-page .conversion h2 span {
+  color: #a7b8c6 !important;
+}
+
+.process-page .conversion > .wrap > p:not(.eyebrow) {
+  color: #c5d0d9;
+  max-width: 740px;
+  margin: 28px auto;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.process-page .conversion-actions {
+  justify-content: center;
+  margin-top: 36px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.process-page .button-light {
+  color: var(--navy);
+  background: #ffffff;
+  min-height: 52px;
+  padding: 0 28px;
+  font-weight: 700;
+  font-size: 13.5px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.process-page .button-light:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  background: #f8fafc;
+}
+
+.process-page .light-link {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.process-page .light-link:hover {
+  color: var(--highlight);
+}
+
+.process-page .light-link span {
+  color: var(--highlight);
+  margin-left: 6px;
+  transition: transform 0.2s ease;
+}
+
+.process-page .light-link:hover span {
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (MEDIA QUERIES)
+   ========================================================================== */
+@media (max-width: 980px) {
+  .process-page .hero-copy {
+    padding-top: 40px;
+    padding-right: 0;
+  }
+
+  .process-page .hero-image {
+    background-image: linear-gradient(#ffffff 0%, #fffffff5 34%, #ffffff26 58%), url(../assets/images/production-process.png);
+    background-position: 100% 100%;
+    background-size: auto 62%;
+  }
+
+  .process-page .intro-grid,
+  .process-page .evaluate-top,
+  .process-page .faq-layout,
+  .process-page .related-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .process-page .control-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .process-page .control-grid article:nth-child(2) {
+    border-right: 0;
+  }
+
+  .process-page .control-grid article:nth-child(-n+2) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  .process-page .dark-callout {
+    grid-template-columns: 1fr;
+  }
+
+  .process-page .faq-title {
+    position: static;
+  }
+
+  .process-page .route-list article {
+    grid-template-columns: 60px 1fr;
+  }
+
+  .process-page .route-list small {
+    text-align: left;
+    grid-column: 2;
+  }
+
+  .process-page .decision-list li {
+    grid-template-columns: 70px 1fr;
+  }
+
+  .process-page .decision-list li p {
+    grid-column: 2;
+  }
+
+  .process-page .comparison {
+    overflow-x: auto;
+  }
+
+  .process-page .comparison-head,
+  .process-page .comparison-row {
+    min-width: 700px;
+  }
+
+  .process-page .laxmi-approach {
+    padding: 40px 30px;
+  }
+
+  .process-page .process-statement {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .process-page .hero {
+    min-height: 800px;
+  }
+
+  .process-page .hero-copy h1 {
+    font-size: clamp(42px, 13vw, 64px);
+    line-height: 0.98;
+  }
+
+  .process-page .hero-intro {
+    font-size: 16px;
+  }
+
+  .process-page .hero-actions,
+  .process-page .conversion-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .process-page .section {
+    padding: 70px 0;
+  }
+
+  .process-page .section-lead {
+    margin-bottom: 45px;
+  }
+
+  .process-page .process-row {
+    grid-template-columns: 48px 1fr;
+    gap: 14px 16px;
+  }
+
+  .process-page .process-row h3 {
+    grid-column: 2;
+  }
+
+  .process-page .process-row > div {
+    grid-column: 2;
+  }
+
+  .process-page .route-list article {
+    gap: 16px;
+    padding: 24px 0;
+  }
+
+  .process-page .control-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-page .control-grid article {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    min-height: auto;
+    padding: 24px 0;
+    border-right: 0 !important;
+  }
+
+  .process-page .decision-list li {
+    grid-template-columns: 42px 1fr;
+    gap: 12px;
+  }
+
+  .process-page .approach-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-page .button {
+    width: 100%;
+  }
+
+  .process-page .conversion {
+    text-align: left;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .process-page * {
+    transition: none !important;
+  }
+}

@@ -1,0 +1,1100 @@
+/* ==========================================================================
+   COMPLETE AAC PLANT / BATCH SIZE & CAPACITY SELECTION PAGE STYLES
+   Scope: .complete-plant-page, .capacity-page
+   ========================================================================== */
+
+:root {
+  --navy: #0b1727;
+  --blue: #0c4f80;
+  --white: #ffffff;
+  --silver: #eef2f5;
+  --light: #f5f7f8;
+  --text: #0b1727;
+  --secondary: #5e6874;
+  --muted: #84909c;
+  --line: #dce2e7;
+  --highlight: #8fc6ec;
+  --shell: min(1400px, 88vw);
+}
+
+.complete-plant-page,
+.capacity-page {
+  background: var(--white);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  font-family: 'Geist', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.68;
+}
+
+.complete-plant-page *,
+.capacity-page * {
+  box-sizing: border-box;
+}
+
+.complete-plant-page a,
+.capacity-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.complete-plant-page p,
+.capacity-page p {
+  margin: 0;
+  line-height: 1.68;
+}
+
+.complete-plant-page h1,
+.complete-plant-page h2,
+.complete-plant-page h3,
+.capacity-page h1,
+.capacity-page h2,
+.capacity-page h3 {
+  letter-spacing: -0.045em;
+  margin: 0;
+  line-height: 1.02;
+  color: var(--navy);
+}
+
+/* Page Shell */
+.complete-plant-page .page-shell,
+.capacity-page .page-shell {
+  width: var(--shell);
+  margin-inline: auto;
+}
+
+.complete-plant-page .section-space,
+.capacity-page .section-space {
+  padding-block: clamp(90px, 9vw, 150px);
+}
+
+/* Eyebrow */
+.complete-plant-page .eyebrow,
+.capacity-page .eyebrow {
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 750;
+  line-height: 1.3;
+  margin: 0 0 20px;
+  display: block;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.complete-plant-page .eyebrow::before,
+.complete-plant-page .eyebrow::after,
+.capacity-page .eyebrow::before,
+.capacity-page .eyebrow::after {
+  content: none !important;
+  display: none !important;
+}
+
+.complete-plant-page .light-heading .eyebrow,
+.complete-plant-page .system-section .eyebrow,
+.complete-plant-page .verify .eyebrow,
+.complete-plant-page .conversion .eyebrow,
+.capacity-page .light-heading .eyebrow,
+.capacity-page .system-section .eyebrow,
+.capacity-page .verify .eyebrow,
+.capacity-page .conversion .eyebrow {
+  color: var(--highlight) !important;
+}
+
+/* Hero Section */
+.complete-plant-page .hero,
+.capacity-page .hero {
+  background: #f6f8fa;
+  align-items: center;
+  min-height: 92vh;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.complete-plant-page .hero-image-bg,
+.capacity-page .hero-image-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 75% 50%;
+  z-index: 1;
+}
+
+.complete-plant-page .hero-wash,
+.capacity-page .hero-wash {
+  background: linear-gradient(90deg, #ffffff 0%, #fffffffa 28%, #ffffffd6 44%, rgba(255, 255, 255, 0.4) 65%, transparent 85%);
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.complete-plant-page .hero-content,
+.capacity-page .hero-content {
+  z-index: 3;
+  padding-block: clamp(80px, 10vw, 140px);
+  position: relative;
+}
+
+.complete-plant-page .hero-content h1,
+.capacity-page .hero-content h1 {
+  max-width: 780px;
+  margin: 20px 0 26px;
+  font-size: clamp(52px, 6.5vw, 98px);
+  font-weight: 650;
+}
+
+.complete-plant-page .hero-content h1 span,
+.complete-plant-page .section-heading h2 span,
+.complete-plant-page .statement-grid h2 span,
+.complete-plant-page .expansion-copy h2 span,
+.complete-plant-page .faq-intro h2 span,
+.capacity-page .hero-content h1 span,
+.capacity-page .section-heading h2 span,
+.capacity-page .statement-grid h2 span,
+.capacity-page .expansion-copy h2 span,
+.capacity-page .faq-intro h2 span {
+  color: var(--secondary);
+  font-weight: 450;
+}
+
+.complete-plant-page .hero-copy,
+.capacity-page .hero-copy {
+  max-width: 660px;
+  color: var(--secondary);
+  font-size: clamp(17px, 1.35vw, 20px);
+  line-height: 1.65;
+}
+
+.complete-plant-page .hero-actions,
+.capacity-page .hero-actions {
+  align-items: center;
+  gap: 24px;
+  margin-top: 36px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.complete-plant-page .button,
+.capacity-page .button {
+  border-radius: 999px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  min-height: 48px;
+  padding: 0 28px;
+  font-size: 14px;
+  font-weight: 650;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  display: inline-flex;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.complete-plant-page .button:hover,
+.capacity-page .button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(11, 23, 39, 0.18);
+}
+
+.complete-plant-page .button-primary,
+.capacity-page .button-primary {
+  background: var(--blue);
+  color: #ffffff;
+}
+
+.complete-plant-page .button-light,
+.capacity-page .button-light {
+  color: var(--navy);
+  background: #ffffff;
+}
+
+.complete-plant-page .button-light:hover,
+.capacity-page .button-light:hover {
+  background: #f0f4f8;
+}
+
+.complete-plant-page .text-link,
+.capacity-page .text-link {
+  font-size: 14px;
+  font-weight: 650;
+  color: var(--navy);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.complete-plant-page .text-link:hover,
+.capacity-page .text-link:hover {
+  color: var(--blue);
+  transform: translateX(2px);
+}
+
+.complete-plant-page .hero-note,
+.capacity-page .hero-note {
+  color: var(--muted);
+  margin-top: 24px;
+  font-size: 12.5px;
+}
+
+/* Direct Answer Section */
+.complete-plant-page .direct-answer,
+.capacity-page .direct-answer {
+  background: #ffffff;
+}
+
+.complete-plant-page .statement-grid,
+.capacity-page .statement-grid {
+  grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.7fr);
+  align-items: end;
+  gap: 8vw;
+  margin-top: 25px;
+  display: grid;
+}
+
+.complete-plant-page .statement-grid h2,
+.complete-plant-page .section-heading h2,
+.complete-plant-page .expansion-copy h2,
+.complete-plant-page .faq-intro h2,
+.capacity-page .statement-grid h2,
+.capacity-page .section-heading h2,
+.capacity-page .expansion-copy h2,
+.capacity-page .faq-intro h2 {
+  font-size: clamp(38px, 5.2vw, 76px);
+  font-weight: 620;
+}
+
+.complete-plant-page .statement-grid > div p,
+.capacity-page .statement-grid > div p {
+  color: var(--secondary);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.complete-plant-page .statement-grid > div p + p,
+.capacity-page .statement-grid > div p + p {
+  margin-top: 18px;
+}
+
+/* Dark System Section (01. Read the complete line) */
+.complete-plant-page .system-section,
+.capacity-page .system-section {
+  color: #ffffff;
+  background: linear-gradient(135deg, #104f7d 0%, #09263d 100%);
+}
+
+.complete-plant-page .section-heading,
+.capacity-page .section-heading {
+  margin-bottom: 60px;
+}
+
+.complete-plant-page .light-heading,
+.capacity-page .light-heading {
+  max-width: 1000px;
+}
+
+.complete-plant-page .light-heading h2,
+.capacity-page .light-heading h2 {
+  color: #ffffff;
+}
+
+.complete-plant-page .light-heading h2 span,
+.capacity-page .light-heading h2 span {
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 450;
+}
+
+.complete-plant-page .light-heading > p:last-child,
+.capacity-page .light-heading > p:last-child {
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 650px;
+  margin-top: 24px;
+  font-size: 17.5px;
+}
+
+.complete-plant-page .driver-grid,
+.capacity-page .driver-grid {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  grid-template-columns: repeat(4, 1fr);
+  display: grid;
+}
+
+.complete-plant-page .driver-grid article,
+.capacity-page .driver-grid article {
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 36px 26px 40px;
+}
+
+.complete-plant-page .driver-grid article:first-child,
+.capacity-page .driver-grid article:first-child {
+  padding-left: 0;
+}
+
+.complete-plant-page .driver-grid article:last-child,
+.capacity-page .driver-grid article:last-child {
+  border-right: 0;
+  padding-right: 0;
+}
+
+.complete-plant-page .driver-grid article > span,
+.capacity-page .driver-grid article > span {
+  color: var(--highlight);
+  font-size: 12px;
+  font-weight: 750;
+  font-family: monospace;
+}
+
+.complete-plant-page .driver-grid h3,
+.capacity-page .driver-grid h3 {
+  margin: 35px 0 16px;
+  font-size: 21px;
+  font-weight: 650;
+  color: #ffffff;
+}
+
+.complete-plant-page .driver-grid p,
+.capacity-page .driver-grid p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
+.complete-plant-page .formula-band,
+.capacity-page .formula-band {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  grid-template-columns: 1fr 2.5fr 1.5fr;
+  align-items: start;
+  gap: 40px;
+  margin-top: 60px;
+  padding: 30px 0;
+  display: grid;
+}
+
+.complete-plant-page .formula-band > p:nth-child(2),
+.capacity-page .formula-band > p:nth-child(2) {
+  font-size: 20px;
+  line-height: 1.45;
+  color: #ffffff;
+}
+
+.complete-plant-page .formula-band > p:nth-child(2) strong,
+.capacity-page .formula-band > p:nth-child(2) strong {
+  color: var(--highlight);
+}
+
+.complete-plant-page .formula-band small,
+.capacity-page .formula-band small {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Terminology Section (02. Compare like with like) */
+.complete-plant-page .terminology,
+.capacity-page .terminology {
+  background: #ffffff;
+}
+
+.complete-plant-page .split-heading,
+.capacity-page .split-heading {
+  grid-template-columns: 1.5fr 0.65fr;
+  align-items: end;
+  gap: 8vw;
+  display: grid;
+  margin-bottom: 50px;
+}
+
+.complete-plant-page .split-heading .eyebrow,
+.capacity-page .split-heading .eyebrow {
+  margin-bottom: 20px;
+}
+
+.complete-plant-page .split-heading > p,
+.capacity-page .split-heading > p {
+  color: var(--secondary);
+  font-size: 17px;
+}
+
+.complete-plant-page .numbered-rows,
+.capacity-page .numbered-rows {
+  border-top: 1px solid var(--line);
+}
+
+.complete-plant-page .numbered-row,
+.capacity-page .numbered-row {
+  border-bottom: 1px solid var(--line);
+  grid-template-columns: 80px 1fr 1.4fr;
+  align-items: center;
+  gap: 30px;
+  padding: 26px 0;
+  display: grid;
+}
+
+.complete-plant-page .numbered-row > span,
+.capacity-page .numbered-row > span {
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 750;
+  font-family: monospace;
+}
+
+.complete-plant-page .numbered-row h3,
+.capacity-page .numbered-row h3 {
+  font-size: 22px;
+  font-weight: 650;
+  color: var(--navy);
+}
+
+.complete-plant-page .numbered-row p,
+.capacity-page .numbered-row p {
+  color: var(--secondary);
+  font-size: 15px;
+}
+
+.complete-plant-page .warning,
+.capacity-page .warning {
+  background: var(--silver);
+  grid-template-columns: 150px 1fr;
+  align-items: center;
+  gap: 30px;
+  margin-top: 60px;
+  padding: 30px 35px;
+  display: grid;
+  border-left: 4px solid var(--blue);
+  border-radius: 4px;
+}
+
+.complete-plant-page .warning > span,
+.capacity-page .warning > span {
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.complete-plant-page .warning p,
+.capacity-page .warning p {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.55;
+  color: var(--navy);
+}
+
+/* Platform Section (03. Select the production platform) */
+.complete-plant-page .platform-section,
+.capacity-page .platform-section {
+  background: var(--light);
+}
+
+.complete-plant-page .table-wrap,
+.capacity-page .table-wrap {
+  outline: none;
+  overflow-x: auto;
+  border-top: 2px solid var(--navy);
+  background: #ffffff;
+  border-radius: 2px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.complete-plant-page table,
+.capacity-page table {
+  border-collapse: collapse;
+  background: #ffffff;
+  width: 100%;
+  min-width: 800px;
+}
+
+.complete-plant-page th,
+.complete-plant-page td,
+.capacity-page th,
+.capacity-page td {
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  padding: 22px 20px;
+}
+
+.complete-plant-page th,
+.capacity-page th {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: var(--navy);
+  color: #ffffff;
+  font-size: 11.5px;
+  font-weight: 700;
+}
+
+.complete-plant-page td,
+.capacity-page td {
+  font-size: 15.5px;
+  color: #434f5d;
+}
+
+.complete-plant-page td:first-child,
+.capacity-page td:first-child {
+  color: var(--blue);
+  font-size: 19px;
+  font-weight: 750;
+  background: #fafbfc;
+}
+
+.complete-plant-page tbody tr:hover,
+.capacity-page tbody tr:hover {
+  background: #f9fbfc;
+}
+
+.complete-plant-page .table-note,
+.capacity-page .table-note {
+  color: var(--secondary);
+  max-width: 960px;
+  margin-top: 24px;
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
+.complete-plant-page .table-note b,
+.capacity-page .table-note b {
+  color: var(--navy);
+}
+
+/* Expansion Section (04. Plan the expansion boundary) */
+.complete-plant-page .expansion,
+.capacity-page .expansion {
+  background: var(--silver);
+}
+
+.complete-plant-page .expansion-grid-wrap,
+.capacity-page .expansion-grid-wrap {
+  grid-template-columns: 1.3fr 0.7fr;
+  align-items: center;
+  gap: 6vw;
+  display: grid;
+}
+
+.complete-plant-page .expansion-image-wrap img,
+.capacity-page .expansion-image-wrap img {
+  background: var(--light);
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.complete-plant-page .expansion-image-wrap > p,
+.capacity-page .expansion-image-wrap > p {
+  color: var(--muted);
+  margin-top: 12px;
+  font-size: 12px;
+}
+
+.complete-plant-page .expansion-copy .eyebrow,
+.capacity-page .expansion-copy .eyebrow {
+  margin-bottom: 20px;
+}
+
+.complete-plant-page .expansion-copy > p:nth-of-type(2),
+.capacity-page .expansion-copy > p:nth-of-type(2) {
+  color: var(--secondary);
+  margin-top: 24px;
+  font-size: 16.5px;
+}
+
+.complete-plant-page .phase-list,
+.capacity-page .phase-list {
+  border-top: 1px solid var(--line);
+  margin-top: 32px;
+}
+
+.complete-plant-page .phase-list > div,
+.capacity-page .phase-list > div {
+  border-bottom: 1px solid var(--line);
+  padding: 20px 0;
+}
+
+.complete-plant-page .phase-list span,
+.capacity-page .phase-list span {
+  color: var(--blue);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 11.5px;
+  font-weight: 750;
+  display: block;
+}
+
+.complete-plant-page .phase-list p,
+.capacity-page .phase-list p {
+  color: var(--navy);
+  margin-top: 8px;
+  font-size: 14.5px;
+  font-weight: 550;
+}
+
+/* Autoclave Statement Callout */
+.complete-plant-page .autoclave-statement,
+.capacity-page .autoclave-statement {
+  background: #ffffff;
+}
+
+.complete-plant-page .autoclave-statement .rule,
+.capacity-page .autoclave-statement .rule {
+  color: var(--navy);
+  border-left: 3px solid var(--blue);
+  padding-left: 20px;
+  font-weight: 750;
+  font-size: 18px;
+  margin-top: 18px;
+}
+
+/* Automation Comparison Section (05. Define the automation scope) */
+.complete-plant-page .automation,
+.capacity-page .automation {
+  background: #ffffff;
+}
+
+.complete-plant-page .comparison,
+.capacity-page .comparison {
+  border: 1px solid var(--line);
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+  margin-top: 20px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.complete-plant-page .comparison article,
+.capacity-page .comparison article {
+  padding: 50px;
+}
+
+.complete-plant-page .comparison article + article,
+.capacity-page .comparison article + article {
+  border-left: 1px solid var(--line);
+}
+
+.complete-plant-page .comparison article.featured,
+.capacity-page .comparison article.featured {
+  background: var(--navy);
+  color: #ffffff;
+}
+
+.complete-plant-page .comparison h3,
+.capacity-page .comparison h3 {
+  margin: 20px 0 26px;
+  font-size: clamp(24px, 2.6vw, 36px);
+  font-weight: 650;
+  color: var(--navy);
+}
+
+.complete-plant-page .comparison .featured h3,
+.capacity-page .comparison .featured h3 {
+  color: #ffffff;
+}
+
+.complete-plant-page .comparison ul,
+.capacity-page .comparison ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.complete-plant-page .comparison li,
+.capacity-page .comparison li {
+  border-top: 1px solid var(--line);
+  color: var(--secondary);
+  padding: 15px 0 15px 24px;
+  line-height: 1.55;
+  font-size: 15px;
+  position: relative;
+}
+
+.complete-plant-page .comparison li::before,
+.capacity-page .comparison li::before {
+  content: "•";
+  color: var(--blue);
+  font-size: 18px;
+  position: absolute;
+  left: 0;
+  top: 12px;
+}
+
+.complete-plant-page .comparison .featured .eyebrow,
+.capacity-page .comparison .featured .eyebrow {
+  color: var(--highlight) !important;
+}
+
+.complete-plant-page .comparison .featured li,
+.capacity-page .comparison .featured li {
+  color: rgba(255, 255, 255, 0.8);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.complete-plant-page .comparison .featured li::before,
+.capacity-page .comparison .featured li::before {
+  color: var(--highlight);
+}
+
+/* Verify Section (06. Ten questions every capacity proposal should answer) */
+.complete-plant-page .verify,
+.capacity-page .verify {
+  background: var(--navy);
+  color: #ffffff;
+}
+
+.complete-plant-page .verification-list,
+.capacity-page .verification-list {
+  grid-template-columns: 1fr 1fr;
+  column-gap: 7vw;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+}
+
+.complete-plant-page .verification-list li,
+.capacity-page .verification-list li {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  grid-template-columns: 50px 1fr;
+  align-items: center;
+  gap: 18px;
+  padding: 22px 0;
+  display: grid;
+}
+
+.complete-plant-page .verification-list li span,
+.capacity-page .verification-list li span {
+  color: var(--highlight);
+  font-size: 12px;
+  font-weight: 750;
+  font-family: monospace;
+}
+
+.complete-plant-page .verification-list li p,
+.capacity-page .verification-list li p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* FAQ Section */
+.complete-plant-page .faq,
+.capacity-page .faq {
+  background: #ffffff;
+}
+
+.complete-plant-page .faq-grid-wrap,
+.capacity-page .faq-grid-wrap {
+  grid-template-columns: 0.75fr 1.25fr;
+  align-items: start;
+  gap: 8vw;
+  display: grid;
+}
+
+.complete-plant-page .faq-intro,
+.capacity-page .faq-intro {
+  position: sticky;
+  top: 100px;
+}
+
+.complete-plant-page .faq-intro .eyebrow,
+.capacity-page .faq-intro .eyebrow {
+  margin-bottom: 20px;
+}
+
+.complete-plant-page .faq-intro > p:last-child,
+.capacity-page .faq-intro > p:last-child {
+  color: var(--secondary);
+  max-width: 440px;
+  margin-top: 24px;
+  font-size: 16.5px;
+}
+
+.complete-plant-page .faq-list,
+.capacity-page .faq-list {
+  border-top: 1px solid var(--line);
+}
+
+.complete-plant-page details,
+.capacity-page details {
+  border-bottom: 1px solid var(--line);
+}
+
+.complete-plant-page summary,
+.capacity-page summary {
+  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 24px 0;
+  font-size: 17.5px;
+  font-weight: 650;
+  list-style: none;
+  display: flex;
+  color: var(--navy);
+  user-select: none;
+  transition: color 0.2s ease;
+}
+
+.complete-plant-page summary::-webkit-details-marker,
+.capacity-page summary::-webkit-details-marker {
+  display: none;
+}
+
+.complete-plant-page summary:hover,
+.capacity-page summary:hover {
+  color: var(--blue);
+}
+
+.complete-plant-page summary span,
+.capacity-page summary span {
+  color: var(--blue);
+  font-size: 26px;
+  font-weight: 300;
+  transition: transform 0.2s ease;
+}
+
+.complete-plant-page details[open] summary span,
+.capacity-page details[open] summary span {
+  transform: rotate(45deg);
+}
+
+.complete-plant-page details > p,
+.capacity-page details > p {
+  max-width: 760px;
+  color: var(--secondary);
+  padding: 0 40px 24px 0;
+  font-size: 15.5px;
+  line-height: 1.65;
+}
+
+/* Conversion Section */
+.complete-plant-page .conversion,
+.capacity-page .conversion {
+  color: #ffffff;
+  background: linear-gradient(135deg, #104f7d 0%, #09263d 100%);
+  padding-block: clamp(100px, 10vw, 160px);
+}
+
+.complete-plant-page .conversion-inner,
+.capacity-page .conversion-inner {
+  max-width: 1100px;
+}
+
+.complete-plant-page .conversion h2,
+.capacity-page .conversion h2 {
+  color: #ffffff;
+  margin: 24px 0;
+  font-size: clamp(44px, 5.5vw, 84px);
+}
+
+.complete-plant-page .conversion h2 span,
+.capacity-page .conversion h2 span {
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 450;
+}
+
+.complete-plant-page .conversion-inner > p:nth-of-type(2),
+.capacity-page .conversion-inner > p:nth-of-type(2) {
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 780px;
+  font-size: 18px;
+}
+
+.complete-plant-page .conversion-actions,
+.capacity-page .conversion-actions {
+  align-items: center;
+  gap: 24px;
+  margin-top: 38px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.complete-plant-page .dark-link,
+.capacity-page .dark-link {
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  padding-bottom: 4px;
+  font-size: 14px;
+  font-weight: 650;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.complete-plant-page .dark-link:hover,
+.capacity-page .dark-link:hover {
+  color: var(--highlight);
+  border-color: var(--highlight);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .complete-plant-page .statement-grid,
+  .complete-plant-page .split-heading,
+  .complete-plant-page .expansion-grid-wrap,
+  .complete-plant-page .faq-grid-wrap,
+  .capacity-page .statement-grid,
+  .capacity-page .split-heading,
+  .capacity-page .expansion-grid-wrap,
+  .capacity-page .faq-grid-wrap {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .complete-plant-page .driver-grid,
+  .capacity-page .driver-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .complete-plant-page .driver-grid article:nth-child(2),
+  .capacity-page .driver-grid article:nth-child(2) {
+    border-right: 0;
+  }
+
+  .complete-plant-page .driver-grid article:nth-child(3),
+  .complete-plant-page .driver-grid article:nth-child(4),
+  .capacity-page .driver-grid article:nth-child(3),
+  .capacity-page .driver-grid article:nth-child(4) {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .complete-plant-page .driver-grid article:nth-child(3),
+  .capacity-page .driver-grid article:nth-child(3) {
+    padding-left: 0;
+  }
+
+  .complete-plant-page .formula-band,
+  .capacity-page .formula-band {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .complete-plant-page .verification-list,
+  .capacity-page .verification-list {
+    grid-template-columns: 1fr;
+  }
+
+  .complete-plant-page .faq-intro,
+  .capacity-page .faq-intro {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .complete-plant-page .page-shell,
+  .complete-plant-page .hero-content,
+  .capacity-page .page-shell,
+  .capacity-page .hero-content {
+    width: calc(100% - 36px);
+  }
+
+  .complete-plant-page .hero,
+  .capacity-page .hero {
+    align-items: flex-start;
+    min-height: 720px;
+    padding-top: 20px;
+  }
+
+  .complete-plant-page .hero-image-bg,
+  .capacity-page .hero-image-bg {
+    height: 48%;
+    inset: 0 0 auto;
+  }
+
+  .complete-plant-page .hero-wash,
+  .capacity-page .hero-wash {
+    background: linear-gradient(180deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.85) 40%, #ffffff 52%);
+    height: 52%;
+    inset: 0 0 auto;
+  }
+
+  .complete-plant-page .hero-content,
+  .capacity-page .hero-content {
+    padding-top: 42vh;
+  }
+
+  .complete-plant-page .hero-content h1,
+  .capacity-page .hero-content h1 {
+    font-size: clamp(38px, 10vw, 56px);
+  }
+
+  .complete-plant-page .hero-actions,
+  .capacity-page .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .complete-plant-page .button,
+  .capacity-page .button {
+    width: 100%;
+  }
+
+  .complete-plant-page .driver-grid,
+  .capacity-page .driver-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .complete-plant-page .driver-grid article,
+  .capacity-page .driver-grid article {
+    border-right: 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 24px 0 !important;
+  }
+
+  .complete-plant-page .numbered-row,
+  .capacity-page .numbered-row {
+    grid-template-columns: 45px 1fr;
+    gap: 12px;
+  }
+
+  .complete-plant-page .numbered-row p,
+  .capacity-page .numbered-row p {
+    grid-column: 2;
+  }
+
+  .complete-plant-page .warning,
+  .capacity-page .warning {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 24px;
+  }
+
+  .complete-plant-page .comparison,
+  .capacity-page .comparison {
+    grid-template-columns: 1fr;
+  }
+
+  .complete-plant-page .comparison article,
+  .capacity-page .comparison article {
+    padding: 30px 20px;
+  }
+
+  .complete-plant-page .comparison article + article,
+  .capacity-page .comparison article + article {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .complete-plant-page .verification-list li,
+  .capacity-page .verification-list li {
+    grid-template-columns: 42px 1fr;
+    gap: 12px;
+  }
+
+  .complete-plant-page .section-space,
+  .capacity-page .section-space {
+    padding-block: 70px;
+  }
+}
