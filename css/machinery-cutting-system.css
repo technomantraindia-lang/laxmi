@@ -61,18 +61,32 @@
   max-width: 900px;
 }
 
-.cutting-page h1 span,
-.cutting-page h2 span,
-.cutting-page .section-title span {
+.cutting-page h1 span {
   color: #cbd5df;
   font-weight: 480;
   display: block;
 }
 
+.cutting-page h2 span,
+.cutting-page .section-title span {
+  color: var(--muted);
+  font-weight: 470;
+  display: block;
+}
+
+.cutting-page .hero h1 span,
+.cutting-page .hero h2 span,
+.cutting-page .waste h2 span,
+.cutting-page .conversion h2 span {
+  color: #cbd5df;
+}
+
 .cutting-page h2 {
-  font-size: clamp(2.4rem, 4.8vw, 4.8rem);
-  font-weight: 620;
-  max-width: 900px;
+  font-size: clamp(44px, 5.4vw, 82px);
+  font-weight: 580;
+  letter-spacing: -0.045em;
+  line-height: 0.96;
+  max-width: 1000px;
 }
 
 .cutting-page h3 {
@@ -272,11 +286,16 @@
 /* 4 Coordinated Stages (Process) */
 .cutting-page .process {
   background: var(--silver);
+  padding-block: clamp(100px, 10vw, 168px);
 }
 
 .cutting-page .section-title {
   max-width: 1000px;
-  margin-bottom: 60px;
+  margin-bottom: 78px;
+  font-size: clamp(44px, 5.4vw, 82px);
+  font-weight: 580;
+  letter-spacing: -0.045em;
+  line-height: 0.96;
 }
 
 .cutting-page .process-list {
@@ -287,30 +306,46 @@
 
 .cutting-page .process-row {
   border-bottom: 1px solid #cbd4db;
-  grid-template-columns: 90px 0.55fr 1fr;
+  grid-template-columns: 100px 0.55fr 1fr;
   align-items: start;
-  gap: 36px;
-  padding: 36px 0;
+  gap: 42px;
+  padding: 42px 0;
   display: grid;
 }
 
-.cutting-page .step-num,
+.cutting-page .step-num {
+  color: var(--blue);
+  letter-spacing: 0.15em;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: inherit;
+  padding-top: 4px;
+}
+
 .cutting-page .factor-grid span,
 .cutting-page .line-list span,
 .cutting-page .selection-list span {
   color: var(--blue);
   letter-spacing: 0.15em;
-  font-size: 0.82rem;
-  font-weight: 750;
-  font-family: monospace;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: inherit;
 }
 
 .cutting-page .process-row h3 {
-  font-size: 1.45rem;
+  margin: 0;
+  font-size: 27px;
+  font-weight: 580;
+  letter-spacing: -0.025em;
+  color: var(--navy);
+  line-height: 1.2;
 }
 
 .cutting-page .process-row p {
-  font-size: 1rem;
+  margin: 0;
+  color: var(--secondary);
+  font-size: 18px;
+  line-height: 1.65;
 }
 
 /* Face Finishing Section */
