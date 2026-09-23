@@ -95,25 +95,32 @@
 .raw-storage-page h1,
 .raw-storage-page h2,
 .raw-storage-page h3 {
-  letter-spacing: -0.05em;
+  letter-spacing: -0.04em;
   margin: 0;
-  line-height: 1.02;
+  line-height: 1.04;
   color: var(--navy);
 }
 
+.raw-storage-page h2 {
+  font-size: clamp(34px, 4.4vw, 68px);
+  font-weight: 560;
+  line-height: 1.04;
+}
+
 .raw-storage-page .display-heading {
-  letter-spacing: -0.05em;
+  letter-spacing: -0.04em;
   margin: 0;
-  font-size: clamp(38px, 5.2vw, 76px);
-  font-weight: 620;
-  line-height: 1.02;
+  font-size: clamp(34px, 4.4vw, 68px);
+  font-weight: 560;
+  line-height: 1.04;
 }
 
 .raw-storage-page .display-heading span,
 .raw-storage-page h2 span,
 .raw-storage-page h1 span {
   color: var(--secondary);
-  font-weight: 480;
+  font-weight: 420;
+  display: block;
 }
 
 /* Hero Section */
@@ -256,10 +263,17 @@
 }
 
 .raw-storage-page .answer h2 {
-  letter-spacing: -0.05em;
+  letter-spacing: -0.04em;
   margin: 0;
-  font-size: clamp(40px, 5vw, 76px);
+  font-size: clamp(34px, 4.4vw, 68px);
+  font-weight: 560;
   line-height: 1.05;
+}
+
+.raw-storage-page .answer h2 span {
+  color: var(--muted);
+  font-weight: 420;
+  display: block;
 }
 
 .raw-storage-page .answer-grid > p {
