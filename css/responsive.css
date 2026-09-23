@@ -344,7 +344,9 @@ html, body {
   }
 
   .hp-journey-title {
-    font-size: clamp(1.8rem, 6.5vw, 2.6rem) !important;
+    font-size: clamp(1.5rem, 5.2vw, 2.1rem) !important;
+    line-height: 1.18 !important;
+    letter-spacing: -0.025em !important;
   }
 
   .hp-journey-row {
@@ -376,7 +378,9 @@ html, body {
   }
 
   .hp-academy-title {
-    font-size: clamp(1.8rem, 6.5vw, 2.6rem) !important;
+    font-size: clamp(1.5rem, 5.2vw, 2.1rem) !important;
+    line-height: 1.18 !important;
+    letter-spacing: -0.025em !important;
   }
 
   .hp-academy-row {
@@ -405,7 +409,9 @@ html, body {
   }
 
   .hp-verify__title {
-    font-size: clamp(1.8rem, 6.5vw, 2.6rem) !important;
+    font-size: clamp(1.5rem, 5.2vw, 2.1rem) !important;
+    line-height: 1.18 !important;
+    letter-spacing: -0.025em !important;
   }
 
   .hp-verify__grid-wrap {
@@ -436,7 +442,9 @@ html, body {
   }
 
   .hp-facility-title {
-    font-size: clamp(1.8rem, 6.5vw, 2.6rem) !important;
+    font-size: clamp(1.5rem, 5.2vw, 2.1rem) !important;
+    line-height: 1.18 !important;
+    letter-spacing: -0.025em !important;
   }
 
   .hp-facility-full-wrap {
@@ -444,8 +452,44 @@ html, body {
   }
 
   .hp-facility-strip {
+    display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 0.75rem !important;
+    gap: 10px !important;
+    background: transparent !important;
+    border: none !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .hp-facility-step {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    padding: 14px 16px !important;
+    background: #ffffff !important;
+    border: 1px solid rgba(7, 23, 44, 0.08) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 6px rgba(7, 23, 44, 0.03) !important;
+    box-sizing: border-box !important;
+    min-width: 0 !important;
+  }
+
+  .hp-facility-step-num {
+    font-size: 0.78rem !important;
+    font-weight: 800 !important;
+    color: #0b4d8c !important;
+    margin-bottom: 4px !important;
+    letter-spacing: 0.05em !important;
+  }
+
+  .hp-facility-step-name {
+    font-size: 0.92rem !important;
+    font-weight: 700 !important;
+    color: #07172c !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    line-height: 1.25 !important;
   }
 
   /* 08. System Section */
@@ -512,7 +556,9 @@ html, body {
   }
 
   .hp-projects-title {
-    font-size: clamp(1.8rem, 6.5vw, 2.6rem) !important;
+    font-size: clamp(1.5rem, 5.2vw, 2.1rem) !important;
+    line-height: 1.18 !important;
+    letter-spacing: -0.025em !important;
   }
 
   .hp-projects-map__desc {
@@ -538,7 +584,9 @@ html, body {
   }
 
   .hp-execution-title {
-    font-size: clamp(1.8rem, 6.5vw, 2.6rem) !important;
+    font-size: clamp(1.5rem, 5.2vw, 2.1rem) !important;
+    line-height: 1.18 !important;
+    letter-spacing: -0.025em !important;
   }
 
   .hp-cases-grid {
@@ -553,7 +601,9 @@ html, body {
   }
 
   .hp-decision-dark__title {
-    font-size: clamp(1.8rem, 6.5vw, 2.6rem) !important;
+    font-size: clamp(1.5rem, 5.2vw, 2.1rem) !important;
+    line-height: 1.18 !important;
+    letter-spacing: -0.025em !important;
   }
 
   .hp-decision-check-item {
@@ -564,13 +614,128 @@ html, body {
     font-size: 1.35rem !important;
   }
 
-  /* 12. Next Steps Section */
+  /* 12. Tools & Decision Section */
+  .hp-tools-section {
+    padding: 60px 0 !important;
+  }
+
+  .hp-tools-split {
+    grid-template-columns: 1fr !important;
+    gap: 2.25rem !important;
+  }
+
+  .hp-tools-title {
+    font-size: clamp(1.5rem, 5.2vw, 2.1rem) !important;
+    line-height: 1.18 !important;
+    letter-spacing: -0.025em !important;
+    margin-bottom: 20px !important;
+  }
+
+  .hp-tools-title-bold,
+  .hp-tools-title-light {
+    display: block !important;
+    white-space: normal !important;
+    word-break: normal !important;
+  }
+
+  .hp-tools-desc {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    max-width: 100% !important;
+    margin-bottom: 24px !important;
+  }
+
+  .hp-tools-list {
+    border-top: 1px solid #e2e8f0 !important;
+  }
+
+  .hp-tool-item {
+    padding: 16px 0 !important;
+  }
+
+  .hp-tool-name {
+    font-size: 0.95rem !important;
+  }
+
+  /* 13. Walkthroughs Section */
+  .hp-walkthroughs-section {
+    padding: 60px 0 !important;
+  }
+
+  .hp-walkthroughs-title {
+    font-size: clamp(1.5rem, 5.2vw, 2.1rem) !important;
+    line-height: 1.18 !important;
+    letter-spacing: -0.025em !important;
+    margin-bottom: 24px !important;
+  }
+
+  .hp-walkthroughs-title-bold,
+  .hp-walkthroughs-title-light {
+    display: block !important;
+    white-space: normal !important;
+    word-break: normal !important;
+  }
+
+  .hp-videos-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  /* 14. Responsibility Section */
+  .hp-responsibility-section {
+    padding: 60px 0 !important;
+  }
+
+  .hp-resp-split {
+    grid-template-columns: 1fr !important;
+    gap: 2.25rem !important;
+  }
+
+  .hp-resp-title {
+    font-size: clamp(1.5rem, 5.2vw, 2.1rem) !important;
+    line-height: 1.18 !important;
+    letter-spacing: -0.025em !important;
+    margin-bottom: 16px !important;
+  }
+
+  .hp-resp-title-bold,
+  .hp-resp-title-light {
+    display: block !important;
+    white-space: normal !important;
+    word-break: normal !important;
+  }
+
+  .hp-resp-lead {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    max-width: 100% !important;
+    margin-bottom: 24px !important;
+  }
+
+  .hp-resp-list-item {
+    padding: 16px 0 !important;
+  }
+
+  .hp-resp-name {
+    font-size: 0.95rem !important;
+  }
+
+  /* 15. Next Steps Section */
   .hp-next-steps-section {
     padding: 60px 0 !important;
   }
 
   .hp-next-steps-title {
-    font-size: clamp(1.8rem, 6.5vw, 2.6rem) !important;
+    font-size: clamp(1.5rem, 5.2vw, 2.1rem) !important;
+    line-height: 1.18 !important;
+    letter-spacing: -0.025em !important;
+  }
+
+  .hp-next-steps-title-bold,
+  .hp-next-steps-title-light {
+    display: block !important;
+    white-space: normal !important;
+    word-break: normal !important;
   }
 
   .hp-next-step-item {
@@ -590,6 +755,29 @@ html, body {
     width: 100% !important;
     justify-content: center !important;
     text-align: center !important;
+  }
+
+  /* Global Homepage Title Word-Wrap Reset */
+  .hp-decision-title-bold,
+  .hp-decision-title-light,
+  .hp-investor-title-bold,
+  .hp-investor-title-light,
+  .hp-facility-title-bold,
+  .hp-facility-title-light,
+  .hp-why-title-bold,
+  .hp-why-title-light,
+  .hp-tools-title-bold,
+  .hp-tools-title-light,
+  .hp-resp-title-bold,
+  .hp-resp-title-light,
+  .hp-projects-title-bold,
+  .hp-projects-title-light,
+  .hp-execution-title-bold,
+  .hp-execution-title-light,
+  .hp-next-steps-title-bold,
+  .hp-next-steps-title-light {
+    white-space: normal !important;
+    word-break: normal !important;
   }
 
   /* Academy & Engineering Sub-Nav Rails */
@@ -755,14 +943,31 @@ html, body {
     padding: 0 1.25rem !important;
   }
 
-  /* Floating Widgets Compact */
+  /* Floating Widgets Mobile Reposition */
   .hp-floating-widgets {
-    width: 42px !important;
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 14px !important;
+    top: auto !important;
+    transform: none !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+    z-index: 9999 !important;
+    border-radius: 50px !important;
+    box-shadow: none !important;
+    width: auto !important;
   }
 
   .hp-float-btn {
-    width: 42px !important;
-    height: 42px !important;
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 50% !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22) !important;
+  }
+
+  .hp-float-btn:first-child,
+  .hp-float-btn:last-child {
+    border-radius: 50% !important;
   }
 }
 
