@@ -166,6 +166,34 @@
   <!-- Shared Global Header Injection Placeholder -->
   <div id="site-header"></div>
 
+  <!-- Breadcrumb Navigation -->
+  <nav class="site-breadcrumb" aria-label="Breadcrumb">
+    <div class="site-breadcrumb__inner">
+      <a href="index.html">Home</a>
+      <span class="bc-sep">/</span>
+      <a href="engineering-center.html">AAC Engineering Center</a>
+      <span class="bc-sep">/</span>
+      <a href="machinery-equipment.html">Plant Machinery</a>
+      <span class="bc-sep">/</span>
+      <span class="bc-current">System 01 · Raw Material Storage &amp; Silos</span>
+    </div>
+  </nav>
+
+  <!-- Sticky In-Page System Navigation Strip -->
+  <nav class="eng-nav-strip" aria-label="System Navigation">
+    <div class="eng-nav-strip__inner">
+      <a href="#intro" class="eng-nav-btn"><span class="eng-nav-num">01</span> Direct Answer</a>
+      <a href="#drivers" class="eng-nav-btn"><span class="eng-nav-num">02</span> Design Basis</a>
+      <a href="#systems" class="eng-nav-btn"><span class="eng-nav-num">03</span> Materials</a>
+      <a href="#capacity" class="eng-nav-btn"><span class="eng-nav-num">04</span> Capacity</a>
+      <a href="#expansion" class="eng-nav-btn"><span class="eng-nav-num">05</span> Expansion</a>
+      <a href="#safety" class="eng-nav-btn"><span class="eng-nav-num">06</span> Safety</a>
+      <a href="#scope" class="eng-nav-btn"><span class="eng-nav-num">07</span> Scope</a>
+      <a href="#mistakes" class="eng-nav-btn"><span class="eng-nav-num">08</span> Mistakes</a>
+      <a href="#faq" class="eng-nav-btn"><span class="eng-nav-num">09</span> FAQ</a>
+    </div>
+  </nav>
+
   <main id="main">
 
     <!-- ============ HERO SECTION ============ -->
@@ -192,18 +220,20 @@
     </section>
 
     <!-- ============ DIRECT ANSWER SECTION ============ -->
-    <section class="answer section wrap">
-      <p class="eyebrow">Direct answer</p>
-      <div class="answer-grid">
-        <h2>More than a group<br />of silos.</h2>
-        <p>
-          An AAC plant raw-material storage system connects receiving, unloading, storage, dust control, level monitoring and controlled transfer into preparation or batching. Its commercial purpose is simple: protect production continuity without creating avoidable capital, inventory or operating risk.
-        </p>
+    <section class="answer section" id="intro">
+      <div class="wrap">
+        <p class="eyebrow">Direct answer</p>
+        <div class="answer-grid">
+          <h2>More than a group<br />of silos.</h2>
+          <p>
+            An AAC plant raw-material storage system connects receiving, unloading, storage, dust control, level monitoring and controlled transfer into preparation or batching. Its commercial purpose is simple: protect production continuity without creating avoidable capital, inventory or operating risk.
+          </p>
+        </div>
       </div>
     </section>
 
     <!-- ============ THE DESIGN BASIS (6 INPUTS) ============ -->
-    <section class="drivers section">
+    <section class="drivers section" id="drivers">
       <div class="wrap">
         <p class="eyebrow">The design basis</p>
         <h2 class="display-heading">Six inputs shape<br /><span>every storage decision.</span></h2>
@@ -244,52 +274,54 @@
     </section>
 
     <!-- ============ MATERIAL BY MATERIAL SECTION ============ -->
-    <section class="systems section wrap" id="systems">
-      <div class="section-intro">
-        <div>
-          <p class="eyebrow">Material by material</p>
-          <h2 class="display-heading">Different materials.<br /><span>Different controls.</span></h2>
+    <section class="systems section" id="systems">
+      <div class="wrap">
+        <div class="section-intro">
+          <div>
+            <p class="eyebrow">Material by material</p>
+            <h2 class="display-heading">Different materials.<br /><span>Different controls.</span></h2>
+          </div>
+          <p>The correct arrangement depends on supply form and material behaviour. “Typical” means a planning option—not a universal plant specification.</p>
         </div>
-        <p>The correct arrangement depends on supply form and material behaviour. “Typical” means a planning option—not a universal plant specification.</p>
-      </div>
 
-      <div class="material-list">
-        <article>
-          <span class="row-no">01</span>
-          <h3>Dry fly ash</h3>
-          <strong>Dedicated silo</strong>
-          <p>Bulk unloading and enclosed pneumatic transfer, matched to the delivery vehicle and site system.</p>
-        </article>
-        <article>
-          <span class="row-no">02</span>
-          <h3>Cement</h3>
-          <strong>Dedicated silo</strong>
-          <p>Bulk tanker supply where local logistics support it; controlled bag-unloading where bulk supply is unavailable.</p>
-        </article>
-        <article>
-          <span class="row-no">03</span>
-          <h3>Processed lime</h3>
-          <strong>Dedicated silo</strong>
-          <p>Receiving depends on lime form, package size, particle condition and whether preparation is required.</p>
-        </article>
-        <article>
-          <span class="row-no">04</span>
-          <h3>Gypsum</h3>
-          <strong>Covered storage or silo</strong>
-          <p>The method depends on consumption, dosing tolerance, labour exposure and automation level.</p>
-        </article>
-        <article>
-          <span class="row-no">05</span>
-          <h3>Sand / pond ash</h3>
-          <strong>Open or covered stockyard</strong>
-          <p>Storage must account for rain, drainage, moisture variation, dust and loader movement.</p>
-        </article>
-        <article>
-          <span class="row-no">06</span>
-          <h3>Aluminium powder / paste</h3>
-          <strong>Controlled dedicated storage</strong>
-          <p>A safety-critical system governed by the selected product SDS and competent hazard assessment.</p>
-        </article>
+        <div class="material-list">
+          <article>
+            <span class="row-no">01</span>
+            <h3>Dry fly ash</h3>
+            <strong>Dedicated silo</strong>
+            <p>Bulk unloading and enclosed pneumatic transfer, matched to the delivery vehicle and site system.</p>
+          </article>
+          <article>
+            <span class="row-no">02</span>
+            <h3>Cement</h3>
+            <strong>Dedicated silo</strong>
+            <p>Bulk tanker supply where local logistics support it; controlled bag-unloading where bulk supply is unavailable.</p>
+          </article>
+          <article>
+            <span class="row-no">03</span>
+            <h3>Processed lime</h3>
+            <strong>Dedicated silo</strong>
+            <p>Receiving depends on lime form, package size, particle condition and whether preparation is required.</p>
+          </article>
+          <article>
+            <span class="row-no">04</span>
+            <h3>Gypsum</h3>
+            <strong>Covered storage or silo</strong>
+            <p>The method depends on consumption, dosing tolerance, labour exposure and automation level.</p>
+          </article>
+          <article>
+            <span class="row-no">05</span>
+            <h3>Sand / pond ash</h3>
+            <strong>Open or covered stockyard</strong>
+            <p>Storage must account for rain, drainage, moisture variation, dust and loader movement.</p>
+          </article>
+          <article>
+            <span class="row-no">06</span>
+            <h3>Aluminium powder / paste</h3>
+            <strong>Controlled dedicated storage</strong>
+            <p>A safety-critical system governed by the selected product SDS and competent hazard assessment.</p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -348,34 +380,36 @@
     </section>
 
     <!-- ============ FUTURE EXPANSION SECTION ============ -->
-    <section class="comparison section wrap">
-      <div class="section-intro">
-        <div>
-          <p class="eyebrow">Future expansion</p>
-          <h2 class="display-heading">Build larger now—or<br /><span>preserve the route later?</span></h2>
+    <section class="comparison section" id="expansion">
+      <div class="wrap">
+        <div class="section-intro">
+          <div>
+            <p class="eyebrow">Future expansion</p>
+            <h2 class="display-heading">Build larger now—or<br /><span>preserve the route later?</span></h2>
+          </div>
+          <p>The largest silo is not automatically the best expansion strategy. Compare present investment with future disruption and redundancy.</p>
         </div>
-        <p>The largest silo is not automatically the best expansion strategy. Compare present investment with future disruption and redundancy.</p>
-      </div>
 
-      <div class="comparison-grid">
-        <article>
-          <p class="tag">Option 01</p>
-          <h3>Install larger now</h3>
-          <p>Suitable when expansion is highly probable and the additional initial civil and equipment cost is justified.</p>
-          <small>Trade-off: higher early capital and inventory exposure.</small>
-        </article>
-        <article>
-          <p class="tag">Option 02</p>
-          <h3>Prepare the layout</h3>
-          <p>Reserve foundation loads, access, pipelines and structural space when expansion timing remains uncertain.</p>
-          <small>Trade-off: reserved space must remain protected.</small>
-        </article>
-        <article class="featured">
-          <p class="tag">Option 03</p>
-          <h3>Add a parallel silo</h3>
-          <p>Useful when staged capacity and operating redundancy are commercially valuable.</p>
-          <small>Trade-off: later erection and tie-in downtime require planning.</small>
-        </article>
+        <div class="comparison-grid">
+          <article>
+            <p class="tag">Option 01</p>
+            <h3>Install larger now</h3>
+            <p>Suitable when expansion is highly probable and the additional initial civil and equipment cost is justified.</p>
+            <small>Trade-off: higher early capital and inventory exposure.</small>
+          </article>
+          <article>
+            <p class="tag">Option 02</p>
+            <h3>Prepare the layout</h3>
+            <p>Reserve foundation loads, access, pipelines and structural space when expansion timing remains uncertain.</p>
+            <small>Trade-off: reserved space must remain protected.</small>
+          </article>
+          <article class="featured">
+            <p class="tag">Option 03</p>
+            <h3>Add a parallel silo</h3>
+            <p>Useful when staged capacity and operating redundancy are commercially valuable.</p>
+            <small>Trade-off: later erection and tie-in downtime require planning.</small>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -404,55 +438,57 @@
     </section>
 
     <!-- ============ PROCUREMENT CLARITY SCOPE TABLE ============ -->
-    <section class="scope section wrap">
-      <div class="section-intro">
-        <div>
-          <p class="eyebrow">Procurement clarity</p>
-          <h2 class="display-heading">A silo quotation is<br /><span>more than shell volume.</span></h2>
+    <section class="scope section" id="scope">
+      <div class="wrap">
+        <div class="section-intro">
+          <div>
+            <p class="eyebrow">Procurement clarity</p>
+            <h2 class="display-heading">A silo quotation is<br /><span>more than shell volume.</span></h2>
+          </div>
+          <p>Define the complete operating system and supplier boundaries before comparing prices.</p>
         </div>
-        <p>Define the complete operating system and supplier boundaries before comparing prices.</p>
-      </div>
 
-      <div class="scope-table" role="region" aria-label="Silo system scope table" tabindex="0">
-        <table>
-          <thead>
-            <tr>
-              <th>System area</th>
-              <th>Items to define before ordering</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Receiving</td>
-              <td>Vehicle connection, unloading-air source, hose or pipe route, identification and safe access.</td>
-            </tr>
-            <tr>
-              <td>Filling protection</td>
-              <td>Bin-vent filter, high-level alarm and interlock, pressure protection and safe venting.</td>
-            </tr>
-            <tr>
-              <td>Inventory control</td>
-              <td>Point-level switches, continuous measurement, reconciliation and PLC/SCADA display.</td>
-            </tr>
-            <tr>
-              <td>Discharge</td>
-              <td>Cone geometry, flow aids, isolation, feeder, conveyor and flexible connections.</td>
-            </tr>
-            <tr>
-              <td>Safety &amp; access</td>
-              <td>Earthing, ladders, platforms, guarding, isolation and work-at-height provisions.</td>
-            </tr>
-            <tr>
-              <td>Scope boundary</td>
-              <td>Equipment, civil, electrical, erection, testing, commissioning and client responsibilities.</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="scope-table" role="region" aria-label="Silo system scope table" tabindex="0">
+          <table>
+            <thead>
+              <tr>
+                <th>System area</th>
+                <th>Items to define before ordering</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Receiving</td>
+                <td>Vehicle connection, unloading-air source, hose or pipe route, identification and safe access.</td>
+              </tr>
+              <tr>
+                <td>Filling protection</td>
+                <td>Bin-vent filter, high-level alarm and interlock, pressure protection and safe venting.</td>
+              </tr>
+              <tr>
+                <td>Inventory control</td>
+                <td>Point-level switches, continuous measurement, reconciliation and PLC/SCADA display.</td>
+              </tr>
+              <tr>
+                <td>Discharge</td>
+                <td>Cone geometry, flow aids, isolation, feeder, conveyor and flexible connections.</td>
+              </tr>
+              <tr>
+                <td>Safety &amp; access</td>
+                <td>Earthing, ladders, platforms, guarding, isolation and work-at-height provisions.</td>
+              </tr>
+              <tr>
+                <td>Scope boundary</td>
+                <td>Equipment, civil, electrical, erection, testing, commissioning and client responsibilities.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </section>
 
     <!-- ============ AVOIDABLE PROJECT ERRORS (10 MISTAKES) ============ -->
-    <section class="mistakes section">
+    <section class="mistakes section" id="mistakes">
       <div class="wrap">
         <p class="eyebrow">Avoidable project errors</p>
         <h2 class="display-heading">Ten mistakes that<br /><span>create future bottlenecks.</span></h2>
@@ -473,76 +509,78 @@
     </section>
 
     <!-- ============ INVESTOR QUESTIONS / FAQ ============ -->
-    <section class="faq section wrap" id="faq">
-      <div class="section-intro">
-        <div>
-          <p class="eyebrow">Investor questions</p>
-          <h2 class="display-heading">Frequently asked.<br /><span>Directly answered.</span></h2>
+    <section class="faq section" id="faq">
+      <div class="wrap">
+        <div class="section-intro">
+          <div>
+            <p class="eyebrow">Investor questions</p>
+            <h2 class="display-heading">Frequently asked.<br /><span>Directly answered.</span></h2>
+          </div>
+          <p>Concise answers for early planning. Final equipment and capacities still depend on verified project inputs.</p>
         </div>
-        <p>Concise answers for early planning. Final equipment and capacities still depend on verified project inputs.</p>
-      </div>
 
-      <div class="faq-list">
-        <details open>
-          <summary><span>01</span>How is AAC silo capacity calculated? <b aria-hidden="true">+</b></summary>
-          <div>
-            <p>Start with verified daily material consumption and required inventory days. Check delivery-lot size, then convert stored mass into volume using verified loose bulk density. Gross silo volume must not be treated as fully usable capacity.</p>
-          </div>
-        </details>
+        <div class="faq-list">
+          <details open>
+            <summary><span>01</span>How is AAC silo capacity calculated? <b aria-hidden="true">+</b></summary>
+            <div>
+              <p>Start with verified daily material consumption and required inventory days. Check delivery-lot size, then convert stored mass into volume using verified loose bulk density. Gross silo volume must not be treated as fully usable capacity.</p>
+            </div>
+          </details>
 
-        <details>
-          <summary><span>02</span>How many days of raw-material inventory should an AAC plant maintain? <b aria-hidden="true">+</b></summary>
-          <div>
-            <p>There is no universal number. Decide it material by material using delivery reliability, supplier distance, lead time, seasonal disruption, working capital and production criticality.</p>
-          </div>
-        </details>
+          <details>
+            <summary><span>02</span>How many days of raw-material inventory should an AAC plant maintain? <b aria-hidden="true">+</b></summary>
+            <div>
+              <p>There is no universal number. Decide it material by material using delivery reliability, supplier distance, lead time, seasonal disruption, working capital and production criticality.</p>
+            </div>
+          </details>
 
-        <details>
-          <summary><span>03</span>Should a silo accept one full bulker load? <b aria-hidden="true">+</b></summary>
-          <div>
-            <p>Available free usable capacity should be checked against the planned delivery lot before unloading. The required margin depends on the delivery arrangement and overfill-control strategy.</p>
-          </div>
-        </details>
+          <details>
+            <summary><span>03</span>Should a silo accept one full bulker load? <b aria-hidden="true">+</b></summary>
+            <div>
+              <p>Available free usable capacity should be checked against the planned delivery lot before unloading. The required margin depends on the delivery arrangement and overfill-control strategy.</p>
+            </div>
+          </details>
 
-        <details>
-          <summary><span>04</span>Can cement, lime and fly ash use one conveying line? <b aria-hidden="true">+</b></summary>
-          <div>
-            <p>A shared line can create contamination, flow and operational risks. Feasibility must be verified for material compatibility, cleaning, conveying duty and production sequence.</p>
-          </div>
-        </details>
+          <details>
+            <summary><span>04</span>Can cement, lime and fly ash use one conveying line? <b aria-hidden="true">+</b></summary>
+            <div>
+              <p>A shared line can create contamination, flow and operational risks. Feasibility must be verified for material compatibility, cleaning, conveying duty and production sequence.</p>
+            </div>
+          </details>
 
-        <details>
-          <summary><span>05</span>When is a gypsum silo justified? <b aria-hidden="true">+</b></summary>
-          <div>
-            <p>Consider it when consumption, bag-handling burden, dosing repeatability and production requirements justify the additional equipment and maintenance.</p>
-          </div>
-        </details>
+          <details>
+            <summary><span>05</span>When is a gypsum silo justified? <b aria-hidden="true">+</b></summary>
+            <div>
+              <p>Consider it when consumption, bag-handling burden, dosing repeatability and production requirements justify the additional equipment and maintenance.</p>
+            </div>
+          </details>
 
-        <details>
-          <summary><span>06</span>Should sand or pond ash be stored under a shed? <b aria-hidden="true">+</b></summary>
-          <div>
-            <p>It depends on rainfall, dust, drainage, moisture sensitivity, process control and economics. A shed reduces direct weather exposure but does not replace drainage and housekeeping.</p>
-          </div>
-        </details>
+          <details>
+            <summary><span>06</span>Should sand or pond ash be stored under a shed? <b aria-hidden="true">+</b></summary>
+            <div>
+              <p>It depends on rainfall, dust, drainage, moisture sensitivity, process control and economics. A shed reduces direct weather exposure but does not replace drainage and housekeeping.</p>
+            </div>
+          </details>
 
-        <details>
-          <summary><span>07</span>Is aluminium powder handled like cement or lime? <b aria-hidden="true">+</b></summary>
-          <div>
-            <p>No. Fine aluminium powder can present serious fire and dust-explosion hazards. Storage and dosing must follow the product SDS, supplier instructions and a project-specific hazard assessment.</p>
-          </div>
-        </details>
+          <details>
+            <summary><span>07</span>Is aluminium powder handled like cement or lime? <b aria-hidden="true">+</b></summary>
+            <div>
+              <p>No. Fine aluminium powder can present serious fire and dust-explosion hazards. Storage and dosing must follow the product SDS, supplier instructions and a project-specific hazard assessment.</p>
+            </div>
+          </details>
 
-        <details>
-          <summary><span>08</span>Should silos be oversized for future expansion? <b aria-hidden="true">+</b></summary>
-          <div>
-            <p>Sometimes. Compare a larger initial silo with expansion-ready foundations or a future parallel silo. The right choice depends on expansion certainty, capital, downtime and redundancy.</p>
-          </div>
-        </details>
+          <details>
+            <summary><span>08</span>Should silos be oversized for future expansion? <b aria-hidden="true">+</b></summary>
+            <div>
+              <p>Sometimes. Compare a larger initial silo with expansion-ready foundations or a future parallel silo. The right choice depends on expansion certainty, capital, downtime and redundancy.</p>
+            </div>
+          </details>
+        </div>
       </div>
     </section>
 
     <!-- ============ CLOSING CONSULTATION SECTION ============ -->
-    <section class="consultation" id="consultation">
+    <section class="consultation section" id="consultation">
       <div class="wrap consultation-grid">
         <div>
           <p class="eyebrow">Before civil layout finalisation</p>
