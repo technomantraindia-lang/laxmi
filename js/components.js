@@ -903,8 +903,24 @@
     footer.insertAdjacentHTML('beforebegin', resolvedHTML);
   }
 
+  function injectFloatingWidgets() {
+    if (document.querySelector('.hp-floating-widgets')) return;
+
+    var widgetsHTML = '<div class="hp-floating-widgets" aria-label="Quick contact">' +
+      '<a href="https://wa.me/918980800839" target="_blank" rel="noopener noreferrer" class="hp-float-btn hp-float-btn--whatsapp" aria-label="WhatsApp Us" title="Chat on WhatsApp">' +
+      '<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.188 8.188 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42a8.182 8.182 0 0 1 2.41 5.83c.01 4.54-3.68 8.23-8.23 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.98-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.06 0 1.21.88 2.39 1.01 2.56.12.17 1.74 2.66 4.21 3.73.59.25 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.17-.48-.29z"/></svg>' +
+      '</a>' +
+      '<a href="tel:+918980800839" class="hp-float-btn hp-float-btn--phone" aria-label="Call Us" title="Call Us Directly">' +
+      '<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.053 15.053 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.36 11.36 0 0 1 8.57 3.9c.07-.52-.34-.9-.87-.9H4.15c-.55 0-.96.44-.99.98C2.84 13.78 10.23 21.17 19.1 20.85c.54-.02.9-.45.9-.99v-3.58c0-.53-.41-.9-.99-.9z"/></svg>' +
+      '</a>' +
+      '</div>';
+
+    document.body.insertAdjacentHTML('beforeend', widgetsHTML);
+  }
+
   function initApp() {
     injectHeader();
+    injectFloatingWidgets();
     injectPagePagination();
     injectFloatingPill();
     injectFooter();

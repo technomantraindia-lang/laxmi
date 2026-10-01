@@ -2032,6 +2032,29 @@
   transform: scale(1.1);
 }
 
+@media (max-width: 768px) {
+  .hp-floating-widgets {
+    top: auto;
+    bottom: 84px;
+    transform: none;
+    gap: 3px;
+  }
+  .hp-float-btn {
+    width: 42px;
+    height: 42px;
+  }
+  .hp-float-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media print {
+  .hp-floating-widgets {
+    display: none !important;
+  }
+}
+
 /* ==================================================
    GLOBAL INNER PAGE NEXT & PREVIOUS NAVIGATION
    ================================================== */
