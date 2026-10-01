@@ -1,41 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Verified customer case study from Laxmi En-Fab Pvt. Ltd., AAC plant and machinery manufacturer." />
-  <title>Customer Case Study | Why Laxmi | Laxmi En-Fab</title>
-  
-  <!-- Google Fonts: Geist & Geist Mono -->
+  <title>Customer Success Stories &amp; Case Studies | Laxmi En-Fab</title>
+  <meta name="description" content="Customer-verified AAC plant performance, project planning, expansions and after-sales support from Laxmi En-Fab." />
+  <meta name="keywords" content="Laxmi En-Fab customer reviews, AAC plant case studies, AAC plant testimonials, AAC machinery performance" />
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Proven where it matters. In daily production. | Laxmi En-Fab" />
+  <meta property="og:description" content="Real customer experiences from AAC plants engineered, supplied, expanded and supported by Laxmi En-Fab." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet" />
-  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/components.css" />
-  <link rel="stylesheet" href="css/homepage.css" />
-  <link rel="stylesheet" href="css/engineering.css" />
+  <link rel="stylesheet" href="css/customer-stories.css" />
   <link rel="stylesheet" href="css/responsive.css" />
 </head>
-<body class="engineering-inner-page testimonial-page" data-page="why-laxmi">
+<body class="stories-page">
 
   <!-- Shared Header Injection Placeholder -->
   <div id="site-header"></div>
 
-  <!-- Breadcrumb injected dynamically by testimonials.js -->
-  <div id="breadcrumb-mount"></div>
+  <!-- Global Breadcrumb Navigation -->
+  <nav class="site-breadcrumb" aria-label="Breadcrumb">
+    <div class="site-breadcrumb__inner">
+      <a href="index.html">Home</a>
+      <span class="bc-sep">/</span>
+      <a href="why-laxmi.html">Why Laxmi</a>
+      <span class="bc-sep">/</span>
+      <span class="bc-current">Customer Success Stories</span>
+    </div>
+  </nav>
 
-  <!-- Testimonial Root — rendered dynamically by js/testimonials.js from JSON data -->
-  <main id="testimonial-root"></main>
+  <!-- ============ 1. HERO SECTION ============ -->
+  <section class="stories-hero">
+    <div class="stories-hero-grid" aria-hidden="true"></div>
+    <div class="stories-hero-content">
+      <p class="stories-eyebrow light">Customer-verified experience</p>
+      <h1>Proven where it matters.<br /><span>In daily production.</span></h1>
+      <p class="stories-hero-copy">Real experiences from customers operating AAC plants engineered, supplied, commissioned, expanded and supported by Laxmi En-Fab.</p>
+      <div class="stories-hero-actions">
+        <a class="cs-btn cs-btn-light" href="#stories">Explore Customer Stories <span>&darr;</span></a>
+        <a class="cs-text-link" href="#verification">How these stories are verified</a>
+      </div>
+
+      <div class="stories-hero-proof" id="verification">
+        <span>Signed customer statements</span>
+        <span>Operating-plant results</span>
+        <span>Project details</span>
+        <span>Production records</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2. INTRO SECTION ============ -->
+  <section class="stories-intro">
+    <div class="stories-shell">
+      <p class="stories-eyebrow">Evidence before assertion</p>
+      <h2>A machinery supplier can make claims.<br /><span>An operating customer can verify them.</span></h2>
+      <p>Every story is based on a customer statement, operating experience, production record or repeat order. Open each complete story to inspect the context and supporting evidence.</p>
+    </div>
+  </section>
+
+  <!-- ============ 3. STORIES LIST & FILTERS ============ -->
+  <section class="stories-section" id="stories">
+    <div class="stories-shell">
+      
+      <div class="stories-index-head">
+        <div>
+          <p class="stories-eyebrow">Customer story index</p>
+          <h2>What customers<br />have verified.</h2>
+        </div>
+        <p class="stories-result-count" id="stories-result-count">10 verified customer stories</p>
+      </div>
+
+      <!-- Filter Tabs Bar -->
+      <div class="stories-filters" role="tablist" aria-label="Filter case studies by topic">
+        <button class="is-active" role="tab" aria-selected="true" data-filter="all">All Stories</button>
+        <button role="tab" aria-selected="false" data-filter="Supplier Selection">Supplier Selection</button>
+        <button role="tab" aria-selected="false" data-filter="Project Planning">Project Planning</button>
+        <button role="tab" aria-selected="false" data-filter="Plant Automation">Plant Automation</button>
+        <button role="tab" aria-selected="false" data-filter="Production Performance">Production Performance</button>
+        <button role="tab" aria-selected="false" data-filter="Block Quality">Block Quality</button>
+        <button role="tab" aria-selected="false" data-filter="Energy Efficiency">Energy Efficiency</button>
+        <button role="tab" aria-selected="false" data-filter="After-Sales Support">After-Sales Support</button>
+        <button role="tab" aria-selected="false" data-filter="Repeat Orders">Repeat Orders</button>
+        <button role="tab" aria-selected="false" data-filter="First-Time Investor">First-Time Investor</button>
+        <button role="tab" aria-selected="false" data-filter="Plant Expansion">Plant Expansion</button>
+      </div>
+
+      <!-- Dynamic Story Cards Container -->
+      <div id="stories-container" class="story-list">
+        <!-- Rendered dynamically by js/customer-stories.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ 4. CLOSING CTA SECTION ============ -->
+  <section class="stories-closing" id="about">
+    <div class="stories-shell">
+      <p class="stories-eyebrow light">Verify before you invest</p>
+      <h2>Bring us your project.<br /><span>We&rsquo;ll bring you the evidence.</span></h2>
+      <p>Discuss capacity, raw materials, automation, expansion planning and the operating plants most relevant to your project.</p>
+      <a class="cs-btn cs-btn-light" href="contact.html">Discuss Your AAC Project <span>&nearr;</span></a>
+    </div>
+  </section>
+
+  <!-- ============ 5. FULL STORY MODAL DIALOG ============ -->
+  <div class="story-modal-overlay" id="story-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-story-title">
+    <div class="story-modal">
+      <header class="story-modal-header">
+        <div>
+          <span class="stories-eyebrow">Verified Case Study</span>
+          <h2 id="modal-story-title">Case Study Title</h2>
+          <p id="modal-story-customer">Customer Name · Role · Location</p>
+        </div>
+        <button type="button" class="story-modal-close" id="btn-close-story-modal" aria-label="Close story dialog">&times;</button>
+      </header>
+      <div class="story-modal-body">
+        <div class="story-modal-quote" id="modal-story-quote">"Customer quote"</div>
+        <div id="modal-story-paragraphs">
+          <!-- Story paragraphs -->
+        </div>
+        <div class="story-modal-specs" id="modal-story-specs">
+          <!-- Key project specifications -->
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Shared Footer Injection Placeholder -->
   <div id="site-footer"></div>
 
-  <script src="js/main.js"></script>
-  <script src="js/navigation.js"></script>
-  <script src="js/animations.js"></script>
+  <!-- Scripts -->
   <script src="js/components.js"></script>
-  <script src="js/testimonials.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/customer-stories.js"></script>
 </body>
 </html>
