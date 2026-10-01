@@ -18,6 +18,7 @@
   --cs-muted: #84909c;
   --cs-divider: #dce2e7;
   --cs-emerald: #10b981;
+  --cs-max: 1400px;
 }
 
 .stories-page {
@@ -26,6 +27,7 @@
   background: #ffffff;
   position: relative;
   width: 100%;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -36,7 +38,8 @@
 }
 
 .stories-shell {
-  width: min(1400px, 90vw);
+  width: min(var(--cs-max, 1400px), calc(100% - 10vw));
+  max-width: 1400px;
   margin-inline: auto;
 }
 
@@ -44,12 +47,13 @@
 .stories-hero {
   color: #ffffff;
   background: linear-gradient(128deg, #07121f 0%, #0b2740 58%, #104f7d 100%);
-  min-height: 85vh;
+  min-height: 88vh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   position: relative;
   overflow: hidden;
-  padding: 100px 0 80px;
+  padding: 100px 0 0;
 }
 
 .stories-hero::after {
@@ -78,9 +82,8 @@
 
 .stories-hero-content {
   z-index: 2;
-  width: min(1400px, 90vw);
-  margin: auto;
   position: relative;
+  padding: 40px 0 60px;
 }
 
 .stories-eyebrow {
@@ -188,8 +191,7 @@
   height: 76px;
   font-size: 12px;
   font-weight: 600;
-  width: min(1400px, 90vw);
-  margin: 60px auto 0;
+  margin-top: 40px;
 }
 
 .stories-hero-proof span + span {
@@ -1135,6 +1137,9 @@
 
 /* ================= 7. RESPONSIVE MEDIA QUERIES ================= */
 @media (max-width: 992px) {
+  .stories-shell {
+    width: calc(100% - 48px);
+  }
   .story-inner {
     grid-template-columns: 1fr;
     gap: 48px;
@@ -1161,6 +1166,9 @@
 }
 
 @media (max-width: 640px) {
+  .stories-shell {
+    width: calc(100% - 32px);
+  }
   .stories-hero {
     min-height: auto;
     padding: 80px 0 60px;

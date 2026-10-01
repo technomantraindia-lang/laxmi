@@ -44,7 +44,7 @@
   <!-- ============ 1. HERO SECTION ============ -->
   <section class="stories-hero">
     <div class="stories-hero-grid" aria-hidden="true"></div>
-    <div class="stories-hero-content">
+    <div class="stories-hero-content stories-shell">
       <p class="stories-eyebrow light">Customer-verified experience</p>
       <h1>Proven where it matters.<br /><span>In daily production.</span></h1>
       <p class="stories-hero-copy">Real experiences from customers operating AAC plants engineered, supplied, commissioned, expanded and supported by Laxmi En-Fab.</p>
@@ -52,13 +52,13 @@
         <a class="cs-btn cs-btn-light" href="#stories">Explore Customer Stories <span>&darr;</span></a>
         <a class="cs-text-link" href="#verification">How these stories are verified</a>
       </div>
+    </div>
 
-      <div class="stories-hero-proof" id="verification">
-        <span>Signed customer statements</span>
-        <span>Operating-plant results</span>
-        <span>Project details</span>
-        <span>Production records</span>
-      </div>
+    <div class="stories-hero-proof stories-shell" id="verification">
+      <span>Signed customer statements</span>
+      <span>Operating-plant results</span>
+      <span>Project details</span>
+      <span>Production records</span>
     </div>
   </section>
 
@@ -73,37 +73,35 @@
 
   <!-- ============ 3. STORIES LIST & FILTERS ============ -->
   <section class="stories-section" id="stories">
-    <div class="stories-shell">
-      
-      <div class="stories-index-head">
-        <div>
-          <p class="stories-eyebrow">Customer story index</p>
-          <h2>What customers<br />have verified.</h2>
-        </div>
-        <p class="stories-result-count" id="stories-result-count">10 verified customer stories</p>
+    
+    <div class="stories-index-head stories-shell">
+      <div>
+        <p class="stories-eyebrow">Customer story index</p>
+        <h2>What customers<br />have verified.</h2>
       </div>
-
-      <!-- Filter Tabs Bar -->
-      <div class="stories-filters" role="tablist" aria-label="Filter case studies by topic">
-        <button class="is-active" role="tab" aria-selected="true" data-filter="all">All Stories</button>
-        <button role="tab" aria-selected="false" data-filter="Supplier Selection">Supplier Selection</button>
-        <button role="tab" aria-selected="false" data-filter="Project Planning">Project Planning</button>
-        <button role="tab" aria-selected="false" data-filter="Plant Automation">Plant Automation</button>
-        <button role="tab" aria-selected="false" data-filter="Production Performance">Production Performance</button>
-        <button role="tab" aria-selected="false" data-filter="Block Quality">Block Quality</button>
-        <button role="tab" aria-selected="false" data-filter="Energy Efficiency">Energy Efficiency</button>
-        <button role="tab" aria-selected="false" data-filter="After-Sales Support">After-Sales Support</button>
-        <button role="tab" aria-selected="false" data-filter="Repeat Orders">Repeat Orders</button>
-        <button role="tab" aria-selected="false" data-filter="First-Time Investor">First-Time Investor</button>
-        <button role="tab" aria-selected="false" data-filter="Plant Expansion">Plant Expansion</button>
-      </div>
-
-      <!-- Dynamic Story Cards Container -->
-      <div id="stories-container" class="story-list">
-        <!-- Rendered dynamically by js/customer-stories.js -->
-      </div>
-
+      <p class="stories-result-count" id="stories-result-count">10 verified customer stories</p>
     </div>
+
+    <!-- Filter Tabs Bar -->
+    <div class="stories-filters stories-shell" role="tablist" aria-label="Filter case studies by topic">
+      <button class="is-active" role="tab" aria-selected="true" data-filter="all">All Stories</button>
+      <button role="tab" aria-selected="false" data-filter="Supplier Selection">Supplier Selection</button>
+      <button role="tab" aria-selected="false" data-filter="Project Planning">Project Planning</button>
+      <button role="tab" aria-selected="false" data-filter="Plant Automation">Plant Automation</button>
+      <button role="tab" aria-selected="false" data-filter="Production Performance">Production Performance</button>
+      <button role="tab" aria-selected="false" data-filter="Block Quality">Block Quality</button>
+      <button role="tab" aria-selected="false" data-filter="Energy Efficiency">Energy Efficiency</button>
+      <button role="tab" aria-selected="false" data-filter="After-Sales Support">After-Sales Support</button>
+      <button role="tab" aria-selected="false" data-filter="Repeat Orders">Repeat Orders</button>
+      <button role="tab" aria-selected="false" data-filter="First-Time Investor">First-Time Investor</button>
+      <button role="tab" aria-selected="false" data-filter="Plant Expansion">Plant Expansion</button>
+    </div>
+
+    <!-- Dynamic Story Cards Container (Full-width backgrounds with centered inner shells) -->
+    <div id="stories-container" class="story-list">
+      <!-- Rendered dynamically by js/customer-stories.js -->
+    </div>
+
   </section>
 
   <!-- ============ 4. CLOSING CTA SECTION ============ -->
