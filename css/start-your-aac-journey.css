@@ -1,0 +1,456 @@
+/* Start Your AAC Journey Page Stylesheet */
+:root {
+  --journey-navy: #0B1727;
+  --journey-blue: #0C4F80;
+  --journey-deep: #09263D;
+  --journey-white: #ffffff;
+  --journey-silver: #EEF2F5;
+  --journey-light: #F5F7F8;
+  --journey-secondary: #5E6874;
+  --journey-muted: #84909C;
+  --journey-divider: #DCE2E7;
+  --journey-highlight: #8FC6EC;
+}
+
+.journey-body {
+  margin: 0;
+  background: var(--journey-white);
+  color: var(--journey-navy);
+  font-family: var(--font-primary, 'Geist', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif);
+  -webkit-font-smoothing: antialiased;
+}
+
+.journey-shell {
+  max-width: 1400px;
+  margin: auto;
+  padding-left: clamp(22px, 7vw, 112px);
+  padding-right: clamp(22px, 7vw, 112px);
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+.journey-hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(145deg, var(--journey-navy) 0%, #0b2135 48%, var(--journey-deep) 100%);
+  color: var(--journey-white);
+  min-height: clamp(570px, 78vh, 820px);
+  display: flex;
+  align-items: flex-end;
+}
+
+.journey-hero::before {
+  content: "";
+  position: absolute;
+  width: 62vw;
+  height: 62vw;
+  right: -24vw;
+  top: -28vw;
+  border: 1px solid rgba(143, 198, 236, 0.18);
+  border-radius: 50%;
+  box-shadow: 0 0 0 12vw rgba(143, 198, 236, 0.025), 0 0 0 24vw rgba(143, 198, 236, 0.018);
+  pointer-events: none;
+}
+
+.journey-hero .journey-shell {
+  width: 100%;
+  padding-top: 150px;
+  padding-bottom: clamp(80px, 10vw, 138px);
+  position: relative;
+  z-index: 2;
+}
+
+.journey-eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--journey-highlight);
+  margin: 0 0 30px;
+}
+
+.journey-hero h1 {
+  font-size: clamp(58px, 7vw, 104px);
+  letter-spacing: -0.065em;
+  line-height: 0.94;
+  font-weight: 500;
+  max-width: 1050px;
+  margin: 0;
+}
+
+.journey-hero h1 span {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.journey-hero-foot {
+  margin-top: 48px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 15px;
+}
+
+.journey-line {
+  width: 52px;
+  height: 1px;
+  background: var(--journey-highlight);
+}
+
+/* ==========================================================================
+   JOURNEYS ACCORDION LIST
+   ========================================================================== */
+.journeys {
+  background: var(--journey-white);
+  padding: clamp(95px, 11vw, 165px) 0;
+}
+
+.journey-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 76px;
+}
+
+.journey-intro h2 {
+  font-size: clamp(42px, 5.5vw, 76px);
+  line-height: 1;
+  letter-spacing: -0.055em;
+  font-weight: 500;
+  margin: 0;
+  color: var(--journey-navy);
+}
+
+.journey-intro p {
+  align-self: end;
+  max-width: 530px;
+  margin: 0;
+  color: var(--journey-secondary);
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.path-list {
+  border-top: 1px solid var(--journey-divider);
+}
+
+.path {
+  border-bottom: 1px solid var(--journey-divider);
+}
+
+.path summary {
+  list-style: none;
+  cursor: pointer;
+  position: relative;
+  display: grid;
+  grid-template-columns: 100px minmax(280px, 1.1fr) minmax(260px, 0.8fr) 48px;
+  align-items: center;
+  gap: 30px;
+  padding: 48px 0;
+  overflow: hidden;
+  isolation: isolate;
+  user-select: none;
+}
+
+.path summary::-webkit-details-marker {
+  display: none;
+}
+
+.path summary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--journey-light);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+  z-index: -1;
+}
+
+.path summary:hover::before,
+.path summary:focus-visible::before,
+.path[open] summary::before {
+  transform: scaleY(1);
+}
+
+.path .num {
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  color: var(--journey-muted);
+  font-family: var(--font-geist-mono, monospace);
+  font-weight: 500;
+}
+
+.path h3 {
+  font-size: clamp(26px, 3vw, 42px);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  font-weight: 500;
+  margin: 0;
+  color: var(--journey-navy);
+  transition: transform 0.4s;
+}
+
+.path p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--journey-secondary);
+  margin: 0;
+  max-width: 440px;
+}
+
+.path .go {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--journey-divider);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: transform 0.35s, background 0.35s, border-color 0.35s, color 0.35s;
+  color: var(--journey-navy);
+}
+
+.path .go svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.35s;
+}
+
+.path summary:hover h3 {
+  transform: translateX(7px);
+}
+
+.path summary:hover .go,
+.path[open] .go {
+  background: var(--journey-navy);
+  border-color: var(--journey-navy);
+  color: #fff;
+}
+
+.path[open] .go svg {
+  transform: rotate(90deg);
+}
+
+.path summary:focus-visible {
+  outline: 2px solid var(--journey-blue);
+  outline-offset: 5px;
+}
+
+.subnav {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  padding: 0 0 52px;
+  animation: journeyReveal 0.45s ease;
+}
+
+.subnav-grid {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 52px;
+}
+
+.subnav a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 0;
+  border-top: 1px solid var(--journey-divider);
+  font-size: 17px;
+  color: var(--journey-navy);
+  text-decoration: none;
+  transition: color 0.25s, padding 0.25s;
+}
+
+.subnav a::after {
+  content: "↗";
+  color: var(--journey-muted);
+  font-size: 15px;
+  transition: transform 0.25s, color 0.25s;
+}
+
+.subnav a:hover {
+  color: var(--journey-blue);
+  padding-left: 7px;
+}
+
+.subnav a:hover::after {
+  color: var(--journey-blue);
+  transform: translate(2px, -2px);
+}
+
+.subnav-note {
+  grid-column: 2;
+  color: var(--journey-muted);
+  font-size: 13px;
+  margin: 18px 0 0;
+}
+
+@keyframes journeyReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ==========================================================================
+   CLOSING SECTION
+   ========================================================================== */
+.journey-closing {
+  background: var(--journey-silver);
+  padding: clamp(100px, 12vw, 170px) 0;
+}
+
+.journey-closing-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 80px;
+  align-items: end;
+}
+
+.journey-closing h2 {
+  font-size: clamp(42px, 6vw, 82px);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+  font-weight: 500;
+  margin: 0;
+  color: var(--journey-navy);
+}
+
+.journey-closing h2 span {
+  color: var(--journey-muted);
+}
+
+.journey-closing-side p {
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--journey-secondary);
+  margin: 0 0 28px;
+}
+
+.journey-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--journey-navy);
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--journey-navy);
+  text-decoration: none;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.journey-text-link:hover {
+  color: var(--journey-blue);
+  border-color: var(--journey-blue);
+}
+
+/* ==========================================================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 900px) {
+  .journey-intro,
+  .journey-closing-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .journey-intro {
+    gap: 28px;
+  }
+  
+  .path summary {
+    grid-template-columns: 58px 1fr 44px;
+    gap: 18px;
+  }
+  
+  .path p {
+    grid-column: 2 / 4;
+  }
+  
+  .path .go {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  
+  .subnav {
+    grid-template-columns: 58px 1fr;
+  }
+  
+  .journey-closing-grid {
+    gap: 42px;
+  }
+}
+
+@media (max-width: 600px) {
+  .journey-hero {
+    min-height: 650px;
+  }
+  
+  .journey-hero .journey-shell {
+    padding-top: 120px;
+    padding-bottom: 72px;
+  }
+  
+  .journey-hero h1 {
+    font-size: clamp(54px, 16vw, 72px);
+  }
+  
+  .journeys {
+    padding: 86px 0;
+  }
+  
+  .journey-intro {
+    margin-bottom: 46px;
+  }
+  
+  .path summary {
+    grid-template-columns: 42px 1fr 40px;
+    padding: 34px 0;
+    gap: 12px;
+  }
+  
+  .path h3 {
+    font-size: 27px;
+  }
+  
+  .path p {
+    font-size: 15px;
+  }
+  
+  .path .go {
+    width: 38px;
+    height: 38px;
+  }
+  
+  .subnav {
+    grid-template-columns: 42px 1fr;
+    padding-bottom: 38px;
+  }
+  
+  .subnav-grid {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
+  
+  .subnav a {
+    font-size: 16px;
+    padding: 15px 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}

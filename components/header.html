@@ -19,6 +19,38 @@
 <body>
     <!-- Standalone preview & fetch template for site header -->
     <header class="site-header" id="site-header">
+        <!-- Top Utility Bar Strip -->
+        <div class="site-topbar">
+            <div class="site-topbar__inner">
+                <div class="site-topbar__left">
+                    <a href="../start-your-aac-journey.html" class="site-topbar__link">
+                        <span class="site-topbar__dot"></span>
+                        <span>Start Your AAC Journey</span>
+                        <span class="site-topbar__arrow">↗</span>
+                    </a>
+                    <span class="site-topbar__sep">|</span>
+                    <a href="../dpr-calculator.html" class="site-topbar__link site-topbar__link--roi">
+                        <span class="site-topbar__roi-pulse" aria-hidden="true"></span>
+                        <span class="site-topbar__roi-badge">DPR TOOL</span>
+                        <span class="site-topbar__roi-text">AAC Plant DPR / ROI Calculator</span>
+                        <span class="site-topbar__arrow">↗</span>
+                    </a>
+                </div>
+                <div class="site-topbar__right">
+                    <a href="tel:+918980800839" class="site-topbar__phone" aria-label="Call +91 89808 00839">
+                        <svg class="site-topbar__phone-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.053 15.053 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.36 11.36 0 0 1 8.57 3.9c.07-.52-.34-.9-.87-.9H4.15c-.55 0-.96.44-.99.98C2.84 13.78 10.23 21.17 19.1 20.85c.54-.02.9-.45.9-.99v-3.58c0-.53-.41-.9-.99-.9z"/>
+                        </svg>
+                        <span>+91 89808 00839</span>
+                    </a>
+                    <button type="button" class="site-topbar__menu-btn" id="topbar-menu-btn" aria-label="Open navigation menu" aria-controls="nav-drawer">
+                        <span>MENU</span>
+                        <span class="site-topbar__menu-icon"><span></span><span></span><span></span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
         <div class="site-header__inner">
             
             <!-- Brand / Logo -->
@@ -30,12 +62,6 @@
             <nav id="site-nav" class="site-header__nav" aria-label="Primary navigation">
                 <ul class="nav-list" role="menubar">
 
-                    <!-- 1. Start Your AAC Journey -->
-                    <li class="nav-item" role="none">
-                        <a href="../why-aac-blocks.html" class="nav-link" data-drawer-trigger="solutions">
-                            Start Your AAC Journey
-                        </a>
-                    </li>
 
                     <!-- 2. AAC Investor Academy -->
                     <li class="nav-item" role="none">
@@ -96,11 +122,8 @@
             <div class="drawer-primary-col">
                 <nav class="drawer-nav">
                     <ul class="drawer-menu-list">
-                        <li class="drawer-menu-item has-sub" data-sub="solutions">
-                            <a href="../why-aac-blocks.html" class="drawer-menu-link">
-                                <span>Start Your AAC Journey</span>
-                                <span class="drawer-arrow">›</span>
-                            </a>
+                        <li class="drawer-menu-item" data-sub="none">
+                            <a href="../start-your-aac-journey.html" class="drawer-menu-link">Start Your AAC Journey</a>
                         </li>
                         <li class="drawer-menu-item has-sub" data-sub="academy">
                             <a href="../academy/academy.html" class="drawer-menu-link">
@@ -136,20 +159,7 @@
 
             <!-- COLUMN 2: SECONDARY SUB-PANES -->
             <div class="drawer-secondary-col" id="drawer-secondary-col">
-                <!-- Subpane 1: Start Your AAC Journey -->
-                <div class="drawer-sub-pane" id="sub-pane-solutions">
-                    <button type="button" class="drawer-mobile-back-btn" data-back-level="1"><span>←</span> <span>Main Menu</span></button>
-                    <h3 class="sub-pane-title"><a href="../raw-materials.html">Start Your AAC Journey</a></h3>
-                    <ul class="col2-menu-list">
-                        <li class="col2-item" data-tertiary="sol-raw-materials">
-                            <a href="../raw-materials.html" class="col2-link">
-                                <strong>Raw Materials</strong>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Subpane 2: AAC Investor Academy -->
+                <!-- Subpane 1: AAC Investor Academy -->
                 <div class="drawer-sub-pane" id="sub-pane-academy">
                     <button type="button" class="drawer-mobile-back-btn" data-back-level="1"><span>←</span> <span>Main Menu</span></button>
                     <h3 class="sub-pane-title"><a href="../academy/academy.html">AAC Investor Academy</a></h3>

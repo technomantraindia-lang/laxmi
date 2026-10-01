@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AAC Plant DPR / ROI Calculator | Laxmi En-Fab</title>
+  <meta name="description" content="Interactive AAC plant production cost, profitability, working capital and five-year DPR calculator by Laxmi En-Fab." />
+  <meta name="keywords" content="AAC plant DPR calculator, AAC plant ROI, AAC production cost calculator, AAC plant investment, Laxmi En-Fab" />
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/dpr-calculator.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body class="roi-page-body">
+
+  <!-- Shared Header Injection Placeholder -->
+  <div id="site-header"></div>
+
+  <!-- Global Breadcrumb Navigation -->
+  <nav class="site-breadcrumb" aria-label="Breadcrumb">
+    <div class="site-breadcrumb__inner">
+      <a href="index.html">Home</a>
+      <span class="bc-sep">/</span>
+      <span class="bc-current">AAC Plant DPR / ROI Calculator</span>
+    </div>
+  </nav>
+
+  <!-- Live DPR Application Wrapper -->
+  <main class="dpr-calc-page" id="top">
+
+    <!-- DPR SUB-STRIP -->
+    <header class="dpr-brand-bar">
+      <div class="brand">
+        <img src="assets/images/laxmi-logo.png" alt="Laxmi En-Fab" />
+        <div>
+          <b>LAXMI EN-FAB</b>
+          <small>AAC PROJECT INTELLIGENCE</small>
+        </div>
+      </div>
+      <span class="live">● Live project model</span>
+    </header>
+
+    <!-- ============ HERO SECTION ============ -->
+    <section class="hero">
+      <div>
+        <p>DECISION REPORT &middot; INDIA</p>
+        <h1>See the economics<br />before the machinery.</h1>
+        <span>Build a transparent AAC block project model from your local prices, capacity and investment assumptions.</span>
+      </div>
+      <aside>
+        <small>LIVE OPERATING MARGIN</small>
+        <b>&#x20B9;<span id="hero-live-margin">698</span><sup>/m&sup3;</sup></b>
+        <span id="hero-live-sub">At 80% plant utilisation &middot; &#x20B9;8.37 per piece</span>
+      </aside>
+    </section>
+
+    <!-- ============ IN-PAGE STICKY NAV ============ -->
+    <nav class="dpr-subnav" aria-label="DPR navigation">
+      <a href="#basis"><b>01</b>Project</a>
+      <a href="#cost"><b>02</b>Production cost</a>
+      <a href="#investment"><b>03</b>Investment</a>
+      <a href="#forecast"><b>04</b>5-year DPR</a>
+    </nav>
+
+    <!-- ============ SECTION 01 — PROJECT BASIS ============ -->
+    <section id="basis" class="section">
+      <div class="title">
+        <p>01 &middot; PROJECT BASIS</p>
+        <h2>Define the plant you intend to build.</h2>
+      </div>
+
+      <div class="grid four">
+        <!-- Capacity with Piece Converter -->
+        <div class="field piece-field">
+          <span>Rated plant capacity</span>
+          <div>
+            <input type="number" id="inp-capacity" step="10" min="0" max="2000" value="500" />
+            <b>m&sup3;/day</b>
+          </div>
+          <small>0 to 2,000 m&sup3;/day &middot; adjusts in steps of 10</small>
+
+          <div class="piece-converter">
+            <select id="sel-block-size-1" aria-label="Block size selector">
+              <option value="100" selected>4 inch (100 mm)</option>
+              <option value="150">6 inch (150 mm)</option>
+              <option value="200">8 inch (200 mm)</option>
+              <option value="230">9 inch (230 mm)</option>
+            </select>
+            <strong id="disp-daily-pieces">41,665 pieces/day</strong>
+            <small id="disp-piece-factor">83.33 blocks in 1 m&sup3;</small>
+          </div>
+        </div>
+
+        <!-- Silica Material -->
+        <label class="field">
+          <span>Main silica material</span>
+          <select id="sel-silica">
+            <option value="Sand" selected>Sand</option>
+            <option value="Dry Fly Ash">Dry Fly Ash</option>
+            <option value="Pond Ash">Pond Ash</option>
+          </select>
+        </label>
+
+        <!-- Operating Days -->
+        <label class="field">
+          <span>Operating days</span>
+          <div>
+            <input type="number" id="inp-days" step="any" min="0" value="28" />
+            <b>days/month</b>
+          </div>
+        </label>
+
+        <!-- Selling Price with Piece Converter -->
+        <div class="field piece-field">
+          <span>Selling Price</span>
+          <div>
+            <input type="number" id="inp-sell" step="50" value="3000" />
+            <b>&#x20B9;/m&sup3;</b>
+          </div>
+
+          <div class="piece-converter">
+            <select id="sel-block-size-2" aria-label="Block size selector for selling price">
+              <option value="100" selected>4 inch (100 mm)</option>
+              <option value="150">6 inch (150 mm)</option>
+              <option value="200">8 inch (200 mm)</option>
+              <option value="230">9 inch (230 mm)</option>
+            </select>
+            <label>
+              <span>Price per piece</span>
+              <input type="number" id="inp-sell-piece" step="1" value="36" />
+            </label>
+            <small id="disp-sell-sync">Automatically equals &#x20B9;3,000/m&sup3;</small>
+          </div>
+        </div>
+
+        <!-- Plant Utilisation Slider -->
+        <label class="field wide">
+          <span>Expected plant utilisation</span>
+          <div class="range">
+            <input type="range" id="inp-util" min="10" max="100" value="80" />
+            <b id="disp-util">80%</b>
+          </div>
+          <small id="disp-monthly-output">11,200 m&sup3; estimated monthly production</small>
+        </label>
+      </div>
+
+      <!-- KPI Strip -->
+      <div class="strip">
+        <div class="k"><small>Connected load</small><b id="strip-hp">600 HP</b></div>
+        <div class="k"><small>Boiler guidance</small><b id="strip-boiler">6 TPH</b></div>
+        <div class="k"><small>Steam consumption</small><b id="strip-steam-kg">140 kg/m&sup3;</b></div>
+        <div class="k"><small>Monthly output</small><b id="strip-month-output">11,200 m&sup3;</b></div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 02 — PRODUCTION ECONOMICS ============ -->
+    <section id="cost" class="section pale">
+      <div class="title split">
+        <div class="title">
+          <p>02 &middot; PRODUCTION ECONOMICS</p>
+          <h2>Granular production cost and energy inputs.</h2>
+        </div>
+        <aside>
+          <small>ESTIMATED PRODUCTION COST</small>
+          <b>&#x20B9;<span id="disp-cost-m3">2,302</span><sup>/m&sup3;</sup></b>
+          <span id="disp-cost-piece">&#x20B9;27.63 per piece</span>
+        </aside>
+      </div>
+
+      <div class="costgrid">
+        <!-- 7-Ingredient Raw Material Table -->
+        <div class="table">
+          <div class="tablehead">
+            <b>Raw material recipe</b>
+            <span>Quantity and price are editable</span>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Material</th>
+                <th>Consumption kg/m&sup3;</th>
+                <th>Price &#x20B9;/kg</th>
+                <th>Cost/m&sup3;</th>
+              </tr>
+            </thead>
+            <tbody id="tbody-recipe">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Boiler & Process Energy Side Controls -->
+        <div class="side">
+          <label class="field">
+            <span>Boiler fuel</span>
+            <select id="sel-fuel">
+              <option value="Coal" selected>Coal</option>
+              <option value="Wood">Wood</option>
+              <option value="Rice Husk">Rice Husk</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Fuel price</span>
+            <div>
+              <input type="number" id="inp-fuel-p" step="any" min="0" value="7" />
+              <b>&#x20B9;/kg</b>
+            </div>
+          </label>
+
+          <div class="steam-auto">
+            <div>
+              <span>Automatic steam consumption</span>
+              <b id="disp-auto-steam">140 kg/m&sup3;</b>
+              <small id="disp-auto-steam-note">140 kg base for 6 TPH boiler</small>
+            </div>
+            <label>
+              <span>
+                <b>Efficient Steam Transfer</b>
+                <small>Capacity-based steam saving</small>
+              </span>
+              <button type="button" class="switch-btn" id="switch-steam-transfer" role="switch" aria-checked="false" data-state="unchecked">
+                <span class="switch-thumb"></span>
+              </button>
+            </label>
+          </div>
+
+          <label class="field">
+            <span>Steam generation</span>
+            <div>
+              <input type="number" id="inp-steam-gen" step="any" min="0" value="4" />
+              <b>kg steam/kg fuel</b>
+            </div>
+            <small>Editable base boiler efficiency</small>
+          </label>
+
+          <label class="inline-efficiency heat-efficiency">
+            <span>
+              <b>Efficient Heat Utilization</b>
+              <small id="disp-heat-efficiency-note">Increases steam generation by 15% for this boiler capacity</small>
+            </span>
+            <button type="button" class="switch-btn" id="switch-heat-util" role="switch" aria-checked="false" data-state="unchecked">
+              <span class="switch-thumb"></span>
+            </button>
+          </label>
+
+          <div class="fuel-metrics">
+            <div>
+              <span>Effective steam generation</span>
+              <b id="disp-eff-steam-gen">4.00 kg/kg fuel</b>
+            </div>
+            <div>
+              <span>Fuel consumption</span>
+              <b id="disp-fuel-cons">35.00 kg fuel/m&sup3;</b>
+            </div>
+          </div>
+
+          <label class="field">
+            <span>Power consumption</span>
+            <div>
+              <input type="number" id="inp-power-qty" step="any" min="0" value="15" />
+              <b>kWh/m&sup3;</b>
+            </div>
+          </label>
+
+          <label class="inline-efficiency">
+            <span>
+              <b>Efficient Control Panel System</b>
+              <small id="disp-panel-note">Reduces power consumption by 15% &middot; effective 15.00 kWh/m&sup3;</small>
+            </span>
+            <button type="button" class="switch-btn" id="switch-panel" role="switch" aria-checked="false" data-state="unchecked">
+              <span class="switch-thumb"></span>
+            </button>
+          </label>
+
+          <label class="field">
+            <span>Electricity tariff</span>
+            <div>
+              <input type="number" id="inp-power-p" step="any" min="0" value="8" />
+              <b>&#x20B9;/kWh</b>
+            </div>
+          </label>
+
+          <label class="field">
+            <span>Other process cost</span>
+            <div>
+              <input type="number" id="inp-other-cost" step="any" min="0" value="80" />
+              <b>&#x20B9;/m&sup3;</b>
+            </div>
+          </label>
+
+          <label class="field">
+            <span>Process wastage</span>
+            <div>
+              <input type="number" id="inp-waste" step="any" min="0" value="4" />
+              <b>%</b>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Manpower Summary Strip -->
+      <div class="manpower-summary">
+        <div>
+          <small>MONTHLY MANPOWER COST</small>
+          <b id="disp-payroll-total">&#x20B9;18,73,000</b>
+          <span id="disp-payroll-detail">87 shift positions &middot; &#x20B9;167/m&sup3;</span>
+        </div>
+        <label class="shift-select">
+          <span>RUNNING SHIFTS</span>
+          <select id="sel-running-shifts">
+            <option value="1">1 shift</option>
+            <option value="2" selected>2 shifts</option>
+          </select>
+          <small>Updates production &amp; stock-yard manpower</small>
+        </label>
+        <button type="button" class="btn-manpower-sheet" id="btn-open-manpower">View / edit manpower calculation <b>&#x2197;</b></button>
+      </div>
+
+      <!-- Handling Cost Add-ons -->
+      <div class="cost-addons">
+        <div class="addon-cost">
+          <label class="field">
+            <span>Segregation cost</span>
+            <div>
+              <input type="number" id="inp-seg-cost" step="any" min="0" value="35" />
+              <b>&#x20B9;/m&sup3;</b>
+            </div>
+          </label>
+          <label class="cost-switch">
+            <span>
+              <b>Auto Palletize System</b>
+              <small>Selected: segregation cost becomes zero</small>
+            </span>
+            <button type="button" class="switch-btn" id="switch-auto-palletize" role="switch" aria-checked="false" data-state="unchecked">
+              <span class="switch-thumb"></span>
+            </button>
+          </label>
+        </div>
+
+        <div class="addon-cost">
+          <label class="field">
+            <span>Loading cost</span>
+            <div>
+              <input type="number" id="inp-load-cost" step="any" min="0" value="45" />
+              <b>&#x20B9;/m&sup3;</b>
+            </div>
+          </label>
+          <label class="cost-switch">
+            <span>
+              <b>With Pallet Loading or Palletless Stacking</b>
+              <small>Selected: loading cost becomes zero</small>
+            </span>
+            <button type="button" class="switch-btn" id="switch-pallet-loading" role="switch" aria-checked="false" data-state="unchecked">
+              <span class="switch-thumb"></span>
+            </button>
+          </label>
+        </div>
+
+        <label class="field">
+          <span>Transportation cost</span>
+          <div>
+            <input type="number" id="inp-transport" step="10" min="0" value="0" />
+            <b>&#x20B9;/m&sup3;</b>
+          </div>
+        </label>
+
+        <label class="field">
+          <span>Unloading cost</span>
+          <div>
+            <input type="number" id="inp-unload" step="5" min="0" value="0" />
+            <b>&#x20B9;/m&sup3;</b>
+          </div>
+        </label>
+      </div>
+
+      <!-- 9 Dynamic Cost Components Cards -->
+      <div class="components" id="disp-cost-components">
+        <!-- Dynamically populated 9 cards -->
+      </div>
+    </section>
+
+    <!-- ============ SECTION 03 — INVESTMENT & CAPEX ============ -->
+    <section id="investment" class="section">
+      <div class="title">
+        <p>03 &middot; CUSTOMER-SUPPLIED INVESTMENT</p>
+        <h2>Use quotation-backed values.</h2>
+        <span>No machinery price or investment figure is automatically assumed by Laxmi En-Fab.</span>
+      </div>
+
+      <div class="notice">
+        <b>Commercial safeguard</b>
+        <span>Enter actual values available to you. The complete investment proposal will be provided separately after technical discussion and submission.</span>
+      </div>
+
+      <div class="grid four">
+        <label class="field">
+          <span>Plant &amp; machinery</span>
+          <div><input type="number" id="inp-machinery" step="2500000" min="0" value="0" /><b>&#x20B9;</b></div>
+          <small class="formatted-value" id="disp-fmt-machinery">Entered value: &#x20B9;0</small>
+        </label>
+
+        <label class="field">
+          <span>Utilities</span>
+          <div><input type="number" id="inp-utilities" step="1000000" min="0" value="0" /><b>&#x20B9;</b></div>
+          <small class="formatted-value" id="disp-fmt-utilities">Entered value: &#x20B9;0</small>
+          <small>Boiler, steam, water, air &amp; distribution</small>
+        </label>
+
+        <label class="field">
+          <span>Electrical</span>
+          <div><input type="number" id="inp-electrical" step="500000" min="0" value="0" /><b>&#x20B9;</b></div>
+          <small class="formatted-value" id="disp-fmt-electrical">Entered value: &#x20B9;0</small>
+          <small>Load, transformer, panels &amp; cabling</small>
+        </label>
+
+        <label class="field">
+          <span>Civil &amp; structures</span>
+          <div><input type="number" id="inp-civil" step="1000000" min="0" value="0" /><b>&#x20B9;</b></div>
+          <small class="formatted-value" id="disp-fmt-civil">Entered value: &#x20B9;0</small>
+          <small>Buildings, foundations, storage &amp; lab</small>
+        </label>
+
+        <label class="field">
+          <span>Execution</span>
+          <div><input type="number" id="inp-execution" step="500000" min="0" value="0" /><b>&#x20B9;</b></div>
+          <small class="formatted-value" id="disp-fmt-execution">Entered value: &#x20B9;0</small>
+          <small>Erection, cranes, testing &amp; training</small>
+        </label>
+
+        <label class="field">
+          <span>Pre-operative expense</span>
+          <div><input type="number" id="inp-preop" step="500000" min="0" value="0" /><b>&#x20B9;</b></div>
+          <small class="formatted-value" id="disp-fmt-preop">Entered value: &#x20B9;0</small>
+          <small>Approvals, recruitment, insurance &amp; fees</small>
+        </label>
+
+        <label class="field">
+          <span>Contingency</span>
+          <div><input type="number" id="inp-contingency" step="500000" min="0" value="0" /><b>&#x20B9;</b></div>
+          <small class="formatted-value" id="disp-fmt-contingency">Entered value: &#x20B9;0</small>
+        </label>
+
+        <label class="field">
+          <span>Interest during construction</span>
+          <div><input type="number" id="inp-idc" step="500000" min="0" value="0" /><b>&#x20B9;</b></div>
+          <small class="formatted-value" id="disp-fmt-idc">Entered value: &#x20B9;0</small>
+        </label>
+      </div>
+
+      <!-- Working Capital Bar -->
+      <div class="working">
+        <div>
+          <small>ESTIMATED WORKING CAPITAL</small>
+          <b id="disp-wc-total">&#x20B9;4,14,00,000</b>
+          <span id="disp-wc-days">45 operating days &middot; rounded to nearest &#x20B9;1 lakh</span>
+        </div>
+        <div class="mini">
+          <label class="field">
+            <span>Receivable period</span>
+            <div><input type="number" id="inp-credit" step="any" min="0" value="30" /><b>days</b></div>
+          </label>
+          <label class="field">
+            <span>Raw-material stock</span>
+            <div><input type="number" id="inp-rm-stock" step="any" min="0" value="7" /><b>days</b></div>
+          </label>
+          <label class="field">
+            <span>Finished-goods stock</span>
+            <div><input type="number" id="inp-fg-stock" step="any" min="0" value="7" /><b>days</b></div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Financial Calculation Parameters Toggle -->
+      <button type="button" class="optional" id="btn-toggle-finance">
+        Financial calculation parameters <b id="disp-finance-indicator">&#x2212;</b>
+      </button>
+
+      <div id="finance-params-wrap">
+        <div class="finance-explain">
+          <b>Editable DPR calculation inputs</b>
+          <span>These assumptions directly recalculate depreciation, outstanding-loan interest, cash accrual and DSCR for all five years.</span>
+        </div>
+
+        <div class="grid six">
+          <label class="field">
+            <span>Promoter equity</span>
+            <div><input type="number" id="inp-equity" step="any" min="0" value="30" /><b>%</b></div>
+          </label>
+          <label class="field">
+            <span>Loan interest</span>
+            <div><input type="number" id="inp-loan-rate" step="any" min="0" value="12" /><b>% p.a.</b></div>
+          </label>
+          <label class="field">
+            <span>Loan repayment</span>
+            <div><input type="number" id="inp-loan-years" step="any" min="0" value="7" /><b>years</b></div>
+          </label>
+          <label class="field">
+            <span>Depreciation</span>
+            <div><input type="number" id="inp-depr" step="any" min="0" value="8" /><b>% p.a.</b></div>
+          </label>
+          <label class="field">
+            <span>Income tax</span>
+            <div><input type="number" id="inp-tax" step="any" min="0" value="25" /><b>%</b></div>
+          </label>
+          <label class="field">
+            <span>Net GST funding impact</span>
+            <div><input type="number" id="inp-gst" step="any" min="0" value="0" /><b>&#x20B9;</b></div>
+          </label>
+        </div>
+
+        <div class="grid five year-inputs">
+          <label class="field">
+            <span>Year 1 utilisation</span>
+            <div><input type="number" id="inp-y1" step="any" min="0" max="100" value="60" /><b>%</b></div>
+          </label>
+          <label class="field">
+            <span>Year 2 utilisation</span>
+            <div><input type="number" id="inp-y2" step="any" min="0" max="100" value="75" /><b>%</b></div>
+          </label>
+          <label class="field">
+            <span>Year 3 utilisation</span>
+            <div><input type="number" id="inp-y3" step="any" min="0" max="100" value="85" /><b>%</b></div>
+          </label>
+          <label class="field">
+            <span>Year 4 utilisation</span>
+            <div><input type="number" id="inp-y4" step="any" min="0" max="100" value="90" /><b>%</b></div>
+          </label>
+          <label class="field">
+            <span>Year 5 utilisation</span>
+            <div><input type="number" id="inp-y5" step="any" min="0" max="100" value="90" /><b>%</b></div>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 04 — FIVE-YEAR DPR ============ -->
+    <section id="forecast" class="section dark">
+      <div class="title split">
+        <div class="title">
+          <p>04 &middot; FIVE-YEAR DPR</p>
+          <h2>From operating margin to debt service.</h2>
+        </div>
+        <aside>
+          <small>TOTAL PROJECT OUTLAY</small>
+          <b id="disp-project-outlay-wrap">&#x20B9;<span id="disp-project-outlay">4,14,00,000</span></b>
+          <span>Including estimated working capital</span>
+        </aside>
+      </div>
+
+      <!-- KPIs -->
+      <div class="kpis">
+        <div class="k">
+          <small>Monthly EBITDA</small>
+          <b id="kpi-monthly-ebitda">&#x20B9;78,14,552</b>
+          <span>at selected utilisation</span>
+        </div>
+        <div class="k">
+          <small>Break-even utilisation</small>
+          <b id="kpi-be-util">17.9%</b>
+          <span id="kpi-be-qty">2,500 m&sup3;/month</span>
+        </div>
+        <div class="k">
+          <small>Operating margin</small>
+          <b id="kpi-op-margin">23.3%</b>
+          <span id="kpi-op-margin-sub">&#x20B9;698 per m&sup3;</span>
+        </div>
+        <div class="k">
+          <small>Project payback</small>
+          <b id="kpi-payback">Within Year 1</b>
+          <span>cash-accrual basis</span>
+        </div>
+      </div>
+
+      <!-- 5-Year Forecast Table -->
+      <div class="forecast">
+        <table>
+          <thead>
+            <tr id="forecast-thead-row">
+              <!-- Dynamically rendered header -->
+            </tr>
+          </thead>
+          <tbody id="forecast-tbody">
+            <!-- Dynamically rendered 5-year rows -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Capacity Recommendation -->
+      <div class="capacity-recommendation">
+        <div>
+          <small>AUTOMATIC WORKABLE CAPACITY SUGGESTION</small>
+          <b id="disp-cap-rec-title">Complete investment inputs to receive a capacity suggestion</b>
+          <span id="disp-cap-rec-sub">The recommendation requires project investment, finance assumptions and operating costs.</span>
+        </div>
+        <button type="button" id="btn-use-suggested-cap" style="display: none;">Use suggested capacity</button>
+      </div>
+
+      <!-- Decision Document Download Action -->
+      <div class="action">
+        <div>
+          <p>DECISION DOCUMENT</p>
+          <h3>Download the complete branded DPR.</h3>
+          <span>Includes assumptions, cost details, manpower schedule, investment and five-year projections.</span>
+        </div>
+        <button type="button" id="btn-unlock-dpr">Unlock DPR report &#x2197;</button>
+      </div>
+    </section>
+
+
+    <!-- ============ SLIDE-OVER MANPOWER DRAWER ============ -->
+    <div class="dpr-manpower-overlay" id="manpower-overlay"></div>
+    <aside class="manpower-sheet" id="manpower-sheet" aria-label="Manpower Calculation Schedule">
+      <div class="manpower-header">
+        <h3>Monthly manpower calculation</h3>
+        <p>Edit salary, people or shifts. The total automatically updates in the DPR.</p>
+        <button type="button" class="manpower-close" id="btn-close-manpower" aria-label="Close manpower sheet">&times;</button>
+      </div>
+      <div class="manpower-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Role</th>
+              <th>Salary</th>
+              <th>People</th>
+              <th>Shifts</th>
+              <th>Monthly</th>
+            </tr>
+          </thead>
+          <tbody id="tbody-manpower">
+            <!-- Dynamically populated 28 positions -->
+          </tbody>
+        </table>
+      </div>
+      <div class="manpower-total">
+        <span>Total monthly manpower</span>
+        <b id="disp-drawer-payroll">&#x20B9;18,73,000</b>
+        <small id="disp-drawer-per-m3">&#x20B9;167 per m&sup3; at selected utilisation</small>
+        <button type="button" id="btn-restore-manpower">Restore capacity-based defaults</button>
+      </div>
+    </aside>
+
+    <!-- ============ MODAL UNLOCK DPR DIALOG ============ -->
+    <div class="dpr-modal-overlay" id="dpr-modal-overlay">
+      <div class="dpr-modal">
+        <button type="button" class="dpr-modal-close" id="btn-close-modal" aria-label="Close modal">&times;</button>
+        <p>YOUR DPR REPORT</p>
+        <h2>Unlock your detailed DPR</h2>
+        <span>Submit your contact details to download a personalised Laxmi-branded project report.</span>
+
+        <div class="dpr-overview">
+          <b>Your report includes</b>
+          <span>Project assumptions &middot; raw-material costing &middot; production economics &middot; complete manpower schedule &middot; investment and finance &middot; five-year projections &middot; Laxmi minimum workable capacity suggestion</span>
+        </div>
+
+        <div class="report-contact">
+          <a href="mailto:aac@laxmienfab.com">Email AAC Team</a>
+          <a href="https://wa.me/918980800839" target="_blank" rel="noreferrer">WhatsApp</a>
+        </div>
+
+        <form id="dpr-lead-form">
+          <label>
+            Customer name *
+            <input type="text" id="lead-name" required autocomplete="name" placeholder="Full Name" />
+          </label>
+          <label>
+            Mobile number *
+            <input type="tel" id="lead-phone" required autocomplete="tel" placeholder="+91 XXXXX XXXXX" />
+          </label>
+          <label>
+            Company
+            <input type="text" id="lead-company" autocomplete="organization" placeholder="Company Name" />
+          </label>
+          <label>
+            Email
+            <input type="email" id="lead-email" autocomplete="email" placeholder="name@company.com" />
+          </label>
+          <button type="submit" id="btn-submit-lead">Submit details &amp; unlock DPR</button>
+          <div class="submit-success" id="lead-success-msg" style="display: none;">
+            &#x2713; Your customized DPR report has been unlocked. Click below to print/save your PDF!
+          </div>
+          <small>Direct contact: aac@laxmienfab.com &middot; +91 8980800839</small>
+        </form>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Shared Footer Injection Placeholder -->
+  <div id="site-footer"></div>
+
+  <!-- Shared Scripts -->
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- DPR Live Calculation Engine -->
+  <script>
+    (function () {
+      'use strict';
+
+      // 1. Initial State Definition
+      var state = {
+        capacity: 500,
+        blockSize: '100',
+        runningShifts: 2,
+        days: 28,
+        silica: 'Sand',
+        util: 80,
+        sell: 3000,
+        silicaQty: 450,
+        cementQty: 105,
+        limeQty: 60,
+        alQty: 0.4,
+        gypsumQty: 10,
+        mouldQty: 0.7,
+        soapQty: 0.3,
+        silicaP: 0.5,
+        cement: 5.5,
+        lime: 8,
+        al: 450,
+        gypsum: 4,
+        mould: 30,
+        soap: 25,
+        fuel: 'Coal',
+        fuelP: 7,
+        steamGeneration: 4,
+        efficientTransfer: false,
+        efficientHeat: false,
+        powerQty: 15,
+        efficientPanel: false,
+        powerP: 8,
+        other: 80,
+        waste: 4,
+        seg: 35,
+        autoPalletize: false,
+        load: 45,
+        palletLoading: false,
+        transport: 0,
+        unload: 0,
+        credit: 30,
+        rmStock: 7,
+        fgStock: 7,
+        machinery: 0,
+        utilities: 0,
+        electrical: 0,
+        civil: 0,
+        execution: 0,
+        preop: 0,
+        contingency: 0,
+        idc: 0,
+        equity: 30,
+        loanRate: 12,
+        loanYears: 7,
+        depr: 8,
+        tax: 25,
+        gst: 0,
+        y1: 60,
+        y2: 75,
+        y3: 85,
+        y4: 90,
+        y5: 90
+      };
+
+      var manpowerOverrides = {};
+      var isUnlocked = false;
+
+      // 2. Complete 28-Position Manpower Schema
+      function createRole(id, group, name, salary, people, shifts, direct) {
+        return {
+          id: id,
+          group: group,
+          name: name,
+          salary: salary,
+          people: people,
+          shifts: shifts,
+          direct: !!direct
+        };
+      }
+
+      var MANPOWER_ROLES = [
+        // Production (Total 46 pos at cap=500, 2 shifts)
+        createRole('ballmill', 'Production', 'Ball Mill Operator', 22000, function() { return 1; }, function() { return 2; }),
+        createRole('slurry', 'Production', 'Slurry Pump Operator', 18000, function() { return 1; }, function() { return 2; }),
+        createRole('batching', 'Production', 'Batching Plant Operator', 25000, function() { return 1; }, function() { return 2; }),
+        createRole('pouring', 'Production', 'Pouring Assistant', 20000, function() { return 1; }, function() { return 2; }),
+        createRole('cutting', 'Production', 'Cutting Line Operator', 22000, function(cap) { return cap < 401 ? 1 : 2; }, function() { return 2; }),
+        createRole('cuttingAsst', 'Production', 'Cutting Line Assistant', 15000, function(cap) { return cap < 401 ? 1 : 2; }, function() { return 2; }),
+        createRole('tilt', 'Production', 'Tilting Machine Operator', 20000, function() { return 1; }, function() { return 2; }),
+        createRole('autoclave', 'Production', 'Autoclave Operator', 22000, function(cap) { return cap < 401 ? 1 : 2; }, function() { return 2; }),
+        createRole('prodSup', 'Production', 'Production Supervisor', 28000, function() { return 1; }, function() { return 2; }),
+        createRole('prodHelper', 'Production', 'Production Helper', 14000, function(cap) { return cap < 301 ? 4 : cap < 601 ? 8 : cap < 1001 ? 12 : 16; }, function() { return 2; }),
+        createRole('demoulding', 'Production', 'De-moulding / Cleaning', 15000, function(cap) { return cap < 401 ? 1 : 2; }, function() { return 2; }),
+        createRole('transferCar', 'Production', 'Transfer Car Operator', 18000, function() { return 1; }, function() { return 2; }),
+
+        // Maintenance (Total 7 pos at cap=500, 2 shifts)
+        createRole('maintEng', 'Maintenance', 'Maintenance Engineer', 45000, function() { return 1; }, function() { return 1; }),
+        createRole('fitter', 'Maintenance', 'Mechanical Fitter', 28000, function() { return 1; }, function() { return 2; }),
+        createRole('electrician', 'Maintenance', 'Electrician', 30000, function() { return 1; }, function() { return 2; }),
+        createRole('helper', 'Maintenance', 'Maintenance Helper', 15000, function() { return 1; }, function() { return 2; }),
+
+        // Stock Yard (Total 20 pos at cap=500, 2 shifts)
+        createRole('segSup', 'Stock yard', 'Segregation Supervisor', 22000, function() { return 1; }, function() { return 2; }),
+        createRole('yardSup', 'Stock yard', 'Stock Yard Supervisor', 22000, function() { return 1; }, function() { return 2; }),
+        createRole('forklift', 'Stock yard', 'Forklift Driver', 20000, function(cap) { return cap < 301 ? 1 : cap < 601 ? 3 : cap < 1001 ? 4 : 6; }, function() { return 2; }),
+        createRole('loadSup', 'Stock yard', 'Loading Supervisor', 20000, function() { return 1; }, function() { return 2; }),
+        createRole('yardHelper', 'Stock yard', 'Yard / Loading Helper', 13000, function(cap) { return cap < 301 ? 2 : cap < 601 ? 4 : cap < 1001 ? 6 : 8; }, function() { return 2; }),
+
+        // Boiler (Direct contract lump sum)
+        createRole('boiler', 'Boiler', 'Boiler Contract', function(cap) { return cap < 171 ? 100000 : cap < 351 ? 125000 : cap < 701 ? 150000 : cap < 1001 ? 200000 : 250000; }, function() { return 1; }, function() { return 1; }, true),
+
+        // Quality (Total 5 pos at cap=500, 2 shifts)
+        createRole('labOp', 'Quality', 'Lab Operator / Chemist', 22000, function() { return 1; }, function() { return 2; }),
+        createRole('labAsst', 'Quality', 'Lab Assistant', 15000, function() { return 1; }, function() { return 2; }),
+        createRole('quality', 'Quality', 'Quality Supervisor', 50000, function() { return 1; }, function() { return 1; }),
+
+        // Plant Management (Total 2 pos at cap=500, 2 shifts)
+        createRole('manager', 'Plant management', 'Plant Manager / GM', 80000, function() { return 1; }, function() { return 1; }),
+        createRole('plantAsst', 'Plant management', 'Plant Assistant', 35000, function() { return 1; }, function() { return 1; }),
+
+        // Factory Office (Total 7 pos at cap=500, 2 shifts)
+        createRole('accountant', 'Factory office', 'Accountant', 25000, function() { return 1; }, function() { return 1; }),
+        createRole('rmCoord', 'Factory office', 'Raw Material Coordinator', 22000, function() { return 1; }, function() { return 1; }),
+        createRole('peon', 'Factory office', 'Office Peon', 12000, function() { return 1; }, function() { return 1; }),
+        createRole('security', 'Factory office', 'Security Guard', 15000, function() { return 2; }, function() { return 2; })
+      ];
+
+      // Formatters
+      function formatIndian(val, decimals) {
+        if (!isFinite(val)) return '\u2014';
+        var d = decimals !== undefined ? decimals : 0;
+        return new Intl.NumberFormat('en-IN', {
+          maximumFractionDigits: d,
+          minimumFractionDigits: d
+        }).format(val);
+      }
+
+      function formatCurrency(val, decimals) {
+        return '\u20B9' + formatIndian(val, decimals);
+      }
+
+      function clamp(val, min, max) {
+        return Math.min(max, Math.max(min, val || 0));
+      }
+
+      // 3. Main Calculation Engine
+      function runModel() {
+        var cap = clamp(state.capacity, 0, 2000);
+        var r = clamp(state.util, 1, 100) / 100;
+        var month = cap * state.days * r;
+
+        var pieceFactor = state.blockSize === '100' ? 83.33 : (state.blockSize === '150' ? 55.55 : (state.blockSize === '200' ? 41.66 : 36.23));
+        var dailyPieces = cap * pieceFactor;
+        var sellPiece = state.sell / pieceFactor;
+
+        var boiler = cap <= 170 ? 2 : (cap <= 250 ? 3 : (cap <= 350 ? 4 : (cap <= 450 ? 5 : (cap <= 700 ? 6 : (cap <= 1000 ? 8 : (cap < 1500 ? 12 : 14))))));
+        var baseSteamKg = boiler === 2 ? 170 : (boiler === 3 ? 160 : (boiler === 4 ? 150 : (boiler === 5 ? 145 : (boiler === 6 ? 140 : 135))));
+        var transferSaving = state.efficientTransfer ? (cap < 100 ? 10 : (cap < 300 ? 15 : (cap < 700 ? 20 : 25))) : 0;
+        var steamKg = Math.max(0, baseSteamKg - transferSaving);
+
+        var effSteamGen = state.steamGeneration * (state.efficientHeat ? (boiler <= 4 ? 1.1 : 1.15) : 1);
+        var fuelCons = steamKg / Math.max(effSteamGen, 0.01);
+        var steamCost = fuelCons * state.fuelP;
+
+        // Raw materials recipe table
+        var rawMaterials = [
+          { name: state.silica, qty: state.silicaQty, price: state.silicaP, keyQ: 'silicaQty', keyP: 'silicaP' },
+          { name: 'Cement', qty: state.cementQty, price: state.cement, keyQ: 'cementQty', keyP: 'cement' },
+          { name: 'Lime', qty: state.limeQty, price: state.lime, keyQ: 'limeQty', keyP: 'lime' },
+          { name: 'Aluminium', qty: state.alQty, price: state.al, keyQ: 'alQty', keyP: 'al' },
+          { name: 'Gypsum', qty: state.gypsumQty, price: state.gypsum, keyQ: 'gypsumQty', keyP: 'gypsum' },
+          { name: 'Mould oil', qty: state.mouldQty, price: state.mould, keyQ: 'mouldQty', keyP: 'mould' },
+          { name: 'Soap oil', qty: state.soapQty, price: state.soap, keyQ: 'soapQty', keyP: 'soap' }
+        ];
+
+        var rawTotal = 0;
+        rawMaterials.forEach(function (rm) {
+          rm.cost = rm.qty * rm.price;
+          rawTotal += rm.cost;
+        });
+
+        // Manpower calculation
+        var manpowerRows = MANPOWER_ROLES.map(function (rDef) {
+          var override = manpowerOverrides[rDef.id] || {};
+          var baseSal = typeof rDef.salary === 'function' ? rDef.salary(cap) : rDef.salary;
+          var salary = override.salary !== undefined ? override.salary : baseSal;
+          var people = override.people !== undefined ? override.people : rDef.people(cap);
+          var defShifts = (rDef.group === 'Production' || rDef.group === 'Stock yard') ? state.runningShifts : rDef.shifts(cap);
+          var shifts = override.shifts !== undefined ? override.shifts : defShifts;
+          var total = rDef.direct ? salary : (salary * people * shifts);
+
+          return {
+            id: rDef.id,
+            group: rDef.group,
+            name: rDef.name,
+            direct: rDef.direct,
+            salary: salary,
+            people: people,
+            shifts: shifts,
+            total: total
+          };
+        });
+
+        var payrollTotal = manpowerRows.reduce(function (sum, r) { return sum + r.total; }, 0);
+        var totalPeople = manpowerRows.reduce(function (sum, r) { return sum + (r.direct ? 0 : r.people * r.shifts); }, 0);
+        var payrollPerM3 = payrollTotal / Math.max(month, 1);
+
+        // Power & Other
+        var effPowerQty = state.powerQty * (state.efficientPanel ? 0.85 : 1);
+        var powerCost = effPowerQty * state.powerP;
+        var otherCost = state.other;
+        var wasteCost = (rawTotal + steamCost + powerCost + otherCost) * (state.waste / 100);
+
+        var segCost = state.autoPalletize ? 0 : state.seg;
+        var loadCost = state.palletLoading ? 0 : state.load;
+        var handlingCost = payrollPerM3 + segCost + loadCost;
+
+        var totalCost = rawTotal + steamCost + powerCost + otherCost + wasteCost + handlingCost + state.transport + state.unload;
+        var margin = state.sell - totalCost;
+
+        // Working Capital
+        var totalWcDays = 1 + state.credit + state.rmStock + state.fgStock;
+        var wcRaw = totalCost * totalWcDays * cap * r;
+        var wcRounded = Math.round(wcRaw / 100000) * 100000;
+
+        // Capex & Project Outlay
+        var fixedInvestment = state.machinery + state.utilities + state.electrical + state.civil + state.execution + state.preop + state.contingency + state.idc;
+        var totalProjectOutlay = fixedInvestment + wcRounded + state.gst;
+
+        // Debt & Financing
+        var equityRatio = clamp(state.equity, 0, 100) / 100;
+        var loanAmount = totalProjectOutlay * (1 - equityRatio);
+        var annualPrincipal = state.loanYears ? (loanAmount / state.loanYears) : 0;
+
+        // 5-Year Projections
+        var runningLoan = loanAmount;
+        var cumCashAccrual = 0;
+        var yearlyUtil = [state.y1, state.y2, state.y3, state.y4, state.y5];
+
+        var projections = yearlyUtil.map(function (yUtilVal, yIdx) {
+          var yUtil = clamp(yUtilVal, 0, 100);
+          var annualQty = cap * state.days * 12 * (yUtil / 100);
+          var annualRevenue = annualQty * state.sell;
+          var annualEbitda = annualQty * margin;
+          var annualDepr = fixedInvestment * (state.depr / 100);
+          var annualInterest = runningLoan * (state.loanRate / 100);
+          var pbt = annualEbitda - annualDepr - annualInterest;
+          var taxAmount = Math.max(0, pbt * (state.tax / 100));
+          var cashAccrual = pbt - taxAmount + annualDepr;
+          var debtService = yIdx < state.loanYears ? (annualInterest + annualPrincipal) : 0;
+          var dscr = debtService > 0 ? ((cashAccrual + annualInterest) / debtService) : 0;
+
+          runningLoan = Math.max(0, runningLoan - annualPrincipal);
+          cumCashAccrual += cashAccrual;
+
+          return {
+            year: yIdx + 1,
+            util: yUtil,
+            qty: annualQty,
+            revenue: annualRevenue,
+            ebitda: annualEbitda,
+            depreciation: annualDepr,
+            interest: annualInterest,
+            pbt: pbt,
+            cash: cashAccrual,
+            dscr: dscr,
+            cumCash: cumCashAccrual
+          };
+        });
+
+        // Break Even Calculations
+        var annualFixedCost = (payrollTotal * 12) + (fixedInvestment * (state.depr / 100));
+        var contribPerM3 = margin + payrollPerM3;
+        var beQty = contribPerM3 > 0 ? (annualFixedCost / contribPerM3) : 0;
+        var fullCapacityAnnual = cap * state.days * 12;
+        var beUtil = fullCapacityAnnual > 0 ? ((beQty / fullCapacityAnnual) * 100) : 0;
+
+        // Connected load HP
+        var hp = cap <= 170 ? 250 : (cap <= 250 ? 350 : (cap <= 350 ? 450 : (cap <= 500 ? 600 : (cap <= 700 ? 800 : (cap <= 1000 ? 1100 : (cap < 1500 ? 1500 : 1800))))));
+
+        // Average DSCR across 5 years
+        var dscrSum = projections.reduce(function (s, p) { return s + p.dscr; }, 0);
+        var avgDscr5Years = projections.length > 0 ? (dscrSum / projections.length) : 0;
+
+        // Suggest Workable Capacity
+        var suggestedCapacity = null;
+        var suggestedDscr = 0;
+        if (fixedInvestment > 0) {
+          for (var testCap = 100; testCap <= 2000; testCap += 50) {
+            var tMonth = testCap * state.days * r;
+            var tPayrollTotal = MANPOWER_ROLES.reduce(function (sum, rDef) {
+              var s = typeof rDef.salary === 'function' ? rDef.salary(testCap) : rDef.salary;
+              var p = rDef.people(testCap);
+              var sh = (rDef.group === 'Production' || rDef.group === 'Stock yard') ? state.runningShifts : rDef.shifts(testCap);
+              return sum + (rDef.direct ? s : (s * p * sh));
+            }, 0);
+            var tPayrollPerM3 = tPayrollTotal / Math.max(tMonth, 1);
+            var tHandling = tPayrollPerM3 + segCost + loadCost;
+            var tTotalCost = rawTotal + steamCost + powerCost + otherCost + wasteCost + tHandling + state.transport + state.unload;
+            var tMargin = state.sell - tTotalCost;
+
+            var tWcRaw = tTotalCost * totalWcDays * testCap * r;
+            var tWcRounded = Math.round(tWcRaw / 100000) * 100000;
+            var tProjectOutlay = fixedInvestment + tWcRounded + state.gst;
+            var tLoan = tProjectOutlay * (1 - equityRatio);
+            var tPrincipal = state.loanYears ? (tLoan / state.loanYears) : 0;
+
+            var tRunLoan = tLoan;
+            var tDscrSum = 0;
+            yearlyUtil.forEach(function (uVal, uIdx) {
+              var u = clamp(uVal, 0, 100);
+              var aQty = testCap * state.days * 12 * (u / 100);
+              var aEbitda = aQty * tMargin;
+              var aDepr = fixedInvestment * (state.depr / 100);
+              var aInt = tRunLoan * (state.loanRate / 100);
+              var aPbt = aEbitda - aDepr - aInt;
+              var aTax = Math.max(0, aPbt * (state.tax / 100));
+              var aCash = aPbt - aTax + aDepr;
+              var aDebt = uIdx < state.loanYears ? (aInt + tPrincipal) : 0;
+              var aDscr = aDebt > 0 ? ((aCash + aInt) / aDebt) : 0;
+              tRunLoan = Math.max(0, tRunLoan - tPrincipal);
+              tDscrSum += aDscr;
+            });
+            var tAvgDscr = tDscrSum / yearlyUtil.length;
+            if (tAvgDscr >= 1.25) {
+              suggestedCapacity = testCap;
+              suggestedDscr = tAvgDscr;
+              break;
+            }
+          }
+        }
+
+        return {
+          cap: cap,
+          month: month,
+          pieceFactor: pieceFactor,
+          dailyPieces: dailyPieces,
+          sellPiece: sellPiece,
+          boiler: boiler,
+          baseSteamKg: baseSteamKg,
+          transferSaving: transferSaving,
+          steamKg: steamKg,
+          effSteamGen: effSteamGen,
+          fuelCons: fuelCons,
+          steamCost: steamCost,
+          rawMaterials: rawMaterials,
+          rawTotal: rawTotal,
+          manpowerRows: manpowerRows,
+          payrollTotal: payrollTotal,
+          totalPeople: totalPeople,
+          payrollPerM3: payrollPerM3,
+          effPowerQty: effPowerQty,
+          powerCost: powerCost,
+          otherCost: otherCost,
+          wasteCost: wasteCost,
+          segCost: segCost,
+          loadCost: loadCost,
+          totalCost: totalCost,
+          margin: margin,
+          totalWcDays: totalWcDays,
+          wcRounded: wcRounded,
+          fixedInvestment: fixedInvestment,
+          totalProjectOutlay: totalProjectOutlay,
+          loanAmount: loanAmount,
+          projections: projections,
+          beQty: beQty,
+          beUtil: beUtil,
+          hp: hp,
+          avgDscr5Years: avgDscr5Years,
+          suggestedCapacity: suggestedCapacity,
+          suggestedDscr: suggestedDscr
+        };
+      }
+
+      // 4. DOM Update Render Function
+      function render() {
+        var m = runModel();
+
+        // Hero
+        document.getElementById('hero-live-margin').textContent = formatIndian(m.margin);
+        document.getElementById('hero-live-sub').textContent = 'At ' + state.util + '% plant utilisation \u00B7 ' + formatCurrency(m.margin / m.pieceFactor, 2) + ' per piece';
+
+        // Project Basis Section
+        document.getElementById('disp-daily-pieces').textContent = formatIndian(m.dailyPieces) + ' pieces/day';
+        document.getElementById('disp-piece-factor').textContent = formatIndian(m.pieceFactor, 2) + ' blocks in 1 m\u00B3';
+        document.getElementById('disp-sell-sync').textContent = 'Automatically equals ' + formatCurrency(state.sell) + '/m\u00B3';
+        document.getElementById('inp-sell-piece').value = Math.round(m.sellPiece);
+        document.getElementById('disp-util').textContent = state.util + '%';
+        document.getElementById('disp-monthly-output').textContent = formatIndian(m.month) + ' m\u00B3 estimated monthly production';
+
+        // Strip
+        document.getElementById('strip-hp').textContent = formatIndian(m.hp) + ' HP';
+        document.getElementById('strip-boiler').textContent = m.boiler + ' TPH';
+        document.getElementById('strip-steam-kg').textContent = formatIndian(m.steamKg) + ' kg/m\u00B3';
+        document.getElementById('strip-month-output').textContent = formatIndian(m.month) + ' m\u00B3';
+
+        // Production Economics
+        document.getElementById('disp-cost-m3').textContent = formatIndian(m.totalCost);
+        document.getElementById('disp-cost-piece').textContent = formatCurrency(m.totalCost / m.pieceFactor, 2) + ' per piece';
+
+        // Render Raw Materials Table
+        var tbodyRecipe = document.getElementById('tbody-recipe');
+        var recipeHTML = '';
+        m.rawMaterials.forEach(function (rm) {
+          recipeHTML += '<tr>' +
+            '<td>' + rm.name + '</td>' +
+            '<td><input type="number" step="any" value="' + rm.qty + '" data-field="' + rm.keyQ + '" /></td>' +
+            '<td><input type="number" step="any" value="' + rm.price + '" data-field="' + rm.keyP + '" /></td>' +
+            '<td>' + formatCurrency(rm.cost) + '</td>' +
+            '</tr>';
+        });
+        tbodyRecipe.innerHTML = recipeHTML;
+
+        // Energy Side
+        document.getElementById('disp-auto-steam').textContent = formatIndian(m.steamKg) + ' kg/m\u00B3';
+        document.getElementById('disp-auto-steam-note').textContent = m.baseSteamKg + ' kg base for ' + m.boiler + ' TPH boiler' + (m.transferSaving > 0 ? (' \u00B7 ' + m.transferSaving + ' kg transfer saving') : '');
+        document.getElementById('disp-heat-efficiency-note').textContent = 'Increases steam generation by ' + (m.boiler <= 4 ? '10' : '15') + '% for this boiler capacity';
+        document.getElementById('disp-eff-steam-gen').textContent = formatIndian(m.effSteamGen, 2) + ' kg/kg fuel';
+        document.getElementById('disp-fuel-cons').textContent = formatIndian(m.fuelCons, 2) + ' kg fuel/m\u00B3';
+        document.getElementById('disp-panel-note').textContent = 'Reduces power consumption by 15% \u00B7 effective ' + formatIndian(m.effPowerQty, 2) + ' kWh/m\u00B3';
+
+        // Manpower Summary
+        document.getElementById('disp-payroll-total').textContent = formatCurrency(m.payrollTotal);
+        document.getElementById('disp-payroll-detail').textContent = formatIndian(m.totalPeople) + ' shift positions \u00B7 ' + formatCurrency(m.payrollPerM3) + '/m\u00B3';
+        document.getElementById('disp-drawer-payroll').textContent = formatCurrency(m.payrollTotal);
+        document.getElementById('disp-drawer-per-m3').textContent = formatCurrency(m.payrollPerM3) + ' per m\u00B3 at selected utilisation';
+
+        // Cost Components
+        var componentsContainer = document.getElementById('disp-cost-components');
+        var compList = [
+          { name: 'Raw material', val: m.rawTotal },
+          { name: 'Steam', val: m.steamCost },
+          { name: 'Power', val: m.powerCost },
+          { name: 'Other + waste', val: m.otherCost + m.wasteCost },
+          { name: 'Payroll', val: m.payrollPerM3 },
+          { name: 'Segregation', val: m.segCost },
+          { name: 'Loading', val: m.loadCost },
+          { name: 'Transportation', val: state.transport },
+          { name: 'Unloading', val: state.unload }
+        ];
+
+        var compHTML = '';
+        compList.forEach(function (c) {
+          var pct = Math.min(100, Math.max(0, (c.val / Math.max(m.totalCost, 1)) * 180));
+          compHTML += '<div>' +
+            '<span>' + c.name + '</span>' +
+            '<b>' + formatCurrency(c.val) + '</b>' +
+            '<i style="width: ' + pct + '%"></i>' +
+            '</div>';
+        });
+        componentsContainer.innerHTML = compHTML;
+
+        // Investment Section
+        ['machinery', 'utilities', 'electrical', 'civil', 'execution', 'preop', 'contingency', 'idc'].forEach(function (f) {
+          var el = document.getElementById('disp-fmt-' + f);
+          if (el) el.textContent = 'Entered value: ' + formatCurrency(state[f]);
+        });
+
+        document.getElementById('disp-wc-total').textContent = formatIndian(m.wcRounded);
+        document.getElementById('disp-wc-days').textContent = m.totalWcDays + ' operating days \u00B7 rounded to nearest \u20B91 lakh';
+
+        // 5-Year Forecast
+        var outlayWrap = document.getElementById('disp-project-outlay-wrap');
+        if (m.totalProjectOutlay > 0) {
+          outlayWrap.innerHTML = '&#x20B9;<span id="disp-project-outlay">' + formatIndian(m.totalProjectOutlay) + '</span>';
+        } else {
+          outlayWrap.innerHTML = '<span id="disp-project-outlay" style="font-size: 20px; color: #fff;">Enter investment values</span>';
+        }
+        document.getElementById('kpi-monthly-ebitda').textContent = formatCurrency(m.margin * m.month);
+        document.getElementById('kpi-be-util').textContent = formatIndian(m.beUtil, 1) + '%';
+        document.getElementById('kpi-be-qty').textContent = formatIndian(m.beQty / 12) + ' m\u00B3/month';
+        document.getElementById('kpi-op-margin').textContent = formatIndian((m.margin / Math.max(state.sell, 1)) * 100, 1) + '%';
+        document.getElementById('kpi-op-margin-sub').textContent = formatCurrency(m.margin) + ' per m\u00B3';
+
+        var paybackYearIdx = m.projections.findIndex(function (y) { return y.cumCash >= m.totalProjectOutlay; });
+        var paybackText = m.totalProjectOutlay > 0
+          ? (paybackYearIdx >= 0 ? ('Within Year ' + (paybackYearIdx + 1)) : 'Beyond 5 years')
+          : 'Pending inputs';
+        document.getElementById('kpi-payback').textContent = paybackText;
+
+        // Render 5-Year Forecast Table
+        var theadRow = document.getElementById('forecast-thead-row');
+        var headHTML = '<th>Projection</th>';
+        m.projections.forEach(function (p) {
+          headHTML += '<th>Year ' + p.year + '<small>' + p.util + '% utilisation</small></th>';
+        });
+        theadRow.innerHTML = headHTML;
+
+        var tbodyForecast = document.getElementById('forecast-tbody');
+        var rowDefs = [
+          { label: 'Production (m\u00B3)', key: 'qty', isCurr: false },
+          { label: 'Revenue', key: 'revenue', isCurr: true },
+          { label: 'EBITDA', key: 'ebitda', isCurr: true, isFocus: true },
+          { label: 'Depreciation', key: 'depreciation', isCurr: true },
+          { label: 'Interest', key: 'interest', isCurr: true },
+          { label: 'Profit before tax', key: 'pbt', isCurr: true },
+          { label: 'Cash accrual', key: 'cash', isCurr: true },
+          { label: 'DSCR', key: 'dscr', isCurr: false, isDscr: true }
+        ];
+
+        var tableBodyHTML = '';
+        rowDefs.forEach(function (rDef) {
+          tableBodyHTML += '<tr class="' + (rDef.isFocus ? 'focus' : '') + '"><td>' + rDef.label + '</td>';
+          m.projections.forEach(function (p) {
+            var cellVal = '';
+            if (rDef.isDscr) {
+              cellVal = p.dscr > 0 ? (formatIndian(p.dscr, 2) + '\u00D7') : '\u2014';
+            } else if (rDef.isCurr) {
+              cellVal = formatCurrency(p[rDef.key]);
+            } else {
+              cellVal = formatIndian(p[rDef.key]);
+            }
+            tableBodyHTML += '<td>' + cellVal + '</td>';
+          });
+          tableBodyHTML += '</tr>';
+        });
+        tbodyForecast.innerHTML = tableBodyHTML;
+
+        // Workable Capacity Suggestion
+        var capRecTitle = document.getElementById('disp-cap-rec-title');
+        var capRecSub = document.getElementById('disp-cap-rec-sub');
+        var useCapBtn = document.getElementById('btn-use-suggested-cap');
+
+        if (m.suggestedCapacity) {
+          capRecTitle.textContent = formatIndian(m.suggestedCapacity) + ' m\u00B3/day';
+          capRecSub.textContent = 'Estimated five-year average DSCR: ' + formatIndian(m.suggestedDscr, 2) + '\u00D7 \u00B7 minimum target approximately 1.25\u00D7 \u00B7 about ' + formatIndian(m.suggestedCapacity * m.pieceFactor) + ' blocks/day at selected size';
+          useCapBtn.style.display = 'inline-block';
+          useCapBtn.onclick = function () {
+            state.capacity = m.suggestedCapacity;
+            document.getElementById('inp-capacity').value = state.capacity;
+            render();
+          };
+        } else if (m.fixedInvestment <= 0) {
+          capRecTitle.textContent = 'Complete investment inputs to receive a capacity suggestion';
+          capRecSub.textContent = 'The recommendation requires project investment, finance assumptions and operating costs.';
+          useCapBtn.style.display = 'none';
+        } else {
+          capRecTitle.textContent = 'No workable capacity found up to 2,000 m\u00B3/day';
+          capRecSub.textContent = 'Review selling price, project investment, operating cost or finance structure.';
+          useCapBtn.style.display = 'none';
+        }
+
+        // Render Manpower Drawer Table
+        renderManpowerTable(m);
+      }
+
+      function renderManpowerTable(m) {
+        var tbodyManpower = document.getElementById('tbody-manpower');
+        var mHTML = '';
+        m.manpowerRows.forEach(function (r, idx) {
+          if (idx === 0 || m.manpowerRows[idx - 1].group !== r.group) {
+            mHTML += '<tr class="group"><td colspan="5">' + r.group + '</td></tr>';
+          }
+          mHTML += '<tr>' +
+            '<td>' + r.name + '</td>' +
+            '<td><input type="number" value="' + r.salary + '" data-role-id="' + r.id + '" data-prop="salary" /></td>' +
+            '<td>' + (r.direct ? '\u2014' : ('<input type="number" value="' + r.people + '" data-role-id="' + r.id + '" data-prop="people" />')) + '</td>' +
+            '<td>' + (r.direct ? '\u2014' : ('<input type="number" value="' + r.shifts + '" data-role-id="' + r.id + '" data-prop="shifts" />')) + '</td>' +
+            '<td>' + formatCurrency(r.total) + '</td>' +
+            '</tr>';
+        });
+        tbodyManpower.innerHTML = mHTML;
+      }
+
+      // 5. Event Handlers & Bindings
+      document.addEventListener('DOMContentLoaded', function () {
+        // Preset silica changes
+        var selSilica = document.getElementById('sel-silica');
+        selSilica.addEventListener('change', function () {
+          var val = this.value;
+          state.silica = val;
+          if (val === 'Sand') {
+            state.silicaQty = 450;
+            state.cementQty = 105;
+            state.limeQty = 60;
+            state.soapQty = 0.3;
+            state.powerQty = 15;
+            state.other = 80;
+          } else if (val === 'Pond Ash') {
+            state.silicaQty = 460;
+            state.cementQty = 100;
+            state.limeQty = 55;
+            state.soapQty = 0.7;
+            state.powerQty = 8;
+            state.other = 50;
+          } else {
+            // Dry Fly Ash
+            state.silicaQty = 420;
+            state.cementQty = 90;
+            state.limeQty = 50;
+            state.soapQty = 0.5;
+            state.powerQty = 7;
+            state.other = 50;
+          }
+          document.getElementById('inp-power-qty').value = state.powerQty;
+          document.getElementById('inp-other-cost').value = state.other;
+          render();
+        });
+
+        // Fuel selector
+        var selFuel = document.getElementById('sel-fuel');
+        selFuel.addEventListener('change', function () {
+          state.fuel = this.value;
+          state.steamGeneration = (this.value === 'Coal' ? 4 : (this.value === 'Wood' ? 3 : 3.5));
+          document.getElementById('inp-steam-gen').value = state.steamGeneration;
+          render();
+        });
+
+        // Block Size Selectors (synchronized)
+        var selBlock1 = document.getElementById('sel-block-size-1');
+        var selBlock2 = document.getElementById('sel-block-size-2');
+
+        function onBlockSizeChange(newSize) {
+          state.blockSize = newSize;
+          selBlock1.value = newSize;
+          selBlock2.value = newSize;
+          render();
+        }
+
+        selBlock1.addEventListener('change', function () { onBlockSizeChange(this.value); });
+        selBlock2.addEventListener('change', function () { onBlockSizeChange(this.value); });
+
+        // Numeric Input Bindings
+        var numMap = [
+          { id: 'inp-capacity', key: 'capacity' },
+          { id: 'inp-days', key: 'days' },
+          { id: 'inp-sell', key: 'sell' },
+          { id: 'inp-util', key: 'util' },
+          { id: 'inp-fuel-p', key: 'fuelP' },
+          { id: 'inp-steam-gen', key: 'steamGeneration' },
+          { id: 'inp-power-qty', key: 'powerQty' },
+          { id: 'inp-power-p', key: 'powerP' },
+          { id: 'inp-other-cost', key: 'other' },
+          { id: 'inp-waste', key: 'waste' },
+          { id: 'inp-seg-cost', key: 'seg' },
+          { id: 'inp-load-cost', key: 'load' },
+          { id: 'inp-transport', key: 'transport' },
+          { id: 'inp-unload', key: 'unload' },
+          { id: 'inp-credit', key: 'credit' },
+          { id: 'inp-rm-stock', key: 'rmStock' },
+          { id: 'inp-fg-stock', key: 'fgStock' },
+          { id: 'inp-machinery', key: 'machinery' },
+          { id: 'inp-utilities', key: 'utilities' },
+          { id: 'inp-electrical', key: 'electrical' },
+          { id: 'inp-civil', key: 'civil' },
+          { id: 'inp-execution', key: 'execution' },
+          { id: 'inp-preop', key: 'preop' },
+          { id: 'inp-contingency', key: 'contingency' },
+          { id: 'inp-idc', key: 'idc' },
+          { id: 'inp-equity', key: 'equity' },
+          { id: 'inp-loan-rate', key: 'loanRate' },
+          { id: 'inp-loan-years', key: 'loanYears' },
+          { id: 'inp-depr', key: 'depr' },
+          { id: 'inp-tax', key: 'tax' },
+          { id: 'inp-gst', key: 'gst' },
+          { id: 'inp-y1', key: 'y1' },
+          { id: 'inp-y2', key: 'y2' },
+          { id: 'inp-y3', key: 'y3' },
+          { id: 'inp-y4', key: 'y4' },
+          { id: 'inp-y5', key: 'y5' }
+        ];
+
+        numMap.forEach(function (item) {
+          var el = document.getElementById(item.id);
+          if (el) {
+            el.addEventListener('input', function () {
+              state[item.key] = parseFloat(this.value) || 0;
+              render();
+            });
+          }
+        });
+
+        // Selling Price per Piece Input (two-way sync)
+        var inpSellPiece = document.getElementById('inp-sell-piece');
+        inpSellPiece.addEventListener('input', function () {
+          var pVal = parseFloat(this.value) || 0;
+          var pFactor = state.blockSize === '100' ? 83.33 : (state.blockSize === '150' ? 55.55 : (state.blockSize === '200' ? 41.66 : 36.23));
+          state.sell = Math.round(pVal * pFactor);
+          document.getElementById('inp-sell').value = state.sell;
+          render();
+        });
+
+        // Running Shifts Select
+        var selShifts = document.getElementById('sel-running-shifts');
+        selShifts.addEventListener('change', function () {
+          state.runningShifts = parseInt(this.value, 10) || 2;
+          render();
+        });
+
+        // Interactive Switches
+        function setupSwitch(switchId, stateKey) {
+          var btn = document.getElementById(switchId);
+          if (!btn) return;
+          btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            var checked = btn.getAttribute('data-state') === 'checked';
+            var next = !checked;
+            btn.setAttribute('data-state', next ? 'checked' : 'unchecked');
+            btn.setAttribute('aria-checked', next ? 'true' : 'false');
+            state[stateKey] = next;
+            render();
+          });
+        }
+
+        setupSwitch('switch-steam-transfer', 'efficientTransfer');
+        setupSwitch('switch-heat-util', 'efficientHeat');
+        setupSwitch('switch-panel', 'efficientPanel');
+        setupSwitch('switch-auto-palletize', 'autoPalletize');
+        setupSwitch('switch-pallet-loading', 'palletLoading');
+
+        // Dynamic Raw Materials Inputs Listener (delegation)
+        document.getElementById('tbody-recipe').addEventListener('input', function (e) {
+          var target = e.target;
+          if (target && target.hasAttribute('data-field')) {
+            var f = target.getAttribute('data-field');
+            state[f] = parseFloat(target.value) || 0;
+            render();
+          }
+        });
+
+        // Dynamic Manpower Inputs Listener (delegation)
+        document.getElementById('tbody-manpower').addEventListener('input', function (e) {
+          var target = e.target;
+          if (target && target.hasAttribute('data-role-id')) {
+            var rId = target.getAttribute('data-role-id');
+            var prop = target.getAttribute('data-prop');
+            if (!manpowerOverrides[rId]) manpowerOverrides[rId] = {};
+            manpowerOverrides[rId][prop] = parseFloat(target.value) || 0;
+            render();
+          }
+        });
+
+        // Restore Manpower Defaults
+        document.getElementById('btn-restore-manpower').addEventListener('click', function () {
+          manpowerOverrides = {};
+          render();
+        });
+
+        // Manpower Slide-Over Drawer
+        var manpowerSheet = document.getElementById('manpower-sheet');
+        var manpowerOverlay = document.getElementById('manpower-overlay');
+        var btnOpenManpower = document.getElementById('btn-open-manpower');
+        var btnCloseManpower = document.getElementById('btn-close-manpower');
+
+        function openManpower() {
+          manpowerSheet.classList.add('is-active');
+          manpowerOverlay.classList.add('is-active');
+          document.body.style.overflow = 'hidden';
+        }
+
+        function closeManpower() {
+          manpowerSheet.classList.remove('is-active');
+          manpowerOverlay.classList.remove('is-active');
+          document.body.style.overflow = '';
+        }
+
+        btnOpenManpower.addEventListener('click', openManpower);
+        btnCloseManpower.addEventListener('click', closeManpower);
+        manpowerOverlay.addEventListener('click', closeManpower);
+
+        // Financial Parameters Toggle
+        var btnToggleFinance = document.getElementById('btn-toggle-finance');
+        var financeWrap = document.getElementById('finance-params-wrap');
+        var financeIndicator = document.getElementById('disp-finance-indicator');
+        var isFinanceOpen = true;
+
+        btnToggleFinance.addEventListener('click', function () {
+          isFinanceOpen = !isFinanceOpen;
+          financeWrap.style.display = isFinanceOpen ? 'block' : 'none';
+          financeIndicator.textContent = isFinanceOpen ? '\u2212' : '+';
+        });
+
+        // Modal Unlock DPR
+        var modalOverlay = document.getElementById('dpr-modal-overlay');
+        var btnUnlockDpr = document.getElementById('btn-unlock-dpr');
+        var btnCloseModal = document.getElementById('btn-close-modal');
+        var leadForm = document.getElementById('dpr-lead-form');
+        var leadSuccess = document.getElementById('lead-success-msg');
+
+        function openModal() {
+          modalOverlay.classList.add('is-active');
+          document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+          modalOverlay.classList.remove('is-active');
+          document.body.style.overflow = '';
+        }
+
+        btnUnlockDpr.addEventListener('click', function () {
+          if (isUnlocked) {
+            window.print();
+          } else {
+            openModal();
+          }
+        });
+
+        btnCloseModal.addEventListener('click', closeModal);
+        modalOverlay.addEventListener('click', function (e) {
+          if (e.target === modalOverlay) closeModal();
+        });
+
+        leadForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var name = document.getElementById('lead-name').value.trim();
+          var phone = document.getElementById('lead-phone').value.trim();
+          var company = document.getElementById('lead-company').value.trim();
+          var email = document.getElementById('lead-email').value.trim();
+
+          if (!name || !phone) return;
+
+          isUnlocked = true;
+          leadSuccess.style.display = 'block';
+          btnUnlockDpr.textContent = 'Download / Print Branded DPR PDF \u2197';
+
+          setTimeout(function () {
+            closeModal();
+            window.print();
+          }, 1200);
+        });
+
+        // Initial Render
+        render();
+      });
+    })();
+  </script>
+</body>
+</html>

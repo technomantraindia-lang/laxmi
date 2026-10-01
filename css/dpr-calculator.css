@@ -1,0 +1,2061 @@
+/* ==========================================================================
+   AAC PLANT DPR CALCULATOR — PREMIUM EXECUTIVE DESIGN SYSTEM
+   Laxmi En-Fab Pvt. Ltd. | AAC Project Intelligence
+   ========================================================================== */
+
+/* Design Tokens & Scoped Variables */
+.dpr-calc-page {
+  --dpr-navy: #07172c;
+  --dpr-navy-deep: #040d1a;
+  --dpr-navy-light: #0d223d;
+  --dpr-blue: #0c4f80;
+  --dpr-blue-hover: #083c63;
+  --dpr-blue-light: #e6f1f8;
+  --dpr-blue-glow: rgba(12, 79, 128, 0.18);
+  --dpr-accent: #0284c7;
+  --dpr-emerald: #10b981;
+  --dpr-emerald-bg: #ecfdf5;
+  --dpr-amber: #f59e0b;
+  --dpr-slate-50: #f8fafc;
+  --dpr-slate-100: #f1f5f9;
+  --dpr-slate-200: #e2e8f0;
+  --dpr-slate-300: #cbd5e1;
+  --dpr-slate-400: #94a3b8;
+  --dpr-slate-500: #64748b;
+  --dpr-slate-600: #475569;
+  --dpr-slate-700: #334155;
+  --dpr-slate-800: #1e293b;
+  --dpr-slate-900: #0f172a;
+
+  --dpr-radius-sm: 6px;
+  --dpr-radius-md: 10px;
+  --dpr-radius-lg: 14px;
+  --dpr-radius-xl: 20px;
+
+  --dpr-shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --dpr-shadow-sm: 0 2px 6px rgba(15, 23, 42, 0.06);
+  --dpr-shadow-md: 0 8px 24px -4px rgba(15, 23, 42, 0.08);
+  --dpr-shadow-lg: 0 20px 35px -8px rgba(15, 23, 42, 0.12);
+  --dpr-shadow-glass: 0 18px 45px rgba(7, 23, 44, 0.1);
+
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--dpr-slate-900);
+  background: #ffffff;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  font-feature-settings: "tnum";
+  -webkit-font-smoothing: antialiased;
+}
+
+.dpr-calc-page *,
+.dpr-calc-page *::before,
+.dpr-calc-page *::after {
+  box-sizing: border-box;
+}
+
+.dpr-calc-page button,
+.dpr-calc-page input,
+.dpr-calc-page select {
+  font-family: inherit;
+}
+
+.dpr-calc-page button {
+  cursor: pointer;
+}
+
+/* ================= 1. SUB-BRAND STRIP ================= */
+.dpr-calc-page .dpr-brand-bar {
+  background: #ffffff;
+  border-bottom: 1px solid var(--dpr-slate-200);
+  height: 68px;
+  padding: 0 max(5vw, 28px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--dpr-shadow-xs);
+}
+
+.dpr-calc-page .brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.dpr-calc-page .brand img {
+  width: 98px;
+  height: auto;
+  max-height: 28px;
+  object-fit: contain;
+  display: block;
+}
+
+.dpr-calc-page .brand b {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--dpr-navy);
+  display: block;
+  line-height: 1.1;
+}
+
+.dpr-calc-page .brand small {
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--dpr-slate-500);
+  text-transform: uppercase;
+  display: block;
+  margin-top: 3px;
+}
+
+.dpr-calc-page .live {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--dpr-emerald-bg);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  color: #065f46;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+}
+
+.dpr-calc-page .live::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  background: var(--dpr-emerald);
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 8px var(--dpr-emerald);
+  animation: dprPulse 2s infinite ease-in-out;
+}
+
+@keyframes dprPulse {
+  0% { transform: scale(0.9); opacity: 0.8; }
+  50% { transform: scale(1.25); opacity: 1; box-shadow: 0 0 10px var(--dpr-emerald); }
+  100% { transform: scale(0.9); opacity: 0.8; }
+}
+
+/* ================= 2. HERO SECTION ================= */
+.dpr-calc-page .hero {
+  position: relative;
+  min-height: 520px;
+  background-color: #f8fafc;
+  background-image: 
+    radial-gradient(circle at 85% 20%, rgba(12, 79, 128, 0.07) 0%, transparent 50%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.96) 35%, rgba(255, 255, 255, 0.88) 100%), 
+    url('../assets/images/roi-payback.png');
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  align-items: center;
+  gap: 6vw;
+  padding: 75px max(6vw, 32px) 65px;
+  border-bottom: 1px solid var(--dpr-slate-200);
+}
+
+.dpr-calc-page .hero > div {
+  z-index: 2;
+  max-width: 820px;
+}
+
+.dpr-calc-page .hero p,
+.dpr-calc-page .title > p {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--dpr-blue-light);
+  color: var(--dpr-blue);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 6px;
+  margin: 0 0 18px;
+  border: 1px solid rgba(12, 79, 128, 0.12);
+}
+
+.dpr-calc-page .hero h1 {
+  font-size: clamp(40px, 4.8vw, 76px);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+  color: var(--dpr-navy);
+  margin: 0;
+}
+
+.dpr-calc-page .hero > div > span {
+  display: block;
+  margin-top: 20px;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--dpr-slate-600);
+  max-width: 620px;
+}
+
+.dpr-calc-page .hero aside {
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid #ffffff;
+  box-shadow: var(--dpr-shadow-glass);
+  padding: 32px 34px;
+  border-radius: var(--dpr-radius-lg);
+  border-left: 4px solid var(--dpr-blue);
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.dpr-calc-page .hero aside:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 24px 50px rgba(7, 23, 44, 0.14);
+}
+
+.dpr-calc-page .hero aside small,
+.dpr-calc-page .title aside small,
+.dpr-calc-page .working small,
+.dpr-calc-page .k small {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dpr-slate-500);
+  display: block;
+}
+
+.dpr-calc-page .hero aside b {
+  color: var(--dpr-blue);
+  letter-spacing: -0.04em;
+  margin: 10px 0 6px;
+  font-size: clamp(38px, 4.2vw, 64px);
+  font-weight: 800;
+  line-height: 1.05;
+  display: flex;
+  align-items: baseline;
+  white-space: nowrap;
+}
+
+.dpr-calc-page .hero sup,
+.dpr-calc-page .title sup {
+  font-size: 18px;
+  font-weight: 700;
+  margin-left: 4px;
+  color: var(--dpr-slate-600);
+}
+
+.dpr-calc-page .hero aside > span {
+  font-size: 12.5px;
+  color: var(--dpr-slate-600);
+  font-weight: 500;
+  display: block;
+  line-height: 1.5;
+}
+
+/* ================= 3. STICKY IN-PAGE NAV ================= */
+.dpr-calc-page nav.dpr-subnav {
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--dpr-slate-200);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0 max(5vw, 28px);
+  position: sticky;
+  top: 70px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+}
+
+.dpr-calc-page nav.dpr-subnav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 58px;
+  padding: 0 16px;
+  color: var(--dpr-slate-600);
+  text-decoration: none;
+  font-size: 13.5px;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+  border-right: 1px solid var(--dpr-slate-100);
+}
+
+.dpr-calc-page nav.dpr-subnav a:first-child {
+  border-left: 1px solid var(--dpr-slate-100);
+}
+
+.dpr-calc-page nav.dpr-subnav a b {
+  color: var(--dpr-slate-400);
+  font-size: 11px;
+  font-weight: 800;
+  margin-right: 10px;
+  background: var(--dpr-slate-100);
+  padding: 2px 7px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.dpr-calc-page nav.dpr-subnav a:hover {
+  color: var(--dpr-blue);
+  background: var(--dpr-slate-50);
+  border-bottom-color: var(--dpr-blue);
+}
+
+.dpr-calc-page nav.dpr-subnav a:hover b {
+  color: var(--dpr-blue);
+  background: var(--dpr-blue-light);
+}
+
+/* ================= 4. MAIN SECTIONS & TITLES ================= */
+.dpr-calc-page .section {
+  padding: 85px max(6vw, 32px);
+  scroll-margin-top: 135px;
+}
+
+.dpr-calc-page .pale {
+  background: var(--dpr-slate-50);
+  border-top: 1px solid var(--dpr-slate-200);
+  border-bottom: 1px solid var(--dpr-slate-200);
+}
+
+.dpr-calc-page .title {
+  max-width: 1440px;
+  margin: 0 auto 38px;
+}
+
+.dpr-calc-page .title h2 {
+  font-size: clamp(28px, 3.2vw, 50px);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  color: var(--dpr-navy);
+  margin: 0;
+  line-height: 1.1;
+}
+
+.dpr-calc-page .title > span {
+  display: block;
+  margin-top: 10px;
+  font-size: 15px;
+  color: var(--dpr-slate-500);
+}
+
+.dpr-calc-page .title.split {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 28px;
+}
+
+.dpr-calc-page .title.split > .title {
+  margin: 0;
+}
+
+.dpr-calc-page .title aside {
+  text-align: right;
+  flex-shrink: 0;
+  background: #ffffff;
+  padding: 18px 24px;
+  border-radius: var(--dpr-radius-md);
+  border: 1px solid var(--dpr-slate-200);
+  box-shadow: var(--dpr-shadow-sm);
+}
+
+.dpr-calc-page .title aside b {
+  color: var(--dpr-blue);
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin: 6px 0 2px;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+}
+
+.dpr-calc-page .title aside > span {
+  font-size: 11.5px;
+  color: var(--dpr-slate-500);
+  font-weight: 600;
+  display: block;
+}
+
+/* ================= 5. GRIDS & FIELD CARDS ================= */
+.dpr-calc-page .grid {
+  display: grid;
+  max-width: 1440px;
+  margin: 0 auto;
+  gap: 16px;
+}
+
+.dpr-calc-page .four {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.dpr-calc-page .six {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.dpr-calc-page .five {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.dpr-calc-page .field {
+  background: #ffffff;
+  border: 1px solid var(--dpr-slate-200);
+  border-radius: var(--dpr-radius-md);
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-shadow: var(--dpr-shadow-xs);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.dpr-calc-page .field:focus-within {
+  border-color: var(--dpr-blue);
+  box-shadow: 0 0 0 3px var(--dpr-blue-glow);
+}
+
+.dpr-calc-page .field > span {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--dpr-slate-700);
+  display: block;
+  margin-bottom: 12px;
+  letter-spacing: 0.01em;
+}
+
+.dpr-calc-page .field > div {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid var(--dpr-slate-300);
+  padding-bottom: 4px;
+  transition: border-color 0.2s ease;
+}
+
+.dpr-calc-page .field > div:focus-within {
+  border-bottom-color: var(--dpr-blue);
+}
+
+.dpr-calc-page .field input[type="number"],
+.dpr-calc-page .field input[type="text"] {
+  width: 100%;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 20px;
+  font-weight: 750;
+  color: var(--dpr-navy);
+  padding: 4px 0;
+}
+
+.dpr-calc-page .field > div b {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--dpr-slate-500);
+  white-space: nowrap;
+  padding-left: 6px;
+}
+
+.dpr-calc-page .field small {
+  font-size: 10.5px;
+  font-weight: 500;
+  color: var(--dpr-slate-500);
+  margin-top: 8px;
+  display: block;
+  line-height: 1.4;
+}
+
+.dpr-calc-page .field select {
+  width: 100%;
+  background: #ffffff;
+  border: none;
+  border-bottom: 2px solid var(--dpr-slate-300);
+  padding: 8px 0;
+  font-size: 16px;
+  font-weight: 750;
+  color: var(--dpr-navy);
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.dpr-calc-page .field select:focus {
+  border-bottom-color: var(--dpr-blue);
+}
+
+.dpr-calc-page .wide {
+  grid-column: span 4;
+}
+
+/* Range Slider */
+.dpr-calc-page .field .range {
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-bottom: 0;
+  margin: 6px 0;
+}
+
+.dpr-calc-page .range input[type="range"] {
+  flex: 1;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--dpr-slate-200);
+  accent-color: var(--dpr-blue);
+  cursor: pointer;
+  outline: none;
+}
+
+.dpr-calc-page .range b {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  color: var(--dpr-blue) !important;
+  background: var(--dpr-blue-light);
+  padding: 6px 18px;
+  border-radius: 8px;
+  min-width: 78px;
+  text-align: center;
+  border: 1px solid rgba(12, 79, 128, 0.15);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Piece Converter Sub-Card */
+.dpr-calc-page .piece-field {
+  padding-bottom: 20px;
+}
+
+.dpr-calc-page .piece-field > .piece-converter {
+  background: #f8fafc;
+  border: 1px solid var(--dpr-slate-200);
+  border-radius: var(--dpr-radius-sm);
+  margin-top: 14px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dpr-calc-page .piece-converter select {
+  width: 100%;
+  font-size: 12.5px !important;
+  font-weight: 700;
+  padding: 6px 10px !important;
+  background: #ffffff;
+  border: 1px solid var(--dpr-slate-200) !important;
+  border-radius: 6px;
+  color: var(--dpr-navy);
+  outline: none;
+  cursor: pointer;
+}
+
+.dpr-calc-page .piece-converter select:focus {
+  border-color: var(--dpr-blue) !important;
+}
+
+.dpr-calc-page .piece-converter strong {
+  color: var(--dpr-blue);
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.2;
+  display: block;
+  margin-top: 2px;
+}
+
+.dpr-calc-page .piece-converter > small {
+  font-size: 11px !important;
+  color: var(--dpr-slate-500);
+  display: block;
+  line-height: 1.3;
+}
+
+.dpr-calc-page .piece-converter label {
+  margin-top: 4px;
+  display: block;
+}
+
+.dpr-calc-page .piece-converter label > span {
+  font-size: 10px;
+  font-weight: 750;
+  color: var(--dpr-slate-600);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.dpr-calc-page .piece-converter label input {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--dpr-navy);
+  border: none;
+  border-bottom: 2px solid var(--dpr-blue);
+  background: transparent;
+  width: 100%;
+  padding: 2px 0;
+  outline: none;
+}
+
+/* ================= 6. KPI STRIP ================= */
+.dpr-calc-page .strip {
+  background: linear-gradient(145deg, #07172c 0%, #0c2747 100%);
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1440px;
+  margin: 28px auto 0;
+  border-radius: var(--dpr-radius-md);
+  box-shadow: var(--dpr-shadow-md);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.dpr-calc-page .strip .k {
+  padding: 24px 28px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dpr-calc-page .strip .k:last-child {
+  border-right: none;
+}
+
+.dpr-calc-page .strip .k small {
+  color: #38bdf8;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: block;
+}
+
+.dpr-calc-page .strip .k b {
+  font-size: clamp(22px, 2.2vw, 30px);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 8px 0 0;
+  display: block;
+  letter-spacing: -0.02em;
+}
+
+/* ================= 7. COST SECTION & RECIPE TABLE ================= */
+.dpr-calc-page .costgrid {
+  display: grid;
+  grid-template-columns: 1.55fr 0.85fr;
+  gap: 24px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.dpr-calc-page .table,
+.dpr-calc-page .side {
+  background: #ffffff;
+  border: 1px solid var(--dpr-slate-200);
+  border-radius: var(--dpr-radius-md);
+  box-shadow: var(--dpr-shadow-xs);
+  overflow: hidden;
+}
+
+.dpr-calc-page .tablehead {
+  background: #ffffff;
+  border-bottom: 1px solid var(--dpr-slate-200);
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dpr-calc-page .tablehead b {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--dpr-navy);
+}
+
+.dpr-calc-page .tablehead span {
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--dpr-slate-500);
+}
+
+.dpr-calc-page table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dpr-calc-page th,
+.dpr-calc-page td {
+  padding: 13px 20px;
+  font-size: 13px;
+  border-bottom: 1px solid var(--dpr-slate-200);
+  text-align: right;
+}
+
+.dpr-calc-page th:first-child,
+.dpr-calc-page td:first-child {
+  text-align: left;
+  font-weight: 600;
+  color: var(--dpr-navy);
+}
+
+.dpr-calc-page th {
+  background: var(--dpr-slate-50);
+  color: var(--dpr-slate-500);
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.dpr-calc-page td input {
+  width: 86px;
+  text-align: right;
+  border: 1px solid var(--dpr-slate-300);
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-weight: 700;
+  color: var(--dpr-navy);
+  outline: none;
+  background: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.dpr-calc-page td input:focus {
+  border-color: var(--dpr-blue);
+  box-shadow: 0 0 0 3px var(--dpr-blue-glow);
+}
+
+.dpr-calc-page td:last-child {
+  font-weight: 750;
+  color: var(--dpr-blue);
+}
+
+/* Side Controls Grid */
+.dpr-calc-page .side {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--dpr-slate-200);
+}
+
+.dpr-calc-page .side .field {
+  border: none;
+  border-radius: 0;
+}
+
+.dpr-calc-page .side .steam-auto,
+.dpr-calc-page .side .fuel-metrics,
+.dpr-calc-page .side .inline-efficiency {
+  grid-column: span 2;
+}
+
+.dpr-calc-page .steam-auto {
+  background: var(--dpr-blue-light);
+  padding: 18px 20px;
+}
+
+.dpr-calc-page .steam-auto > div > span {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--dpr-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: block;
+}
+
+.dpr-calc-page .steam-auto > div > b {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--dpr-navy);
+  margin: 4px 0;
+  display: block;
+}
+
+.dpr-calc-page .steam-auto > div > small {
+  font-size: 10px;
+  color: var(--dpr-slate-600);
+  display: block;
+}
+
+.dpr-calc-page .steam-auto > label {
+  background: #ffffff;
+  border: 1px solid var(--dpr-slate-200);
+  border-radius: var(--dpr-radius-sm);
+  margin-top: 12px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.dpr-calc-page .steam-auto > label b {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--dpr-navy);
+  display: block;
+}
+
+.dpr-calc-page .steam-auto > label small {
+  font-size: 10px;
+  color: var(--dpr-slate-500);
+  display: block;
+}
+
+.dpr-calc-page .fuel-metrics {
+  background: var(--dpr-navy);
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.dpr-calc-page .fuel-metrics > div {
+  padding: 16px 20px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dpr-calc-page .fuel-metrics > div:last-child {
+  border-right: none;
+}
+
+.dpr-calc-page .fuel-metrics span {
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--dpr-slate-400);
+  text-transform: uppercase;
+  display: block;
+}
+
+.dpr-calc-page .fuel-metrics b {
+  font-size: 17px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-top: 4px;
+  display: block;
+}
+
+.dpr-calc-page .inline-efficiency,
+.dpr-calc-page .cost-switch {
+  background: #ffffff;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.dpr-calc-page .inline-efficiency b,
+.dpr-calc-page .cost-switch b {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--dpr-navy);
+  display: block;
+}
+
+.dpr-calc-page .inline-efficiency small,
+.dpr-calc-page .cost-switch small {
+  font-size: 10px;
+  color: var(--dpr-slate-500);
+  margin-top: 2px;
+  display: block;
+}
+
+.dpr-calc-page .heat-efficiency {
+  background: #f0f7fc;
+}
+
+/* Switch Button Toggle */
+.dpr-calc-page .switch-btn {
+  width: 38px;
+  height: 22px;
+  background: var(--dpr-slate-300);
+  border-radius: 999px;
+  padding: 2px;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+  flex-shrink: 0;
+}
+
+.dpr-calc-page .switch-btn[aria-checked="true"] {
+  background: var(--dpr-blue);
+}
+
+.dpr-calc-page .switch-thumb {
+  width: 18px;
+  height: 18px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: block;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateX(0);
+}
+
+.dpr-calc-page .switch-btn[aria-checked="true"] .switch-thumb {
+  transform: translateX(16px);
+}
+
+/* ================= 8. MANPOWER SUMMARY STRIP ================= */
+.dpr-calc-page .manpower-summary {
+  background: var(--dpr-navy);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  max-width: 1440px;
+  margin: 24px auto 0;
+  padding: 24px 32px;
+  border-radius: var(--dpr-radius-md);
+  box-shadow: var(--dpr-shadow-md);
+}
+
+.dpr-calc-page .manpower-summary small {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--dpr-slate-400);
+  text-transform: uppercase;
+}
+
+.dpr-calc-page .manpower-summary > div > b {
+  font-size: 30px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 6px 0;
+  display: block;
+}
+
+.dpr-calc-page .manpower-summary span {
+  font-size: 12px;
+  color: var(--dpr-slate-300);
+  font-weight: 500;
+}
+
+.dpr-calc-page .shift-select {
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0 28px;
+  min-width: 220px;
+}
+
+.dpr-calc-page .shift-select > span {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--dpr-slate-400);
+  text-transform: uppercase;
+  display: block;
+}
+
+.dpr-calc-page .shift-select select {
+  width: 100%;
+  background: #0f2b4c;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin: 6px 0 4px;
+  font-size: 13px;
+  font-weight: 700;
+  outline: none;
+  cursor: pointer;
+}
+
+.dpr-calc-page .shift-select small {
+  font-size: 9.5px;
+  color: var(--dpr-slate-400);
+  display: block;
+}
+
+.dpr-calc-page .btn-manpower-sheet {
+  background: #ffffff;
+  color: var(--dpr-navy);
+  border: none;
+  border-radius: var(--dpr-radius-sm);
+  padding: 14px 22px;
+  font-size: 13.5px;
+  font-weight: 750;
+  box-shadow: var(--dpr-shadow-sm);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.dpr-calc-page .btn-manpower-sheet:hover {
+  background: var(--dpr-slate-100);
+  transform: translateY(-1px);
+  box-shadow: var(--dpr-shadow-md);
+}
+
+/* ================= 9. COST ADDONS & BREAKDOWN COMPONENTS ================= */
+.dpr-calc-page .cost-addons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  max-width: 1440px;
+  margin: 20px auto 0;
+}
+
+.dpr-calc-page .addon-cost {
+  background: #ffffff;
+  border: 1px solid var(--dpr-slate-200);
+  border-radius: var(--dpr-radius-md);
+  overflow: hidden;
+}
+
+.dpr-calc-page .addon-cost > .field {
+  border: none;
+  border-bottom: 1px solid var(--dpr-slate-200);
+  border-radius: 0;
+}
+
+/* 9 Component Breakdown Cards */
+.dpr-calc-page .components {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 12px;
+  max-width: 1440px;
+  margin: 20px auto 0;
+}
+
+.dpr-calc-page .components div {
+  background: #ffffff;
+  border: 1px solid var(--dpr-slate-200);
+  border-radius: var(--dpr-radius-sm);
+  padding: 16px 14px;
+  box-shadow: var(--dpr-shadow-xs);
+  transition: transform 0.2s ease;
+}
+
+.dpr-calc-page .components div:hover {
+  transform: translateY(-2px);
+  border-color: var(--dpr-blue);
+}
+
+.dpr-calc-page .components span {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--dpr-slate-500);
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dpr-calc-page .components b {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--dpr-navy);
+  margin: 6px 0 12px;
+  display: block;
+}
+
+.dpr-calc-page .components i {
+  display: block;
+  height: 4px;
+  background: var(--dpr-blue);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+/* ================= 10. SECTION 03: INVESTMENT ================= */
+.dpr-calc-page .notice {
+  background: #eef7fc;
+  border-left: 4px solid var(--dpr-blue);
+  border-radius: var(--dpr-radius-sm);
+  padding: 18px 22px;
+  max-width: 1440px;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.dpr-calc-page .notice b {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: var(--dpr-blue);
+  white-space: nowrap;
+}
+
+.dpr-calc-page .notice span {
+  font-size: 13px;
+  color: var(--dpr-slate-700);
+  line-height: 1.55;
+}
+
+.dpr-calc-page .formatted-value {
+  font-size: 11px !important;
+  font-weight: 750 !important;
+  color: var(--dpr-blue) !important;
+  letter-spacing: 0.01em;
+  margin-top: 8px !important;
+}
+
+/* Working Capital Bar */
+.dpr-calc-page .working {
+  background: linear-gradient(145deg, #07172c 0%, #0b2545 100%);
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  max-width: 1440px;
+  margin: 28px auto;
+  border-radius: var(--dpr-radius-md);
+  box-shadow: var(--dpr-shadow-md);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.dpr-calc-page .working > div:first-child {
+  padding: 28px 34px;
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dpr-calc-page .working > div:first-child small {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #38bdf8;
+  display: block;
+}
+
+.dpr-calc-page .working > div:first-child b {
+  font-size: clamp(28px, 3.2vw, 42px);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  color: #ffffff;
+  margin: 8px 0 6px;
+  display: block;
+  line-height: 1.1;
+}
+
+.dpr-calc-page .working > div:first-child span {
+  font-size: 12.5px;
+  color: var(--dpr-slate-300);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.dpr-calc-page .mini {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.dpr-calc-page .mini .field {
+  background: rgba(255, 255, 255, 0.03);
+  border: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0;
+  padding: 24px 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: none;
+  transition: background 0.2s ease;
+}
+
+.dpr-calc-page .mini .field:first-child {
+  border-left: none;
+}
+
+.dpr-calc-page .mini .field:hover,
+.dpr-calc-page .mini .field:focus-within {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.dpr-calc-page .mini .field > span {
+  color: var(--dpr-slate-300) !important;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.dpr-calc-page .mini .field > div {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 4px;
+  transition: border-color 0.2s ease;
+}
+
+.dpr-calc-page .mini .field > div:focus-within {
+  border-bottom-color: #38bdf8;
+}
+
+.dpr-calc-page .mini .field input[type="number"],
+.dpr-calc-page .mini .field input[type="text"],
+.dpr-calc-page .working input {
+  color: #ffffff !important;
+  font-size: 22px;
+  font-weight: 800;
+  background: transparent;
+}
+
+.dpr-calc-page .mini .field > div b,
+.dpr-calc-page .working .field > div b {
+  color: var(--dpr-slate-300) !important;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Financial Calculation Parameters Toggle */
+.dpr-calc-page .optional {
+  background: #ffffff;
+  border: 1px solid var(--dpr-slate-200);
+  border-radius: var(--dpr-radius-md);
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 14.5px;
+  font-weight: 750;
+  color: var(--dpr-navy);
+  box-shadow: var(--dpr-shadow-xs);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dpr-calc-page .optional:hover {
+  background: var(--dpr-slate-50);
+  border-color: var(--dpr-slate-300);
+  box-shadow: var(--dpr-shadow-sm);
+}
+
+.dpr-calc-page .optional b {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--dpr-slate-600);
+}
+
+.dpr-calc-page .finance-explain {
+  background: #eef7fc;
+  border-left: 4px solid var(--dpr-blue);
+  border-radius: var(--dpr-radius-sm);
+  padding: 16px 22px;
+  max-width: 1440px;
+  margin: 16px auto;
+}
+
+.dpr-calc-page .finance-explain b {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--dpr-navy);
+  display: block;
+}
+
+.dpr-calc-page .finance-explain span {
+  font-size: 12px;
+  color: var(--dpr-slate-600);
+  display: block;
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+.dpr-calc-page .year-inputs {
+  margin-top: 16px;
+}
+
+/* ================= 11. SECTION 04: FIVE-YEAR DPR ================= */
+.dpr-calc-page .dark {
+  background: linear-gradient(160deg, #07172c 0%, #092644 100%);
+  color: #ffffff;
+}
+
+.dpr-calc-page .dark .title h2 {
+  color: #ffffff;
+}
+
+.dpr-calc-page .dark .title > p {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+.dpr-calc-page .dark .title aside {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+.dpr-calc-page .dark .title aside b {
+  color: #ffffff;
+}
+
+.dpr-calc-page .dark .title aside small {
+  color: var(--dpr-slate-400);
+}
+
+.dpr-calc-page .dark .title aside span {
+  color: var(--dpr-slate-300);
+}
+
+.dpr-calc-page .kpis {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1440px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--dpr-radius-md);
+  overflow: hidden;
+}
+
+.dpr-calc-page .kpis .k {
+  padding: 26px 28px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dpr-calc-page .kpis .k:last-child {
+  border-right: none;
+}
+
+.dpr-calc-page .kpis .k small {
+  color: var(--dpr-slate-400);
+}
+
+.dpr-calc-page .kpis .k b {
+  font-size: 26px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 8px 0 4px;
+  display: block;
+}
+
+.dpr-calc-page .kpis .k span {
+  font-size: 11.5px;
+  color: var(--dpr-slate-300);
+}
+
+/* 5-Year Forecast Table */
+.dpr-calc-page .forecast {
+  max-width: 1440px;
+  margin: 28px auto;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--dpr-radius-md);
+  overflow-x: auto;
+}
+
+.dpr-calc-page .forecast table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dpr-calc-page .forecast th,
+.dpr-calc-page .forecast td {
+  padding: 15px 22px;
+  font-size: 13.5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+.dpr-calc-page .forecast th {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--dpr-slate-300);
+  font-weight: 750;
+}
+
+.dpr-calc-page .forecast th small {
+  font-size: 9px;
+  color: var(--dpr-slate-400);
+  margin-top: 4px;
+  display: block;
+}
+
+.dpr-calc-page .forecast tr.focus td {
+  background: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+  font-weight: 800;
+}
+
+/* Workable Capacity Recommendation Banner */
+.dpr-calc-page .capacity-recommendation {
+  background: #ffffff;
+  color: var(--dpr-navy);
+  border-left: 5px solid var(--dpr-blue);
+  border-radius: var(--dpr-radius-md);
+  max-width: 1440px;
+  margin: 32px auto 0;
+  padding: 28px 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  box-shadow: var(--dpr-shadow-lg);
+}
+
+.dpr-calc-page .capacity-recommendation small {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: var(--dpr-blue);
+  text-transform: uppercase;
+}
+
+.dpr-calc-page .capacity-recommendation b {
+  font-size: clamp(22px, 2.6vw, 34px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--dpr-navy);
+  margin: 6px 0;
+  display: block;
+}
+
+.dpr-calc-page .capacity-recommendation span {
+  font-size: 12.5px;
+  color: var(--dpr-slate-600);
+  line-height: 1.5;
+}
+
+.dpr-calc-page .capacity-recommendation button {
+  background: var(--dpr-blue);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--dpr-radius-sm);
+  padding: 15px 24px;
+  font-size: 13.5px;
+  font-weight: 750;
+  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(12, 79, 128, 0.35);
+  transition: all 0.2s ease;
+}
+
+.dpr-calc-page .capacity-recommendation button:hover {
+  background: var(--dpr-blue-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(12, 79, 128, 0.45);
+}
+
+/* Action Banner */
+.dpr-calc-page .action {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 36px;
+  max-width: 1440px;
+  margin: 36px auto 0;
+  padding-top: 36px;
+}
+
+.dpr-calc-page .action p {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 6px;
+  margin: 0 0 14px;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.dpr-calc-page .action h3 {
+  font-size: clamp(22px, 2.4vw, 32px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin: 0 0 8px;
+  line-height: 1.2;
+}
+
+.dpr-calc-page .action span {
+  font-size: 14px;
+  color: var(--dpr-slate-300);
+  line-height: 1.5;
+  display: block;
+}
+
+.dpr-calc-page .action button,
+.dpr-calc-page #btn-unlock-dpr {
+  background: #ffffff;
+  color: var(--dpr-navy);
+  border: none;
+  border-radius: var(--dpr-radius-md);
+  padding: 16px 32px;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.dpr-calc-page .action button:hover,
+.dpr-calc-page #btn-unlock-dpr:hover {
+  background: var(--dpr-slate-100);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.dpr-calc-page .action button:active,
+.dpr-calc-page #btn-unlock-dpr:active {
+  transform: translateY(0);
+}
+
+/* ================= 12. DPR BRANDED FOOTER STRIP ================= */
+.dpr-calc-page .dpr-footer {
+  background: #ffffff;
+  border-top: 1px solid var(--dpr-slate-200);
+  padding: 30px max(5vw, 28px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 36px;
+  max-width: 100%;
+}
+
+.dpr-calc-page .dpr-footer .brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.dpr-calc-page .dpr-footer .brand img {
+  width: 90px;
+  height: auto;
+  max-height: 26px;
+  object-fit: contain;
+}
+
+.dpr-calc-page .dpr-footer .brand b {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--dpr-navy);
+  letter-spacing: 0.06em;
+  display: block;
+}
+
+.dpr-calc-page .dpr-footer .brand small {
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--dpr-slate-500);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 2px;
+}
+
+.dpr-calc-page .dpr-footer p {
+  font-size: 11.5px;
+  color: var(--dpr-slate-500);
+  line-height: 1.55;
+  max-width: 680px;
+  margin: 0;
+  text-align: right;
+}
+
+/* ================= 13. SLIDE-OVER MANPOWER DRAWER ================= */
+.dpr-manpower-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(7, 23, 44, 0.7);
+  backdrop-filter: blur(6px);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.dpr-manpower-overlay.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.dpr-calc-page .manpower-sheet {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(920px, 96vw);
+  background: #f8fafc;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -20px 0 50px rgba(0, 0, 0, 0.25);
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dpr-calc-page .manpower-sheet.is-active {
+  transform: translateX(0);
+}
+
+.dpr-calc-page .manpower-header {
+  background: #ffffff;
+  border-bottom: 1px solid var(--dpr-slate-200);
+  padding: 24px 28px;
+  position: relative;
+}
+
+.dpr-calc-page .manpower-header h3 {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--dpr-navy);
+  margin: 0;
+}
+
+.dpr-calc-page .manpower-header p {
+  font-size: 12.5px;
+  color: var(--dpr-slate-500);
+  margin: 4px 0 0;
+}
+
+.dpr-calc-page .manpower-close {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  width: 34px;
+  height: 34px;
+  background: var(--dpr-slate-100);
+  border: none;
+  border-radius: 50%;
+  font-size: 22px;
+  color: var(--dpr-slate-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.dpr-calc-page .manpower-close:hover {
+  background: var(--dpr-slate-200);
+  color: var(--dpr-navy);
+}
+
+.dpr-calc-page .manpower-scroll {
+  flex: 1;
+  overflow-y: auto;
+  background: #ffffff;
+}
+
+.dpr-calc-page .manpower-scroll table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dpr-calc-page .manpower-scroll th,
+.dpr-calc-page .manpower-scroll td {
+  padding: 10px 14px;
+  font-size: 13px;
+  border-bottom: 1px solid var(--dpr-slate-200);
+}
+
+.dpr-calc-page .manpower-scroll td input {
+  width: 84px;
+  text-align: right;
+  border: 1px solid var(--dpr-slate-300);
+  border-radius: 4px;
+  padding: 5px 8px;
+  font-weight: 700;
+}
+
+.dpr-calc-page .manpower-scroll .group td {
+  background: #eef7fc;
+  color: var(--dpr-blue);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 8px 14px;
+}
+
+.dpr-calc-page .manpower-total {
+  background: #ffffff;
+  border-top: 1px solid var(--dpr-slate-200);
+  padding: 20px 28px;
+}
+
+.dpr-calc-page .manpower-total span {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--dpr-slate-500);
+  display: block;
+}
+
+.dpr-calc-page .manpower-total b {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--dpr-blue);
+  margin: 4px 0;
+  display: block;
+}
+
+.dpr-calc-page .manpower-total small {
+  font-size: 12px;
+  color: var(--dpr-slate-600);
+  display: block;
+}
+
+.dpr-calc-page .manpower-total button {
+  background: none;
+  border: none;
+  color: var(--dpr-blue);
+  font-size: 12px;
+  font-weight: 750;
+  text-decoration: underline;
+  padding: 10px 0 0;
+  cursor: pointer;
+}
+
+/* ================= 14. MODAL UNLOCK DPR ================= */
+.dpr-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(7, 23, 44, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 10001;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.dpr-modal-overlay.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.dpr-modal {
+  background: #ffffff;
+  width: min(600px, 100%);
+  padding: 40px;
+  border-radius: var(--dpr-radius-lg);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.dpr-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  width: 36px;
+  height: 36px;
+  background: var(--dpr-slate-100);
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  color: var(--dpr-slate-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.dpr-modal-close:hover {
+  background: var(--dpr-slate-200);
+  color: var(--dpr-navy);
+}
+
+.dpr-modal h2 {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--dpr-navy);
+  margin: 0 0 8px;
+}
+
+.dpr-modal > span {
+  font-size: 13px;
+  color: var(--dpr-slate-500);
+  display: block;
+}
+
+.dpr-overview {
+  background: #eef7fc;
+  border-left: 3px solid var(--dpr-blue);
+  border-radius: var(--dpr-radius-sm);
+  padding: 14px 16px;
+  margin-top: 18px;
+}
+
+.dpr-overview b {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--dpr-navy);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.dpr-overview span {
+  font-size: 11.5px;
+  color: var(--dpr-slate-600);
+  line-height: 1.5;
+  display: block;
+}
+
+.report-contact {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.report-contact a {
+  flex: 1;
+  text-align: center;
+  border: 1px solid var(--dpr-slate-200);
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: 750;
+  color: var(--dpr-blue);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.report-contact a:hover {
+  background: var(--dpr-slate-50);
+  border-color: var(--dpr-blue);
+}
+
+.dpr-modal form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.dpr-modal form label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--dpr-slate-700);
+}
+
+.dpr-modal form input {
+  width: 100%;
+  border: 1px solid var(--dpr-slate-300);
+  border-radius: 6px;
+  padding: 10px 12px;
+  margin-top: 6px;
+  font-size: 13.5px;
+  outline: none;
+}
+
+.dpr-modal form input:focus {
+  border-color: var(--dpr-blue);
+  box-shadow: 0 0 0 3px var(--dpr-blue-glow);
+}
+
+.dpr-modal form button {
+  grid-column: span 2;
+  background: var(--dpr-blue);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 14px;
+  font-size: 14px;
+  font-weight: 750;
+  box-shadow: 0 4px 14px rgba(12, 79, 128, 0.35);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.dpr-modal form button:hover {
+  background: var(--dpr-blue-hover);
+  transform: translateY(-1px);
+}
+
+.dpr-modal form small {
+  grid-column: span 2;
+  text-align: center;
+  font-size: 10.5px;
+  color: var(--dpr-slate-500);
+}
+
+.submit-success {
+  grid-column: span 2;
+  background: var(--dpr-emerald-bg);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #065f46;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ================= 15. RESPONSIVE DESIGN ================= */
+@media (max-width: 1100px) {
+  .dpr-calc-page .costgrid {
+    grid-template-columns: 1fr;
+  }
+  .dpr-calc-page .components {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .dpr-calc-page .four {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .dpr-calc-page .wide {
+    grid-column: span 2;
+  }
+  .dpr-calc-page .six {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .dpr-calc-page .five {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .dpr-calc-page .hero {
+    grid-template-columns: 1fr;
+    padding: 50px 20px;
+    gap: 30px;
+  }
+  .dpr-calc-page .hero aside {
+    max-width: 480px;
+  }
+  .dpr-calc-page nav.dpr-subnav {
+    grid-template-columns: repeat(4, minmax(130px, 1fr));
+    overflow-x: auto;
+  }
+  .dpr-calc-page .strip,
+  .dpr-calc-page .kpis,
+  .dpr-calc-page .cost-addons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .dpr-calc-page .title.split,
+  .dpr-calc-page .action,
+  .dpr-calc-page .capacity-recommendation {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .dpr-calc-page .title aside {
+    text-align: left;
+  }
+  .dpr-calc-page .title aside b {
+    justify-content: flex-start;
+  }
+  .dpr-calc-page .working {
+    grid-template-columns: 1fr;
+  }
+  .dpr-calc-page .working > div:first-child {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .dpr-calc-page .manpower-summary {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .dpr-calc-page .shift-select {
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 16px 0 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .dpr-calc-page .section {
+    padding: 60px 16px;
+  }
+  .dpr-calc-page .four,
+  .dpr-calc-page .six,
+  .dpr-calc-page .five,
+  .dpr-calc-page .strip,
+  .dpr-calc-page .kpis,
+  .dpr-calc-page .cost-addons,
+  .dpr-calc-page .components,
+  .dpr-calc-page .mini,
+  .dpr-modal form {
+    grid-template-columns: 1fr;
+  }
+  .dpr-calc-page .wide {
+    grid-column: 1;
+  }
+  .dpr-modal form button,
+  .dpr-modal form small {
+    grid-column: 1;
+  }
+  .dpr-modal {
+    padding: 28px 20px;
+  }
+  .dpr-calc-page .dpr-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ================= 16. PRINT STYLES ================= */
+@media print {
+  .site-header,
+  .site-topbar,
+  .dpr-brand-bar,
+  .dpr-subnav,
+  .dpr-calc-page .action button,
+  .dpr-calc-page .optional,
+  .dpr-modal-overlay,
+  .dpr-manpower-overlay,
+  .site-floating-pill,
+  .site-page-pagination,
+  .site-footer {
+    display: none !important;
+  }
+  .dpr-calc-page .section {
+    break-inside: avoid;
+    padding: 30px 20px;
+  }
+  .dpr-calc-page .pale,
+  .dpr-calc-page .dark {
+    color: var(--dpr-slate-900);
+    background: #ffffff;
+  }
+  .dpr-calc-page .dark .title > p {
+    color: var(--dpr-blue);
+  }
+  .dpr-calc-page .dark .title h2,
+  .dpr-calc-page .dark .kpis .k b,
+  .dpr-calc-page .forecast th,
+  .dpr-calc-page .forecast td {
+    color: var(--dpr-slate-900);
+  }
+  .dpr-calc-page .forecast,
+  .dpr-calc-page .kpis,
+  .dpr-calc-page .forecast th,
+  .dpr-calc-page .forecast td,
+  .dpr-calc-page .kpis .k {
+    border-color: var(--dpr-slate-200);
+  }
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
