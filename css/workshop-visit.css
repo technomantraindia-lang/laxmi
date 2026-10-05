@@ -58,9 +58,11 @@
 .hero-media {
   position: absolute;
   inset: 0;
+  width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
+  display: block;
 }
 
 .hero-shade {
@@ -272,9 +274,13 @@
   overflow: hidden;
 }
 
-.full-bleed img {
+.full-bleed img,
+.full-bleed video,
+.cinema-video {
+  width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .image-caption {
