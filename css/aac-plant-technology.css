@@ -1,0 +1,992 @@
+/* ==========================================================================
+   AAC PLANT TECHNOLOGY: TILTING VS NON-TILTING GUIDE — STYLES
+   Exact implementation of https://aac-plant-technology-guide.mitesh958.chatgpt.site/
+   ========================================================================== */
+
+:root {
+  --navy: #0B1727;
+  --blue: #0C4F80;
+  --deep: #09263D;
+  --white: #fff;
+  --silver: #EEF2F5;
+  --light: #F5F7F8;
+  --text: #0B1727;
+  --sub: #5E6874;
+  --muted: #84909C;
+  --line: #DCE2E7;
+  --sky: #8FC6EC;
+  --max: 1400px;
+  --pad: clamp(24px, 7vw, 112px);
+  --radius: 2px;
+}
+
+.tech-page {
+  margin: 0;
+  color: var(--text);
+  background: var(--white);
+  font-family: 'Geist', 'Inter', "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tech-page main * {
+  box-sizing: border-box;
+}
+
+.tech-page main img {
+  max-width: 100%;
+  display: block;
+}
+
+.tech-page main a {
+  color: inherit;
+}
+
+.tech-page main button,
+.tech-page main a {
+  touch-action: manipulation;
+}
+
+.tech-page .shell {
+  width: min(var(--max), 100%);
+  margin: auto;
+  padding-inline: var(--pad);
+}
+
+/* ==========================================================================
+   Buttons & Links
+   ========================================================================== */
+.tech-page .btn {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  transition: transform .2s ease, background .2s ease, color .2s ease, box-shadow .2s ease;
+}
+
+.tech-page .btn:hover {
+  transform: translateY(-2px);
+}
+
+.tech-page .btn-dark {
+  background: var(--navy);
+  color: white;
+}
+
+.tech-page .btn-dark:hover {
+  background: #142740;
+  color: white;
+  box-shadow: 0 10px 24px rgba(11, 23, 39, 0.15);
+}
+
+.tech-page .btn-blue {
+  background: var(--blue);
+  color: #fff;
+}
+
+.tech-page .btn-blue:hover {
+  background: #0a609a;
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(12, 79, 128, 0.2);
+}
+
+.tech-page .btn-light {
+  background: white;
+  color: var(--navy);
+}
+
+.tech-page .btn-light:hover {
+  background: #f0f4f8;
+  color: var(--navy);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+.tech-page .text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid var(--muted);
+  padding-bottom: 3px;
+  transition: color .2s ease, border-color .2s ease;
+}
+
+.tech-page .text-link:hover {
+  color: var(--blue);
+  border-color: var(--blue);
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.tech-page .hero {
+  min-height: calc(100vh - 72px);
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, .96) 36%, rgba(255, 255, 255, .2) 62%), url('../assets/images/aac-plant-technology-hero.png') right center/cover no-repeat;
+}
+
+.tech-page .hero-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 50%) 1fr;
+  align-items: center;
+  padding-block: clamp(82px, 11vh, 140px);
+}
+
+.tech-page .eyebrow {
+  margin: 0 0 24px !important;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+}
+
+.tech-page .eyebrow::before,
+.tech-page .tag::before,
+.tech-page .label::before,
+.tech-page .num::before {
+  content: none !important;
+  display: none !important;
+}
+
+.tech-page .hero h1,
+.tech-page .display {
+  font-size: clamp(54px, 6.6vw, 102px);
+  letter-spacing: -.055em;
+  line-height: .92;
+  font-weight: 500;
+  margin: 0;
+  color: var(--navy);
+}
+
+.tech-page .soft {
+  color: var(--muted);
+}
+
+.tech-page .hero .lede {
+  max-width: 680px;
+  margin: 32px 0;
+  color: var(--sub);
+  font-size: clamp(17px, 1.3vw, 20px);
+  line-height: 1.6;
+}
+
+.tech-page .actions {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  flex-wrap: wrap;
+}
+
+.tech-page .micro {
+  margin-top: 22px;
+  color: var(--muted);
+  font-size: 13px;
+  max-width: 540px;
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   Section Layouts & Theming
+   ========================================================================== */
+.tech-page section {
+  padding-block: clamp(100px, 12vw, 170px);
+}
+
+.tech-page .section-silver {
+  background: var(--silver);
+}
+
+.tech-page .section-light {
+  background: var(--light);
+}
+
+.tech-page .section-dark {
+  background: var(--navy);
+  color: #fff;
+}
+
+.tech-page .chapter {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: clamp(30px, 6vw, 100px);
+}
+
+.tech-page .chapter-label {
+  font-size: 12px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--blue);
+  font-weight: 800;
+  padding-top: 12px;
+  margin: 0;
+}
+
+.tech-page .section-dark .chapter-label {
+  color: var(--sky);
+}
+
+.tech-page .section-head {
+  max-width: 1050px;
+}
+
+.tech-page .section-head h2 {
+  font-size: clamp(42px, 5.8vw, 84px);
+  letter-spacing: -.05em;
+  line-height: .98;
+  font-weight: 500;
+  margin: 0;
+  color: var(--navy);
+}
+
+.tech-page .section-dark .section-head h2 {
+  color: #fff;
+}
+
+.tech-page .section-head > p {
+  max-width: 790px;
+  color: var(--sub);
+  font-size: 19px;
+  margin: 28px 0 0;
+  line-height: 1.65;
+}
+
+.tech-page .section-dark .section-head > p {
+  color: #b9c5ce;
+}
+
+.tech-page .statement {
+  font-size: clamp(34px, 4.2vw, 64px);
+  line-height: 1.07;
+  letter-spacing: -.04em;
+  font-weight: 500;
+  max-width: 1200px;
+  margin: 0;
+  color: var(--navy);
+}
+
+/* ==========================================================================
+   Definition Grid (4 items)
+   ========================================================================== */
+.tech-page .definition-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 72px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.tech-page .definition {
+  padding: 34px 28px 40px 0;
+  border-right: 1px solid var(--line);
+}
+
+.tech-page .definition + .definition {
+  padding-left: 28px;
+}
+
+.tech-page .definition:last-child {
+  border-right: 0;
+}
+
+.tech-page .num {
+  font-size: 12px;
+  color: var(--blue);
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  display: block;
+}
+
+.tech-page .definition h3 {
+  font-size: 22px;
+  line-height: 1.2;
+  margin: 26px 0 14px;
+  color: var(--navy);
+}
+
+.tech-page .definition p {
+  font-size: 15px;
+  color: var(--sub);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   Orientation Stage (Tilt vs Non-Tilt Visual Cards)
+   ========================================================================== */
+.tech-page .orientation-stage {
+  margin-top: 72px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.tech-page .orientation {
+  min-height: 520px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  transition: box-shadow .3s ease;
+}
+
+.tech-page .orientation:hover {
+  box-shadow: 0 18px 45px rgba(11, 23, 39, 0.08);
+}
+
+.tech-page .orientation.dark {
+  background: linear-gradient(145deg, var(--blue), var(--deep));
+  color: white;
+  border: 0;
+}
+
+.tech-page .cake-graphic {
+  height: 225px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.tech-page .cake {
+  width: 210px;
+  height: 100px;
+  background: repeating-linear-gradient(90deg, #edf0ef 0, #edf0ef 33px, #d6dcdf 34px, #d6dcdf 35px);
+  border: 1px solid #cbd3d7;
+  box-shadow: 0 24px 35px rgba(11, 23, 39, .1);
+  transform: rotate(-72deg);
+  transition: transform .45s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.tech-page .orientation:hover .cake {
+  transform: rotate(-90deg);
+}
+
+.tech-page .cake.flat {
+  transform: none;
+}
+
+.tech-page .orientation:hover .cake.flat {
+  transform: translateY(-7px);
+}
+
+.tech-page .orientation h3 {
+  font-size: 32px;
+  line-height: 1.1;
+  margin: 12px 0 12px;
+  color: var(--navy);
+  letter-spacing: -.03em;
+}
+
+.tech-page .orientation.dark h3 {
+  color: white;
+}
+
+.tech-page .orientation p {
+  margin: 0;
+  color: var(--sub);
+  line-height: 1.6;
+}
+
+.tech-page .orientation.dark p {
+  color: #c7d2da;
+}
+
+/* ==========================================================================
+   Process Steps (01-07)
+   ========================================================================== */
+.tech-page .process {
+  margin-top: 72px;
+  border-top: 1px solid var(--line);
+}
+
+.tech-page .step {
+  display: grid;
+  grid-template-columns: 90px minmax(220px, 1fr) 1.5fr;
+  gap: 30px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--line);
+  align-items: start;
+}
+
+.tech-page .step-no {
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+.tech-page .step h3 {
+  font-size: 21px;
+  margin: 0;
+  line-height: 1.25;
+  color: var(--navy);
+}
+
+.tech-page .step p {
+  margin: 0;
+  color: var(--sub);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   Callout Banner
+   ========================================================================== */
+.tech-page .callout {
+  padding: clamp(38px, 6vw, 80px);
+  margin-top: 80px;
+  background: var(--silver);
+  border-left: 4px solid var(--blue);
+}
+
+.tech-page .callout .label {
+  font-size: 11px;
+  letter-spacing: .17em;
+  text-transform: uppercase;
+  color: var(--blue);
+  font-weight: 800;
+  display: block;
+}
+
+.tech-page .callout p {
+  font-size: clamp(24px, 3vw, 40px);
+  line-height: 1.25;
+  letter-spacing: -.025em;
+  margin: 20px 0 0;
+  max-width: 1100px;
+  color: var(--navy);
+}
+
+/* ==========================================================================
+   Tradeoff Grid & Comparison Table
+   ========================================================================== */
+.tech-page .tradeoff {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 70px;
+}
+
+.tech-page .tradeoff article {
+  padding: clamp(36px, 5vw, 72px);
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.tech-page .tradeoff article + article {
+  border-left: 0;
+}
+
+.tech-page .tradeoff h3 {
+  font-size: clamp(30px, 3.5vw, 50px);
+  line-height: 1.05;
+  margin: 18px 0;
+  letter-spacing: -.03em;
+  color: var(--navy);
+}
+
+.tech-page .tradeoff p {
+  color: var(--sub);
+  line-height: 1.6;
+}
+
+.tech-page .tradeoff ul {
+  padding-left: 20px;
+  color: var(--sub);
+  margin: 20px 0 0;
+  line-height: 1.7;
+}
+
+.tech-page .table-wrap {
+  overflow-x: auto;
+  margin-top: 68px;
+  border: 1px solid var(--line);
+}
+
+.tech-page table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 920px;
+  background: #fff;
+}
+
+.tech-page th,
+.tech-page td {
+  text-align: left;
+  vertical-align: top;
+  padding: 22px;
+  border-bottom: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+}
+
+.tech-page th:last-child,
+.tech-page td:last-child {
+  border-right: 0;
+}
+
+.tech-page th {
+  background: var(--navy);
+  color: white;
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.tech-page td {
+  font-size: 15px;
+  color: var(--sub);
+  line-height: 1.6;
+}
+
+.tech-page td:first-child {
+  color: var(--navy);
+  font-weight: 700;
+  width: 24%;
+}
+
+.tech-page .table-note {
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 18px;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   Split (Vertical vs Horizontal Autoclaving)
+   ========================================================================== */
+.tech-page .split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--line);
+  margin-top: 78px;
+  border-block: 1px solid var(--line);
+}
+
+.tech-page .panel {
+  background: white;
+  padding: clamp(34px, 5vw, 72px);
+}
+
+.tech-page .panel.alt {
+  background: var(--light);
+}
+
+.tech-page .panel .tag {
+  font-size: 11px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--blue);
+  font-weight: 800;
+  display: block;
+}
+
+.tech-page .panel h3 {
+  font-size: clamp(28px, 3vw, 44px);
+  line-height: 1.06;
+  letter-spacing: -.035em;
+  margin: 20px 0;
+  color: var(--navy);
+}
+
+.tech-page .panel p {
+  color: var(--sub);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.tech-page .panel ul {
+  padding-left: 20px;
+  color: var(--sub);
+  margin: 20px 0 0;
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   Drivers / Selection Inputs Grid
+   ========================================================================== */
+.tech-page .drivers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 74px;
+}
+
+.tech-page .driver {
+  padding: 34px 30px 34px 0;
+  border-top: 1px solid var(--line);
+}
+
+.tech-page .driver:not(:nth-child(4n+1)) {
+  padding-left: 30px;
+  border-left: 1px solid var(--line);
+}
+
+.tech-page .driver .num {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.tech-page .driver h3 {
+  font-size: 21px;
+  line-height: 1.2;
+  margin: 0 0 12px;
+  color: var(--navy);
+}
+
+.tech-page .driver p {
+  font-size: 15px;
+  color: var(--sub);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   Running Plant Checklist (Dark Section)
+   ========================================================================== */
+.tech-page .checklist {
+  counter-reset: item;
+  margin-top: 70px;
+  border-top: 1px solid rgba(255, 255, 255, .18);
+}
+
+.tech-page .check-row {
+  counter-increment: item;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 28px;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, .18);
+  align-items: center;
+}
+
+.tech-page .check-row:before {
+  content: counter(item, decimal-leading-zero);
+  color: var(--sky);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+.tech-page .check-row p {
+  margin: 0;
+  font-size: 18px;
+  color: #d4dde4;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   Method Grid
+   ========================================================================== */
+.tech-page .method-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 72px;
+  border-block: 1px solid var(--line);
+}
+
+.tech-page .method {
+  padding: 44px 36px 44px 0;
+}
+
+.tech-page .method + .method {
+  padding-left: 36px;
+  border-left: 1px solid var(--line);
+}
+
+.tech-page .method h3 {
+  font-size: 24px;
+  margin: 0 0 15px;
+  color: var(--navy);
+  letter-spacing: -.02em;
+}
+
+.tech-page .method p {
+  color: var(--sub);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   Accordion FAQ Section
+   ========================================================================== */
+.tech-page .faq {
+  margin-top: 70px;
+  border-top: 1px solid var(--line);
+}
+
+.tech-page details {
+  border-bottom: 1px solid var(--line);
+}
+
+.tech-page summary {
+  list-style: none;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 70px 1fr 32px;
+  gap: 20px;
+  align-items: center;
+  padding: 28px 0;
+  font-size: 19px;
+  font-weight: 650;
+  color: var(--navy);
+}
+
+.tech-page summary::-webkit-details-marker {
+  display: none;
+}
+
+.tech-page summary .faq-no {
+  font-size: 12px;
+  color: var(--blue);
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+.tech-page summary:after {
+  content: '+';
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--blue);
+  transition: transform .2s ease;
+  justify-self: end;
+}
+
+.tech-page details[open] summary:after {
+  transform: rotate(45deg);
+}
+
+.tech-page details .answer {
+  max-width: 900px;
+  color: var(--sub);
+  padding: 0 54px 28px 90px;
+  font-size: 16.5px;
+  line-height: 1.65;
+}
+
+/* ==========================================================================
+   Conversion / Consultation Section
+   ========================================================================== */
+.tech-page .conversion {
+  background: linear-gradient(125deg, #104F7D, #09263D);
+  color: #fff;
+  padding: clamp(80px, 10vw, 150px) 0;
+}
+
+.tech-page .conversion-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(48px, 7vw, 100px);
+  align-items: center;
+}
+
+.tech-page .conversion h2 {
+  font-size: clamp(38px, 4.8vw, 76px);
+  letter-spacing: -.05em;
+  line-height: .98;
+  margin: 0;
+  color: #fff;
+}
+
+.tech-page .conversion p {
+  font-size: 17px;
+  color: #c6d3dc;
+  max-width: 720px;
+  line-height: 1.65;
+  margin: 24px 0 0;
+}
+
+.tech-page .conversion .actions {
+  margin-top: 32px;
+}
+
+.tech-page .conversion-aside {
+  border-left: 1px solid rgba(255, 255, 255, .25);
+  padding-left: 40px;
+}
+
+.tech-page .conversion-aside p {
+  font-size: 15px;
+  margin: 10px 0;
+  color: #d8e2e9;
+}
+
+.tech-page .conversion-aside strong {
+  color: white;
+  display: block;
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+@media (max-width: 1000px) {
+  .tech-page .hero {
+    background-position: 66% center;
+  }
+  .tech-page .hero-grid {
+    grid-template-columns: minmax(0, 62%) 1fr;
+  }
+  .tech-page .chapter {
+    grid-template-columns: 1fr;
+  }
+  .tech-page .chapter-label {
+    padding: 0;
+  }
+  .tech-page .definition-grid,
+  .tech-page .drivers {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tech-page .definition:nth-child(2) {
+    border-right: 0;
+  }
+  .tech-page .definition:nth-child(3) {
+    padding-left: 0;
+    border-top: 1px solid var(--line);
+  }
+  .tech-page .definition:nth-child(4) {
+    border-top: 1px solid var(--line);
+  }
+  .tech-page .driver:not(:nth-child(4n+1)) {
+    padding-left: 0;
+    border-left: 0;
+  }
+  .tech-page .driver:nth-child(even) {
+    padding-left: 30px;
+    border-left: 1px solid var(--line);
+  }
+  .tech-page .step {
+    grid-template-columns: 60px 1fr;
+  }
+  .tech-page .step p {
+    grid-column: 2;
+  }
+  .tech-page .conversion-grid {
+    grid-template-columns: 1fr;
+  }
+  .tech-page .conversion-aside {
+    padding: 0;
+    border: 0;
+    margin-top: 30px;
+  }
+  .tech-page .method-grid {
+    grid-template-columns: 1fr;
+  }
+  .tech-page .method + .method {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .tech-page {
+    font-size: 16px;
+  }
+  .tech-page .hero {
+    min-height: auto;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, .96) 0%, rgba(255, 255, 255, .88) 54%, rgba(255, 255, 255, .18) 100%), url('../assets/images/aac-plant-technology-hero.png');
+    background-position: 62% bottom;
+    background-size: auto 46%, cover;
+    padding-bottom: 210px;
+  }
+  .tech-page .hero-grid {
+    grid-template-columns: 1fr;
+    padding-top: 70px;
+  }
+  .tech-page .hero h1 {
+    font-size: clamp(48px, 15vw, 70px);
+  }
+  .tech-page section {
+    padding-block: 92px;
+  }
+  .tech-page .section-head h2 {
+    font-size: clamp(40px, 12vw, 58px);
+  }
+  .tech-page .definition-grid,
+  .tech-page .split,
+  .tech-page .orientation-stage,
+  .tech-page .drivers,
+  .tech-page .tradeoff,
+  .tech-page .method-grid {
+    grid-template-columns: 1fr;
+  }
+  .tech-page .definition,
+  .tech-page .definition + .definition {
+    padding: 30px 0;
+    border-right: 0;
+    border-top: 1px solid var(--line);
+  }
+  .tech-page .definition:first-child {
+    border-top: 0;
+  }
+  .tech-page .panel {
+    padding: 36px 0;
+  }
+  .tech-page .orientation {
+    min-height: 440px;
+    padding: 32px;
+  }
+  .tech-page .driver,
+  .tech-page .driver:nth-child(even),
+  .tech-page .driver:not(:nth-child(4n+1)) {
+    padding: 28px 0;
+    border-left: 0;
+  }
+  .tech-page .tradeoff article + article {
+    border-left: 1px solid var(--line);
+    border-top: 0;
+  }
+  .tech-page .step {
+    grid-template-columns: 48px 1fr;
+    gap: 18px;
+  }
+  .tech-page .check-row {
+    grid-template-columns: 46px 1fr;
+  }
+  .tech-page .method,
+  .tech-page .method + .method {
+    padding: 32px 0;
+  }
+  .tech-page .actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .tech-page .actions .btn {
+    width: 100%;
+  }
+  .tech-page summary {
+    grid-template-columns: 42px 1fr 24px;
+    font-size: 17px;
+  }
+  .tech-page .faq .answer {
+    padding-left: 62px;
+  }
+  .tech-page .callout {
+    padding: 34px 26px;
+  }
+  .tech-page .conversion h2 {
+    font-size: 48px;
+  }
+}

@@ -43,7 +43,7 @@
     '</div>' +
     '<div class="drawer-secondary-col" id="drawer-secondary-col">' +
     '<div class="drawer-sub-pane" id="sub-pane-academy"><button type="button" class="drawer-mobile-back-btn" data-back-level="1"><span>←</span> <span>Main Menu</span></button><h3 class="sub-pane-title"><a href="academy/academy.html">AAC Investor Academy</a></h3><ul class="col2-menu-list"><li class="col2-item has-tertiary" data-tertiary="academy-market"><a href="academy/understand-market.html" class="col2-link"><span><strong class="sub-num">01</strong> Understand the Market</span><span class="col2-arrow">›</span></a></li><li class="col2-item has-tertiary" data-tertiary="academy-design"><a href="academy/design-your-plant.html" class="col2-link"><span><strong class="sub-num">02</strong> Design Your Plant</span><span class="col2-arrow">›</span></a></li><li class="col2-item" data-tertiary="academy-compare"><a href="compare-aac-plant.html" class="col2-link"><span><strong class="sub-num">03</strong> Compare Your AAC Plant</span></a></li><li class="col2-item has-tertiary" data-tertiary="academy-efficient"><a href="academy/efficient-your-plant.html" class="col2-link"><span><strong class="sub-num">04</strong> Efficient Your Plant</span><span class="col2-arrow">›</span></a></li><li class="col2-item" data-tertiary="academy-expand"><a href="academy/expand-your-plant.html" class="col2-link"><span><strong class="sub-num">05</strong> Expand Your Plant</span></a></li></ul></div>' +
-    '<div class="drawer-sub-pane" id="sub-pane-engineering"><button type="button" class="drawer-mobile-back-btn" data-back-level="1"><span>←</span> <span>Main Menu</span></button><h3 class="sub-pane-title"><a href="engineering-center.html">AAC Engineering Center</a></h3><ul class="col2-menu-list"><li class="col2-item" data-tertiary="eng-process"><a href="production-process.html" class="col2-link"><strong>AAC Block Production Process</strong></a></li><li class="col2-item" data-tertiary="eng-layout"><a href="plant-layout.html" class="col2-link"><strong>AAC Plant Layout</strong></a></li><li class="col2-item" data-tertiary="eng-complete"><a href="complete-aac-plant.html" class="col2-link"><strong>Complete AAC Plant</strong></a></li><li class="col2-item has-tertiary" data-tertiary="eng-machinery"><a href="machinery-equipment.html" class="col2-link"><strong>Plant Machinery</strong><span class="col2-arrow">›</span></a></li></ul></div>' +
+    '<div class="drawer-sub-pane" id="sub-pane-engineering"><button type="button" class="drawer-mobile-back-btn" data-back-level="1"><span>←</span> <span>Main Menu</span></button><h3 class="sub-pane-title"><a href="engineering-center.html">AAC Engineering Center</a></h3><ul class="col2-menu-list"><li class="col2-item" data-tertiary="eng-process"><a href="production-process.html" class="col2-link"><strong>AAC Block Production Process</strong></a></li><li class="col2-item" data-tertiary="eng-layout"><a href="plant-layout.html" class="col2-link"><strong>AAC Plant Layout</strong></a></li><li class="col2-item" data-tertiary="eng-complete"><a href="complete-aac-plant.html" class="col2-link"><strong>Complete AAC Plant</strong></a></li><li class="col2-item has-tertiary" data-tertiary="eng-machinery"><a href="machinery-equipment.html" class="col2-link"><strong>Plant Machinery</strong><span class="col2-arrow">›</span></a></li><li class="col2-item" data-tertiary="eng-automation"><a href="aac-plant-automation.html" class="col2-link"><strong>AAC Plant Automation</strong></a></li><li class="col2-item" data-tertiary="eng-infra"><a href="aac-infrastructure-utilities.html" class="col2-link"><strong>AAC Plant Infrastructure &amp; Utilities</strong></a></li><li class="col2-item" data-tertiary="eng-tech"><a href="aac-plant-technology.html" class="col2-link"><strong>AAC Plant Technology</strong></a></li></ul></div>' +
     '<div class="drawer-sub-pane" id="sub-pane-whylaxmi"><button type="button" class="drawer-mobile-back-btn" data-back-level="1"><span>←</span> <span>Main Menu</span></button><h3 class="sub-pane-title"><a href="why-laxmi.html">Why Laxmi</a></h3><ul class="col2-menu-list"><li class="col2-item" data-tertiary="whylaxmi-projects"><a href="projects.html" class="col2-link"><strong>Visit Our Running Plant</strong></a></li><li class="col2-item" data-tertiary="whylaxmi-testimonial"><a href="testimonial.html" class="col2-link"><strong>Testimonial Stories &amp; Case Studies</strong></a></li><li class="col2-item" data-tertiary="whylaxmi-philosophy"><a href="brand-philosophy.html" class="col2-link"><strong>Our Brand Philosophy</strong></a></li><li class="col2-item" data-tertiary="whylaxmi-workshop"><a href="workshop-visit.html" class="col2-link"><strong>Workshop Visit</strong></a></li></ul></div>' +
     '</div>' +
     '<div class="drawer-tertiary-col" id="drawer-tertiary-col">' +
@@ -70,7 +70,6 @@
   '        </h2>' +
   '      </div>' +
   '    </div>' +
-  '' +
   '    <!-- Main Navigation 4 Columns Grid -->' +
   '    <div class="site-footer__nav-grid">' +
   '      ' +
@@ -91,6 +90,9 @@
   '          <li><a href="production-process.html">Production Process</a></li>' +
   '          <li><a href="plant-layout.html">Plant Layout Design</a></li>' +
   '          <li><a href="machinery-equipment.html">Plant Machinery (8 Systems)</a></li>' +
+  '          <li><a href="aac-plant-automation.html">AAC Plant Automation</a></li>' +
+  '          <li><a href="aac-infrastructure-utilities.html">AAC Plant Infrastructure &amp; Utilities</a></li>' +
+  '          <li><a href="aac-plant-technology.html">AAC Plant Technology</a></li>' +
   '        </ul>' +
   '      </div>' +
   '' +
@@ -499,211 +501,237 @@
     });
   }
 
-  var PAGE_SEQUENCES = {
-    // 01 Understand the Market (Submenu Group)
-    'why-aac-blocks.html': {
-      title: 'Why AAC Blocks',
-      category: 'Understand the Market',
-      prev: null,
-      next: { href: 'future-of-aac.html', title: 'Future of AAC', category: 'Understand the Market' }
-    },
-    'future-of-aac.html': {
-      title: 'Future of AAC',
-      category: 'Understand the Market',
-      prev: { href: 'why-aac-blocks.html', title: 'Why AAC Blocks', category: 'Understand the Market' },
-      next: { href: 'market-demand.html', title: 'Market Demand', category: 'Understand the Market' }
-    },
-    'market-demand.html': {
-      title: 'Market Demand',
-      category: 'Understand the Market',
-      prev: { href: 'future-of-aac.html', title: 'Future of AAC', category: 'Understand the Market' },
-      next: { href: 'raw-materials.html', title: 'Raw Materials', category: 'Understand the Market' }
-    },
-    'raw-materials.html': {
-      title: 'Raw Materials',
-      category: 'Understand the Market',
-      prev: { href: 'market-demand.html', title: 'Market Demand', category: 'Understand the Market' },
-      next: { href: 'profitability.html', title: 'Profitability', category: 'Understand the Market' }
-    },
-    'profitability.html': {
-      title: 'Profitability',
-      category: 'Understand the Market',
-      prev: { href: 'raw-materials.html', title: 'Raw Materials', category: 'Understand the Market' },
-      next: null
-    },
+  var PAGE_RECOMMENDATIONS = {
+    // 01 Understand the Market
+    'why-aac-blocks.html': [
+      { href: 'raw-materials.html', title: 'Raw Materials', category: 'Understand the Market' },
+      { href: 'market-demand.html', title: 'Market Demand', category: 'Understand the Market' },
+      { href: 'future-of-aac.html', title: 'Future of AAC', category: 'Understand the Market' }
+    ],
+    'future-of-aac.html': [
+      { href: 'market-demand.html', title: 'Market Demand', category: 'Understand the Market' },
+      { href: 'profitability.html', title: 'Profitability', category: 'Understand the Market' },
+      { href: 'academy/understand-market.html?topic=government-policies', title: 'Government Policies', category: 'Understand the Market' }
+    ],
+    'market-demand.html': [
+      { href: 'profitability.html', title: 'Profitability', category: 'Understand the Market' },
+      { href: 'capacity-selection.html', title: 'Capacity Selection', category: 'Design Your Plant' },
+      { href: 'roi-payback.html', title: 'ROI & Payback', category: 'Design Your Plant' }
+    ],
+    'raw-materials.html': [
+      { href: 'market-demand.html', title: 'Market Demand', category: 'Understand the Market' },
+      { href: 'profitability.html', title: 'Profitability', category: 'Understand the Market' },
+      { href: 'academy/understand-market.html?topic=government-policies', title: 'Government Policies', category: 'Understand the Market' }
+    ],
+    'profitability.html': [
+      { href: 'capacity-selection.html', title: 'Capacity Selection', category: 'Design Your Plant' },
+      { href: 'raw-materials.html', title: 'Raw Material', category: 'Understand the Market' },
+      { href: 'roi-payback.html', title: 'ROI & Payback', category: 'Design Your Plant' }
+    ],
+    'government-policies': [
+      { href: 'subsidy.html', title: 'Subsidy', category: 'Design Your Plant' },
+      { href: 'finance-bank-loan.html', title: 'Finance & Bank Loan', category: 'Design Your Plant' },
+      { href: 'roi-payback.html', title: 'ROI & Payback', category: 'Design Your Plant' }
+    ],
+    'understand-market.html': [
+      { href: 'subsidy.html', title: 'Subsidy', category: 'Design Your Plant' },
+      { href: 'finance-bank-loan.html', title: 'Finance & Bank Loan', category: 'Design Your Plant' },
+      { href: 'roi-payback.html', title: 'ROI & Payback', category: 'Design Your Plant' }
+    ],
 
-    // 02 Design Your Plant (Submenu Group)
-    'capacity-selection.html': {
-      title: 'Capacity Selection',
-      category: 'Design Your Plant',
-      prev: null,
-      next: { href: 'land-requirement.html', title: 'Land Requirement', category: 'Design Your Plant' }
-    },
-    'land-requirement.html': {
-      title: 'Land Requirement',
-      category: 'Design Your Plant',
-      prev: { href: 'capacity-selection.html', title: 'Capacity Selection', category: 'Design Your Plant' },
-      next: { href: 'project-cost.html', title: 'Project Cost & Working Capital', category: 'Design Your Plant' }
-    },
-    'project-cost.html': {
-      title: 'Project Cost & Working Capital',
-      category: 'Design Your Plant',
-      prev: { href: 'land-requirement.html', title: 'Land Requirement', category: 'Design Your Plant' },
-      next: { href: 'roi-payback.html', title: 'ROI & Payback', category: 'Design Your Plant' }
-    },
-    'roi-payback.html': {
-      title: 'ROI & Payback',
-      category: 'Design Your Plant',
-      prev: { href: 'project-cost.html', title: 'Project Cost & Working Capital', category: 'Design Your Plant' },
-      next: { href: 'finance-bank-loan.html', title: 'Finance & Bank Loan', category: 'Design Your Plant' }
-    },
-    'finance-bank-loan.html': {
-      title: 'Finance & Bank Loan',
-      category: 'Design Your Plant',
-      prev: { href: 'roi-payback.html', title: 'ROI & Payback', category: 'Design Your Plant' },
-      next: { href: 'subsidy.html', title: 'Subsidy', category: 'Design Your Plant' }
-    },
-    'subsidy.html': {
-      title: 'Subsidy',
-      category: 'Design Your Plant',
-      prev: { href: 'finance-bank-loan.html', title: 'Finance & Bank Loan', category: 'Design Your Plant' },
-      next: null
-    },
+    // 02 Design Your Plant
+    'capacity-selection.html': [
+      { href: 'complete-aac-plant.html', title: 'Complete AAC Plant', category: 'Engineering Center' },
+      { href: 'land-requirement.html', title: 'Land Requirement', category: 'Design Your Plant' },
+      { href: 'roi-payback.html', title: 'ROI & Payback', category: 'Design Your Plant' }
+    ],
+    'land-requirement.html': [
+      { href: 'project-cost.html', title: 'Project Cost & Working Capital', category: 'Design Your Plant' },
+      { href: 'finance-bank-loan.html', title: 'Finance & Bank Loan', category: 'Design Your Plant' },
+      { href: 'subsidy.html', title: 'Subsidy', category: 'Design Your Plant' }
+    ],
+    'project-cost.html': [
+      { href: 'roi-payback.html', title: 'ROI & Payback', category: 'Design Your Plant' },
+      { href: 'finance-bank-loan.html', title: 'Finance & Bank Loan', category: 'Design Your Plant' },
+      { href: 'subsidy.html', title: 'Subsidy', category: 'Design Your Plant' }
+    ],
+    'roi-payback.html': [
+      { href: 'project-cost.html', title: 'Project Cost & Working Capital', category: 'Design Your Plant' },
+      { href: 'finance-bank-loan.html', title: 'Finance & Bank Loan', category: 'Design Your Plant' },
+      { href: 'subsidy.html', title: 'Subsidy', category: 'Design Your Plant' }
+    ],
+    'finance-bank-loan.html': [
+      { href: 'project-cost.html', title: 'Project Cost & Working Capital', category: 'Design Your Plant' },
+      { href: 'roi-payback.html', title: 'ROI & Payback', category: 'Design Your Plant' },
+      { href: 'subsidy.html', title: 'Subsidy', category: 'Design Your Plant' }
+    ],
+    'subsidy.html': [
+      { href: 'project-cost.html', title: 'Project Cost & Working Capital', category: 'Design Your Plant' },
+      { href: 'roi-payback.html', title: 'ROI & Payback', category: 'Design Your Plant' },
+      { href: 'finance-bank-loan.html', title: 'Finance & Bank Loan', category: 'Design Your Plant' }
+    ],
+    'design-your-plant.html': [
+      { href: 'complete-aac-plant.html', title: 'Complete AAC Plant', category: 'Engineering Center' },
+      { href: 'land-requirement.html', title: 'Land Requirement', category: 'Design Your Plant' },
+      { href: 'project-cost.html', title: 'Project Cost & Working Capital', category: 'Design Your Plant' }
+    ],
 
     // 03 Compare Your AAC Plant
-    'compare-aac-plant.html': {
-      title: 'Compare Your AAC Plant',
-      category: 'Compare Technology',
-      prev: null,
-      next: null
-    },
+    'compare-aac-plant.html': [
+      { href: 'projects.html', title: 'Visit Running Plant', category: 'Why Laxmi' },
+      { href: 'testimonial.html', title: 'Customer Testimonial', category: 'Why Laxmi' },
+      { href: 'workshop-visit.html', title: 'Workshop Visit', category: 'Why Laxmi' }
+    ],
+    'compare-your-aac-plant.html': [
+      { href: 'projects.html', title: 'Visit Running Plant', category: 'Why Laxmi' },
+      { href: 'testimonial.html', title: 'Customer Testimonial', category: 'Why Laxmi' },
+      { href: 'workshop-visit.html', title: 'Workshop Visit', category: 'Why Laxmi' }
+    ],
 
     // 04 Efficient Your Plant
-    'make-plant-automatic.html': {
-      title: 'Make Plant Automatic',
-      category: 'Chapter 13 · Efficient Your Plant',
-      prev: null,
-      next: { href: 'improve-block-quality.html', title: 'Improve AAC Block Quality', category: 'Chapter 14 · Efficient Plant' }
-    },
-    'improve-block-quality.html': {
-      title: 'Improve AAC Block Quality',
-      category: 'Chapter 14 · Efficient Your Plant',
-      prev: { href: 'make-plant-automatic.html', title: 'Make Plant Automatic', category: 'Chapter 13 · Efficient Plant' },
-      next: { href: 'plant-maintenance-sop.html', title: 'Plant Maintenance SOP', category: 'Chapter 15 · Efficient Plant' }
-    },
-    'plant-maintenance-sop.html': {
-      title: 'Plant Maintenance SOP',
-      category: 'Chapter 15 · Efficient Your Plant',
-      prev: { href: 'improve-block-quality.html', title: 'Improve Block Quality', category: 'Chapter 14 · Efficient Plant' },
-      next: { href: 'reduce-steam-cost.html', title: 'Reduce Steam Cost', category: 'Chapter 16 · Efficient Plant' }
-    },
-    'reduce-steam-cost.html': {
-      title: 'Reduce Steam Cost',
-      category: 'Chapter 16 · Efficient Your Plant',
-      prev: { href: 'plant-maintenance-sop.html', title: 'Plant Maintenance SOP', category: 'Chapter 15 · Efficient Plant' },
-      next: null
-    },
+    'make-plant-automatic.html': [
+      { href: 'projects.html', title: 'Visit Running Plant', category: 'Why Laxmi' },
+      { href: 'testimonial.html', title: 'Customer Testimonial', category: 'Why Laxmi' },
+      { href: 'workshop-visit.html', title: 'Workshop Visit', category: 'Why Laxmi' }
+    ],
+    'improve-block-quality.html': [
+      { href: 'projects.html', title: 'Visit Running Plant', category: 'Why Laxmi' },
+      { href: 'testimonial.html', title: 'Customer Testimonial', category: 'Why Laxmi' },
+      { href: 'workshop-visit.html', title: 'Workshop Visit', category: 'Why Laxmi' }
+    ],
+    'plant-maintenance-sop.html': [
+      { href: 'projects.html', title: 'Visit Running Plant', category: 'Why Laxmi' },
+      { href: 'testimonial.html', title: 'Customer Testimonial', category: 'Why Laxmi' },
+      { href: 'workshop-visit.html', title: 'Workshop Visit', category: 'Why Laxmi' }
+    ],
+    'reduce-steam-cost.html': [
+      { href: 'projects.html', title: 'Visit Running Plant', category: 'Why Laxmi' },
+      { href: 'testimonial.html', title: 'Customer Testimonial', category: 'Why Laxmi' },
+      { href: 'workshop-visit.html', title: 'Workshop Visit', category: 'Why Laxmi' }
+    ],
+    'efficient-your-plant.html': [
+      { href: 'projects.html', title: 'Visit Running Plant', category: 'Why Laxmi' },
+      { href: 'testimonial.html', title: 'Customer Testimonial', category: 'Why Laxmi' },
+      { href: 'workshop-visit.html', title: 'Workshop Visit', category: 'Why Laxmi' }
+    ],
+    'expand-your-plant.html': [
+      { href: 'projects.html', title: 'Visit Running Plant', category: 'Why Laxmi' },
+      { href: 'testimonial.html', title: 'Customer Testimonial', category: 'Why Laxmi' },
+      { href: 'workshop-visit.html', title: 'Workshop Visit', category: 'Why Laxmi' }
+    ],
 
-    // Engineering Center & Systems
-    // AAC Engineering Center Core Track (Submenu Group)
-    'production-process.html': {
-      title: 'AAC Block Production Process',
-      category: 'Engineering Center',
-      prev: null,
-      next: { href: 'plant-layout.html', title: 'AAC Plant Layout', category: 'Engineering Center' }
-    },
-    'plant-layout.html': {
-      title: 'AAC Plant Layout',
-      category: 'Engineering Center',
-      prev: { href: 'production-process.html', title: 'Production Process', category: 'Engineering Center' },
-      next: { href: 'complete-aac-plant.html', title: 'Complete AAC Plant', category: 'Engineering Center' }
-    },
-    'complete-aac-plant.html': {
-      title: 'Complete AAC Plant',
-      category: 'Engineering Center',
-      prev: { href: 'plant-layout.html', title: 'Plant Layout', category: 'Engineering Center' },
-      next: { href: 'machinery-equipment.html', title: 'Plant Machinery', category: 'Engineering Center' }
-    },
-    'machinery-equipment.html': {
-      title: 'Plant Machinery Overview',
-      category: 'Engineering Center',
-      prev: { href: 'complete-aac-plant.html', title: 'Complete AAC Plant', category: 'Engineering Center' },
-      next: null
-    },
-    'machinery-raw-material-storage.html': {
-      title: 'Raw Material Storage',
-      category: 'Machinery System 01',
-      prev: null,
-      next: { href: 'machinery-batching-preparation.html', title: 'Batching & Dosing System', category: 'Machinery 02' }
-    },
-    'machinery-batching-preparation.html': {
-      title: 'Batching & Raw Material Prep',
-      category: 'Machinery System 02',
-      prev: { href: 'machinery-raw-material-storage.html', title: 'Raw Material Storage', category: 'Machinery 01' },
-      next: { href: 'machinery-mould-precuring.html', title: 'Mould Handling & Precuring', category: 'Machinery 03' }
-    },
-    'machinery-mould-precuring.html': {
-      title: 'Mould Handling & Precuring',
-      category: 'Machinery System 03',
-      prev: { href: 'machinery-batching-preparation.html', title: 'Batching System', category: 'Machinery 02' },
-      next: { href: 'machinery-tilting-machine.html', title: 'AAC Tilting Machine', category: 'Machinery 04' }
-    },
-    'machinery-tilting-machine.html': {
-      title: 'AAC Tilting Machine',
-      category: 'Machinery System 04',
-      prev: { href: 'machinery-mould-precuring.html', title: 'Mould Handling & Precuring', category: 'Machinery 03' },
-      next: { href: 'machinery-cutting-system.html', title: 'AAC Cutting System', category: 'Machinery 05' }
-    },
-    'machinery-cutting-system.html': {
-      title: 'AAC Cutting System',
-      category: 'Machinery System 05',
-      prev: { href: 'machinery-tilting-machine.html', title: 'AAC Tilting Machine', category: 'Machinery 04' },
-      next: { href: 'machinery-autoclave.html', title: 'AAC Autoclave System', category: 'Machinery 06' }
-    },
-    'machinery-autoclave.html': {
-      title: 'AAC Autoclave System',
-      category: 'Machinery System 06',
-      prev: { href: 'machinery-cutting-system.html', title: 'AAC Cutting System', category: 'Machinery 05' },
-      next: { href: 'machinery-steam-boiler.html', title: 'Steam Boiler System', category: 'Machinery 07' }
-    },
-    'machinery-steam-boiler.html': {
-      title: 'AAC Steam Boiler System',
-      category: 'Machinery System 07',
-      prev: { href: 'machinery-autoclave.html', title: 'AAC Autoclave System', category: 'Machinery 06' },
-      next: { href: 'machinery-auto-palletizing.html', title: 'Auto Palletizing System', category: 'Machinery 08' }
-    },
-    'machinery-auto-palletizing.html': {
-      title: 'Auto Palletizing System',
-      category: 'Machinery System 08',
-      prev: { href: 'machinery-steam-boiler.html', title: 'Steam Boiler System', category: 'Machinery 07' },
-      next: null
-    },
+    // AAC Engineering Center Core Track
+    'production-process.html': [
+      { href: 'projects.html', title: 'Visit Running Plant', category: 'Why Laxmi' },
+      { href: 'testimonial.html', title: 'Customer Testimonial', category: 'Why Laxmi' },
+      { href: 'workshop-visit.html', title: 'Workshop Visit', category: 'Why Laxmi' }
+    ],
+    'plant-layout.html': [
+      { href: 'projects.html', title: 'Visit Running Plant', category: 'Why Laxmi' },
+      { href: 'testimonial.html', title: 'Customer Testimonial', category: 'Why Laxmi' },
+      { href: 'workshop-visit.html', title: 'Workshop Visit', category: 'Why Laxmi' }
+    ],
+    'complete-aac-plant.html': [
+      { href: 'projects.html', title: 'Visit Running Plant', category: 'Why Laxmi' },
+      { href: 'testimonial.html', title: 'Customer Testimonial', category: 'Why Laxmi' },
+      { href: 'workshop-visit.html', title: 'Workshop Visit', category: 'Why Laxmi' }
+    ],
+    'machinery-equipment.html': [
+      { href: 'projects.html', title: 'Visit Running Plant', category: 'Why Laxmi' },
+      { href: 'testimonial.html', title: 'Customer Testimonial', category: 'Why Laxmi' },
+      { href: 'workshop-visit.html', title: 'Workshop Visit', category: 'Why Laxmi' }
+    ],
+    'engineering-center.html': [
+      { href: 'projects.html', title: 'Visit Running Plant', category: 'Why Laxmi' },
+      { href: 'testimonial.html', title: 'Customer Testimonial', category: 'Why Laxmi' },
+      { href: 'workshop-visit.html', title: 'Workshop Visit', category: 'Why Laxmi' }
+    ],
 
-    // Why Laxmi Track (Submenu Group)
-    'projects.html': {
-      title: 'Visit Our Running Plant',
-      category: 'Why Laxmi',
-      prev: null,
-      next: { href: 'testimonial.html', title: 'Testimonial Stories', category: 'Why Laxmi' }
-    },
-    'testimonial.html': {
-      title: 'Testimonial Stories',
-      category: 'Why Laxmi',
-      prev: { href: 'projects.html', title: 'Visit Running Plant', category: 'Why Laxmi' },
-      next: { href: 'brand-philosophy.html', title: 'Our Brand Philosophy', category: 'Why Laxmi' }
-    },
-    'brand-philosophy.html': {
-      title: 'Our Brand Philosophy',
-      category: 'Why Laxmi',
-      prev: { href: 'testimonial.html', title: 'Testimonial Stories', category: 'Why Laxmi' },
-      next: { href: 'workshop-visit.html', title: 'Workshop Visit', category: 'Why Laxmi' }
-    },
-    'workshop-visit.html': {
-      title: 'Workshop Visit',
-      category: 'Why Laxmi',
-      prev: { href: 'brand-philosophy.html', title: 'Brand Philosophy', category: 'Why Laxmi' },
-      next: null
-    }
+    // Plant Machinery 8 Systems
+    'machinery-raw-material-storage.html': [
+      { href: 'machinery-batching-preparation.html', title: 'AAC Batching System & Raw Material Prep', category: 'Plant Machinery' },
+      { href: 'projects.html', title: 'Visit Running Plant', category: 'Why Laxmi' },
+      { href: 'workshop-visit.html', title: 'Workshop Visit', category: 'Why Laxmi' }
+    ],
+    'machinery-batching-preparation.html': [
+      { href: 'machinery-raw-material-storage.html', title: 'AAC Plant Raw Material Storage', category: 'Plant Machinery' },
+      { href: 'machinery-mould-precuring.html', title: 'AAC Mould Handling & Precuring Process', category: 'Plant Machinery' },
+      { href: 'projects.html', title: 'Visit Running Plant', category: 'Why Laxmi' }
+    ],
+    'machinery-mould-precuring.html': [
+      { href: 'machinery-batching-preparation.html', title: 'AAC Batching System & Raw Material Prep', category: 'Plant Machinery' },
+      { href: 'machinery-tilting-machine.html', title: 'AAC Tilting Machine', category: 'Plant Machinery' },
+      { href: 'projects.html', title: 'Visit Running Plant', category: 'Why Laxmi' }
+    ],
+    'machinery-tilting-machine.html': [
+      { href: 'machinery-mould-precuring.html', title: 'AAC Mould Handling & Precuring Process', category: 'Plant Machinery' },
+      { href: 'machinery-cutting-system.html', title: 'AAC Cutting System', category: 'Plant Machinery' },
+      { href: 'projects.html', title: 'Visit Running Plant', category: 'Why Laxmi' }
+    ],
+    'machinery-cutting-system.html': [
+      { href: 'machinery-tilting-machine.html', title: 'AAC Tilting Machine', category: 'Plant Machinery' },
+      { href: 'machinery-autoclave.html', title: 'AAC Autoclave', category: 'Plant Machinery' },
+      { href: 'projects.html', title: 'Visit Running Plant', category: 'Why Laxmi' }
+    ],
+    'machinery-autoclave.html': [
+      { href: 'machinery-cutting-system.html', title: 'AAC Cutting System', category: 'Plant Machinery' },
+      { href: 'machinery-steam-boiler.html', title: 'AAC Steam Boiler', category: 'Plant Machinery' },
+      { href: 'projects.html', title: 'Visit Running Plant', category: 'Why Laxmi' }
+    ],
+    'machinery-steam-boiler.html': [
+      { href: 'machinery-autoclave.html', title: 'AAC Autoclave', category: 'Plant Machinery' },
+      { href: 'machinery-auto-palletizing.html', title: 'AAC Auto Palletizing System', category: 'Plant Machinery' },
+      { href: 'projects.html', title: 'Visit Running Plant', category: 'Why Laxmi' }
+    ],
+    'machinery-auto-palletizing.html': [
+      { href: 'projects.html', title: 'Visit Running Plant', category: 'Why Laxmi' },
+      { href: 'testimonial.html', title: 'Customer Testimonial', category: 'Why Laxmi' },
+      { href: 'workshop-visit.html', title: 'Workshop Visit', category: 'Why Laxmi' }
+    ],
+
+    // New Engineering Pages
+    'aac-plant-automation.html': [
+      { href: 'projects.html', title: 'Visit Running Plant', category: 'Why Laxmi' },
+      { href: 'testimonial.html', title: 'Customer Testimonial', category: 'Why Laxmi' },
+      { href: 'workshop-visit.html', title: 'Workshop Visit', category: 'Why Laxmi' }
+    ],
+    'aac-infrastructure-utilities.html': [
+      { href: 'projects.html', title: 'Visit Running Plant', category: 'Why Laxmi' },
+      { href: 'testimonial.html', title: 'Customer Testimonial', category: 'Why Laxmi' },
+      { href: 'workshop-visit.html', title: 'Workshop Visit', category: 'Why Laxmi' }
+    ],
+    'aac-plant-technology.html': [
+      { href: 'projects.html', title: 'Visit Running Plant', category: 'Why Laxmi' },
+      { href: 'testimonial.html', title: 'Customer Testimonial', category: 'Why Laxmi' },
+      { href: 'workshop-visit.html', title: 'Workshop Visit', category: 'Why Laxmi' }
+    ],
+
+    // Why Laxmi Track
+    'projects.html': [
+      { href: 'testimonial.html', title: 'Testimonial Stories & Case Studies', category: 'Why Laxmi' },
+      { href: 'workshop-visit.html', title: 'Workshop Visit', category: 'Why Laxmi' },
+      { href: 'brand-philosophy.html', title: 'Our Brand Philosophy', category: 'Why Laxmi' }
+    ],
+    'testimonial.html': [
+      { href: 'projects.html', title: 'Visit Our Running Plant', category: 'Why Laxmi' },
+      { href: 'workshop-visit.html', title: 'Workshop Visit', category: 'Why Laxmi' },
+      { href: 'brand-philosophy.html', title: 'Our Brand Philosophy', category: 'Why Laxmi' }
+    ],
+    'brand-philosophy.html': [
+      { href: 'projects.html', title: 'Visit Our Running Plant', category: 'Why Laxmi' },
+      { href: 'testimonial.html', title: 'Testimonial Stories & Case Studies', category: 'Why Laxmi' },
+      { href: 'workshop-visit.html', title: 'Workshop Visit', category: 'Why Laxmi' }
+    ],
+    'workshop-visit.html': [
+      { href: 'projects.html', title: 'Visit Our Running Plant', category: 'Why Laxmi' },
+      { href: 'testimonial.html', title: 'Testimonial Stories & Case Studies', category: 'Why Laxmi' },
+      { href: 'brand-philosophy.html', title: 'Our Brand Philosophy', category: 'Why Laxmi' }
+    ],
+    'why-laxmi.html': [
+      { href: 'projects.html', title: 'Visit Our Running Plant', category: 'Why Laxmi' },
+      { href: 'testimonial.html', title: 'Testimonial Stories & Case Studies', category: 'Why Laxmi' },
+      { href: 'workshop-visit.html', title: 'Workshop Visit', category: 'Why Laxmi' }
+    ]
   };
 
   var FLOATING_PILL_TITLES = {
@@ -743,6 +771,8 @@
     'plant-layout.html': 'AAC Plant Layout & Spatial Optimization Guide',
     'complete-aac-plant.html': 'Complete Turnkey AAC Plant Solutions',
     'machinery-equipment.html': 'Plant Machinery & Systems – 8 Core AAC Workstations',
+    'aac-plant-automation.html': 'AAC Plant Automation – Manual vs Automatic Guide',
+    'aac-infrastructure-utilities.html': 'AAC Plant Infrastructure & Utilities – Power, Steam & Civil Planning',
 
     // Machinery 8 Systems
     'machinery-raw-material-storage.html': 'AAC Raw Material Storage & Handling Systems',
@@ -852,6 +882,74 @@
     checkPillScroll();
   }
 
+  var PAGE_HERO_IMAGES = {
+    // 01 Understand the Market
+    'why-aac-blocks.html': 'assets/images/why-aac.png',
+    'future-of-aac.html': 'assets/images/future-of-aac.png',
+    'market-demand.html': 'assets/images/market-demand.png',
+    'raw-materials.html': 'assets/images/raw-materials.png',
+    'profitability.html': 'assets/images/profitability.png',
+    'understand-market.html': 'assets/images/government-policies.png',
+    'government-policies': 'assets/images/government-policies.png',
+
+    // 02 Design Your Plant
+    'capacity-selection.html': 'assets/images/capacity-selection.png',
+    'land-requirement.html': 'assets/images/land-requirement.png',
+    'project-cost.html': 'assets/images/project-cost-working-capital.png',
+    'roi-payback.html': 'assets/images/roi-payback.png',
+    'finance-bank-loan.html': 'assets/images/finance-bank-loan.png',
+    'subsidy.html': 'assets/images/subsidy.png',
+    'design-your-plant.html': 'assets/images/capacity-selection.png',
+
+    // 03 Compare
+    'compare-aac-plant.html': 'assets/images/compare-aac-plant.png',
+    'compare-your-aac-plant.html': 'assets/images/compare-aac-plant.png',
+
+    // 04 Efficient Your Plant
+    'make-plant-automatic.html': 'assets/images/plant-automation.png',
+    'improve-block-quality.html': 'assets/images/improve-block-quality.png',
+    'plant-maintenance-sop.html': 'assets/images/maintenance-sop.png',
+    'reduce-steam-cost.html': 'assets/images/reduce-steam-cost.png',
+    'efficient-your-plant.html': 'assets/images/plant-automation.png',
+    'expand-your-plant.html': 'assets/images/capacity-selection.png',
+
+    // Engineering Center & 8 Machinery Systems
+    'production-process.html': 'assets/images/production-process.png',
+    'plant-layout.html': 'assets/images/engineering/plant-layout-3d.png',
+    'complete-aac-plant.html': 'assets/images/engineering/complete-plant-3d.png',
+    'machinery-equipment.html': 'assets/images/engineering/machinery-cutting-system.png',
+    'engineering-center.html': 'assets/images/engineering/complete-plant-3d.png',
+    'machinery-raw-material-storage.html': 'assets/images/engineering/machinery-raw-material-storage.png',
+    'machinery-batching-preparation.html': 'assets/images/engineering/machinery-batching-preparation.png',
+    'machinery-mould-precuring.html': 'assets/images/engineering/machinery-mould-precuring.png',
+    'machinery-tilting-machine.html': 'assets/images/engineering/machinery-tilting-machine.png',
+    'machinery-cutting-system.html': 'assets/images/engineering/machinery-cutting-system.png',
+    'machinery-autoclave.html': 'assets/images/engineering/machinery-autoclave.png',
+    'machinery-steam-boiler.html': 'assets/images/engineering/machinery-steam-boiler.png',
+    'machinery-auto-palletizing.html': 'assets/images/engineering/machinery-auto-palletizing.png',
+
+    // New Engineering Pages
+    'aac-plant-automation.html': 'assets/images/aac-automation-hero.png',
+    'aac-infrastructure-utilities.html': 'assets/images/aac-infrastructure-utilities-hero.png',
+    'aac-plant-technology.html': 'assets/images/aac-plant-technology-hero.png',
+
+    // Why Laxmi Track
+    'projects.html': 'assets/images/india-map-3d.png',
+    'testimonial.html': 'assets/images/maintenance-sop.png',
+    'brand-philosophy.html': 'assets/images/decisions-plant-bg.png',
+    'workshop-visit.html': 'assets/images/laxmi-workshop-facility.png',
+    'why-laxmi.html': 'assets/images/laxmi-workshop-facility.png'
+  };
+
+  function getRecommendationImage(href) {
+    if (!href) return 'assets/images/why-aac.png';
+    if (PAGE_HERO_IMAGES[href]) return PAGE_HERO_IMAGES[href];
+    var baseName = href.split('/').pop().split('?')[0];
+    if (PAGE_HERO_IMAGES[baseName]) return PAGE_HERO_IMAGES[baseName];
+    if (href.indexOf('government-policies') !== -1) return 'assets/images/government-policies.png';
+    return 'assets/images/laxmi-workshop-facility.png';
+  }
+
   function injectPagePagination() {
     var footer = document.getElementById('site-footer');
     if (!footer) return;
@@ -862,41 +960,48 @@
       return;
     }
 
-    var pageData = PAGE_SEQUENCES[filename];
-    if (!pageData) return;
+    var urlParams = new URLSearchParams(window.location.search);
+    var topic = urlParams.get('topic');
 
-    var prevHTML = '';
-    if (pageData.prev) {
-      prevHTML = '<a href="' + pageData.prev.href + '" class="page-nav-card page-nav-card--prev">' +
-        '<div class="page-nav-card__icon" aria-hidden="true">←</div>' +
-        '<div class="page-nav-card__content">' +
-        '<span class="page-nav-card__eyebrow">← PREVIOUS PAGE</span>' +
-        '<span class="page-nav-card__title">' + pageData.prev.title + '</span>' +
-        '<span class="page-nav-card__meta">' + pageData.prev.category + '</span>' +
-        '</div></a>';
-    } else {
-      prevHTML = '<div class="page-nav-card-empty"></div>';
+    var recs = null;
+    if (topic && PAGE_RECOMMENDATIONS[topic]) {
+      recs = PAGE_RECOMMENDATIONS[topic];
+    } else if (PAGE_RECOMMENDATIONS[filename]) {
+      recs = PAGE_RECOMMENDATIONS[filename];
     }
 
-    var nextHTML = '';
-    if (pageData.next) {
-      nextHTML = '<a href="' + pageData.next.href + '" class="page-nav-card page-nav-card--next">' +
-        '<div class="page-nav-card__content">' +
-        '<span class="page-nav-card__eyebrow">NEXT PAGE →</span>' +
-        '<span class="page-nav-card__title">' + pageData.next.title + '</span>' +
-        '<span class="page-nav-card__meta">' + pageData.next.category + '</span>' +
+    if (!recs || !recs.length) return;
+
+    var cardsHTML = recs.map(function (item, index) {
+      var badgeNum = '0' + (index + 1);
+      var heroImg = item.image || getRecommendationImage(item.href);
+      return '<a href="' + item.href + '" class="page-nav-card page-nav-card--hero-bg">' +
+        '<div class="page-nav-card__bg-media">' +
+        '<img src="' + heroImg + '" alt="' + item.title.replace(/"/g, '&quot;') + '" class="page-nav-card__bg-img" loading="lazy" />' +
+        '<div class="page-nav-card__overlay"></div>' +
         '</div>' +
+        '<div class="page-nav-card__content">' +
+        '<div class="page-nav-card__header-row">' +
+        '<span class="page-nav-card__eyebrow">' + (item.category || 'RECOMMENDED') + '</span>' +
+        '<span class="page-nav-card__badge">LINK ' + badgeNum + '</span>' +
+        '</div>' +
+        '<div class="page-nav-card__bottom-row">' +
+        '<span class="page-nav-card__title">' + item.title + '</span>' +
         '<div class="page-nav-card__icon" aria-hidden="true">→</div>' +
+        '</div>' +
+        '</div>' +
         '</a>';
-    } else {
-      nextHTML = '<div class="page-nav-card-empty"></div>';
-    }
+    }).join('');
 
-    var paginationHTML = '<nav class="site-page-pagination" id="site-page-pagination" aria-label="Page navigation">' +
+    var paginationHTML = '<nav class="site-page-pagination" id="site-page-pagination" aria-label="Related guides and next pages">' +
+      '<div class="site-page-pagination__container">' +
+      '<div class="site-page-pagination__top-bar">' +
+      '<span class="site-page-pagination__label"><span class="site-page-pagination__dot"></span>CONTINUE EXPLORING</span>' +
+      '<span class="site-page-pagination__sub">Recommended next steps & related technical guides</span>' +
+      '</div>' +
       '<div class="site-page-pagination__inner">' +
-      prevHTML +
-      nextHTML +
-      '</div></nav>';
+      cardsHTML +
+      '</div></div></nav>';
 
     var resolvedHTML = resolveComponentPaths(paginationHTML);
     footer.insertAdjacentHTML('beforebegin', resolvedHTML);
@@ -907,10 +1012,10 @@
 
     var widgetsHTML = '<div class="hp-floating-widgets" aria-label="Quick contact">' +
       '<a href="https://wa.me/918980800839" target="_blank" rel="noopener noreferrer" class="hp-float-btn hp-float-btn--whatsapp" aria-label="WhatsApp Us" title="Chat on WhatsApp">' +
-      '<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.188 8.188 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42a8.182 8.182 0 0 1 2.41 5.83c.01 4.54-3.68 8.23-8.23 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.98-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.06 0 1.21.88 2.39 1.01 2.56.12.17 1.74 2.66 4.21 3.73.59.25 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.17-.48-.29z"/></svg>' +
+      '<svg width="24" height="24" viewBox="0 0 24 24" fill="#ffffff" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.188 8.188 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42a8.182 8.182 0 0 1 2.41 5.83c.01 4.54-3.68 8.23-8.23 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.98-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.06 0 1.21.88 2.39 1.01 2.56.12.17 1.74 2.66 4.21 3.73.59.25 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.17-.48-.29z" fill="#ffffff"/></svg>' +
       '</a>' +
       '<a href="tel:+918980800839" class="hp-float-btn hp-float-btn--phone" aria-label="Call Us" title="Call Us Directly">' +
-      '<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.053 15.053 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.36 11.36 0 0 1 8.57 3.9c.07-.52-.34-.9-.87-.9H4.15c-.55 0-.96.44-.99.98C2.84 13.78 10.23 21.17 19.1 20.85c.54-.02.9-.45.9-.99v-3.58c0-.53-.41-.9-.99-.9z"/></svg>' +
+      '<svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff" aria-hidden="true"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.053 15.053 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.36 11.36 0 0 1 8.57 3.9c.07-.52-.34-.9-.87-.9H4.15c-.55 0-.96.44-.99.98C2.84 13.78 10.23 21.17 19.1 20.85c.54-.02.9-.45.9-.99v-3.58c0-.53-.41-.9-.99-.9z" fill="#ffffff"/></svg>' +
       '</a>' +
       '</div>';
 

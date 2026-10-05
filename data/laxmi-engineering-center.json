@@ -54,6 +54,39 @@
         "image": "assets/images/engineering/machinery-cutting-system.png",
         "steps_count": 8,
         "key_metric": "Heavy-Duty In-House Fabrication"
+      },
+      {
+        "id": "automation",
+        "num": "05",
+        "title": "AAC Plant Automation Guide",
+        "slug": "aac-plant-automation.html",
+        "tagline": "Manual vs Semi vs Fully Automatic Systems",
+        "summary": "Compare manual, semi-automatic, and fully automatic AAC plants by process scope, manpower, sustainable utilization, controls architecture, maintenance, and expansion needs.",
+        "image": "assets/images/aac-automation-hero.png",
+        "steps_count": 5,
+        "key_metric": "Process-by-Process Scope Evaluation"
+      },
+      {
+        "id": "infrastructure-utilities",
+        "num": "06",
+        "title": "AAC Plant Infrastructure & Utilities",
+        "slug": "aac-infrastructure-utilities.html",
+        "tagline": "Power, Steam, Water & Civil Work Logistics",
+        "summary": "Plan AAC plant power, boiler steam balance, water treatment, storage, civil sheds, internal roads, material handling, and pre-commissioning readiness.",
+        "image": "assets/images/aac-infrastructure-utilities-hero.png",
+        "steps_count": 7,
+        "key_metric": "Simultaneous Peak Load Sizing"
+      },
+      {
+        "id": "technology",
+        "num": "07",
+        "title": "AAC Plant Technology Guide",
+        "slug": "aac-plant-technology.html",
+        "tagline": "Tilting vs Non-Tilting Cake Systems",
+        "summary": "Compare tilting and non-tilting AAC plant technology, cake cutting orientation, vertical vs horizontal autoclaving, cake-zone distribution, and running-plant verification.",
+        "image": "assets/images/aac-plant-technology-hero.png",
+        "steps_count": 7,
+        "key_metric": "Process & Cake Movement Logic"
       }
     ],
     "machinery_modules": [

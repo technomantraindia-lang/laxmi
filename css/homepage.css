@@ -268,7 +268,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
+  color: #ffffff !important;
   text-decoration: none;
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, box-shadow 0.2s ease;
   position: relative;
@@ -285,28 +285,34 @@
 .hp-float-btn svg {
   display: block;
   flex-shrink: 0;
+  fill: #ffffff !important;
+  color: #ffffff !important;
   transition: transform 0.2s ease;
 }
 
+.hp-float-btn svg path {
+  fill: #ffffff !important;
+}
+
 .hp-float-btn--whatsapp {
-  background: #25d366;
+  background: #25d366 !important;
 }
 
 .hp-float-btn--whatsapp:hover {
-  background: #1eb853;
+  background: #1eb853 !important;
   transform: translateX(-5px);
   box-shadow: -4px 4px 14px rgba(37, 211, 102, 0.4);
 }
 
 .hp-float-btn--phone {
-  background: #07172c;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  background: #07172c !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.18) !important;
 }
 
 .hp-float-btn--phone:hover {
-  background: #0d223f;
+  background: #0b3f78 !important;
   transform: translateX(-5px);
-  box-shadow: -4px 4px 14px rgba(7, 23, 44, 0.4);
+  box-shadow: -4px 4px 14px rgba(11, 63, 120, 0.4);
 }
 
 .hp-float-btn:hover svg {
