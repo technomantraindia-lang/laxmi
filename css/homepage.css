@@ -90,7 +90,8 @@
   height: 100%;
 }
 
-.editorial-hero__poster {
+.editorial-hero__poster,
+.editorial-hero__video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -495,7 +496,8 @@
   z-index: 0;
 }
 
-.hp-credibility-banner__img {
+.hp-credibility-banner__img,
+.hp-credibility-banner__video {
   width: 100%;
   height: 100%;
   object-fit: cover;
