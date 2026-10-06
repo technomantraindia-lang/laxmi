@@ -34,13 +34,15 @@
    ========================================================================== */
 
 .hero {
-  height: 100vh;
-  min-height: 760px;
+  min-height: 92vh;
   position: relative;
   overflow: hidden;
-  background: var(--navy);
+  background: var(--navy, #07111f);
   color: #fff;
-  padding-top: 84px;
+  padding: 140px 0 100px;
+  display: flex;
+  align-items: center;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .hero-image,
@@ -50,25 +52,50 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: saturate(0.78) contrast(1.09);
+  object-position: center;
+  filter: saturate(0.85) contrast(1.05);
   display: block;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(3, 9, 17, 0.95), rgba(3, 9, 17, 0.6) 46%, rgba(3, 9, 17, 0.12) 78%),
-              linear-gradient(0deg, rgba(3, 9, 17, 0.9), transparent 42%);
+  z-index: 1;
+  background: linear-gradient(90deg, #07111f 0%, rgba(7, 17, 31, 0.94) 30%, rgba(7, 17, 31, 0.72) 54%, rgba(7, 17, 31, 0.22) 78%, transparent 100%),
+              linear-gradient(0deg, rgba(7, 17, 31, 0.85) 0%, transparent 45%);
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 32px;
+  width: 100%;
 }
 
 .hero-copy {
-  position: absolute;
-  z-index: 3;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 25%;
-  width: var(--max);
-  max-width: var(--max);
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  width: 100%;
+  max-width: 950px;
+}
+
+.hero-eyebrow,
+.hero .eyebrow {
+  display: inline-block !important;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.14em !important;
+  color: #38bdf8 !important;
+  text-transform: uppercase !important;
+  margin-bottom: 1.25rem !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
 }
 
 .eyebrow {
@@ -97,35 +124,89 @@
 }
 
 .hero h1,
-.client-world h2,
-.manifesto h2,
-.regions h2,
-.photo-essay h2,
-.expansion h2,
-.visit h2,
-.block-interlude h2,
-.final-block h2 {
-  margin-top: 0;
+.hero-title {
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+  font-size: clamp(3.2rem, 5.8vw, 5.2rem) !important;
+  line-height: 1.05 !important;
+  letter-spacing: -0.035em !important;
+  margin: 0 0 1.5rem 0 !important;
 }
 
-.hero h1 {
-  font-size: clamp(54px, 7.5vw, 110px);
-  line-height: 0.9;
-  letter-spacing: -0.065em;
-  font-weight: 480;
-  margin-bottom: 32px;
+.hero-title-line1 {
+  display: block;
+  font-weight: 800 !important;
+  color: #ffffff !important;
 }
 
+.hero-title-light,
 .hero h1 em {
-  font-style: normal;
-  color: #b8d8ee;
-  font-weight: 320;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  color: #8c9ba5 !important;
+  display: block;
 }
 
-.hero-copy > p:not(.eyebrow) {
-  font-size: clamp(18px, 1.65vw, 25px);
-  color: rgba(255, 255, 255, 0.68);
-  max-width: 650px;
+.hero-sub,
+.hero-copy > p:not(.eyebrow):not(.hero-eyebrow) {
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: clamp(1.05rem, 1.35vw, 1.25rem) !important;
+  line-height: 1.6 !important;
+  color: #cbd5e1 !important;
+  max-width: 680px !important;
+  margin: 0 0 2.2rem 0 !important;
+  font-weight: 400 !important;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.hero-btn-white {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: #ffffff;
+  color: #07172c;
+  font-family: 'Geist', sans-serif !important;
+  font-weight: 800;
+  font-size: 0.92rem;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+}
+
+.hero-btn-white:hover {
+  transform: translateY(-2px);
+  background: #f8fafc;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.22);
+}
+
+.hero-link-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  font-family: 'Geist', sans-serif !important;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.hero-link-text:hover {
+  color: #38bdf8;
+  transform: translateX(3px);
+}
+
+.hero-btn-arrow {
+  display: inline-block;
+  font-size: 1.1em;
+  line-height: 1;
 }
 
 .ghost-link {
@@ -146,14 +227,7 @@
 }
 
 .block-crop {
-  position: absolute;
-  z-index: 2;
-  width: 50vw;
-  right: -8vw;
-  bottom: -22%;
-  mix-blend-mode: screen;
-  opacity: 0.42;
-  pointer-events: none;
+  display: none !important;
 }
 
 /* ==========================================================================
