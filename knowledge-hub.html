@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AAC Knowledge Hub by Laxmi En-Fab Pvt. Ltd. Access engineering whitepapers, standard operating procedures (SOP), maintenance guides, automation insights, steam efficiency blueprints, and raw material optimization." />
+  <meta name="keywords" content="AAC knowledge hub, AAC whitepapers, AAC SOP, AAC plant maintenance, AAC steam reduction, AAC automation guide, Laxmi En-Fab" />
+  <title>Knowledge Hub | Technical Whitepapers &amp; Engineering Resources | Laxmi En-Fab</title>
+  
+  <!-- Google Fonts: Geist & Geist Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/homepage.css" />
+  <link rel="stylesheet" href="css/engineering.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <style>
+    .kh-hero {
+      background: #07172c;
+      color: #ffffff;
+      padding: 130px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .kh-hero__inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 32px;
+      position: relative;
+      z-index: 2;
+    }
+    .kh-hero__eyebrow {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      color: #38bdf8;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+    .kh-hero__title {
+      font-size: clamp(2.8rem, 5.2vw, 4.6rem);
+      line-height: 1.05;
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      margin: 0 0 1.5rem 0;
+    }
+    .kh-hero__title span {
+      display: block;
+      color: #8c9ba5;
+      font-weight: 400;
+    }
+    .kh-hero__sub {
+      font-size: clamp(1.05rem, 1.3vw, 1.25rem);
+      line-height: 1.6;
+      color: #cbd5e1;
+      max-width: 720px;
+      margin: 0 0 2rem 0;
+    }
+    .kh-section {
+      padding: 80px 0 100px;
+      background: #f8fafc;
+    }
+    .kh-container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+    .kh-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 28px;
+      margin-top: 40px;
+    }
+    .kh-card {
+      background: #ffffff;
+      border: 1px solid rgba(7, 23, 44, 0.08);
+      border-radius: 8px;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    }
+    .kh-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(7, 23, 44, 0.08);
+      border-color: #0b3f78;
+    }
+    .kh-card__tag {
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      color: #0b3f78;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .kh-card__title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #07172c;
+      line-height: 1.25;
+      margin: 0 0 12px 0;
+      letter-spacing: -0.02em;
+    }
+    .kh-card__desc {
+      font-size: 0.95rem;
+      color: #4b5e71;
+      line-height: 1.55;
+      margin: 0 0 24px 0;
+    }
+    .kh-card__footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #0b3f78;
+      border-top: 1px solid rgba(7, 23, 44, 0.06);
+      padding-top: 16px;
+    }
+    .kh-card__arrow {
+      font-size: 1.1rem;
+      transition: transform 0.2s;
+    }
+    .kh-card:hover .kh-card__arrow {
+      transform: translateX(4px);
+    }
+    .kh-tools-banner {
+      background: #07172c;
+      color: #ffffff;
+      border-radius: 12px;
+      padding: 48px;
+      margin-top: 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    .kh-tools-banner h3 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin: 0 0 8px 0;
+      letter-spacing: -0.02em;
+    }
+    .kh-tools-banner p {
+      color: #94a3b8;
+      margin: 0;
+      max-width: 580px;
+      font-size: 1rem;
+    }
+    .kh-tools-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      background: #ffffff;
+      color: #07172c;
+      font-weight: 800;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .kh-tools-btn:hover {
+      background: #f8fafc;
+      transform: translateY(-2px);
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Knowledge Hub — Laxmi En-Fab Pvt. Ltd.",
+    "description": "Technical resources, SOPs, plant optimization frameworks, and engineering whitepapers for AAC plant owners and investors.",
+    "url": "https://www.laxmienfab.com/knowledge-hub.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Laxmi En-Fab Pvt. Ltd."
+    }
+  }
+  </script>
+</head>
+<body data-page="knowledge-hub">
+
+  <!-- Shared Global Header Injection -->
+  <div id="site-header"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <nav class="site-breadcrumb" aria-label="Breadcrumb">
+    <div class="site-breadcrumb__inner">
+      <a href="index.html">Home</a>
+      <span class="bc-sep">/</span>
+      <span class="bc-current">Knowledge Hub</span>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO -->
+    <section class="kh-hero">
+      <div class="kh-hero__inner">
+        <span class="kh-hero__eyebrow">ENGINEERING INTELLIGENCE · TECHNICAL RESOURCES</span>
+        <h1 class="kh-hero__title">
+          AAC Knowledge Hub.
+          <span>Better plants begin with evidence-led decisions.</span>
+        </h1>
+        <p class="kh-hero__sub">
+          A curated repository of technical whitepapers, standard operating procedures, steam efficiency blueprints, automation architectures, and investment evaluation frameworks.
+        </p>
+      </div>
+    </section>
+
+    <!-- DIRECTORY GRID -->
+    <section class="kh-section">
+      <div class="kh-container">
+        <span class="hp-section-tag">CURATED TECHNICAL ARTICLES &amp; GUIDES</span>
+        <h2 class="hp-section-title">Operational Excellence &amp; Plant Optimization</h2>
+        
+        <div class="kh-grid">
+          <!-- 01: Make Your Plant Automatic -->
+          <a href="make-plant-automatic.html" class="kh-card">
+            <div>
+              <span class="kh-card__tag">AUTOMATION &amp; UPGRADE</span>
+              <h3 class="kh-card__title">Make Your Plant Automatic</h3>
+              <p class="kh-card__desc">Step-by-step methodology for brownfield plant modernization, PLC-SCADA integration, and manual touchpoint reduction.</p>
+            </div>
+            <div class="kh-card__footer">
+              <span>Read Guide</span>
+              <span class="kh-card__arrow">→</span>
+            </div>
+          </a>
+
+          <!-- 02: Improve Block Quality -->
+          <a href="improve-block-quality.html" class="kh-card">
+            <div>
+              <span class="kh-card__tag">QUALITY ENGINEERING</span>
+              <h3 class="kh-card__title">Improve AAC Block Quality</h3>
+              <p class="kh-card__desc">Root-cause analysis for dimensional accuracy, compressive strength, bulk density stabilization, and crack prevention.</p>
+            </div>
+            <div class="kh-card__footer">
+              <span>Read Guide</span>
+              <span class="kh-card__arrow">→</span>
+            </div>
+          </a>
+
+          <!-- 03: Plant Maintenance SOP -->
+          <a href="plant-maintenance-sop.html" class="kh-card">
+            <div>
+              <span class="kh-card__tag">STANDARD OPERATING PROCEDURES</span>
+              <h3 class="kh-card__title">AAC Plant Maintenance SOP</h3>
+              <p class="kh-card__desc">Preventive, predictive, and scheduled maintenance checklists across autoclaves, wire-cutting machines, and boilers.</p>
+            </div>
+            <div class="kh-card__footer">
+              <span>Read Guide</span>
+              <span class="kh-card__arrow">→</span>
+            </div>
+          </a>
+
+          <!-- 04: Reduce Steam Cost -->
+          <a href="reduce-steam-cost.html" class="kh-card">
+            <div>
+              <span class="kh-card__tag">ENERGY &amp; THERMAL EFFICIENCY</span>
+              <h3 class="kh-card__title">Reduce Your Steam Cost</h3>
+              <p class="kh-card__desc">Autoclave condensate recovery, steam transfer piping insulation, boiler selection, and fuel consumption optimization.</p>
+            </div>
+            <div class="kh-card__footer">
+              <span>Read Guide</span>
+              <span class="kh-card__arrow">→</span>
+            </div>
+          </a>
+
+          <!-- 05: Raw Materials Guide -->
+          <a href="raw-materials.html" class="kh-card">
+            <div>
+              <span class="kh-card__tag">CHEMISTRY &amp; FORMULATION</span>
+              <h3 class="kh-card__title">AAC Raw Materials Guide</h3>
+              <p class="kh-card__desc">Quality testing standards for Fly Ash, Quicklime, Cement, Gypsum, and Aluminum Powder for reliable cake rising.</p>
+            </div>
+            <div class="kh-card__footer">
+              <span>Read Guide</span>
+              <span class="kh-card__arrow">→</span>
+            </div>
+          </a>
+
+          <!-- 06: Plant Layout & Logistics -->
+          <a href="plant-layout.html" class="kh-card">
+            <div>
+              <span class="kh-card__tag">FACTORY ARCHITECTURE</span>
+              <h3 class="kh-card__title">AAC Plant Layout &amp; Logistics</h3>
+              <p class="kh-card__desc">Optimizing material flow, internal forklift logistics, curing yard arrangement, and future expansion zoning.</p>
+            </div>
+            <div class="kh-card__footer">
+              <span>Read Guide</span>
+              <span class="kh-card__arrow">→</span>
+            </div>
+          </a>
+
+          <!-- 07: AAC Plant Technology Guide -->
+          <a href="aac-plant-technology.html" class="kh-card">
+            <div>
+              <span class="kh-card__tag">TECHNOLOGY COMPARISON</span>
+              <h3 class="kh-card__title">AAC Plant Technology Guide</h3>
+              <p class="kh-card__desc">Evaluating tilt-cake vs. flat-cake cutting, automatic mould clamping, and German-standard fabrication depth.</p>
+            </div>
+            <div class="kh-card__footer">
+              <span>Read Guide</span>
+              <span class="kh-card__arrow">→</span>
+            </div>
+          </a>
+
+          <!-- 08: Production Process -->
+          <a href="production-process.html" class="kh-card">
+            <div>
+              <span class="kh-card__tag">MANUFACTURING STAGES</span>
+              <h3 class="kh-card__title">Complete AAC Production Process</h3>
+              <p class="kh-card__desc">End-to-end overview of 8 core production stages from raw material milling to robotic pallet packaging.</p>
+            </div>
+            <div class="kh-card__footer">
+              <span>Read Guide</span>
+              <span class="kh-card__arrow">→</span>
+            </div>
+          </a>
+
+          <!-- 09: Infrastructure & Utilities -->
+          <a href="aac-infrastructure-utilities.html" class="kh-card">
+            <div>
+              <span class="kh-card__tag">CIVIL &amp; UTILITIES</span>
+              <h3 class="kh-card__title">AAC Infrastructure &amp; Utilities</h3>
+              <p class="kh-card__desc">Power transformer requirements, water treatment plants, steam piping, and foundation civil work guidelines.</p>
+            </div>
+            <div class="kh-card__footer">
+              <span>Read Guide</span>
+              <span class="kh-card__arrow">→</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- DPR CALCULATOR CALLOUT BANNER -->
+        <div class="kh-tools-banner">
+          <div>
+            <h3>Evaluate Project Viability &amp; Financials</h3>
+            <p>Use our interactive DPR / ROI calculator to simulate capacity, land requirement, project capital, operating costs, and payback period.</p>
+          </div>
+          <a href="dpr-calculator.html" class="kh-tools-btn">
+            <span>Open DPR / ROI Calculator</span>
+            <span>↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Global Footer Injection -->
+  <div id="site-footer"></div>
+
+  <!-- Global Scripts -->
+  <script src="js/main.js" defer></script>
+  <script src="js/navigation.js" defer></script>
+  <script src="js/components.js" defer></script>
+</body>
+</html>
