@@ -49,17 +49,187 @@
       });
     }
 
-    // Safety fallback: reveal all elements after 1 second just in case
-    setTimeout(function () {
-      if (hero && !hero.classList.contains('is-loaded')) {
-        hero.classList.add('is-loaded');
+    // 3. Setup Stats Counter strip animation
+    initStatsCounters();
+
+    // 4. Setup Customer Success / Testimonials Slider
+    initTestimonialsSlider();
+  }
+
+  function initTestimonialsSlider() {
+    var section = document.getElementById('testimonials');
+    if (!section) return;
+
+    var slides = section.querySelectorAll('.hp-testi-slide');
+    var dots = section.querySelectorAll('.hp-testi-dot');
+    var prevBtn = document.getElementById('hpTestiPrev');
+    var nextBtn = document.getElementById('hpTestiNext');
+
+    if (!slides.length) return;
+
+    var currentIndex = 0;
+    var autoPlayTimer = null;
+    var intervalTime = 7000;
+
+    function goToSlide(index) {
+      if (index < 0) {
+        index = slides.length - 1;
+      } else if (index >= slides.length) {
+        index = 0;
       }
-      revealElements.forEach(function (el) {
-        if (!el.classList.contains('is-revealed')) {
-          el.classList.add('is-revealed');
+
+      slides.forEach(function (slide, i) {
+        if (i === index) {
+          slide.classList.add('active');
+        } else {
+          slide.classList.remove('active');
         }
       });
-    }, 1000);
+
+      dots.forEach(function (dot, i) {
+        if (i === index) {
+          dot.classList.add('active');
+          dot.setAttribute('aria-selected', 'true');
+        } else {
+          dot.classList.remove('active');
+          dot.setAttribute('aria-selected', 'false');
+        }
+      });
+
+      currentIndex = index;
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        goToSlide(currentIndex - 1);
+        resetAutoPlay();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        goToSlide(currentIndex + 1);
+        resetAutoPlay();
+      });
+    }
+
+    dots.forEach(function (dot, idx) {
+      dot.addEventListener('click', function (e) {
+        e.preventDefault();
+        goToSlide(idx);
+        resetAutoPlay();
+      });
+    });
+
+    function startAutoPlay() {
+      stopAutoPlay();
+      autoPlayTimer = setInterval(function () {
+        goToSlide(currentIndex + 1);
+      }, intervalTime);
+    }
+
+    function stopAutoPlay() {
+      if (autoPlayTimer) {
+        clearInterval(autoPlayTimer);
+        autoPlayTimer = null;
+      }
+    }
+
+    function resetAutoPlay() {
+      stopAutoPlay();
+      startAutoPlay();
+    }
+
+    var card = section.querySelector('.hp-testi-dashed-card');
+    if (card) {
+      card.addEventListener('mouseenter', stopAutoPlay);
+      card.addEventListener('mouseleave', startAutoPlay);
+      card.addEventListener('focusin', stopAutoPlay);
+      card.addEventListener('focusout', startAutoPlay);
+
+      card.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowLeft') {
+          goToSlide(currentIndex - 1);
+          resetAutoPlay();
+        } else if (e.key === 'ArrowRight') {
+          goToSlide(currentIndex + 1);
+          resetAutoPlay();
+        }
+      });
+    }
+
+    startAutoPlay();
+  }
+
+  function initStatsCounters() {
+    var statsStrip = document.querySelector('.hp-stats-strip');
+    if (!statsStrip) return;
+
+    var counters = statsStrip.querySelectorAll('[data-counter-target]');
+    if (!counters.length) return;
+
+    // Check if user prefers reduced motion
+    var prefersReducedMotion = false;
+    try {
+      prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    } catch (e) {}
+
+    var hasAnimated = false;
+
+    function startCounting() {
+      if (hasAnimated) return;
+      hasAnimated = true;
+
+      counters.forEach(function (counter) {
+        var target = parseInt(counter.getAttribute('data-counter-target'), 10);
+        if (isNaN(target)) return;
+
+        if (prefersReducedMotion) {
+          counter.textContent = target;
+          return;
+        }
+
+        var duration = 1400; // ms
+        var startTime = null;
+
+        function step(timestamp) {
+          if (!startTime) startTime = timestamp;
+          var elapsed = timestamp - startTime;
+          var progress = Math.min(elapsed / duration, 1);
+
+          // Easing: easeOutExpo
+          var ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+          var currentVal = Math.floor(ease * target);
+
+          counter.textContent = currentVal;
+
+          if (progress < 1) {
+            window.requestAnimationFrame(step);
+          } else {
+            counter.textContent = target;
+          }
+        }
+
+        window.requestAnimationFrame(step);
+      });
+    }
+
+    if ('IntersectionObserver' in window) {
+      var counterObserver = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            startCounting();
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      counterObserver.observe(statsStrip);
+    } else {
+      startCounting();
+    }
   }
 
   if (document.readyState === 'loading') {

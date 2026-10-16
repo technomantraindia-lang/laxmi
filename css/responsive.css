@@ -29,21 +29,26 @@ html, body {
 
   /* 02. Stats Strip */
   .hp-stats-strip__inner {
-    grid-template-columns: repeat(3, 1fr) repeat(3, 1fr) !important;
-    gap: 1.25rem !important;
-    padding: 0 1.5rem !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0.85rem !important;
+    padding: 1.5rem !important;
+    border-radius: 20px !important;
   }
 
   .hp-stat-item {
     border-right: none !important;
-    border-bottom: 1px solid rgba(7, 23, 44, 0.08);
-    padding: 0.5rem 0.75rem !important;
+    border: 1px solid rgba(0, 0, 0, 0.06) !important;
+    background: rgba(255, 255, 255, 0.6) !important;
+    border-radius: 14px !important;
+    padding: 0.85rem 1rem !important;
   }
 
   .hp-stat-item--link {
     grid-column: 1 / -1 !important;
     justify-content: center !important;
-    border-bottom: none !important;
+    border: none !important;
+    background: transparent !important;
+    padding: 0.5rem 0 !important;
   }
 
   /* 05. Academy */
@@ -264,37 +269,70 @@ html, body {
 
   /* 02. Stats Strip */
   .hp-stats-strip {
-    padding: 1.25rem 0 !important;
+    padding: 1.25rem 0.75rem !important;
   }
 
   .hp-stats-strip__inner {
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 1.25rem 0.75rem !important;
-    padding: 0 1.25rem !important;
+    gap: 0.65rem !important;
+    padding: 1rem 0.75rem !important;
+    border-radius: 18px !important;
   }
 
   .hp-stat-item {
-    padding: 0.5rem 0.5rem !important;
+    padding: 0.75rem 0.65rem !important;
     border-right: none !important;
-    border-bottom: 1px solid rgba(7, 23, 44, 0.06) !important;
+    border: 1px solid rgba(0, 0, 0, 0.06) !important;
+    background: rgba(255, 255, 255, 0.6) !important;
+    border-radius: 12px !important;
+    gap: 8px !important;
+  }
+
+  .hp-stat-icon {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .hp-stat-icon svg {
+    width: 26px !important;
+    height: 26px !important;
   }
 
   .hp-stat-num {
-    font-size: 1.75rem !important;
+    font-size: 1.55rem !important;
     line-height: 1 !important;
+    color: #0f172a !important;
+  }
+
+  .hp-stat-plus,
+  .hp-stat-suffix {
+    font-size: 1rem !important;
+    color: #0f172a !important;
   }
 
   .hp-stat-label {
-    font-size: 0.58rem !important;
-    letter-spacing: 0.05em !important;
-    margin-top: 4px !important;
+    font-size: 0.72rem !important;
+    letter-spacing: normal !important;
+    margin-top: 3px !important;
     white-space: normal !important;
+    color: #334155 !important;
+  }
+
+  .hp-stat-sub {
+    font-size: 0.58rem !important;
+    white-space: normal !important;
+    color: #64748b !important;
   }
 
   .hp-stat-item--link {
     grid-column: 1 / -1 !important;
-    padding-top: 0.75rem !important;
-    border-bottom: none !important;
+    padding: 0.5rem 0 0 !important;
+    border: none !important;
+    background: transparent !important;
+  }
+
+  .hp-stat-evidence-badge {
+    padding: 10px 14px !important;
   }
 
   /* 03. Credibility Banner */
@@ -320,12 +358,17 @@ html, body {
     flex-direction: column !important;
     width: 100% !important;
     align-items: stretch !important;
+    gap: 0.85rem !important;
   }
 
-  .hp-credibility-banner__btn-white {
+  .hp-credibility-banner__btn-white,
+  .hp-credibility-banner__link-text {
     width: 100% !important;
     justify-content: center !important;
     text-align: center !important;
+    padding: 0.85rem 1.25rem !important;
+    box-sizing: border-box !important;
+    font-size: 0.88rem !important;
   }
 
   .hp-credibility-banner__pagination {

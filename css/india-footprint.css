@@ -675,6 +675,16 @@ figcaption {
   transform: scale(1.035);
 }
 
+.expansion .exp-section-logos {
+  margin-top: 100px;
+  margin-bottom: 0;
+}
+
+.expansion .exp-section-logos .logo-group-title {
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  padding: 28px 0 32px;
+}
+
 .final-block {
   height: 86vh;
 }
