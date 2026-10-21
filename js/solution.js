@@ -614,7 +614,7 @@
             </a>
           </div>
           <div class="machinery-cta__contact-info">
-            <span>Direct Lines: +91-8980800607 | +91-8980800839</span>
+            <span>Direct Line: +91-8980800607</span>
             <span>Email: aac@laxmienfab.com</span>
           </div>
         </div>
