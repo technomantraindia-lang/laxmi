@@ -343,6 +343,33 @@
   transform: translateY(-8px);
 }
 
+@media (max-width: 768px) {
+  .site-header {
+    height: auto !important;
+    min-height: unset !important;
+  }
+  .site-header--scrolled {
+    height: auto !important;
+  }
+  .site-header__inner {
+    height: 60px !important;
+    max-height: 60px !important;
+    padding: 0 1.25rem !important;
+  }
+  .site-header--nav-hidden .site-header__inner {
+    height: 0 !important;
+    max-height: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .site-header__logo {
+    max-width: 112px !important;
+    max-height: 38px !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+}
+
 /* ===== 2. Brand Logo ===== */
 .site-header__brand {
   display: flex;
