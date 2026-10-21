@@ -140,10 +140,41 @@
     }, { passive: true });
   }
 
+  function initPlantHotspots() {
+    var hotspots = document.querySelectorAll('.hp-plant-hotspot[data-system-id]');
+    var stripItems = document.querySelectorAll('.hp-system-strip-item[data-system-id]');
+    if (!hotspots.length && !stripItems.length) return;
+
+    hotspots.forEach(function (spot) {
+      var id = spot.getAttribute('data-system-id');
+      var matchedItem = document.querySelector('.hp-system-strip-item[data-system-id="' + id + '"]');
+
+      spot.addEventListener('mouseenter', function () {
+        if (matchedItem) matchedItem.classList.add('is-sync-active');
+      });
+      spot.addEventListener('mouseleave', function () {
+        if (matchedItem) matchedItem.classList.remove('is-sync-active');
+      });
+    });
+
+    stripItems.forEach(function (item) {
+      var id = item.getAttribute('data-system-id');
+      var matchedSpot = document.querySelector('.hp-plant-hotspot[data-system-id="' + id + '"]');
+
+      item.addEventListener('mouseenter', function () {
+        if (matchedSpot) matchedSpot.classList.add('is-hovered');
+      });
+      item.addEventListener('mouseleave', function () {
+        if (matchedSpot) matchedSpot.classList.remove('is-hovered');
+      });
+    });
+  }
+
   function initAll() {
     initCredibilitySwitcher();
     initInvestmentSwitcher();
     initMachineryRailSlider();
+    initPlantHotspots();
   }
 
   if (document.readyState === 'loading') {

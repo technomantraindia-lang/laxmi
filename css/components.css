@@ -2041,6 +2041,46 @@
   box-shadow: -4px 4px 14px rgba(11, 63, 120, 0.4);
 }
 
+.hp-float-btn--linkedin {
+  background: #0077b5 !important;
+}
+
+.hp-float-btn--linkedin:hover {
+  background: #005885 !important;
+  transform: translateX(-5px);
+  box-shadow: -4px 4px 14px rgba(0, 119, 181, 0.45);
+}
+
+.hp-float-btn--instagram {
+  background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%) !important;
+}
+
+.hp-float-btn--instagram:hover {
+  filter: brightness(1.1);
+  transform: translateX(-5px);
+  box-shadow: -4px 4px 14px rgba(225, 48, 108, 0.5);
+}
+
+.hp-float-btn--facebook {
+  background: #1877f2 !important;
+}
+
+.hp-float-btn--facebook:hover {
+  background: #0f62cc !important;
+  transform: translateX(-5px);
+  box-shadow: -4px 4px 14px rgba(24, 119, 242, 0.45);
+}
+
+.hp-float-btn--youtube {
+  background: #ff0000 !important;
+}
+
+.hp-float-btn--youtube:hover {
+  background: #cc0000 !important;
+  transform: translateX(-5px);
+  box-shadow: -4px 4px 14px rgba(255, 0, 0, 0.45);
+}
+
 .hp-float-btn:hover svg {
   transform: scale(1.1);
 }

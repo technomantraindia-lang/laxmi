@@ -316,6 +316,46 @@
   box-shadow: -4px 4px 14px rgba(11, 63, 120, 0.4);
 }
 
+.hp-float-btn--linkedin {
+  background: #0077b5 !important;
+}
+
+.hp-float-btn--linkedin:hover {
+  background: #005885 !important;
+  transform: translateX(-5px);
+  box-shadow: -4px 4px 14px rgba(0, 119, 181, 0.45);
+}
+
+.hp-float-btn--instagram {
+  background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%) !important;
+}
+
+.hp-float-btn--instagram:hover {
+  filter: brightness(1.1);
+  transform: translateX(-5px);
+  box-shadow: -4px 4px 14px rgba(225, 48, 108, 0.5);
+}
+
+.hp-float-btn--facebook {
+  background: #1877f2 !important;
+}
+
+.hp-float-btn--facebook:hover {
+  background: #0f62cc !important;
+  transform: translateX(-5px);
+  box-shadow: -4px 4px 14px rgba(24, 119, 242, 0.45);
+}
+
+.hp-float-btn--youtube {
+  background: #ff0000 !important;
+}
+
+.hp-float-btn--youtube:hover {
+  background: #cc0000 !important;
+  transform: translateX(-5px);
+  box-shadow: -4px 4px 14px rgba(255, 0, 0, 0.45);
+}
+
 .hp-float-btn:hover svg {
   transform: scale(1.1);
 }
@@ -694,7 +734,8 @@
 .hp-credibility-banner__actions {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
 .hp-credibility-banner__link-text {
@@ -1560,14 +1601,116 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: visible;
 }
 
-.hp-system-img {
+/* Responsive container locked to image aspect ratio (1824 x 862) */
+.hp-system-map-container {
+  position: relative;
+  width: 100%;
+  max-width: 1824px;
+  margin: 0 auto;
+  display: block;
+}
+
+.hp-system-map-container .hp-system-img {
   width: 100%;
   height: auto;
-  max-height: 820px;
-  object-fit: contain;
   display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Interactive 3D Plant Layout Hotspots - Clean & Invisible */
+.hp-plant-hotspot {
+  position: absolute;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 10;
+  outline: none;
+  border-radius: 8px;
+  background: transparent;
+  border: none;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), filter 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Individual Hotspot Percentage Positions (Calibrated to 1824x862 plantlayout.png) */
+.hp-plant-hotspot-1 {
+  left: 83.1%;
+  top: 8.8%;
+  width: 15.7%;
+  height: 7.8%;
+}
+
+.hp-plant-hotspot-2 {
+  left: 78.8%;
+  top: 18.8%;
+  width: 19.0%;
+  height: 8.0%;
+}
+
+.hp-plant-hotspot-3 {
+  left: 76.8%;
+  top: 81.8%;
+  width: 16.8%;
+  height: 7.4%;
+}
+
+.hp-plant-hotspot-4 {
+  left: 52.8%;
+  top: 82.2%;
+  width: 15.6%;
+  height: 7.0%;
+}
+
+.hp-plant-hotspot-5 {
+  left: 55.8%;
+  top: 40.2%;
+  width: 15.7%;
+  height: 7.0%;
+}
+
+.hp-plant-hotspot-6 {
+  left: 30.6%;
+  top: 14.0%;
+  width: 12.6%;
+  height: 7.0%;
+}
+
+.hp-plant-hotspot-7 {
+  left: 39.8%;
+  top: 89.6%;
+  width: 14.0%;
+  height: 6.8%;
+}
+
+.hp-plant-hotspot-8 {
+  left: 13.6%;
+  top: 89.6%;
+  width: 20.5%;
+  height: 6.8%;
+}
+
+/* Clean Hover State: No artificial borders, no popups, just subtle card lift and shadow */
+.hp-plant-hotspot:hover,
+.hp-plant-hotspot:focus-visible,
+.hp-plant-hotspot.is-hovered {
+  filter: drop-shadow(0 6px 16px rgba(11, 87, 150, 0.35));
+  transform: translateY(-2px);
+}
+
+/* Two-way synchronized highlight on bottom strip items */
+.hp-system-strip-item.is-sync-active {
+  background: #f0f7fc !important;
+  border-color: #0b5796 !important;
+}
+
+.hp-system-strip-item.is-sync-active .hp-system-strip-num,
+.hp-system-strip-item.is-sync-active .hp-system-strip-name {
+  color: #0b5796 !important;
 }
 
 .hp-system-hero-wrap {
@@ -1735,7 +1878,17 @@
   border-right: 1px solid rgba(7, 23, 44, 0.08);
   text-decoration: none;
   background: #ffffff;
-  transition: all 0.2s ease;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  position: relative;
+}
+
+.hp-system-strip-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 4px;
 }
 
 .hp-system-strip-num {
@@ -1743,7 +1896,14 @@
   font-weight: 700;
   color: #8e9ea9;
   font-family: var(--hp-font-mono, monospace);
-  margin-bottom: 3px;
+  transition: color 0.2s ease;
+}
+
+.hp-system-strip-arrow {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  transition: transform 0.2s ease, color 0.2s ease;
+  line-height: 1;
 }
 
 .hp-system-strip-name {
@@ -1757,13 +1917,22 @@
   transition: color 0.2s ease;
 }
 
-.hp-system-strip-item:hover {
-  background: #f8fafc;
+.hp-system-strip-item:hover,
+.hp-system-strip-item.is-sync-active {
+  background: #f0f7fc !important;
 }
 
 .hp-system-strip-item:hover .hp-system-strip-num,
-.hp-system-strip-item:hover .hp-system-strip-name {
-  color: #0b5796;
+.hp-system-strip-item.is-sync-active .hp-system-strip-num,
+.hp-system-strip-item:hover .hp-system-strip-name,
+.hp-system-strip-item.is-sync-active .hp-system-strip-name,
+.hp-system-strip-item:hover .hp-system-strip-arrow,
+.hp-system-strip-item.is-sync-active .hp-system-strip-arrow {
+  color: #0b5796 !important;
+}
+
+.hp-system-strip-item:hover .hp-system-strip-arrow {
+  transform: translate(2px, -2px);
 }
 
 @media (max-width: 1024px) {

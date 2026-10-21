@@ -46,6 +46,7 @@
 /* ================= 1. HERO SECTION ================= */
 .stories-hero {
   color: #ffffff;
+  background-color: var(--cs-navy, #07121f);
   background: linear-gradient(128deg, #07121f 0%, #0b2740 58%, #104f7d 100%);
   min-height: 88vh;
   display: flex;
@@ -56,27 +57,24 @@
   padding: 100px 0 0;
 }
 
-.stories-hero::after {
-  content: "";
-  border: 1px solid rgba(143, 198, 236, 0.2);
-  border-radius: 50%;
-  width: 55vw;
-  height: 55vw;
+.stories-hero-video {
   position: absolute;
-  top: 3vh;
-  right: -12vw;
-  box-shadow: 0 0 0 7vw rgba(143, 198, 236, 0.03), 0 0 0 14vw rgba(143, 198, 236, 0.02);
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+  filter: saturate(0.88) contrast(1.05);
   pointer-events: none;
 }
 
-.stories-hero-grid {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-  background-size: 72px 72px;
+.stories-hero-shade {
   position: absolute;
   inset: 0;
-  -webkit-mask-image: linear-gradient(90deg, #000, transparent 80%);
-  mask-image: linear-gradient(90deg, #000, transparent 80%);
+  z-index: 1;
+  background: linear-gradient(90deg, rgba(7, 18, 31, 0.9) 0%, rgba(7, 18, 31, 0.72) 42%, rgba(7, 18, 31, 0.3) 72%, rgba(7, 18, 31, 0.1) 100%),
+              linear-gradient(0deg, rgba(7, 18, 31, 0.75) 0%, transparent 40%);
   pointer-events: none;
 }
 
@@ -181,6 +179,7 @@
 }
 
 .stories-hero-proof {
+  position: relative;
   z-index: 3;
   letter-spacing: 0.04em;
   color: #b9c9d6;
