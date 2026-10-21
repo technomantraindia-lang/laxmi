@@ -531,44 +531,84 @@
 }
 
 /* ===== 5. Contact Us CTA Button ===== */
+.site-header .site-header__cta,
+.site-header .nav-cta,
+.site-header a.site-header__cta,
+.site-header a.nav-cta,
 .site-header__cta,
-.nav-cta {
+.nav-cta,
+a.site-header__cta,
+a.nav-cta {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 0.7rem 1.4rem;
-  font-family: var(--font-primary, system-ui, -apple-system, sans-serif);
-  font-size: 0.85rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  color: #ffffff;
-  background: var(--laxmi-blue, #0b3f78);
-  border: none;
-  border-radius: 6px;
-  text-decoration: none;
-  white-space: nowrap;
+  padding: 0.7rem 1.4rem !important;
+  font-family: var(--font-primary, system-ui, -apple-system, sans-serif) !important;
+  font-size: 0.85rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.04em !important;
+  color: #ffffff !important;
+  background-color: var(--laxmi-blue, #0b3f78) !important;
+  background: var(--laxmi-blue, #0b3f78) !important;
+  border: none !important;
+  outline: none !important;
+  border-radius: 6px !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
   flex-shrink: 0;
-  cursor: pointer;
-  box-shadow: 0 4px 15px rgba(11, 63, 120, 0.2);
-  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer !important;
+  box-shadow: 0 4px 15px rgba(11, 63, 120, 0.2) !important;
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease !important;
 }
 
-.cta-arrow {
-  display: inline-block;
-  transition: transform 0.25s ease;
+.site-header .site-header__cta:visited,
+.site-header .nav-cta:visited,
+.site-header a.site-header__cta:visited,
+.site-header a.nav-cta:visited,
+.site-header__cta:visited,
+.nav-cta:visited,
+a.site-header__cta:visited,
+a.nav-cta:visited {
+  color: #ffffff !important;
 }
 
+.site-header .site-header__cta:hover,
+.site-header .nav-cta:hover,
+.site-header a.site-header__cta:hover,
+.site-header a.nav-cta:hover,
 .site-header__cta:hover,
-.nav-cta:hover {
-  background: #0d4d92;
+.nav-cta:hover,
+a.site-header__cta:hover,
+a.nav-cta:hover {
+  color: #ffffff !important;
+  background-color: #0d4d92 !important;
+  background: #0d4d92 !important;
+  text-decoration: none !important;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(11, 63, 120, 0.35);
+  box-shadow: 0 8px 25px rgba(11, 63, 120, 0.35) !important;
 }
 
+.site-header .site-header__cta .cta-arrow,
+.site-header .nav-cta .cta-arrow,
+.site-header a.site-header__cta .cta-arrow,
+.site-header a.nav-cta .cta-arrow,
+.site-header__cta .cta-arrow,
+.nav-cta .cta-arrow,
+.cta-arrow {
+  color: #ffffff !important;
+  display: inline-block !important;
+  transition: transform 0.25s ease !important;
+}
+
+.site-header .site-header__cta:hover .cta-arrow,
+.site-header .nav-cta:hover .cta-arrow,
+.site-header a.site-header__cta:hover .cta-arrow,
+.site-header a.nav-cta:hover .cta-arrow,
 .site-header__cta:hover .cta-arrow,
 .nav-cta:hover .cta-arrow {
-  transform: translateX(5px);
+  color: #ffffff !important;
+  transform: translateX(5px) !important;
 }
 
 .mobile-nav-cta-wrap {
@@ -1117,26 +1157,41 @@
   color: var(--laxmi-blue, #0b3f78);
 }
 
-.drawer-cta-btn {
+.drawer-cta-btn,
+.nav-drawer a.drawer-cta-btn,
+a.drawer-cta-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   margin-top: 10px;
-  padding: 10px 16px;
-  font-size: 0.82rem;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  color: #ffffff;
-  background: var(--laxmi-blue, #0b3f78);
-  border-radius: 6px;
-  text-decoration: none;
-  transition: all 0.25s cubic-bezier(0.25, 1, 0.35, 1);
+  padding: 10px 16px !important;
+  font-size: 0.82rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.06em !important;
+  color: #ffffff !important;
+  background-color: var(--laxmi-blue, #0b3f78) !important;
+  background: var(--laxmi-blue, #0b3f78) !important;
+  border: none !important;
+  border-radius: 6px !important;
+  text-decoration: none !important;
+  transition: all 0.25s cubic-bezier(0.25, 1, 0.35, 1) !important;
 }
 
-.drawer-cta-btn:hover {
-  background: #0d4d92;
+.drawer-cta-btn:visited,
+.nav-drawer a.drawer-cta-btn:visited,
+a.drawer-cta-btn:visited {
+  color: #ffffff !important;
+}
+
+.drawer-cta-btn:hover,
+.nav-drawer a.drawer-cta-btn:hover,
+a.drawer-cta-btn:hover {
+  color: #ffffff !important;
+  background-color: #0d4d92 !important;
+  background: #0d4d92 !important;
+  text-decoration: none !important;
   transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(11, 63, 120, 0.25);
+  box-shadow: 0 4px 14px rgba(11, 63, 120, 0.25) !important;
 }
 
 /* ── Secondary Column (Layer 2) - Smooth Sliding Door Expansion ── */
