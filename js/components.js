@@ -15,7 +15,7 @@
     '</div>' +
     '</div></div>' +
     '<div class="site-header__inner">' +
-    '<a href="index.html" class="site-header__brand" aria-label="Laxmi En-Fab Pvt. Ltd. Home"><img src="assets/images/laxmi-logo.png" alt="Laxmi En-Fab Logo" class="site-header__logo"></a>' +
+    '<a href="index.html" class="site-header__brand" aria-label="Laxmi En-Fab Pvt. Ltd. Home"><img src="assets/images/laxmi-logo.png" alt="Laxmi En-Fab Logo" class="site-header__logo" width="140" height="38"></a>' +
     '<nav class="site-header__nav" id="site-nav" aria-label="Primary navigation"><ul class="nav-list" role="menubar">' +
     '<li class="nav-item" role="none"><a href="academy/academy.html" class="nav-link" data-drawer-trigger="academy">AAC Investor Academy</a></li>' +
     '<li class="nav-item" role="none"><a href="engineering-center.html" class="nav-link" data-drawer-trigger="engineering">AAC Engineering Center</a></li>' +
@@ -29,7 +29,7 @@
     '</div></header>' +
     '<div class="drawer-overlay" id="drawer-overlay"></div>' +
     '<div class="nav-drawer" id="nav-drawer" aria-hidden="true">' +
-    '<div class="nav-drawer__header"><a href="index.html" class="drawer-header-brand"><img src="assets/images/laxmi-logo.png" alt="Laxmi En-Fab Logo" class="drawer-logo"></a><button type="button" class="drawer-close-icon-btn" id="drawer-close-btn" aria-label="Close navigation menu"><span>Close</span> <span class="close-x">✕</span></button></div>' +
+    '<div class="nav-drawer__header"><a href="index.html" class="drawer-header-brand"><img src="assets/images/laxmi-logo.png" alt="Laxmi En-Fab Logo" class="drawer-logo" width="120" height="32"></a><button type="button" class="drawer-close-icon-btn" id="drawer-close-btn" aria-label="Close navigation menu"><span>Close</span> <span class="close-x">✕</span></button></div>' +
     '<div class="nav-drawer__inner">' +
     '<div class="drawer-primary-col">' +
     '<nav class="drawer-nav"><ul class="drawer-menu-list">' +
@@ -60,7 +60,7 @@
   '    <div class="site-footer__top">' +
   '      <div class="site-footer__brand">' +
   '        <a href="index.html" class="site-footer__logo-link">' +
-  '          <img src="assets/images/laxmi-logo.png" alt="Laxmi En-Fab Logo" class="site-footer__logo-img" />' +
+  '          <img src="assets/images/laxmi-logo.png" alt="Laxmi En-Fab Logo" class="site-footer__logo-img" width="160" height="42" loading="lazy" />' +
   '        </a>' +
   '      </div>' +
   '      <div class="site-footer__hero-text">' +
@@ -454,11 +454,21 @@
     if (!header) return;
 
     var isTicking = false;
+    var wasScrolled = false;
+    var wasNavHidden = false;
+
     function onScroll() {
-      if (window.scrollY > 40) {
-        header.classList.add('site-header--nav-hidden', 'site-header--scrolled');
-      } else {
-        header.classList.remove('site-header--nav-hidden', 'site-header--scrolled');
+      var scrollY = window.scrollY;
+      var shouldScrolled = scrollY > 20;
+      var shouldNavHidden = scrollY > 40;
+
+      if (shouldScrolled !== wasScrolled) {
+        wasScrolled = shouldScrolled;
+        header.classList.toggle('site-header--scrolled', wasScrolled);
+      }
+      if (shouldNavHidden !== wasNavHidden) {
+        wasNavHidden = shouldNavHidden;
+        header.classList.toggle('site-header--nav-hidden', wasNavHidden);
       }
       isTicking = false;
     }

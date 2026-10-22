@@ -699,8 +699,8 @@
   <div id="site-footer"></div>
 
   <!-- Shared Scripts -->
-  <script src="js/components.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/components.js" defer></script>
+  <script src="js/main.js" defer></script>
 
   <!-- DPR Live Calculation Engine -->
   <script>
@@ -1080,6 +1080,17 @@
         };
       }
 
+      var renderScheduled = false;
+      function scheduleRender() {
+        if (!renderScheduled) {
+          renderScheduled = true;
+          window.requestAnimationFrame(function () {
+            render();
+            renderScheduled = false;
+          });
+        }
+      }
+
       // 4. DOM Update Render Function
       function render() {
         var m = runModel();
@@ -1106,18 +1117,31 @@
         document.getElementById('disp-cost-m3').textContent = formatIndian(m.totalCost);
         document.getElementById('disp-cost-piece').textContent = formatCurrency(m.totalCost / m.pieceFactor, 2) + ' per piece';
 
-        // Render Raw Materials Table
+        // Render Raw Materials Table (preserve focus if user is actively typing)
         var tbodyRecipe = document.getElementById('tbody-recipe');
-        var recipeHTML = '';
-        m.rawMaterials.forEach(function (rm) {
-          recipeHTML += '<tr>' +
-            '<td>' + rm.name + '</td>' +
-            '<td><input type="number" step="any" value="' + rm.qty + '" data-field="' + rm.keyQ + '" /></td>' +
-            '<td><input type="number" step="any" value="' + rm.price + '" data-field="' + rm.keyP + '" /></td>' +
-            '<td>' + formatCurrency(rm.cost) + '</td>' +
-            '</tr>';
-        });
-        tbodyRecipe.innerHTML = recipeHTML;
+        var activeEl = document.activeElement;
+        var isTypingRecipe = activeEl && tbodyRecipe && tbodyRecipe.contains(activeEl);
+        if (!isTypingRecipe) {
+          var recipeHTML = '';
+          m.rawMaterials.forEach(function (rm) {
+            recipeHTML += '<tr>' +
+              '<td>' + rm.name + '</td>' +
+              '<td><input type="number" step="any" value="' + rm.qty + '" data-field="' + rm.keyQ + '" /></td>' +
+              '<td><input type="number" step="any" value="' + rm.price + '" data-field="' + rm.keyP + '" /></td>' +
+              '<td>' + formatCurrency(rm.cost) + '</td>' +
+              '</tr>';
+          });
+          tbodyRecipe.innerHTML = recipeHTML;
+        } else {
+          // Just update costs
+          var rows = tbodyRecipe.querySelectorAll('tr');
+          m.rawMaterials.forEach(function (rm, idx) {
+            if (rows[idx]) {
+              var lastTd = rows[idx].querySelector('td:last-child');
+              if (lastTd) lastTd.textContent = formatCurrency(rm.cost);
+            }
+          });
+        }
 
         // Energy Side
         document.getElementById('disp-auto-steam').textContent = formatIndian(m.steamKg) + ' kg/m\u00B3';
@@ -1254,20 +1278,32 @@
 
       function renderManpowerTable(m) {
         var tbodyManpower = document.getElementById('tbody-manpower');
-        var mHTML = '';
-        m.manpowerRows.forEach(function (r, idx) {
-          if (idx === 0 || m.manpowerRows[idx - 1].group !== r.group) {
-            mHTML += '<tr class="group"><td colspan="5">' + r.group + '</td></tr>';
-          }
-          mHTML += '<tr>' +
-            '<td>' + r.name + '</td>' +
-            '<td><input type="number" value="' + r.salary + '" data-role-id="' + r.id + '" data-prop="salary" /></td>' +
-            '<td>' + (r.direct ? '\u2014' : ('<input type="number" value="' + r.people + '" data-role-id="' + r.id + '" data-prop="people" />')) + '</td>' +
-            '<td>' + (r.direct ? '\u2014' : ('<input type="number" value="' + r.shifts + '" data-role-id="' + r.id + '" data-prop="shifts" />')) + '</td>' +
-            '<td>' + formatCurrency(r.total) + '</td>' +
-            '</tr>';
-        });
-        tbodyManpower.innerHTML = mHTML;
+        var activeEl = document.activeElement;
+        var isTypingManpower = activeEl && tbodyManpower && tbodyManpower.contains(activeEl);
+        if (!isTypingManpower) {
+          var mHTML = '';
+          m.manpowerRows.forEach(function (r, idx) {
+            if (idx === 0 || m.manpowerRows[idx - 1].group !== r.group) {
+              mHTML += '<tr class="group"><td colspan="5">' + r.group + '</td></tr>';
+            }
+            mHTML += '<tr>' +
+              '<td>' + r.name + '</td>' +
+              '<td><input type="number" value="' + r.salary + '" data-role-id="' + r.id + '" data-prop="salary" /></td>' +
+              '<td>' + (r.direct ? '\u2014' : ('<input type="number" value="' + r.people + '" data-role-id="' + r.id + '" data-prop="people" />')) + '</td>' +
+              '<td>' + (r.direct ? '\u2014' : ('<input type="number" value="' + r.shifts + '" data-role-id="' + r.id + '" data-prop="shifts" />')) + '</td>' +
+              '<td>' + formatCurrency(r.total) + '</td>' +
+              '</tr>';
+          });
+          tbodyManpower.innerHTML = mHTML;
+        } else {
+          var trs = tbodyManpower.querySelectorAll('tr:not(.group)');
+          m.manpowerRows.forEach(function (r, idx) {
+            if (trs[idx]) {
+              var lastTd = trs[idx].querySelector('td:last-child');
+              if (lastTd) lastTd.textContent = formatCurrency(r.total);
+            }
+          });
+        }
       }
 
       // 5. Event Handlers & Bindings
@@ -1373,7 +1409,7 @@
           if (el) {
             el.addEventListener('input', function () {
               state[item.key] = parseFloat(this.value) || 0;
-              render();
+              scheduleRender();
             });
           }
         });
@@ -1385,14 +1421,14 @@
           var pFactor = state.blockSize === '100' ? 83.33 : (state.blockSize === '150' ? 55.55 : (state.blockSize === '200' ? 41.66 : 36.23));
           state.sell = Math.round(pVal * pFactor);
           document.getElementById('inp-sell').value = state.sell;
-          render();
+          scheduleRender();
         });
 
         // Running Shifts Select
         var selShifts = document.getElementById('sel-running-shifts');
         selShifts.addEventListener('change', function () {
           state.runningShifts = parseInt(this.value, 10) || 2;
-          render();
+          scheduleRender();
         });
 
         // Interactive Switches
@@ -1406,7 +1442,7 @@
             btn.setAttribute('data-state', next ? 'checked' : 'unchecked');
             btn.setAttribute('aria-checked', next ? 'true' : 'false');
             state[stateKey] = next;
-            render();
+            scheduleRender();
           });
         }
 
@@ -1422,7 +1458,7 @@
           if (target && target.hasAttribute('data-field')) {
             var f = target.getAttribute('data-field');
             state[f] = parseFloat(target.value) || 0;
-            render();
+            scheduleRender();
           }
         });
 
@@ -1434,7 +1470,7 @@
             var prop = target.getAttribute('data-prop');
             if (!manpowerOverrides[rId]) manpowerOverrides[rId] = {};
             manpowerOverrides[rId][prop] = parseFloat(target.value) || 0;
-            render();
+            scheduleRender();
           }
         });
 

@@ -18,7 +18,14 @@ body {
 img,
 video {
   max-width: 100%;
+  height: auto;
   display: block;
+}
+
+/* Rendering performance optimization: browser skips layout/paint of offscreen sections until needed */
+main > section:not(:first-of-type) {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 700px;
 }
 
 a {

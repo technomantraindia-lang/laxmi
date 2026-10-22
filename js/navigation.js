@@ -26,29 +26,7 @@
       });
     });
 
-    // Sticky header background state on scroll
-    var header = document.querySelector('.site-header');
-    if (header) {
-      var isScrolled = false;
-      var scrollTicking = false;
-      window.addEventListener('scroll', function () {
-        if (!scrollTicking) {
-          window.requestAnimationFrame(function () {
-            var shouldScrolled = window.scrollY > 20;
-            if (shouldScrolled !== isScrolled) {
-              isScrolled = shouldScrolled;
-              if (isScrolled) {
-                header.classList.add('site-header--scrolled');
-              } else {
-                header.classList.remove('site-header--scrolled');
-              }
-            }
-            scrollTicking = false;
-          });
-          scrollTicking = true;
-        }
-      }, { passive: true });
-    }
+
   }
 
   if (document.readyState === 'loading') {

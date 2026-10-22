@@ -19,7 +19,6 @@
   <link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="css/india-footprint.css">
 
-  <link rel="preload" href="https://laxmi-india-footprint.mitesh958.chatgpt.site/assets/hero-plant.webp" as="image">
 
   <script type="application/ld+json">
   {
@@ -51,8 +50,8 @@
         muted
         loop
         playsinline
-        preload="auto"
-        poster="https://laxmi-india-footprint.mitesh958.chatgpt.site/assets/hero-plant.webp"
+        preload="metadata"
+        poster="assets/images/plantlayout.png"
       >
         <source src="assets/videos/Running Plant.mp4" type="video/mp4" />
       </video>
@@ -377,9 +376,9 @@
   <div id="site-footer"></div>
 
   <!-- Global Scripts (Matching other pages) -->
-  <script src="js/components.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/navigation.js"></script>
+  <script src="js/components.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/navigation.js" defer></script>
 
   <!-- Scroll Reveal Script -->
   <script>

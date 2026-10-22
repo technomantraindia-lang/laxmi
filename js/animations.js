@@ -34,13 +34,7 @@
       }, observerOptions);
 
       revealElements.forEach(function (el) {
-        // Immediately reveal elements that are already within viewport bounds
-        var rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom >= 0) {
-          el.classList.add('is-revealed');
-        } else {
-          revealObserver.observe(el);
-        }
+        revealObserver.observe(el);
       });
     } else {
       // Fallback for older browsers
@@ -49,11 +43,39 @@
       });
     }
 
-    // 3. Setup Stats Counter strip animation
+    // 3. Setup Smart Video auto-play / auto-pause on scroll
+    initVideoObservers();
+
+    // 4. Setup Stats Counter strip animation
     initStatsCounters();
 
-    // 4. Setup Customer Success / Testimonials Slider
+    // 5. Setup Customer Success / Testimonials Slider
     initTestimonialsSlider();
+  }
+
+  function initVideoObservers() {
+    var videos = document.querySelectorAll('video');
+    if (!videos.length) return;
+
+    if ('IntersectionObserver' in window) {
+      var videoObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          var v = entry.target;
+          if (entry.isIntersecting) {
+            var playPromise = v.play();
+            if (playPromise !== undefined) {
+              playPromise.catch(function () {});
+            }
+          } else {
+            v.pause();
+          }
+        });
+      }, { threshold: 0.1 });
+
+      videos.forEach(function (v) {
+        videoObserver.observe(v);
+      });
+    }
   }
 
   function initTestimonialsSlider() {
