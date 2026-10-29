@@ -195,7 +195,7 @@
   width: 100%;
   height: 100%;
   z-index: 1;
-  background-image: linear-gradient(90deg, #ffffff 0%, #fffffffa 28%, #ffffffdb 46%, #ffffff55 65%, rgba(255, 255, 255, 0) 82%), url(../assets/images/production-process.png);
+  background-image: linear-gradient(90deg, #ffffff 0%, #fffffffa 28%, #ffffffdb 46%, #ffffff55 65%, rgba(255, 255, 255, 0) 82%), url(../assets/images/production-process.webp);
   background-position: center right;
   background-repeat: no-repeat;
   background-size: cover;
@@ -943,7 +943,7 @@
   }
 
   .process-page .hero-image {
-    background-image: linear-gradient(#ffffff 0%, #fffffff5 34%, #ffffff26 58%), url(../assets/images/production-process.png);
+    background-image: linear-gradient(#ffffff 0%, #fffffff5 34%, #ffffff26 58%), url(../assets/images/production-process.webp);
     background-position: 100% 100%;
     background-size: auto 62%;
   }

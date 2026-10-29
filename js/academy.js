@@ -168,7 +168,7 @@
   // Render Inner Content of a Topic in Full Engineering Center Layout
   function renderTopicContentHTML(topic, stageData, currentStageSlug) {
     // Resolve Image Path
-    let imgPath = topic.image || 'assets/images/why-aac.png';
+    let imgPath = topic.image || 'assets/images/why-aac.webp';
     if (!imgPath.startsWith('../') && !imgPath.startsWith('/') && window.location.pathname.includes('/academy/')) {
       imgPath = '../' + imgPath;
     }
@@ -207,7 +207,7 @@
       <section class="editorial-hero editorial-hero--light is-loaded" id="overview" aria-label="${topic.title}">
         <div class="editorial-hero__media" aria-hidden="true">
           <div class="editorial-hero__video-wrap">
-            <img class="editorial-hero__poster" src="${imgPath}" alt="${topic.imageAlt || topic.title}" fetchpriority="high" decoding="async" onerror="this.src='../assets/images/future-of-aac.png'" />
+            <img class="editorial-hero__poster" src="${imgPath}" alt="${topic.imageAlt || topic.title}" fetchpriority="high" decoding="async" onerror="this.src='../assets/images/future-of-aac.webp'" />
           </div>
           <div class="editorial-hero__overlay"></div>
         </div>
@@ -897,7 +897,7 @@
   // STAGE 03: COMPARE YOUR AAC PLANT — COMPLETE EDITORIAL SUITE
   // =========================================================================
   function renderCompareStageComplete(root, page, currentStageSlug) {
-    let heroBg = window.location.pathname.includes('/academy/') ? '../assets/images/complete-system-plant.png' : 'assets/images/complete-system-plant.png';
+    let heroBg = window.location.pathname.includes('/academy/') ? '../assets/images/complete-system-plant.webp' : 'assets/images/complete-system-plant.webp';
     let contactUrl = window.location.pathname.includes('/academy/') ? '../contact.html' : 'contact.html';
     let nextUrl = window.location.pathname.includes('/academy/') ? 'efficient-your-plant.html' : 'academy/efficient-your-plant.html';
 

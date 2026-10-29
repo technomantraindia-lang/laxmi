@@ -133,7 +133,7 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, .96) 36%, rgba(255, 255, 255, .2) 62%), url('../assets/images/aac-plant-technology-hero.png') right center/cover no-repeat;
+  background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, .96) 36%, rgba(255, 255, 255, .2) 62%), url('../assets/images/aac-plant-technology-hero.webp') right center/cover no-repeat;
 }
 
 .tech-page .hero-grid {
@@ -905,7 +905,7 @@
   }
   .tech-page .hero {
     min-height: auto;
-    background-image: linear-gradient(180deg, rgba(255, 255, 255, .96) 0%, rgba(255, 255, 255, .88) 54%, rgba(255, 255, 255, .18) 100%), url('../assets/images/aac-plant-technology-hero.png');
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, .96) 0%, rgba(255, 255, 255, .88) 54%, rgba(255, 255, 255, .18) 100%), url('../assets/images/aac-plant-technology-hero.webp');
     background-position: 62% bottom;
     background-size: auto 46%, cover;
     padding-bottom: 210px;

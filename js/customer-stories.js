@@ -24,7 +24,7 @@
         location: "Wada, Maharashtra · 300,000 m³/year"
       },
       visualType: "certificate",
-      certificateImg: "assets/images/testimonials/satyam-certificate.jpg",
+      certificateImg: "assets/images/testimonials/satyam-certificate.webp",
       certificatePdf: "https://laxmi-customer-success-stories.mitesh958.chatgpt.site/evidence/satyam-buildtech-certificate.pdf",
       fullStory: [
         "Our first AAC plant, with an annual capacity of 100,000 m³, was installed at Mehsana, Gujarat, by a reputed Chinese supplier. Operating this plant gave us practical experience in AAC production, maintenance and wastage.",
@@ -92,7 +92,7 @@
         location: "Chennai, Tamil Nadu · 500 m³/day"
       },
       visualType: "performance",
-      performanceImg: "assets/images/testimonials/cubecrete-highest-production.jpeg",
+      performanceImg: "assets/images/testimonials/cubecrete-highest-production.webp",
       certificatePdf: "https://laxmi-customer-success-stories.mitesh958.chatgpt.site/evidence/cubecrete-certificate.pdf",
       fullStory: [
         "Cubecrete established its AAC block production facility near Chennai with Laxmi En-Fab machinery. Our primary objective was achieving the highest block strength with lowest possible process wastage.",
@@ -124,7 +124,7 @@
         location: "Neemuch, Madhya Pradesh · 340 m³/day"
       },
       visualType: "certificate",
-      certificateImg: "assets/images/testimonials/babji-certificate.jpg",
+      certificateImg: "assets/images/testimonials/babji-certificate.webp",
       certificatePdf: "https://laxmi-customer-success-stories.mitesh958.chatgpt.site/evidence/babji-certificate.pdf",
       videoUrl: "https://youtu.be/4q9b8Q16tQ4",
       fullStory: [
@@ -158,7 +158,7 @@
         location: "Tezpur, Assam · 300 + 500 m³/day projects"
       },
       visualType: "repeat",
-      certificateImg: "assets/images/testimonials/bs-concrete-certificate.jpeg",
+      certificateImg: "assets/images/testimonials/bs-concrete-certificate.webp",
       certificatePdf: "https://laxmi-customer-success-stories.mitesh958.chatgpt.site/evidence/bs-concrete-certificate.jpeg",
       fullStory: [
         "BS Concrete LLP pioneered AAC block manufacturing in the North East region with a 300 m³/day plant in Tezpur, Assam.",

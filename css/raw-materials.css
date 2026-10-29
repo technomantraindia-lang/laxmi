@@ -111,7 +111,7 @@
 .rm-hero-media {
   position: absolute;
   inset: 0;
-  background: url('../assets/images/raw-materials-hero.png') center right / cover no-repeat;
+  background: url('../assets/images/raw-materials-hero.webp') center right / cover no-repeat;
   z-index: 1;
 }
 

@@ -148,7 +148,7 @@
   background-image: 
     radial-gradient(circle at 85% 20%, rgba(12, 79, 128, 0.07) 0%, transparent 50%),
     linear-gradient(to right, rgba(255, 255, 255, 0.96) 35%, rgba(255, 255, 255, 0.88) 100%), 
-    url('../assets/images/roi-payback.png');
+    url('../assets/images/roi-payback.webp');
   background-position: center;
   background-size: cover;
   display: grid;

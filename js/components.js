@@ -894,70 +894,70 @@
 
   var PAGE_HERO_IMAGES = {
     // 01 Understand the Market
-    'why-aac-blocks.html': 'assets/images/why-aac.png',
-    'future-of-aac.html': 'assets/images/future-of-aac.png',
-    'market-demand.html': 'assets/images/market-demand.png',
-    'raw-materials.html': 'assets/images/raw-materials.png',
-    'profitability.html': 'assets/images/profitability.png',
-    'understand-market.html': 'assets/images/government-policies.png',
-    'government-policies': 'assets/images/government-policies.png',
+    'why-aac-blocks.html': 'assets/images/why-aac.webp',
+    'future-of-aac.html': 'assets/images/future-of-aac.webp',
+    'market-demand.html': 'assets/images/market-demand.webp',
+    'raw-materials.html': 'assets/images/raw-materials.webp',
+    'profitability.html': 'assets/images/profitability.webp',
+    'understand-market.html': 'assets/images/government-policies.webp',
+    'government-policies': 'assets/images/government-policies.webp',
 
     // 02 Design Your Plant
-    'capacity-selection.html': 'assets/images/capacity-selection.png',
-    'land-requirement.html': 'assets/images/land-requirement.png',
-    'project-cost.html': 'assets/images/project-cost-working-capital.png',
-    'roi-payback.html': 'assets/images/roi-payback.png',
-    'finance-bank-loan.html': 'assets/images/finance-bank-loan.png',
-    'subsidy.html': 'assets/images/subsidy.png',
-    'design-your-plant.html': 'assets/images/capacity-selection.png',
+    'capacity-selection.html': 'assets/images/capacity-selection.webp',
+    'land-requirement.html': 'assets/images/land-requirement.webp',
+    'project-cost.html': 'assets/images/project-cost-working-capital.webp',
+    'roi-payback.html': 'assets/images/roi-payback.webp',
+    'finance-bank-loan.html': 'assets/images/finance-bank-loan.webp',
+    'subsidy.html': 'assets/images/subsidy.webp',
+    'design-your-plant.html': 'assets/images/capacity-selection.webp',
 
     // 03 Compare
-    'compare-aac-plant.html': 'assets/images/compare-aac-plant.png',
-    'compare-your-aac-plant.html': 'assets/images/compare-aac-plant.png',
+    'compare-aac-plant.html': 'assets/images/compare-aac-plant.webp',
+    'compare-your-aac-plant.html': 'assets/images/compare-aac-plant.webp',
 
     // 04 Efficient Your Plant
-    'make-plant-automatic.html': 'assets/images/plant-automation.png',
-    'improve-block-quality.html': 'assets/images/improve-block-quality.png',
-    'plant-maintenance-sop.html': 'assets/images/maintenance-sop.png',
-    'reduce-steam-cost.html': 'assets/images/reduce-steam-cost.png',
-    'efficient-your-plant.html': 'assets/images/plant-automation.png',
-    'expand-your-plant.html': 'assets/images/capacity-selection.png',
+    'make-plant-automatic.html': 'assets/images/plant-automation.webp',
+    'improve-block-quality.html': 'assets/images/improve-block-quality.webp',
+    'plant-maintenance-sop.html': 'assets/images/maintenance-sop.webp',
+    'reduce-steam-cost.html': 'assets/images/reduce-steam-cost.webp',
+    'efficient-your-plant.html': 'assets/images/plant-automation.webp',
+    'expand-your-plant.html': 'assets/images/capacity-selection.webp',
 
     // Engineering Center & 8 Machinery Systems
-    'production-process.html': 'assets/images/production-process.png',
-    'plant-layout.html': 'assets/images/engineering/plant-layout-3d.png',
-    'complete-aac-plant.html': 'assets/images/engineering/complete-plant-3d.png',
-    'machinery-equipment.html': 'assets/images/engineering/machinery-cutting-system.png',
-    'engineering-center.html': 'assets/images/engineering/complete-plant-3d.png',
-    'machinery-raw-material-storage.html': 'assets/images/engineering/machinery-raw-material-storage.png',
-    'machinery-batching-preparation.html': 'assets/images/engineering/machinery-batching-preparation.png',
-    'machinery-mould-precuring.html': 'assets/images/engineering/machinery-mould-precuring.png',
-    'machinery-tilting-machine.html': 'assets/images/engineering/machinery-tilting-machine.png',
-    'machinery-cutting-system.html': 'assets/images/engineering/machinery-cutting-system.png',
-    'machinery-autoclave.html': 'assets/images/engineering/machinery-autoclave.png',
-    'machinery-steam-boiler.html': 'assets/images/engineering/machinery-steam-boiler.png',
-    'machinery-auto-palletizing.html': 'assets/images/engineering/machinery-auto-palletizing.png',
+    'production-process.html': 'assets/images/production-process.webp',
+    'plant-layout.html': 'assets/images/engineering/plant-layout-3d.webp',
+    'complete-aac-plant.html': 'assets/images/engineering/complete-plant-3d.webp',
+    'machinery-equipment.html': 'assets/images/engineering/machinery-cutting-system.webp',
+    'engineering-center.html': 'assets/images/engineering/complete-plant-3d.webp',
+    'machinery-raw-material-storage.html': 'assets/images/engineering/machinery-raw-material-storage.webp',
+    'machinery-batching-preparation.html': 'assets/images/engineering/machinery-batching-preparation.webp',
+    'machinery-mould-precuring.html': 'assets/images/engineering/machinery-mould-precuring.webp',
+    'machinery-tilting-machine.html': 'assets/images/engineering/machinery-tilting-machine.webp',
+    'machinery-cutting-system.html': 'assets/images/engineering/machinery-cutting-system.webp',
+    'machinery-autoclave.html': 'assets/images/engineering/machinery-autoclave.webp',
+    'machinery-steam-boiler.html': 'assets/images/engineering/machinery-steam-boiler.webp',
+    'machinery-auto-palletizing.html': 'assets/images/engineering/machinery-auto-palletizing.webp',
 
     // New Engineering Pages
-    'aac-plant-automation.html': 'assets/images/aac-automation-hero.png',
-    'aac-infrastructure-utilities.html': 'assets/images/aac-infrastructure-utilities-hero.png',
-    'aac-plant-technology.html': 'assets/images/aac-plant-technology-hero.png',
+    'aac-plant-automation.html': 'assets/images/aac-automation-hero.webp',
+    'aac-infrastructure-utilities.html': 'assets/images/aac-infrastructure-utilities-hero.webp',
+    'aac-plant-technology.html': 'assets/images/aac-plant-technology-hero.webp',
 
     // Why Laxmi Track
-    'projects.html': 'assets/images/india-map-3d.png',
-    'testimonial.html': 'assets/images/maintenance-sop.png',
-    'brand-philosophy.html': 'assets/images/decisions-plant-bg.png',
-    'workshop-visit.html': 'assets/images/laxmi-workshop-facility.png',
-    'why-laxmi.html': 'assets/images/laxmi-workshop-facility.png'
+    'projects.html': 'assets/images/india-map-3d.webp',
+    'testimonial.html': 'assets/images/maintenance-sop.webp',
+    'brand-philosophy.html': 'assets/images/decisions-plant-bg.webp',
+    'workshop-visit.html': 'assets/images/laxmi-workshop-facility.webp',
+    'why-laxmi.html': 'assets/images/laxmi-workshop-facility.webp'
   };
 
   function getRecommendationImage(href) {
-    if (!href) return 'assets/images/why-aac.png';
+    if (!href) return 'assets/images/why-aac.webp';
     if (PAGE_HERO_IMAGES[href]) return PAGE_HERO_IMAGES[href];
     var baseName = href.split('/').pop().split('?')[0];
     if (PAGE_HERO_IMAGES[baseName]) return PAGE_HERO_IMAGES[baseName];
-    if (href.indexOf('government-policies') !== -1) return 'assets/images/government-policies.png';
-    return 'assets/images/laxmi-workshop-facility.png';
+    if (href.indexOf('government-policies') !== -1) return 'assets/images/government-policies.webp';
+    return 'assets/images/laxmi-workshop-facility.webp';
   }
 
   function injectPagePagination() {

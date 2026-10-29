@@ -8,8 +8,8 @@
 
   // Image Mapping for Solutions Pages
   const SOLUTION_HERO_IMAGES = {
-    'aac-block-panel-plant': 'assets/images/future-of-aac.png',
-    'dry-mix-mortar-plant': 'assets/images/improve-block-quality.png'
+    'aac-block-panel-plant': 'assets/images/future-of-aac.webp',
+    'dry-mix-mortar-plant': 'assets/images/improve-block-quality.webp'
   };
 
   // Helper: Robust JSON fetch
@@ -110,7 +110,7 @@
 
   // 01. Hero Section
   function renderHero(page, prefix = '') {
-    const rawImg = SOLUTION_HERO_IMAGES[page.slug] || 'assets/images/future-of-aac.png';
+    const rawImg = SOLUTION_HERO_IMAGES[page.slug] || 'assets/images/future-of-aac.webp';
     const heroImg = prefix + rawImg;
     const hero = page.hero || {};
 
@@ -164,7 +164,7 @@
   // 02. System Intro Section
   function renderIntro(page, prefix = '') {
     if (!page.intro) return '';
-    const rawIntro = page.slug === 'aac-block-panel-plant' ? 'assets/images/explored view.png' : 'assets/images/capacity-selection.png';
+    const rawIntro = page.slug === 'aac-block-panel-plant' ? 'assets/images/explored view.webp' : 'assets/images/capacity-selection.webp';
     const introImg = prefix + rawIntro;
 
     return `
@@ -353,7 +353,7 @@
     if (!page.products || !page.products.items) return '';
 
     const itemsHTML = page.products.items.map((item, idx) => {
-      const img = idx === 0 ? 'assets/images/why-aac.png' : 'assets/images/production-process.png';
+      const img = idx === 0 ? 'assets/images/why-aac.webp' : 'assets/images/production-process.webp';
       return `
         <div class="product-story-card">
           <div class="product-story-img-wrap">
@@ -465,10 +465,10 @@
 
           <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;">
             <div style="border-radius: 14px; overflow: hidden; height: 320px;">
-              <img src="assets/images/improve-block-quality.png" alt="Dry Mix Mortar Plant Facility" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+              <img src="assets/images/improve-block-quality.webp" alt="Dry Mix Mortar Plant Facility" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
             </div>
             <div style="border-radius: 14px; overflow: hidden; height: 320px;">
-              <img src="assets/images/maintenance-sop.png" alt="Dry Mix Mortar Plant Manufacturing" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+              <img src="assets/images/maintenance-sop.webp" alt="Dry Mix Mortar Plant Manufacturing" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
             </div>
           </div>
         </div>
@@ -502,7 +502,7 @@
             </div>
 
             <div style="background: #040d1a; border-radius: 16px; overflow: hidden; padding: 1.5rem; box-shadow: 0 20px 50px rgba(7,23,44,0.15);">
-              <img src="assets/images/explored view.png" alt="General Arrangement Plant Layout" style="width: 100%; height: auto; border-radius: 10px; display: block;" />
+              <img src="assets/images/explored view.webp" alt="General Arrangement Plant Layout" style="width: 100%; height: auto; border-radius: 10px; display: block;" />
             </div>
           </div>
         </div>
@@ -527,13 +527,13 @@
 
           <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2.5rem;">
             <div style="border-radius: 12px; overflow: hidden; height: 220px;">
-              <img src="assets/images/production-process.png" alt="Laxmi AAC Plant Installation" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+              <img src="assets/images/production-process.webp" alt="Laxmi AAC Plant Installation" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
             </div>
             <div style="border-radius: 12px; overflow: hidden; height: 220px;">
-              <img src="assets/images/plant-automation.png" alt="Laxmi Workshop Facility" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+              <img src="assets/images/plant-automation.webp" alt="Laxmi Workshop Facility" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
             </div>
             <div style="border-radius: 12px; overflow: hidden; height: 220px;">
-              <img src="assets/images/land-requirement.png" alt="Laxmi Equipment Dispatch" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+              <img src="assets/images/land-requirement.webp" alt="Laxmi Equipment Dispatch" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
             </div>
           </div>
 

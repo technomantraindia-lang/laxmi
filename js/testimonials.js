@@ -145,7 +145,7 @@
           <div class="editorial-hero__video-wrap">
             <img
               class="editorial-hero__poster"
-              src="assets/images/production-process.png"
+              src="assets/images/production-process.webp"
               alt="Laxmi En-Fab Verified Customer Installation"
               fetchpriority="high"
             />
