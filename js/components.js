@@ -5,7 +5,7 @@
   var HEADER_HTML = '<header class="site-header" id="site-header">' +
     '<div class="site-topbar"><div class="site-topbar__inner">' +
     '<div class="site-topbar__left">' +
-    '<a href="start-your-aac-journey.html" class="site-topbar__link"><span class="site-topbar__dot"></span><span>Start Your AAC Journey</span><span class="site-topbar__arrow">↗</span></a>' +
+    '<a href="start-your-aac-journey.html" class="site-topbar__link"><span class="site-topbar__dot"></span><span class="site-topbar__text-full">Start Your AAC Journey</span><span class="site-topbar__text-short">Start Journey</span><span class="site-topbar__arrow">↗</span></a>' +
     '<span class="site-topbar__sep">|</span>' +
     '<a href="dpr-calculator.html" class="site-topbar__link site-topbar__link--roi"><span class="site-topbar__roi-pulse" aria-hidden="true"></span><span class="site-topbar__roi-badge">DPR TOOL</span><span class="site-topbar__roi-text">AAC Plant DPR / ROI Calculator</span><span class="site-topbar__arrow">↗</span></a>' +
     '</div>' +

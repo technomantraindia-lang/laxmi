@@ -149,15 +149,58 @@ html, body {
     flex-direction: column !important;
     justify-content: center !important;
     align-items: center !important;
-    width: 40px !important;
-    height: 40px !important;
-    padding: 8px !important;
+    width: 38px !important;
+    height: 38px !important;
+    padding: 7px !important;
     flex-shrink: 0 !important;
-    margin-left: auto !important;
+    margin-left: 0 !important;
   }
 
-  .site-header__cta.nav-cta {
-    display: none !important;
+  .site-header__cta.nav-cta,
+  .site-header .site-header__cta {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-left: auto !important;
+    margin-right: 8px !important;
+    padding: 6px 11px !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.02em !important;
+    white-space: nowrap !important;
+    border-radius: 5px !important;
+    flex-shrink: 0 !important;
+    background: #0b3f78 !important;
+    color: #ffffff !important;
+  }
+
+  .site-header__cta.nav-cta .cta-arrow,
+  .site-header .site-header__cta .cta-arrow {
+    display: inline-block !important;
+    margin-left: 4px !important;
+    font-size: 11px !important;
+  }
+
+  @media (max-width: 380px) {
+    .site-header__inner {
+      padding: 0 8px !important;
+      gap: 6px !important;
+    }
+    .site-header__logo {
+      max-width: 95px !important;
+      max-height: 30px !important;
+    }
+    .site-header__cta.nav-cta,
+    .site-header .site-header__cta {
+      padding: 5px 8px !important;
+      font-size: 10px !important;
+      margin-right: 4px !important;
+    }
+    .site-header__burger {
+      width: 34px !important;
+      height: 34px !important;
+      padding: 5px !important;
+    }
   }
 
   /* 01. Hero */
