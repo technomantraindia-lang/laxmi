@@ -138,6 +138,11 @@ if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 $headers[] = 'X-Mailer: PHP/' . phpversion();
 
+// Check if running in a local development environment (localhost / 127.0.0.1)
+$serverHost = $_SERVER['HTTP_HOST'] ?? ($_SERVER['SERVER_NAME'] ?? '');
+$remoteAddr = $_SERVER['REMOTE_ADDR'] ?? '';
+$isLocalDev = ($serverHost === 'localhost' || strpos($serverHost, 'localhost:') === 0 || strpos($serverHost, '127.0.0.1') === 0 || in_array($remoteAddr, ['127.0.0.1', '::1']));
+
 // Send email using native mail()
 $mailSent = @mail($to, $subject, $emailContent, implode("\r\n", $headers));
 
@@ -147,8 +152,28 @@ if ($mailSent) {
         'success' => true,
         'message' => 'Requirement sent successfully! Our engineering team will review your details and get in touch shortly.'
     ]);
+} elseif ($isLocalDev) {
+    // On local Windows dev servers, native sendmail/SMTP is not configured by default.
+    // Save to local_inquiries.log so developers can immediately verify the inquiry and data payload!
+    $logEntry = "[" . date('Y-m-d H:i:s') . "] LOCAL TEST INQUIRY VERIFIED\n" .
+                "Destination: " . $to . "\n" .
+                "Subject: " . $subject . "\n" .
+                "Client: " . $name . "\n" .
+                "Company: " . $company . "\n" .
+                "Mobile: " . $phone . "\n" .
+                "Email: " . $email . "\n" .
+                "Requirement: " . $requirement . "\n" .
+                "Message: " . $message . "\n" .
+                "--------------------------------------------------\n\n";
+    @file_put_contents(__DIR__ . '/local_inquiries.log', $logEntry, FILE_APPEND);
+
+    http_response_code(200);
+    echo json_encode([
+        'success' => true,
+        'message' => 'Requirement verified successfully! (Local Test Mode: inquiry logged to local_inquiries.log).'
+    ]);
 } else {
-    // If standard mail() failed on server (e.g. SMTP config needed or local machine)
+    // If standard mail() failed on live production server
     http_response_code(500);
     echo json_encode([
         'success' => false,
