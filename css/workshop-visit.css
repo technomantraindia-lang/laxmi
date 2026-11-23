@@ -1,6 +1,6 @@
 /* ==========================================================================
    WORKSHOP VISIT PAGE STYLES
-   Source: https://laxmi-workshop-visit.mitesh958.chatgpt.site/
+   Source Design: https://laxmi-workshop-visit.mitesh958.chatgpt.site/
    ========================================================================== */
 
 :root {
@@ -14,24 +14,17 @@
   --max: 1240px;
 }
 
-/* Scoped Resets for Workshop Visit Page */
+/* Base resets & typography for workshop page */
 .workshop-page {
   background: #fff;
   color: var(--ink);
-  font-family: Inter, Arial, sans-serif;
+  font-family: 'Inter', Arial, sans-serif;
   font-size: 16px;
   line-height: 1.65;
   overflow-x: hidden;
 }
 
-.workshop-main img,
-.hero-media,
-.full-bleed img,
-.feature-photo img,
-.photo-pair img,
-.dark-stage > img,
-.detail-grid img,
-.dispatch-mosaic img {
+.workshop-main img {
   display: block;
   width: 100%;
 }
@@ -46,16 +39,15 @@
    ========================================================================== */
 
 .workshop-page .hero {
-  height: 100vh;
+  height: min(950px, 100svh);
   min-height: 720px;
   position: relative;
   color: white;
   background: var(--navy);
-  padding-top: 84px;
   overflow: hidden;
 }
 
-.hero-media {
+.workshop-page .hero-media {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -65,14 +57,15 @@
   display: block;
 }
 
-.hero-shade {
+.workshop-page .hero-shade {
   position: absolute;
   inset: 0;
   background: linear-gradient(90deg, rgba(4, 13, 25, 0.85) 0%, rgba(4, 13, 25, 0.49) 45%, rgba(4, 13, 25, 0.08) 76%),
               linear-gradient(0deg, rgba(4, 13, 25, 0.45), transparent 50%);
+  pointer-events: none;
 }
 
-.hero-copy {
+.workshop-page .hero-copy {
   position: absolute;
   left: max(6vw, 30px);
   bottom: 14%;
@@ -80,6 +73,7 @@
   z-index: 2;
 }
 
+/* Override any pill style on eyebrow inside workshop page */
 .workshop-page .eyebrow {
   display: block !important;
   font-size: 13px !important;
@@ -100,12 +94,12 @@
   display: none !important;
 }
 
-.hero .eyebrow {
+.workshop-page .hero .eyebrow {
   color: #b9d9ee !important;
 }
 
 .workshop-page .hero h1 {
-  font-family: 'Manrope', 'Geist', sans-serif;
+  font-family: 'Manrope', sans-serif;
   font-size: clamp(48px, 6vw, 88px);
   line-height: 1.02;
   letter-spacing: -0.055em;
@@ -119,7 +113,7 @@
   font-weight: 500;
 }
 
-.lead {
+.workshop-page .lead {
   font-size: clamp(18px, 2vw, 23px);
   line-height: 1.55;
   max-width: 690px;
@@ -158,11 +152,11 @@
   background: #083c63;
 }
 
-.button span {
+.workshop-page .button span {
   margin-left: 12px;
 }
 
-.scroll-cue {
+.workshop-page .scroll-cue {
   position: absolute;
   right: 5vw;
   bottom: 8%;
@@ -177,7 +171,7 @@
   z-index: 2;
 }
 
-.scroll-cue i {
+.workshop-page .scroll-cue i {
   display: block;
   width: 46px;
   height: 1px;
@@ -188,14 +182,14 @@
    Section 01: Manufacturing Scale
    ========================================================================== */
 
-.intro,
-.process {
+.workshop-page .intro,
+.workshop-page .process {
   max-width: var(--max);
   margin: auto;
   padding: 130px clamp(24px, 5vw, 70px);
 }
 
-.section-tag {
+.workshop-page .section-tag {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.16em;
@@ -205,13 +199,13 @@
   border-bottom: 1px solid var(--line);
 }
 
-.section-tag span {
+.workshop-page .section-tag span {
   color: var(--blue);
   margin-right: 14px;
 }
 
-.intro-grid,
-.process-head {
+.workshop-page .intro-grid,
+.workshop-page .process-head {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 8vw;
@@ -219,11 +213,11 @@
   align-items: start;
 }
 
-.intro h2,
-.process h2,
-.visit h2,
-.dispatch h2 {
-  font-family: 'Manrope', 'Geist', sans-serif;
+.workshop-page .intro h2,
+.workshop-page .process h2,
+.workshop-page .visit h2,
+.workshop-page .dispatch h2 {
+  font-family: 'Manrope', sans-serif;
   font-size: clamp(38px, 4.3vw, 64px);
   line-height: 1.08;
   letter-spacing: -0.045em;
@@ -232,15 +226,16 @@
   color: var(--ink);
 }
 
-.intro-grid p,
-.process-head p {
+.workshop-page .intro-grid p,
+.workshop-page .process-head p {
   font-size: 18px;
   color: var(--muted);
   max-width: 560px;
   margin: 6px 0;
+  line-height: 1.65;
 }
 
-.metrics {
+.workshop-page .metrics {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   border-top: 1px solid var(--line);
@@ -249,41 +244,42 @@
   gap: 30px;
 }
 
-.metrics strong {
+.workshop-page .metrics strong {
   display: block;
-  font-family: 'Manrope', 'Geist', sans-serif;
+  font-family: 'Manrope', sans-serif;
   font-size: clamp(28px, 3vw, 44px);
   letter-spacing: -0.04em;
   color: var(--blue);
+  line-height: 1.1;
+  font-weight: 700;
 }
 
-.metrics span {
+.workshop-page .metrics span {
   display: block;
   color: var(--muted);
   font-size: 14px;
+  margin-top: 4px;
 }
 
 /* ==========================================================================
    Full Bleed Cinema
    ========================================================================== */
 
-.full-bleed {
+.workshop-page .full-bleed {
   height: min(82vh, 860px);
   position: relative;
   background: var(--navy);
   overflow: hidden;
 }
 
-.full-bleed img,
-.full-bleed video,
-.cinema-video {
-  width: 100%;
+.workshop-page .full-bleed img {
   height: 100%;
+  width: 100%;
   object-fit: cover;
   display: block;
 }
 
-.image-caption {
+.workshop-page .image-caption {
   position: absolute;
   left: 5vw;
   bottom: 5vw;
@@ -295,7 +291,8 @@
   border-left: 2px solid #8fc6ec;
 }
 
-.image-caption span {
+.workshop-page .image-caption span {
+  display: block;
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.14em;
@@ -303,30 +300,33 @@
   font-weight: 600;
 }
 
-.image-caption p {
+.workshop-page .image-caption p {
   margin: 4px 0 0;
   font-size: 15px;
+  color: #ffffff;
 }
 
 /* ==========================================================================
    Section 02: Inside Manufacturing
    ========================================================================== */
 
-.process-head {
+.workshop-page .process-head {
   margin-bottom: 80px;
 }
 
-.feature-photo {
+.workshop-page .feature-photo {
   margin: 0;
 }
 
-.feature-photo img {
+.workshop-page .feature-photo img {
+  width: 100%;
   height: min(70vw, 700px);
   object-fit: cover;
+  display: block;
 }
 
-.feature-photo figcaption,
-.photo-pair figcaption {
+.workshop-page .feature-photo figcaption,
+.workshop-page .photo-pair figcaption {
   display: flex;
   justify-content: space-between;
   gap: 30px;
@@ -335,47 +335,50 @@
   font-size: 14px;
 }
 
-.feature-photo b,
-.photo-pair b {
-  font-family: 'Manrope', 'Geist', sans-serif;
+.workshop-page .feature-photo b,
+.workshop-page .photo-pair b {
+  font-family: 'Manrope', sans-serif;
   color: var(--ink);
   font-size: 17px;
+  font-weight: 700;
 }
 
-.photo-pair {
+.workshop-page .photo-pair {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 26px;
   margin-top: 70px;
 }
 
-.photo-pair img {
+.workshop-page .photo-pair img {
+  width: 100%;
   height: 500px;
   object-fit: cover;
-}
-
-.photo-pair figure {
-  margin: 0;
-}
-
-.photo-pair figcaption {
   display: block;
 }
 
-.photo-pair figcaption span {
+.workshop-page .photo-pair figure {
+  margin: 0;
+}
+
+.workshop-page .photo-pair figcaption {
+  display: block;
+}
+
+.workshop-page .photo-pair figcaption span {
   display: block;
   margin-top: 3px;
 }
 
 /* Dark Stage */
-.dark-stage {
+.workshop-page .dark-stage {
   background: var(--navy);
   color: white;
   margin: 130px calc((var(--max) - 100vw) / 2);
   padding: 120px max(6vw, 30px) 0;
 }
 
-.dark-copy {
+.workshop-page .dark-copy {
   max-width: var(--max);
   margin: 0 auto 70px;
   display: grid;
@@ -383,54 +386,63 @@
   gap: 6vw;
 }
 
-.dark-copy .eyebrow {
+.workshop-page .dark-copy .eyebrow {
   color: #8fc6ec !important;
 }
 
-.dark-copy h2 {
+.workshop-page .dark-copy h2 {
   font-size: clamp(40px, 5vw, 72px);
   color: #ffffff;
-  font-family: 'Manrope', 'Geist', sans-serif;
+  font-family: 'Manrope', sans-serif;
   margin: 0;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
 }
 
-.dark-copy p:last-child {
+.workshop-page .dark-copy p:last-child {
   color: #aab7c4;
   font-size: 17px;
   align-self: end;
+  line-height: 1.65;
+  margin: 0;
 }
 
-.dark-stage > img {
+.workshop-page .dark-stage > img {
   max-width: var(--max);
   margin: auto;
   height: 690px;
   object-fit: cover;
+  display: block;
+  width: 100%;
 }
 
 /* Detail Grid & Checklist */
-.detail-grid {
+.workshop-page .detail-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
   margin-top: 80px;
 }
 
-.detail-grid figure {
+.workshop-page .detail-grid figure {
   margin: 0;
 }
 
-.detail-grid img {
+.workshop-page .detail-grid img {
+  width: 100%;
   height: 420px;
   object-fit: cover;
+  display: block;
 }
 
-.detail-grid figcaption {
+.workshop-page .detail-grid figcaption {
   padding: 14px 0;
   font-weight: 600;
   color: var(--ink);
+  font-size: 15px;
 }
 
-.checklist {
+.workshop-page .checklist {
   grid-column: 1 / -1;
   margin-top: 65px;
   display: grid;
@@ -439,18 +451,18 @@
   padding-top: 40px;
 }
 
-.checklist .eyebrow {
+.workshop-page .checklist .eyebrow {
   color: var(--blue) !important;
 }
 
-.checklist ul {
+.workshop-page .checklist ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.checklist li {
-  font-family: 'Manrope', 'Geist', sans-serif;
+.workshop-page .checklist li {
+  font-family: 'Manrope', sans-serif;
   font-size: clamp(20px, 2vw, 28px);
   letter-spacing: -0.02em;
   padding: 18px 0;
@@ -458,9 +470,9 @@
   color: var(--ink);
 }
 
-.checklist li:before {
+.workshop-page .checklist li:before {
   content: '✓';
-  font-family: Inter, sans-serif;
+  font-family: 'Inter', sans-serif;
   color: var(--blue);
   font-size: 14px;
   margin-right: 16px;
@@ -471,24 +483,24 @@
    Section 03: Dispatch
    ========================================================================== */
 
-.dispatch {
+.workshop-page .dispatch {
   background: var(--navy);
   color: white;
   padding: 130px max(5vw, 24px);
 }
 
-.dispatch .section-tag {
+.workshop-page .dispatch .section-tag {
   max-width: var(--max);
   margin: auto;
   border-color: rgba(255, 255, 255, 0.18);
   color: #a2afba;
 }
 
-.light-tag span {
+.workshop-page .light-tag span {
   color: #8fc6ec !important;
 }
 
-.dispatch-title {
+.workshop-page .dispatch-title {
   max-width: var(--max);
   margin: 75px auto 80px;
   display: grid;
@@ -496,21 +508,23 @@
   gap: 8vw;
 }
 
-.dispatch h2 {
+.workshop-page .dispatch h2 {
   color: #ffffff;
 }
 
-.dispatch h2 em {
+.workshop-page .dispatch h2 em {
   font-style: normal;
   color: #8fc6ec;
 }
 
-.dispatch-title p {
+.workshop-page .dispatch-title p {
   color: #a9b5c0;
   font-size: 18px;
+  line-height: 1.65;
+  margin: 0;
 }
 
-.dispatch-mosaic {
+.workshop-page .dispatch-mosaic {
   max-width: var(--max);
   margin: auto;
   display: grid;
@@ -518,32 +532,34 @@
   gap: 24px;
 }
 
-.dispatch-mosaic figure {
+.workshop-page .dispatch-mosaic figure {
   margin: 0;
   position: relative;
   overflow: hidden;
   background: #08111d;
 }
 
-.dispatch-mosaic .wide {
+.workshop-page .dispatch-mosaic .wide {
   grid-column: 1 / -1;
 }
 
-.dispatch-mosaic img {
+.workshop-page .dispatch-mosaic img {
+  width: 100%;
   height: 460px;
   object-fit: cover;
   transition: transform 0.8s ease;
+  display: block;
 }
 
-.dispatch-mosaic .wide img {
+.workshop-page .dispatch-mosaic .wide img {
   height: 680px;
 }
 
-.dispatch-mosaic figure:hover img {
+.workshop-page .dispatch-mosaic figure:hover img {
   transform: scale(1.02);
 }
 
-.dispatch-mosaic figcaption {
+.workshop-page .dispatch-mosaic figcaption {
   position: absolute;
   left: 22px;
   bottom: 20px;
@@ -560,45 +576,51 @@
    Section 04: Visit Section
    ========================================================================== */
 
-.visit-section {
+.workshop-page .visit {
   background: var(--ice);
   padding: 150px 24px;
 }
 
-.visit-inner {
+.workshop-page .visit-inner {
   max-width: 1000px;
   margin: auto;
   text-align: center;
 }
 
-.visit-section .eyebrow {
+.workshop-page .visit .eyebrow {
   color: var(--blue) !important;
 }
 
-.visit-section h2 {
+.workshop-page .visit h2 {
   margin: 20px 0 30px;
 }
 
-.visit-inner > p:not(.eyebrow) {
+.workshop-page .visit-inner > p:not(.eyebrow) {
   max-width: 700px;
   margin: 0 auto 44px;
   color: var(--muted);
   font-size: 18px;
+  line-height: 1.65;
 }
 
-.actions {
+.workshop-page .actions {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 30px;
 }
 
-.text-link {
+.workshop-page .text-link {
   font-weight: 600;
   color: var(--blue);
   border-bottom: 1px solid #a7c6dc;
   text-decoration: none;
   font-size: 15px;
+  transition: border-color 0.2s ease;
+}
+
+.workshop-page .text-link:hover {
+  border-bottom-color: var(--blue);
 }
 
 /* ==========================================================================
@@ -625,11 +647,11 @@
     min-height: 680px;
   }
   
-  .hero-shade {
+  .workshop-page .hero-shade {
     background: linear-gradient(0deg, rgba(4, 13, 25, 0.9), rgba(4, 13, 25, 0.1) 80%);
   }
   
-  .hero-copy {
+  .workshop-page .hero-copy {
     bottom: 12%;
     left: 22px;
     right: 22px;
@@ -643,95 +665,95 @@
     display: none;
   }
   
-  .lead {
+  .workshop-page .lead {
     font-size: 17px;
   }
   
-  .scroll-cue {
+  .workshop-page .scroll-cue {
     display: none;
   }
   
-  .intro,
-  .process {
+  .workshop-page .intro,
+  .workshop-page .process {
     padding: 90px 22px;
   }
   
-  .intro-grid,
-  .process-head,
-  .dispatch-title,
-  .dark-copy {
+  .workshop-page .intro-grid,
+  .workshop-page .process-head,
+  .workshop-page .dispatch-title,
+  .workshop-page .dark-copy {
     grid-template-columns: 1fr;
     gap: 30px;
     margin-top: 45px;
   }
   
-  .metrics {
+  .workshop-page .metrics {
     grid-template-columns: 1fr 1fr;
     margin-top: 65px;
     gap: 35px 20px;
   }
   
-  .full-bleed {
+  .workshop-page .full-bleed {
     height: 70vh;
   }
   
-  .full-bleed img {
+  .workshop-page .full-bleed img {
     object-position: center;
   }
   
-  .photo-pair,
-  .detail-grid,
-  .dispatch-mosaic {
+  .workshop-page .photo-pair,
+  .workshop-page .detail-grid,
+  .workshop-page .dispatch-mosaic {
     grid-template-columns: 1fr;
   }
   
-  .photo-pair img,
-  .detail-grid img {
+  .workshop-page .photo-pair img,
+  .workshop-page .detail-grid img {
     height: 360px;
   }
   
-  .feature-photo img {
+  .workshop-page .feature-photo img {
     height: 520px;
   }
   
-  .feature-photo figcaption {
+  .workshop-page .feature-photo figcaption {
     display: block;
   }
   
-  .dark-stage {
+  .workshop-page .dark-stage {
     margin: 90px -22px;
     padding: 90px 22px 0;
   }
   
-  .dark-stage > img {
+  .workshop-page .dark-stage > img {
     height: 520px;
   }
   
-  .checklist {
+  .workshop-page .checklist {
     grid-column: auto;
     grid-template-columns: 1fr;
     gap: 20px;
     margin-top: 30px;
   }
   
-  .dispatch {
+  .workshop-page .dispatch {
     padding: 90px 22px;
   }
   
-  .dispatch-mosaic .wide {
+  .workshop-page .dispatch-mosaic .wide {
     grid-column: auto;
   }
   
-  .dispatch-mosaic img,
-  .dispatch-mosaic .wide img {
+  .workshop-page .dispatch-mosaic img,
+  .workshop-page .dispatch-mosaic .wide img {
     height: 420px;
   }
   
-  .visit-section {
+  .workshop-page .visit {
     padding: 100px 22px;
   }
   
-  .actions {
+  .workshop-page .actions {
     flex-direction: column;
     gap: 20px;
   }
@@ -748,7 +770,7 @@
     transition: none;
   }
   
-  .dispatch-mosaic img {
+  .workshop-page .dispatch-mosaic img {
     transition: none;
   }
 }
