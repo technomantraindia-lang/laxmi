@@ -177,6 +177,6 @@ if ($mailSent) {
     http_response_code(500);
     echo json_encode([
         'success' => false,
-        'message' => 'Server could not dispatch email. Please connect directly at aac@laxmienfab.com or +91 89808 00607.'
+        'message' => 'Server could not dispatch email. Please connect directly at aac@laxmienfab.com or +91 89808 00839.'
     ]);
 }
