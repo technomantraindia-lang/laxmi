@@ -370,12 +370,26 @@
   margin-top: 3px;
 }
 
-/* Dark Stage */
+/* ==========================================================================
+   Dark Stage Section (Full Bleed)
+   ========================================================================== */
+
 .workshop-page .dark-stage {
+  width: 100%;
   background: var(--navy);
   color: white;
-  margin: 130px calc((var(--max) - 100vw) / 2);
-  padding: 120px max(6vw, 30px) 0;
+  margin: 0;
+  padding: 120px clamp(24px, 5vw, 64px) 0;
+  box-sizing: border-box;
+}
+
+.workshop-page .process > .dark-stage {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 
 .workshop-page .dark-copy {
@@ -388,15 +402,17 @@
 
 .workshop-page .dark-copy .eyebrow {
   color: #8fc6ec !important;
+  margin-bottom: 0 !important;
 }
 
 .workshop-page .dark-copy h2 {
-  font-size: clamp(40px, 5vw, 72px);
+  font-size: clamp(38px, 4.5vw, 68px);
   color: #ffffff;
   font-family: 'Manrope', sans-serif;
   margin: 0;
   line-height: 1.08;
   letter-spacing: -0.045em;
+  font-weight: 700;
 }
 
 .workshop-page .dark-copy p:last-child {
@@ -409,11 +425,19 @@
 
 .workshop-page .dark-stage > img {
   max-width: var(--max);
-  margin: auto;
+  margin: 0 auto;
   height: 690px;
   object-fit: cover;
   display: block;
   width: 100%;
+}
+
+.workshop-page .process--detail {
+  padding-top: 100px;
+}
+
+.workshop-page .process--detail .detail-grid {
+  margin-top: 0;
 }
 
 /* Detail Grid & Checklist */
@@ -721,8 +745,12 @@
   }
   
   .workshop-page .dark-stage {
-    margin: 90px -22px;
-    padding: 90px 22px 0;
+    margin: 0;
+    padding: 80px 22px 0;
+  }
+  
+  .workshop-page .process--detail {
+    padding-top: 60px;
   }
   
   .workshop-page .dark-stage > img {
